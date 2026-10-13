@@ -149,13 +149,14 @@ def test_missing_ramp_and_latent_flux_are_not_zero():
                        'outgoing_link_ids':['b','c','']}).set_index('link_id')
     on=np.zeros_like(q);off=np.zeros_like(q)
     B,rhs=conservation_operator(times,links,v,q,net,topo,on,off)
-    assert len(rhs)==1 and np.allclose(B@q.ravel()-rhs,0)
+    assert len(rhs)==3 and np.allclose(B@q.ravel()-rhs,0)
     on[0,1]=np.nan
     B,rhs=conservation_operator(times,links,v,q,net,topo,on,off)
-    assert len(rhs)==0
+    assert len(rhs)==2
     on[0,1]=0;topo.loc['b','incoming_link_ids']='unobserved_latent'
+    topo.loc['unobserved_latent']=['a','b']
     B,rhs=conservation_operator(times,links,v,q,net,topo,on,off)
-    assert len(rhs)==0
+    assert len(rhs)==2
 
 def test_master_key_duplicate_across_chunks_is_rejected(tmp_path):
     state=truth_frame().iloc[:1].copy()

@@ -1,0 +1,2200 @@
+{
+  "experiment": "C01_event_queue",
+  "panel": "D12_I5_N",
+  "fold": "rolling_autumn",
+  "protocol_sha256": "91e48a8f2f86775466c8c9b5ad6bdbe693ea25554ef9b18d9e12cd80d3256143",
+  "source_at_start": {
+    "python": "3.13.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus": 16,
+    "process_peak_working_set_MiB": 1908.57421875,
+    "peak_scope": "current process lifetime, not isolated per model",
+    "source_sha256": "be773770eb8ecceb9385ecf035aee38c1c76a0e9f0c045ca4a0b2fee1db5134e",
+    "model_threads": 4,
+    "gpu_used": false,
+    "versions": {
+      "numpy": "2.2.5",
+      "pandas": "3.0.5",
+      "scipy": "1.16.1",
+      "pyarrow": "25.0.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10",
+      "scikit-learn": "1.7.2"
+    }
+  },
+  "dates": {
+    "profile": [
+      "2030-06-01",
+      "2030-06-02",
+      "2030-06-03",
+      "2030-06-04",
+      "2030-06-05",
+      "2030-06-06",
+      "2030-06-07",
+      "2030-06-08",
+      "2030-06-09",
+      "2030-06-10",
+      "2030-06-11",
+      "2030-06-12",
+      "2030-06-13",
+      "2030-06-14",
+      "2030-06-15",
+      "2030-06-16",
+      "2030-06-17",
+      "2030-06-18",
+      "2030-06-19",
+      "2030-06-20",
+      "2030-06-21",
+      "2030-06-22",
+      "2030-06-23",
+      "2030-06-24",
+      "2030-06-25",
+      "2030-06-26",
+      "2030-06-27",
+      "2030-06-28",
+      "2030-06-29",
+      "2030-06-30",
+      "2030-07-01",
+      "2030-07-02",
+      "2030-07-03",
+      "2030-07-04",
+      "2030-07-05",
+      "2030-07-06",
+      "2030-07-07",
+      "2030-07-08",
+      "2030-07-09",
+      "2030-07-10",
+      "2030-07-11",
+      "2030-07-12",
+      "2030-07-13",
+      "2030-07-14",
+      "2030-07-15"
+    ],
+    "fit": [
+      "2030-07-16",
+      "2030-07-17",
+      "2030-07-18",
+      "2030-07-19",
+      "2030-07-20",
+      "2030-07-21",
+      "2030-07-22",
+      "2030-07-23",
+      "2030-07-24",
+      "2030-07-25",
+      "2030-07-26",
+      "2030-07-27",
+      "2030-07-28",
+      "2030-07-29",
+      "2030-07-30",
+      "2030-07-31",
+      "2030-08-01",
+      "2030-08-02",
+      "2030-08-03",
+      "2030-08-04",
+      "2030-08-05",
+      "2030-08-06",
+      "2030-08-07",
+      "2030-08-08",
+      "2030-08-09",
+      "2030-08-10",
+      "2030-08-11",
+      "2030-08-12",
+      "2030-08-13",
+      "2030-08-14",
+      "2030-08-15",
+      "2030-08-16",
+      "2030-08-17",
+      "2030-08-18",
+      "2030-08-19",
+      "2030-08-20",
+      "2030-08-21",
+      "2030-08-22",
+      "2030-08-23",
+      "2030-08-24",
+      "2030-08-25",
+      "2030-08-26",
+      "2030-08-27",
+      "2030-08-28",
+      "2030-08-29",
+      "2030-08-30",
+      "2030-08-31",
+      "2030-09-01",
+      "2030-09-02",
+      "2030-09-03",
+      "2030-09-04",
+      "2030-09-05",
+      "2030-09-06",
+      "2030-09-07",
+      "2030-09-08",
+      "2030-09-09",
+      "2030-09-10",
+      "2030-09-11",
+      "2030-09-12",
+      "2030-09-13",
+      "2030-09-14",
+      "2030-09-15",
+      "2030-09-16",
+      "2030-09-17",
+      "2030-09-18",
+      "2030-09-19",
+      "2030-09-20",
+      "2030-09-21",
+      "2030-09-22",
+      "2030-09-23",
+      "2030-09-24",
+      "2030-09-25",
+      "2030-09-26",
+      "2030-09-27",
+      "2030-09-28",
+      "2030-09-29",
+      "2030-09-30",
+      "2030-10-01",
+      "2030-10-02",
+      "2030-10-03",
+      "2030-10-04",
+      "2030-10-05",
+      "2030-10-06",
+      "2030-10-07",
+      "2030-10-08",
+      "2030-10-09",
+      "2030-10-10",
+      "2030-10-11",
+      "2030-10-12",
+      "2030-10-13",
+      "2030-10-14",
+      "2030-10-15"
+    ],
+    "selection": [
+      "2030-10-16",
+      "2030-10-17",
+      "2030-10-18",
+      "2030-10-19",
+      "2030-10-20",
+      "2030-10-21",
+      "2030-10-22",
+      "2030-10-23",
+      "2030-10-24",
+      "2030-10-25",
+      "2030-10-26",
+      "2030-10-27",
+      "2030-10-28",
+      "2030-10-29"
+    ],
+    "assessment": [
+      "2030-10-30",
+      "2030-10-31",
+      "2030-11-01",
+      "2030-11-02",
+      "2030-11-03",
+      "2030-11-04",
+      "2030-11-05",
+      "2030-11-06",
+      "2030-11-07",
+      "2030-11-08",
+      "2030-11-09",
+      "2030-11-10",
+      "2030-11-11",
+      "2030-11-12"
+    ]
+  },
+  "formal_Queue": null,
+  "sampler": {
+    "seed": 20261013,
+    "candidate_counts": {
+      "queue_onset": 731,
+      "queue_ongoing": 4450
+    },
+    "selected_counts": {
+      "queue_onset": 31,
+      "queue_ongoing": 80
+    },
+    "requested_per_condition": 80,
+    "label_provenance": "eligible noisy public train observations; unknown future cells omitted",
+    "unknown_formal_selector": true,
+    "windows": [
+      {
+        "day": 54,
+        "at": 240,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-12T20:00:00+00:00",
+        "persistence_proxy_iou": 0.7815384615384615,
+        "future_label_coverage": 0.7409560723514211,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 48,
+        "at": 222,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-15T18:30:00+00:00",
+        "persistence_proxy_iou": 0.7570093457943925,
+        "future_label_coverage": 0.7680878552971576,
+        "near_cutoff_share": 0.0008410428931875525
+      },
+      {
+        "day": 73,
+        "at": 160,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-23T13:20:00+00:00",
+        "persistence_proxy_iou": 0.8816326530612245,
+        "future_label_coverage": 0.7583979328165374,
+        "near_cutoff_share": 0.002555366269165247
+      },
+      {
+        "day": 14,
+        "at": 246,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-12T20:30:00+00:00",
+        "persistence_proxy_iou": 0.4155844155844156,
+        "future_label_coverage": 0.774547803617571,
+        "near_cutoff_share": 0.0008340283569641367
+      },
+      {
+        "day": 89,
+        "at": 185,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-28T15:25:00+00:00",
+        "persistence_proxy_iou": 0.8725701943844493,
+        "future_label_coverage": 0.7667958656330749,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 45,
+        "at": 177,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-30T14:45:00+00:00",
+        "persistence_proxy_iou": 0.7707006369426752,
+        "future_label_coverage": 0.7538759689922481,
+        "near_cutoff_share": 0.005141388174807198
+      },
+      {
+        "day": 52,
+        "at": 163,
+        "condition": "queue_onset",
+        "origin": "2030-10-07T13:35:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7661498708010336,
+        "near_cutoff_share": 0.0008431703204047217
+      },
+      {
+        "day": 18,
+        "at": 144,
+        "condition": "queue_onset",
+        "origin": "2030-09-19T12:00:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7603359173126615,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 87,
+        "at": 220,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-26T18:20:00+00:00",
+        "persistence_proxy_iou": 0.5586854460093896,
+        "future_label_coverage": 0.7758397932816538,
+        "near_cutoff_share": 0.004995836802664446
+      },
+      {
+        "day": 72,
+        "at": 195,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-16T16:15:00+00:00",
+        "persistence_proxy_iou": 0.8987341772151899,
+        "future_label_coverage": 0.7545219638242894,
+        "near_cutoff_share": 0.0008561643835616438
+      },
+      {
+        "day": 82,
+        "at": 189,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-16T15:45:00+00:00",
+        "persistence_proxy_iou": 0.6451612903225806,
+        "future_label_coverage": 0.7635658914728682,
+        "near_cutoff_share": 0.001692047377326565
+      },
+      {
+        "day": 37,
+        "at": 215,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-06T17:55:00+00:00",
+        "persistence_proxy_iou": 0.7872340425531915,
+        "future_label_coverage": 0.7538759689922481,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 81,
+        "at": 169,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-11T14:05:00+00:00",
+        "persistence_proxy_iou": 0.6714285714285714,
+        "future_label_coverage": 0.7719638242894057,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 6,
+        "at": 122,
+        "condition": "queue_onset",
+        "origin": "2030-08-17T10:10:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7635658914728682,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 86,
+        "at": 169,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-25T14:05:00+00:00",
+        "persistence_proxy_iou": 0.7123287671232876,
+        "future_label_coverage": 0.7635658914728682,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 69,
+        "at": 125,
+        "condition": "queue_onset",
+        "origin": "2030-08-11T10:25:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7558139534883721,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 64,
+        "at": 143,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-03T11:55:00+00:00",
+        "persistence_proxy_iou": 0.8913043478260869,
+        "future_label_coverage": 0.770671834625323,
+        "near_cutoff_share": 0.0008382229673093043
+      },
+      {
+        "day": 60,
+        "at": 239,
+        "condition": "queue_ongoing",
+        "origin": "2030-07-22T19:55:00+00:00",
+        "persistence_proxy_iou": 0.7368421052631579,
+        "future_label_coverage": 0.7751937984496124,
+        "near_cutoff_share": 0.0008333333333333334
+      },
+      {
+        "day": 58,
+        "at": 196,
+        "condition": "queue_ongoing",
+        "origin": "2030-07-19T16:20:00+00:00",
+        "persistence_proxy_iou": 0.5943396226415094,
+        "future_label_coverage": 0.7829457364341085,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 3,
+        "at": 188,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-10T15:40:00+00:00",
+        "persistence_proxy_iou": 0.8595890410958904,
+        "future_label_coverage": 0.7629198966408268,
+        "near_cutoff_share": 0.000846740050804403
+      },
+      {
+        "day": 23,
+        "at": 94,
+        "condition": "queue_onset",
+        "origin": "2030-09-30T07:50:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7564599483204134,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 83,
+        "at": 231,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-18T19:15:00+00:00",
+        "persistence_proxy_iou": 0.08823529411764706,
+        "future_label_coverage": 0.7577519379844961,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 63,
+        "at": 157,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-01T13:05:00+00:00",
+        "persistence_proxy_iou": 0.5632183908045977,
+        "future_label_coverage": 0.7551679586563308,
+        "near_cutoff_share": 0.001710863986313088
+      },
+      {
+        "day": 9,
+        "at": 273,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-25T22:45:00+00:00",
+        "persistence_proxy_iou": 0.3064516129032258,
+        "future_label_coverage": 0.7687338501291989,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 23,
+        "at": 166,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-30T13:50:00+00:00",
+        "persistence_proxy_iou": 0.7880434782608695,
+        "future_label_coverage": 0.7512919896640827,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 14,
+        "at": 157,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-12T13:05:00+00:00",
+        "persistence_proxy_iou": 0.42105263157894735,
+        "future_label_coverage": 0.7538759689922481,
+        "near_cutoff_share": 0.002570694087403599
+      },
+      {
+        "day": 1,
+        "at": 200,
+        "condition": "queue_ongoing",
+        "origin": "2030-07-29T16:40:00+00:00",
+        "persistence_proxy_iou": 0.8805970149253731,
+        "future_label_coverage": 0.770671834625323,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 49,
+        "at": 151,
+        "condition": "queue_onset",
+        "origin": "2030-10-02T12:35:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7364341085271318,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 30,
+        "at": 175,
+        "condition": "queue_onset",
+        "origin": "2030-07-18T14:35:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7758397932816538,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 20,
+        "at": 137,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-23T11:25:00+00:00",
+        "persistence_proxy_iou": 0.7964601769911505,
+        "future_label_coverage": 0.7558139534883721,
+        "near_cutoff_share": 0.0008547008547008547
+      },
+      {
+        "day": 42,
+        "at": 146,
+        "condition": "queue_onset",
+        "origin": "2030-08-24T12:10:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7881136950904393,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 61,
+        "at": 177,
+        "condition": "queue_ongoing",
+        "origin": "2030-07-23T14:45:00+00:00",
+        "persistence_proxy_iou": 0.5925925925925926,
+        "future_label_coverage": 0.7325581395348837,
+        "near_cutoff_share": 0.0008818342151675485
+      },
+      {
+        "day": 47,
+        "at": 188,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-08T15:40:00+00:00",
+        "persistence_proxy_iou": 0.8571428571428571,
+        "future_label_coverage": 0.7751937984496124,
+        "near_cutoff_share": 0.0025
+      },
+      {
+        "day": 79,
+        "at": 175,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-09T14:35:00+00:00",
+        "persistence_proxy_iou": 0.36666666666666664,
+        "future_label_coverage": 0.7344961240310077,
+        "near_cutoff_share": 0.0008795074758135445
+      },
+      {
+        "day": 85,
+        "at": 175,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-22T14:35:00+00:00",
+        "persistence_proxy_iou": 0.8696629213483146,
+        "future_label_coverage": 0.7784237726098191,
+        "near_cutoff_share": 0.0033195020746887966
+      },
+      {
+        "day": 69,
+        "at": 235,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-11T19:35:00+00:00",
+        "persistence_proxy_iou": 0.8882175226586103,
+        "future_label_coverage": 0.7674418604651163,
+        "near_cutoff_share": 0.003367003367003367
+      },
+      {
+        "day": 31,
+        "at": 187,
+        "condition": "queue_ongoing",
+        "origin": "2030-07-20T15:35:00+00:00",
+        "persistence_proxy_iou": 0.6470588235294118,
+        "future_label_coverage": 0.7383720930232558,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 40,
+        "at": 179,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-20T14:55:00+00:00",
+        "persistence_proxy_iou": 0.7186147186147186,
+        "future_label_coverage": 0.7648578811369509,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 64,
+        "at": 249,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-03T20:45:00+00:00",
+        "persistence_proxy_iou": 0.4863013698630137,
+        "future_label_coverage": 0.7758397932816538,
+        "near_cutoff_share": 0.0008326394671107411
+      },
+      {
+        "day": 51,
+        "at": 164,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-06T13:40:00+00:00",
+        "persistence_proxy_iou": 0.8811188811188811,
+        "future_label_coverage": 0.7428940568475452,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 80,
+        "at": 216,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-10T18:00:00+00:00",
+        "persistence_proxy_iou": 0.5443037974683544,
+        "future_label_coverage": 0.7777777777777778,
+        "near_cutoff_share": 0.0008305647840531562
+      },
+      {
+        "day": 43,
+        "at": 212,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-26T17:40:00+00:00",
+        "persistence_proxy_iou": 0.6212121212121212,
+        "future_label_coverage": 0.7661498708010336,
+        "near_cutoff_share": 0.0008431703204047217
+      },
+      {
+        "day": 4,
+        "at": 157,
+        "condition": "queue_onset",
+        "origin": "2030-08-12T13:05:00+00:00",
+        "persistence_proxy_iou": 0.2,
+        "future_label_coverage": 0.7674418604651163,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 15,
+        "at": 239,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-13T19:55:00+00:00",
+        "persistence_proxy_iou": 0.7453083109919572,
+        "future_label_coverage": 0.774547803617571,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 5,
+        "at": 222,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-14T18:30:00+00:00",
+        "persistence_proxy_iou": 0.8063492063492064,
+        "future_label_coverage": 0.770671834625323,
+        "near_cutoff_share": 0.003352891869237217
+      },
+      {
+        "day": 50,
+        "at": 213,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-05T17:45:00+00:00",
+        "persistence_proxy_iou": 0.3902439024390244,
+        "future_label_coverage": 0.7467700258397932,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 7,
+        "at": 221,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-19T18:25:00+00:00",
+        "persistence_proxy_iou": 0.5388349514563107,
+        "future_label_coverage": 0.7467700258397932,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 15,
+        "at": 131,
+        "condition": "queue_onset",
+        "origin": "2030-09-13T10:55:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7667958656330749,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 11,
+        "at": 165,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-02T13:45:00+00:00",
+        "persistence_proxy_iou": 0.8143459915611815,
+        "future_label_coverage": 0.7635658914728682,
+        "near_cutoff_share": 0.00338409475465313
+      },
+      {
+        "day": 19,
+        "at": 247,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-21T20:35:00+00:00",
+        "persistence_proxy_iou": 0.3125,
+        "future_label_coverage": 0.7577519379844961,
+        "near_cutoff_share": 0.0008525149190110827
+      },
+      {
+        "day": 59,
+        "at": 229,
+        "condition": "queue_ongoing",
+        "origin": "2030-07-21T19:05:00+00:00",
+        "persistence_proxy_iou": 0.8832116788321168,
+        "future_label_coverage": 0.7771317829457365,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 71,
+        "at": 193,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-15T16:05:00+00:00",
+        "persistence_proxy_iou": 0.7333333333333333,
+        "future_label_coverage": 0.75,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 38,
+        "at": 226,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-07T18:50:00+00:00",
+        "persistence_proxy_iou": 0.5607476635514018,
+        "future_label_coverage": 0.7803617571059431,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 9,
+        "at": 178,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-25T14:50:00+00:00",
+        "persistence_proxy_iou": 0.8830897703549061,
+        "future_label_coverage": 0.751937984496124,
+        "near_cutoff_share": 0.005154639175257732
+      },
+      {
+        "day": 25,
+        "at": 187,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-03T15:35:00+00:00",
+        "persistence_proxy_iou": 0.8947368421052632,
+        "future_label_coverage": 0.7642118863049095,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 70,
+        "at": 175,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-13T14:35:00+00:00",
+        "persistence_proxy_iou": 0.6404494382022472,
+        "future_label_coverage": 0.7732558139534884,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 0,
+        "at": 198,
+        "condition": "queue_ongoing",
+        "origin": "2030-07-28T16:30:00+00:00",
+        "persistence_proxy_iou": 0.7678571428571429,
+        "future_label_coverage": 0.7680878552971576,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 60,
+        "at": 145,
+        "condition": "queue_ongoing",
+        "origin": "2030-07-22T12:05:00+00:00",
+        "persistence_proxy_iou": 0.7777777777777778,
+        "future_label_coverage": 0.7493540051679587,
+        "near_cutoff_share": 0.0008620689655172414
+      },
+      {
+        "day": 29,
+        "at": 241,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-15T20:05:00+00:00",
+        "persistence_proxy_iou": 0.041666666666666664,
+        "future_label_coverage": 0.7532299741602068,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 4,
+        "at": 237,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-12T19:45:00+00:00",
+        "persistence_proxy_iou": 0.4875,
+        "future_label_coverage": 0.7422480620155039,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 78,
+        "at": 229,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-07T19:05:00+00:00",
+        "persistence_proxy_iou": 0.49295774647887325,
+        "future_label_coverage": 0.7816537467700259,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 10,
+        "at": 248,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-31T20:40:00+00:00",
+        "persistence_proxy_iou": 0.2876712328767123,
+        "future_label_coverage": 0.7777777777777778,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 18,
+        "at": 249,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-19T20:45:00+00:00",
+        "persistence_proxy_iou": 0.25287356321839083,
+        "future_label_coverage": 0.7803617571059431,
+        "near_cutoff_share": 0.0008278145695364238
+      },
+      {
+        "day": 16,
+        "at": 245,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-14T20:25:00+00:00",
+        "persistence_proxy_iou": 0.19718309859154928,
+        "future_label_coverage": 0.7700258397932817,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 23,
+        "at": 247,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-30T20:35:00+00:00",
+        "persistence_proxy_iou": 0.04918032786885246,
+        "future_label_coverage": 0.7648578811369509,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 2,
+        "at": 172,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-02T14:20:00+00:00",
+        "persistence_proxy_iou": 0.6808510638297872,
+        "future_label_coverage": 0.7545219638242894,
+        "near_cutoff_share": 0.0008561643835616438
+      },
+      {
+        "day": 78,
+        "at": 154,
+        "condition": "queue_onset",
+        "origin": "2030-09-07T12:50:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7758397932816538,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 65,
+        "at": 166,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-04T13:50:00+00:00",
+        "persistence_proxy_iou": 0.8338762214983714,
+        "future_label_coverage": 0.7558139534883721,
+        "near_cutoff_share": 0.006837606837606838
+      },
+      {
+        "day": 24,
+        "at": 190,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-01T15:50:00+00:00",
+        "persistence_proxy_iou": 0.8095238095238095,
+        "future_label_coverage": 0.751937984496124,
+        "near_cutoff_share": 0.006013745704467354
+      },
+      {
+        "day": 26,
+        "at": 202,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-10T16:50:00+00:00",
+        "persistence_proxy_iou": 0.5208333333333334,
+        "future_label_coverage": 0.75,
+        "near_cutoff_share": 0.0017226528854435831
+      },
+      {
+        "day": 55,
+        "at": 203,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-13T16:55:00+00:00",
+        "persistence_proxy_iou": 0.7719298245614035,
+        "future_label_coverage": 0.7700258397932817,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 20,
+        "at": 250,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-23T20:50:00+00:00",
+        "persistence_proxy_iou": 0.6130268199233716,
+        "future_label_coverage": 0.7564599483204134,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 13,
+        "at": 166,
+        "condition": "queue_onset",
+        "origin": "2030-09-06T13:50:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.75,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 41,
+        "at": 170,
+        "condition": "queue_onset",
+        "origin": "2030-08-21T14:10:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7939276485788114,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 62,
+        "at": 214,
+        "condition": "queue_ongoing",
+        "origin": "2030-07-24T17:50:00+00:00",
+        "persistence_proxy_iou": 0.14814814814814814,
+        "future_label_coverage": 0.7861757105943152,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 39,
+        "at": 162,
+        "condition": "queue_onset",
+        "origin": "2030-08-18T13:30:00+00:00",
+        "persistence_proxy_iou": 0.2631578947368421,
+        "future_label_coverage": 0.7687338501291989,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 10,
+        "at": 176,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-31T14:40:00+00:00",
+        "persistence_proxy_iou": 0.828125,
+        "future_label_coverage": 0.7642118863049095,
+        "near_cutoff_share": 0.0033812341504649195
+      },
+      {
+        "day": 19,
+        "at": 125,
+        "condition": "queue_onset",
+        "origin": "2030-09-21T10:25:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7622739018087855,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 27,
+        "at": 187,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-11T15:35:00+00:00",
+        "persistence_proxy_iou": 0.8863636363636364,
+        "future_label_coverage": 0.7751937984496124,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 32,
+        "at": 192,
+        "condition": "queue_ongoing",
+        "origin": "2030-07-25T16:00:00+00:00",
+        "persistence_proxy_iou": 0.8990228013029316,
+        "future_label_coverage": 0.751937984496124,
+        "near_cutoff_share": 0.002577319587628866
+      },
+      {
+        "day": 88,
+        "at": 165,
+        "condition": "queue_onset",
+        "origin": "2030-09-27T13:45:00+00:00",
+        "persistence_proxy_iou": 0.35714285714285715,
+        "future_label_coverage": 0.7461240310077519,
+        "near_cutoff_share": 0.0008658008658008658
+      },
+      {
+        "day": 21,
+        "at": 211,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-24T17:35:00+00:00",
+        "persistence_proxy_iou": 0.7803030303030303,
+        "future_label_coverage": 0.7441860465116279,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 66,
+        "at": 218,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-05T18:10:00+00:00",
+        "persistence_proxy_iou": 0.10344827586206896,
+        "future_label_coverage": 0.7751937984496124,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 77,
+        "at": 176,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-04T14:40:00+00:00",
+        "persistence_proxy_iou": 0.673469387755102,
+        "future_label_coverage": 0.7564599483204134,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 76,
+        "at": 172,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-01T14:20:00+00:00",
+        "persistence_proxy_iou": 0.7783018867924528,
+        "future_label_coverage": 0.7661498708010336,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 54,
+        "at": 126,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-12T10:30:00+00:00",
+        "persistence_proxy_iou": 0.5652173913043478,
+        "future_label_coverage": 0.7642118863049095,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 16,
+        "at": 151,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-14T12:35:00+00:00",
+        "persistence_proxy_iou": 0.3076923076923077,
+        "future_label_coverage": 0.7784237726098191,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 84,
+        "at": 165,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-20T13:45:00+00:00",
+        "persistence_proxy_iou": 0.5891472868217055,
+        "future_label_coverage": 0.7558139534883721,
+        "near_cutoff_share": 0.0008547008547008547
+      },
+      {
+        "day": 49,
+        "at": 226,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-02T18:50:00+00:00",
+        "persistence_proxy_iou": 0.7225806451612903,
+        "future_label_coverage": 0.7693798449612403,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 36,
+        "at": 167,
+        "condition": "queue_onset",
+        "origin": "2030-07-31T13:55:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7448320413436692,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 6,
+        "at": 252,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-17T21:00:00+00:00",
+        "persistence_proxy_iou": 0.31666666666666665,
+        "future_label_coverage": 0.7855297157622739,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 35,
+        "at": 159,
+        "condition": "queue_onset",
+        "origin": "2030-07-30T13:15:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7680878552971576,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 73,
+        "at": 234,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-23T19:30:00+00:00",
+        "persistence_proxy_iou": 0.88,
+        "future_label_coverage": 0.7835917312661499,
+        "near_cutoff_share": 0.0032976092333058533
+      },
+      {
+        "day": 57,
+        "at": 198,
+        "condition": "queue_ongoing",
+        "origin": "2030-07-17T16:30:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7609819121447028,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 17,
+        "at": 192,
+        "condition": "queue_ongoing",
+        "origin": "2030-09-17T16:00:00+00:00",
+        "persistence_proxy_iou": 0.8397435897435898,
+        "future_label_coverage": 0.7655038759689923,
+        "near_cutoff_share": 0.002531645569620253
+      },
+      {
+        "day": 51,
+        "at": 260,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-06T21:40:00+00:00",
+        "persistence_proxy_iou": 0.08571428571428572,
+        "future_label_coverage": 0.7680878552971576,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 74,
+        "at": 180,
+        "condition": "queue_ongoing",
+        "origin": "2030-08-28T15:00:00+00:00",
+        "persistence_proxy_iou": 0.5765765765765766,
+        "future_label_coverage": 0.7771317829457365,
+        "near_cutoff_share": 0.0016625103906899418
+      },
+      {
+        "day": 28,
+        "at": 185,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-14T15:25:00+00:00",
+        "persistence_proxy_iou": 0.8095238095238095,
+        "future_label_coverage": 0.7816537467700259,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 68,
+        "at": 170,
+        "condition": "queue_onset",
+        "origin": "2030-08-09T14:10:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7538759689922481,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 91,
+        "at": 174,
+        "condition": "queue_onset",
+        "origin": "2030-10-09T14:30:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7596899224806202,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 56,
+        "at": 171,
+        "condition": "queue_onset",
+        "origin": "2030-07-16T14:15:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7693798449612403,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 72,
+        "at": 94,
+        "condition": "queue_onset",
+        "origin": "2030-08-16T07:50:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7571059431524548,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 8,
+        "at": 166,
+        "condition": "queue_onset",
+        "origin": "2030-08-22T13:50:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7506459948320413,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 11,
+        "at": 91,
+        "condition": "queue_onset",
+        "origin": "2030-09-02T07:35:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7693798449612403,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 83,
+        "at": 159,
+        "condition": "queue_onset",
+        "origin": "2030-09-18T13:15:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7590439276485789,
+        "near_cutoff_share": 0.000851063829787234
+      },
+      {
+        "day": 75,
+        "at": 202,
+        "condition": "queue_onset",
+        "origin": "2030-08-29T16:50:00+00:00",
+        "persistence_proxy_iou": 0.23958333333333334,
+        "future_label_coverage": 0.7732558139534884,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 48,
+        "at": 147,
+        "condition": "queue_onset",
+        "origin": "2030-09-15T12:15:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7777777777777778,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 59,
+        "at": 129,
+        "condition": "queue_onset",
+        "origin": "2030-07-21T10:45:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7390180878552972,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 29,
+        "at": 157,
+        "condition": "queue_onset",
+        "origin": "2030-10-15T13:05:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7764857881136951,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 53,
+        "at": 174,
+        "condition": "queue_onset",
+        "origin": "2030-10-08T14:30:00+00:00",
+        "persistence_proxy_iou": 0.4230769230769231,
+        "future_label_coverage": 0.7571059431524548,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 38,
+        "at": 154,
+        "condition": "queue_onset",
+        "origin": "2030-08-07T12:50:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7835917312661499,
+        "near_cutoff_share": 0.0
+      }
+    ]
+  },
+  "selection_sampler": {
+    "seed": 411,
+    "candidate_counts": {
+      "queue_onset": 112,
+      "queue_ongoing": 656
+    },
+    "selected_counts": {
+      "queue_onset": 5,
+      "queue_ongoing": 5
+    },
+    "requested_per_condition": 5,
+    "label_provenance": "eligible noisy public train observations; unknown future cells omitted",
+    "unknown_formal_selector": true,
+    "windows": [
+      {
+        "day": 1,
+        "at": 199,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-17T16:35:00+00:00",
+        "persistence_proxy_iou": 0.8325358851674641,
+        "future_label_coverage": 0.7377260981912145,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 2,
+        "at": 191,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-27T15:55:00+00:00",
+        "persistence_proxy_iou": 0.7391304347826086,
+        "future_label_coverage": 0.7719638242894057,
+        "near_cutoff_share": 0.002510460251046025
+      },
+      {
+        "day": 3,
+        "at": 183,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-22T15:15:00+00:00",
+        "persistence_proxy_iou": 0.7773279352226721,
+        "future_label_coverage": 0.7635658914728682,
+        "near_cutoff_share": 0.001692047377326565
+      },
+      {
+        "day": 6,
+        "at": 249,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-18T20:45:00+00:00",
+        "persistence_proxy_iou": 0.041666666666666664,
+        "future_label_coverage": 0.7680878552971576,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 4,
+        "at": 207,
+        "condition": "queue_ongoing",
+        "origin": "2030-10-25T17:15:00+00:00",
+        "persistence_proxy_iou": 0.3877551020408163,
+        "future_label_coverage": 0.7881136950904393,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 5,
+        "at": 175,
+        "condition": "queue_onset",
+        "origin": "2030-10-28T14:35:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7822997416020672,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 10,
+        "at": 148,
+        "condition": "queue_onset",
+        "origin": "2030-10-23T12:20:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7532299741602068,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 6,
+        "at": 145,
+        "condition": "queue_onset",
+        "origin": "2030-10-18T12:05:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7403100775193798,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 0,
+        "at": 170,
+        "condition": "queue_onset",
+        "origin": "2030-10-16T14:10:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7648578811369509,
+        "near_cutoff_share": 0.0
+      },
+      {
+        "day": 8,
+        "at": 157,
+        "condition": "queue_onset",
+        "origin": "2030-10-20T13:05:00+00:00",
+        "persistence_proxy_iou": 0.0,
+        "future_label_coverage": 0.7622739018087855,
+        "near_cutoff_share": 0.000847457627118644
+      }
+    ]
+  },
+  "old_training_windows": 78,
+  "assessment": [
+    {
+      "seed": 2909,
+      "sampler": {
+        "seed": 2909,
+        "candidate_counts": {
+          "queue_onset": 121,
+          "queue_ongoing": 887
+        },
+        "selected_counts": {
+          "queue_onset": 5,
+          "queue_ongoing": 5
+        },
+        "requested_per_condition": 5,
+        "label_provenance": "eligible noisy public train observations; unknown future cells omitted",
+        "unknown_formal_selector": true,
+        "windows": [
+          {
+            "day": 0,
+            "at": 113,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-08T09:25:00+00:00",
+            "persistence_proxy_iou": 0.5869565217391305,
+            "future_label_coverage": 0.7603359173126615,
+            "near_cutoff_share": 0.004248088360237893
+          },
+          {
+            "day": 2,
+            "at": 169,
+            "condition": "queue_ongoing",
+            "origin": "2030-10-31T14:05:00+00:00",
+            "persistence_proxy_iou": 0.42592592592592593,
+            "future_label_coverage": 0.7713178294573644,
+            "near_cutoff_share": 0.0033500837520938024
+          },
+          {
+            "day": 5,
+            "at": 213,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-04T17:45:00+00:00",
+            "persistence_proxy_iou": 0.6612903225806451,
+            "future_label_coverage": 0.7674418604651163,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 6,
+            "at": 138,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-05T11:30:00+00:00",
+            "persistence_proxy_iou": 0.18072289156626506,
+            "future_label_coverage": 0.7803617571059431,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 1,
+            "at": 159,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-10T13:15:00+00:00",
+            "persistence_proxy_iou": 0.7142857142857143,
+            "future_label_coverage": 0.7435400516795866,
+            "near_cutoff_share": 0.0008688097306689834
+          },
+          {
+            "day": 2,
+            "at": 95,
+            "condition": "queue_onset",
+            "origin": "2030-10-31T07:55:00+00:00",
+            "persistence_proxy_iou": 0.10416666666666667,
+            "future_label_coverage": 0.7622739018087855,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 7,
+            "at": 162,
+            "condition": "queue_onset",
+            "origin": "2030-11-06T13:30:00+00:00",
+            "persistence_proxy_iou": 0.16,
+            "future_label_coverage": 0.789405684754522,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 11,
+            "at": 172,
+            "condition": "queue_onset",
+            "origin": "2030-11-07T14:20:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.787467700258398,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 10,
+            "at": 119,
+            "condition": "queue_onset",
+            "origin": "2030-11-02T09:55:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7525839793281653,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 3,
+            "at": 170,
+            "condition": "queue_onset",
+            "origin": "2030-11-01T14:10:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7648578811369509,
+            "near_cutoff_share": 0.0008445945945945946
+          }
+        ]
+      },
+      "models": {
+        "old_sampler_joint": {
+          "proxy_IoU": 0.39443710904440216,
+          "conditions": {
+            "queue_ongoing": 0.5501562693708556,
+            "queue_onset": 0.2387179487179487
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-31T07:55:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:05:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.5185185185185185
+            },
+            {
+              "window": "D12_I5_N:2030-11-01T14:10:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.16666666666666666
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T09:55:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.25
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T17:45:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.6612903225806451
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T11:30:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.23076923076923078
+            },
+            {
+              "window": "D12_I5_N:2030-11-06T13:30:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.5769230769230769
+            },
+            {
+              "window": "D12_I5_N:2030-11-07T14:20:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.2
+            },
+            {
+              "window": "D12_I5_N:2030-11-08T09:25:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.5869565217391305
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T13:15:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.7532467532467533
+            }
+          ],
+          "observation_proxy_Brier": 0.023939569241333124
+        },
+        "random_sampler_joint": {
+          "proxy_IoU": 0.6597514698192993,
+          "conditions": {
+            "queue_ongoing": 0.6835122636479226,
+            "queue_onset": 0.635990675990676
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-31T07:55:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.4166666666666667
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:05:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.6696428571428571
+            },
+            {
+              "window": "D12_I5_N:2030-11-01T14:10:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.5
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T09:55:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.8
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T17:45:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.8837209302325582
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T11:30:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.41304347826086957
+            },
+            {
+              "window": "D12_I5_N:2030-11-06T13:30:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.8269230769230769
+            },
+            {
+              "window": "D12_I5_N:2030-11-07T14:20:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.6363636363636364
+            },
+            {
+              "window": "D12_I5_N:2030-11-08T09:25:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.5869565217391305
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T13:15:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.8641975308641975
+            }
+          ],
+          "observation_proxy_Brier": 0.014236273298090374
+        },
+        "separate_event_models": {
+          "proxy_IoU": 0.6339663585036694,
+          "conditions": {
+            "queue_ongoing": 0.5821014722287257,
+            "queue_onset": 0.6858312447786132
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-31T07:55:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.6952380952380952
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:05:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.5833333333333334
+            },
+            {
+              "window": "D12_I5_N:2030-11-01T14:10:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.6111111111111112
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T09:55:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.5
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T17:45:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.7073170731707317
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T11:30:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.26666666666666666
+            },
+            {
+              "window": "D12_I5_N:2030-11-06T13:30:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.7894736842105263
+            },
+            {
+              "window": "D12_I5_N:2030-11-07T14:20:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.8333333333333334
+            },
+            {
+              "window": "D12_I5_N:2030-11-08T09:25:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.5869565217391305
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T13:15:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.7662337662337663
+            }
+          ],
+          "observation_proxy_Brier": 0.01246059950540082
+        }
+      }
+    },
+    {
+      "seed": 3253,
+      "sampler": {
+        "seed": 3253,
+        "candidate_counts": {
+          "queue_onset": 121,
+          "queue_ongoing": 887
+        },
+        "selected_counts": {
+          "queue_onset": 5,
+          "queue_ongoing": 5
+        },
+        "requested_per_condition": 5,
+        "label_provenance": "eligible noisy public train observations; unknown future cells omitted",
+        "unknown_formal_selector": true,
+        "windows": [
+          {
+            "day": 3,
+            "at": 205,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-01T17:05:00+00:00",
+            "persistence_proxy_iou": 0.2903225806451613,
+            "future_label_coverage": 0.7396640826873385,
+            "near_cutoff_share": 0.0008733624454148472
+          },
+          {
+            "day": 6,
+            "at": 89,
+            "condition": "queue_onset",
+            "origin": "2030-11-05T07:25:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7906976744186046,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 12,
+            "at": 113,
+            "condition": "queue_onset",
+            "origin": "2030-11-09T09:25:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7596899224806202,
+            "near_cutoff_share": 0.0017006802721088435
+          },
+          {
+            "day": 10,
+            "at": 172,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-02T14:20:00+00:00",
+            "persistence_proxy_iou": 0.8715846994535519,
+            "future_label_coverage": 0.7790697674418605,
+            "near_cutoff_share": 0.0041459369817578775
+          },
+          {
+            "day": 9,
+            "at": 93,
+            "condition": "queue_ongoing",
+            "origin": "2030-10-30T07:45:00+00:00",
+            "persistence_proxy_iou": 0.674074074074074,
+            "future_label_coverage": 0.770671834625323,
+            "near_cutoff_share": 0.0016764459346186086
+          },
+          {
+            "day": 2,
+            "at": 169,
+            "condition": "queue_ongoing",
+            "origin": "2030-10-31T14:05:00+00:00",
+            "persistence_proxy_iou": 0.42592592592592593,
+            "future_label_coverage": 0.7713178294573644,
+            "near_cutoff_share": 0.0033500837520938024
+          },
+          {
+            "day": 1,
+            "at": 147,
+            "condition": "queue_onset",
+            "origin": "2030-11-10T12:15:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7629198966408268,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 11,
+            "at": 177,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-07T14:45:00+00:00",
+            "persistence_proxy_iou": 0.8421052631578947,
+            "future_label_coverage": 0.7719638242894057,
+            "near_cutoff_share": 0.0008368200836820083
+          },
+          {
+            "day": 5,
+            "at": 171,
+            "condition": "queue_onset",
+            "origin": "2030-11-04T14:15:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7493540051679587,
+            "near_cutoff_share": 0.0017241379310344827
+          },
+          {
+            "day": 0,
+            "at": 87,
+            "condition": "queue_onset",
+            "origin": "2030-11-08T07:15:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.770671834625323,
+            "near_cutoff_share": 0.0
+          }
+        ]
+      },
+      "models": {
+        "old_sampler_joint": {
+          "proxy_IoU": 0.3639272558181389,
+          "conditions": {
+            "queue_ongoing": 0.6432018964918593,
+            "queue_onset": 0.08465261514441842
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-30T07:45:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.6245353159851301
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:05:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.5185185185185185
+            },
+            {
+              "window": "D12_I5_N:2030-11-01T17:05:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.34615384615384615
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T14:20:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.9351351351351351
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T14:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.05714285714285714
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T07:25:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.3333333333333333
+            },
+            {
+              "window": "D12_I5_N:2030-11-07T14:45:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.7916666666666666
+            },
+            {
+              "window": "D12_I5_N:2030-11-08T07:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-11-09T09:25:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.03278688524590164
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T12:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            }
+          ],
+          "observation_proxy_Brier": 0.023884487493042464
+        },
+        "random_sampler_joint": {
+          "proxy_IoU": 0.4493523962416084,
+          "conditions": {
+            "queue_ongoing": 0.7688346626130869,
+            "queue_onset": 0.12987012987012986
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-30T07:45:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.7481481481481481
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:05:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.6696428571428571
+            },
+            {
+              "window": "D12_I5_N:2030-11-01T17:05:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.5294117647058824
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T14:20:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.9496021220159151
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T14:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.2857142857142857
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T07:25:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.36363636363636365
+            },
+            {
+              "window": "D12_I5_N:2030-11-07T14:45:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.9473684210526315
+            },
+            {
+              "window": "D12_I5_N:2030-11-08T07:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-11-09T09:25:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T12:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            }
+          ],
+          "observation_proxy_Brier": 0.01708353378688577
+        },
+        "separate_event_models": {
+          "proxy_IoU": 0.49792722253282073,
+          "conditions": {
+            "queue_ongoing": 0.7425324664977613,
+            "queue_onset": 0.2533219785678802
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-30T07:45:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.6777777777777778
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:05:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.5833333333333334
+            },
+            {
+              "window": "D12_I5_N:2030-11-01T17:05:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.6666666666666666
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T14:20:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.9427792915531336
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T14:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.37142857142857144
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T07:25:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.5454545454545454
+            },
+            {
+              "window": "D12_I5_N:2030-11-07T14:45:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.8421052631578947
+            },
+            {
+              "window": "D12_I5_N:2030-11-08T07:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-11-09T09:25:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.01639344262295082
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T12:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.3333333333333333
+            }
+          ],
+          "observation_proxy_Brier": 0.017814573971800318
+        }
+      }
+    },
+    {
+      "seed": 4001,
+      "sampler": {
+        "seed": 4001,
+        "candidate_counts": {
+          "queue_onset": 121,
+          "queue_ongoing": 887
+        },
+        "selected_counts": {
+          "queue_onset": 5,
+          "queue_ongoing": 5
+        },
+        "requested_per_condition": 5,
+        "label_provenance": "eligible noisy public train observations; unknown future cells omitted",
+        "unknown_formal_selector": true,
+        "windows": [
+          {
+            "day": 6,
+            "at": 91,
+            "condition": "queue_onset",
+            "origin": "2030-11-05T07:35:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7790697674418605,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 5,
+            "at": 217,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-04T18:05:00+00:00",
+            "persistence_proxy_iou": 0.28,
+            "future_label_coverage": 0.7758397932816538,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 2,
+            "at": 176,
+            "condition": "queue_ongoing",
+            "origin": "2030-10-31T14:40:00+00:00",
+            "persistence_proxy_iou": 0.8782051282051282,
+            "future_label_coverage": 0.7810077519379846,
+            "near_cutoff_share": 0.0008271298593879239
+          },
+          {
+            "day": 4,
+            "at": 210,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-03T17:30:00+00:00",
+            "persistence_proxy_iou": 0.8279569892473119,
+            "future_label_coverage": 0.787467700258398,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 7,
+            "at": 177,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-06T14:45:00+00:00",
+            "persistence_proxy_iou": 0.7760416666666666,
+            "future_label_coverage": 0.7777777777777778,
+            "near_cutoff_share": 0.0008305647840531562
+          },
+          {
+            "day": 8,
+            "at": 187,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-12T15:35:00+00:00",
+            "persistence_proxy_iou": 0.8,
+            "future_label_coverage": 0.7428940568475452,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 10,
+            "at": 123,
+            "condition": "queue_onset",
+            "origin": "2030-11-02T10:15:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7810077519379846,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 1,
+            "at": 147,
+            "condition": "queue_onset",
+            "origin": "2030-11-10T12:15:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7629198966408268,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 12,
+            "at": 107,
+            "condition": "queue_onset",
+            "origin": "2030-11-09T08:55:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7448320413436692,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 2,
+            "at": 90,
+            "condition": "queue_onset",
+            "origin": "2030-10-31T07:30:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7758397932816538,
+            "near_cutoff_share": 0.0
+          }
+        ]
+      },
+      "models": {
+        "old_sampler_joint": {
+          "proxy_IoU": 0.5217648476977135,
+          "conditions": {
+            "queue_ongoing": 0.7726963620620937,
+            "queue_onset": 0.2708333333333333
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-31T07:30:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:40:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.9230769230769231
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T10:15:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.1875
+            },
+            {
+              "window": "D12_I5_N:2030-11-03T17:30:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.8850574712643678
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T18:05:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.358974358974359
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T07:35:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.16666666666666666
+            },
+            {
+              "window": "D12_I5_N:2030-11-06T14:45:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.8963730569948186
+            },
+            {
+              "window": "D12_I5_N:2030-11-09T08:55:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 1.0
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T12:15:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-11-12T15:35:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.8
+            }
+          ],
+          "observation_proxy_Brier": 0.01015538883068332
+        },
+        "random_sampler_joint": {
+          "proxy_IoU": 0.5652118242276102,
+          "conditions": {
+            "queue_ongoing": 0.8479675081043432,
+            "queue_onset": 0.2824561403508772
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-31T07:30:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:40:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.9627329192546584
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T10:15:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.5
+            },
+            {
+              "window": "D12_I5_N:2030-11-03T17:30:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.7532467532467533
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T18:05:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.8
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T07:35:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.5789473684210527
+            },
+            {
+              "window": "D12_I5_N:2030-11-06T14:45:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.9238578680203046
+            },
+            {
+              "window": "D12_I5_N:2030-11-09T08:55:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.3333333333333333
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T12:15:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-11-12T15:35:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.8
+            }
+          ],
+          "observation_proxy_Brier": 0.006564395196612253
+        },
+        "separate_event_models": {
+          "proxy_IoU": 0.5799007603152269,
+          "conditions": {
+            "queue_ongoing": 0.7473015206304536,
+            "queue_onset": 0.4125
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-31T07:30:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:40:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.9363057324840764
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T10:15:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.5625
+            },
+            {
+              "window": "D12_I5_N:2030-11-03T17:30:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.6493506493506493
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T18:05:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.42857142857142855
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T07:35:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.6666666666666666
+            },
+            {
+              "window": "D12_I5_N:2030-11-06T14:45:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.9222797927461139
+            },
+            {
+              "window": "D12_I5_N:2030-11-09T08:55:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.5
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T12:15:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.3333333333333333
+            },
+            {
+              "window": "D12_I5_N:2030-11-12T15:35:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.8
+            }
+          ],
+          "observation_proxy_Brier": 0.00652370408841145
+        }
+      }
+    }
+  ],
+  "seconds": 37.99827960000039,
+  "limitations": "Same 14 public-train days across seeds; samples overlap and are not independent. No true queue labels. Architecture comparison is development evidence."
+}

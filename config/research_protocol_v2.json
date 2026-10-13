@@ -1,0 +1,21 @@
+{
+  "version": "research_v2_20261013",
+  "target_formal_total": 0.95,
+  "data": "official public train only; independent simulator truth",
+  "folds": [
+    {"name": "rolling_august", "profile_end": "2030-07-15", "fit_end": "2030-08-15", "selection_end": "2030-08-29", "assessment_end": "2030-09-12"},
+    {"name": "rolling_autumn", "profile_end": "2030-07-15", "fit_end": "2030-10-15", "selection_end": "2030-10-29", "assessment_end": "2030-11-12"},
+    {"name": "rolling_winter", "profile_end": "2030-07-15", "fit_end": "2030-12-15", "selection_end": "2030-12-29", "assessment_end": "2031-01-12"}
+  ],
+  "fit_seeds": [20261013, 20261029, 20261107],
+  "simulator_development_seeds": [411, 829, 1201],
+  "simulator_assessment_seeds": [2909, 3253, 4001],
+  "simulator_final_seeds": [7907, 8017, 9109],
+  "final_seed_policy": "Do not generate or inspect final seeds until architecture and all settings are committed and selection is sealed.",
+  "cross_corridor_groups": ["D12_I5", "D12_I405", "D7_I10", "D7_I210", "D7_I405"],
+  "uncertainty": {"unit": "paired day or event", "block_days": 7, "resamples": 4000, "confidence": 0.95},
+  "promotion": {"minimum_mean_state_gain": 0.002, "require_positive_block_ci": true, "maximum_panel_state_loss": 0.005, "require_multiple_seeds": true},
+  "historical_holdout_status": "All first-round test scores were inspected. These rolling public-train assessments are development evidence, not a newly untouched final test.",
+  "submission_feedback": {"maximum_new_submissions_per_day": 2, "require_preregistered_hypothesis": true, "change_one_component_family_at_a_time": true, "private_labels": "unavailable"},
+  "metric_provenance": {"state": "public train observations", "queue": "observation proxy or own simulator latent truth", "physics": "own simulator flux or public incomplete diagnostic", "od": "own independently generated truth or public link-count diagnostics", "formal_total": "Kaggle only"}
+}

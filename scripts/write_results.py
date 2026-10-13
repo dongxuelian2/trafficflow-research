@@ -12,6 +12,8 @@ def table(frame,cols):
     return '\n'.join(lines)
 
 def main():
+    if Path('reports/research/baseline_57138874_frozen.json').exists():
+        raise RuntimeError('First-round report generator is retired. Preserve the live research RESULTS.md and use versioned research evidence.')
     root=Path('reports/official');summary=json.loads((root/'campaign_summary.json').read_text());a=summary['aggregate']
     state=pd.read_csv(root/'state_holdout.csv');queue=pd.read_csv(root/'queue_proxy_holdout.csv')
     baseline=json.loads((root/'official_state_baseline_summary.json').read_text())

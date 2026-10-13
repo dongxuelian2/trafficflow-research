@@ -32,8 +32,15 @@ def conservation_operator(times,links,v,q,net,topo,on,off):
             continue
         inc=[s.strip() for s in str(topo.loc[link].get('incoming_link_ids','')).split(';') if s.strip()]
         out=[s.strip() for s in str(topo.loc[link].get('outgoing_link_ids','')).split(';') if s.strip()]
-        if not inc or not out or not set(inc+out).issubset(li):
+        # Internal missing neighbors are unavailable evidence. External
+        # connectors are valid boundaries in the public scorer, which uses
+        # the current link's flow when no observable neighbor remains.
+        internal_inc=[s for s in inc if s in topo.index]
+        internal_out=[s for s in out if s in topo.index]
+        if not set(internal_inc+internal_out).issubset(li):
             continue
+        inc=[s for s in inc if s in li] or [link]
+        out=[s for s in out if s in li] or [link]
         required=[j]+[li[s] for s in inc+out]
         valid=consecutive&np.isfinite(q[:-1,required]).all(axis=1)&np.isfinite(q[1:,j])
         valid &= np.isfinite(v[:-1,j])&np.isfinite(v[1:,j])&np.isfinite(on[:-1,j]+off[:-1,j])
@@ -75,7 +82,7 @@ def diagnose(frame,prediction,net,topo,ramps=None):
         on,off=ramps
     B,rhs=conservation_operator(times,links,v,q,net,topo,on,off)
     residual=B@np.nan_to_num(q).ravel()-rhs
-    return {'kind':'public_physics_diagnostic_only','formal_S_physics':None,
+    return {'kind':'public_physics_diagnostic_only','diagnostic_version':2,'formal_S_physics':None,
        'FD_mean_absolute_residual_per_lane':fd,'observable_transitions':len(rhs),
        'possible_transitions':max(0,(len(times)-1)*len(links)),
        'conservation_RMS_vehicles':float(np.sqrt(np.mean(residual**2))) if len(rhs) else None,

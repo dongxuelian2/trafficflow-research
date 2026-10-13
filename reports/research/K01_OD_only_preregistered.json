@@ -1,0 +1,72 @@
+{
+  "protocol_sha256": "901322e3d10884d8e17c59065200613db807d7ce5161e64b0ee3745d7bf0d10e",
+  "protocol": {
+    "id": "K01_OD_only_hierarchical_Gaussian",
+    "baseline_ref": 57138874,
+    "baseline_total": 0.8294,
+    "baseline_sha256": "43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1",
+    "changed_component": "ODME only",
+    "unchanged_components": [
+      "State",
+      "Queue",
+      "Physics (same State input)"
+    ],
+    "hypothesis": "Shared origin/destination demand variations explain weak-prior errors better than isotropic Ridge .05; posterior regularization trades tiny link-fit error for better path and attraction estimation.",
+    "offline_evidence": "D02 independent known-truth simulations, ten public networks, disjoint development/assessment seeds, three generating distributions",
+    "expected_formal_gain": null,
+    "formal_components_unobservable": true,
+    "selection": {
+      "D12_I405_N": {
+        "path_cv": 0.2,
+        "group_cv": 0.2,
+        "noise_cv": 0.02
+      },
+      "D12_I405_S": {
+        "path_cv": 0.2,
+        "group_cv": 0.2,
+        "noise_cv": 0.02
+      },
+      "D12_I5_N": {
+        "path_cv": 0.2,
+        "group_cv": 0.2,
+        "noise_cv": 0.02
+      },
+      "D12_I5_S": {
+        "path_cv": 0.2,
+        "group_cv": 0.2,
+        "noise_cv": 0.02
+      },
+      "D7_I10_E": {
+        "path_cv": 0.2,
+        "group_cv": 0.2,
+        "noise_cv": 0.02
+      },
+      "D7_I10_W": {
+        "path_cv": 0.2,
+        "group_cv": 0.2,
+        "noise_cv": 0.02
+      },
+      "D7_I210_E": {
+        "path_cv": 0.2,
+        "group_cv": 0.2,
+        "noise_cv": 0.02
+      },
+      "D7_I210_W": {
+        "path_cv": 0.2,
+        "group_cv": 0.2,
+        "noise_cv": 0.02
+      },
+      "D7_I405_N": {
+        "path_cv": 0.2,
+        "group_cv": 0.2,
+        "noise_cv": 0.02
+      },
+      "D7_I405_S": {
+        "path_cv": 0.2,
+        "group_cv": 0.2,
+        "noise_cv": 0.02
+      }
+    },
+    "decision": "One controlled formal upload. Preserve baseline on loss; no retuning from a single feedback value."
+  }
+}
