@@ -2,14 +2,16 @@ import numpy as np
 import pandas as pd
 import pytest
 from scipy import sparse
+from scipy.optimize import nnls
 from trafficflow.data import STATE_KEY,Release
-from trafficflow.metrics import state_score,total_score,queue_iou
+from trafficflow.metrics import state_score,total_score,queue_iou,grouped_iou
 from trafficflow.odme import solve
 from trafficflow.submission import merge_files,validate_task
 from trafficflow.queue import queue_features
-from trafficflow.state import Profile,StateFeatures,StateModel
+from trafficflow.state import Profile,StateFeatures,StateModel,kalman_residual
 from trafficflow.fixture import make_fixture
 from trafficflow.physics import conservation_operator
+from trafficflow.queue_calibration import decisions
 
 def truth_frame():
     return pd.DataFrame({'panel':['D7_I10_E']*3,'timestamp':['2030-06-01T00:00:00Z']*3,
@@ -35,11 +37,54 @@ def test_iou():
     assert queue_iou([0,0],[0,0])==1
     assert queue_iou([1,0],[1,1])==.5
 
+def test_vectorized_iou_matches_window_reference():
+    rng=np.random.default_rng(655);windows=np.array(['w3','w1','w2','w0'])
+    codes=rng.integers(0,4,350);window=windows[codes];condition=np.where(codes<2,'queue_onset','queue_ongoing')
+    y=rng.random(350)<.3;pred=rng.random(350)<.4
+    # Include an empty union to preserve the specified IoU=1 edge case.
+    y[codes==3]=False;pred[codes==3]=False
+    got=grouped_iou(y,pred,window,condition)
+    values={w:queue_iou(y[window==w],pred[window==w]) for w in windows}
+    expected={str(c):np.mean([values[w] for w in windows if condition[window==w][0]==c]) for c in np.unique(condition)}
+    assert got['conditions']==pytest.approx(expected)
+    assert got['proxy_IoU']==pytest.approx(np.mean(list(expected.values())))
+
+def test_conditional_decisions_keep_window_boundaries():
+    p=np.array([.1,.2,.4,.3,.6,.4])
+    windows=np.array(['a','a','b','b','c','c'])
+    conditions=np.array(['queue_onset']*2+['queue_ongoing']*4)
+    cut={'global':.5,'queue_onset':.15,'queue_ongoing':.5}
+    assert decisions(p,windows,conditions,cut).tolist()==[0,1,0,0,1,0]
+    assert decisions(p,windows,conditions,cut,True).tolist()==[0,1,1,0,1,0]
+
+def test_offline_kalman_missing_column_and_terminal_measurement():
+    prior=np.tile([10.,20.],(3,1));observed=np.full((3,2),np.nan);observed[2,1]=30.
+    actual=kalman_residual(observed,prior)
+    last=10.*1.075/(1.075+.08);middle=last*1.05/1.075;first=middle*1.025/1.05
+    assert actual[:,0]==pytest.approx([10.,10.,10.])
+    assert actual[:,1]==pytest.approx(20.+np.array([first,middle,last]))
+
 def test_sparse_nnls_prior_missing_connectors():
     A=sparse.csr_matrix([[1.,1.,0.],[0.,1.,1.]])
     f,info=solve(A,np.array([100.,150.]),np.array([30.,70.,80.]),'ridge',.05)
     assert info['success'] and np.all(f>=0)
     assert np.linalg.norm(A@f-[100,150])<1e-5
+
+def test_measurement_space_nnls_matches_independent_dense_reference():
+    rng=np.random.default_rng(921)
+    for iteration in range(16):
+        A=(rng.random((7,23))<.45).astype(float)
+        b=rng.uniform(0,30,23);c=rng.uniform(0,120,7)
+        regularization=[.005,.05,5.][iteration%3]
+        method='relative' if iteration%2 else 'ridge'
+        weight=1/np.maximum(b,10.) if method=='relative' else np.ones_like(b)
+        aa=np.vstack([A,np.sqrt(regularization)*np.diag(weight)])
+        yy=np.r_[c,np.sqrt(regularization)*b*weight]
+        expected,_=nnls(aa,yy)
+        actual,info=solve(sparse.csr_matrix(A),c,b,method,regularization)
+        assert np.all(actual>=0)
+        assert np.max(np.abs(actual-expected))<1e-6
+        assert info['KKT_max_absolute_residual']<5e-6
 
 @pytest.fixture(scope='module')
 def fixture_release(tmp_path_factory):

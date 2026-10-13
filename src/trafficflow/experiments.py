@@ -51,7 +51,7 @@ def target_truth(release,panel,template,raw):
         raise ValueError('Task 1 template contains non-eligible or absent truth')
     return truth[STATE_KEY+VALUES]
 
-def training_rows(release,panel,paths,profile,max_rows,seed):
+def training_rows(release,panel,paths,profile,max_rows,seed,feature_version=2):
     net,topo=release.network(panel),release.topology(panel)
     template=release.template(1,panel,'train')
     rng=np.random.default_rng(seed);xs,ys,bs=[],[],[]
@@ -62,7 +62,7 @@ def training_rows(release,panel,paths,profile,max_rows,seed):
             target=target.iloc[np.sort(rng.choice(len(target),per_day,replace=False))]
         if not len(target):
             continue
-        f=StateFeatures(masked,net,topo,profile)
+        f=StateFeatures(masked,net,topo,profile,version=feature_version)
         idx=f.lookup(target)
         y=target_truth(release,panel,target,raw)[VALUES].to_numpy(float,copy=True)
         y[:,1]/=target.link_id.map(net.lanes).to_numpy(float)
@@ -79,7 +79,7 @@ def evaluate_state(release,panel,paths,model,physics_strength=0.,fd_bounds=False
         frame=release.read(path);target=day_template(release,panel,'train',frame,template)
         if not len(target):
             continue
-        features=StateFeatures(frame,net,topo,model.profile)
+        features=StateFeatures(frame,net,topo,model.profile,version=getattr(model,'feature_version',1))
         pred=model.predict(features,target)
         full,_=reconstruct(frame,pred);times,links,_,_=grids(full,net)
         ramps=release.ramps(panel,'train',times,links)
@@ -113,7 +113,7 @@ def run_experiment(release,panel,output,seed=2026,iterations=250,max_rows=300000
         (output/'experiment.json').write_text(json.dumps(result,indent=2,allow_nan=False),encoding='utf-8')
     for method in methods:
         t=time.perf_counter();model=StateModel(profile,method,seed,iterations)
-        if method in ['lightgbm','catboost']:
+        if method in ['lightgbm','catboost','joint_lightgbm']:
             if x is None:
                 x,y,base=training_rows(release,panel,partitions['fit'],profile,max_rows,seed)
             model.fit(x,y,base)
@@ -164,7 +164,7 @@ def run_experiment(release,panel,output,seed=2026,iterations=250,max_rows=300000
         try:
             _,info=od_predict(release,panel,'train',method,reg)
             A,c,b,_=operator(release,panel,'train')
-            info['sensor_holdout']=count_holdout(A,c,b,reg,seed)
+            info['sensor_holdout']=count_holdout(A,c,b,reg,seed,method)
         except RuntimeError as exc:
             info={'success':False,'error':str(exc),'S_ODME':None}
         info['seconds']=time.perf_counter()-t

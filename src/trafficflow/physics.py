@@ -11,6 +11,8 @@ from .data import VALUES
 
 def reconstruct(frame, prediction):
     d=frame.copy()
+    if 'pct_observed' in d:
+        d.loc[pd.to_numeric(d.pct_observed,errors='coerce')<75,VALUES]=np.nan
     p=prediction[['timestamp','station_id','link_id']+VALUES]
     d=d.merge(p,on=['timestamp','station_id','link_id'],how='left',suffixes=('','_pred'),validate='one_to_one')
     target=d.speed_kmh_pred.notna()
@@ -23,36 +25,31 @@ def conservation_operator(times,links,v,q,net,topo,on,off):
     li={link:j for j,link in enumerate(links)}
     rr,cc,vv,rhs=[],[],[],[]
     tstamp=pd.to_datetime(times,utc=True)
-    for t in range(n-1):
-        if (tstamp[t+1]-tstamp[t]).total_seconds()!=300:
+    consecutive=np.diff(tstamp.as_unit('ns').asi8)==300*10**9
+    offset=0
+    for j,link in enumerate(links):
+        if link not in topo.index:
             continue
-        for j,link in enumerate(links):
-            if link not in topo.index:
-                continue
-            inc=[s.strip() for s in str(topo.loc[link].get('incoming_link_ids','')).split(';') if s.strip()]
-            out=[s.strip() for s in str(topo.loc[link].get('outgoing_link_ids','')).split(';') if s.strip()]
-            # A missing latent or external flux is not replaced by a fake current-link flow.
-            if not inc or not out or not set(inc+out).issubset(li):
-                continue
-            required=[j]+[li[s] for s in inc+out]
-            if (not np.isfinite(q[t,required]).all() or not np.isfinite(q[t+1,j])
-                or not np.isfinite(v[t,j]) or not np.isfinite(v[t+1,j])
-                or not np.isfinite(on[t,j]+off[t,j])):
-                continue
-            row=len(rhs)
-            length=float(net.loc[link,'length_km'])
-            coeff={((t+1)*m+j):length/max(v[t+1,j],1.),(t*m+j):-length/max(v[t,j],1.)}
-            for s in inc:
-                k=t*m+li[s]
-                coeff[k]=coeff.get(k,0)-1/12
-            for s in out:
-                k=t*m+li[s]
-                coeff[k]=coeff.get(k,0)+1/12
-            for k,value in coeff.items():
-                rr.append(row);cc.append(k);vv.append(value)
-            rhs.append((on[t,j]-off[t,j])/12)
-    B=sparse.csr_matrix((vv,(rr,cc)),shape=(len(rhs),n*m))
-    return B,np.asarray(rhs)
+        inc=[s.strip() for s in str(topo.loc[link].get('incoming_link_ids','')).split(';') if s.strip()]
+        out=[s.strip() for s in str(topo.loc[link].get('outgoing_link_ids','')).split(';') if s.strip()]
+        if not inc or not out or not set(inc+out).issubset(li):
+            continue
+        required=[j]+[li[s] for s in inc+out]
+        valid=consecutive&np.isfinite(q[:-1,required]).all(axis=1)&np.isfinite(q[1:,j])
+        valid &= np.isfinite(v[:-1,j])&np.isfinite(v[1:,j])&np.isfinite(on[:-1,j]+off[:-1,j])
+        t=np.flatnonzero(valid)
+        if not len(t):continue
+        row=offset+np.arange(len(t));offset+=len(t)
+        length=float(net.loc[link,'length_km'])
+        terms=[((t+1)*m+j,length/np.maximum(v[t+1,j],1.)),(t*m+j,-length/np.maximum(v[t,j],1.))]
+        terms += [(t*m+li[s],np.full(len(t),-1/12)) for s in inc]
+        terms += [(t*m+li[s],np.full(len(t),1/12)) for s in out]
+        for column,value in terms:
+            rr.append(row);cc.append(column);vv.append(value)
+        rhs.append((on[t,j]-off[t,j])/12)
+    B=sparse.csr_matrix((np.concatenate(vv) if vv else [],
+                       (np.concatenate(rr) if rr else [],np.concatenate(cc) if cc else [])),shape=(offset,n*m))
+    return B,np.concatenate(rhs) if rhs else np.empty(0)
 
 def grids(frame,net):
     times=sorted(frame.timestamp.unique());links=frame.link_id.drop_duplicates().tolist()

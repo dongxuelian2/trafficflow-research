@@ -1,0 +1,298 @@
+{
+  "panel": "D12_I5_N",
+  "dates": [
+    "2031-01-10",
+    "2031-01-11",
+    "2031-01-12",
+    "2031-01-13",
+    "2031-01-14",
+    "2031-01-15",
+    "2031-01-16",
+    "2031-01-17",
+    "2031-01-18",
+    "2031-01-19",
+    "2031-01-20",
+    "2031-01-21",
+    "2031-01-22",
+    "2031-01-23",
+    "2031-01-24",
+    "2031-01-25",
+    "2031-01-26",
+    "2031-01-27",
+    "2031-01-28",
+    "2031-01-29",
+    "2031-01-30",
+    "2031-01-31",
+    "2031-02-01",
+    "2031-02-02",
+    "2031-02-03",
+    "2031-02-04",
+    "2031-02-05",
+    "2031-02-06",
+    "2031-02-07",
+    "2031-02-08",
+    "2031-02-09",
+    "2031-02-10",
+    "2031-02-11",
+    "2031-02-12",
+    "2031-02-13",
+    "2031-02-14",
+    "2031-02-15",
+    "2031-02-16",
+    "2031-02-17",
+    "2031-02-18",
+    "2031-02-19",
+    "2031-02-20",
+    "2031-02-21",
+    "2031-02-22",
+    "2031-02-23",
+    "2031-02-24",
+    "2031-02-25",
+    "2031-02-26",
+    "2031-02-27",
+    "2031-02-28"
+  ],
+  "label_source": "public train observations, not true incidents",
+  "selected": {
+    "state_base": "lightgbm",
+    "state": "lightgbm_bounds",
+    "state_artifact": "state_lightgbm.pkl",
+    "physics_strength": 0.0,
+    "fd_bounds": true,
+    "queue": "lightgbm",
+    "queue_artifact": "queue_lightgbm.pkl",
+    "odme": {
+      "method": "ridge",
+      "regularization": 0.05,
+      "reason": "Conservative prior regularization; link fit is not hidden OD accuracy."
+    }
+  },
+  "strata": {
+    "rapid_drop_15_to_30_kmh": {
+      "n": 392,
+      "metrics": {
+        "S_state": 0.7389465993289593,
+        "details": [
+          {
+            "panel": "D12_I5_N",
+            "regime": "R1",
+            "n": 113,
+            "missing": 0,
+            "rmse_speed_kmh": 8.966933665141562,
+            "rmse_flow_per_lane": 69.40395941396696,
+            "S_state": 0.7531045306155676
+          },
+          {
+            "panel": "D12_I5_N",
+            "regime": "R2",
+            "n": 94,
+            "missing": 0,
+            "rmse_speed_kmh": 7.199089333491631,
+            "rmse_flow_per_lane": 66.61155464398152,
+            "S_state": 0.793430811836195
+          },
+          {
+            "panel": "D12_I5_N",
+            "regime": "R3",
+            "n": 185,
+            "missing": 0,
+            "rmse_speed_kmh": 11.897328020693916,
+            "rmse_flow_per_lane": 94.84338158855991,
+            "S_state": 0.6703044555351155
+          }
+        ],
+        "panels": {
+          "D12_I5_N": 0.7389465993289593
+        },
+        "families": {
+          "D12_I5": 0.7389465993289593
+        }
+      }
+    },
+    "severe_drop_at_least_30_kmh": {
+      "n": 647,
+      "metrics": {
+        "S_state": 0.40476834794296607,
+        "details": [
+          {
+            "panel": "D12_I5_N",
+            "regime": "R1",
+            "n": 195,
+            "missing": 0,
+            "rmse_speed_kmh": 21.284283440934576,
+            "rmse_flow_per_lane": 79.74844111664167,
+            "S_state": 0.4791190061530545
+          },
+          {
+            "panel": "D12_I5_N",
+            "regime": "R2",
+            "n": 131,
+            "missing": 0,
+            "rmse_speed_kmh": 24.07821490290945,
+            "rmse_flow_per_lane": 111.82686008364375,
+            "S_state": 0.394176632033029
+          },
+          {
+            "panel": "D12_I5_N",
+            "regime": "R3",
+            "n": 321,
+            "missing": 0,
+            "rmse_speed_kmh": 25.65930512322201,
+            "rmse_flow_per_lane": 155.20512307458938,
+            "S_state": 0.34100940564281484
+          }
+        ],
+        "panels": {
+          "D12_I5_N": 0.40476834794296607
+        },
+        "families": {
+          "D12_I5": 0.40476834794296607
+        }
+      }
+    },
+    "recovery_at_least_15_kmh": {
+      "n": 1083,
+      "metrics": {
+        "S_state": 0.49783158449993775,
+        "details": [
+          {
+            "panel": "D12_I5_N",
+            "regime": "R1",
+            "n": 314,
+            "missing": 0,
+            "rmse_speed_kmh": 15.008503414153111,
+            "rmse_flow_per_lane": 142.8148980652947,
+            "S_state": 0.5663249044042336
+          },
+          {
+            "panel": "D12_I5_N",
+            "regime": "R2",
+            "n": 248,
+            "missing": 0,
+            "rmse_speed_kmh": 18.604673394872474,
+            "rmse_flow_per_lane": 144.46526085923188,
+            "S_state": 0.48738235467867685
+          },
+          {
+            "panel": "D12_I5_N",
+            "regime": "R3",
+            "n": 521,
+            "missing": 0,
+            "rmse_speed_kmh": 19.50787859875542,
+            "rmse_flow_per_lane": 181.09868849997395,
+            "S_state": 0.4397874944169029
+          }
+        ],
+        "panels": {
+          "D12_I5_N": 0.49783158449993775
+        },
+        "families": {
+          "D12_I5": 0.49783158449993775
+        }
+      }
+    },
+    "stable_change_below_5_kmh": {
+      "n": 712397,
+      "metrics": {
+        "S_state": 0.9508161654254597,
+        "details": [
+          {
+            "panel": "D12_I5_N",
+            "regime": "R1",
+            "n": 195414,
+            "missing": 0,
+            "rmse_speed_kmh": 1.1438265416259845,
+            "rmse_flow_per_lane": 25.6121771733841,
+            "S_state": 0.9556573442012843
+          },
+          {
+            "panel": "D12_I5_N",
+            "regime": "R2",
+            "n": 160366,
+            "missing": 0,
+            "rmse_speed_kmh": 1.2860784450538947,
+            "rmse_flow_per_lane": 26.73840860559642,
+            "S_state": 0.9517212589892119
+          },
+          {
+            "panel": "D12_I5_N",
+            "regime": "R3",
+            "n": 356617,
+            "missing": 0,
+            "rmse_speed_kmh": 1.5654846675366818,
+            "rmse_flow_per_lane": 27.54213664607578,
+            "S_state": 0.945069893085883
+          }
+        ],
+        "panels": {
+          "D12_I5_N": 0.9508161654254597
+        },
+        "families": {
+          "D12_I5": 0.9508161654254597
+        }
+      }
+    },
+    "previous_observation_unavailable": {
+      "n": 190742,
+      "metrics": {
+        "S_state": 0.935647854983297,
+        "details": [
+          {
+            "panel": "D12_I5_N",
+            "regime": "R1",
+            "n": 52704,
+            "missing": 0,
+            "rmse_speed_kmh": 1.6099389144564042,
+            "rmse_flow_per_lane": 27.29349860936973,
+            "S_state": 0.944300303847225
+          },
+          {
+            "panel": "D12_I5_N",
+            "regime": "R2",
+            "n": 42735,
+            "missing": 0,
+            "rmse_speed_kmh": 1.949852933654035,
+            "rmse_flow_per_lane": 28.707136447042956,
+            "S_state": 0.9358743720236733
+          },
+          {
+            "panel": "D12_I5_N",
+            "regime": "R3",
+            "n": 95303,
+            "missing": 0,
+            "rmse_speed_kmh": 2.320986995063119,
+            "rmse_flow_per_lane": 30.12755455779704,
+            "S_state": 0.9267688890789924
+          }
+        ],
+        "panels": {
+          "D12_I5_N": 0.935647854983297
+        },
+        "families": {
+          "D12_I5": 0.935647854983297
+        }
+      }
+    }
+  },
+  "formal_scores": null,
+  "seconds": 122.11493770000016,
+  "runtime": {
+    "python": "3.13.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus": 16,
+    "process_peak_working_set_MiB": 1536.9921875,
+    "peak_scope": "current process lifetime, not isolated per model",
+    "source_sha256": "38c0d2d88b856f8d36ef16ed070ee94fbcda24a8f991af98232f9b1db32400ce",
+    "model_threads": 4,
+    "gpu_used": false,
+    "versions": {
+      "numpy": "2.2.5",
+      "pandas": "3.0.5",
+      "scipy": "1.16.1",
+      "pyarrow": "25.0.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10",
+      "scikit-learn": "1.7.2"
+    }
+  }
+}

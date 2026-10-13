@@ -68,9 +68,17 @@
   "gpu_used": false,
   "clean_environment_verified": true,
   "clean_validation": {
-    "tests_passed": 10,
+    "tests_passed": 14,
     "pip_check": "passed",
     "full_fixture_pipeline": "passed",
     "predictions_byte_identical": true
+  },
+  "official_validation": {
+    "full_release_hash_and_schema": "passed",
+    "full_submission_rows": 6980503,
+    "repeat_inference_rows": 107416,
+    "repeat_inference_max_difference": 0.0,
+    "baseline_panels": 10,
+    "queue_panels": 8
   }
 }

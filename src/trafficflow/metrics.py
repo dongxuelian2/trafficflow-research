@@ -57,12 +57,14 @@ def queue_iou(y: np.ndarray, p: np.ndarray) -> float:
     return float((y&p).sum()/union) if union else 1.
 
 def grouped_iou(labels: np.ndarray, pred: np.ndarray, window: np.ndarray, condition: np.ndarray) -> dict:
-    rows = []
-    for wid in np.unique(window):
-        sel = window == wid
-        rows.append({'window':str(wid), 'condition':str(condition[sel][0]),
-                     'IoU':queue_iou(labels[sel], pred[sel])})
-    d = pd.DataFrame(rows)
+    y,p=np.asarray(labels,bool),np.asarray(pred,bool)
+    if y.shape!=p.shape or y.ndim!=1 or len(y)!=len(window) or len(y)!=len(condition):
+        raise ValueError('Queue grouped prediction shape mismatch')
+    frame=pd.DataFrame({'window':window,'condition':condition,'intersection':y&p,'union':y|p})
+    grouped=frame.groupby('window',sort=True).agg(condition=('condition','first'),intersection=('intersection','sum'),union=('union','sum'))
+    grouped['IoU']=np.divide(grouped.intersection,grouped.union,out=np.ones(len(grouped)),where=grouped.union.to_numpy()!=0)
+    d=grouped.reset_index()[['window','condition','IoU']]
+    rows=d.to_dict('records')
     value = d.groupby('condition').IoU.mean().mean() if len(d) else 0.
     return {'proxy_IoU':float(value), 'conditions':d.groupby('condition').IoU.mean().to_dict() if len(d) else {},
             'windows':rows}

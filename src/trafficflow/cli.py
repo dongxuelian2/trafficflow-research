@@ -88,15 +88,20 @@ def fit_final(release,panel,models_dir,iterations=250,max_rows=500000,seed=2026)
     partitions,_=groups(release,panel)
     profile=Profile.fit(raw_for(release,panel,partitions['profile']))
     paths=partitions['fit']+partitions['calibration']+partitions['test']
-    method=selection['state_base'];model=StateModel(profile,method,seed,iterations)
-    if method in ['lightgbm','catboost']:
-        model.fit(*training_rows(release,panel,paths,profile,max_rows,seed))
+    method=selection['state_base']
+    original=StateModel.load(models_dir/panel/selection.get('state_artifact',f'state_{method}.pkl'))
+    model=StateModel(profile,method,seed,original.iterations,original.threads,
+                     getattr(original,'feature_version',1),getattr(original,'num_leaves',31))
+    model.density_blend=getattr(original,'density_blend',1.)
+    if method in ['lightgbm','catboost','joint_lightgbm']:
+        model.fit(*training_rows(release,panel,paths,profile,max_rows,seed,model.feature_version))
     model.save(models_dir/panel/'state_final.pkl')
     if not panel.startswith('D12_I405'):
         queue_method=selection['queue']
-        original=QueueModel.load(models_dir/panel/f'queue_{queue_method}.pkl')
+        original=QueueModel.load(models_dir/panel/selection.get('queue_artifact',f'queue_{queue_method}.pkl'))
         proxy=proxy_windows(raw_for(release,panel,paths),release.network(panel),release.topology(panel),panel)
-        qm=QueueModel(queue_method,seed,iterations).fit(proxy);qm.threshold=original.threshold
+        from copy import deepcopy
+        qm=deepcopy(original);qm.model=None;qm.fit(proxy)
         qm.save(models_dir/panel/'queue_final.pkl')
 
 def score_public(release,output,panels,split):
@@ -176,7 +181,7 @@ def predict(release,models_dir,output,panels,splits,baseline=False):
                 frame=release.read(path);target=day_template(release,panel,split,frame,template)
                 if not len(target):
                     continue
-                features=StateFeatures(frame,net,topo,model.profile)
+                features=StateFeatures(frame,net,topo,model.profile,version=getattr(model,'feature_version',1))
                 pred=model.predict(features,target)
                 full,_=reconstruct(frame,pred);times,links,_,_=grids(full,net)
                 ramps=release.ramps(panel,split,times,links)

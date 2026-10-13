@@ -4,8 +4,52 @@ import numpy as np
 import pandas as pd
 from scipy import sparse
 from scipy.optimize import minimize, lsq_linear
+from scipy.linalg import solve as dense_solve
 from .data import Release,csv,OD_KEY,check_keys
 from .metrics import od_link_score
+
+def bounded_ridge(A,c,b,regularization,weight,maxiter=1000):
+    """Convex bound-constrained quadratic solve with a measurement-space system.
+
+    Block pivots enforce f>=0 and the KKT conditions. Each free solve uses the
+    Woodbury identity, so its dense system is m x m, not n_paths x n_paths.
+    """
+    if regularization<=0:
+        raise ValueError('Positive regularization required by measurement-space solver')
+    A=sparse.csr_matrix(A);d=regularization*weight**2
+    passive=np.ones(len(b),bool);f=np.zeros_like(b)
+    best_infeasible=len(b)+1;retry_budget=3
+    gradient_tolerance=max(1e-7,1e-11*float(np.max(np.abs(A.T@c))))
+    for iteration in range(maxiter):
+        indices=np.flatnonzero(passive);f[:]=0
+        if len(indices):
+            AP=A[:,indices];inv_d=1/d[indices]
+            G=(AP.multiply(inv_d)@AP.T).toarray()
+            G[np.diag_indices_from(G)]+=1.
+            u=dense_solve(G,c-AP@b[indices],assume_a='pos',check_finite=False)
+            f[indices]=b[indices]+inv_d*np.asarray(AP.T@u)
+        gradient=np.asarray(A.T@(A@f-c))+d*(f-b)
+        negative_free=passive&(f < -1e-8)
+        negative_active=(~passive)&(gradient < -gradient_tolerance)
+        bad=negative_free|negative_active;n_bad=int(bad.sum())
+        if n_bad==0:
+            f=np.maximum(f,0.)
+            gradient=np.asarray(A.T@(A@f-c))+d*(f-b)
+            projected=np.where(f>1e-8,gradient,np.minimum(gradient,0.))
+            kkt=float(np.max(np.abs(projected)))
+            if kkt>max(5e-6,gradient_tolerance*10):
+                raise RuntimeError(f'Measurement-space solve failed KKT verification ({kkt:.3g})')
+            return f,{'success':True,'iterations':iteration+1,'solver':'measurement_space_block_pivots',
+                      'KKT_max_absolute_residual':kkt}
+        if n_bad<best_infeasible:
+            best_infeasible=n_bad;retry_budget=3
+            passive[bad]=~passive[bad]
+        elif retry_budget>0:
+            retry_budget-=1;passive[bad]=~passive[bad]
+        else:
+            # Single lowest-index pivot avoids repeatedly flipping a stalled block.
+            index=int(np.flatnonzero(bad)[0]);passive[index]=~passive[index]
+    raise RuntimeError('Measurement-space bound solver reached iteration limit')
 
 def operator(release: Release,panel: str,split: str):
     folder=release.root/'corridors'/panel/'network'
@@ -41,6 +85,10 @@ def solve(A,c,b,method='ridge',regularization=.05,maxiter=1000):
         return b.copy(),{'success':True,'iterations':0}
     if method in ['ridge','relative']:
         weight=np.ones_like(b) if method=='ridge' else 1/np.maximum(b,10.)
+        if regularization>0:
+            f,info=bounded_ridge(A,c,b,regularization,weight,maxiter)
+            info.update({'S_link':od_link_score(A,f,c),'prior_L1_change':float(np.abs(f-b).sum())})
+            return f,info
         aa=sparse.vstack([A,np.sqrt(regularization)*sparse.diags(weight)],format='csr')
         yy=np.r_[c,np.sqrt(regularization)*b*weight]
         result=lsq_linear(aa,yy,bounds=(0,np.inf),tol=1e-8,lsmr_tol=1e-9,max_iter=maxiter)
@@ -82,11 +130,11 @@ def predict(release,panel,split,method='ridge',regularization=.05):
                  'matrix_shape':list(A.shape),'matrix_nnz':A.nnz})
     return result,info
 
-def count_holdout(A,c,b,regularization=.05,seed=2026):
+def count_holdout(A,c,b,regularization=.05,seed=2026,method='ridge'):
     rng=np.random.default_rng(seed)
     order=rng.permutation(A.shape[0]);cut=max(1,int(.8*len(order)))
     if cut==len(order):
         return {'heldout_S_link':None}
-    f,info=solve(A[order[:cut]],c[order[:cut]],b,'ridge',regularization)
+    f,info=solve(A[order[:cut]],c[order[:cut]],b,method,regularization)
     return {'heldout_S_link':od_link_score(A[order[cut:]],f,c[order[cut:]]),'fit':info,
             'note':'Sensor holdout diagnostic; not hidden OD recovery accuracy.'}

@@ -93,25 +93,22 @@ def temporal(a, max_gap=60):
 def kalman_residual(observed, prior, process=.025, measurement=.08):
     # Random-walk residual filter and Rauch--Tung--Striebel smoothing, offline Task 1 only.
     n,m = observed.shape
-    out = np.empty_like(observed)
-    for j in range(m):
-        x, p = np.zeros(n),np.zeros(n)
-        mean,var = 0.,1.
-        for t in range(n):
-            var += process
-            if np.isfinite(observed[t,j]):
-                gain = var/(var+measurement)
-                mean += gain*(observed[t,j]-prior[t,j]-mean)
-                var *= 1-gain
-            x[t],p[t] = mean,var
-        for t in range(n-2,-1,-1):
-            gain=p[t]/(p[t]+process)
-            x[t] += gain*(x[t+1]-x[t])
-        out[:,j]=prior[:,j]+x
-    return out
+    x,p=np.zeros_like(observed),np.zeros_like(observed)
+    mean,var=np.zeros(m),np.ones(m)
+    for t in range(n):
+        var+=process;good=np.isfinite(observed[t])
+        gain=var[good]/(var[good]+measurement)
+        mean[good]+=gain*(observed[t,good]-prior[t,good]-mean[good])
+        var[good]*=1-gain;x[t],p[t]=mean,var
+    for t in range(n-2,-1,-1):
+        gain=p[t]/(p[t]+process)
+        x[t]+=gain*(x[t+1]-x[t])
+    return prior+x
 
 class StateFeatures:
-    def __init__(self, frame: pd.DataFrame, net: pd.DataFrame, topo: pd.DataFrame, profile: Profile):
+    def __init__(self, frame: pd.DataFrame, net: pd.DataFrame, topo: pd.DataFrame, profile: Profile, version=2):
+        if version not in [1,2]:raise ValueError('Unknown state feature version')
+        self.version=version
         self.frame = frame.copy()
         self.net = net
         self.links = frame.link_id.drop_duplicates().tolist()
@@ -151,7 +148,8 @@ class StateFeatures:
             for t in range(len(self.times)):
                 good=np.flatnonzero(np.isfinite(a[t]))
                 if len(good):
-                    spa[t]=np.interp(positions,positions[good],a[t,good])
+                    spa[t]=np.interp(positions,positions[good],a[t,good]*(lanes[good] if channel==1 and version>=2 else 1.))
+                    if channel==1 and version>=2:spa[t]/=lanes
             p=self.prior[:,:,channel]
             self.temp[:,:,channel]=tmp
             self.space[:,:,channel]=spa
@@ -167,11 +165,24 @@ class StateFeatures:
                 neighbor=np.full_like(a,np.nan)
                 for j,ids in enumerate(ns):
                     if ids:
-                        subset=pd.DataFrame(a[:,ids]).mean(axis=1).to_numpy()
+                        values=a[:,ids];valid=np.isfinite(values)
+                        count=valid.sum(axis=1)
+                        subset=np.divide(np.where(valid,values,0.).sum(axis=1),count,
+                                         out=np.full(len(values),np.nan),where=count>0)
                         neighbor[:,j]=subset
                 features[name+'_'+label]=neighbor.ravel()/scale
                 features[name+'_'+label+'_lag']=shifted(neighbor,1).ravel()/scale
                 features[name+'_'+label+'_lead']=shifted(neighbor,-1).ravel()/scale
+                if channel==1 and version>=2:
+                    flux=np.full_like(a,np.nan)
+                    for j,ids in enumerate(ns):
+                        if ids:
+                            values=a[:,ids]*lanes[ids]
+                            complete=np.isfinite(values).all(axis=1)
+                            flux[complete,j]=np.sum(values[complete],axis=1)/lanes[j]
+                    features['q_'+label+'_flux']=flux.ravel()/600
+                    features['q_'+label+'_flux_lag']=shifted(flux,1).ravel()/600
+                    features['q_'+label+'_flux_lead']=shifted(flux,-1).ravel()/600
         # Distance-weighted temporal/spatial estimate; missing local evidence falls back to train profile.
         age=np.stack([temporal(self.raw[:,:,c])[1] for c in range(2)],axis=-1)
         wt=1/(1+age/10)
@@ -179,6 +190,39 @@ class StateFeatures:
         ss=np.where(np.isfinite(self.space),.35,0)
         base=(np.nan_to_num(self.temp)*ts+np.nan_to_num(self.space)*ss)/np.maximum(ts+ss,1e-9)
         self.base=np.where((ts+ss)>0,base,self.prior)
+        if version>=2:
+            for c,name,scale in [(0,'v',25.),(1,'q',600.)]:
+                any_values=frame.pivot_table(index='timestamp',columns='link_id',values=VALUES[c],aggfunc='mean').reindex(index=self.times,columns=self.links).to_numpy(float)
+                any_values=np.where(np.isfinite(any_values),any_values,np.nan)
+                if c==1:any_values/=lanes
+                tmp_any,age_any=temporal(any_values)
+                features[name+'_temporal_any_quality']=tmp_any.ravel()/scale
+                features[name+'_age_any_quality']=age_any.ravel()/60
+                features[name+'_kalman']=self.smooth[:,:,c].ravel()/scale
+            density=self.raw[:,:,1]/np.maximum(self.raw[:,:,0],1.)
+            dt_density,density_age=temporal(density)
+            ds_density=np.full_like(density,np.nan)
+            for t in range(len(self.times)):
+                good=np.flatnonzero(np.isfinite(density[t]))
+                if len(good):
+                    ds_density[t]=np.interp(positions,positions[good],density[t,good]*lanes[good])/lanes
+            density_prior=self.prior[:,:,1]/np.maximum(self.prior[:,:,0],1.)
+            tw=np.where(np.isfinite(dt_density),1/(1+density_age/10),0.)
+            sw=np.where(np.isfinite(ds_density),.35,0.)
+            dbase=(np.nan_to_num(dt_density)*tw+np.nan_to_num(ds_density)*sw)/np.maximum(tw+sw,1e-9)
+            self.density_base=np.where(tw+sw>0,dbase,density_prior)
+            features['density_temporal']=dt_density.ravel()/25
+            features['density_spatial']=ds_density.ravel()/25
+            features['density_base']=self.density_base.ravel()/25
+            scale_ratio=self.raw[:,:,1]/np.maximum(self.prior[:,:,1],1.)
+            global_scale=pd.DataFrame(scale_ratio).median(axis=1).to_numpy(float)
+            features['corridor_flow_scale']=np.repeat(global_scale,len(self.links))
+            features['q_profile_day_scaled']=(self.prior[:,:,1]*global_scale[:,None]).ravel()/600
+            vf=net.free_speed_kmh.reindex(self.links).to_numpy(float)
+            valid=np.isfinite(self.raw[:,:,0])
+            fraction=np.divide(((self.raw[:,:,0]/vf)<=.6).sum(axis=1),valid.sum(axis=1),
+                               out=np.full(len(self.times),np.nan),where=valid.sum(axis=1)>0)
+            features['corridor_queue_fraction']=np.repeat(fraction,len(self.links))
         dt=pd.to_datetime(grid.timestamp,utc=True)
         minute=dt.dt.hour*60+dt.dt.minute
         features['sin_tod']=np.sin(2*np.pi*minute/1440)
@@ -199,17 +243,19 @@ class StateFeatures:
         return idx
 
 class StateModel:
-    def __init__(self, profile: Profile, method='interpolation', seed=2026, iterations=250, threads=4):
+    def __init__(self, profile: Profile, method='interpolation', seed=2026, iterations=250, threads=4, feature_version=2, num_leaves=31):
         self.profile,self.method,self.seed=profile,method,seed
         self.iterations,self.threads=iterations,threads
+        self.feature_version,self.num_leaves=feature_version,num_leaves
+        self.density_model=None;self.density_blend=1.
         self.models=[]
 
     def fit(self, x: pd.DataFrame, y: np.ndarray, base: np.ndarray):
         residual=(y-base)/np.array([25.,600.])
         for c in range(2):
-            if self.method=='lightgbm':
+            if self.method in ['lightgbm','joint_lightgbm']:
                 from lightgbm import LGBMRegressor
-                model=LGBMRegressor(n_estimators=self.iterations,learning_rate=.035,num_leaves=31,
+                model=LGBMRegressor(n_estimators=self.iterations,learning_rate=.035,num_leaves=self.num_leaves,
                    min_child_samples=80,reg_lambda=5.,colsample_bytree=.9,random_state=self.seed,
                    n_jobs=self.threads,verbosity=-1,deterministic=True,force_col_wise=True)
                 model.fit(x,residual[:,c])
@@ -221,9 +267,19 @@ class StateModel:
             else:
                 raise ValueError('Training is supported for LightGBM and CatBoost')
             self.models.append(model)
+        if self.method=='joint_lightgbm':
+            density=np.maximum(y[:,1]/np.maximum(y[:,0],1.),1e-3)
+            density_base=x.density_base.to_numpy(float)*25
+            from lightgbm import LGBMRegressor
+            self.density_model=LGBMRegressor(n_estimators=self.iterations,learning_rate=.035,num_leaves=self.num_leaves,
+                min_child_samples=80,reg_lambda=5.,colsample_bytree=.9,random_state=self.seed,n_jobs=self.threads,
+                verbosity=-1,deterministic=True,force_col_wise=True)
+            self.density_model.fit(x,(density-density_base)/25)
         return self
 
     def predict(self, features: StateFeatures, template: pd.DataFrame):
+        if features.version!=getattr(self,'feature_version',1):
+            raise ValueError('Build features with the model artifact feature_version')
         idx=features.lookup(template)
         if self.method=='historical':
             y=features.prior.reshape(-1,2)[idx].copy()
@@ -231,13 +287,19 @@ class StateModel:
             y=features.smooth.reshape(-1,2)[idx].copy()
         else:
             y=features.base.reshape(-1,2)[idx].copy()
-            if self.method in ['lightgbm','catboost']:
+            if self.method in ['lightgbm','catboost','joint_lightgbm']:
                 if len(self.models)!=2:
                     raise ValueError('Model is not trained')
                 x=features.features.iloc[idx]
                 if self.method=='catboost':
                     x=x.fillna(-999)
                 y+=np.stack([m.predict(x) for m in self.models],axis=-1)*np.array([25.,600.])
+                if self.method=='joint_lightgbm':
+                    density=np.maximum(x.density_base.to_numpy(float)*25+self.density_model.predict(x)*25,1e-3)
+                    wv,wq=.54/25**2,.46/600**2
+                    projected_v=(wv*y[:,0]+wq*density*y[:,1])/(wv+wq*density**2)
+                    projected=np.c_[projected_v,density*projected_v]
+                    y=(1-self.density_blend)*y+self.density_blend*projected
             elif self.method!='interpolation':
                 raise ValueError('Unknown state method')
         y=np.maximum(y,0)
