@@ -52,4 +52,4 @@ Task 1 targets 来自模板；Task 2 只读 `[T−60,T)`，隐藏 split 的 raw 
 正式总分为 `0.35 State + 0.30 Queue + 0.15 Physics + 0.20 ODME`。公开 train State 可按官方公式验证；queue proxy IoU、physics residual 和 OD S_link 不能替代正式隐藏分项。未知项保留 null。
 D12_I5_N 是开发走廊，test 已多次查看。时间组与选择协议见 [方法](docs/METHODS.md)。人工 fixture 的旧轮结果保存在 `reports/fixture/RESULTS_PRE_OFFICIAL.md`，只证明集成流程，不能上传其 submission。
 官方 MIT 工具包固定到 `c88cddf533bbf0afa4ff1fc6c031d760a08e7a31`，33 个 Git blob 已核验。第三方只阅读公开架构说明，未导入代码、训练资产或预测。规则差异和许可证见 `docs/RESEARCH_NOTES.md`、`docs/EXTERNAL_ASSETS.md`。
-仓库在本机；没有发布 GitHub、发送注册邮件或上传 Kaggle。
+GitHub 仓库：[dongxuelian2/trafficflow-research](https://github.com/dongxuelian2/trafficflow-research)。数据和模型产物保留在本机；没有发送注册邮件或上传 Kaggle。
