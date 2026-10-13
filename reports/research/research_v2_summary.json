@@ -1,0 +1,74 @@
+{
+  "formal_Kaggle_best": 0.8294,
+  "formal_components": null,
+  "OD_simulated_means": {
+    "prior": 0.7799041332810169,
+    "ridge_0.05": 0.8250474288141681,
+    "selected_bayesian": 0.8707064544253378,
+    "gain": 0.045659025611169544
+  },
+  "OD_seed_gains": [
+    {
+      "seed": 2909,
+      "mean_simulated_OD_gain": 0.029119005668642003,
+      "minimum_case_gain": -0.0026377814255851284
+    },
+    {
+      "seed": 3253,
+      "mean_simulated_OD_gain": 0.05729839798593436,
+      "minimum_case_gain": -0.0020045619286455096
+    },
+    {
+      "seed": 4001,
+      "mean_simulated_OD_gain": 0.05055967317893222,
+      "minimum_case_gain": -0.003803704828586052
+    }
+  ],
+  "OD_repeat_numeric_parity": {
+    "D12_I5_N": true,
+    "D7_I210_W": true
+  },
+  "Queue_proxy_means": [
+    {
+      "panel": "D12_I5_N",
+      "fold": "rolling_autumn",
+      "old_sampler_joint": 0.42670973752008484,
+      "random_sampler_joint": 0.5581052300961726,
+      "separate_event_models": 0.5705981137839057
+    },
+    {
+      "panel": "D7_I10_W",
+      "fold": "rolling_autumn",
+      "old_sampler_joint": 0.7703566792194693,
+      "random_sampler_joint": 0.7811094958790363,
+      "separate_event_models": 0.7454264920321366
+    },
+    {
+      "panel": "D12_I5_N",
+      "fold": "rolling_winter",
+      "old_sampler_joint": 0.5963393439328308,
+      "random_sampler_joint": 0.6570882841150408,
+      "separate_event_models": 0.6467680470748216
+    }
+  ],
+  "CTM_simulated_physics": {
+    "observation_oracle": {
+      "ctm_flux": 0.3408822205300844,
+      "projected_observation_flux": 0.9957594860830352
+    },
+    "latent_oracle": {
+      "ctm_flux": 0.4239071681448914,
+      "projected_observation_flux": 0.8050923871621664
+    },
+    "temporal_spatial": {
+      "ctm_flux": 0.3622780911991402,
+      "projected_observation_flux": 0.7021195976196234
+    },
+    "RTS": {
+      "ctm_flux": 0.33502701610877555,
+      "projected_observation_flux": 0.5687749475578188
+    }
+  },
+  "uncertainty_limit": "Three synthetic assessment seeds, related public network structures, and hand-chosen generating distributions cannot validate actual hidden OD truth. Queue seed samples overlap.",
+  "promotion": "K01 rejected: formal total 0.76474 vs baseline 0.82940. No Queue promotion from these experiments."
+}

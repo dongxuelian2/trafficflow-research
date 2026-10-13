@@ -7,8 +7,9 @@ import time
 import numpy as np
 os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG', ':4096:8')
 import torch
-from trafficflow.graph_state import GraphState, data_loss, fd_loss
+from trafficflow.graph_state import GraphState, data_loss, fd_loss, density_change_loss
 from trafficflow.research_eval import state_from_sufficient_stats, paired_block_interval
+from trafficflow.runtime import evidence
 
 
 def tensor_input(day, device):
@@ -49,7 +50,14 @@ def main():
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--epochs',type=int,default=16)
     parser.add_argument('--steps',type=int,default=60)
+    parser.add_argument('--seed',type=int)
+    parser.add_argument('--density-change',action='store_true')
+    parser.add_argument('--density-change-weight',type=float,default=.01)
+    parser.add_argument('--model',choices=['all','graph_density_change'],default='all')
     args = parser.parse_args()
+    if args.model=='graph_density_change':args.density_change=True
+    if not np.isfinite(args.density_change_weight) or args.density_change_weight<0:
+        raise ValueError('Density change weight must be finite and nonnegative')
     if args.output.exists():
         raise FileExistsError('Use a new model experiment directory')
     args.output.mkdir(parents=True)
@@ -57,7 +65,7 @@ def main():
     started = time.perf_counter()
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     torch.set_num_threads(4)
-    seed = prepared['seed']
+    seed = prepared['seed'] if args.seed is None else args.seed
     torch.manual_seed(seed)
     np.random.seed(seed)
     torch.use_deterministic_algorithms(True)
@@ -69,14 +77,30 @@ def main():
             for key in ('fit','selection')}
     graph_np = dict(np.load(args.cache/'graph.npz'))
     graph = [torch.tensor(graph_np[key],device=device) for key in ('incoming','outgoing','fd')]
+    if args.density_change:
+        from trafficflow.data import Release
+        net=Release('data/kaggle_public').network(prepared['panel'])
+        links=sets['fit'][0]['links']
+        accumulation_factor=torch.tensor((net.lanes*net.length_km).reindex(links).to_numpy(np.float32),device=device)
+        for days in sets.values():
+            for day in days:
+                times=np.array([str(t).removesuffix('Z') for t in day['times']],dtype='datetime64[s]')
+                if not (np.diff(times).astype('timedelta64[s]').astype(int)==300).all():
+                    raise ValueError('Density increment loss needs consecutive five-minute pairs')
     result = {'experiment':'A01_masked_graph_state','cache':str(args.cache),'prepared':prepared,
         'torch':torch.__version__,'device':str(device),'gpu':torch.cuda.get_device_name(0) if device.type=='cuda' else None,
+        'source_at_start':evidence(gpu_used=device.type=='cuda'),
+        'fit_seed':seed,'fixed_LGB_fit_seed':prepared['seed'],
         'epochs':args.epochs,'steps_per_epoch':args.steps,'batch_size':4,'patch_steps':64,
         'training':{},'selection':{},'formal_State':None,
         'comparison_limit':'Same public train dates; LGB sees 300000 sampled labels, neural samples patches. This does not isolate architecture from label exposure.'}
     baseline = evaluate(None,sets['selection'],graph,device,0.)
     result['baseline_selection'] = baseline
     architectures = [('temporal',False,0.),('graph',True,0.),('graph_FD',True,.01)]
+    if args.density_change:
+        architectures += [('graph_density_change',True,0.)]
+    if args.model=='graph_density_change':
+        architectures=[('graph_density_change',True,0.)]
     selected = None
     for name,use_graph,physical_weight in architectures:
         torch.manual_seed(seed)
@@ -103,6 +127,8 @@ def main():
                 loss = data_loss(prediction,y,target)
                 if physical_weight:
                     loss = loss + physical_weight*fd_loss(prediction,target,graph[2])
+                if name=='graph_density_change':
+                    loss = loss + args.density_change_weight*density_change_loss(prediction,y,target,x,accumulation_factor)
                 loss.backward()
                 torch.nn.utils.clip_grad_norm_(model.parameters(),1.)
                 optimizer.step()
@@ -123,7 +149,8 @@ def main():
             cal=evaluate(model,sets['selection'],graph,device,alpha)
             choices.append({'alpha':alpha,'selection_State':cal['S_state']})
         choice=max(choices,key=lambda c:(c['selection_State'],-c['alpha']))
-        result['training'][name]={'history':history,'seconds':time.perf_counter()-tic,'FD_loss_weight':physical_weight}
+        result['training'][name]={'history':history,'seconds':time.perf_counter()-tic,'FD_loss_weight':physical_weight,
+            'public_train_density_increment_weight':args.density_change_weight if name=='graph_density_change' else 0.}
         result['selection'][name]={'ensemble_grid':choices,'selected':choice}
         if selected is None or choice['selection_State']>selected['selection_State']:
             selected={'name':name,**choice}

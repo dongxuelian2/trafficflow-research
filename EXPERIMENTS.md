@@ -8,11 +8,47 @@
 | P00 | 公共拓扑是否导致部分方向无法评分 | 公开拓扑、原版 scorer、人工理想两时刻状态 | 十方向全部有可评分连接，否定结构性 0.950 上限猜想 | 本地诊断漏掉外部连接；修复并测试 |
 | B01 | CTM、缺失、事故和噪声压力实验 | 独立 54 个场景，3 seed × 6 条件 × R1/R2/R3 | 守恒误差 ≤6.76e-13 vehicles；State observation oracle 1.0，latent oracle 0.952006，时空插值 0.887547，RTS 0.848378 | 7.60 秒 CPU；模拟数据不等于正式生成器 |
 | D01 | 分层贝叶斯 OD 对比 Ridge | 两走廊、独立已知真值模拟 | 初步增益，但 zone set 的迭代顺序依赖 Python hash seed | **不作为可复现结论**；保留记录，改为 sorted 后重跑 D02 |
-| D02 | 固定组顺序的分层贝叶斯 OD | 十走廊，每方向 3 生成分布 × 3 assessment seed；selection seed 独立 | 已完成，详见 JSON；尚无正式 OD 增益证据 | public_reference 从未读取；正式候选须保持其他任务相同 |
-| C01 | 随机事件采样、onset/ongoing 分别建模 | rolling_autumn；按公开限制构造带噪观测代理 | 运行中 | 同 14 天抽样种子会重叠，不视为独立样本 |
-| ENV01 | 独立 CUDA 环境 | Python 3.13.1 / RTX 4060 8GB | ensurepip 在当前系统失败；uv 已启动官方 torch 2.8.0+cu128 安装 | 原 .venv-repro 不修改 |
+| D02 | 固定组顺序的分层贝叶斯 OD | 十走廊，每方向 3 生成分布 × 3 assessment seed；selection seed 独立 | 模拟 ODME Ridge 0.825047 → Bayes 0.870706；少数 case 退化，最差 −0.003804 | 72.95 秒 CPU；public_reference 从未读取 |
+| D03 | 不同 Python hash seed 独立进程复跑 | D12_I5_N / D7_I210_W | 除耗时和运行指纹外，全部数值一致 | 支持重复性，不证明隐藏真值准确 |
+| C01 | 随机事件采样、onset/ongoing 分别建模 | D12_I5_N rolling_autumn；带噪观测代理 | old joint 0.426710 → random joint 0.558105 / separate 0.570598 | 同 14 天抽样种子重叠；非独立样本 |
+| C02 | 跨方向复核事件模型 | D7_I10_W rolling_autumn | old joint 0.770357 / random joint 0.781109 / separate 0.745426 | **独立事件模型退化**，不晋级 |
+| C03 | 跨季节复核事件模型 | D12_I5_N rolling_winter | old joint 0.596339 / random joint 0.657088 / separate 0.646768 | separate 不如共享模型，不晋级 |
+| A01 | 缺失感知时间卷积 / 图扩散 / 图+FD 联合损失 | D12_I5_N rolling_autumn，同 92 天 fit / 14 天 selection / 14 天 assessment | selection 选择 graph+LGB α=.5；assessment State 0.936655 → 0.940205；日均配对增益 0.002739，95% block CI [0.001963,0.003462] | GPU 56.43 秒，峰值 344.41 MiB；只有单走廊单 seed，不晋级 |
+| A01-FD | FD auxiliary weight .01 | 同 A01 | selection 低于纯 graph；未按 assessment 反选 | 保留负面消融 |
+| A02 | 冬季 rolling 对照 | D12_I5_N rolling_winter | State 0.940342 → 0.942887 | 同架构、同参数，α=.5 |
+| A03/A04 | 第二个 NN fit seed 20261029 | 秋季 / 冬季，同固定 LGB 比较 | selected State 0.939143 / 0.944371 | 增益继续存在；LGB fit seed 固定 |
+| A07/A08 | 第三个 NN fit seed 20261107 | 秋季 / 冬季，同固定 LGB 比较 | selected State 0.939584 / 0.943671 | 多 seed 仍只覆盖单方向 |
+| A05 | 零样本跨 family transfer | D12_I5 → D7_I10_W，目标 family 标签不进输入 / 无目标 calibration | 插值 0.928998，纯 graph 0.913238，固定半数组合 0.927536；日均 CI 完全负 | **迁移失败**，不能据此部署共享全走廊模型 |
+| A06 | 第三个 rolling 时间段 | D12_I5_N rolling_august | 300k LGB 0.944993 → graph α=.25 0.946550 | 52.92 秒 GPU；增益低于 .002 |
+| A09 | public-train accumulation increment 联合损失 | 同 A01；有观测节点固定，仅预测 target | λ=.01；按 State 仍选择普通 graph，未选 auxiliary | 71.17 秒 GPU；不将 density increment proxy 称正式 Physics |
+| A10 | 由 cal density 指标选联合候选 | 同 A01；State 至少不低于 baseline 的约束 | State 0.938577；target-pair L1 .824392 → .786185 | 单方向、单 seed、300k 比较组；不是正式 Physics |
+| A11 | density-increment 权重 .1 | 同 A01 | selection 选择 α=0，无 State 增益 | 24.66 秒 GPU；强约束失败 |
+| A12 | I405_N 逐方向图专家 | D7_I405_N autumn，352 sensors | 300k LGB .917777 → graph FD α=.5 .920775 | 78.50 秒 GPU；仍待强基线预算对照 |
+| A13 | I10_W 逐方向图专家 | D7_I10_W autumn | cal 选择 α=0，assessment 保持 .951806 | 86.63 秒 GPU；无独立增益 |
+| A14 | 同参数 LGB 标签预算控制 | D12_I5_N autumn，300k → 全部 1,804,908 标签 | State .936655 → **.942340**，超过原 graph 组合 .940205 | 191.10 秒 CPU；修正架构收益解释 |
+| A15 | 强 LGB 上重做图组合 | 同 A14，仅 cal 选 graph FD α=.25 | assessment **.943417**，比强 LGB +.001077；日均 block CI [.000717,.001161] | 低于 .002 晋级门槛；无正式 State/Physics 测量 |
+| C04 | 发布 T 时刻数据的合法可用率 | validation/private 的 at-T 时间谓词扫描 | 平均可用约 44%–59%；不读未来数值 | Rules 允许 ≤T，原模型只用 <T |
+| C05 | 同窗口 at-T 消融 | I5_N autumn | before-T 600/63 .540552 → at-T .612418，cal 选择 at-T | 73.45 秒 CPU；10 个 cal 窗口 |
+| C06 | 分离 latest-valid bookkeeping 作用 | 同 C05，增加两个 before-T 对照 | cal 选中 before-T-latest 600/63，assessment **.526387** | 98.76 秒 CPU；选择失稳，不能按 test 改选 .612418 |
+| C07 | at-T 跨方向检查 | I10_W autumn | cal 选 at-T 600/63 .802211 vs before-T .765435；at-T 400/23 退化 | 42.22 秒 CPU；仅 6 个 cal 窗口 |
+| C08 | at-T 跨季节检查 | I5_N winter | cal 选 at-T 400/23 .697673 vs before-T .670006 | 132.37 秒 CPU；仅 10 个 cal 窗口 |
+| D04 | 扩大独立 prior 失配分布 | 十方向、4 种 reverse noisy prior、3 assessment seed | Bayes 在 missing-prior-path 模拟下 .606048 vs Ridge .611359，负增益 | 50.28 秒 CPU；未解释正式全量退化，不以此调隐藏反馈 |
+| A16 | 冬季全标签 LGB 控制 | I5_N winter，全部 3,042,465 个标签 | State **.946854**，超过此前最佳冬季图组合 .944371 | 290.08 秒 CPU；强基线结论跨季节成立 |
+| C09–C11 | 扩大事件 cal 配额至每条件 30，assessment 至 20 | I5_N 秋/冬、I10_W 秋，实际配额由可用事件限制 | cal 选定候选未稳定改善；唯一 origin 的 at-T 配对 CI 均跨零 | 不晋级；保留 65 / 14 / 59 个唯一 origin 的按日 block 诊断 |
+| K01 | 一次 OD-only 正式控制实验 | 同首轮所有 State / Queue 数值，全量 6,980,503 行 diff | **正式 Total 0.76474，下降 0.06466，拒绝晋级**；ref 57140644 | SHA 4976e6bc1fe45207b6ea05dda2031d7885c9b38e1d607efc62c97887ba1e9055 |
+| ENV01 | 独立 CUDA 环境 | Python 3.13.1 / RTX 4060 Laptop 8GB | torch 2.8.0+cu128 已安装；实际 CUDA 运算通过 | 当前沙箱临时目录访问失败，改为 E:\\ieee\\.cache\\build_tmp 后构建成功；原 .venv-repro 不修改 |
 
 复现入口：`scripts/register_research_protocol.py`、`audit_physics_topology.py`、`simulate_stress.py`、`od_probability_experiment.py`、`queue_event_experiment.py`。
 正式反馈只读本队提交。禁止隐藏标签、组织方内部资产和其他队伍预测。
 
+A01 的 CI 是按天配对的诊断，不是非线性 pooled State 或 Kaggle Total 的置信区间。A14 已证实标签预算混杂：全标签 LGB 超过原神经网络组合；A15 的独立增益低于登记门槛。后续必须继续比较强基线和多个 fit seed。
+
+**K01 的迁移失败优先于 D02 模拟增益。** 其他任务值逐行完全相同，按 0.20 权重，ODME 总体分项差约 −0.32330（显示分数舍入误差约 ±0.00005），绝对分项值仍未知。候选可能存在严重 prior distribution 失配，不能仅因模拟更优继续增加其 ensemble 权重。下一轮需扩大生成分布、反向构造 noisy weak prior、检查 nullspace 漂移与真实可用稳定性；不依照这一个正式反馈细调参数。
+
+K01 public-only 诊断：validation 的 Bayes-vs-Ridge L2 差异平均 99.94% 位于观测矩阵零空间；计数误差几乎看不到这些变化。Bayes 总需求约为 Ridge 的 80.74%，相对 prior 的偏移量约为 Ridge 的 1.56 倍。这里只解释模型的行为，不能证明隐藏 path truth 或精确归因正式损失。
+
 现有首轮 January–February test 已经查看；新 rolling assessment 仍是公开 train 开发证据。独立模拟 final seed 7907/8017/9109 尚未生成，需在架构和参数封存后一次性评估。
+
+C09/C10/C11 的去重、按 condition 等权、日期 block bootstrap 增益分别为 .016495 / .024714 / .014972，95% CI 分别为 [−.012655,.060063] / [−.117752,.076207] / [−.017293,.099297]。比较的 before-T 与 at-T 模型都只按各自 selection 选定，assessment 未参与选择。相同 origin 的重复抽样去重，缺失某 condition 的 bootstrap draw 明确排除；I10_W 的事件特别稀少，因此区间证据较弱。
+
+本轮新增模型与配置 116 项 SHA 已记录于 `reports/research/model_artifacts_checkpoint_20261013_a.json`。正在运行的后续模型不在此快照中。CUDA 环境 21 tests passed；测试临时目录使用工作区 `.cache`，系统沙箱 TEMP 不可写。

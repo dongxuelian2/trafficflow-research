@@ -1,0 +1,135 @@
+{
+  "source_family": "D12_I5",
+  "excluded_target_family": "D7_I10",
+  "target_panel": "D7_I10_W",
+  "target_train_labels_in_model_inputs": false,
+  "dates": [
+    "2030-10-30",
+    "2030-10-31",
+    "2030-11-01",
+    "2030-11-02",
+    "2030-11-03",
+    "2030-11-04",
+    "2030-11-05",
+    "2030-11-06",
+    "2030-11-07",
+    "2030-11-08",
+    "2030-11-09",
+    "2030-11-10",
+    "2030-11-11",
+    "2030-11-12"
+  ],
+  "registered": {
+    "protocol_sha256": "2e4af0c8ae5a3cb872d04baff08d0578ff708786d1a2c0c83bd4f2bffef76d37",
+    "protocol": {
+      "source_model": "artifacts\\research\\A01_graph_run01",
+      "source_panel": "D12_I5_N",
+      "target_family_excluded": "D7_I10",
+      "fold": "rolling_autumn",
+      "target_supervised_labels_used": false,
+      "target_profile": "geometry-only free speed/.4 capacity",
+      "models": [
+        "interpolation_geometry_profile",
+        "graph_zero_shot",
+        "fixed_half_graph_half_interpolation"
+      ],
+      "target_calibration": false,
+      "ensemble_alpha": 0.5
+    }
+  },
+  "models": {
+    "interpolation_geometry_profile": {
+      "S_state": 0.9289979925843129,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 18693,
+          "rmse_speed": 1.994921512549096,
+          "rmse_lane_flow": 30.63000291710623,
+          "S_state": 0.9334266930924915
+        },
+        {
+          "regime": "R2",
+          "n": 42513,
+          "rmse_speed": 2.036871972762878,
+          "rmse_lane_flow": 31.146043961549914,
+          "S_state": 0.932124931684467
+        },
+        {
+          "regime": "R3",
+          "n": 46908,
+          "rmse_speed": 2.447586602068737,
+          "rmse_lane_flow": 33.50840402521949,
+          "S_state": 0.9214423529759804
+        }
+      ]
+    },
+    "graph_zero_shot": {
+      "S_state": 0.9132375005974946,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 18693,
+          "rmse_speed": 2.6914503640619794,
+          "rmse_lane_flow": 32.32605270190615,
+          "S_state": 0.9170813650648
+        },
+        {
+          "regime": "R2",
+          "n": 42513,
+          "rmse_speed": 2.7325693273025657,
+          "rmse_lane_flow": 32.73565182827104,
+          "S_state": 0.9158791694619235
+        },
+        {
+          "regime": "R3",
+          "n": 46908,
+          "rmse_speed": 3.077556025805124,
+          "rmse_lane_flow": 34.92107292632462,
+          "S_state": 0.9067519672657605
+        }
+      ]
+    },
+    "fixed_half_graph_half_interpolation": {
+      "S_state": 0.9275363211539815,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 18693,
+          "rmse_speed": 2.0785102357276433,
+          "rmse_lane_flow": 31.053062933327034,
+          "S_state": 0.9312968306593989
+        },
+        {
+          "regime": "R2",
+          "n": 42513,
+          "rmse_speed": 2.114384103156053,
+          "rmse_lane_flow": 31.536443246109975,
+          "S_state": 0.9301513635498116
+        },
+        {
+          "regime": "R3",
+          "n": 46908,
+          "rmse_speed": 2.448392268458597,
+          "rmse_lane_flow": 33.85298836768793,
+          "S_state": 0.9211607692527337
+        }
+      ]
+    }
+  },
+  "paired_daily_gain": {
+    "paired_day_mean_gain": -0.0015709404001665,
+    "ci95": [
+      -0.002079433904229972,
+      -0.0010624468961030278
+    ],
+    "bootstrap_probability_gain_positive": 0.0,
+    "n_days": 14,
+    "block_days": 7,
+    "resamples": 4000,
+    "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+  },
+  "seconds": 6.7822807999982615,
+  "formal_State": null,
+  "limitation": "Single source family and target direction; target network and current masked observations are allowed. No leave-one-family-out multi-family training yet."
+}

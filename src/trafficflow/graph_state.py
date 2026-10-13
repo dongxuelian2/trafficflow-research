@@ -51,3 +51,27 @@ def fd_loss(prediction, target, fd):
     wave = capacity/(jam-critical).clamp(min=1)
     qfd = torch.minimum(vf*k, wave*(jam-k).clamp(min=0))
     return (((q-qfd)/600).square()*target).sum()/target.sum().clamp(min=1)
+
+
+def density_change_loss(prediction, truth, target, inputs, accumulation_factor):
+    """Public-train supervised accumulation increments with visible anchors.
+
+    This loss does not estimate or access official hidden boundary flux. Missing
+    non-target cells are excluded. Only scored reconstruction cells are free;
+    available observations anchor the other end of each five-minute pair.
+    """
+    visible = (inputs[:,2]>.5)&(inputs[:,3]>.5)
+    valid = visible|target
+    anchored_prediction = torch.where(target[:,None],prediction,inputs[:,:2])
+    anchored_truth = torch.where(target[:,None],truth,inputs[:,:2])
+    factor = accumulation_factor[None,None,:]
+
+    def accumulation(x):
+        speed = (x[:,0]*25).clamp(min=1)
+        flow_lane = (x[:,1]*600).clamp(min=0)
+        return flow_lane/speed*factor
+
+    npred, ntrue = accumulation(anchored_prediction),accumulation(anchored_truth)
+    delta_pred,delta_true = npred[:,1:]-npred[:,:-1],ntrue[:,1:]-ntrue[:,:-1]
+    pair = valid[:,1:]&valid[:,:-1]&(target[:,1:]|target[:,:-1])
+    return ((delta_pred-delta_true).abs()*pair).sum()/((delta_true.abs()*pair).sum().clamp(min=1))

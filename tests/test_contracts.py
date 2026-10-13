@@ -103,6 +103,12 @@ def test_queue_rejects_future_and_historical_cutoff(fixture_release):
     leaked=h.copy();leaked.iloc[-1,leaked.columns.get_loc('timestamp')]=origin.strftime('%Y-%m-%dT%H:%M:%SZ')
     with pytest.raises(ValueError,match='leakage'):
         queue_features(leaked,target,r.network(p),r.topology(p),origin)
+    # The current rules allow exactly T, while later timestamps stay forbidden.
+    at_origin=queue_features(leaked,target,r.network(p),r.topology(p),origin,allow_origin=True)
+    assert len(at_origin)==len(target)
+    leaked.iloc[-1,leaked.columns.get_loc('timestamp')]=(origin+pd.Timedelta(minutes=5)).strftime('%Y-%m-%dT%H:%M:%SZ')
+    with pytest.raises(ValueError,match='leakage'):
+        queue_features(leaked,target,r.network(p),r.topology(p),origin,allow_origin=True)
 
 def test_masked_features_cannot_access_target_truth(fixture_release):
     r=fixture_release;p=r.panels()[0]

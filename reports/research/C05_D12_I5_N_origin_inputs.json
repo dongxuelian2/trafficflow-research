@@ -1,0 +1,4781 @@
+{
+  "registered": {
+    "protocol_sha256": "c4c1679857cb9bd7966ea5ea17635adc4b1707ffa689b026c85f62b59d881e56",
+    "protocol": {
+      "id": "C05_same_window_origin_inputs",
+      "panel": "D12_I5_N",
+      "fold": "rolling_autumn",
+      "methods": [
+        "before_T_400_23",
+        "at_T_400_23",
+        "before_T_600_63",
+        "at_T_600_63"
+      ],
+      "hypothesis": "Legal released T observations reduce age of the current estimate and expose early congestion.",
+      "no_future_inputs": true,
+      "label_source": "public train noisy observations, eligible future cells only",
+      "selection": "selection windows only, fit/refined threshold settings frozen before assessment",
+      "assessment_seeds": [
+        2909,
+        3253,
+        4001
+      ],
+      "formal_Queue": null
+    }
+  },
+  "source": {
+    "python": "3.13.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus": 16,
+    "process_peak_working_set_MiB": 2056.77734375,
+    "peak_scope": "current process lifetime, not isolated per model",
+    "source_sha256": "9faec53550b4cd15f4a7ffbdc7ce7057eb591756defd50cb346cb45a6e0f224b",
+    "model_threads": 4,
+    "gpu_used": false,
+    "versions": {
+      "numpy": "2.2.5",
+      "pandas": "3.0.5",
+      "scipy": "1.16.1",
+      "pyarrow": "25.0.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10",
+      "scikit-learn": "1.7.2"
+    }
+  },
+  "dates": {
+    "profile": [
+      "2030-06-01",
+      "2030-06-02",
+      "2030-06-03",
+      "2030-06-04",
+      "2030-06-05",
+      "2030-06-06",
+      "2030-06-07",
+      "2030-06-08",
+      "2030-06-09",
+      "2030-06-10",
+      "2030-06-11",
+      "2030-06-12",
+      "2030-06-13",
+      "2030-06-14",
+      "2030-06-15",
+      "2030-06-16",
+      "2030-06-17",
+      "2030-06-18",
+      "2030-06-19",
+      "2030-06-20",
+      "2030-06-21",
+      "2030-06-22",
+      "2030-06-23",
+      "2030-06-24",
+      "2030-06-25",
+      "2030-06-26",
+      "2030-06-27",
+      "2030-06-28",
+      "2030-06-29",
+      "2030-06-30",
+      "2030-07-01",
+      "2030-07-02",
+      "2030-07-03",
+      "2030-07-04",
+      "2030-07-05",
+      "2030-07-06",
+      "2030-07-07",
+      "2030-07-08",
+      "2030-07-09",
+      "2030-07-10",
+      "2030-07-11",
+      "2030-07-12",
+      "2030-07-13",
+      "2030-07-14",
+      "2030-07-15"
+    ],
+    "fit": [
+      "2030-07-16",
+      "2030-07-17",
+      "2030-07-18",
+      "2030-07-19",
+      "2030-07-20",
+      "2030-07-21",
+      "2030-07-22",
+      "2030-07-23",
+      "2030-07-24",
+      "2030-07-25",
+      "2030-07-26",
+      "2030-07-27",
+      "2030-07-28",
+      "2030-07-29",
+      "2030-07-30",
+      "2030-07-31",
+      "2030-08-01",
+      "2030-08-02",
+      "2030-08-03",
+      "2030-08-04",
+      "2030-08-05",
+      "2030-08-06",
+      "2030-08-07",
+      "2030-08-08",
+      "2030-08-09",
+      "2030-08-10",
+      "2030-08-11",
+      "2030-08-12",
+      "2030-08-13",
+      "2030-08-14",
+      "2030-08-15",
+      "2030-08-16",
+      "2030-08-17",
+      "2030-08-18",
+      "2030-08-19",
+      "2030-08-20",
+      "2030-08-21",
+      "2030-08-22",
+      "2030-08-23",
+      "2030-08-24",
+      "2030-08-25",
+      "2030-08-26",
+      "2030-08-27",
+      "2030-08-28",
+      "2030-08-29",
+      "2030-08-30",
+      "2030-08-31",
+      "2030-09-01",
+      "2030-09-02",
+      "2030-09-03",
+      "2030-09-04",
+      "2030-09-05",
+      "2030-09-06",
+      "2030-09-07",
+      "2030-09-08",
+      "2030-09-09",
+      "2030-09-10",
+      "2030-09-11",
+      "2030-09-12",
+      "2030-09-13",
+      "2030-09-14",
+      "2030-09-15",
+      "2030-09-16",
+      "2030-09-17",
+      "2030-09-18",
+      "2030-09-19",
+      "2030-09-20",
+      "2030-09-21",
+      "2030-09-22",
+      "2030-09-23",
+      "2030-09-24",
+      "2030-09-25",
+      "2030-09-26",
+      "2030-09-27",
+      "2030-09-28",
+      "2030-09-29",
+      "2030-09-30",
+      "2030-10-01",
+      "2030-10-02",
+      "2030-10-03",
+      "2030-10-04",
+      "2030-10-05",
+      "2030-10-06",
+      "2030-10-07",
+      "2030-10-08",
+      "2030-10-09",
+      "2030-10-10",
+      "2030-10-11",
+      "2030-10-12",
+      "2030-10-13",
+      "2030-10-14",
+      "2030-10-15"
+    ],
+    "selection": [
+      "2030-10-16",
+      "2030-10-17",
+      "2030-10-18",
+      "2030-10-19",
+      "2030-10-20",
+      "2030-10-21",
+      "2030-10-22",
+      "2030-10-23",
+      "2030-10-24",
+      "2030-10-25",
+      "2030-10-26",
+      "2030-10-27",
+      "2030-10-28",
+      "2030-10-29"
+    ],
+    "assessment": [
+      "2030-10-30",
+      "2030-10-31",
+      "2030-11-01",
+      "2030-11-02",
+      "2030-11-03",
+      "2030-11-04",
+      "2030-11-05",
+      "2030-11-06",
+      "2030-11-07",
+      "2030-11-08",
+      "2030-11-09",
+      "2030-11-10",
+      "2030-11-11",
+      "2030-11-12"
+    ]
+  },
+  "samplers": {
+    "fit": {
+      "seed": 20261013,
+      "candidate_counts": {
+        "queue_onset": 731,
+        "queue_ongoing": 4450
+      },
+      "selected_counts": {
+        "queue_onset": 31,
+        "queue_ongoing": 80
+      },
+      "requested_per_condition": 80,
+      "label_provenance": "eligible noisy public train observations; unknown future cells omitted",
+      "unknown_formal_selector": true,
+      "origin_timestamp_inputs": false,
+      "windows": [
+        {
+          "day": 54,
+          "at": 240,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-12T20:00:00+00:00",
+          "persistence_proxy_iou": 0.7815384615384615,
+          "future_label_coverage": 0.7409560723514211,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 48,
+          "at": 222,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-15T18:30:00+00:00",
+          "persistence_proxy_iou": 0.7570093457943925,
+          "future_label_coverage": 0.7680878552971576,
+          "near_cutoff_share": 0.0008410428931875525
+        },
+        {
+          "day": 73,
+          "at": 160,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-23T13:20:00+00:00",
+          "persistence_proxy_iou": 0.8816326530612245,
+          "future_label_coverage": 0.7583979328165374,
+          "near_cutoff_share": 0.002555366269165247
+        },
+        {
+          "day": 14,
+          "at": 246,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-12T20:30:00+00:00",
+          "persistence_proxy_iou": 0.4155844155844156,
+          "future_label_coverage": 0.774547803617571,
+          "near_cutoff_share": 0.0008340283569641367
+        },
+        {
+          "day": 89,
+          "at": 185,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-28T15:25:00+00:00",
+          "persistence_proxy_iou": 0.8725701943844493,
+          "future_label_coverage": 0.7667958656330749,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 45,
+          "at": 177,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-30T14:45:00+00:00",
+          "persistence_proxy_iou": 0.7707006369426752,
+          "future_label_coverage": 0.7538759689922481,
+          "near_cutoff_share": 0.005141388174807198
+        },
+        {
+          "day": 52,
+          "at": 163,
+          "condition": "queue_onset",
+          "origin": "2030-10-07T13:35:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7661498708010336,
+          "near_cutoff_share": 0.0008431703204047217
+        },
+        {
+          "day": 18,
+          "at": 144,
+          "condition": "queue_onset",
+          "origin": "2030-09-19T12:00:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7603359173126615,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 87,
+          "at": 220,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-26T18:20:00+00:00",
+          "persistence_proxy_iou": 0.5586854460093896,
+          "future_label_coverage": 0.7758397932816538,
+          "near_cutoff_share": 0.004995836802664446
+        },
+        {
+          "day": 72,
+          "at": 195,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-16T16:15:00+00:00",
+          "persistence_proxy_iou": 0.8987341772151899,
+          "future_label_coverage": 0.7545219638242894,
+          "near_cutoff_share": 0.0008561643835616438
+        },
+        {
+          "day": 82,
+          "at": 189,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-16T15:45:00+00:00",
+          "persistence_proxy_iou": 0.6451612903225806,
+          "future_label_coverage": 0.7635658914728682,
+          "near_cutoff_share": 0.001692047377326565
+        },
+        {
+          "day": 37,
+          "at": 215,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-06T17:55:00+00:00",
+          "persistence_proxy_iou": 0.7872340425531915,
+          "future_label_coverage": 0.7538759689922481,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 81,
+          "at": 169,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-11T14:05:00+00:00",
+          "persistence_proxy_iou": 0.6714285714285714,
+          "future_label_coverage": 0.7719638242894057,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 6,
+          "at": 122,
+          "condition": "queue_onset",
+          "origin": "2030-08-17T10:10:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7635658914728682,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 86,
+          "at": 169,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-25T14:05:00+00:00",
+          "persistence_proxy_iou": 0.7123287671232876,
+          "future_label_coverage": 0.7635658914728682,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 69,
+          "at": 125,
+          "condition": "queue_onset",
+          "origin": "2030-08-11T10:25:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7558139534883721,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 64,
+          "at": 143,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-03T11:55:00+00:00",
+          "persistence_proxy_iou": 0.8913043478260869,
+          "future_label_coverage": 0.770671834625323,
+          "near_cutoff_share": 0.0008382229673093043
+        },
+        {
+          "day": 60,
+          "at": 239,
+          "condition": "queue_ongoing",
+          "origin": "2030-07-22T19:55:00+00:00",
+          "persistence_proxy_iou": 0.7368421052631579,
+          "future_label_coverage": 0.7751937984496124,
+          "near_cutoff_share": 0.0008333333333333334
+        },
+        {
+          "day": 58,
+          "at": 196,
+          "condition": "queue_ongoing",
+          "origin": "2030-07-19T16:20:00+00:00",
+          "persistence_proxy_iou": 0.5943396226415094,
+          "future_label_coverage": 0.7829457364341085,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 3,
+          "at": 188,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-10T15:40:00+00:00",
+          "persistence_proxy_iou": 0.8595890410958904,
+          "future_label_coverage": 0.7629198966408268,
+          "near_cutoff_share": 0.000846740050804403
+        },
+        {
+          "day": 23,
+          "at": 94,
+          "condition": "queue_onset",
+          "origin": "2030-09-30T07:50:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7564599483204134,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 83,
+          "at": 231,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-18T19:15:00+00:00",
+          "persistence_proxy_iou": 0.08823529411764706,
+          "future_label_coverage": 0.7577519379844961,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 63,
+          "at": 157,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-01T13:05:00+00:00",
+          "persistence_proxy_iou": 0.5632183908045977,
+          "future_label_coverage": 0.7551679586563308,
+          "near_cutoff_share": 0.001710863986313088
+        },
+        {
+          "day": 9,
+          "at": 273,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-25T22:45:00+00:00",
+          "persistence_proxy_iou": 0.3064516129032258,
+          "future_label_coverage": 0.7687338501291989,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 23,
+          "at": 166,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-30T13:50:00+00:00",
+          "persistence_proxy_iou": 0.7880434782608695,
+          "future_label_coverage": 0.7512919896640827,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 14,
+          "at": 157,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-12T13:05:00+00:00",
+          "persistence_proxy_iou": 0.42105263157894735,
+          "future_label_coverage": 0.7538759689922481,
+          "near_cutoff_share": 0.002570694087403599
+        },
+        {
+          "day": 1,
+          "at": 200,
+          "condition": "queue_ongoing",
+          "origin": "2030-07-29T16:40:00+00:00",
+          "persistence_proxy_iou": 0.8805970149253731,
+          "future_label_coverage": 0.770671834625323,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 49,
+          "at": 151,
+          "condition": "queue_onset",
+          "origin": "2030-10-02T12:35:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7364341085271318,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 30,
+          "at": 175,
+          "condition": "queue_onset",
+          "origin": "2030-07-18T14:35:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7758397932816538,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 20,
+          "at": 137,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-23T11:25:00+00:00",
+          "persistence_proxy_iou": 0.7964601769911505,
+          "future_label_coverage": 0.7558139534883721,
+          "near_cutoff_share": 0.0008547008547008547
+        },
+        {
+          "day": 42,
+          "at": 146,
+          "condition": "queue_onset",
+          "origin": "2030-08-24T12:10:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7881136950904393,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 61,
+          "at": 177,
+          "condition": "queue_ongoing",
+          "origin": "2030-07-23T14:45:00+00:00",
+          "persistence_proxy_iou": 0.5925925925925926,
+          "future_label_coverage": 0.7325581395348837,
+          "near_cutoff_share": 0.0008818342151675485
+        },
+        {
+          "day": 47,
+          "at": 188,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-08T15:40:00+00:00",
+          "persistence_proxy_iou": 0.8571428571428571,
+          "future_label_coverage": 0.7751937984496124,
+          "near_cutoff_share": 0.0025
+        },
+        {
+          "day": 79,
+          "at": 175,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-09T14:35:00+00:00",
+          "persistence_proxy_iou": 0.36666666666666664,
+          "future_label_coverage": 0.7344961240310077,
+          "near_cutoff_share": 0.0008795074758135445
+        },
+        {
+          "day": 85,
+          "at": 175,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-22T14:35:00+00:00",
+          "persistence_proxy_iou": 0.8696629213483146,
+          "future_label_coverage": 0.7784237726098191,
+          "near_cutoff_share": 0.0033195020746887966
+        },
+        {
+          "day": 69,
+          "at": 235,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-11T19:35:00+00:00",
+          "persistence_proxy_iou": 0.8882175226586103,
+          "future_label_coverage": 0.7674418604651163,
+          "near_cutoff_share": 0.003367003367003367
+        },
+        {
+          "day": 31,
+          "at": 187,
+          "condition": "queue_ongoing",
+          "origin": "2030-07-20T15:35:00+00:00",
+          "persistence_proxy_iou": 0.6470588235294118,
+          "future_label_coverage": 0.7383720930232558,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 40,
+          "at": 179,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-20T14:55:00+00:00",
+          "persistence_proxy_iou": 0.7186147186147186,
+          "future_label_coverage": 0.7648578811369509,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 64,
+          "at": 249,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-03T20:45:00+00:00",
+          "persistence_proxy_iou": 0.4863013698630137,
+          "future_label_coverage": 0.7758397932816538,
+          "near_cutoff_share": 0.0008326394671107411
+        },
+        {
+          "day": 51,
+          "at": 164,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-06T13:40:00+00:00",
+          "persistence_proxy_iou": 0.8811188811188811,
+          "future_label_coverage": 0.7428940568475452,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 80,
+          "at": 216,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-10T18:00:00+00:00",
+          "persistence_proxy_iou": 0.5443037974683544,
+          "future_label_coverage": 0.7777777777777778,
+          "near_cutoff_share": 0.0008305647840531562
+        },
+        {
+          "day": 43,
+          "at": 212,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-26T17:40:00+00:00",
+          "persistence_proxy_iou": 0.6212121212121212,
+          "future_label_coverage": 0.7661498708010336,
+          "near_cutoff_share": 0.0008431703204047217
+        },
+        {
+          "day": 4,
+          "at": 157,
+          "condition": "queue_onset",
+          "origin": "2030-08-12T13:05:00+00:00",
+          "persistence_proxy_iou": 0.2,
+          "future_label_coverage": 0.7674418604651163,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 15,
+          "at": 239,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-13T19:55:00+00:00",
+          "persistence_proxy_iou": 0.7453083109919572,
+          "future_label_coverage": 0.774547803617571,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 5,
+          "at": 222,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-14T18:30:00+00:00",
+          "persistence_proxy_iou": 0.8063492063492064,
+          "future_label_coverage": 0.770671834625323,
+          "near_cutoff_share": 0.003352891869237217
+        },
+        {
+          "day": 50,
+          "at": 213,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-05T17:45:00+00:00",
+          "persistence_proxy_iou": 0.3902439024390244,
+          "future_label_coverage": 0.7467700258397932,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 7,
+          "at": 221,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-19T18:25:00+00:00",
+          "persistence_proxy_iou": 0.5388349514563107,
+          "future_label_coverage": 0.7467700258397932,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 15,
+          "at": 131,
+          "condition": "queue_onset",
+          "origin": "2030-09-13T10:55:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7667958656330749,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 11,
+          "at": 165,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-02T13:45:00+00:00",
+          "persistence_proxy_iou": 0.8143459915611815,
+          "future_label_coverage": 0.7635658914728682,
+          "near_cutoff_share": 0.00338409475465313
+        },
+        {
+          "day": 19,
+          "at": 247,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-21T20:35:00+00:00",
+          "persistence_proxy_iou": 0.3125,
+          "future_label_coverage": 0.7577519379844961,
+          "near_cutoff_share": 0.0008525149190110827
+        },
+        {
+          "day": 59,
+          "at": 229,
+          "condition": "queue_ongoing",
+          "origin": "2030-07-21T19:05:00+00:00",
+          "persistence_proxy_iou": 0.8832116788321168,
+          "future_label_coverage": 0.7771317829457365,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 71,
+          "at": 193,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-15T16:05:00+00:00",
+          "persistence_proxy_iou": 0.7333333333333333,
+          "future_label_coverage": 0.75,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 38,
+          "at": 226,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-07T18:50:00+00:00",
+          "persistence_proxy_iou": 0.5607476635514018,
+          "future_label_coverage": 0.7803617571059431,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 9,
+          "at": 178,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-25T14:50:00+00:00",
+          "persistence_proxy_iou": 0.8830897703549061,
+          "future_label_coverage": 0.751937984496124,
+          "near_cutoff_share": 0.005154639175257732
+        },
+        {
+          "day": 25,
+          "at": 187,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-03T15:35:00+00:00",
+          "persistence_proxy_iou": 0.8947368421052632,
+          "future_label_coverage": 0.7642118863049095,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 70,
+          "at": 175,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-13T14:35:00+00:00",
+          "persistence_proxy_iou": 0.6404494382022472,
+          "future_label_coverage": 0.7732558139534884,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 0,
+          "at": 198,
+          "condition": "queue_ongoing",
+          "origin": "2030-07-28T16:30:00+00:00",
+          "persistence_proxy_iou": 0.7678571428571429,
+          "future_label_coverage": 0.7680878552971576,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 60,
+          "at": 145,
+          "condition": "queue_ongoing",
+          "origin": "2030-07-22T12:05:00+00:00",
+          "persistence_proxy_iou": 0.7777777777777778,
+          "future_label_coverage": 0.7493540051679587,
+          "near_cutoff_share": 0.0008620689655172414
+        },
+        {
+          "day": 29,
+          "at": 241,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-15T20:05:00+00:00",
+          "persistence_proxy_iou": 0.041666666666666664,
+          "future_label_coverage": 0.7532299741602068,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 4,
+          "at": 237,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-12T19:45:00+00:00",
+          "persistence_proxy_iou": 0.4875,
+          "future_label_coverage": 0.7422480620155039,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 78,
+          "at": 229,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-07T19:05:00+00:00",
+          "persistence_proxy_iou": 0.49295774647887325,
+          "future_label_coverage": 0.7816537467700259,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 10,
+          "at": 248,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-31T20:40:00+00:00",
+          "persistence_proxy_iou": 0.2876712328767123,
+          "future_label_coverage": 0.7777777777777778,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 18,
+          "at": 249,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-19T20:45:00+00:00",
+          "persistence_proxy_iou": 0.25287356321839083,
+          "future_label_coverage": 0.7803617571059431,
+          "near_cutoff_share": 0.0008278145695364238
+        },
+        {
+          "day": 16,
+          "at": 245,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-14T20:25:00+00:00",
+          "persistence_proxy_iou": 0.19718309859154928,
+          "future_label_coverage": 0.7700258397932817,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 23,
+          "at": 247,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-30T20:35:00+00:00",
+          "persistence_proxy_iou": 0.04918032786885246,
+          "future_label_coverage": 0.7648578811369509,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 2,
+          "at": 172,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-02T14:20:00+00:00",
+          "persistence_proxy_iou": 0.6808510638297872,
+          "future_label_coverage": 0.7545219638242894,
+          "near_cutoff_share": 0.0008561643835616438
+        },
+        {
+          "day": 78,
+          "at": 154,
+          "condition": "queue_onset",
+          "origin": "2030-09-07T12:50:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7758397932816538,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 65,
+          "at": 166,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-04T13:50:00+00:00",
+          "persistence_proxy_iou": 0.8338762214983714,
+          "future_label_coverage": 0.7558139534883721,
+          "near_cutoff_share": 0.006837606837606838
+        },
+        {
+          "day": 24,
+          "at": 190,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-01T15:50:00+00:00",
+          "persistence_proxy_iou": 0.8095238095238095,
+          "future_label_coverage": 0.751937984496124,
+          "near_cutoff_share": 0.006013745704467354
+        },
+        {
+          "day": 26,
+          "at": 202,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-10T16:50:00+00:00",
+          "persistence_proxy_iou": 0.5208333333333334,
+          "future_label_coverage": 0.75,
+          "near_cutoff_share": 0.0017226528854435831
+        },
+        {
+          "day": 55,
+          "at": 203,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-13T16:55:00+00:00",
+          "persistence_proxy_iou": 0.7719298245614035,
+          "future_label_coverage": 0.7700258397932817,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 20,
+          "at": 250,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-23T20:50:00+00:00",
+          "persistence_proxy_iou": 0.6130268199233716,
+          "future_label_coverage": 0.7564599483204134,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 13,
+          "at": 166,
+          "condition": "queue_onset",
+          "origin": "2030-09-06T13:50:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.75,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 41,
+          "at": 170,
+          "condition": "queue_onset",
+          "origin": "2030-08-21T14:10:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7939276485788114,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 62,
+          "at": 214,
+          "condition": "queue_ongoing",
+          "origin": "2030-07-24T17:50:00+00:00",
+          "persistence_proxy_iou": 0.14814814814814814,
+          "future_label_coverage": 0.7861757105943152,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 39,
+          "at": 162,
+          "condition": "queue_onset",
+          "origin": "2030-08-18T13:30:00+00:00",
+          "persistence_proxy_iou": 0.2631578947368421,
+          "future_label_coverage": 0.7687338501291989,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 10,
+          "at": 176,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-31T14:40:00+00:00",
+          "persistence_proxy_iou": 0.828125,
+          "future_label_coverage": 0.7642118863049095,
+          "near_cutoff_share": 0.0033812341504649195
+        },
+        {
+          "day": 19,
+          "at": 125,
+          "condition": "queue_onset",
+          "origin": "2030-09-21T10:25:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7622739018087855,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 27,
+          "at": 187,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-11T15:35:00+00:00",
+          "persistence_proxy_iou": 0.8863636363636364,
+          "future_label_coverage": 0.7751937984496124,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 32,
+          "at": 192,
+          "condition": "queue_ongoing",
+          "origin": "2030-07-25T16:00:00+00:00",
+          "persistence_proxy_iou": 0.8990228013029316,
+          "future_label_coverage": 0.751937984496124,
+          "near_cutoff_share": 0.002577319587628866
+        },
+        {
+          "day": 88,
+          "at": 165,
+          "condition": "queue_onset",
+          "origin": "2030-09-27T13:45:00+00:00",
+          "persistence_proxy_iou": 0.35714285714285715,
+          "future_label_coverage": 0.7461240310077519,
+          "near_cutoff_share": 0.0008658008658008658
+        },
+        {
+          "day": 21,
+          "at": 211,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-24T17:35:00+00:00",
+          "persistence_proxy_iou": 0.7803030303030303,
+          "future_label_coverage": 0.7441860465116279,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 66,
+          "at": 218,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-05T18:10:00+00:00",
+          "persistence_proxy_iou": 0.10344827586206896,
+          "future_label_coverage": 0.7751937984496124,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 77,
+          "at": 176,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-04T14:40:00+00:00",
+          "persistence_proxy_iou": 0.673469387755102,
+          "future_label_coverage": 0.7564599483204134,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 76,
+          "at": 172,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-01T14:20:00+00:00",
+          "persistence_proxy_iou": 0.7783018867924528,
+          "future_label_coverage": 0.7661498708010336,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 54,
+          "at": 126,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-12T10:30:00+00:00",
+          "persistence_proxy_iou": 0.5652173913043478,
+          "future_label_coverage": 0.7642118863049095,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 16,
+          "at": 151,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-14T12:35:00+00:00",
+          "persistence_proxy_iou": 0.3076923076923077,
+          "future_label_coverage": 0.7784237726098191,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 84,
+          "at": 165,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-20T13:45:00+00:00",
+          "persistence_proxy_iou": 0.5891472868217055,
+          "future_label_coverage": 0.7558139534883721,
+          "near_cutoff_share": 0.0008547008547008547
+        },
+        {
+          "day": 49,
+          "at": 226,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-02T18:50:00+00:00",
+          "persistence_proxy_iou": 0.7225806451612903,
+          "future_label_coverage": 0.7693798449612403,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 36,
+          "at": 167,
+          "condition": "queue_onset",
+          "origin": "2030-07-31T13:55:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7448320413436692,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 6,
+          "at": 252,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-17T21:00:00+00:00",
+          "persistence_proxy_iou": 0.31666666666666665,
+          "future_label_coverage": 0.7855297157622739,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 35,
+          "at": 159,
+          "condition": "queue_onset",
+          "origin": "2030-07-30T13:15:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7680878552971576,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 73,
+          "at": 234,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-23T19:30:00+00:00",
+          "persistence_proxy_iou": 0.88,
+          "future_label_coverage": 0.7835917312661499,
+          "near_cutoff_share": 0.0032976092333058533
+        },
+        {
+          "day": 57,
+          "at": 198,
+          "condition": "queue_ongoing",
+          "origin": "2030-07-17T16:30:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7609819121447028,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 17,
+          "at": 192,
+          "condition": "queue_ongoing",
+          "origin": "2030-09-17T16:00:00+00:00",
+          "persistence_proxy_iou": 0.8397435897435898,
+          "future_label_coverage": 0.7655038759689923,
+          "near_cutoff_share": 0.002531645569620253
+        },
+        {
+          "day": 51,
+          "at": 260,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-06T21:40:00+00:00",
+          "persistence_proxy_iou": 0.08571428571428572,
+          "future_label_coverage": 0.7680878552971576,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 74,
+          "at": 180,
+          "condition": "queue_ongoing",
+          "origin": "2030-08-28T15:00:00+00:00",
+          "persistence_proxy_iou": 0.5765765765765766,
+          "future_label_coverage": 0.7771317829457365,
+          "near_cutoff_share": 0.0016625103906899418
+        },
+        {
+          "day": 28,
+          "at": 185,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-14T15:25:00+00:00",
+          "persistence_proxy_iou": 0.8095238095238095,
+          "future_label_coverage": 0.7816537467700259,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 68,
+          "at": 170,
+          "condition": "queue_onset",
+          "origin": "2030-08-09T14:10:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7538759689922481,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 91,
+          "at": 174,
+          "condition": "queue_onset",
+          "origin": "2030-10-09T14:30:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7596899224806202,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 56,
+          "at": 171,
+          "condition": "queue_onset",
+          "origin": "2030-07-16T14:15:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7693798449612403,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 72,
+          "at": 94,
+          "condition": "queue_onset",
+          "origin": "2030-08-16T07:50:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7571059431524548,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 8,
+          "at": 166,
+          "condition": "queue_onset",
+          "origin": "2030-08-22T13:50:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7506459948320413,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 11,
+          "at": 91,
+          "condition": "queue_onset",
+          "origin": "2030-09-02T07:35:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7693798449612403,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 83,
+          "at": 159,
+          "condition": "queue_onset",
+          "origin": "2030-09-18T13:15:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7590439276485789,
+          "near_cutoff_share": 0.000851063829787234
+        },
+        {
+          "day": 75,
+          "at": 202,
+          "condition": "queue_onset",
+          "origin": "2030-08-29T16:50:00+00:00",
+          "persistence_proxy_iou": 0.23958333333333334,
+          "future_label_coverage": 0.7732558139534884,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 48,
+          "at": 147,
+          "condition": "queue_onset",
+          "origin": "2030-09-15T12:15:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7777777777777778,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 59,
+          "at": 129,
+          "condition": "queue_onset",
+          "origin": "2030-07-21T10:45:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7390180878552972,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 29,
+          "at": 157,
+          "condition": "queue_onset",
+          "origin": "2030-10-15T13:05:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7764857881136951,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 53,
+          "at": 174,
+          "condition": "queue_onset",
+          "origin": "2030-10-08T14:30:00+00:00",
+          "persistence_proxy_iou": 0.4230769230769231,
+          "future_label_coverage": 0.7571059431524548,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 38,
+          "at": 154,
+          "condition": "queue_onset",
+          "origin": "2030-08-07T12:50:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7835917312661499,
+          "near_cutoff_share": 0.0
+        }
+      ]
+    },
+    "selection": {
+      "seed": 411,
+      "candidate_counts": {
+        "queue_onset": 112,
+        "queue_ongoing": 656
+      },
+      "selected_counts": {
+        "queue_onset": 5,
+        "queue_ongoing": 5
+      },
+      "requested_per_condition": 5,
+      "label_provenance": "eligible noisy public train observations; unknown future cells omitted",
+      "unknown_formal_selector": true,
+      "origin_timestamp_inputs": false,
+      "windows": [
+        {
+          "day": 1,
+          "at": 199,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-17T16:35:00+00:00",
+          "persistence_proxy_iou": 0.8325358851674641,
+          "future_label_coverage": 0.7377260981912145,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 2,
+          "at": 191,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-27T15:55:00+00:00",
+          "persistence_proxy_iou": 0.7391304347826086,
+          "future_label_coverage": 0.7719638242894057,
+          "near_cutoff_share": 0.002510460251046025
+        },
+        {
+          "day": 3,
+          "at": 183,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-22T15:15:00+00:00",
+          "persistence_proxy_iou": 0.7773279352226721,
+          "future_label_coverage": 0.7635658914728682,
+          "near_cutoff_share": 0.001692047377326565
+        },
+        {
+          "day": 6,
+          "at": 249,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-18T20:45:00+00:00",
+          "persistence_proxy_iou": 0.041666666666666664,
+          "future_label_coverage": 0.7680878552971576,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 4,
+          "at": 207,
+          "condition": "queue_ongoing",
+          "origin": "2030-10-25T17:15:00+00:00",
+          "persistence_proxy_iou": 0.3877551020408163,
+          "future_label_coverage": 0.7881136950904393,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 5,
+          "at": 175,
+          "condition": "queue_onset",
+          "origin": "2030-10-28T14:35:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7822997416020672,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 10,
+          "at": 148,
+          "condition": "queue_onset",
+          "origin": "2030-10-23T12:20:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7532299741602068,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 6,
+          "at": 145,
+          "condition": "queue_onset",
+          "origin": "2030-10-18T12:05:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7403100775193798,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 0,
+          "at": 170,
+          "condition": "queue_onset",
+          "origin": "2030-10-16T14:10:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7648578811369509,
+          "near_cutoff_share": 0.0
+        },
+        {
+          "day": 8,
+          "at": 157,
+          "condition": "queue_onset",
+          "origin": "2030-10-20T13:05:00+00:00",
+          "persistence_proxy_iou": 0.0,
+          "future_label_coverage": 0.7622739018087855,
+          "near_cutoff_share": 0.000847457627118644
+        }
+      ]
+    }
+  },
+  "selection": {
+    "before_T_400_23": {
+      "metrics": {
+        "proxy_IoU": 0.7074068687496897,
+        "conditions": {
+          "queue_ongoing": 0.8732089563156509,
+          "queue_onset": 0.5416047811837286
+        },
+        "windows": [
+          {
+            "window": "D12_I5_N:2030-10-16T14:10:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.7142857142857143
+          },
+          {
+            "window": "D12_I5_N:2030-10-17T16:35:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.8352272727272727
+          },
+          {
+            "window": "D12_I5_N:2030-10-18T12:05:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.7333333333333333
+          },
+          {
+            "window": "D12_I5_N:2030-10-18T20:45:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 1.0
+          },
+          {
+            "window": "D12_I5_N:2030-10-20T13:05:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.56
+          },
+          {
+            "window": "D12_I5_N:2030-10-22T15:15:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.9230769230769231
+          },
+          {
+            "window": "D12_I5_N:2030-10-23T12:20:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.38461538461538464
+          },
+          {
+            "window": "D12_I5_N:2030-10-25T17:15:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.75
+          },
+          {
+            "window": "D12_I5_N:2030-10-27T15:55:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.8577405857740585
+          },
+          {
+            "window": "D12_I5_N:2030-10-28T14:35:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.3157894736842105
+          }
+        ]
+      },
+      "threshold_tuning": {
+        "selected": {
+          "mode": "condition",
+          "require_nonempty": false,
+          "thresholds": {
+            "global": 0.5,
+            "queue_ongoing": 0.7750000000000001,
+            "queue_onset": 0.275
+          },
+          "calibration_proxy_IoU": 0.7074068687496897
+        },
+        "settings": [
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.05
+            },
+            "calibration_proxy_IoU": 0.4843524271655081
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.07500000000000001
+            },
+            "calibration_proxy_IoU": 0.5153713670981476
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.1
+            },
+            "calibration_proxy_IoU": 0.5445558431033513
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.125
+            },
+            "calibration_proxy_IoU": 0.5599326862317141
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.15000000000000002
+            },
+            "calibration_proxy_IoU": 0.5676449805790532
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.175
+            },
+            "calibration_proxy_IoU": 0.598564124265544
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.2
+            },
+            "calibration_proxy_IoU": 0.6054841070618033
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.22500000000000003
+            },
+            "calibration_proxy_IoU": 0.6191090268008873
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.25
+            },
+            "calibration_proxy_IoU": 0.6182594846387366
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.275
+            },
+            "calibration_proxy_IoU": 0.6308904293357429
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.3
+            },
+            "calibration_proxy_IoU": 0.6236643313145942
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.325
+            },
+            "calibration_proxy_IoU": 0.6235456055935537
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.6159535729970512
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.375
+            },
+            "calibration_proxy_IoU": 0.6253783553517759
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.4
+            },
+            "calibration_proxy_IoU": 0.624826482559372
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.425
+            },
+            "calibration_proxy_IoU": 0.6181858781820684
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.45
+            },
+            "calibration_proxy_IoU": 0.6306471193508201
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.47500000000000003
+            },
+            "calibration_proxy_IoU": 0.6297282711021414
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5
+            },
+            "calibration_proxy_IoU": 0.6197210471233028
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.525
+            },
+            "calibration_proxy_IoU": 0.6163425240264961
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.55
+            },
+            "calibration_proxy_IoU": 0.6213152426548426
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5750000000000001
+            },
+            "calibration_proxy_IoU": 0.6203793837246555
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6000000000000001
+            },
+            "calibration_proxy_IoU": 0.6101386793833039
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6250000000000001
+            },
+            "calibration_proxy_IoU": 0.6205463626545169
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6500000000000001
+            },
+            "calibration_proxy_IoU": 0.6300614301752481
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.675
+            },
+            "calibration_proxy_IoU": 0.5984974093602221
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7000000000000001
+            },
+            "calibration_proxy_IoU": 0.6012191202527699
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7250000000000001
+            },
+            "calibration_proxy_IoU": 0.5944219831648984
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7500000000000001
+            },
+            "calibration_proxy_IoU": 0.6214751011880199
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7750000000000001
+            },
+            "calibration_proxy_IoU": 0.5949317064850538
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.8
+            },
+            "calibration_proxy_IoU": 0.4784090604608
+          },
+          {
+            "mode": "condition",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5,
+              "queue_ongoing": 0.7750000000000001,
+              "queue_onset": 0.275
+            },
+            "calibration_proxy_IoU": 0.7074068687496897
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.05
+            },
+            "calibration_proxy_IoU": 0.4843524271655081
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.07500000000000001
+            },
+            "calibration_proxy_IoU": 0.5153713670981476
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.1
+            },
+            "calibration_proxy_IoU": 0.5445558431033513
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.125
+            },
+            "calibration_proxy_IoU": 0.5599326862317141
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.15000000000000002
+            },
+            "calibration_proxy_IoU": 0.5676449805790532
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.175
+            },
+            "calibration_proxy_IoU": 0.598564124265544
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.2
+            },
+            "calibration_proxy_IoU": 0.6054841070618033
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.22500000000000003
+            },
+            "calibration_proxy_IoU": 0.6191090268008873
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.25
+            },
+            "calibration_proxy_IoU": 0.6182594846387366
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.275
+            },
+            "calibration_proxy_IoU": 0.6308904293357429
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.3
+            },
+            "calibration_proxy_IoU": 0.6236643313145942
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.325
+            },
+            "calibration_proxy_IoU": 0.6235456055935537
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.6159535729970512
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.375
+            },
+            "calibration_proxy_IoU": 0.6253783553517759
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.4
+            },
+            "calibration_proxy_IoU": 0.624826482559372
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.425
+            },
+            "calibration_proxy_IoU": 0.6181858781820684
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.45
+            },
+            "calibration_proxy_IoU": 0.6306471193508201
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.47500000000000003
+            },
+            "calibration_proxy_IoU": 0.6297282711021414
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5
+            },
+            "calibration_proxy_IoU": 0.6197210471233028
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.525
+            },
+            "calibration_proxy_IoU": 0.6163425240264961
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.55
+            },
+            "calibration_proxy_IoU": 0.6213152426548426
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5750000000000001
+            },
+            "calibration_proxy_IoU": 0.6203793837246555
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6000000000000001
+            },
+            "calibration_proxy_IoU": 0.6101386793833039
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6250000000000001
+            },
+            "calibration_proxy_IoU": 0.6205463626545169
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6500000000000001
+            },
+            "calibration_proxy_IoU": 0.6300614301752481
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.675
+            },
+            "calibration_proxy_IoU": 0.5984974093602221
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7000000000000001
+            },
+            "calibration_proxy_IoU": 0.6012191202527699
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7250000000000001
+            },
+            "calibration_proxy_IoU": 0.5944219831648984
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7500000000000001
+            },
+            "calibration_proxy_IoU": 0.6214751011880199
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7750000000000001
+            },
+            "calibration_proxy_IoU": 0.5949317064850538
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.8
+            },
+            "calibration_proxy_IoU": 0.4784090604608
+          },
+          {
+            "mode": "condition",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5,
+              "queue_ongoing": 0.7750000000000001,
+              "queue_onset": 0.275
+            },
+            "calibration_proxy_IoU": 0.7074068687496897
+          }
+        ],
+        "proxy_Brier": 0.0071464407769599855,
+        "formal_S_queue": null
+      }
+    },
+    "before_T_600_63": {
+      "metrics": {
+        "proxy_IoU": 0.7301790596123825,
+        "conditions": {
+          "queue_ongoing": 0.8364303802970261,
+          "queue_onset": 0.6239277389277389
+        },
+        "windows": [
+          {
+            "window": "D12_I5_N:2030-10-16T14:10:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.8461538461538461
+          },
+          {
+            "window": "D12_I5_N:2030-10-17T16:35:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.7903225806451613
+          },
+          {
+            "window": "D12_I5_N:2030-10-18T12:05:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.4666666666666667
+          },
+          {
+            "window": "D12_I5_N:2030-10-18T20:45:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.6666666666666666
+          },
+          {
+            "window": "D12_I5_N:2030-10-20T13:05:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.6363636363636364
+          },
+          {
+            "window": "D12_I5_N:2030-10-22T15:15:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.9759036144578314
+          },
+          {
+            "window": "D12_I5_N:2030-10-23T12:20:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.625
+          },
+          {
+            "window": "D12_I5_N:2030-10-25T17:15:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.8571428571428571
+          },
+          {
+            "window": "D12_I5_N:2030-10-27T15:55:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.8921161825726142
+          },
+          {
+            "window": "D12_I5_N:2030-10-28T14:35:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.5454545454545454
+          }
+        ]
+      },
+      "threshold_tuning": {
+        "selected": {
+          "mode": "condition",
+          "require_nonempty": false,
+          "thresholds": {
+            "global": 0.5,
+            "queue_ongoing": 0.7750000000000001,
+            "queue_onset": 0.35000000000000003
+          },
+          "calibration_proxy_IoU": 0.7301790596123825
+        },
+        "settings": [
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.05
+            },
+            "calibration_proxy_IoU": 0.5906608053963682
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.07500000000000001
+            },
+            "calibration_proxy_IoU": 0.6134566549961296
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.1
+            },
+            "calibration_proxy_IoU": 0.6322413049562327
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.125
+            },
+            "calibration_proxy_IoU": 0.6345346067092802
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.15000000000000002
+            },
+            "calibration_proxy_IoU": 0.6443903081349236
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.175
+            },
+            "calibration_proxy_IoU": 0.6456777725203884
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.2
+            },
+            "calibration_proxy_IoU": 0.6545291669888826
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.22500000000000003
+            },
+            "calibration_proxy_IoU": 0.6483606948606948
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.25
+            },
+            "calibration_proxy_IoU": 0.6606347902349717
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.275
+            },
+            "calibration_proxy_IoU": 0.6681295339805426
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.3
+            },
+            "calibration_proxy_IoU": 0.6691467910200561
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.325
+            },
+            "calibration_proxy_IoU": 0.6737299714092946
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.6807523464750685
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.375
+            },
+            "calibration_proxy_IoU": 0.6708453452637195
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.4
+            },
+            "calibration_proxy_IoU": 0.6726321271715126
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.425
+            },
+            "calibration_proxy_IoU": 0.6737319487392011
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.45
+            },
+            "calibration_proxy_IoU": 0.6751465145655317
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.47500000000000003
+            },
+            "calibration_proxy_IoU": 0.6834166355723028
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5
+            },
+            "calibration_proxy_IoU": 0.6809265360842316
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.525
+            },
+            "calibration_proxy_IoU": 0.6718339100728621
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.55
+            },
+            "calibration_proxy_IoU": 0.6526336658726178
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5750000000000001
+            },
+            "calibration_proxy_IoU": 0.6560071874353004
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6000000000000001
+            },
+            "calibration_proxy_IoU": 0.6743355808769342
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6250000000000001
+            },
+            "calibration_proxy_IoU": 0.6850070411708964
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6500000000000001
+            },
+            "calibration_proxy_IoU": 0.6582111602976463
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.675
+            },
+            "calibration_proxy_IoU": 0.6333473979124086
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7000000000000001
+            },
+            "calibration_proxy_IoU": 0.6292876753989536
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7250000000000001
+            },
+            "calibration_proxy_IoU": 0.6450280262761466
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7500000000000001
+            },
+            "calibration_proxy_IoU": 0.6139031120925857
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7750000000000001
+            },
+            "calibration_proxy_IoU": 0.6193667870895836
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.8
+            },
+            "calibration_proxy_IoU": 0.6244228484819698
+          },
+          {
+            "mode": "condition",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5,
+              "queue_ongoing": 0.7750000000000001,
+              "queue_onset": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.7301790596123825
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.05
+            },
+            "calibration_proxy_IoU": 0.5906608053963682
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.07500000000000001
+            },
+            "calibration_proxy_IoU": 0.6134566549961296
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.1
+            },
+            "calibration_proxy_IoU": 0.6322413049562327
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.125
+            },
+            "calibration_proxy_IoU": 0.6345346067092802
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.15000000000000002
+            },
+            "calibration_proxy_IoU": 0.6443903081349236
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.175
+            },
+            "calibration_proxy_IoU": 0.6456777725203884
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.2
+            },
+            "calibration_proxy_IoU": 0.6545291669888826
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.22500000000000003
+            },
+            "calibration_proxy_IoU": 0.6483606948606948
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.25
+            },
+            "calibration_proxy_IoU": 0.6606347902349717
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.275
+            },
+            "calibration_proxy_IoU": 0.6681295339805426
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.3
+            },
+            "calibration_proxy_IoU": 0.6691467910200561
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.325
+            },
+            "calibration_proxy_IoU": 0.6737299714092946
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.6807523464750685
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.375
+            },
+            "calibration_proxy_IoU": 0.6708453452637195
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.4
+            },
+            "calibration_proxy_IoU": 0.6726321271715126
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.425
+            },
+            "calibration_proxy_IoU": 0.6737319487392011
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.45
+            },
+            "calibration_proxy_IoU": 0.6751465145655317
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.47500000000000003
+            },
+            "calibration_proxy_IoU": 0.6834166355723028
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5
+            },
+            "calibration_proxy_IoU": 0.6809265360842316
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.525
+            },
+            "calibration_proxy_IoU": 0.6718339100728621
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.55
+            },
+            "calibration_proxy_IoU": 0.6526336658726178
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5750000000000001
+            },
+            "calibration_proxy_IoU": 0.6560071874353004
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6000000000000001
+            },
+            "calibration_proxy_IoU": 0.6743355808769342
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6250000000000001
+            },
+            "calibration_proxy_IoU": 0.6850070411708964
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6500000000000001
+            },
+            "calibration_proxy_IoU": 0.6582111602976463
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.675
+            },
+            "calibration_proxy_IoU": 0.6333473979124086
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7000000000000001
+            },
+            "calibration_proxy_IoU": 0.6292876753989536
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7250000000000001
+            },
+            "calibration_proxy_IoU": 0.6450280262761466
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7500000000000001
+            },
+            "calibration_proxy_IoU": 0.6139031120925857
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7750000000000001
+            },
+            "calibration_proxy_IoU": 0.6193667870895836
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.8
+            },
+            "calibration_proxy_IoU": 0.6244228484819698
+          },
+          {
+            "mode": "condition",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5,
+              "queue_ongoing": 0.7750000000000001,
+              "queue_onset": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.7301790596123825
+          }
+        ],
+        "proxy_Brier": 0.007308268236593612,
+        "formal_S_queue": null
+      }
+    },
+    "at_T_400_23": {
+      "metrics": {
+        "proxy_IoU": 0.7051050282284104,
+        "conditions": {
+          "queue_ongoing": 0.7993495719121257,
+          "queue_onset": 0.610860484544695
+        },
+        "windows": [
+          {
+            "window": "D12_I5_N:2030-10-16T14:10:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.8
+          },
+          {
+            "window": "D12_I5_N:2030-10-17T16:35:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.8797814207650273
+          },
+          {
+            "window": "D12_I5_N:2030-10-18T12:05:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.5333333333333333
+          },
+          {
+            "window": "D12_I5_N:2030-10-18T20:45:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.6666666666666666
+          },
+          {
+            "window": "D12_I5_N:2030-10-20T13:05:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.7368421052631579
+          },
+          {
+            "window": "D12_I5_N:2030-10-22T15:15:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.9311740890688259
+          },
+          {
+            "window": "D12_I5_N:2030-10-23T12:20:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.5555555555555556
+          },
+          {
+            "window": "D12_I5_N:2030-10-25T17:15:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.6666666666666666
+          },
+          {
+            "window": "D12_I5_N:2030-10-27T15:55:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.8524590163934426
+          },
+          {
+            "window": "D12_I5_N:2030-10-28T14:35:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.42857142857142855
+          }
+        ]
+      },
+      "threshold_tuning": {
+        "selected": {
+          "mode": "condition",
+          "require_nonempty": false,
+          "thresholds": {
+            "global": 0.5,
+            "queue_ongoing": 0.5750000000000001,
+            "queue_onset": 0.3
+          },
+          "calibration_proxy_IoU": 0.7051050282284104
+        },
+        "settings": [
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.05
+            },
+            "calibration_proxy_IoU": 0.5232955232490069
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.07500000000000001
+            },
+            "calibration_proxy_IoU": 0.5530867345056473
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.1
+            },
+            "calibration_proxy_IoU": 0.5832789715903972
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.125
+            },
+            "calibration_proxy_IoU": 0.597791771122965
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.15000000000000002
+            },
+            "calibration_proxy_IoU": 0.6183792586271217
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.175
+            },
+            "calibration_proxy_IoU": 0.6231682290637919
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.2
+            },
+            "calibration_proxy_IoU": 0.6310536034512381
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.22500000000000003
+            },
+            "calibration_proxy_IoU": 0.6414591606729856
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.25
+            },
+            "calibration_proxy_IoU": 0.656553284719346
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.275
+            },
+            "calibration_proxy_IoU": 0.6588773492797575
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.3
+            },
+            "calibration_proxy_IoU": 0.6797055943485981
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.325
+            },
+            "calibration_proxy_IoU": 0.6753099899529937
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.6546809235416443
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.375
+            },
+            "calibration_proxy_IoU": 0.6606025213156064
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.4
+            },
+            "calibration_proxy_IoU": 0.6459143333016945
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.425
+            },
+            "calibration_proxy_IoU": 0.6529159624968721
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.45
+            },
+            "calibration_proxy_IoU": 0.6549830514508406
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.47500000000000003
+            },
+            "calibration_proxy_IoU": 0.6416171102409238
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5
+            },
+            "calibration_proxy_IoU": 0.6334156639887303
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.525
+            },
+            "calibration_proxy_IoU": 0.6543406042114082
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.55
+            },
+            "calibration_proxy_IoU": 0.6501457468468796
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5750000000000001
+            },
+            "calibration_proxy_IoU": 0.6679287542100312
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6000000000000001
+            },
+            "calibration_proxy_IoU": 0.6507140592127649
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6250000000000001
+            },
+            "calibration_proxy_IoU": 0.6456550584293766
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6500000000000001
+            },
+            "calibration_proxy_IoU": 0.5984710124666159
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.675
+            },
+            "calibration_proxy_IoU": 0.5922898882912387
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7000000000000001
+            },
+            "calibration_proxy_IoU": 0.5638480655921692
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7250000000000001
+            },
+            "calibration_proxy_IoU": 0.5542862327730749
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7500000000000001
+            },
+            "calibration_proxy_IoU": 0.5502762997236681
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7750000000000001
+            },
+            "calibration_proxy_IoU": 0.4990063620589936
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.8
+            },
+            "calibration_proxy_IoU": 0.4374650148598618
+          },
+          {
+            "mode": "condition",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5,
+              "queue_ongoing": 0.5750000000000001,
+              "queue_onset": 0.3
+            },
+            "calibration_proxy_IoU": 0.7051050282284104
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.05
+            },
+            "calibration_proxy_IoU": 0.5232955232490069
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.07500000000000001
+            },
+            "calibration_proxy_IoU": 0.5530867345056473
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.1
+            },
+            "calibration_proxy_IoU": 0.5832789715903972
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.125
+            },
+            "calibration_proxy_IoU": 0.597791771122965
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.15000000000000002
+            },
+            "calibration_proxy_IoU": 0.6183792586271217
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.175
+            },
+            "calibration_proxy_IoU": 0.6231682290637919
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.2
+            },
+            "calibration_proxy_IoU": 0.6310536034512381
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.22500000000000003
+            },
+            "calibration_proxy_IoU": 0.6414591606729856
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.25
+            },
+            "calibration_proxy_IoU": 0.656553284719346
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.275
+            },
+            "calibration_proxy_IoU": 0.6588773492797575
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.3
+            },
+            "calibration_proxy_IoU": 0.6797055943485981
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.325
+            },
+            "calibration_proxy_IoU": 0.6753099899529937
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.6546809235416443
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.375
+            },
+            "calibration_proxy_IoU": 0.6606025213156064
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.4
+            },
+            "calibration_proxy_IoU": 0.6459143333016945
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.425
+            },
+            "calibration_proxy_IoU": 0.6529159624968721
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.45
+            },
+            "calibration_proxy_IoU": 0.6549830514508406
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.47500000000000003
+            },
+            "calibration_proxy_IoU": 0.6416171102409238
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5
+            },
+            "calibration_proxy_IoU": 0.6334156639887303
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.525
+            },
+            "calibration_proxy_IoU": 0.6543406042114082
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.55
+            },
+            "calibration_proxy_IoU": 0.6501457468468796
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5750000000000001
+            },
+            "calibration_proxy_IoU": 0.6679287542100312
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6000000000000001
+            },
+            "calibration_proxy_IoU": 0.6507140592127649
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6250000000000001
+            },
+            "calibration_proxy_IoU": 0.6456550584293766
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6500000000000001
+            },
+            "calibration_proxy_IoU": 0.5984710124666159
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.675
+            },
+            "calibration_proxy_IoU": 0.5922898882912387
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7000000000000001
+            },
+            "calibration_proxy_IoU": 0.5638480655921692
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7250000000000001
+            },
+            "calibration_proxy_IoU": 0.5542862327730749
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7500000000000001
+            },
+            "calibration_proxy_IoU": 0.5502762997236681
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7750000000000001
+            },
+            "calibration_proxy_IoU": 0.4990063620589936
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.8
+            },
+            "calibration_proxy_IoU": 0.4874650148598618
+          },
+          {
+            "mode": "condition",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5,
+              "queue_ongoing": 0.5750000000000001,
+              "queue_onset": 0.3
+            },
+            "calibration_proxy_IoU": 0.7051050282284104
+          }
+        ],
+        "proxy_Brier": 0.00667191122736267,
+        "formal_S_queue": null
+      }
+    },
+    "at_T_600_63": {
+      "metrics": {
+        "proxy_IoU": 0.7653140265015128,
+        "conditions": {
+          "queue_ongoing": 0.9041994815744543,
+          "queue_onset": 0.6264285714285714
+        },
+        "windows": [
+          {
+            "window": "D12_I5_N:2030-10-16T14:10:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.8571428571428571
+          },
+          {
+            "window": "D12_I5_N:2030-10-17T16:35:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.8888888888888888
+          },
+          {
+            "window": "D12_I5_N:2030-10-18T12:05:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.5
+          },
+          {
+            "window": "D12_I5_N:2030-10-18T20:45:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 1.0
+          },
+          {
+            "window": "D12_I5_N:2030-10-20T13:05:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.65
+          },
+          {
+            "window": "D12_I5_N:2030-10-22T15:15:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.9595141700404858
+          },
+          {
+            "window": "D12_I5_N:2030-10-23T12:20:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.625
+          },
+          {
+            "window": "D12_I5_N:2030-10-25T17:15:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.8095238095238095
+          },
+          {
+            "window": "D12_I5_N:2030-10-27T15:55:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.8630705394190872
+          },
+          {
+            "window": "D12_I5_N:2030-10-28T14:35:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 0.5
+          }
+        ]
+      },
+      "threshold_tuning": {
+        "selected": {
+          "mode": "condition",
+          "require_nonempty": false,
+          "thresholds": {
+            "global": 0.5,
+            "queue_ongoing": 0.675,
+            "queue_onset": 0.325
+          },
+          "calibration_proxy_IoU": 0.7653140265015128
+        },
+        "settings": [
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.05
+            },
+            "calibration_proxy_IoU": 0.6013446450138026
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.07500000000000001
+            },
+            "calibration_proxy_IoU": 0.6272424575513599
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.1
+            },
+            "calibration_proxy_IoU": 0.6397695113583131
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.125
+            },
+            "calibration_proxy_IoU": 0.6447053466724388
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.15000000000000002
+            },
+            "calibration_proxy_IoU": 0.6598257327022828
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.175
+            },
+            "calibration_proxy_IoU": 0.6685803934230057
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.2
+            },
+            "calibration_proxy_IoU": 0.664410829401053
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.22500000000000003
+            },
+            "calibration_proxy_IoU": 0.6647511243635891
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.25
+            },
+            "calibration_proxy_IoU": 0.6791832912026599
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.275
+            },
+            "calibration_proxy_IoU": 0.6873417001928888
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.3
+            },
+            "calibration_proxy_IoU": 0.687751589251977
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.325
+            },
+            "calibration_proxy_IoU": 0.6941053247515749
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.6832896789545857
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.375
+            },
+            "calibration_proxy_IoU": 0.6919365312562604
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.4
+            },
+            "calibration_proxy_IoU": 0.6916716635113824
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.425
+            },
+            "calibration_proxy_IoU": 0.6915398659270927
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.45
+            },
+            "calibration_proxy_IoU": 0.6845234008086116
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.47500000000000003
+            },
+            "calibration_proxy_IoU": 0.688669754115802
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5
+            },
+            "calibration_proxy_IoU": 0.7015018343163033
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.525
+            },
+            "calibration_proxy_IoU": 0.6717191565828728
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.55
+            },
+            "calibration_proxy_IoU": 0.6717398600480708
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5750000000000001
+            },
+            "calibration_proxy_IoU": 0.6943070278901746
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6000000000000001
+            },
+            "calibration_proxy_IoU": 0.7475517274605059
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6250000000000001
+            },
+            "calibration_proxy_IoU": 0.7468457321606589
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6500000000000001
+            },
+            "calibration_proxy_IoU": 0.7484097667351257
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.675
+            },
+            "calibration_proxy_IoU": 0.7491937578812442
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7000000000000001
+            },
+            "calibration_proxy_IoU": 0.7476858213733077
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7250000000000001
+            },
+            "calibration_proxy_IoU": 0.7254647413224449
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7500000000000001
+            },
+            "calibration_proxy_IoU": 0.6882394154379012
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7750000000000001
+            },
+            "calibration_proxy_IoU": 0.657101355787403
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.8
+            },
+            "calibration_proxy_IoU": 0.6339093035141732
+          },
+          {
+            "mode": "condition",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5,
+              "queue_ongoing": 0.675,
+              "queue_onset": 0.325
+            },
+            "calibration_proxy_IoU": 0.7653140265015128
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.05
+            },
+            "calibration_proxy_IoU": 0.6013446450138026
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.07500000000000001
+            },
+            "calibration_proxy_IoU": 0.6272424575513599
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.1
+            },
+            "calibration_proxy_IoU": 0.6397695113583131
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.125
+            },
+            "calibration_proxy_IoU": 0.6447053466724388
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.15000000000000002
+            },
+            "calibration_proxy_IoU": 0.6598257327022828
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.175
+            },
+            "calibration_proxy_IoU": 0.6685803934230057
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.2
+            },
+            "calibration_proxy_IoU": 0.664410829401053
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.22500000000000003
+            },
+            "calibration_proxy_IoU": 0.6647511243635891
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.25
+            },
+            "calibration_proxy_IoU": 0.6791832912026599
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.275
+            },
+            "calibration_proxy_IoU": 0.6873417001928888
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.3
+            },
+            "calibration_proxy_IoU": 0.687751589251977
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.325
+            },
+            "calibration_proxy_IoU": 0.6941053247515749
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.6832896789545857
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.375
+            },
+            "calibration_proxy_IoU": 0.6919365312562604
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.4
+            },
+            "calibration_proxy_IoU": 0.6916716635113824
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.425
+            },
+            "calibration_proxy_IoU": 0.6915398659270927
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.45
+            },
+            "calibration_proxy_IoU": 0.6845234008086116
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.47500000000000003
+            },
+            "calibration_proxy_IoU": 0.688669754115802
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5
+            },
+            "calibration_proxy_IoU": 0.7015018343163033
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.525
+            },
+            "calibration_proxy_IoU": 0.6717191565828728
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.55
+            },
+            "calibration_proxy_IoU": 0.6717398600480708
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5750000000000001
+            },
+            "calibration_proxy_IoU": 0.6943070278901746
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6000000000000001
+            },
+            "calibration_proxy_IoU": 0.7475517274605059
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6250000000000001
+            },
+            "calibration_proxy_IoU": 0.7468457321606589
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6500000000000001
+            },
+            "calibration_proxy_IoU": 0.7484097667351257
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.675
+            },
+            "calibration_proxy_IoU": 0.7491937578812442
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7000000000000001
+            },
+            "calibration_proxy_IoU": 0.7476858213733077
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7250000000000001
+            },
+            "calibration_proxy_IoU": 0.7254647413224449
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7500000000000001
+            },
+            "calibration_proxy_IoU": 0.6882394154379012
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7750000000000001
+            },
+            "calibration_proxy_IoU": 0.657101355787403
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.8
+            },
+            "calibration_proxy_IoU": 0.6339093035141732
+          },
+          {
+            "mode": "condition",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5,
+              "queue_ongoing": 0.675,
+              "queue_onset": 0.325
+            },
+            "calibration_proxy_IoU": 0.7653140265015128
+          }
+        ],
+        "proxy_Brier": 0.005815736655158677,
+        "formal_S_queue": null
+      }
+    }
+  },
+  "assessment": [
+    {
+      "seed": 2909,
+      "sampler": {
+        "seed": 2909,
+        "candidate_counts": {
+          "queue_onset": 121,
+          "queue_ongoing": 887
+        },
+        "selected_counts": {
+          "queue_onset": 5,
+          "queue_ongoing": 5
+        },
+        "requested_per_condition": 5,
+        "label_provenance": "eligible noisy public train observations; unknown future cells omitted",
+        "unknown_formal_selector": true,
+        "origin_timestamp_inputs": false,
+        "windows": [
+          {
+            "day": 0,
+            "at": 113,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-08T09:25:00+00:00",
+            "persistence_proxy_iou": 0.5869565217391305,
+            "future_label_coverage": 0.7603359173126615,
+            "near_cutoff_share": 0.004248088360237893
+          },
+          {
+            "day": 2,
+            "at": 169,
+            "condition": "queue_ongoing",
+            "origin": "2030-10-31T14:05:00+00:00",
+            "persistence_proxy_iou": 0.42592592592592593,
+            "future_label_coverage": 0.7713178294573644,
+            "near_cutoff_share": 0.0033500837520938024
+          },
+          {
+            "day": 5,
+            "at": 213,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-04T17:45:00+00:00",
+            "persistence_proxy_iou": 0.6612903225806451,
+            "future_label_coverage": 0.7674418604651163,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 6,
+            "at": 138,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-05T11:30:00+00:00",
+            "persistence_proxy_iou": 0.18072289156626506,
+            "future_label_coverage": 0.7803617571059431,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 1,
+            "at": 159,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-10T13:15:00+00:00",
+            "persistence_proxy_iou": 0.7142857142857143,
+            "future_label_coverage": 0.7435400516795866,
+            "near_cutoff_share": 0.0008688097306689834
+          },
+          {
+            "day": 2,
+            "at": 95,
+            "condition": "queue_onset",
+            "origin": "2030-10-31T07:55:00+00:00",
+            "persistence_proxy_iou": 0.10416666666666667,
+            "future_label_coverage": 0.7622739018087855,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 7,
+            "at": 162,
+            "condition": "queue_onset",
+            "origin": "2030-11-06T13:30:00+00:00",
+            "persistence_proxy_iou": 0.16,
+            "future_label_coverage": 0.789405684754522,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 11,
+            "at": 172,
+            "condition": "queue_onset",
+            "origin": "2030-11-07T14:20:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.787467700258398,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 10,
+            "at": 119,
+            "condition": "queue_onset",
+            "origin": "2030-11-02T09:55:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7525839793281653,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 3,
+            "at": 170,
+            "condition": "queue_onset",
+            "origin": "2030-11-01T14:10:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7648578811369509,
+            "near_cutoff_share": 0.0008445945945945946
+          }
+        ]
+      },
+      "models": {
+        "before_T_400_23": {
+          "proxy_IoU": 0.5883584258394146,
+          "conditions": {
+            "queue_ongoing": 0.5683574114114942,
+            "queue_onset": 0.608359440267335
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-31T07:55:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.4479166666666667
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:05:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.5
+            },
+            {
+              "window": "D12_I5_N:2030-11-01T14:10:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.631578947368421
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T09:55:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.4444444444444444
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T17:45:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.6829268292682927
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T11:30:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.2926829268292683
+            },
+            {
+              "window": "D12_I5_N:2030-11-06T13:30:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.8035714285714286
+            },
+            {
+              "window": "D12_I5_N:2030-11-07T14:20:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.7142857142857143
+            },
+            {
+              "window": "D12_I5_N:2030-11-08T09:25:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.5869565217391305
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T13:15:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.7792207792207793
+            }
+          ],
+          "observation_proxy_Brier": 0.014236273298090374
+        },
+        "before_T_600_63": {
+          "proxy_IoU": 0.5816459797784548,
+          "conditions": {
+            "queue_ongoing": 0.6151438114087616,
+            "queue_onset": 0.548148148148148
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-31T07:55:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.3333333333333333
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:05:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.5648148148148148
+            },
+            {
+              "window": "D12_I5_N:2030-11-01T14:10:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.5
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T09:55:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.4444444444444444
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T17:45:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.7804878048780488
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T11:30:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.3333333333333333
+            },
+            {
+              "window": "D12_I5_N:2030-11-06T13:30:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.7962962962962963
+            },
+            {
+              "window": "D12_I5_N:2030-11-07T14:20:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.6666666666666666
+            },
+            {
+              "window": "D12_I5_N:2030-11-08T09:25:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.5869565217391305
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T13:15:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.810126582278481
+            }
+          ],
+          "observation_proxy_Brier": 0.015109708592035366
+        },
+        "at_T_400_23": {
+          "proxy_IoU": 0.6483694901363782,
+          "conditions": {
+            "queue_ongoing": 0.7013547811385573,
+            "queue_onset": 0.5953841991341992
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-31T07:55:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.6145833333333334
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:05:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.7889908256880734
+            },
+            {
+              "window": "D12_I5_N:2030-11-01T14:10:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.5
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T09:55:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.4
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T17:45:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.8780487804878049
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T11:30:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.37777777777777777
+            },
+            {
+              "window": "D12_I5_N:2030-11-06T13:30:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.8909090909090909
+            },
+            {
+              "window": "D12_I5_N:2030-11-07T14:20:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.5714285714285714
+            },
+            {
+              "window": "D12_I5_N:2030-11-08T09:25:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.5869565217391305
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T13:15:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.875
+            }
+          ],
+          "observation_proxy_Brier": 0.012097744595896052
+        },
+        "at_T_600_63": {
+          "proxy_IoU": 0.6698007130190253,
+          "conditions": {
+            "queue_ongoing": 0.7006638042056919,
+            "queue_onset": 0.6389376218323587
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-31T07:55:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.7083333333333334
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:05:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.7909090909090909
+            },
+            {
+              "window": "D12_I5_N:2030-11-01T14:10:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.5789473684210527
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T09:55:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.5
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T17:45:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.8536585365853658
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T11:30:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.4
+            },
+            {
+              "window": "D12_I5_N:2030-11-06T13:30:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.9074074074074074
+            },
+            {
+              "window": "D12_I5_N:2030-11-07T14:20:00Z:2909",
+              "condition": "queue_onset",
+              "IoU": 0.5
+            },
+            {
+              "window": "D12_I5_N:2030-11-08T09:25:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.5869565217391305
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T13:15:00Z:2909",
+              "condition": "queue_ongoing",
+              "IoU": 0.8717948717948718
+            }
+          ],
+          "observation_proxy_Brier": 0.01091268988950871
+        }
+      }
+    },
+    {
+      "seed": 3253,
+      "sampler": {
+        "seed": 3253,
+        "candidate_counts": {
+          "queue_onset": 121,
+          "queue_ongoing": 887
+        },
+        "selected_counts": {
+          "queue_onset": 5,
+          "queue_ongoing": 5
+        },
+        "requested_per_condition": 5,
+        "label_provenance": "eligible noisy public train observations; unknown future cells omitted",
+        "unknown_formal_selector": true,
+        "origin_timestamp_inputs": false,
+        "windows": [
+          {
+            "day": 3,
+            "at": 205,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-01T17:05:00+00:00",
+            "persistence_proxy_iou": 0.2903225806451613,
+            "future_label_coverage": 0.7396640826873385,
+            "near_cutoff_share": 0.0008733624454148472
+          },
+          {
+            "day": 6,
+            "at": 89,
+            "condition": "queue_onset",
+            "origin": "2030-11-05T07:25:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7906976744186046,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 12,
+            "at": 113,
+            "condition": "queue_onset",
+            "origin": "2030-11-09T09:25:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7596899224806202,
+            "near_cutoff_share": 0.0017006802721088435
+          },
+          {
+            "day": 10,
+            "at": 172,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-02T14:20:00+00:00",
+            "persistence_proxy_iou": 0.8715846994535519,
+            "future_label_coverage": 0.7790697674418605,
+            "near_cutoff_share": 0.0041459369817578775
+          },
+          {
+            "day": 9,
+            "at": 93,
+            "condition": "queue_ongoing",
+            "origin": "2030-10-30T07:45:00+00:00",
+            "persistence_proxy_iou": 0.674074074074074,
+            "future_label_coverage": 0.770671834625323,
+            "near_cutoff_share": 0.0016764459346186086
+          },
+          {
+            "day": 2,
+            "at": 169,
+            "condition": "queue_ongoing",
+            "origin": "2030-10-31T14:05:00+00:00",
+            "persistence_proxy_iou": 0.42592592592592593,
+            "future_label_coverage": 0.7713178294573644,
+            "near_cutoff_share": 0.0033500837520938024
+          },
+          {
+            "day": 1,
+            "at": 147,
+            "condition": "queue_onset",
+            "origin": "2030-11-10T12:15:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7629198966408268,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 11,
+            "at": 177,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-07T14:45:00+00:00",
+            "persistence_proxy_iou": 0.8421052631578947,
+            "future_label_coverage": 0.7719638242894057,
+            "near_cutoff_share": 0.0008368200836820083
+          },
+          {
+            "day": 5,
+            "at": 171,
+            "condition": "queue_onset",
+            "origin": "2030-11-04T14:15:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7493540051679587,
+            "near_cutoff_share": 0.0017241379310344827
+          },
+          {
+            "day": 0,
+            "at": 87,
+            "condition": "queue_onset",
+            "origin": "2030-11-08T07:15:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.770671834625323,
+            "near_cutoff_share": 0.0
+          }
+        ]
+      },
+      "models": {
+        "before_T_400_23": {
+          "proxy_IoU": 0.5050821758880242,
+          "conditions": {
+            "queue_ongoing": 0.7433679787501671,
+            "queue_onset": 0.2667963730258812
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-30T07:45:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.7074074074074074
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:05:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.5
+            },
+            {
+              "window": "D12_I5_N:2030-11-01T17:05:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.7272727272727273
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T14:20:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.9400544959128065
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T14:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.45714285714285713
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T07:25:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.46153846153846156
+            },
+            {
+              "window": "D12_I5_N:2030-11-07T14:45:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.8421052631578947
+            },
+            {
+              "window": "D12_I5_N:2030-11-08T07:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-11-09T09:25:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.08196721311475409
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T12:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.3333333333333333
+            }
+          ],
+          "observation_proxy_Brier": 0.01708353378688577
+        },
+        "before_T_600_63": {
+          "proxy_IoU": 0.49974067800154753,
+          "conditions": {
+            "queue_ongoing": 0.7972302737520128,
+            "queue_onset": 0.20225108225108226
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-30T07:45:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.7148148148148148
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:05:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.5648148148148148
+            },
+            {
+              "window": "D12_I5_N:2030-11-01T17:05:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.75
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T14:20:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.9565217391304348
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T14:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.3142857142857143
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T07:25:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.36363636363636365
+            },
+            {
+              "window": "D12_I5_N:2030-11-07T14:45:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 1.0
+            },
+            {
+              "window": "D12_I5_N:2030-11-08T07:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-11-09T09:25:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T12:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.3333333333333333
+            }
+          ],
+          "observation_proxy_Brier": 0.0171576812287993
+        },
+        "at_T_400_23": {
+          "proxy_IoU": 0.550554229850291,
+          "conditions": {
+            "queue_ongoing": 0.7879873760876952,
+            "queue_onset": 0.3131210836128869
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-30T07:45:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.7851851851851852
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:05:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.7889908256880734
+            },
+            {
+              "window": "D12_I5_N:2030-11-01T17:05:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.5
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T14:20:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.9157608695652174
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T14:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.6756756756756757
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T07:25:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.42857142857142855
+            },
+            {
+              "window": "D12_I5_N:2030-11-07T14:45:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.95
+            },
+            {
+              "window": "D12_I5_N:2030-11-08T07:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-11-09T09:25:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.03278688524590164
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T12:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.42857142857142855
+            }
+          ],
+          "observation_proxy_Brier": 0.015415301755014557
+        },
+        "at_T_600_63": {
+          "proxy_IoU": 0.5474395883412277,
+          "conditions": {
+            "queue_ongoing": 0.8057821170935926,
+            "queue_onset": 0.28909705958886284
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-30T07:45:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.7518518518518519
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:05:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.7909090909090909
+            },
+            {
+              "window": "D12_I5_N:2030-11-01T17:05:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.6153846153846154
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T14:20:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.9207650273224044
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T14:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.5555555555555556
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T07:25:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.35714285714285715
+            },
+            {
+              "window": "D12_I5_N:2030-11-07T14:45:00Z:3253",
+              "condition": "queue_ongoing",
+              "IoU": 0.95
+            },
+            {
+              "window": "D12_I5_N:2030-11-08T07:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-11-09T09:25:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.03278688524590164
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T12:15:00Z:3253",
+              "condition": "queue_onset",
+              "IoU": 0.5
+            }
+          ],
+          "observation_proxy_Brier": 0.015553994147784102
+        }
+      }
+    },
+    {
+      "seed": 4001,
+      "sampler": {
+        "seed": 4001,
+        "candidate_counts": {
+          "queue_onset": 121,
+          "queue_ongoing": 887
+        },
+        "selected_counts": {
+          "queue_onset": 5,
+          "queue_ongoing": 5
+        },
+        "requested_per_condition": 5,
+        "label_provenance": "eligible noisy public train observations; unknown future cells omitted",
+        "unknown_formal_selector": true,
+        "origin_timestamp_inputs": false,
+        "windows": [
+          {
+            "day": 6,
+            "at": 91,
+            "condition": "queue_onset",
+            "origin": "2030-11-05T07:35:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7790697674418605,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 5,
+            "at": 217,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-04T18:05:00+00:00",
+            "persistence_proxy_iou": 0.28,
+            "future_label_coverage": 0.7758397932816538,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 2,
+            "at": 176,
+            "condition": "queue_ongoing",
+            "origin": "2030-10-31T14:40:00+00:00",
+            "persistence_proxy_iou": 0.8782051282051282,
+            "future_label_coverage": 0.7810077519379846,
+            "near_cutoff_share": 0.0008271298593879239
+          },
+          {
+            "day": 4,
+            "at": 210,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-03T17:30:00+00:00",
+            "persistence_proxy_iou": 0.8279569892473119,
+            "future_label_coverage": 0.787467700258398,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 7,
+            "at": 177,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-06T14:45:00+00:00",
+            "persistence_proxy_iou": 0.7760416666666666,
+            "future_label_coverage": 0.7777777777777778,
+            "near_cutoff_share": 0.0008305647840531562
+          },
+          {
+            "day": 8,
+            "at": 187,
+            "condition": "queue_ongoing",
+            "origin": "2030-11-12T15:35:00+00:00",
+            "persistence_proxy_iou": 0.8,
+            "future_label_coverage": 0.7428940568475452,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 10,
+            "at": 123,
+            "condition": "queue_onset",
+            "origin": "2030-11-02T10:15:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7810077519379846,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 1,
+            "at": 147,
+            "condition": "queue_onset",
+            "origin": "2030-11-10T12:15:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7629198966408268,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 12,
+            "at": 107,
+            "condition": "queue_onset",
+            "origin": "2030-11-09T08:55:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7448320413436692,
+            "near_cutoff_share": 0.0
+          },
+          {
+            "day": 2,
+            "at": 90,
+            "condition": "queue_onset",
+            "origin": "2030-10-31T07:30:00+00:00",
+            "persistence_proxy_iou": 0.0,
+            "future_label_coverage": 0.7758397932816538,
+            "near_cutoff_share": 0.0
+          }
+        ]
+      },
+      "models": {
+        "before_T_400_23": {
+          "proxy_IoU": 0.5838211409252152,
+          "conditions": {
+            "queue_ongoing": 0.6997074992417349,
+            "queue_onset": 0.4679347826086956
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-31T07:30:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:40:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.9299363057324841
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T10:15:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.6875
+            },
+            {
+              "window": "D12_I5_N:2030-11-03T17:30:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.5714285714285714
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T18:05:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.2857142857142857
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T07:35:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.6521739130434783
+            },
+            {
+              "window": "D12_I5_N:2030-11-06T14:45:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.9114583333333334
+            },
+            {
+              "window": "D12_I5_N:2030-11-09T08:55:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.6666666666666666
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T12:15:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.3333333333333333
+            },
+            {
+              "window": "D12_I5_N:2030-11-12T15:35:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.8
+            }
+          ],
+          "observation_proxy_Brier": 0.006564395196612253
+        },
+        "before_T_600_63": {
+          "proxy_IoU": 0.5402695966399262,
+          "conditions": {
+            "queue_ongoing": 0.7513725266131859,
+            "queue_onset": 0.32916666666666666
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-31T07:30:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:40:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.9745222929936306
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T10:15:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.5625
+            },
+            {
+              "window": "D12_I5_N:2030-11-03T17:30:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.6493506493506493
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T18:05:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.4
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T07:35:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.75
+            },
+            {
+              "window": "D12_I5_N:2030-11-06T14:45:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.9329896907216495
+            },
+            {
+              "window": "D12_I5_N:2030-11-09T08:55:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T12:15:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.3333333333333333
+            },
+            {
+              "window": "D12_I5_N:2030-11-12T15:35:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.8
+            }
+          ],
+          "observation_proxy_Brier": 0.006501020663386569
+        },
+        "at_T_400_23": {
+          "proxy_IoU": 0.617217994715711,
+          "conditions": {
+            "queue_ongoing": 0.8587217037171364,
+            "queue_onset": 0.3757142857142857
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-31T07:30:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:40:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.9177215189873418
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T10:15:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.5
+            },
+            {
+              "window": "D12_I5_N:2030-11-03T17:30:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.8051948051948052
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T18:05:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.7857142857142857
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T07:35:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.55
+            },
+            {
+              "window": "D12_I5_N:2030-11-06T14:45:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.9278350515463918
+            },
+            {
+              "window": "D12_I5_N:2030-11-09T08:55:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.4
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T12:15:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.42857142857142855
+            },
+            {
+              "window": "D12_I5_N:2030-11-12T15:35:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.8571428571428571
+            }
+          ],
+          "observation_proxy_Brier": 0.006619685612793034
+        },
+        "at_T_600_63": {
+          "proxy_IoU": 0.6200136143050157,
+          "conditions": {
+            "queue_ongoing": 0.8375272286100313,
+            "queue_onset": 0.4025
+          },
+          "windows": [
+            {
+              "window": "D12_I5_N:2030-10-31T07:30:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.0
+            },
+            {
+              "window": "D12_I5_N:2030-10-31T14:40:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.9235668789808917
+            },
+            {
+              "window": "D12_I5_N:2030-11-02T10:15:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.5625
+            },
+            {
+              "window": "D12_I5_N:2030-11-03T17:30:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.7402597402597403
+            },
+            {
+              "window": "D12_I5_N:2030-11-04T18:05:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.7857142857142857
+            },
+            {
+              "window": "D12_I5_N:2030-11-05T07:35:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.55
+            },
+            {
+              "window": "D12_I5_N:2030-11-06T14:45:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.9285714285714286
+            },
+            {
+              "window": "D12_I5_N:2030-11-09T08:55:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.4
+            },
+            {
+              "window": "D12_I5_N:2030-11-10T12:15:00Z:4001",
+              "condition": "queue_onset",
+              "IoU": 0.5
+            },
+            {
+              "window": "D12_I5_N:2030-11-12T15:35:00Z:4001",
+              "condition": "queue_ongoing",
+              "IoU": 0.8095238095238095
+            }
+          ],
+          "observation_proxy_Brier": 0.006827255855167529
+        }
+      }
+    }
+  ],
+  "formal_Queue": null,
+  "limitations": "No latent queue truth. Assessment seeds sample overlapping windows within the same days; they are not independent trials.",
+  "selected": "at_T_600_63",
+  "seconds": 73.44891539999662
+}

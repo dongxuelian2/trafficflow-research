@@ -9,6 +9,20 @@
 新实验与失败结果见 `EXPERIMENTS.md`；候选对照见 `MODEL_COMPARISON.md`；优先路线见 `RESEARCH_ROADMAP.md`。
 登记协议 SHA：`91e48a8f2f86775466c8c9b5ad6bdbe693ea25554ef9b18d9e12cd80d3256143`。
 
+**State 强基线复核改变了结论。** A14 将同划分、同参数 LightGBM 的标签预算从 300,000 增至全部 1,804,908，秋季 assessment State 从 **0.936655** 升至 **0.942340**，超过此前图组合的 0.940205。A15 在此强基线上，仅用 selection 选择 graph+FD、α=.25，assessment 为 **0.943417**，增益 **0.001077**。14 天日均配对增益的 block CI 为 [0.000717,0.001161]；这是开发诊断，低于登记的 0.002 晋级门槛，未成为正式候选。此前多个 NN seed 的收益只证明相对 300k 标签比较组的改善。
+
+Queue 的规则允许使用已发布且 timestamp ≤T 的观测。C04 测得各方向 T 时刻可用观测占比约 44%–59%；新代码只以 Parquet 时间谓词读取 T，不读取未来窗口值。C05–C08 的同窗口观测代理实验存在正负结果：D12_I5_N 秋季 at-T 600/63 为 0.612418，before-T 同模型为 0.540552；但加入 bookkeeping 对照后，小 selection 集选中了 assessment 更差的 0.526387。D7_I10_W 的 at-T 400/23 也退化。不能按 assessment 反选获胜模型；较大 calibration、跨方向和不同 seed 的实验继续进行。真实 Queue 分项仍未知。
+
+C09–C11 扩大可得校准窗口后，唯一事件去重、按日 block 的 at-T 增益区间在三组实验中全部跨零，尚不能晋级。A16 冬季全标签 LGB 为 **0.946854**，同样超过此前冬季图组合；标签预算影响具有跨季节证据。当前继续研究的版本不覆盖正式最佳提交。
+
+A10 的 density-increment 联合候选秋季 State 为 0.938577，target-pair 相对 L1 为 0.786185（300k 标签基线 0.824392）；该目标只覆盖有观测且涉及 target 的相邻时刻，**不等同正式 Physics**。λ=.1 的 A11 未通过 selection。A12 的 D7_I405_N 图组合为 0.920775 vs 300k LGB 0.917777；A13 的 D7_I10_W 选择 α=0，无神经网络增益。跨 family 零样本迁移 A05 失败。
+
+D02 自建 OD 模拟复合分数为 **0.870706**，Ridge 为 **0.825047**；D04 扩大 prior 失配分布后，missing-prior-path 场景下 Bayes 仍退化。这些模拟测量不能覆盖下面的正式失败。
+
+OD-only 正式控制候选 ref **57140644** 已评分：**0.76474**，比基准下降 **0.06466**，拒绝晋级。当前最佳正式分数仍为 **0.82940**。候选 SHA：`4976e6bc1fe45207b6ea05dda2031d7885c9b38e1d607efc62c97887ba1e9055`。这次失败说明自建 OD 分布对正式数据的迁移假设不可靠；模拟增益不能抵消正式负面结果。证据见 `reports/research/formal_scores.json`。
+
+![独立模拟与观测代理对照](reports/research/research_v2_comparison.png)
+
 独立 CTM 的 54 个压力场景已运行，车辆守恒误差 ≤6.76e-13。其 latent oracle 对 noisy observation 的 State 为 0.952006，时空插值为 0.887547，RTS 为 0.848378。这些是自建模拟测量，不是比赛分数。
 公开拓扑审计否定了“部分方向无可评分关系”的猜想：十方向均有可评分连接。原本地诊断错误地排除了外部连接，已修复；仍不能计算正式 Physics。
 

@@ -1,0 +1,25 @@
+{
+  "experiment": "A01_independent_process_training_repeat",
+  "models": [
+    {
+      "model": "temporal",
+      "maximum_parameter_difference": 0.0,
+      "first_sha256": "b9e4283fd8386d24658401fc29f5721637c8a4a1f455cfa8c754a8e896e0095d",
+      "second_sha256": "b9e4283fd8386d24658401fc29f5721637c8a4a1f455cfa8c754a8e896e0095d"
+    },
+    {
+      "model": "graph",
+      "maximum_parameter_difference": 0.0,
+      "first_sha256": "cf41be515ddcbe3328fec98d228fce2f0c63b0c2fe9dd6da733a2514089294da",
+      "second_sha256": "cf41be515ddcbe3328fec98d228fce2f0c63b0c2fe9dd6da733a2514089294da"
+    },
+    {
+      "model": "graph_FD",
+      "maximum_parameter_difference": 0.0,
+      "first_sha256": "4e6a327c3156b0fd3c581b087b6236d2b43bce00cf444ae640cd819670a882c0",
+      "second_sha256": "4e6a327c3156b0fd3c581b087b6236d2b43bce00cf444ae640cd819670a882c0"
+    }
+  ],
+  "validation": "Exact tensor parity after independent training, same seed and cached public-train inputs.",
+  "limitation": "This repeats training from cached inputs, not a complete independent full-data reprocessing and seven-million-row reproduction."
+}

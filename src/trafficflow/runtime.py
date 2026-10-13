@@ -12,7 +12,7 @@ def sha256_file(path):
             h.update(block)
     return h.hexdigest()
 
-def evidence():
+def evidence(gpu_used=False):
     import ctypes
     peak=None
     if os.name=='nt':
@@ -32,5 +32,5 @@ def evidence():
         h.update(path.name.encode());h.update(path.read_bytes())
     return {'python':platform.python_version(),'platform':platform.platform(),'logical_cpus':os.cpu_count(),
             'process_peak_working_set_MiB':peak,'peak_scope':'current process lifetime, not isolated per model',
-            'source_sha256':h.hexdigest(),'model_threads':4,'gpu_used':False,
+            'source_sha256':h.hexdigest(),'model_threads':4,'gpu_used':bool(gpu_used),
             'versions':{p:md.version(p) for p in ['numpy','pandas','scipy','pyarrow','lightgbm','catboost','scikit-learn']}}

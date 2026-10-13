@@ -54,12 +54,13 @@ def road_context(stats,links,net,topo):
         stats[kind+'_ramp_count']=[len([s for s in str(topo.loc[link,field]).split(';') if s]) if link in topo.index and field in topo else 0 for link in links]
     return stats
 
-def queue_features(history,targets,net,topo,origin):
+def queue_features(history,targets,net,topo,origin,allow_origin=False,latest_valid_queue=False):
     origin=pd.Timestamp(origin)
     if origin.tzinfo is None:
         raise ValueError('Forecast origin must include timezone')
     ts=pd.to_datetime(history.timestamp,utc=True)
-    if (ts>=origin).any() or (ts<origin-pd.Timedelta(minutes=60)).any():
+    after=(ts>origin) if allow_origin else (ts>=origin)
+    if after.any() or (ts<origin-pd.Timedelta(minutes=60)).any():
         raise ValueError('History outside [origin-60min, origin); future input leakage')
     tt=pd.to_datetime(targets.timestamp,utc=True)
     if (tt<=origin).any() or (tt>origin+pd.Timedelta(minutes=30)).any():
@@ -99,6 +100,10 @@ def queue_features(history,targets,net,topo,origin):
          'slope':slope,'speed_std':std,'age':np.where(counts>0,age,65.),
          'flow_per_lane':np.where(counts>0,flow,0.),'coverage':counts/np.maximum(row_counts,1),
          'queue_now':(speeds[-1]<=cut).astype(float),'cut_ratio':cut/vf},index=links)
+    if allow_origin or latest_valid_queue:
+        # The current public rules permit released measurements at T. For
+        # missing T cells, retain the latest eligible reading in the history.
+        stats['queue_now']=(stats.current.to_numpy()*vf<=cut).astype(float)
     flow_ratios=flows/lane/(net.capacity_vph.reindex(links).to_numpy(float)/lane)
     qsum=np.where(recent,flow_ratios,0).sum(axis=0)
     qxy=np.where(recent,xminutes*flow_ratios,0).sum(axis=0)
@@ -270,7 +275,12 @@ def predict_windows(release,panel,split,model):
             if hasattr(w,name):
                 origin=pd.Timestamp(getattr(w,name))
                 break
-        x=queue_features(h,target,net,topo,origin)
+        use_origin=getattr(model,'uses_origin_timestamp',False)
+        if use_origin:
+            from .causal_queue import append_released_origin
+            h=append_released_origin(h,release,panel,split,origin)
+        x=queue_features(h,target,net,topo,origin,allow_origin=use_origin,
+                         latest_valid_queue=getattr(model,'latest_valid_queue_bookkeeping',False))
         if hasattr(model,'classify'):
             if not hasattr(w,'condition'):
                 raise ValueError('Conditional calibration requires released window condition')

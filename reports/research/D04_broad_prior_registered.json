@@ -1,0 +1,24 @@
+{
+  "protocol_sha256": "53abb7a747b9706013dbf6c457ee5ff88e8c9988d5611be81e3c475ea4a366ef",
+  "protocol": {
+    "id": "D04_broad_prior_misspecification",
+    "data": "public train networks; our own independently generated path truth and weak priors",
+    "generating_regimes": [
+      "absolute_additive_prior_noise",
+      "lognormal_prior_noise",
+      "missing_prior_paths",
+      "group_biased_prior"
+    ],
+    "assessment_seeds": [
+      2909,
+      3253,
+      4001
+    ],
+    "models": [
+      "ridge_0.05",
+      "D02_bayesian_fixed_hyperparameters"
+    ],
+    "model_selection": "No formal retuning or new upload from this diagnostic. Evaluate fixed rejected method across broader priors.",
+    "formal_ODME": null
+  }
+}

@@ -1,0 +1,1034 @@
+{
+  "experiment": "A01_masked_graph_state",
+  "cache": "artifacts\\research\\A06_D12_I5_N_august_seed20261013",
+  "prepared": {
+    "experiment": "A01_masked_graph_state",
+    "panel": "D12_I5_N",
+    "fold": "rolling_august",
+    "seed": 20261013,
+    "protocol_sha256": "91e48a8f2f86775466c8c9b5ad6bdbe693ea25554ef9b18d9e12cd80d3256143",
+    "dates": {
+      "profile": [
+        "2030-06-01",
+        "2030-06-02",
+        "2030-06-03",
+        "2030-06-04",
+        "2030-06-05",
+        "2030-06-06",
+        "2030-06-07",
+        "2030-06-08",
+        "2030-06-09",
+        "2030-06-10",
+        "2030-06-11",
+        "2030-06-12",
+        "2030-06-13",
+        "2030-06-14",
+        "2030-06-15",
+        "2030-06-16",
+        "2030-06-17",
+        "2030-06-18",
+        "2030-06-19",
+        "2030-06-20",
+        "2030-06-21",
+        "2030-06-22",
+        "2030-06-23",
+        "2030-06-24",
+        "2030-06-25",
+        "2030-06-26",
+        "2030-06-27",
+        "2030-06-28",
+        "2030-06-29",
+        "2030-06-30",
+        "2030-07-01",
+        "2030-07-02",
+        "2030-07-03",
+        "2030-07-04",
+        "2030-07-05",
+        "2030-07-06",
+        "2030-07-07",
+        "2030-07-08",
+        "2030-07-09",
+        "2030-07-10",
+        "2030-07-11",
+        "2030-07-12",
+        "2030-07-13",
+        "2030-07-14",
+        "2030-07-15"
+      ],
+      "fit": [
+        "2030-07-16",
+        "2030-07-17",
+        "2030-07-18",
+        "2030-07-19",
+        "2030-07-20",
+        "2030-07-21",
+        "2030-07-22",
+        "2030-07-23",
+        "2030-07-24",
+        "2030-07-25",
+        "2030-07-26",
+        "2030-07-27",
+        "2030-07-28",
+        "2030-07-29",
+        "2030-07-30",
+        "2030-07-31",
+        "2030-08-01",
+        "2030-08-02",
+        "2030-08-03",
+        "2030-08-04",
+        "2030-08-05",
+        "2030-08-06",
+        "2030-08-07",
+        "2030-08-08",
+        "2030-08-09",
+        "2030-08-10",
+        "2030-08-11",
+        "2030-08-12",
+        "2030-08-13",
+        "2030-08-14",
+        "2030-08-15"
+      ],
+      "selection": [
+        "2030-08-16",
+        "2030-08-17",
+        "2030-08-18",
+        "2030-08-19",
+        "2030-08-20",
+        "2030-08-21",
+        "2030-08-22",
+        "2030-08-23",
+        "2030-08-24",
+        "2030-08-25",
+        "2030-08-26",
+        "2030-08-27",
+        "2030-08-28",
+        "2030-08-29"
+      ],
+      "assessment": [
+        "2030-08-30",
+        "2030-08-31",
+        "2030-09-01",
+        "2030-09-02",
+        "2030-09-03",
+        "2030-09-04",
+        "2030-09-05",
+        "2030-09-06",
+        "2030-09-07",
+        "2030-09-08",
+        "2030-09-09",
+        "2030-09-10",
+        "2030-09-11",
+        "2030-09-12"
+      ]
+    },
+    "source": {
+      "python": "3.13.1",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "logical_cpus": 16,
+      "process_peak_working_set_MiB": 1395.0234375,
+      "peak_scope": "current process lifetime, not isolated per model",
+      "source_sha256": "bf38d6bc44379a9b89e64d3b5652e7bf5809d3a7d1dcaf6e8a2feb8d22c0f301",
+      "model_threads": 4,
+      "gpu_used": false,
+      "versions": {
+        "numpy": "2.2.5",
+        "pandas": "3.0.5",
+        "scipy": "1.16.1",
+        "pyarrow": "25.0.1",
+        "lightgbm": "4.7.0",
+        "catboost": "1.2.10",
+        "scikit-learn": "1.7.2"
+      }
+    },
+    "channels": [
+      "speed/25",
+      "lane_flow/600",
+      "speed_available",
+      "flow_available",
+      "profile_speed/25",
+      "profile_lane_flow/600",
+      "base_speed/25",
+      "base_lane_flow/600",
+      "occupancy/.25",
+      "occupancy_available",
+      "sin_tod",
+      "cos_tod"
+    ],
+    "sources": [
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_07_28.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-07-28.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_07_29.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-07-29.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_02.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-08-02.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_10.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-08-10.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_12.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-08-12.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_14.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-08-14.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_18.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-07-18.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_20.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-07-20.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_25.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-07-25.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_26.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-07-26.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_27.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-07-27.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_30.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-07-30.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_31.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-07-31.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_06.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-08-06.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_07.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-08-07.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_16.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-07-16.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_17.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-07-17.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_19.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-07-19.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_21.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-07-21.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_22.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-07-22.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_23.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-07-23.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_24.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-07-24.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_01.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-08-01.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_03.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-08-03.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_04.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-08-04.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_05.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-08-05.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_08.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-08-08.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_09.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-08-09.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_11.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-08-11.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_13.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-08-13.npz"
+      },
+      {
+        "part": "fit",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_15.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/fit/2030-08-15.npz"
+      },
+      {
+        "part": "selection",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_17.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/selection/2030-08-17.npz"
+      },
+      {
+        "part": "selection",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_19.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/selection/2030-08-19.npz"
+      },
+      {
+        "part": "selection",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_22.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/selection/2030-08-22.npz"
+      },
+      {
+        "part": "selection",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_25.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/selection/2030-08-25.npz"
+      },
+      {
+        "part": "selection",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_18.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/selection/2030-08-18.npz"
+      },
+      {
+        "part": "selection",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_20.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/selection/2030-08-20.npz"
+      },
+      {
+        "part": "selection",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_21.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/selection/2030-08-21.npz"
+      },
+      {
+        "part": "selection",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_24.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/selection/2030-08-24.npz"
+      },
+      {
+        "part": "selection",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_26.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/selection/2030-08-26.npz"
+      },
+      {
+        "part": "selection",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_27.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/selection/2030-08-27.npz"
+      },
+      {
+        "part": "selection",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_16.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/selection/2030-08-16.npz"
+      },
+      {
+        "part": "selection",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_23.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/selection/2030-08-23.npz"
+      },
+      {
+        "part": "selection",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_28.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/selection/2030-08-28.npz"
+      },
+      {
+        "part": "selection",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_29.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/selection/2030-08-29.npz"
+      },
+      {
+        "part": "assessment",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_31.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/assessment/2030-08-31.npz"
+      },
+      {
+        "part": "assessment",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_02.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/assessment/2030-09-02.npz"
+      },
+      {
+        "part": "assessment",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_03.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/assessment/2030-09-03.npz"
+      },
+      {
+        "part": "assessment",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_06.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/assessment/2030-09-06.npz"
+      },
+      {
+        "part": "assessment",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_12.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/assessment/2030-09-12.npz"
+      },
+      {
+        "part": "assessment",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_30.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/assessment/2030-08-30.npz"
+      },
+      {
+        "part": "assessment",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_09_05.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/assessment/2030-09-05.npz"
+      },
+      {
+        "part": "assessment",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_09_08.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/assessment/2030-09-08.npz"
+      },
+      {
+        "part": "assessment",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_01.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/assessment/2030-09-01.npz"
+      },
+      {
+        "part": "assessment",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_04.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/assessment/2030-09-04.npz"
+      },
+      {
+        "part": "assessment",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_07.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/assessment/2030-09-07.npz"
+      },
+      {
+        "part": "assessment",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_09.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/assessment/2030-09-09.npz"
+      },
+      {
+        "part": "assessment",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_10.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/assessment/2030-09-10.npz"
+      },
+      {
+        "part": "assessment",
+        "path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_11.parquet",
+        "cache": "artifacts/research/A06_D12_I5_N_august_seed20261013/assessment/2030-09-11.npz"
+      }
+    ],
+    "seconds": 117.75969600000099,
+    "formal_score": null
+  },
+  "torch": "2.8.0+cu128",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "fit_seed": 20261013,
+  "fixed_LGB_fit_seed": 20261013,
+  "epochs": 16,
+  "steps_per_epoch": 60,
+  "batch_size": 4,
+  "patch_steps": 64,
+  "training": {
+    "temporal": {
+      "history": [
+        {
+          "epoch": 4,
+          "training_loss": 0.0070387706936647495,
+          "selection_State": 0.9190414394337784
+        },
+        {
+          "epoch": 8,
+          "training_loss": 0.005710326432017609,
+          "selection_State": 0.9280987798664321
+        },
+        {
+          "epoch": 12,
+          "training_loss": 0.005553226417396218,
+          "selection_State": 0.9297568569548068
+        },
+        {
+          "epoch": 16,
+          "training_loss": 0.00460794180786858,
+          "selection_State": 0.9332002143002421
+        }
+      ],
+      "seconds": 16.588341400005447,
+      "FD_loss_weight": 0.0,
+      "public_train_density_increment_weight": 0.0
+    },
+    "graph": {
+      "history": [
+        {
+          "epoch": 4,
+          "training_loss": 0.006102210521930829,
+          "selection_State": 0.9236702747321043
+        },
+        {
+          "epoch": 8,
+          "training_loss": 0.00452175927736486,
+          "selection_State": 0.9340359205104095
+        },
+        {
+          "epoch": 12,
+          "training_loss": 0.004101908756031965,
+          "selection_State": 0.9323069714486714
+        },
+        {
+          "epoch": 16,
+          "training_loss": 0.0036665936233475803,
+          "selection_State": 0.9368098671320966
+        }
+      ],
+      "seconds": 15.547558500002197,
+      "FD_loss_weight": 0.0,
+      "public_train_density_increment_weight": 0.0
+    },
+    "graph_FD": {
+      "history": [
+        {
+          "epoch": 4,
+          "training_loss": 0.006052760855527595,
+          "selection_State": 0.9234014276164823
+        },
+        {
+          "epoch": 8,
+          "training_loss": 0.004424185003153979,
+          "selection_State": 0.9346923564526386
+        },
+        {
+          "epoch": 12,
+          "training_loss": 0.004150287704154228,
+          "selection_State": 0.9329256198880514
+        },
+        {
+          "epoch": 16,
+          "training_loss": 0.003617219983910521,
+          "selection_State": 0.9345496064943474
+        }
+      ],
+      "seconds": 17.03481440000178,
+      "FD_loss_weight": 0.01,
+      "public_train_density_increment_weight": 0.0
+    }
+  },
+  "selection": {
+    "temporal": {
+      "ensemble_grid": [
+        {
+          "alpha": 0.0,
+          "selection_State": 0.9403535891041747
+        },
+        {
+          "alpha": 0.25,
+          "selection_State": 0.9410714517150939
+        },
+        {
+          "alpha": 0.5,
+          "selection_State": 0.9400563289919518
+        },
+        {
+          "alpha": 0.75,
+          "selection_State": 0.9373651834414641
+        },
+        {
+          "alpha": 1.0,
+          "selection_State": 0.9332002143002421
+        }
+      ],
+      "selected": {
+        "alpha": 0.25,
+        "selection_State": 0.9410714517150939
+      }
+    },
+    "graph": {
+      "ensemble_grid": [
+        {
+          "alpha": 0.0,
+          "selection_State": 0.9403535891041747
+        },
+        {
+          "alpha": 0.25,
+          "selection_State": 0.941972520976368
+        },
+        {
+          "alpha": 0.5,
+          "selection_State": 0.9419291135308484
+        },
+        {
+          "alpha": 0.75,
+          "selection_State": 0.9401704569147437
+        },
+        {
+          "alpha": 1.0,
+          "selection_State": 0.9368098671320966
+        }
+      ],
+      "selected": {
+        "alpha": 0.25,
+        "selection_State": 0.941972520976368
+      }
+    },
+    "graph_FD": {
+      "ensemble_grid": [
+        {
+          "alpha": 0.0,
+          "selection_State": 0.9403535891041747
+        },
+        {
+          "alpha": 0.25,
+          "selection_State": 0.9414216267858487
+        },
+        {
+          "alpha": 0.5,
+          "selection_State": 0.9407990238205765
+        },
+        {
+          "alpha": 0.75,
+          "selection_State": 0.9385007067344217
+        },
+        {
+          "alpha": 1.0,
+          "selection_State": 0.9346923564526386
+        }
+      ],
+      "selected": {
+        "alpha": 0.25,
+        "selection_State": 0.9414216267858487
+      }
+    }
+  },
+  "formal_State": null,
+  "comparison_limit": "Same public train dates; LGB sees 300000 sampled labels, neural samples patches. This does not isolate architecture from label exposure.",
+  "baseline_selection": {
+    "S_state": 0.9403535891041747,
+    "details": [
+      {
+        "regime": "R1",
+        "n": 45111,
+        "rmse_speed": 1.7530450173406888,
+        "rmse_lane_flow": 28.356247003198465,
+        "S_state": 0.9403944382563223
+      },
+      {
+        "regime": "R2",
+        "n": 102162,
+        "rmse_speed": 1.4270364573630454,
+        "rmse_lane_flow": 25.352885162254157,
+        "S_state": 0.9497388005632301
+      },
+      {
+        "regime": "R3",
+        "n": 113944,
+        "rmse_speed": 2.0875431280672703,
+        "rmse_lane_flow": 31.280269487968216,
+        "S_state": 0.9309275284929714
+      }
+    ],
+    "days": [
+      {
+        "regime": "R3",
+        "n": 28379,
+        "speed_sse": 109378.04202853644,
+        "lane_flow_sse": 26093530.066514548,
+        "daily_State": 0.9343472827682506
+      },
+      {
+        "regime": "R1",
+        "n": 11370,
+        "speed_sse": 46547.36131083165,
+        "lane_flow_sse": 10285113.852999348,
+        "daily_State": 0.9332375216657725
+      },
+      {
+        "regime": "R2",
+        "n": 16985,
+        "speed_sse": 47784.151880932695,
+        "lane_flow_sse": 10830658.396148425,
+        "daily_State": 0.9444106355118906
+      },
+      {
+        "regime": "R1",
+        "n": 11442,
+        "speed_sse": 21099.284622232684,
+        "lane_flow_sse": 7847676.93820082,
+        "daily_State": 0.9505900754810068
+      },
+      {
+        "regime": "R2",
+        "n": 17103,
+        "speed_sse": 30282.27439221159,
+        "lane_flow_sse": 12832533.205820015,
+        "daily_State": 0.9502579851604853
+      },
+      {
+        "regime": "R2",
+        "n": 16858,
+        "speed_sse": 23324.341673222007,
+        "lane_flow_sse": 9185735.660896506,
+        "daily_State": 0.9566966930905774
+      },
+      {
+        "regime": "R1",
+        "n": 11133,
+        "speed_sse": 21739.271738903426,
+        "lane_flow_sse": 6905146.555253962,
+        "daily_State": 0.950722901441525
+      },
+      {
+        "regime": "R3",
+        "n": 28406,
+        "speed_sse": 178129.626404754,
+        "lane_flow_sse": 32256376.223121986,
+        "daily_State": 0.9200749727751099
+      },
+      {
+        "regime": "R2",
+        "n": 17008,
+        "speed_sse": 66382.99180075323,
+        "lane_flow_sse": 13751477.98639711,
+        "daily_State": 0.9355268605585472
+      },
+      {
+        "regime": "R1",
+        "n": 11166,
+        "speed_sse": 49247.711323511336,
+        "lane_flow_sse": 11234768.656929767,
+        "daily_State": 0.9303187262222412
+      },
+      {
+        "regime": "R2",
+        "n": 17194,
+        "speed_sse": 26720.671041843296,
+        "lane_flow_sse": 10885631.778450515,
+        "daily_State": 0.9537823733609747
+      },
+      {
+        "regime": "R2",
+        "n": 17014,
+        "speed_sse": 13551.642530855055,
+        "lane_flow_sse": 8180507.692773191,
+        "daily_State": 0.9639116887364074
+      },
+      {
+        "regime": "R3",
+        "n": 28596,
+        "speed_sse": 94911.00889171005,
+        "lane_flow_sse": 18703794.56892528,
+        "daily_State": 0.9410413258266199
+      },
+      {
+        "regime": "R3",
+        "n": 28563,
+        "speed_sse": 114130.62335721384,
+        "lane_flow_sse": 34435405.200271115,
+        "daily_State": 0.930203000920019
+      }
+    ]
+  },
+  "selected": {
+    "name": "graph",
+    "alpha": 0.25,
+    "selection_State": 0.941972520976368
+  },
+  "baseline_assessment": {
+    "S_state": 0.9449932425937636,
+    "details": [
+      {
+        "regime": "R1",
+        "n": 56703,
+        "rmse_speed": 1.7473813039414778,
+        "rmse_lane_flow": 27.54826137649748,
+        "S_state": 0.9411362301128827
+      },
+      {
+        "regime": "R2",
+        "n": 51169,
+        "rmse_speed": 1.1034735947835026,
+        "rmse_lane_flow": 24.05451657824362,
+        "S_state": 0.9577231743093563
+      },
+      {
+        "regime": "R3",
+        "n": 170070,
+        "rmse_speed": 1.9563279460730574,
+        "rmse_lane_flow": 28.203903920570173,
+        "S_state": 0.9361203233590516
+      }
+    ],
+    "days": [
+      {
+        "regime": "R2",
+        "n": 17071,
+        "speed_sse": 24163.474811491087,
+        "lane_flow_sse": 12003340.523696007,
+        "daily_State": 0.9539721568619279
+      },
+      {
+        "regime": "R1",
+        "n": 11473,
+        "speed_sse": 45799.65473918995,
+        "lane_flow_sse": 9640870.638754994,
+        "daily_State": 0.9346192821891702
+      },
+      {
+        "regime": "R3",
+        "n": 28233,
+        "speed_sse": 119538.95783395355,
+        "lane_flow_sse": 24239955.21985555,
+        "daily_State": 0.9330899215228976
+      },
+      {
+        "regime": "R1",
+        "n": 11328,
+        "speed_sse": 57212.80145157609,
+        "lane_flow_sse": 11036259.92144193,
+        "daily_State": 0.9275274192583617
+      },
+      {
+        "regime": "R1",
+        "n": 11177,
+        "speed_sse": 9102.649120728565,
+        "lane_flow_sse": 4923826.685465621,
+        "daily_State": 0.9644157083663034
+      },
+      {
+        "regime": "R3",
+        "n": 28413,
+        "speed_sse": 147364.67528570985,
+        "lane_flow_sse": 25922550.417244606,
+        "daily_State": 0.9276510466126764
+      },
+      {
+        "regime": "R2",
+        "n": 17050,
+        "speed_sse": 14298.968999138368,
+        "lane_flow_sse": 8856891.57650342,
+        "daily_State": 0.9627454896332459
+      },
+      {
+        "regime": "R1",
+        "n": 11351,
+        "speed_sse": 14842.970781669797,
+        "lane_flow_sse": 6813976.018493032,
+        "daily_State": 0.9565159160667536
+      },
+      {
+        "regime": "R3",
+        "n": 28494,
+        "speed_sse": 105145.2960473869,
+        "lane_flow_sse": 21282636.86749023,
+        "daily_State": 0.9375544491303254
+      },
+      {
+        "regime": "R2",
+        "n": 17048,
+        "speed_sse": 23843.69240464722,
+        "lane_flow_sse": 8747162.799023826,
+        "daily_State": 0.9570889778414244
+      },
+      {
+        "regime": "R3",
+        "n": 28318,
+        "speed_sse": 85047.5091282203,
+        "lane_flow_sse": 17239825.13569665,
+        "daily_State": 0.9436505775319708
+      },
+      {
+        "regime": "R3",
+        "n": 28336,
+        "speed_sse": 76858.90849695489,
+        "lane_flow_sse": 20412776.353825316,
+        "daily_State": 0.9438487933015005
+      },
+      {
+        "regime": "R3",
+        "n": 28276,
+        "speed_sse": 116939.79407974816,
+        "lane_flow_sse": 26186171.60096101,
+        "daily_State": 0.9327425549267574
+      },
+      {
+        "regime": "R1",
+        "n": 11374,
+        "speed_sse": 46175.54252245095,
+        "lane_flow_sse": 10617353.621964578,
+        "daily_State": 0.933054730469637
+      }
+    ]
+  },
+  "selected_assessment": {
+    "S_state": 0.9465499185587993,
+    "details": [
+      {
+        "regime": "R1",
+        "n": 56703,
+        "rmse_speed": 1.6499037990819216,
+        "rmse_lane_flow": 28.009737627132807,
+        "S_state": 0.9428879457590287
+      },
+      {
+        "regime": "R2",
+        "n": 51169,
+        "rmse_speed": 1.071426554820437,
+        "rmse_lane_flow": 24.387926271128645,
+        "S_state": 0.9581597762746801
+      },
+      {
+        "regime": "R3",
+        "n": 170070,
+        "rmse_speed": 1.827329748772156,
+        "rmse_lane_flow": 28.60127450065085,
+        "S_state": 0.9386020336426891
+      }
+    ],
+    "days": [
+      {
+        "regime": "R2",
+        "n": 17071,
+        "speed_sse": 22135.56251543042,
+        "lane_flow_sse": 12355374.790261945,
+        "daily_State": 0.9547781856438424
+      },
+      {
+        "regime": "R1",
+        "n": 11473,
+        "speed_sse": 37455.735980077356,
+        "lane_flow_sse": 10003205.576647824,
+        "daily_State": 0.9383341879407865
+      },
+      {
+        "regime": "R3",
+        "n": 28233,
+        "speed_sse": 103069.52796773009,
+        "lane_flow_sse": 24909835.08754742,
+        "daily_State": 0.9359567923052332
+      },
+      {
+        "regime": "R1",
+        "n": 11328,
+        "speed_sse": 51123.69203585266,
+        "lane_flow_sse": 11491254.233733747,
+        "daily_State": 0.9296949492695619
+      },
+      {
+        "regime": "R1",
+        "n": 11177,
+        "speed_sse": 9193.406588433942,
+        "lane_flow_sse": 5070582.957225379,
+        "daily_State": 0.9640807284245669
+      },
+      {
+        "regime": "R3",
+        "n": 28413,
+        "speed_sse": 127010.26064108794,
+        "lane_flow_sse": 26632987.734295018,
+        "daily_State": 0.9308592987515649
+      },
+      {
+        "regime": "R2",
+        "n": 17050,
+        "speed_sse": 14311.062050145303,
+        "lane_flow_sse": 9114735.431797318,
+        "daily_State": 0.9624846022241134
+      },
+      {
+        "regime": "R1",
+        "n": 11351,
+        "speed_sse": 13636.848043612074,
+        "lane_flow_sse": 6984402.913912401,
+        "daily_State": 0.9573072659065835
+      },
+      {
+        "regime": "R3",
+        "n": 28494,
+        "speed_sse": 93804.4768418447,
+        "lane_flow_sse": 21933377.63690958,
+        "daily_State": 0.9395380348175307
+      },
+      {
+        "regime": "R2",
+        "n": 17048,
+        "speed_sse": 22293.077787259484,
+        "lane_flow_sse": 8963724.406226294,
+        "daily_State": 0.9577199028952355
+      },
+      {
+        "regime": "R3",
+        "n": 28318,
+        "speed_sse": 74200.01325051725,
+        "lane_flow_sse": 17709072.591786772,
+        "daily_State": 0.9458634756983997
+      },
+      {
+        "regime": "R3",
+        "n": 28336,
+        "speed_sse": 70458.5922528007,
+        "lane_flow_sse": 21076863.38408525,
+        "daily_State": 0.9450301266052615
+      },
+      {
+        "regime": "R3",
+        "n": 28276,
+        "speed_sse": 99343.65025388259,
+        "lane_flow_sse": 26860719.389058962,
+        "daily_State": 0.9358834699309422
+      },
+      {
+        "regime": "R1",
+        "n": 11374,
+        "speed_sse": 42946.23427061777,
+        "lane_flow_sse": 10936632.244730935,
+        "daily_State": 0.9342545720629503
+      }
+    ]
+  },
+  "paired_daily_interval": {
+    "paired_day_mean_gain": 0.001664897768830022,
+    "ci95": [
+      0.0012761353590110389,
+      0.002053660178649005
+    ],
+    "bootstrap_probability_gain_positive": 1.0,
+    "n_days": 14,
+    "block_days": 7,
+    "resamples": 4000,
+    "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+  },
+  "seconds": 52.91939519999869,
+  "gpu_peak_allocated_MiB": 344.40966796875
+}
