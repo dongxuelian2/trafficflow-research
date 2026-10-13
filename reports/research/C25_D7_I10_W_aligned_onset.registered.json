@@ -1,0 +1,44 @@
+{
+  "protocol_sha256": "b61d127bec6fd988ee574d18db28189f17927eb6c0af8a509074b2bbc130eb95",
+  "protocol": {
+    "id": "C05_same_window_origin_inputs",
+    "panel": "D7_I10_W",
+    "fold": "rolling_autumn",
+    "methods": [
+      "before_T_600_63",
+      "at_T_600_63",
+      "at_T_occupancy_600_63"
+    ],
+    "fold_boundaries": {
+      "name": "rolling_autumn_long_cal",
+      "profile_end": "2030-07-15",
+      "fit_end": "2030-10-15",
+      "selection_end": "2030-11-29",
+      "assessment_end": "2030-12-29"
+    },
+    "hypothesis": "Legal released T observations reduce age of the current estimate and expose early congestion.",
+    "no_future_inputs": true,
+    "label_source": "public train noisy observations, eligible future cells only",
+    "selection": "selection windows only, fit/refined threshold settings frozen before assessment",
+    "assessment_seeds": [
+      2909,
+      3253,
+      4001
+    ],
+    "formal_Queue": null,
+    "selection_per_condition": 30,
+    "assessment_per_condition": 30,
+    "fit_seed": 20261013,
+    "fit_per_condition": 500,
+    "fit_spacing_minutes": 30,
+    "published_condition_ablation": false,
+    "onset_last_step": true,
+    "timing_authorization": "Official host public discussion 742350; unknown latent labels remain unavailable",
+    "published_condition_hypothesis": "Use the legally supplied window condition instead of recomputing it from an extra noisy T observation.",
+    "occupancy_feature_ablation": true,
+    "event_loss_ablation": false,
+    "event_loss_hypothesis": "Condition/window-balanced losses can reduce domination by large ongoing queues. Class balancing can be harmed by noisy rare positives.",
+    "latest_valid_queue_bookkeeping_at_T": true,
+    "include_before_T_latest_bookkeeping_control": false
+  }
+}

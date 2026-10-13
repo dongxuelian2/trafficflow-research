@@ -12,7 +12,7 @@ from .metrics import queue_iou
 
 
 def sample_events(frames, net, topo, panel, seed, per_condition=5,
-                  spacing_minutes=360, maximum_persistence_iou=.9,origin_reader=None,include_occupancy=False):
+                  spacing_minutes=360, maximum_persistence_iou=.9,origin_reader=None,include_occupancy=False,onset_last_step=False):
     rng = np.random.default_rng(seed)
     days = []
     candidates = []
@@ -36,6 +36,11 @@ def sample_events(frames, net, topo, panel, seed, per_condition=5,
                 continue
             counts = queue[at-12:at].sum(axis=0)
             condition = 'queue_ongoing' if (counts >= 2).any() else 'queue_onset'
+            if onset_last_step and condition=='queue_onset':
+                # Public host announcement fixes onset timing in released
+                # windows. This training sampler can only approximate it with
+                # noisy public-train observations, never latent queue truth.
+                if (future[:-1]<=cutoff).any() or not (future[-1]<=cutoff).any():continue
             current = np.full(len(links), np.nan)
             for lag in range(1, 13):
                 value = speeds[at-lag]
@@ -92,6 +97,7 @@ def sample_events(frames, net, topo, panel, seed, per_condition=5,
         'unknown_formal_selector': True,
         'origin_timestamp_inputs':origin_reader is not None,
         'occupancy_features':include_occupancy,
+        'onset_observation_first_queue_at_30':onset_last_step,
         'windows': [{**c, 'origin': c['origin'].isoformat()} for c in chosen]}
     return ProxyData(pd.concat(xs, ignore_index=True), np.array(ys), np.array(windows),
                      np.array(conditions), np.array(dates)), metadata

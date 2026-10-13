@@ -15,12 +15,14 @@
 | `bayesian_od.py` | 显式分层 Gaussian prior，nonnegative MAP、未截断 posterior SD | D02 自建模拟增益没有迁移；K01 正式总分 0.76474；拒绝晋级 |
 | `digital_twin.py` | 独立 Godunov/CTM、CFL 子步、显式 ramp supply、车辆数守恒 | B01 54 场景最大守恒误差 6.76e-13；两种模拟 flux contract 并列 |
 | `graph_state.py` / graph experiment | missing-aware temporal conv + directed graph diffusion；occupancy 仅来自 masked 输入；joint speed/flow residual | 日前 profile、相同 fit/selection/assessment 日期、selection seal 后 assessment；GPU 344 MiB；多 seed/跨走廊继续研究 |
-| `queue_events.py` | 均匀打乱候选、条件配额、六小时间隔、quality 和 persistence 筛选 | 官方 selector 未公开，仍为带噪观测代理；不同 seed 可能抽到相同窗口 |
+| `queue_events.py` | 均匀打乱候选、条件配额、六小时间隔、quality 和 persistence 筛选；C24 起可选 onset 首次观测 queue at T+30 | 组织方公告 742350 公开时序属性；其余 selector 未公开，仍为带噪代理。C01–C22 不匹配时序，仅压力测试；不同 seed 可重复 origin |
 | `runtime.py` / evidence | CPU 实验 source fingerprints、进程峰值、训练前源码 ZIP | A29/A30 新实验在训练前保存源代码、依赖锁与逐文件 SHA；过去实验仅有 Git/运行指纹与模型校验 |
 | 下载 / API / 发布 | 请求官方 public participant APIs 与本队 submissions；秘密和签名 URL 不写日志 | 用户选择手动论坛发布；Notebook 草稿不公开发布；GitHub 推送继续授权 |
 
-当前独立 CUDA 环境 **24 tests passed**；CPU 环境 **23 passed / 1 optional-Torch skipped**，源码 compileall 通过。新增测试核验 event/class 权重质量守恒、density projection 的零 blend 与边界、occupancy/density channel 的质量与 target 隔离、三对角同化可见锚点不变。新增 daily-statistics 测试另行执行中。A01 与 A09 中相同缓存、相同 seed 的三个共同模型独立训练后，tensor 和模型文件 SHA 完全相同；这不等于全量独立重训首轮七百万预测的复现。
+当前独立 CUDA 环境 **25 tests passed**，CPU 环境 **24 passed / 1 optional-Torch skipped**，源码 compileall 已通过。新增测试核验 event/class 权重质量守恒、density projection 的零 blend 与边界、occupancy/density channel 的质量与 target 隔离、三对角同化可见锚点不变、daily sufficient-statistics 与直接 pooled State 一致、公告 onset 时序约束保留其他条件。测试临时目录位于工作区 .cache。A01 与 A09 中相同缓存、相同 seed 的三个共同模型独立训练后，tensor 和模型文件 SHA 完全相同；这不等于全量独立重训首轮七百万预测的复现。
 
 A14 审计发现重要比较混杂：原 graph 与 LGB 的日期相同，但 LGB 只用 300k 标签。全标签 LGB 1,804,908 行得到更高 State，A15 重做强基线对照后 graph 独立收益仅 0.001077。所有旧实验保留，解释同步修正。
 
 开放瓶颈：缺乏正式分项；独立模拟分布与赛事分布失配；Queue latent labels 未公开；物理 flux 投影使单纯 CTM surrogate 不可靠；OD 大零空间；Graph 单走廊模型的跨 family 泛化尚不确定。
+
+`public_onset_timing()` 只约束标记为 onset 的 T+5…T+25，保留 ongoing 与 T+30。模型默认不开启，新公告对齐实验显式设置标记，旧冻结模型行为不变；针对条件/lead 的测试通过。K02 使用本队冻结预测与公开 metadata，未读任何隐藏标签或 val/private 未来数值；完整 6,980,503 行独立 diff 仅 5 个 Queue 值。计分 eligibility 未公开，因此更紧的 .001369 Total 界必须注明条件，安全界为 .0075。

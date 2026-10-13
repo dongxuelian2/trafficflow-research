@@ -38,6 +38,7 @@ def main():
     parser.add_argument('--fit-spacing-minutes',type=int,default=360)
     parser.add_argument('--model-settings',choices=['both','600_63'],default='both')
     parser.add_argument('--published-condition',action='store_true')
+    parser.add_argument('--onset-last-step',action='store_true')
     args=parser.parse_args()
     if min(args.selection_per_condition,args.assessment_per_condition,args.fit_per_condition,args.fit_spacing_minutes)<1:
         raise ValueError('Event quotas must be positive')
@@ -66,6 +67,8 @@ def main():
         'fit_seed':args.fit_seed,
         'fit_per_condition':args.fit_per_condition,'fit_spacing_minutes':args.fit_spacing_minutes,
         'published_condition_ablation':args.published_condition,
+        'onset_last_step':args.onset_last_step,
+        'timing_authorization':'Official host public discussion 742350; unknown latent labels remain unavailable',
         'published_condition_hypothesis':'Use the legally supplied window condition instead of recomputing it from an extra noisy T observation.',
         'occupancy_feature_ablation':args.occupancy_features,
         'event_loss_ablation':args.event_loss,
@@ -99,13 +102,13 @@ def main():
         return ProxyData(x,data.y,data.window,data.condition,data.date)
     for key,seed,quota in [('fit',args.fit_seed,args.fit_per_condition),('selection',411,args.selection_per_condition)]:
         spacing=args.fit_spacing_minutes if key=='fit' else 360
-        old,metadata=sample_events(raw_for(release,args.panel,parts[key]),net,topo,args.panel,seed,per_condition=quota,spacing_minutes=spacing)
-        new,new_meta=sample_events(raw_for(release,args.panel,parts[key]),net,topo,args.panel,seed,per_condition=quota,spacing_minutes=spacing,origin_reader=origin_reader)
+        old,metadata=sample_events(raw_for(release,args.panel,parts[key]),net,topo,args.panel,seed,per_condition=quota,spacing_minutes=spacing,onset_last_step=args.onset_last_step)
+        new,new_meta=sample_events(raw_for(release,args.panel,parts[key]),net,topo,args.panel,seed,per_condition=quota,spacing_minutes=spacing,origin_reader=origin_reader,onset_last_step=args.onset_last_step)
         paired(old,new)
         data[key]={'before_T':old,'at_T':new}
         if args.bookkeeping_control:data[key]['before_T_latest']=bookkeeping(old)
         if args.occupancy_features:
-            occ,_=sample_events(raw_for(release,args.panel,parts[key]),net,topo,args.panel,seed,per_condition=quota,spacing_minutes=spacing,origin_reader=origin_reader,include_occupancy=True)
+            occ,_=sample_events(raw_for(release,args.panel,parts[key]),net,topo,args.panel,seed,per_condition=quota,spacing_minutes=spacing,origin_reader=origin_reader,include_occupancy=True,onset_last_step=args.onset_last_step)
             paired(old,occ)
             data[key]['at_T_occupancy']=occ
         if args.event_loss:
@@ -131,6 +134,7 @@ def main():
             model.uses_origin_timestamp=mode.startswith('at_T')
             model.uses_occupancy_features=mode.startswith('at_T_occupancy')
             model.uses_published_condition=mode.endswith('_condition')
+            model.uses_public_onset_timing=args.onset_last_step
             model.latest_valid_queue_bookkeeping=mode.startswith('at_T') or mode=='before_T_latest'
             tuning=model.tune(data['selection'][mode])
             cal=data['selection'][mode]
@@ -146,13 +150,13 @@ def main():
     # All fixed candidates are compared on the matched assessment window sets;
     # those numbers never change selected architecture or hyperparameters.
     for seed in cfg['simulator_assessment_seeds']:
-        old,metadata=sample_events(raw_for(release,args.panel,parts['assessment']),net,topo,args.panel,seed,per_condition=args.assessment_per_condition)
-        new,_=sample_events(raw_for(release,args.panel,parts['assessment']),net,topo,args.panel,seed,per_condition=args.assessment_per_condition,origin_reader=origin_reader)
+        old,metadata=sample_events(raw_for(release,args.panel,parts['assessment']),net,topo,args.panel,seed,per_condition=args.assessment_per_condition,onset_last_step=args.onset_last_step)
+        new,_=sample_events(raw_for(release,args.panel,parts['assessment']),net,topo,args.panel,seed,per_condition=args.assessment_per_condition,origin_reader=origin_reader,onset_last_step=args.onset_last_step)
         paired(old,new)
         variants={'before_T':old,'at_T':new}
         if args.bookkeeping_control:variants['before_T_latest']=bookkeeping(old)
         if args.occupancy_features:
-            occ,_=sample_events(raw_for(release,args.panel,parts['assessment']),net,topo,args.panel,seed,per_condition=args.assessment_per_condition,origin_reader=origin_reader,include_occupancy=True)
+            occ,_=sample_events(raw_for(release,args.panel,parts['assessment']),net,topo,args.panel,seed,per_condition=args.assessment_per_condition,origin_reader=origin_reader,include_occupancy=True,onset_last_step=args.onset_last_step)
             paired(old,occ)
             variants['at_T_occupancy']=occ
         if args.event_loss:

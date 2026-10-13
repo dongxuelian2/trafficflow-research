@@ -40,4 +40,6 @@ Task 4 builder 的 `baseline_submission` 用 train counts，`public_reference` �
 ## 当前包和网页文字的差异
 
 当前数据包 contract v2.0.0 用“同 link 至少两次 history queue”区分 ongoing，搜索索引中的 overview 仍写“onset 全 history 无 queue、ongoing 在 T 有 queue”。代理窗口遵循当前公开包契约，并记录 condition，不把噪声观测代理当真实标签。
-当前规则允许 Task 2 使用 timestamp <= T 的其他已发布历史（包括过去的 masked mainline/ramp 和完整 train）；禁止任何 timestamp > T 的输入。当前模型只使用发布的 60 分钟 window_history，尚未测量额外历史/ramp 对预测的增益。
+当前规则允许 Task 2 使用 timestamp <= T 的其他已发布历史（包括过去的 masked mainline/ramp 和完整 train）；禁止任何 timestamp > T 的输入。冻结正式模型使用 60 分钟 window_history；C04 起的新实验已测量额外发布 T 行，收益跨季节不稳定，尚未晋级。更长历史/ramp 的独立收益仍未知。
+
+2026-10-13 通过官方公开论坛 API 读取并核验组织方作者的[公告 742350](https://www.kaggle.com/competitions/2026-ieee-big-data-traffic-flow-bench/discussion/742350)：120 个发布 onset 窗口在前五步没有 queue，只可能在 T+30 出现；由最早 origin 选择导致。组织方不改数据或指标，明确允许使用 condition 与这一时序属性，ongoing 未受影响。只使用已公开的规则信息，真实 queue 位置仍不可见。C23 的公开 train 带噪观测审计独立支持此现象；首轮和 C01–C22 改标一般事件压力测试，C24 起采用对齐 sampler。

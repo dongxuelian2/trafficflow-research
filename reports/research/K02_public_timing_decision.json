@@ -1,0 +1,60 @@
+{
+  "candidate_sha256": "cf31d26f1f75b95a3363ee59e89d5d9e392a91df479c288b147f1241ebfaf93c",
+  "full_row_diff": {
+    "baseline_sha256": "43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1",
+    "candidate_sha256": "cf31d26f1f75b95a3363ee59e89d5d9e392a91df479c288b147f1241ebfaf93c",
+    "rows": 6980503,
+    "changed_rows": {
+      "queue": 5
+    },
+    "allowed_task": "queue",
+    "full_row_diff_passed": true,
+    "formal_score": null
+  },
+  "split_bounds": {
+    "validation": {
+      "changed_windows": [
+        {
+          "panel": "D7_I10_E",
+          "split": "validation",
+          "window_id": "Q2_D7_I10_E_validation_005",
+          "early_positive_predictions": 2,
+          "final_positive_predictions": 7,
+          "future_measurements_read": false,
+          "official_Queue_window_weight": 0.0125,
+          "unconditional_Total_gain_upper_bound": 0.00375,
+          "all_predicted_cells_scored_conditional_Total_gain_upper_bound": 0.0008333333333333333
+        },
+        {
+          "panel": "D7_I10_W",
+          "split": "validation",
+          "window_id": "Q2_D7_I10_W_validation_003",
+          "early_positive_predictions": 3,
+          "final_positive_predictions": 18,
+          "future_measurements_read": false,
+          "official_Queue_window_weight": 0.0125,
+          "unconditional_Total_gain_upper_bound": 0.00375,
+          "all_predicted_cells_scored_conditional_Total_gain_upper_bound": 0.0005357142857142857
+        }
+      ],
+      "unconditional_Total_gain_upper_bound": 0.0075,
+      "all_predicted_cells_scored_conditional_Total_gain_upper_bound": 0.0013690476190476191
+    },
+    "private": {
+      "changed_windows": [],
+      "unconditional_Total_gain_upper_bound": 0,
+      "all_predicted_cells_scored_conditional_Total_gain_upper_bound": 0
+    }
+  },
+  "formal_Total": null,
+  "formal_Queue": null,
+  "uploaded": false,
+  "decision": "Keep local. Reserve formal comparisons for candidates with potential private-split improvement.",
+  "reason": "Only two validation windows change. Every private prediction is byte-identical to the frozen formal baseline.",
+  "unconditional_derivation": "Each changed window IoU can increase by at most 1; multiply by the published family/direction/condition/window weights and Queue weight .30.",
+  "conditional_derivation": "If every old predicted cell is scored, deleting e known false positives from f final predictions improves IoU by at most e/(f+e).",
+  "eligibility_caveat": "Scoring eligibility in withheld queue targets is unknown. The conditional .001369 bound is not an unconditional bound; the safe validation bound is .0075.",
+  "no_hidden_labels_or_future_inputs": true,
+  "public_source": "https://www.kaggle.com/competitions/2026-ieee-big-data-traffic-flow-bench/discussion/742350",
+  "scoring_source": "vendor/official/src/task2/score_task2.py"
+}

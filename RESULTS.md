@@ -9,6 +9,12 @@
 新实验与失败结果见 `EXPERIMENTS.md`；候选对照见 `MODEL_COMPARISON.md`；优先路线见 `RESEARCH_ROADMAP.md`。
 登记协议 SHA：`91e48a8f2f86775466c8c9b5ad6bdbe693ea25554ef9b18d9e12cd80d3256143`。
 
+**Queue 采样审计修正了验证范围。** 组织方在 2026-09-21 的[公开公告](https://www.kaggle.com/competitions/2026-ieee-big-data-traffic-flow-bench/discussion/742350)确认：已发布的 onset 窗口在 T+5…T+25 没有拥堵，只有 T+30 可以出现拥堵，并明确允许使用此属性。公告作者已通过官方公开论坛 API 核验。C23 独立检查 40 个公开 train onset 窗口：39 个带噪观测在 T+30 首次出现队列，1 个未观测到队列。这不是 underlying-state 标签或正式 Queue 成绩。此前首轮代理与 C01–C22 的随机 onset 分布没有匹配这一属性，以下历史数值只作为一般事件压力测试保留，不能作为比赛采样下的晋级证据。
+
+C24–C26 改为仅抽取公开 train 观测代理在最后一步首次拥堵的 onset，保留 45 天 calibration / 30 天 assessment 和相同候选窗口，所有候选执行公告时序约束。唯一 origin 去重、condition 等权后的 at-T 对 before-T 增益为 I5_N 秋季 **+.026375**、I10_W 秋季 **+.020772**、I5_N 冬季 **−.008370**；95% day-block CI 分别为 [−.007666,.065189] / [−.059299,.077061] / [−.032518,.009781]。三组区间全部跨零，尚不晋级。I5_N 秋季 occupancy 对 at-T 反而退化 .029563，CI [−.071365,−.001998]。真实状态与带噪代理仍有差异，正式 selector 的其他细节仍未知。
+
+时序修正控制 K02 已本地生成并核验 6,980,503 行，仅两个 validation 窗口的 5 个 Queue 值由 1 改 0，private 完全不变。SHA 为 `cf31d26f1f75b95a3363ee59e89d5d9e392a91df479c288b147f1241ebfaf93c`，**未上传、正式成绩未知**。按完整官方聚合权重，每个改变窗口 IoU 最多增加 1，validation Total 增益安全上界为 .0075，private 为 0；假设所有旧预测单元都计分时，更紧的条件上界为 .001369，不能忽略未知 eligibility 将它当作无条件上界。保留候选，优先将正式比较用于可能改善 private 的模型。
+
 **State 强基线复核改变了结论。** A14 将同划分、同参数 LightGBM 的标签预算从 300,000 增至全部 1,804,908，秋季 assessment State 从 **0.936655** 升至 **0.942340**，超过此前图组合的 0.940205。A15 在此强基线上，仅用 selection 选择 graph+FD、α=.25，assessment 为 **0.943417**，增益 **0.001077**。14 天日均配对增益的 block CI 为 [0.000717,0.001161]；这是开发诊断，低于登记的 0.002 晋级门槛，未成为正式候选。此前多个 NN seed 的收益只证明相对 300k 标签比较组的改善。
 
 Queue 的规则允许使用已发布且 timestamp ≤T 的观测。C04 测得各方向 T 时刻可用观测占比约 44%–59%；新代码只以 Parquet 时间谓词读取 T，不读取未来窗口值。C05–C08 的同窗口观测代理实验存在正负结果：D12_I5_N 秋季 at-T 600/63 为 0.612418，before-T 同模型为 0.540552；但加入 bookkeeping 对照后，小 selection 集选中了 assessment 更差的 0.526387。D7_I10_W 的 at-T 400/23 也退化。不能按 assessment 反选获胜模型；较大 calibration、跨方向和不同 seed 的实验继续进行。真实 Queue 分项仍未知。
@@ -25,9 +31,11 @@ A19 的联合密度候选在 selection 上按“State 不低于 baseline −.002
 
 A24–A28 的三种子、同日期 500k/full 对照平均 pooled State gain 为 **.003896**；先平均 fit seeds 后，14 天日均配对 gain 的 block CI 为 [.002445,.003846]。这支持扩大训练标签预算，不支持宣称正式分项或 Total 已改善。首轮冻结提交 SHA 再核验一致。
 
-B02 的学习密度增量同化，joint strength=.1，assessment State **.942160**、target-pair increment L1 **.743408**；强基线分别为 .942340 / .771083。State 选择器仍选 strength=0，不能宣称 State 提升；正式 Physics 未知。六个其他方向的 500k/full 对照 A29/A30 正在进行，训练前源码快照已保存。
+B02 的学习密度增量同化，joint strength=.1，assessment State **.942160**、target-pair increment L1 **.743408**；强基线分别为 .942340 / .771083。State 选择器仍选 strength=0，不能宣称 State 提升；正式 Physics 未知。A29/A30 六个其他方向已完成 500k/full 对照，pooled State 增益：I5_S .000838、I10_E .001078、I10_W .000059、I210_E .000873、I210_W .000937、I405_S .001565，均低于 .002。训练前源码快照已保存；尚未完成全部十方向和多 seed 晋级检查。
 
-![强 State 比较基线与跨方向 Queue 代理不确定性](reports/research/strong_baseline_comparison_v2.png)
+![强 State 比较基线与跨方向 Queue 一般事件代理不确定性](reports/research/strong_baseline_comparison_v2.png)
+
+图中 Queue 为公告对齐前的一般事件压力测试；不能与 C24–C26 的不同采样集直接比较增益。
 
 A10 的 density-increment 联合候选秋季 State 为 0.938577，target-pair 相对 L1 为 0.786185（300k 标签基线 0.824392）；该目标只覆盖有观测且涉及 target 的相邻时刻，**不等同正式 Physics**。λ=.1 的 A11 未通过 selection。A12 的 D7_I405_N 图组合为 0.920775 vs 300k LGB 0.917777；A13 的 D7_I10_W 选择 α=0，无神经网络增益。跨 family 零样本迁移 A05 失败。
 

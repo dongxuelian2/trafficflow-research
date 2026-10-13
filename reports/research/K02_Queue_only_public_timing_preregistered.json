@@ -1,0 +1,22 @@
+{
+  "protocol_sha256": "4a4caf00ab7e8a0226571b98fa282ac9386d0911040684552f2072ac70966900",
+  "protocol": {
+    "id": "K02_Queue_only_public_onset_timing",
+    "baseline_ref": 57138874,
+    "baseline_public_total": 0.8294,
+    "baseline_sha256": "43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1",
+    "changed_component": "Queue only: existing positive predictions at onset T+5..T+25 become zero",
+    "unchanged": "All State/OD/Physics inputs, ongoing forecasts and onset T+30 forecasts",
+    "public_authorization_source": "https://www.kaggle.com/competitions/2026-ieee-big-data-traffic-flow-bench/discussion/742350",
+    "host_metadata_evidence": "reports/research/onset_topic_author_verification.json",
+    "public_train_audit": "reports/research/C23_released_onset_timing_audit.json",
+    "hypothesis": "The published empty first five onset steps allow removing false positives without changing the predicted set at T+30.",
+    "expected_formal_total_delta": null,
+    "formal_components_unknown": true,
+    "inference_inputs": "Public window origins/conditions and our own frozen predictions only",
+    "hidden_labels_or_future_measurements_read": false,
+    "models_retrained": false,
+    "validation_private_labels": "Unobserved. Public timing rule used as published, not inferred from hidden values.",
+    "earlier_random_onset_validation": "C01-C22 are general-event stress tests; onset distribution not aligned with published sampling."
+  }
+}

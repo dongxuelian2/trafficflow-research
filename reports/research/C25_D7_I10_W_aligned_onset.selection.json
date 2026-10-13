@@ -1,0 +1,1902 @@
+{
+  "registered_protocol_sha256": "b61d127bec6fd988ee574d18db28189f17927eb6c0af8a509074b2bbc130eb95",
+  "selection": {
+    "before_T_600_63": {
+      "metrics": {
+        "proxy_IoU": 0.873558730868587,
+        "conditions": {
+          "queue_ongoing": 0.7471174617371741,
+          "queue_onset": 1.0
+        },
+        "windows": [
+          {
+            "window": "D7_I10_W:2030-10-18T15:00:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-10-19T18:00:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.3983050847457627
+          },
+          {
+            "window": "D7_I10_W:2030-10-20T15:40:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.9285714285714286
+          },
+          {
+            "window": "D7_I10_W:2030-10-24T15:55:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.5555555555555556
+          },
+          {
+            "window": "D7_I10_W:2030-10-26T15:45:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.9
+          },
+          {
+            "window": "D7_I10_W:2030-10-27T15:25:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.95
+          },
+          {
+            "window": "D7_I10_W:2030-11-02T16:25:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-11-03T15:05:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.8235294117647058
+          },
+          {
+            "window": "D7_I10_W:2030-11-04T15:05:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-11-09T14:10:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-11-10T14:15:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-11-15T14:10:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-11-16T15:20:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.3333333333333333
+          },
+          {
+            "window": "D7_I10_W:2030-11-17T16:15:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.7272727272727273
+          },
+          {
+            "window": "D7_I10_W:2030-11-21T14:10:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-11-23T14:50:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.9230769230769231
+          },
+          {
+            "window": "D7_I10_W:2030-11-26T16:05:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.6
+          },
+          {
+            "window": "D7_I10_W:2030-11-28T15:35:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.32
+          }
+        ]
+      },
+      "threshold_tuning": {
+        "selected": {
+          "mode": "condition",
+          "require_nonempty": false,
+          "thresholds": {
+            "global": 0.5,
+            "queue_ongoing": 0.47500000000000003,
+            "queue_onset": 0.35000000000000003
+          },
+          "calibration_proxy_IoU": 0.873558730868587
+        },
+        "settings": [
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.05
+            },
+            "calibration_proxy_IoU": 0.5624622543965658
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.07500000000000001
+            },
+            "calibration_proxy_IoU": 0.6512390949014724
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.1
+            },
+            "calibration_proxy_IoU": 0.8322331959539668
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.125
+            },
+            "calibration_proxy_IoU": 0.8363819492639213
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.15000000000000002
+            },
+            "calibration_proxy_IoU": 0.8395277460830382
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.175
+            },
+            "calibration_proxy_IoU": 0.84037721630591
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.2
+            },
+            "calibration_proxy_IoU": 0.8459185847845129
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.22500000000000003
+            },
+            "calibration_proxy_IoU": 0.8521820436209532
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.25
+            },
+            "calibration_proxy_IoU": 0.8549275341096387
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.275
+            },
+            "calibration_proxy_IoU": 0.8579510527987418
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.3
+            },
+            "calibration_proxy_IoU": 0.8620983935532255
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.325
+            },
+            "calibration_proxy_IoU": 0.8659809693108013
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.86580589928279
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.375
+            },
+            "calibration_proxy_IoU": 0.8238391125681042
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.4
+            },
+            "calibration_proxy_IoU": 0.8280035814847451
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.425
+            },
+            "calibration_proxy_IoU": 0.8250273910085546
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.45
+            },
+            "calibration_proxy_IoU": 0.830664115395279
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.47500000000000003
+            },
+            "calibration_proxy_IoU": 0.8318920642019203
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5
+            },
+            "calibration_proxy_IoU": 0.8303370402784753
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.525
+            },
+            "calibration_proxy_IoU": 0.8317967908453687
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.55
+            },
+            "calibration_proxy_IoU": 0.8279226988356836
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5750000000000001
+            },
+            "calibration_proxy_IoU": 0.8300091716848683
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6000000000000001
+            },
+            "calibration_proxy_IoU": 0.8264377431134398
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6250000000000001
+            },
+            "calibration_proxy_IoU": 0.828937111561084
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6500000000000001
+            },
+            "calibration_proxy_IoU": 0.8290310965234899
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.675
+            },
+            "calibration_proxy_IoU": 0.8249590254161865
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7000000000000001
+            },
+            "calibration_proxy_IoU": 0.8271635273542615
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7250000000000001
+            },
+            "calibration_proxy_IoU": 0.8268352340936375
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7500000000000001
+            },
+            "calibration_proxy_IoU": 0.8300240096038415
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7750000000000001
+            },
+            "calibration_proxy_IoU": 0.8223164358727972
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.8
+            },
+            "calibration_proxy_IoU": 0.8161655818958563
+          },
+          {
+            "mode": "condition",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5,
+              "queue_ongoing": 0.47500000000000003,
+              "queue_onset": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.873558730868587
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.05
+            },
+            "calibration_proxy_IoU": 0.5624622543965658
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.07500000000000001
+            },
+            "calibration_proxy_IoU": 0.6512390949014724
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.1
+            },
+            "calibration_proxy_IoU": 0.8322331959539668
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.125
+            },
+            "calibration_proxy_IoU": 0.8363819492639213
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.15000000000000002
+            },
+            "calibration_proxy_IoU": 0.8395277460830382
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.175
+            },
+            "calibration_proxy_IoU": 0.84037721630591
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.2
+            },
+            "calibration_proxy_IoU": 0.8459185847845129
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.22500000000000003
+            },
+            "calibration_proxy_IoU": 0.8521820436209532
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.25
+            },
+            "calibration_proxy_IoU": 0.8549275341096387
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.275
+            },
+            "calibration_proxy_IoU": 0.8579510527987418
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.3
+            },
+            "calibration_proxy_IoU": 0.8620983935532255
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.325
+            },
+            "calibration_proxy_IoU": 0.8659809693108013
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.86580589928279
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.375
+            },
+            "calibration_proxy_IoU": 0.8238391125681042
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.4
+            },
+            "calibration_proxy_IoU": 0.8280035814847451
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.425
+            },
+            "calibration_proxy_IoU": 0.8250273910085546
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.45
+            },
+            "calibration_proxy_IoU": 0.830664115395279
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.47500000000000003
+            },
+            "calibration_proxy_IoU": 0.8318920642019203
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5
+            },
+            "calibration_proxy_IoU": 0.8303370402784753
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.525
+            },
+            "calibration_proxy_IoU": 0.8317967908453687
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.55
+            },
+            "calibration_proxy_IoU": 0.8279226988356836
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5750000000000001
+            },
+            "calibration_proxy_IoU": 0.8300091716848683
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6000000000000001
+            },
+            "calibration_proxy_IoU": 0.8264377431134398
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6250000000000001
+            },
+            "calibration_proxy_IoU": 0.828937111561084
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6500000000000001
+            },
+            "calibration_proxy_IoU": 0.8290310965234899
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.675
+            },
+            "calibration_proxy_IoU": 0.8249590254161865
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7000000000000001
+            },
+            "calibration_proxy_IoU": 0.8271635273542615
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7250000000000001
+            },
+            "calibration_proxy_IoU": 0.8268352340936375
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7500000000000001
+            },
+            "calibration_proxy_IoU": 0.8300240096038415
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7750000000000001
+            },
+            "calibration_proxy_IoU": 0.8223164358727972
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.8
+            },
+            "calibration_proxy_IoU": 0.8161655818958563
+          },
+          {
+            "mode": "condition",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5,
+              "queue_ongoing": 0.47500000000000003,
+              "queue_onset": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.873558730868587
+          }
+        ],
+        "proxy_Brier": 0.011846908173776349,
+        "formal_S_queue": null
+      }
+    },
+    "at_T_600_63": {
+      "metrics": {
+        "proxy_IoU": 0.8825101194323883,
+        "conditions": {
+          "queue_ongoing": 0.7650202388647767,
+          "queue_onset": 1.0
+        },
+        "windows": [
+          {
+            "window": "D7_I10_W:2030-10-18T15:00:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.9583333333333334
+          },
+          {
+            "window": "D7_I10_W:2030-10-19T18:00:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.38461538461538464
+          },
+          {
+            "window": "D7_I10_W:2030-10-20T15:40:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.9285714285714286
+          },
+          {
+            "window": "D7_I10_W:2030-10-24T15:55:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.75
+          },
+          {
+            "window": "D7_I10_W:2030-10-26T15:45:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-10-27T15:25:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.85
+          },
+          {
+            "window": "D7_I10_W:2030-11-02T16:25:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.9
+          },
+          {
+            "window": "D7_I10_W:2030-11-03T15:05:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.8823529411764706
+          },
+          {
+            "window": "D7_I10_W:2030-11-04T15:05:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-11-09T14:10:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-11-10T14:15:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-11-15T14:10:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-11-16T15:20:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.5
+          },
+          {
+            "window": "D7_I10_W:2030-11-17T16:15:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.7
+          },
+          {
+            "window": "D7_I10_W:2030-11-21T14:10:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-11-23T14:50:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.9230769230769231
+          },
+          {
+            "window": "D7_I10_W:2030-11-26T16:05:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.6
+          },
+          {
+            "window": "D7_I10_W:2030-11-28T15:35:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.3333333333333333
+          }
+        ]
+      },
+      "threshold_tuning": {
+        "selected": {
+          "mode": "global",
+          "require_nonempty": false,
+          "thresholds": {
+            "global": 0.6250000000000001
+          },
+          "calibration_proxy_IoU": 0.8825101194323883
+        },
+        "settings": [
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.05
+            },
+            "calibration_proxy_IoU": 0.574846999325557
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.07500000000000001
+            },
+            "calibration_proxy_IoU": 0.605974338593837
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.1
+            },
+            "calibration_proxy_IoU": 0.6106375716902754
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.125
+            },
+            "calibration_proxy_IoU": 0.634926336846154
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.15000000000000002
+            },
+            "calibration_proxy_IoU": 0.6592328636526807
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.175
+            },
+            "calibration_proxy_IoU": 0.6606999838340867
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.2
+            },
+            "calibration_proxy_IoU": 0.7270726303554008
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.22500000000000003
+            },
+            "calibration_proxy_IoU": 0.7290206823034527
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.25
+            },
+            "calibration_proxy_IoU": 0.7334983942808837
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.275
+            },
+            "calibration_proxy_IoU": 0.7349848785485281
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.3
+            },
+            "calibration_proxy_IoU": 0.7349848785485281
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.325
+            },
+            "calibration_proxy_IoU": 0.7990154907934262
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.8646828157587698
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.375
+            },
+            "calibration_proxy_IoU": 0.8647959601900961
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.4
+            },
+            "calibration_proxy_IoU": 0.8662520564625972
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.425
+            },
+            "calibration_proxy_IoU": 0.8706881441387744
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.45
+            },
+            "calibration_proxy_IoU": 0.8689024298530601
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.47500000000000003
+            },
+            "calibration_proxy_IoU": 0.869281929739139
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5
+            },
+            "calibration_proxy_IoU": 0.8767118508601297
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.525
+            },
+            "calibration_proxy_IoU": 0.8803915045397834
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.55
+            },
+            "calibration_proxy_IoU": 0.8822712037879037
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5750000000000001
+            },
+            "calibration_proxy_IoU": 0.8818383033550032
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6000000000000001
+            },
+            "calibration_proxy_IoU": 0.8799513686593519
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6250000000000001
+            },
+            "calibration_proxy_IoU": 0.8825101194323883
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6500000000000001
+            },
+            "calibration_proxy_IoU": 0.8810143929366618
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.675
+            },
+            "calibration_proxy_IoU": 0.8783648202870892
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7000000000000001
+            },
+            "calibration_proxy_IoU": 0.8780595699818389
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7250000000000001
+            },
+            "calibration_proxy_IoU": 0.8734421377246551
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7500000000000001
+            },
+            "calibration_proxy_IoU": 0.8723986980815914
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7750000000000001
+            },
+            "calibration_proxy_IoU": 0.8336102479189176
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.8
+            },
+            "calibration_proxy_IoU": 0.7033584141571902
+          },
+          {
+            "mode": "condition",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5,
+              "queue_ongoing": 0.6250000000000001,
+              "queue_onset": 0.5
+            },
+            "calibration_proxy_IoU": 0.8825101194323883
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.05
+            },
+            "calibration_proxy_IoU": 0.574846999325557
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.07500000000000001
+            },
+            "calibration_proxy_IoU": 0.605974338593837
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.1
+            },
+            "calibration_proxy_IoU": 0.6106375716902754
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.125
+            },
+            "calibration_proxy_IoU": 0.634926336846154
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.15000000000000002
+            },
+            "calibration_proxy_IoU": 0.6592328636526807
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.175
+            },
+            "calibration_proxy_IoU": 0.6606999838340867
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.2
+            },
+            "calibration_proxy_IoU": 0.7270726303554008
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.22500000000000003
+            },
+            "calibration_proxy_IoU": 0.7290206823034527
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.25
+            },
+            "calibration_proxy_IoU": 0.7334983942808837
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.275
+            },
+            "calibration_proxy_IoU": 0.7349848785485281
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.3
+            },
+            "calibration_proxy_IoU": 0.7349848785485281
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.325
+            },
+            "calibration_proxy_IoU": 0.7990154907934262
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.8646828157587698
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.375
+            },
+            "calibration_proxy_IoU": 0.8647959601900961
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.4
+            },
+            "calibration_proxy_IoU": 0.8662520564625972
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.425
+            },
+            "calibration_proxy_IoU": 0.8706881441387744
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.45
+            },
+            "calibration_proxy_IoU": 0.8689024298530601
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.47500000000000003
+            },
+            "calibration_proxy_IoU": 0.869281929739139
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5
+            },
+            "calibration_proxy_IoU": 0.8767118508601297
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.525
+            },
+            "calibration_proxy_IoU": 0.8803915045397834
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.55
+            },
+            "calibration_proxy_IoU": 0.8822712037879037
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5750000000000001
+            },
+            "calibration_proxy_IoU": 0.8818383033550032
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6000000000000001
+            },
+            "calibration_proxy_IoU": 0.8799513686593519
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6250000000000001
+            },
+            "calibration_proxy_IoU": 0.8825101194323883
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6500000000000001
+            },
+            "calibration_proxy_IoU": 0.8810143929366618
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.675
+            },
+            "calibration_proxy_IoU": 0.8783648202870892
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7000000000000001
+            },
+            "calibration_proxy_IoU": 0.8780595699818389
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7250000000000001
+            },
+            "calibration_proxy_IoU": 0.8734421377246551
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7500000000000001
+            },
+            "calibration_proxy_IoU": 0.8723986980815914
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7750000000000001
+            },
+            "calibration_proxy_IoU": 0.8336102479189176
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.8
+            },
+            "calibration_proxy_IoU": 0.8283584141571902
+          },
+          {
+            "mode": "condition",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5,
+              "queue_ongoing": 0.6250000000000001,
+              "queue_onset": 0.5
+            },
+            "calibration_proxy_IoU": 0.8825101194323883
+          }
+        ],
+        "proxy_Brier": 0.012065553617197453,
+        "formal_S_queue": null
+      }
+    },
+    "at_T_occupancy_600_63": {
+      "metrics": {
+        "proxy_IoU": 0.8827361470904151,
+        "conditions": {
+          "queue_ongoing": 0.7654722941808302,
+          "queue_onset": 1.0
+        },
+        "windows": [
+          {
+            "window": "D7_I10_W:2030-10-18T15:00:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-10-19T18:00:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.38333333333333336
+          },
+          {
+            "window": "D7_I10_W:2030-10-20T15:40:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.9285714285714286
+          },
+          {
+            "window": "D7_I10_W:2030-10-24T15:55:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.8571428571428571
+          },
+          {
+            "window": "D7_I10_W:2030-10-26T15:45:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.9473684210526315
+          },
+          {
+            "window": "D7_I10_W:2030-10-27T15:25:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.95
+          },
+          {
+            "window": "D7_I10_W:2030-11-02T16:25:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.9
+          },
+          {
+            "window": "D7_I10_W:2030-11-03T15:05:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.8235294117647058
+          },
+          {
+            "window": "D7_I10_W:2030-11-04T15:05:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-11-09T14:10:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-11-10T14:15:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-11-15T14:10:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-11-16T15:20:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.3333333333333333
+          },
+          {
+            "window": "D7_I10_W:2030-11-17T16:15:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.7
+          },
+          {
+            "window": "D7_I10_W:2030-11-21T14:10:00Z:411",
+            "condition": "queue_onset",
+            "IoU": 1.0
+          },
+          {
+            "window": "D7_I10_W:2030-11-23T14:50:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.96
+          },
+          {
+            "window": "D7_I10_W:2030-11-26T16:05:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.6
+          },
+          {
+            "window": "D7_I10_W:2030-11-28T15:35:00Z:411",
+            "condition": "queue_ongoing",
+            "IoU": 0.3333333333333333
+          }
+        ]
+      },
+      "threshold_tuning": {
+        "selected": {
+          "mode": "global",
+          "require_nonempty": false,
+          "thresholds": {
+            "global": 0.6250000000000001
+          },
+          "calibration_proxy_IoU": 0.8827361470904151
+        },
+        "settings": [
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.05
+            },
+            "calibration_proxy_IoU": 0.5778371259317551
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.07500000000000001
+            },
+            "calibration_proxy_IoU": 0.6271815753057075
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.1
+            },
+            "calibration_proxy_IoU": 0.6521549549281556
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.125
+            },
+            "calibration_proxy_IoU": 0.6584161212980175
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.15000000000000002
+            },
+            "calibration_proxy_IoU": 0.7242018355837319
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.175
+            },
+            "calibration_proxy_IoU": 0.7867018355837319
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.2
+            },
+            "calibration_proxy_IoU": 0.7910030839597675
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.22500000000000003
+            },
+            "calibration_proxy_IoU": 0.7910030839597675
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.25
+            },
+            "calibration_proxy_IoU": 0.7950488165708651
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.275
+            },
+            "calibration_proxy_IoU": 0.7955664149145504
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.3
+            },
+            "calibration_proxy_IoU": 0.7955664149145504
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.325
+            },
+            "calibration_proxy_IoU": 0.7955664149145504
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.7974907648705403
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.375
+            },
+            "calibration_proxy_IoU": 0.8015118095139073
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.4
+            },
+            "calibration_proxy_IoU": 0.8030290830900044
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.425
+            },
+            "calibration_proxy_IoU": 0.8013975065463436
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.45
+            },
+            "calibration_proxy_IoU": 0.798591384097364
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.47500000000000003
+            },
+            "calibration_proxy_IoU": 0.8004970870900234
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5
+            },
+            "calibration_proxy_IoU": 0.8710683000249582
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.525
+            },
+            "calibration_proxy_IoU": 0.8710683000249582
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.55
+            },
+            "calibration_proxy_IoU": 0.8724970253612465
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5750000000000001
+            },
+            "calibration_proxy_IoU": 0.8776059958563678
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6000000000000001
+            },
+            "calibration_proxy_IoU": 0.8759826192329911
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6250000000000001
+            },
+            "calibration_proxy_IoU": 0.8827361470904151
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.6500000000000001
+            },
+            "calibration_proxy_IoU": 0.8791647185189866
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.675
+            },
+            "calibration_proxy_IoU": 0.8788545944693666
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7000000000000001
+            },
+            "calibration_proxy_IoU": 0.8757492488520833
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7250000000000001
+            },
+            "calibration_proxy_IoU": 0.8290806706268591
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7500000000000001
+            },
+            "calibration_proxy_IoU": 0.8289534457850938
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.7750000000000001
+            },
+            "calibration_proxy_IoU": 0.8225628399234909
+          },
+          {
+            "mode": "global",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.8
+            },
+            "calibration_proxy_IoU": 0.8238972198292993
+          },
+          {
+            "mode": "condition",
+            "require_nonempty": false,
+            "thresholds": {
+              "global": 0.5,
+              "queue_ongoing": 0.6250000000000001,
+              "queue_onset": 0.5
+            },
+            "calibration_proxy_IoU": 0.8827361470904151
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.05
+            },
+            "calibration_proxy_IoU": 0.5778371259317551
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.07500000000000001
+            },
+            "calibration_proxy_IoU": 0.6271815753057075
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.1
+            },
+            "calibration_proxy_IoU": 0.6521549549281556
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.125
+            },
+            "calibration_proxy_IoU": 0.6584161212980175
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.15000000000000002
+            },
+            "calibration_proxy_IoU": 0.7242018355837319
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.175
+            },
+            "calibration_proxy_IoU": 0.7867018355837319
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.2
+            },
+            "calibration_proxy_IoU": 0.7910030839597675
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.22500000000000003
+            },
+            "calibration_proxy_IoU": 0.7910030839597675
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.25
+            },
+            "calibration_proxy_IoU": 0.7950488165708651
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.275
+            },
+            "calibration_proxy_IoU": 0.7955664149145504
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.3
+            },
+            "calibration_proxy_IoU": 0.7955664149145504
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.325
+            },
+            "calibration_proxy_IoU": 0.7955664149145504
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.35000000000000003
+            },
+            "calibration_proxy_IoU": 0.7974907648705403
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.375
+            },
+            "calibration_proxy_IoU": 0.8015118095139073
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.4
+            },
+            "calibration_proxy_IoU": 0.8030290830900044
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.425
+            },
+            "calibration_proxy_IoU": 0.8013975065463436
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.45
+            },
+            "calibration_proxy_IoU": 0.798591384097364
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.47500000000000003
+            },
+            "calibration_proxy_IoU": 0.8004970870900234
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5
+            },
+            "calibration_proxy_IoU": 0.8710683000249582
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.525
+            },
+            "calibration_proxy_IoU": 0.8710683000249582
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.55
+            },
+            "calibration_proxy_IoU": 0.8724970253612465
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5750000000000001
+            },
+            "calibration_proxy_IoU": 0.8776059958563678
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6000000000000001
+            },
+            "calibration_proxy_IoU": 0.8759826192329911
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6250000000000001
+            },
+            "calibration_proxy_IoU": 0.8827361470904151
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.6500000000000001
+            },
+            "calibration_proxy_IoU": 0.8791647185189866
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.675
+            },
+            "calibration_proxy_IoU": 0.8788545944693666
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7000000000000001
+            },
+            "calibration_proxy_IoU": 0.8757492488520833
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7250000000000001
+            },
+            "calibration_proxy_IoU": 0.8290806706268591
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7500000000000001
+            },
+            "calibration_proxy_IoU": 0.8289534457850938
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.7750000000000001
+            },
+            "calibration_proxy_IoU": 0.8225628399234909
+          },
+          {
+            "mode": "global",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.8
+            },
+            "calibration_proxy_IoU": 0.8238972198292993
+          },
+          {
+            "mode": "condition",
+            "require_nonempty": true,
+            "thresholds": {
+              "global": 0.5,
+              "queue_ongoing": 0.6250000000000001,
+              "queue_onset": 0.5
+            },
+            "calibration_proxy_IoU": 0.8827361470904151
+          }
+        ],
+        "proxy_Brier": 0.01240191464825645,
+        "formal_S_queue": null
+      }
+    }
+  },
+  "selected": "at_T_occupancy_600_63",
+  "note": "Sealed before assessment data sampling or prediction."
+}

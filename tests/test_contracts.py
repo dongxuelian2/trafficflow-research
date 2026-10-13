@@ -13,7 +13,7 @@ from trafficflow.fixture import make_fixture
 from trafficflow.experiments import evaluate_state,raw_for
 from trafficflow.research_eval import state_from_sufficient_stats
 from trafficflow.physics import conservation_operator
-from trafficflow.queue_calibration import decisions
+from trafficflow.queue_calibration import decisions,public_onset_timing
 
 def truth_frame():
     return pd.DataFrame({'panel':['D7_I10_E']*3,'timestamp':['2030-06-01T00:00:00Z']*3,
@@ -58,6 +58,8 @@ def test_conditional_decisions_keep_window_boundaries():
     cut={'global':.5,'queue_onset':.15,'queue_ongoing':.5}
     assert decisions(p,windows,conditions,cut).tolist()==[0,1,0,0,1,0]
     assert decisions(p,windows,conditions,cut,True).tolist()==[0,1,1,0,1,0]
+    assert public_onset_timing([1,1,1,0,1,1],[5,30,5,30,25,30],
+        ['queue_onset','queue_onset','queue_ongoing','queue_ongoing','queue_onset','queue_onset']).tolist()==[0,1,1,0,0,1]
 
 def test_offline_kalman_missing_column_and_terminal_measurement():
     prior=np.tile([10.,20.],(3,1));observed=np.full((3,2),np.nan);observed[2,1]=30.

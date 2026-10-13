@@ -1,0 +1,38 @@
+{
+  "recorded_at_UTC": "2026-10-13T15:20:19.315320+00:00",
+  "research_environment": {
+    "command": ".venv-research/Scripts/python.exe -m pytest tests -q --basetemp E:/ieee/.cache/pytest_onset_archive_20261013",
+    "passed": 25,
+    "skipped": 0,
+    "seconds": 13.45
+  },
+  "CPU_environment": {
+    "command": ".venv-repro/Scripts/python.exe -m pytest tests -q --basetemp E:/ieee/.cache/pytest_onset_archive_cpu_20261013",
+    "passed": 24,
+    "skipped": 1,
+    "seconds": 6.95
+  },
+  "full_candidate_diff": "artifacts/research/K02_Queue_only_public_timing/controlled_diff.json",
+  "model_integrity_checkpoint": "reports/research/model_artifacts_checkpoint_20261013_e.json",
+  "formal_new_submission": false,
+  "source": {
+    "python": "3.13.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus": 16,
+    "process_peak_working_set_MiB": 20.5078125,
+    "peak_scope": "current process lifetime, not isolated per model",
+    "source_sha256": "1bbddc26ce64bd9067b9aca310fba95be0e40a5d87f48a04e53bec125954392d",
+    "model_threads": 4,
+    "gpu_used": false,
+    "source_fingerprint_scope": "On-disk source at evidence() call; a captured start archive is primary when present",
+    "versions": {
+      "numpy": "2.2.5",
+      "pandas": "3.0.5",
+      "scipy": "1.16.1",
+      "pyarrow": "25.0.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10",
+      "scikit-learn": "1.7.2"
+    }
+  }
+}

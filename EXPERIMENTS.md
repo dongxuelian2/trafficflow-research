@@ -2,6 +2,8 @@
 
 所有模拟指标、观测代理与正式 Kaggle 指标分别记录。失败实验不删除，既有模型与提交不覆盖。
 
+采样审计 C23 发现组织方公告 742350 已明确 onset 的最后一步属性。首轮代理和 C01–C22 不匹配该时序，全部保留为一般事件压力测试。只有 C24 起的 `--onset-last-step` 对照近似这一公开属性；仍未取得 underlying-state queue truth。
+
 | 编号 | 假设 / 操作 | 数据与划分 | 结果 | 资源 / 决策 |
 |---|---|---|---|---|
 | F00 | 冻结首轮正式提交 | 本人 Kaggle 回下载，与本地文件 SHA 比对 | 正式 Total **0.82940**，ref 57138874；四项正式分数未知 | 106 个冻结文件，712,127,414 bytes；保留基准 |
@@ -48,7 +50,12 @@
 | A24–A28 汇总 | 三种子 500k vs 全标签配对 | I5_N autumn，同 14 assessment days | full 平均 pooled State 增益 **.003896**；平均跨 seed 的日均 gain .003146，block CI [.002445,.003846] | 三个 fit seed 不冒充 42 个独立日期；满足这一开发方向的 .002 门槛 |
 | C21/C22 | 合法公开 condition 与观测推导 condition 对照 | 同 C18/C19，所有窗口/标签匹配 | cal 仍选普通 occupancy；published-condition 候选没有稳定独立收益 | 保留失败，模型部署支持该显式可选标记但不默认开启 |
 | B02 | 学习 Δdensity 并固定可见观测的三对角同化 | 同 A14 全标签基线；public-train target-pair 标签、geometry 权重 | State 选 strength=0；joint 选 .1，assessment State .942160 vs .942340、density L1 .743408 vs .771083 | 317.45 秒 CPU；没有正式 Physics，可见锚硬固定 |
-| A29/A30 | 六个其他方向的 500k/full 对照 | autumn，同早期 profile / fit / selection / assessment | 运行中；完整标签一次加载，再按与旧函数相同的逐日 RNG 选 500k 子集 | 训练开始前源码 ZIP + 逐文件 SHA；每模型四线程，两套进程并行 |
+| A29/A30 | 六个其他方向的 500k/full 对照 | autumn，同早期 profile / fit / selection / assessment | full pooled State gain：I5_S .000838 / I10_E .001078 / I10_W .000059 / I210_E .000873 / I210_W .000937 / I405_S .001565 | 全部低于 .002；124.28 / 207.56 / 141.96 / 358.97 / 115.91 / 119.43 秒 CPU；训练前源码 ZIP |
+| C23 | 公开 onset 公告与采样审计 | 40 个公开 train 窗；本队 val/private 预测与公开窗口 metadata | 39 个带噪 train 首次 queue at T+30，1 个无观测 queue；本队仅 5 个早期正预测 | 组织方允许时序属性；不读 val/private 未来观测，不视为真实标签评分 |
+| C24 | 与公告 onset 时序对齐的 at-T / occupancy 对照 | I5_N autumn，45 天 cal / 30 天 assessment | 109 个去重 origin；before-T .871047 → at-T .897422，gain .026375，CI [−.007666,.065189] | cal 选 at-T；366.66 秒 CPU；occupancy 显著退化，不晋级 |
+| C25 | 公告对齐的跨方向检查 | I10_W autumn，同 C24 方法 | 26 个去重 origin；before-T .606343 → cal 选 occupancy .628012；CI [−.064953,.082322] | 80.95 秒 CPU；仅 5 个 onset，证据弱，不晋级 |
+| C26 | 公告对齐的跨季节检查 | I5_N winter，同 C24 方法 | 103 个去重 origin；before-T .876610 → cal 选 at-T .868240；gain −.008370，CI [−.032518,.009781] | 401.91 秒 CPU；保留退化，不按 assessment 改选 occupancy |
+| K02 | 组织方已公开时序的 Queue-only 修正 | 原正式提交，所有其他值逐行保留 | 完整 diff 仅 5 个 Queue 值，private 完全相同；未上传，正式分未知 | 合并 125.42 秒；保留本地，正式比较优先具有 private 改善空间的模型 |
 | K01 | 一次 OD-only 正式控制实验 | 同首轮所有 State / Queue 数值，全量 6,980,503 行 diff | **正式 Total 0.76474，下降 0.06466，拒绝晋级**；ref 57140644 | SHA 4976e6bc1fe45207b6ea05dda2031d7885c9b38e1d607efc62c97887ba1e9055 |
 | ENV01 | 独立 CUDA 环境 | Python 3.13.1 / RTX 4060 Laptop 8GB | torch 2.8.0+cu128 已安装；实际 CUDA 运算通过 | 当前沙箱临时目录访问失败，改为 E:\\ieee\\.cache\\build_tmp 后构建成功；原 .venv-repro 不修改 |
 
@@ -66,3 +73,5 @@ K01 public-only 诊断：validation 的 Bayes-vs-Ridge L2 差异平均 99.94% �
 C09/C10/C11 的去重、按 condition 等权、日期 block bootstrap 增益分别为 .016495 / .024714 / .014972，95% CI 分别为 [−.012655,.060063] / [−.117752,.076207] / [−.017293,.099297]。比较的 before-T 与 at-T 模型都只按各自 selection 选定，assessment 未参与选择。相同 origin 的重复抽样去重，缺失某 condition 的 bootstrap draw 明确排除；I10_W 的事件特别稀少，因此区间证据较弱。
 
 本轮新增模型与配置 116 项 SHA 已记录于 `reports/research/model_artifacts_checkpoint_20261013_a.json`。正在运行的后续模型不在此快照中。CUDA 环境 21 tests passed；测试临时目录使用工作区 `.cache`，系统沙箱 TEMP 不可写。
+
+公告对齐阶段归档：`model_artifacts_checkpoint_20261013_e.json` 保存 235 项已完成模型/配置 SHA；当前 CUDA 环境 25 tests passed，CPU 24 passed / 1 optional-Torch skipped。K02 完整候选与全行 diff 保存在 `artifacts/research/K02_Queue_only_public_timing`，正式成绩仍未知。安全/条件收益界和不上传的决定由 `scripts/record_onset_control_bounds.py` 生成，证据为 `reports/research/K02_public_timing_decision.json`。
