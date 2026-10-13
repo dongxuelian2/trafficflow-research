@@ -1,0 +1,25 @@
+{
+  "protocol_sha256": "318fb7a2904f928b98e83a6e618616eadfe2be600b7a37e40e06f654802ad822",
+  "protocol": {
+    "id": "A19_strong_density_expectation",
+    "panel": "D12_I5_N",
+    "fold": "rolling_autumn",
+    "fit_labels": 1804908,
+    "seed": 20261013,
+    "baseline_weights_reused": "artifacts/research/A14_full_label_LGB_control",
+    "density_target": "public train lane flow / max(observed speed,1)",
+    "blend_grid": [
+      0,
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      1
+    ],
+    "State_selection": "maximum selection State; tie favors zero blend",
+    "joint_selection": "minimum target-pair density-increment L1 among selection State >= baseline - .002",
+    "projection": "geometry-bound baseline first; weighted quadratic projection, then final bounds",
+    "formal_State": null,
+    "formal_Physics": null
+  }
+}

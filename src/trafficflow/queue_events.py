@@ -12,7 +12,7 @@ from .metrics import queue_iou
 
 
 def sample_events(frames, net, topo, panel, seed, per_condition=5,
-                  spacing_minutes=360, maximum_persistence_iou=.9,origin_reader=None):
+                  spacing_minutes=360, maximum_persistence_iou=.9,origin_reader=None,include_occupancy=False):
     rng = np.random.default_rng(seed)
     days = []
     candidates = []
@@ -77,7 +77,7 @@ def sample_events(frames, net, topo, panel, seed, per_condition=5,
                 raise ValueError('Origin reader returned a timestamp other than T')
             history=pd.concat([history,current],ignore_index=True)
         target = pd.MultiIndex.from_product([times[at+1:at+7], links], names=['timestamp', 'link_id']).to_frame(index=False)
-        x = queue_features(history, target, net, topo, candidate['origin'],allow_origin=origin_reader is not None)
+        x = queue_features(history, target, net, topo, candidate['origin'],allow_origin=origin_reader is not None,include_occupancy=include_occupancy)
         future = speed[at+1:at+7]
         usable = np.isfinite(future).ravel()
         wid = f'{panel}:{times[at]}:{seed}'
@@ -91,6 +91,7 @@ def sample_events(frames, net, topo, panel, seed, per_condition=5,
         'label_provenance': 'eligible noisy public train observations; unknown future cells omitted',
         'unknown_formal_selector': True,
         'origin_timestamp_inputs':origin_reader is not None,
+        'occupancy_features':include_occupancy,
         'windows': [{**c, 'origin': c['origin'].isoformat()} for c in chosen]}
     return ProxyData(pd.concat(xs, ignore_index=True), np.array(ys), np.array(windows),
                      np.array(conditions), np.array(dates)), metadata

@@ -1,0 +1,417 @@
+{
+  "registered": {
+    "protocol_sha256": "a2f0c663a75a10b3a430f3f75ac8984ab1b0932f65aa0476595efcd17e2f21b5",
+    "protocol": {
+      "id": "A15_strong_baseline_recomparison",
+      "panel": "D7_I405_N",
+      "fold": "rolling_autumn",
+      "large_LGB_labels": 2438669,
+      "existing_graph_models": [
+        "graph",
+        "graph_FD"
+      ],
+      "alpha_grid": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1
+      ],
+      "selection": "max pooled State on selection days; no assessment-based model choice",
+      "formal_State": null,
+      "formal_Physics": null
+    }
+  },
+  "selection": [
+    {
+      "model": "graph",
+      "alpha": 0,
+      "S_state": 0.9159832258889251,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 92969,
+          "rmse_speed": 1.9639769613090954,
+          "rmse_lane_flow": 37.471141026057225,
+          "S_state": 0.9288502228490797
+        },
+        {
+          "regime": "R2",
+          "n": 46241,
+          "rmse_speed": 2.6617794196227,
+          "rmse_lane_flow": 44.9425021267879,
+          "S_state": 0.9080496462389457
+        },
+        {
+          "regime": "R3",
+          "n": 231727,
+          "rmse_speed": 2.603333013398067,
+          "rmse_lane_flow": 42.67591086763249,
+          "S_state": 0.9110498085787502
+        }
+      ],
+      "density_target_pair_relative_L1": 0.7756491109508856
+    },
+    {
+      "model": "graph",
+      "alpha": 0.25,
+      "S_state": 0.9172980721389467,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 92969,
+          "rmse_speed": 1.9314423413401272,
+          "rmse_lane_flow": 37.60014844200349,
+          "S_state": 0.9294540649548506
+        },
+        {
+          "regime": "R2",
+          "n": 46241,
+          "rmse_speed": 2.5887537498596735,
+          "rmse_lane_flow": 45.45965487783053,
+          "S_state": 0.9092305169300277
+        },
+        {
+          "regime": "R3",
+          "n": 231727,
+          "rmse_speed": 2.4960546425354067,
+          "rmse_lane_flow": 42.88119807296525,
+          "S_state": 0.9132096345319619
+        }
+      ],
+      "density_target_pair_relative_L1": 0.7671556969921705
+    },
+    {
+      "model": "graph",
+      "alpha": 0.5,
+      "S_state": 0.916925769214708,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 92969,
+          "rmse_speed": 1.9342544685399612,
+          "rmse_lane_flow": 38.105739940517495,
+          "S_state": 0.9290057028584735
+        },
+        {
+          "regime": "R2",
+          "n": 46241,
+          "rmse_speed": 2.5900537333159277,
+          "rmse_lane_flow": 46.673352541181686,
+          "S_state": 0.90827193574547
+        },
+        {
+          "regime": "R3",
+          "n": 231727,
+          "rmse_speed": 2.457296308239526,
+          "rmse_lane_flow": 43.594866132842284,
+          "S_state": 0.9134996690401805
+        }
+      ],
+      "density_target_pair_relative_L1": 0.7895705828366659
+    },
+    {
+      "model": "graph",
+      "alpha": 0.75,
+      "S_state": 0.9148684393339942,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 92969,
+          "rmse_speed": 1.9722621554300483,
+          "rmse_lane_flow": 38.97326237922317,
+          "S_state": 0.9275196362853065
+        },
+        {
+          "regime": "R2",
+          "n": 46241,
+          "rmse_speed": 2.6655706394210865,
+          "rmse_lane_flow": 48.53136449134365,
+          "S_state": 0.9052162947451412
+        },
+        {
+          "regime": "R3",
+          "n": 231727,
+          "rmse_speed": 2.490259394508348,
+          "rmse_lane_flow": 44.79262187880665,
+          "S_state": 0.9118693869715346
+        }
+      ],
+      "density_target_pair_relative_L1": 0.8373125208389669
+    },
+    {
+      "model": "graph",
+      "alpha": 1,
+      "S_state": 0.9112365063224751,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 92969,
+          "rmse_speed": 2.0435024993104656,
+          "rmse_lane_flow": 40.17927855231512,
+          "S_state": 0.9250562324581191
+        },
+        {
+          "regime": "R2",
+          "n": 46241,
+          "rmse_speed": 2.8093257670949,
+          "rmse_lane_flow": 50.96326857608234,
+          "S_state": 0.900246724189087
+        },
+        {
+          "regime": "R3",
+          "n": 231727,
+          "rmse_speed": 2.592209286822721,
+          "rmse_lane_flow": 46.43702228401331,
+          "S_state": 0.9084065623202191
+        }
+      ],
+      "density_target_pair_relative_L1": 0.9059740538423648
+    },
+    {
+      "model": "graph_FD",
+      "alpha": 0,
+      "S_state": 0.9159832258889251,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 92969,
+          "rmse_speed": 1.9639769613090954,
+          "rmse_lane_flow": 37.471141026057225,
+          "S_state": 0.9288502228490797
+        },
+        {
+          "regime": "R2",
+          "n": 46241,
+          "rmse_speed": 2.6617794196227,
+          "rmse_lane_flow": 44.9425021267879,
+          "S_state": 0.9080496462389457
+        },
+        {
+          "regime": "R3",
+          "n": 231727,
+          "rmse_speed": 2.603333013398067,
+          "rmse_lane_flow": 42.67591086763249,
+          "S_state": 0.9110498085787502
+        }
+      ],
+      "density_target_pair_relative_L1": 0.7756491109508856
+    },
+    {
+      "model": "graph_FD",
+      "alpha": 0.25,
+      "S_state": 0.9173008904065432,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 92969,
+          "rmse_speed": 1.92913097337238,
+          "rmse_lane_flow": 37.559068401102884,
+          "S_state": 0.9295354852009777
+        },
+        {
+          "regime": "R2",
+          "n": 46241,
+          "rmse_speed": 2.5856318181410116,
+          "rmse_lane_flow": 45.4078759255025,
+          "S_state": 0.9093376478519356
+        },
+        {
+          "regime": "R3",
+          "n": 231727,
+          "rmse_speed": 2.505904638306754,
+          "rmse_lane_flow": 42.838593451119166,
+          "S_state": 0.9130295381667161
+        }
+      ],
+      "density_target_pair_relative_L1": 0.7651867129528034
+    },
+    {
+      "model": "graph_FD",
+      "alpha": 0.5,
+      "S_state": 0.9170091319489844,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 92969,
+          "rmse_speed": 1.92773328925209,
+          "rmse_lane_flow": 38.00787712643885,
+          "S_state": 0.9292215884885517
+        },
+        {
+          "regime": "R2",
+          "n": 46241,
+          "rmse_speed": 2.5795375105059346,
+          "rmse_lane_flow": 46.56265702911308,
+          "S_state": 0.9085839527174184
+        },
+        {
+          "regime": "R3",
+          "n": 231727,
+          "rmse_speed": 2.4729121872181543,
+          "rmse_lane_flow": 43.51727232405023,
+          "S_state": 0.9132218546409827
+        }
+      ],
+      "density_target_pair_relative_L1": 0.7835823749855589
+    },
+    {
+      "model": "graph_FD",
+      "alpha": 0.75,
+      "S_state": 0.9151074417879587,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 92969,
+          "rmse_speed": 1.9598554737515819,
+          "rmse_lane_flow": 38.805047636923845,
+          "S_state": 0.9279165852453243
+        },
+        {
+          "regime": "R2",
+          "n": 46241,
+          "rmse_speed": 2.64398094624999,
+          "rmse_lane_flow": 48.35748116359176,
+          "S_state": 0.9058159426689132
+        },
+        {
+          "regime": "R3",
+          "n": 231727,
+          "rmse_speed": 2.5069010062552217,
+          "rmse_lane_flow": 44.68844454162885,
+          "S_state": 0.9115897974496385
+        }
+      ],
+      "density_target_pair_relative_L1": 0.8266167241048433
+    },
+    {
+      "model": "graph_FD",
+      "alpha": 1,
+      "S_state": 0.9116937617036772,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 92969,
+          "rmse_speed": 2.023902127378072,
+          "rmse_lane_flow": 39.92972098656645,
+          "S_state": 0.9256709279589328
+        },
+        {
+          "regime": "R2",
+          "n": 46241,
+          "rmse_speed": 2.7740505498202914,
+          "rmse_lane_flow": 50.72445269677388,
+          "S_state": 0.9011917610563551
+        },
+        {
+          "regime": "R3",
+          "n": 231727,
+          "rmse_speed": 2.605250851606964,
+          "rmse_lane_flow": 46.31476370810359,
+          "S_state": 0.9082185960957436
+        }
+      ],
+      "density_target_pair_relative_L1": 0.8890745484151247
+    }
+  ],
+  "chosen": {
+    "model": "graph_FD",
+    "alpha": 0.25,
+    "S_state": 0.9173008904065432,
+    "details": [
+      {
+        "regime": "R1",
+        "n": 92969,
+        "rmse_speed": 1.92913097337238,
+        "rmse_lane_flow": 37.559068401102884,
+        "S_state": 0.9295354852009777
+      },
+      {
+        "regime": "R2",
+        "n": 46241,
+        "rmse_speed": 2.5856318181410116,
+        "rmse_lane_flow": 45.4078759255025,
+        "S_state": 0.9093376478519356
+      },
+      {
+        "regime": "R3",
+        "n": 231727,
+        "rmse_speed": 2.505904638306754,
+        "rmse_lane_flow": 42.838593451119166,
+        "S_state": 0.9130295381667161
+      }
+    ],
+    "density_target_pair_relative_L1": 0.7651867129528034
+  },
+  "large_LGB_assessment": {
+    "S_state": 0.9214545648102032,
+    "details": [
+      {
+        "regime": "R1",
+        "n": 123933,
+        "rmse_speed": 1.9918183434871828,
+        "rmse_lane_flow": 38.09260414908478,
+        "S_state": 0.9277723939330452
+      },
+      {
+        "regime": "R2",
+        "n": 69485,
+        "rmse_speed": 2.1247100435348574,
+        "rmse_lane_flow": 38.32012929940551,
+        "S_state": 0.9247274972634363
+      },
+      {
+        "regime": "R3",
+        "n": 116116,
+        "rmse_speed": 2.5762220111484586,
+        "rmse_lane_flow": 42.3780017283464,
+        "S_state": 0.9118638032341277
+      }
+    ]
+  },
+  "selected_assessment": {
+    "S_state": 0.9226546653221862,
+    "details": [
+      {
+        "regime": "R1",
+        "n": 123933,
+        "rmse_speed": 1.9443014436121424,
+        "rmse_lane_flow": 38.17832941358417,
+        "S_state": 0.9287330362675632
+      },
+      {
+        "regime": "R2",
+        "n": 69485,
+        "rmse_speed": 2.073885816887006,
+        "rmse_lane_flow": 38.44881925239171,
+        "S_state": 0.9257266382617404
+      },
+      {
+        "regime": "R3",
+        "n": 116116,
+        "rmse_speed": 2.493803982345037,
+        "rmse_lane_flow": 42.560233753164034,
+        "S_state": 0.9135043214372548
+      }
+    ]
+  },
+  "paired_day_interval": {
+    "paired_day_mean_gain": 0.0010345036727475998,
+    "ci95": [
+      0.00070091637823122,
+      0.0013680909672639796
+    ],
+    "bootstrap_probability_gain_positive": 1.0,
+    "n_days": 14,
+    "block_days": 7,
+    "resamples": 4000,
+    "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+  },
+  "assessment_density_target_pair_relative_L1": {
+    "large_LGB": 0.7532650380513248,
+    "selected": 0.7397147331684383
+  },
+  "formal_State": null,
+  "formal_Physics": null,
+  "limitation": "Existing neural weights, one fit seed and one rolling fold. All assessment is development evidence."
+}

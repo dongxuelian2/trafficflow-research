@@ -74,7 +74,7 @@ def training_rows(release,panel,paths,profile,max_rows,seed,feature_version=2):
 def evaluate_state(release,panel,paths,model,physics_strength=0.,fd_bounds=False):
     net,topo=release.network(panel),release.topology(panel)
     template=release.template(1,panel,'train')
-    truths,predictions,lanes,diagnostics=[],[],[],[]
+    truths,predictions,lanes,diagnostics,daily_stats=[],[],[],[],[]
     for path,raw in zip(paths,raw_for(release,panel,paths)):
         frame=release.read(path);target=day_template(release,panel,'train',frame,template)
         if not len(target):
@@ -86,8 +86,17 @@ def evaluate_state(release,panel,paths,model,physics_strength=0.,fd_bounds=False
         if physics_strength or fd_bounds:
             pred=refine(frame,pred,net,topo,ramps,physics_strength,fd_bounds)
         diagnostics.append(diagnose(frame,pred,net,topo,ramps))
-        truths.append(target_truth(release,panel,target,raw));predictions.append(pred)
-        lanes.append(release.station_lanes(panel,target))
+        truth=target_truth(release,panel,target,raw)
+        lane=release.station_lanes(panel,target)
+        truths.append(truth);predictions.append(pred);lanes.append(lane)
+        for regime in target.mask_regime.unique():
+            selected=(target.mask_regime==regime).to_numpy()
+            speed=pred.speed_kmh.to_numpy()[selected]-truth.speed_kmh.to_numpy()[selected]
+            flow=(pred.flow_vph.to_numpy()[selected]-truth.flow_vph.to_numpy()[selected])/lane[selected]
+            rv,rq=np.sqrt(np.mean(speed**2)),np.sqrt(np.mean(flow**2))
+            daily_stats.append({'date':str(target.timestamp.iloc[0])[:10],'regime':str(regime),'n':len(speed),
+                'speed_sse':float(np.square(speed).sum()),'lane_flow_sse':float(np.square(flow).sum()),
+                'daily_State':float(.54*max(0,1-rv/25)+.46*max(0,1-rq/600))})
     truth,pred,lane=pd.concat(truths,ignore_index=True),pd.concat(predictions,ignore_index=True),np.concatenate(lanes)
     result=state_score(truth,pred,lane)
     # Congestion and missingness strata are diagnostic, not averaged into the official score.
@@ -96,6 +105,7 @@ def evaluate_state(release,panel,paths,model,physics_strength=0.,fd_bounds=False
         result[name]=state_score(truth.loc[sel],pred,lane[sel]) if sel.any() else None
     result['physics_diagnostics']=diagnostics
     result['n_targets']=len(truth)
+    result['daily_sufficient_statistics']=daily_stats
     return result
 
 def run_experiment(release,panel,output,seed=2026,iterations=250,max_rows=300000,methods=None):

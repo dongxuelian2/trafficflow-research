@@ -16,10 +16,10 @@
 | `digital_twin.py` | 独立 Godunov/CTM、CFL 子步、显式 ramp supply、车辆数守恒 | B01 54 场景最大守恒误差 6.76e-13；两种模拟 flux contract 并列 |
 | `graph_state.py` / graph experiment | missing-aware temporal conv + directed graph diffusion；occupancy 仅来自 masked 输入；joint speed/flow residual | 日前 profile、相同 fit/selection/assessment 日期、selection seal 后 assessment；GPU 344 MiB；多 seed/跨走廊继续研究 |
 | `queue_events.py` | 均匀打乱候选、条件配额、六小时间隔、quality 和 persistence 筛选 | 官方 selector 未公开，仍为带噪观测代理；不同 seed 可能抽到相同窗口 |
-| `runtime.py` / evidence | CPU 实验 source fingerprints 与进程峰值 | GPU 训练另存 device / torch / actual GPU peak；进程 lifetime peak 不是隔离模型峰值 |
-| 下载 / API / 发布 | 请求官方 public participant APIs 与本队 submissions；秘密和签名 URL 不写日志 | Kaggle API token 不能替代网页登录；论坛公告发布授权已取得，网页会话尚待恢复 |
+| `runtime.py` / evidence | CPU 实验 source fingerprints、进程峰值、训练前源码 ZIP | A29/A30 新实验在训练前保存源代码、依赖锁与逐文件 SHA；过去实验仅有 Git/运行指纹与模型校验 |
+| 下载 / API / 发布 | 请求官方 public participant APIs 与本队 submissions；秘密和签名 URL 不写日志 | 用户选择手动论坛发布；Notebook 草稿不公开发布；GitHub 推送继续授权 |
 
-当前独立 CUDA 环境 **21 tests passed**；CPU 环境 **20 passed / 1 optional-Torch skipped**，源码 compileall 通过。A01 与 A09 中相同缓存、相同 seed 的三个共同模型独立训练后，tensor 和模型文件 SHA 完全相同；这不等于全量独立重训首轮七百万预测的复现。
+当前独立 CUDA 环境 **24 tests passed**；CPU 环境 **23 passed / 1 optional-Torch skipped**，源码 compileall 通过。新增测试核验 event/class 权重质量守恒、density projection 的零 blend 与边界、occupancy/density channel 的质量与 target 隔离、三对角同化可见锚点不变。新增 daily-statistics 测试另行执行中。A01 与 A09 中相同缓存、相同 seed 的三个共同模型独立训练后，tensor 和模型文件 SHA 完全相同；这不等于全量独立重训首轮七百万预测的复现。
 
 A14 审计发现重要比较混杂：原 graph 与 LGB 的日期相同，但 LGB 只用 300k 标签。全标签 LGB 1,804,908 行得到更高 State，A15 重做强基线对照后 graph 独立收益仅 0.001077。所有旧实验保留，解释同步修正。
 

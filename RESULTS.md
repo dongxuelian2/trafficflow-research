@@ -15,6 +15,20 @@ Queue 的规则允许使用已发布且 timestamp ≤T 的观测。C04 测得各
 
 C09–C11 扩大可得校准窗口后，唯一事件去重、按日 block 的 at-T 增益区间在三组实验中全部跨零，尚不能晋级。A16 冬季全标签 LGB 为 **0.946854**，同样超过此前冬季图组合；标签预算影响具有跨季节证据。当前继续研究的版本不覆盖正式最佳提交。
 
+C12–C14 增加双方共同发布的 occupancy 历史特征。相对各自由 selection 选定的 at-T 模型，I5_N 秋/冬唯一事件代理 IoU 增益为 **.062191 / .048073**，按日 block 95% CI 分别 [.031133,.098928] / [.011601,.082537]；I10_W 增益 **−.050232**，CI [−.151396,.041897]。方向退化阻止全局晋级；更长 45 天 calibration / 30 天 assessment 与事件均衡损失正在复核。occupancy 不被命名为真实潜在拥堵标签。
+
+A17 冬季强 LGB 的 graph FD 组合为 **.947299 vs .946854**，日均增益 CI 跨零。A18 的 I405_N 全标签 LGB 为 **.921455**，A20 图组合为 **.922655**，增益约 .00120。三组强基线对照都低于 .002 登记门槛。
+
+A19 的联合密度候选在 selection 上按“State 不低于 baseline −.002，最小化 density-increment 代理”选定 blend=.5；assessment State 为 **.940472 vs .942340**，代理 L1 **.727239 vs .771083**。这只是 State–物理代理的取舍，不证明正式 Physics 增益。A23b 的 occupancy/density State 特征在相同 1,804,908 个标签上得到 **.942621 vs .942340**，改善只有 .000281，未晋级。
+
+更长校准/评估的 C15–C17 未确认 occupancy 的独立收益。增加训练事件的 C18/C20 在 I5_N 秋/冬获得代理改善，cal 选定候选相对 before-T 的去重 gain 为 **.038203 / .035234**，95% day-block CI [.015500,.061067] / [.007808,.062894]；I10_W C19 为 **−.023223**，CI 跨零。公开 condition 对照 C21/C22 没有稳定改善，保留原选择。
+
+A24–A28 的三种子、同日期 500k/full 对照平均 pooled State gain 为 **.003896**；先平均 fit seeds 后，14 天日均配对 gain 的 block CI 为 [.002445,.003846]。这支持扩大训练标签预算，不支持宣称正式分项或 Total 已改善。首轮冻结提交 SHA 再核验一致。
+
+B02 的学习密度增量同化，joint strength=.1，assessment State **.942160**、target-pair increment L1 **.743408**；强基线分别为 .942340 / .771083。State 选择器仍选 strength=0，不能宣称 State 提升；正式 Physics 未知。六个其他方向的 500k/full 对照 A29/A30 正在进行，训练前源码快照已保存。
+
+![强 State 比较基线与跨方向 Queue 代理不确定性](reports/research/strong_baseline_comparison_v2.png)
+
 A10 的 density-increment 联合候选秋季 State 为 0.938577，target-pair 相对 L1 为 0.786185（300k 标签基线 0.824392）；该目标只覆盖有观测且涉及 target 的相邻时刻，**不等同正式 Physics**。λ=.1 的 A11 未通过 selection。A12 的 D7_I405_N 图组合为 0.920775 vs 300k LGB 0.917777；A13 的 D7_I10_W 选择 α=0，无神经网络增益。跨 family 零样本迁移 A05 失败。
 
 D02 自建 OD 模拟复合分数为 **0.870706**，Ridge 为 **0.825047**；D04 扩大 prior 失配分布后，missing-prior-path 场景下 Bayes 仍退化。这些模拟测量不能覆盖下面的正式失败。

@@ -1,0 +1,2205 @@
+{
+  "registered": {
+    "protocol_sha256": "1da5d7f042384611a0de5eef011eb45b7d8975b28833959ad3c689a4ca753b86",
+    "protocol": {
+      "id": "State_500k_vs_full_suite",
+      "panels": [
+        "D7_I210_E",
+        "D7_I210_W",
+        "D7_I405_S"
+      ],
+      "fold": {
+        "name": "rolling_autumn",
+        "profile_end": "2030-07-15",
+        "fit_end": "2030-10-15",
+        "selection_end": "2030-10-29",
+        "assessment_end": "2030-11-12"
+      },
+      "seed": 20261013,
+      "small_max_labels": 500000,
+      "full_max_labels": 10000000,
+      "feature_version": 2,
+      "profile": "Public raw data strictly before fit; same profile for both models",
+      "model": "LGB 400 iterations / 63 leaves; all other settings identical",
+      "selection": "Budget hypothesis fixed; no assessment-driven hyperparameters",
+      "formal_State": null,
+      "formal_Physics": null
+    }
+  },
+  "source_snapshot": {
+    "archive": "artifacts/research/A30_State_budget_directions_b/source_snapshot.zip",
+    "archive_sha256": "dec8706de2e2816a913c99800a3624e181866e8be33aeab84172f628da07d66a",
+    "captured_files": [
+      {
+        "path": "config/research_protocol_v2.json",
+        "sha256": "dd7318f99e56b826d42eac58ab9c3213803db8f6c740ed843d95879835703121"
+      },
+      {
+        "path": "config/research_targets.json",
+        "sha256": "9a524c7c728cf6ed7ab4920592541e38fe720b36a0879c6f488a77b833e3452f"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "8cd1033d7ceeaa616319d900e5a9990445f3881665420cf4cd9715941b0e52f5"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "db90c0f17353c586ec2b51f9f42748c254e2e6563e7aebff81b7dbf9a3e82ccd"
+      },
+      {
+        "path": "requirements.lock.txt",
+        "sha256": "f4c8602ed3a0c29541e42d23547672864aa487fe2fcf24f8cf2d140f53c16fde"
+      },
+      {
+        "path": "requirements.research.lock.txt",
+        "sha256": "12f5a3bd24e186a0c71512b18eea44548159ec37088546efd7cc3c14c95fae8c"
+      },
+      {
+        "path": "scripts/assemble_campaign.py",
+        "sha256": "e5b103ba8501775e049e14c89e3854e5e2a56b93942505330b5317d8023d6a5d"
+      },
+      {
+        "path": "scripts/assess_joint_density.py",
+        "sha256": "92258a57238facc5153cc8c98c422ed71e92f69b0ae4ecada5a4edf77f00c2e6"
+      },
+      {
+        "path": "scripts/audit_kaggle_baseline.py",
+        "sha256": "3a8f78d8cb154fb1d4b25ed902d81e44b9665f4628162f3342641071b679193a"
+      },
+      {
+        "path": "scripts/audit_od_identifiability.py",
+        "sha256": "bce792650d2dfc0a5268a9e012aeaa846c87715620ee3e3e3a6e0659d4885c36"
+      },
+      {
+        "path": "scripts/audit_physics_topology.py",
+        "sha256": "5afabe6d2e6920fdda75988c936d44adcabbb3f57110552d4c269ea7949d308a"
+      },
+      {
+        "path": "scripts/audit_queue_origin.py",
+        "sha256": "dba7d16f51c6df6c6506a9e418d5aa3e3d7bdbe1693253772266bd170e36c242"
+      },
+      {
+        "path": "scripts/build_bayesian_od_candidate.py",
+        "sha256": "5cc8d8b513e668e269510447c508facd640f97b85335da77d69f3e289bb9a8be"
+      },
+      {
+        "path": "scripts/campaign.py",
+        "sha256": "06cea939655896f9cef2ad404491d9418313c5cf1f0e525b20288a855a774418"
+      },
+      {
+        "path": "scripts/capture_environment.py",
+        "sha256": "5be825c14d82da31a2ca57459f8c6eead4f13ba2030f5488c465388a8e82d4f8"
+      },
+      {
+        "path": "scripts/check_public_competition.py",
+        "sha256": "5c69ba4b041bc668b6cfad397fe2c9c584003910757e68908137e320d92c0a64"
+      },
+      {
+        "path": "scripts/compare_queue_events.py",
+        "sha256": "d9d2e9e47eb2f21b1738d4e2d1ba762a776fc849bbfc4bde4c1fc8785b068194"
+      },
+      {
+        "path": "scripts/compare_state_label_budgets.py",
+        "sha256": "b7c27482c11904cbc0aa06fc86cfd692037e057985acdb93f00ff4e38da81b40"
+      },
+      {
+        "path": "scripts/cross_corridor_transfer.py",
+        "sha256": "e3ef2d288bfc617ea7985712be7c714de9e36ed947b59bc2bd81e3e5113b7c6a"
+      },
+      {
+        "path": "scripts/density_increment_experiment.py",
+        "sha256": "7c76be4eb9f893ff71a70f62ae47ac4f7b8cba8a8add1da1a9ebdbba074552fa"
+      },
+      {
+        "path": "scripts/diagnose_failed_od_control.py",
+        "sha256": "bed0ecbfa0b21880ad852919b0285280fa2659f95c9a6513840baf3e22ab7b58"
+      },
+      {
+        "path": "scripts/diagnose_graph_density.py",
+        "sha256": "f6e48f203331ed2dddbd6917d2932fc8682cf4daa9da8d6e9a5c7ee52e75116f"
+      },
+      {
+        "path": "scripts/download_data.py",
+        "sha256": "c746052ff8192acd1679976da70faf2f54ae94d2370e2dda4e105bca08fee4b9"
+      },
+      {
+        "path": "scripts/freeze_first_submission.py",
+        "sha256": "17eb0cf856c43a0199c0bf73fcc4d100c76d818b2d1130f00b16f466bc4cc6cb"
+      },
+      {
+        "path": "scripts/freeze_research_models.py",
+        "sha256": "e11597aca4b37fa4a62e432f77410f1c1f9501feeff32865618c4dd996955915"
+      },
+      {
+        "path": "scripts/inspect_official_release.py",
+        "sha256": "17bc64125a2843f2af1eefc01ef22e930c22201df997eec99bedd021d1e32c7f"
+      },
+      {
+        "path": "scripts/large_baseline_graph_comparison.py",
+        "sha256": "ab3f399a46ca8366418ccca2a748124cd706a176706a20d7b491242c810ed75b"
+      },
+      {
+        "path": "scripts/od_prior_misspecification.py",
+        "sha256": "053dc64b2e9b8fb04ac1514d9991d8ddcbae9ab677e69a8dbc7fbd77045a7917"
+      },
+      {
+        "path": "scripts/od_probability_experiment.py",
+        "sha256": "fbb8ade089cec3fdd03b6f40687b4f8ef022c7766dc7c1c4011e6b7df3326c00"
+      },
+      {
+        "path": "scripts/physics_tradeoff.py",
+        "sha256": "b653cf6254196850113cbdb61a1afb5bf184900e6a5ad5d07a24151436e6c9f9"
+      },
+      {
+        "path": "scripts/plot_strong_baseline_comparison.py",
+        "sha256": "060b1292bc663f0ba5d1fd352afd30fb0edc5badc83c1a42b3e4b4b23435c10b"
+      },
+      {
+        "path": "scripts/prepare_graph_experiment.py",
+        "sha256": "dd713db0b6b492b67f970042f9ddc7283474924cf0369b709c2fccb0353971e1"
+      },
+      {
+        "path": "scripts/promote_models.py",
+        "sha256": "b41f8af5fb9f5394595a1c1ded9b534ed89d2c41b85b7a3e3788b2d275c71339"
+      },
+      {
+        "path": "scripts/queue_event_experiment.py",
+        "sha256": "520d24e1f1e5fcde8166f3df16f437276b7185665a8e9394c6ac59a4823b0242"
+      },
+      {
+        "path": "scripts/queue_origin_experiment.py",
+        "sha256": "d4b48f5f597b75cc7c68e7a5b69c878973feae4723ba73b6c38234fd888d1c9f"
+      },
+      {
+        "path": "scripts/queue_refinement.py",
+        "sha256": "4747af3e5e09d4e23b7d28856ed66732e54ad1d3586b7df067eb49aeffcc1dd1"
+      },
+      {
+        "path": "scripts/queue_research.py",
+        "sha256": "34e3fe815c5130431a512df258cfbfd0cb39c7b64b769950d76f20a9983fff5a"
+      },
+      {
+        "path": "scripts/read_public_pages.py",
+        "sha256": "2056d46920d3b9f73b1268b86d122ac4daf318e72c298527b4b66376ac26e165"
+      },
+      {
+        "path": "scripts/record_formal_scores.py",
+        "sha256": "ee78da8b99edc9928c781c341f05af33dd28098ae313113879e8b3e3aad5fa0f"
+      },
+      {
+        "path": "scripts/refine_queues.py",
+        "sha256": "4af45c3a458feec60d6f7786166ef2cf0fb747fce492955ec4112312352f665d"
+      },
+      {
+        "path": "scripts/register_research_protocol.py",
+        "sha256": "2367504189c87f2103e10dfd99147ffcc9beba2f9d82409c38e92d4c5e2c3077"
+      },
+      {
+        "path": "scripts/run_official_diagnostics.py",
+        "sha256": "73221ca5f6014f8d7a011698fe0845d9448581c3896855b7dc19e1f47873a7e8"
+      },
+      {
+        "path": "scripts/run_official_state_baselines.py",
+        "sha256": "3ddd7eea81f350d50973813c50e4c0d90a184624d271aa64859c1c74c33a9e70"
+      },
+      {
+        "path": "scripts/scenario_audit.py",
+        "sha256": "b094d67aadc000463db95a235d71a9bc3a97624b1a017cb35be2b88612f1a417"
+      },
+      {
+        "path": "scripts/simulate_stress.py",
+        "sha256": "d0c4697c44f1c65848d83c1e396b9562d4151ad294f560b1576bcc6c49012140"
+      },
+      {
+        "path": "scripts/stage_zip_panel.py",
+        "sha256": "4ec5b59e058c52012bda91ff140fbc9620209bbf114aa5eb5ffbc259b4c69c15"
+      },
+      {
+        "path": "scripts/state_budget_suite.py",
+        "sha256": "d6fd23b3aacd79a6cdad38bbf0f3d845e0307dc4b4b7471ef279980035652477"
+      },
+      {
+        "path": "scripts/state_label_budget_control.py",
+        "sha256": "7cb05ba6e67f39106ea009468ce9215aebab9aec0c9a90295fe8641d3c7e4dbd"
+      },
+      {
+        "path": "scripts/state_research.py",
+        "sha256": "7f9043c7d753a5a6540ef81291ae7e3e00879ca330aea94f833b7017f29a759e"
+      },
+      {
+        "path": "scripts/strong_density_state_experiment.py",
+        "sha256": "ac3386b8130af81a7c2efb960823d7dc0aad17bb1894635cbca877cd40dca4f3"
+      },
+      {
+        "path": "scripts/submit_controlled_candidate.py",
+        "sha256": "8da1d9d94c675505d9bca87470da5959166443e268d7dcdde0a4c20e9a6cbba7"
+      },
+      {
+        "path": "scripts/summarize_campaign.py",
+        "sha256": "e09f36b6188d6a23698f0a27873fece09ba6fd3db1e2cd5ae767e4865d7c101f"
+      },
+      {
+        "path": "scripts/summarize_research_v2.py",
+        "sha256": "4f2239fb78d2d88de9117d289099874b41dc6f017b6c104e557cad168b0a8f17"
+      },
+      {
+        "path": "scripts/summarize_results.py",
+        "sha256": "3ede418e5a835ad3956b0332c335a54a4157654be9db16d4cde6411b5b12880c"
+      },
+      {
+        "path": "scripts/train_graph_experiment.py",
+        "sha256": "7036d5b3f14d5dd39de22b1aa94284285010359114deb3f38ead5461b6e5e04e"
+      },
+      {
+        "path": "scripts/verify_controlled_candidate.py",
+        "sha256": "34e3d7cc3767dc543f7fb9011f2088aebd5995ce7aebca751217fda3c713de52"
+      },
+      {
+        "path": "scripts/verify_graph_repeat.py",
+        "sha256": "2ec216b7fe481f52199b92b28baa40efbe3bde74ae19a17a86904d6f7d1189e9"
+      },
+      {
+        "path": "scripts/verify_vendor.py",
+        "sha256": "232658ffcb66d34aea7c686d64e20bad86f7c172b0f900114dd683c5fd90bb85"
+      },
+      {
+        "path": "scripts/write_results.py",
+        "sha256": "efb8a4e80afdfaca2096ea7d2f65743e863b38c18dc41bac52fcdce07a70c83d"
+      },
+      {
+        "path": "src/trafficflow/__init__.py",
+        "sha256": "6432d23e18693162d87e81e22ac8f25158369302b9dc209d21154dba1351e7a8"
+      },
+      {
+        "path": "src/trafficflow/__main__.py",
+        "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+      },
+      {
+        "path": "src/trafficflow/bayesian_od.py",
+        "sha256": "5c5c76ab2848437af546a5fc3985f568b61c7a39dd3dbdf2a5551e266f1a1139"
+      },
+      {
+        "path": "src/trafficflow/causal_queue.py",
+        "sha256": "b12f3098ce79dc465545106b6d429fce2818499edd518f1909047b3ccbcda1b2"
+      },
+      {
+        "path": "src/trafficflow/cli.py",
+        "sha256": "8bb044f21541e3d0f639f01e20fc47a358152ec0c918ae4d644e73c96d7e73d3"
+      },
+      {
+        "path": "src/trafficflow/data.py",
+        "sha256": "f29fe070b21ac692b2cf9bd6d5b5fd018e94129b9626588325dd48edbd941ccd"
+      },
+      {
+        "path": "src/trafficflow/density_assimilation.py",
+        "sha256": "bbf771ae2d6ca93030aca029f3428fbb3f214cf4a5e39dca79925f08f7a30b46"
+      },
+      {
+        "path": "src/trafficflow/density_state.py",
+        "sha256": "27f6543e9c018c0c201d145d9329acc54d51d8e2046b0d8faf0ac92a05386594"
+      },
+      {
+        "path": "src/trafficflow/digital_twin.py",
+        "sha256": "cfacb280f971faedceb2e404b35889891eef536a24a070804757ab6d92c49655"
+      },
+      {
+        "path": "src/trafficflow/experiments.py",
+        "sha256": "854abf59d2c560f84c704090741d6f8fce4ce6725d8a39139412194cc362a6ec"
+      },
+      {
+        "path": "src/trafficflow/fixture.py",
+        "sha256": "0709326abd7206a7ca1c3414dbb95c2d8c08749484802e2523d49c1ee7a2ef24"
+      },
+      {
+        "path": "src/trafficflow/graph_state.py",
+        "sha256": "b32b4b81b7292472fab1eabbe183ebaae6ab295c6c7eb5ad4951719bfd8418cc"
+      },
+      {
+        "path": "src/trafficflow/increment_state.py",
+        "sha256": "52c6eb6a5cf959ac050f237a84cc8c487fae086fcec61a5aeac2fa5997185ea3"
+      },
+      {
+        "path": "src/trafficflow/metrics.py",
+        "sha256": "5f42eaa372894edfa1363135b61818e7ec4bf56110257a03aadf07de770aa346"
+      },
+      {
+        "path": "src/trafficflow/odme.py",
+        "sha256": "e61df62cbf3ff4af03069d6e028b2024ddee25578cc00558b2b04148370850ee"
+      },
+      {
+        "path": "src/trafficflow/physics.py",
+        "sha256": "3f559ca30157ebee155bb17ebdd42f0dc43a169ef6b45634ad875569beb03e30"
+      },
+      {
+        "path": "src/trafficflow/queue.py",
+        "sha256": "62c35a4ed8e1e882d386461aba41cf8f5f3ed809451e51008e34f23e211240c5"
+      },
+      {
+        "path": "src/trafficflow/queue_calibration.py",
+        "sha256": "7a9dd45a60ba1d754b8be3f45835e53c2a14c4d435c244cfd444fa916dcd558a"
+      },
+      {
+        "path": "src/trafficflow/queue_event_loss.py",
+        "sha256": "5b155f8255080e0ee8823ab366ce8f7dfb1f2d067c196109834e0338395b631c"
+      },
+      {
+        "path": "src/trafficflow/queue_events.py",
+        "sha256": "01c4a5d8726d67b301226821b32ae7378bacee9383932f775c3b5cc47c4a0ec5"
+      },
+      {
+        "path": "src/trafficflow/research_eval.py",
+        "sha256": "197aa2c4d6091dbd551ca6d11f8a664e9feaa44c1fcaf568ec873185315ab3c9"
+      },
+      {
+        "path": "src/trafficflow/runtime.py",
+        "sha256": "ac9da196802b47d7c864da55b5fa697b7e9b5c562e7cbff09f1621ce4b4d79d9"
+      },
+      {
+        "path": "src/trafficflow/state.py",
+        "sha256": "f7a8341d968ac55a6f87e01a439ce8dc8c014750afa61129c7175e733de23c17"
+      },
+      {
+        "path": "src/trafficflow/submission.py",
+        "sha256": "87607c555e86f020e83f1ed9ac4054e49f88dc35eedd36cd8bf8ba442f85f2dc"
+      },
+      {
+        "path": "vendor/official/src/merge_submissions.py",
+        "sha256": "a8cd6c4c9f2cea777fde8f6b163c00835a4fb45672998b9fc71368810e792ee1"
+      },
+      {
+        "path": "vendor/official/src/release/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/release/score_overall.py",
+        "sha256": "b9b73e174eeb1ed742dd9cbd558f6b280a0bd14e7ec7001feb549f1b5fb9b4ee"
+      },
+      {
+        "path": "vendor/official/src/score_overall.py",
+        "sha256": "4a28d57a23950554a065f6254bf674f4a1b58b5d039f26bc5154dd28d28651fb"
+      },
+      {
+        "path": "vendor/official/src/task1/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_historical_mean.py",
+        "sha256": "66569dd55340d5e4509712e66172ea669893d7341a0ef2dd8c920c24f07209a1"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_structural_kf.py",
+        "sha256": "f3a63ba48bf867d993dd1b3cbc0da6ca4567da7aa519ed2b2e3fd93a61c06132"
+      },
+      {
+        "path": "vendor/official/src/task1/build_task1_baseline_submission.py",
+        "sha256": "cb91e19e20a5a546430917a884197c1ad6a7068c6a47d7fbec7fb8311b7237d7"
+      },
+      {
+        "path": "vendor/official/src/task1/score_task1.py",
+        "sha256": "bcd42e88fbc42cd499e93e3b50ddf367009b26b216df5ab3f710ee1d1d863163"
+      },
+      {
+        "path": "vendor/official/src/task2/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task2/build_task2_persistence_submission.py",
+        "sha256": "d3cb4ab23206c4c20058a074b24c23ba79b43dd4219f41e158329a39f5a3edd2"
+      },
+      {
+        "path": "vendor/official/src/task2/queue_utils.py",
+        "sha256": "cea193935e7af7ab1399b9955c3f26fcb65664a099344d35b9c3b91802b3135f"
+      },
+      {
+        "path": "vendor/official/src/task2/score_task2.py",
+        "sha256": "b5605ebae9b32b3ca974881be47b5f2e796728b94763a724314580fc93be28bb"
+      },
+      {
+        "path": "vendor/official/src/task3/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task3/build_task3_baseline_submission.py",
+        "sha256": "945ce4b28f264be6be35a1b8d0f67311bf666d5e6b516a5b79bb2617075e8bcf"
+      },
+      {
+        "path": "vendor/official/src/task3/score_task3.py",
+        "sha256": "98d88b6e7f6b7bb0e2bbb4b42e486d6690b6f14a5d3625649e85ddf828550409"
+      },
+      {
+        "path": "vendor/official/src/task4/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task4/build_task4_odme_artifacts.py",
+        "sha256": "5da75aea3004555bae080ee4d18f1baee01dbb9ed1caf7a6abadd2387e6ade58"
+      },
+      {
+        "path": "vendor/official/src/task4/score_task4.py",
+        "sha256": "be15d732438d305e3d35cb41d3105fc03e3fb9459e5c050af39fe192cede30e3"
+      }
+    ],
+    "n_files": 102,
+    "scope": "Own source, vendored official Python and dependency locks; no data, credentials or model weights"
+  },
+  "panel": "D7_I210_E",
+  "dates": {
+    "profile": [
+      "2030-06-01",
+      "2030-06-02",
+      "2030-06-03",
+      "2030-06-04",
+      "2030-06-05",
+      "2030-06-06",
+      "2030-06-07",
+      "2030-06-08",
+      "2030-06-09",
+      "2030-06-10",
+      "2030-06-11",
+      "2030-06-12",
+      "2030-06-13",
+      "2030-06-14",
+      "2030-06-15",
+      "2030-06-16",
+      "2030-06-17",
+      "2030-06-18",
+      "2030-06-19",
+      "2030-06-20",
+      "2030-06-21",
+      "2030-06-22",
+      "2030-06-23",
+      "2030-06-24",
+      "2030-06-25",
+      "2030-06-26",
+      "2030-06-27",
+      "2030-06-28",
+      "2030-06-29",
+      "2030-06-30",
+      "2030-07-01",
+      "2030-07-02",
+      "2030-07-03",
+      "2030-07-04",
+      "2030-07-05",
+      "2030-07-06",
+      "2030-07-07",
+      "2030-07-08",
+      "2030-07-09",
+      "2030-07-10",
+      "2030-07-11",
+      "2030-07-12",
+      "2030-07-13",
+      "2030-07-14",
+      "2030-07-15"
+    ],
+    "fit": [
+      "2030-07-16",
+      "2030-07-17",
+      "2030-07-18",
+      "2030-07-19",
+      "2030-07-20",
+      "2030-07-21",
+      "2030-07-22",
+      "2030-07-23",
+      "2030-07-24",
+      "2030-07-25",
+      "2030-07-26",
+      "2030-07-27",
+      "2030-07-28",
+      "2030-07-29",
+      "2030-07-30",
+      "2030-07-31",
+      "2030-08-01",
+      "2030-08-02",
+      "2030-08-03",
+      "2030-08-04",
+      "2030-08-05",
+      "2030-08-06",
+      "2030-08-07",
+      "2030-08-08",
+      "2030-08-09",
+      "2030-08-10",
+      "2030-08-11",
+      "2030-08-12",
+      "2030-08-13",
+      "2030-08-14",
+      "2030-08-15",
+      "2030-08-16",
+      "2030-08-17",
+      "2030-08-18",
+      "2030-08-19",
+      "2030-08-20",
+      "2030-08-21",
+      "2030-08-22",
+      "2030-08-23",
+      "2030-08-24",
+      "2030-08-25",
+      "2030-08-26",
+      "2030-08-27",
+      "2030-08-28",
+      "2030-08-29",
+      "2030-08-30",
+      "2030-08-31",
+      "2030-09-01",
+      "2030-09-02",
+      "2030-09-03",
+      "2030-09-04",
+      "2030-09-05",
+      "2030-09-06",
+      "2030-09-07",
+      "2030-09-08",
+      "2030-09-09",
+      "2030-09-10",
+      "2030-09-11",
+      "2030-09-12",
+      "2030-09-13",
+      "2030-09-14",
+      "2030-09-15",
+      "2030-09-16",
+      "2030-09-17",
+      "2030-09-18",
+      "2030-09-19",
+      "2030-09-20",
+      "2030-09-21",
+      "2030-09-22",
+      "2030-09-23",
+      "2030-09-24",
+      "2030-09-25",
+      "2030-09-26",
+      "2030-09-27",
+      "2030-09-28",
+      "2030-09-29",
+      "2030-09-30",
+      "2030-10-01",
+      "2030-10-02",
+      "2030-10-03",
+      "2030-10-04",
+      "2030-10-05",
+      "2030-10-06",
+      "2030-10-07",
+      "2030-10-08",
+      "2030-10-09",
+      "2030-10-10",
+      "2030-10-11",
+      "2030-10-12",
+      "2030-10-13",
+      "2030-10-14",
+      "2030-10-15"
+    ],
+    "selection": [
+      "2030-10-16",
+      "2030-10-17",
+      "2030-10-18",
+      "2030-10-19",
+      "2030-10-20",
+      "2030-10-21",
+      "2030-10-22",
+      "2030-10-23",
+      "2030-10-24",
+      "2030-10-25",
+      "2030-10-26",
+      "2030-10-27",
+      "2030-10-28",
+      "2030-10-29"
+    ],
+    "assessment": [
+      "2030-10-30",
+      "2030-10-31",
+      "2030-11-01",
+      "2030-11-02",
+      "2030-11-03",
+      "2030-11-04",
+      "2030-11-05",
+      "2030-11-06",
+      "2030-11-07",
+      "2030-11-08",
+      "2030-11-09",
+      "2030-11-10",
+      "2030-11-11",
+      "2030-11-12"
+    ]
+  },
+  "fitting_labels": {
+    "500k": 499928,
+    "full": 2016684
+  },
+  "selection": {
+    "500k": {
+      "S_state": 0.9383041973095837,
+      "details": [
+        {
+          "panel": "D7_I210_E",
+          "regime": "R1",
+          "n": 78283,
+          "missing": 0,
+          "rmse_speed_kmh": 1.638511458694831,
+          "rmse_flow_per_lane": 32.19976388589327,
+          "S_state": 0.9399216668463402
+        },
+        {
+          "panel": "D7_I210_E",
+          "regime": "R2",
+          "n": 98166,
+          "missing": 0,
+          "rmse_speed_kmh": 1.7796388130810592,
+          "rmse_flow_per_lane": 33.80691804320786,
+          "S_state": 0.9356411644709899
+        },
+        {
+          "panel": "D7_I210_E",
+          "regime": "R3",
+          "n": 98260,
+          "missing": 0,
+          "rmse_speed_kmh": 1.668530343865526,
+          "rmse_flow_per_lane": 32.099979079674384,
+          "S_state": 0.939349760611421
+        }
+      ],
+      "panels": {
+        "D7_I210_E": 0.9383041973095837
+      },
+      "families": {
+        "D7_I210": 0.9383041973095837
+      },
+      "congested_observation_proxy": {
+        "S_state": 0.8739893396412141,
+        "details": [
+          {
+            "panel": "D7_I210_E",
+            "regime": "R1",
+            "n": 702,
+            "missing": 0,
+            "rmse_speed_kmh": 3.039589402670201,
+            "rmse_flow_per_lane": 40.16799226997339,
+            "S_state": 0.9035494081620108
+          },
+          {
+            "panel": "D7_I210_E",
+            "regime": "R2",
+            "n": 1018,
+            "missing": 0,
+            "rmse_speed_kmh": 5.94937854963911,
+            "rmse_flow_per_lane": 49.49437276707721,
+            "S_state": 0.8335477375397028
+          },
+          {
+            "panel": "D7_I210_E",
+            "regime": "R3",
+            "n": 838,
+            "missing": 0,
+            "rmse_speed_kmh": 3.8715119006377545,
+            "rmse_flow_per_lane": 41.09278659690791,
+            "S_state": 0.8848708732219286
+          }
+        ],
+        "panels": {
+          "D7_I210_E": 0.8739893396412141
+        },
+        "families": {
+          "D7_I210": 0.8739893396412141
+        }
+      },
+      "free_observation_proxy": {
+        "S_state": 0.9394615319210803,
+        "details": [
+          {
+            "panel": "D7_I210_E",
+            "regime": "R1",
+            "n": 77581,
+            "missing": 0,
+            "rmse_speed_kmh": 1.6203122397203205,
+            "rmse_flow_per_lane": 32.11863913681436,
+            "S_state": 0.9403769656171501
+          },
+          {
+            "panel": "D7_I210_E",
+            "regime": "R2",
+            "n": 97148,
+            "missing": 0,
+            "rmse_speed_kmh": 1.6820825775657833,
+            "rmse_flow_per_lane": 33.603780918875295,
+            "S_state": 0.9379041176201081
+          },
+          {
+            "panel": "D7_I210_E",
+            "regime": "R3",
+            "n": 97422,
+            "missing": 0,
+            "rmse_speed_kmh": 1.636768907838704,
+            "rmse_flow_per_lane": 32.01166834526227,
+            "S_state": 0.9401035125259829
+          }
+        ],
+        "panels": {
+          "D7_I210_E": 0.9394615319210803
+        },
+        "families": {
+          "D7_I210": 0.9394615319210803
+        }
+      },
+      "physics_diagnostics": [
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.456793584312964,
+          "observable_transitions": 27652,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 16.953734574796542,
+          "conservation_MAE_vehicles": 9.101222179933961,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.641438882978928,
+          "observable_transitions": 28608,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.978313241191145,
+          "conservation_MAE_vehicles": 8.744476230856177,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.717006663463636,
+          "observable_transitions": 28042,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 20.029529012980493,
+          "conservation_MAE_vehicles": 8.970284427381044,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.252748658340133,
+          "observable_transitions": 28158,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.490246181613326,
+          "conservation_MAE_vehicles": 9.242256353256078,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.739474312560937,
+          "observable_transitions": 27899,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.795019615138457,
+          "conservation_MAE_vehicles": 9.354419708880044,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.217432293312266,
+          "observable_transitions": 28126,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.463594393883472,
+          "conservation_MAE_vehicles": 9.079957710401034,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.076040055943716,
+          "observable_transitions": 28842,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 20.92140205430639,
+          "conservation_MAE_vehicles": 9.115037769261132,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.417099873002295,
+          "observable_transitions": 28106,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.902698004731693,
+          "conservation_MAE_vehicles": 8.948150966961013,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.21304795521563,
+          "observable_transitions": 28113,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 19.623427814608593,
+          "conservation_MAE_vehicles": 9.01010643780138,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.636519928625443,
+          "observable_transitions": 28724,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.46134441439486,
+          "conservation_MAE_vehicles": 8.641841662320983,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.241776734374248,
+          "observable_transitions": 28508,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 21.461587976418777,
+          "conservation_MAE_vehicles": 9.248725032837044,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.085558261453574,
+          "observable_transitions": 28242,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 17.316372983623562,
+          "conservation_MAE_vehicles": 7.294590228575612,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 9.235847197235126,
+          "observable_transitions": 28523,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.680611116859787,
+          "conservation_MAE_vehicles": 7.261059363567718,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 9.788478186743793,
+          "observable_transitions": 28707,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.638003901613125,
+          "conservation_MAE_vehicles": 7.349794704741184,
+          "below_50_vph_share": 0.0
+        }
+      ],
+      "n_targets": 274709,
+      "daily_sufficient_statistics": [
+        {
+          "date": "2030-10-17",
+          "regime": "R1",
+          "n": 13043,
+          "speed_sse": 34177.003477398954,
+          "lane_flow_sse": 14501072.39332208,
+          "daily_State": 0.9394717662131857
+        },
+        {
+          "date": "2030-10-19",
+          "regime": "R1",
+          "n": 13114,
+          "speed_sse": 37814.38874514362,
+          "lane_flow_sse": 12611775.737619087,
+          "daily_State": 0.9395458745041991
+        },
+        {
+          "date": "2030-10-20",
+          "regime": "R1",
+          "n": 13035,
+          "speed_sse": 34170.391749170856,
+          "lane_flow_sse": 12450895.238727303,
+          "daily_State": 0.9413330715866834
+        },
+        {
+          "date": "2030-10-21",
+          "regime": "R1",
+          "n": 13083,
+          "speed_sse": 33506.95451155001,
+          "lane_flow_sse": 13397260.87906972,
+          "daily_State": 0.9408989533493731
+        },
+        {
+          "date": "2030-10-23",
+          "regime": "R1",
+          "n": 13000,
+          "speed_sse": 34788.49738784036,
+          "lane_flow_sse": 14161263.409749575,
+          "daily_State": 0.939361612593908
+        },
+        {
+          "date": "2030-10-25",
+          "regime": "R1",
+          "n": 13008,
+          "speed_sse": 35710.68425376634,
+          "lane_flow_sse": 14043487.714268748,
+          "daily_State": 0.9390205469611972
+        },
+        {
+          "date": "2030-10-16",
+          "regime": "R2",
+          "n": 19827,
+          "speed_sse": 50841.17435312211,
+          "lane_flow_sse": 20861740.01139497,
+          "daily_State": 0.9405426811321025
+        },
+        {
+          "date": "2030-10-18",
+          "regime": "R2",
+          "n": 19592,
+          "speed_sse": 65616.32425532961,
+          "lane_flow_sse": 21888904.404452156,
+          "daily_State": 0.9348446869043312
+        },
+        {
+          "date": "2030-10-24",
+          "regime": "R2",
+          "n": 19553,
+          "speed_sse": 50663.89712550053,
+          "lane_flow_sse": 21613988.161079183,
+          "daily_State": 0.9397408146613798
+        },
+        {
+          "date": "2030-10-26",
+          "regime": "R2",
+          "n": 19746,
+          "speed_sse": 68998.02413693408,
+          "lane_flow_sse": 22810004.17828471,
+          "daily_State": 0.9335658257382458
+        },
+        {
+          "date": "2030-10-29",
+          "regime": "R2",
+          "n": 19448,
+          "speed_sse": 74783.52299615479,
+          "lane_flow_sse": 25020041.26710424,
+          "daily_State": 0.9301448201921149
+        },
+        {
+          "date": "2030-10-22",
+          "regime": "R3",
+          "n": 32690,
+          "speed_sse": 91619.82585749197,
+          "lane_flow_sse": 35328284.46880848,
+          "daily_State": 0.9386354775757378
+        },
+        {
+          "date": "2030-10-27",
+          "regime": "R3",
+          "n": 32735,
+          "speed_sse": 87903.50741820454,
+          "lane_flow_sse": 32315786.425587602,
+          "daily_State": 0.9405158957712492
+        },
+        {
+          "date": "2030-10-28",
+          "regime": "R3",
+          "n": 32835,
+          "speed_sse": 94031.86885968846,
+          "lane_flow_sse": 33603883.73412423,
+          "daily_State": 0.9389206776166947
+        }
+      ]
+    },
+    "full": {
+      "S_state": 0.9392455893606378,
+      "details": [
+        {
+          "panel": "D7_I210_E",
+          "regime": "R1",
+          "n": 78283,
+          "missing": 0,
+          "rmse_speed_kmh": 1.6247601166080414,
+          "rmse_flow_per_lane": 31.879989816808518,
+          "S_state": 0.9404638559550464
+        },
+        {
+          "panel": "D7_I210_E",
+          "regime": "R2",
+          "n": 98166,
+          "missing": 0,
+          "rmse_speed_kmh": 1.7374479423487277,
+          "rmse_flow_per_lane": 33.33854446342457,
+          "S_state": 0.9369115736899754
+        },
+        {
+          "panel": "D7_I210_E",
+          "regime": "R3",
+          "n": 98260,
+          "missing": 0,
+          "rmse_speed_kmh": 1.637284854521306,
+          "rmse_flow_per_lane": 31.66083744188883,
+          "S_state": 0.9403613384368918
+        }
+      ],
+      "panels": {
+        "D7_I210_E": 0.9392455893606378
+      },
+      "families": {
+        "D7_I210": 0.9392455893606378
+      },
+      "congested_observation_proxy": {
+        "S_state": 0.891202324307236,
+        "details": [
+          {
+            "panel": "D7_I210_E",
+            "regime": "R1",
+            "n": 702,
+            "missing": 0,
+            "rmse_speed_kmh": 2.4557008604878017,
+            "rmse_flow_per_lane": 39.9582241800298,
+            "S_state": 0.9163222228754406
+          },
+          {
+            "panel": "D7_I210_E",
+            "regime": "R2",
+            "n": 1018,
+            "missing": 0,
+            "rmse_speed_kmh": 5.348263417467257,
+            "rmse_flow_per_lane": 48.34043799896536,
+            "S_state": 0.8474165077168339
+          },
+          {
+            "panel": "D7_I210_E",
+            "regime": "R3",
+            "n": 838,
+            "missing": 0,
+            "rmse_speed_kmh": 2.7254612755314014,
+            "rmse_flow_per_lane": 40.776253198810664,
+            "S_state": 0.9098682423294335
+          }
+        ],
+        "panels": {
+          "D7_I210_E": 0.891202324307236
+        },
+        "families": {
+          "D7_I210": 0.891202324307236
+        }
+      },
+      "free_observation_proxy": {
+        "S_state": 0.9400657120785061,
+        "details": [
+          {
+            "panel": "D7_I210_E",
+            "regime": "R1",
+            "n": 77581,
+            "missing": 0,
+            "rmse_speed_kmh": 1.615291006656656,
+            "rmse_flow_per_lane": 31.797525207241794,
+            "S_state": 0.940731611597331
+          },
+          {
+            "panel": "D7_I210_E",
+            "regime": "R2",
+            "n": 97148,
+            "missing": 0,
+            "rmse_speed_kmh": 1.6584998461606624,
+            "rmse_flow_per_lane": 33.145412813829374,
+            "S_state": 0.9387649201656605
+          },
+          {
+            "panel": "D7_I210_E",
+            "regime": "R3",
+            "n": 97422,
+            "missing": 0,
+            "rmse_speed_kmh": 1.6247662630087218,
+            "rmse_flow_per_lane": 31.571014234545558,
+            "S_state": 0.9407006044725268
+          }
+        ],
+        "panels": {
+          "D7_I210_E": 0.9400657120785061
+        },
+        "families": {
+          "D7_I210": 0.9400657120785061
+        }
+      },
+      "physics_diagnostics": [
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.434323898596988,
+          "observable_transitions": 27652,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 16.94038477313036,
+          "conservation_MAE_vehicles": 9.079729660207004,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.627960361323447,
+          "observable_transitions": 28608,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.961737680638272,
+          "conservation_MAE_vehicles": 8.72600302089855,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.690433282163282,
+          "observable_transitions": 28042,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 20.01807451870469,
+          "conservation_MAE_vehicles": 8.943887107272944,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.21227290472425,
+          "observable_transitions": 28158,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.482108553288512,
+          "conservation_MAE_vehicles": 9.222024369619024,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.711536548073543,
+          "observable_transitions": 27899,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.784700963370714,
+          "conservation_MAE_vehicles": 9.326198213875776,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.210765937700199,
+          "observable_transitions": 28126,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.454312737610977,
+          "conservation_MAE_vehicles": 9.063870034811684,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.019719683613895,
+          "observable_transitions": 28842,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 20.894062263225234,
+          "conservation_MAE_vehicles": 9.068765980100688,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.37951436352445,
+          "observable_transitions": 28106,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.89196449398464,
+          "conservation_MAE_vehicles": 8.924514218911543,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.16861273263824,
+          "observable_transitions": 28113,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 19.60311597948778,
+          "conservation_MAE_vehicles": 8.97842328432623,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.546176946689364,
+          "observable_transitions": 28724,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.433496028779558,
+          "conservation_MAE_vehicles": 8.587381991090275,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.151963543534176,
+          "observable_transitions": 28508,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 21.319998956740324,
+          "conservation_MAE_vehicles": 9.155950360243907,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 9.991055104480287,
+          "observable_transitions": 28242,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 17.276205056290106,
+          "conservation_MAE_vehicles": 7.212413655517815,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 9.158563377409346,
+          "observable_transitions": 28523,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.655013778777676,
+          "conservation_MAE_vehicles": 7.18402815182254,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 9.670179965928973,
+          "observable_transitions": 28707,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.602372082772643,
+          "conservation_MAE_vehicles": 7.277005822683275,
+          "below_50_vph_share": 0.0
+        }
+      ],
+      "n_targets": 274709,
+      "daily_sufficient_statistics": [
+        {
+          "date": "2030-10-17",
+          "regime": "R1",
+          "n": 13043,
+          "speed_sse": 33521.93469581394,
+          "lane_flow_sse": 14205306.386743335,
+          "daily_State": 0.9400705124110911
+        },
+        {
+          "date": "2030-10-19",
+          "regime": "R1",
+          "n": 13114,
+          "speed_sse": 36018.043476017614,
+          "lane_flow_sse": 12436393.560454268,
+          "daily_State": 0.9405935648572167
+        },
+        {
+          "date": "2030-10-20",
+          "regime": "R1",
+          "n": 13035,
+          "speed_sse": 33475.03884063459,
+          "lane_flow_sse": 12188417.65677718,
+          "daily_State": 0.9419418200506473
+        },
+        {
+          "date": "2030-10-21",
+          "regime": "R1",
+          "n": 13083,
+          "speed_sse": 33339.95017099769,
+          "lane_flow_sse": 13099151.609334225,
+          "daily_State": 0.9412596961422892
+        },
+        {
+          "date": "2030-10-23",
+          "regime": "R1",
+          "n": 13000,
+          "speed_sse": 33952.93877139266,
+          "lane_flow_sse": 13915179.56533858,
+          "daily_State": 0.9400093477240677
+        },
+        {
+          "date": "2030-10-25",
+          "regime": "R1",
+          "n": 13008,
+          "speed_sse": 36347.114352252494,
+          "lane_flow_sse": 13717206.228951668,
+          "daily_State": 0.9389973986620742
+        },
+        {
+          "date": "2030-10-16",
+          "regime": "R2",
+          "n": 19827,
+          "speed_sse": 49904.985190946405,
+          "lane_flow_sse": 20503657.683206677,
+          "daily_State": 0.9410769719285313
+        },
+        {
+          "date": "2030-10-18",
+          "regime": "R2",
+          "n": 19592,
+          "speed_sse": 64343.06885019029,
+          "lane_flow_sse": 21504615.314749878,
+          "daily_State": 0.9354560356046225
+        },
+        {
+          "date": "2030-10-24",
+          "regime": "R2",
+          "n": 19553,
+          "speed_sse": 50198.590498800084,
+          "lane_flow_sse": 21242165.75492691,
+          "daily_State": 0.9401210472593413
+        },
+        {
+          "date": "2030-10-26",
+          "regime": "R2",
+          "n": 19746,
+          "speed_sse": 62306.12690847257,
+          "lane_flow_sse": 22220834.491188258,
+          "daily_State": 0.9359124886023025
+        },
+        {
+          "date": "2030-10-29",
+          "regime": "R2",
+          "n": 19448,
+          "speed_sse": 69583.42149252346,
+          "lane_flow_sse": 23636166.474814516,
+          "daily_State": 0.9324152902870162
+        },
+        {
+          "date": "2030-10-22",
+          "regime": "R3",
+          "n": 32690,
+          "speed_sse": 89406.1364720017,
+          "lane_flow_sse": 34289836.01950605,
+          "daily_State": 0.9394481860869159
+        },
+        {
+          "date": "2030-10-27",
+          "regime": "R3",
+          "n": 32735,
+          "speed_sse": 84936.70721036349,
+          "lane_flow_sse": 31573197.38248153,
+          "daily_State": 0.9413967104719133
+        },
+        {
+          "date": "2030-10-28",
+          "regime": "R3",
+          "n": 32835,
+          "speed_sse": 89062.90485309016,
+          "lane_flow_sse": 32633638.338295605,
+          "daily_State": 0.9402562452375725
+        }
+      ]
+    }
+  },
+  "assessment": {
+    "500k": {
+      "S_state": 0.9371958390220966,
+      "details": [
+        {
+          "panel": "D7_I210_E",
+          "regime": "R1",
+          "n": 78410,
+          "missing": 0,
+          "rmse_speed_kmh": 1.7376211243993553,
+          "rmse_flow_per_lane": 32.273744860662674,
+          "S_state": 0.9377241793197992
+        },
+        {
+          "panel": "D7_I210_E",
+          "regime": "R2",
+          "n": 97795,
+          "missing": 0,
+          "rmse_speed_kmh": 1.6068061977139017,
+          "rmse_flow_per_lane": 32.23293063899093,
+          "S_state": 0.9405810726394868
+        },
+        {
+          "panel": "D7_I210_E",
+          "regime": "R3",
+          "n": 98417,
+          "missing": 0,
+          "rmse_speed_kmh": 1.9567571303532683,
+          "rmse_flow_per_lane": 31.89362723134668,
+          "S_state": 0.9332822651070036
+        }
+      ],
+      "panels": {
+        "D7_I210_E": 0.9371958390220966
+      },
+      "families": {
+        "D7_I210": 0.9371958390220966
+      },
+      "congested_observation_proxy": {
+        "S_state": 0.8261233166138285,
+        "details": [
+          {
+            "panel": "D7_I210_E",
+            "regime": "R1",
+            "n": 699,
+            "missing": 0,
+            "rmse_speed_kmh": 6.822459053929748,
+            "rmse_flow_per_lane": 44.859681318086686,
+            "S_state": 0.8182424620912511
+          },
+          {
+            "panel": "D7_I210_E",
+            "regime": "R2",
+            "n": 845,
+            "missing": 0,
+            "rmse_speed_kmh": 2.027281700211582,
+            "rmse_flow_per_lane": 40.38889024058648,
+            "S_state": 0.9252458994243136
+          },
+          {
+            "panel": "D7_I210_E",
+            "regime": "R3",
+            "n": 801,
+            "missing": 0,
+            "rmse_speed_kmh": 10.733164756301504,
+            "rmse_flow_per_lane": 43.41137339734741,
+            "S_state": 0.7348815883259212
+          }
+        ],
+        "panels": {
+          "D7_I210_E": 0.8261233166138285
+        },
+        "families": {
+          "D7_I210": 0.8261233166138285
+        }
+      },
+      "free_observation_proxy": {
+        "S_state": 0.9399444867889857,
+        "details": [
+          {
+            "panel": "D7_I210_E",
+            "regime": "R1",
+            "n": 77711,
+            "missing": 0,
+            "rmse_speed_kmh": 1.6210524581464274,
+            "rmse_flow_per_lane": 32.13817705145303,
+            "S_state": 0.9403459978312566
+          },
+          {
+            "panel": "D7_I210_E",
+            "regime": "R2",
+            "n": 96950,
+            "missing": 0,
+            "rmse_speed_kmh": 1.6026565360953697,
+            "rmse_flow_per_lane": 32.152751424951575,
+            "S_state": 0.9407321760612106
+          },
+          {
+            "panel": "D7_I210_E",
+            "regime": "R3",
+            "n": 97616,
+            "missing": 0,
+            "rmse_speed_kmh": 1.7073437052247733,
+            "rmse_flow_per_lane": 31.781855859984923,
+            "S_state": 0.9387552864744898
+          }
+        ],
+        "panels": {
+          "D7_I210_E": 0.9399444867889857
+        },
+        "families": {
+          "D7_I210": 0.9399444867889857
+        }
+      },
+      "physics_diagnostics": [
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.33038627448309,
+          "observable_transitions": 28658,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.053286919770144,
+          "conservation_MAE_vehicles": 9.202877034461581,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.527431719127838,
+          "observable_transitions": 28582,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 20.22333420015233,
+          "conservation_MAE_vehicles": 9.562465315958415,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.54879571361477,
+          "observable_transitions": 28219,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 16.953251222148992,
+          "conservation_MAE_vehicles": 8.494834222950756,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.083596217838643,
+          "observable_transitions": 28445,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 20.94561866724522,
+          "conservation_MAE_vehicles": 9.126142646809404,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 12.073495883869628,
+          "observable_transitions": 28693,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 17.223056976618928,
+          "conservation_MAE_vehicles": 9.609973597570036,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.068995102895853,
+          "observable_transitions": 28378,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.339377810534224,
+          "conservation_MAE_vehicles": 8.241955529749145,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.580507069508375,
+          "observable_transitions": 28008,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 19.16500511530155,
+          "conservation_MAE_vehicles": 8.51002105658619,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.35497437803951,
+          "observable_transitions": 28051,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 19.023682573677355,
+          "conservation_MAE_vehicles": 8.502506020861313,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.733559991911292,
+          "observable_transitions": 28332,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 17.780887335706062,
+          "conservation_MAE_vehicles": 8.499454135737881,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.87293908281337,
+          "observable_transitions": 28603,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 17.99056970551541,
+          "conservation_MAE_vehicles": 8.626483605831352,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.849435228838189,
+          "observable_transitions": 27876,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 19.706807628995737,
+          "conservation_MAE_vehicles": 8.86063173690269,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 9.978108646180969,
+          "observable_transitions": 28915,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.964644848430893,
+          "conservation_MAE_vehicles": 7.620100770598724,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 8.994653982387206,
+          "observable_transitions": 28599,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 17.845201671245682,
+          "conservation_MAE_vehicles": 6.902536007509124,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 9.48790443439904,
+          "observable_transitions": 28388,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 17.053146414796693,
+          "conservation_MAE_vehicles": 6.995258589516104,
+          "below_50_vph_share": 0.0
+        }
+      ],
+      "n_targets": 274622,
+      "daily_sufficient_statistics": [
+        {
+          "date": "2030-10-30",
+          "regime": "R1",
+          "n": 13095,
+          "speed_sse": 33079.840177966995,
+          "lane_flow_sse": 13299242.601275817,
+          "daily_State": 0.9412368317202977
+        },
+        {
+          "date": "2030-11-01",
+          "regime": "R1",
+          "n": 13150,
+          "speed_sse": 45197.764936892796,
+          "lane_flow_sse": 14535406.926415447,
+          "daily_State": 0.9344656382046668
+        },
+        {
+          "date": "2030-11-03",
+          "regime": "R1",
+          "n": 12948,
+          "speed_sse": 34773.942409834264,
+          "lane_flow_sse": 12025227.13643899,
+          "daily_State": 0.9412376954283219
+        },
+        {
+          "date": "2030-11-04",
+          "regime": "R1",
+          "n": 13010,
+          "speed_sse": 34153.194749349816,
+          "lane_flow_sse": 13218533.996328045,
+          "daily_State": 0.9405653460113211
+        },
+        {
+          "date": "2030-11-09",
+          "regime": "R1",
+          "n": 13203,
+          "speed_sse": 54709.2568163777,
+          "lane_flow_sse": 16550255.286497233,
+          "daily_State": 0.9288869493443204
+        },
+        {
+          "date": "2030-11-10",
+          "regime": "R1",
+          "n": 13004,
+          "speed_sse": 34831.44446287419,
+          "lane_flow_sse": 12042767.213879943,
+          "daily_State": 0.9413181693773973
+        },
+        {
+          "date": "2030-10-31",
+          "regime": "R2",
+          "n": 19461,
+          "speed_sse": 50143.80315807635,
+          "lane_flow_sse": 20033851.495387677,
+          "daily_State": 0.9407295625303471
+        },
+        {
+          "date": "2030-11-02",
+          "regime": "R2",
+          "n": 19496,
+          "speed_sse": 50876.30180355961,
+          "lane_flow_sse": 19076435.281774923,
+          "daily_State": 0.9411251274939161
+        },
+        {
+          "date": "2030-11-06",
+          "regime": "R2",
+          "n": 19711,
+          "speed_sse": 51785.36364819828,
+          "lane_flow_sse": 19900109.13673996,
+          "daily_State": 0.9406289759179334
+        },
+        {
+          "date": "2030-11-07",
+          "regime": "R2",
+          "n": 19626,
+          "speed_sse": 51081.71106957982,
+          "lane_flow_sse": 21445833.635523878,
+          "daily_State": 0.939809343813121
+        },
+        {
+          "date": "2030-11-08",
+          "regime": "R2",
+          "n": 19501,
+          "speed_sse": 48602.50934555549,
+          "lane_flow_sse": 21149041.400614064,
+          "daily_State": 0.9406521815726308
+        },
+        {
+          "date": "2030-11-05",
+          "regime": "R3",
+          "n": 32760,
+          "speed_sse": 122375.28386036018,
+          "lane_flow_sse": 35232475.462042205,
+          "daily_State": 0.9331103042149947
+        },
+        {
+          "date": "2030-11-11",
+          "regime": "R3",
+          "n": 32830,
+          "speed_sse": 116367.3238334747,
+          "lane_flow_sse": 31807967.365682818,
+          "daily_State": 0.9354700050295333
+        },
+        {
+          "date": "2030-11-12",
+          "regime": "R3",
+          "n": 32827,
+          "speed_sse": 138086.09275144173,
+          "lane_flow_sse": 33069669.89551498,
+          "daily_State": 0.9313654666400693
+        }
+      ]
+    },
+    "full": {
+      "S_state": 0.938069201660075,
+      "details": [
+        {
+          "panel": "D7_I210_E",
+          "regime": "R1",
+          "n": 78410,
+          "missing": 0,
+          "rmse_speed_kmh": 1.7063230428193512,
+          "rmse_flow_per_lane": 31.99707263575237,
+          "S_state": 0.9386123332543586
+        },
+        {
+          "panel": "D7_I210_E",
+          "regime": "R2",
+          "n": 97795,
+          "missing": 0,
+          "rmse_speed_kmh": 1.5973368258810514,
+          "rmse_flow_per_lane": 31.967893657125295,
+          "S_state": 0.9409888060905066
+        },
+        {
+          "panel": "D7_I210_E",
+          "regime": "R3",
+          "n": 98417,
+          "missing": 0,
+          "rmse_speed_kmh": 1.9057470891439516,
+          "rmse_flow_per_lane": 31.603561616257636,
+          "S_state": 0.9346064656353599
+        }
+      ],
+      "panels": {
+        "D7_I210_E": 0.938069201660075
+      },
+      "families": {
+        "D7_I210": 0.938069201660075
+      },
+      "congested_observation_proxy": {
+        "S_state": 0.8382680438355504,
+        "details": [
+          {
+            "panel": "D7_I210_E",
+            "regime": "R1",
+            "n": 699,
+            "missing": 0,
+            "rmse_speed_kmh": 6.140646490510377,
+            "rmse_flow_per_lane": 44.46703245549267,
+            "S_state": 0.8332706442557649
+          },
+          {
+            "panel": "D7_I210_E",
+            "regime": "R2",
+            "n": 845,
+            "missing": 0,
+            "rmse_speed_kmh": 1.6817484129372606,
+            "rmse_flow_per_lane": 40.46753640520113,
+            "S_state": 0.9326491230365677
+          },
+          {
+            "panel": "D7_I210_E",
+            "regime": "R3",
+            "n": 801,
+            "missing": 0,
+            "rmse_speed_kmh": 10.091825044485976,
+            "rmse_flow_per_lane": 43.215932380153404,
+            "S_state": 0.7488843642143187
+          }
+        ],
+        "panels": {
+          "D7_I210_E": 0.8382680438355504
+        },
+        "families": {
+          "D7_I210": 0.8382680438355504
+        }
+      },
+      "free_observation_proxy": {
+        "S_state": 0.9404561471793711,
+        "details": [
+          {
+            "panel": "D7_I210_E",
+            "regime": "R1",
+            "n": 77711,
+            "missing": 0,
+            "rmse_speed_kmh": 1.6120027836131152,
+            "rmse_flow_per_lane": 31.862768462184746,
+            "S_state": 0.9407526173862818
+          },
+          {
+            "panel": "D7_I210_E",
+            "regime": "R2",
+            "n": 96950,
+            "missing": 0,
+            "rmse_speed_kmh": 1.596581490440446,
+            "rmse_flow_per_lane": 31.88385331212065,
+            "S_state": 0.9410695522671939
+          },
+          {
+            "panel": "D7_I210_E",
+            "regime": "R3",
+            "n": 97616,
+            "missing": 0,
+            "rmse_speed_kmh": 1.6810629711136973,
+            "rmse_flow_per_lane": 31.49056687735619,
+            "S_state": 0.9395462718846378
+          }
+        ],
+        "panels": {
+          "D7_I210_E": 0.9404561471793711
+        },
+        "families": {
+          "D7_I210": 0.9404561471793711
+        }
+      },
+      "physics_diagnostics": [
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.314485758480453,
+          "observable_transitions": 28658,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.036845089456246,
+          "conservation_MAE_vehicles": 9.176901646289375,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.505587945759768,
+          "observable_transitions": 28582,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 20.220905411272202,
+          "conservation_MAE_vehicles": 9.54331481339048,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.539132543905295,
+          "observable_transitions": 28219,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 16.944759477883483,
+          "conservation_MAE_vehicles": 8.473132519751992,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 11.05619568488179,
+          "observable_transitions": 28445,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 20.928396830072334,
+          "conservation_MAE_vehicles": 9.093889051499033,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 12.0285614416427,
+          "observable_transitions": 28693,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 17.22303410727606,
+          "conservation_MAE_vehicles": 9.603408649235703,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.053414639659602,
+          "observable_transitions": 28378,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.32280235282584,
+          "conservation_MAE_vehicles": 8.228092644811817,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.552230286494826,
+          "observable_transitions": 28008,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 19.145715262526057,
+          "conservation_MAE_vehicles": 8.482873887211154,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.337572930842715,
+          "observable_transitions": 28051,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 19.009240398773514,
+          "conservation_MAE_vehicles": 8.472658103716725,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.707245986857508,
+          "observable_transitions": 28332,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 17.75365985726802,
+          "conservation_MAE_vehicles": 8.459777391160742,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.831835234997287,
+          "observable_transitions": 28603,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 17.966792744368963,
+          "conservation_MAE_vehicles": 8.591217067733824,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 10.82367675242905,
+          "observable_transitions": 27876,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 19.695648779305824,
+          "conservation_MAE_vehicles": 8.822296547938977,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 9.888134201590304,
+          "observable_transitions": 28915,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 18.936012653618775,
+          "conservation_MAE_vehicles": 7.55375270123983,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 8.94423375942836,
+          "observable_transitions": 28599,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 17.817919591752645,
+          "conservation_MAE_vehicles": 6.845509887610308,
+          "below_50_vph_share": 0.0
+        },
+        {
+          "kind": "public_physics_diagnostic_only",
+          "diagnostic_version": 2,
+          "formal_S_physics": null,
+          "FD_mean_absolute_residual_per_lane": 9.421691725704324,
+          "observable_transitions": 28388,
+          "possible_transitions": 85239,
+          "conservation_RMS_vehicles": 17.03384818533503,
+          "conservation_MAE_vehicles": 6.937699591165321,
+          "below_50_vph_share": 0.0
+        }
+      ],
+      "n_targets": 274622,
+      "daily_sufficient_statistics": [
+        {
+          "date": "2030-10-30",
+          "regime": "R1",
+          "n": 13095,
+          "speed_sse": 33751.553745147015,
+          "lane_flow_sse": 13036416.315702828,
+          "daily_State": 0.9411326547363867
+        },
+        {
+          "date": "2030-11-01",
+          "regime": "R1",
+          "n": 13150,
+          "speed_sse": 44599.88422829483,
+          "lane_flow_sse": 14098839.133213352,
+          "daily_State": 0.9351170807399731
+        },
+        {
+          "date": "2030-11-03",
+          "regime": "R1",
+          "n": 12948,
+          "speed_sse": 34238.44443141963,
+          "lane_flow_sse": 11759979.884319376,
+          "daily_State": 0.9417704234423007
+        },
+        {
+          "date": "2030-11-04",
+          "regime": "R1",
+          "n": 13010,
+          "speed_sse": 33858.64586512657,
+          "lane_flow_sse": 13020798.088078568,
+          "daily_State": 0.9409000559098034
+        },
+        {
+          "date": "2030-11-09",
+          "regime": "R1",
+          "n": 13203,
+          "speed_sse": 47867.51030802032,
+          "lane_flow_sse": 16388441.321262475,
+          "daily_State": 0.9318610721063204
+        },
+        {
+          "date": "2030-11-10",
+          "regime": "R1",
+          "n": 13004,
+          "speed_sse": 33977.6815994293,
+          "lane_flow_sse": 11972675.712992862,
+          "daily_State": 0.9418220999880275
+        },
+        {
+          "date": "2030-10-31",
+          "regime": "R2",
+          "n": 19461,
+          "speed_sse": 49744.34015171075,
+          "lane_flow_sse": 19737523.26915256,
+          "daily_State": 0.9410505431524057
+        },
+        {
+          "date": "2030-11-02",
+          "regime": "R2",
+          "n": 19496,
+          "speed_sse": 50900.13322408525,
+          "lane_flow_sse": 18840825.02767819,
+          "daily_State": 0.9412655143740323
+        },
+        {
+          "date": "2030-11-06",
+          "regime": "R2",
+          "n": 19711,
+          "speed_sse": 50595.91238046123,
+          "lane_flow_sse": 19553154.009945594,
+          "daily_State": 0.9412466831151878
+        },
+        {
+          "date": "2030-11-07",
+          "regime": "R2",
+          "n": 19626,
+          "speed_sse": 50002.805625800764,
+          "lane_flow_sse": 21221065.84424132,
+          "daily_State": 0.9403124744058096
+        },
+        {
+          "date": "2030-11-08",
+          "regime": "R2",
+          "n": 19501,
+          "speed_sse": 48279.27786714602,
+          "lane_flow_sse": 20588662.91046391,
+          "daily_State": 0.941102498431453
+        },
+        {
+          "date": "2030-11-05",
+          "regime": "R3",
+          "n": 32760,
+          "speed_sse": 118665.10414531587,
+          "lane_flow_sse": 34354466.33547884,
+          "daily_State": 0.934063279784322
+        },
+        {
+          "date": "2030-11-11",
+          "regime": "R3",
+          "n": 32830,
+          "speed_sse": 109140.05231561857,
+          "lane_flow_sse": 31464790.743076432,
+          "daily_State": 0.9368821655232535
+        },
+        {
+          "date": "2030-11-12",
+          "regime": "R3",
+          "n": 32827,
+          "speed_sse": 129632.78699213322,
+          "lane_flow_sse": 32478176.780588035,
+          "daily_State": 0.9329614806432185
+        }
+      ]
+    }
+  },
+  "pooled_State_gain": 0.0008733626379784365,
+  "paired_day_interval": {
+    "paired_day_mean_gain": 0.0007776020752588113,
+    "ci95": [
+      0.0006216546992458946,
+      0.0009269672628051197
+    ],
+    "bootstrap_probability_gain_positive": 1.0,
+    "n_days": 14,
+    "block_days": 7,
+    "resamples": 4000,
+    "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+  },
+  "seconds": 358.9682307000039,
+  "source": {
+    "python": "3.13.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus": 16,
+    "process_peak_working_set_MiB": 2683.07421875,
+    "peak_scope": "current process lifetime, not isolated per model",
+    "source_sha256": "d5d4196e9efecfc63108e2540390e961fd3c9d277b3169d9dbc813b2e7ff47b0",
+    "model_threads": 4,
+    "gpu_used": false,
+    "versions": {
+      "numpy": "2.2.5",
+      "pandas": "3.0.5",
+      "scipy": "1.16.1",
+      "pyarrow": "25.0.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10",
+      "scikit-learn": "1.7.2"
+    }
+  },
+  "formal_State": null,
+  "formal_Physics": null,
+  "limitations": "Same-fold public-train development comparison, no latent labels/official flux. Existing assessment periods have been inspected."
+}

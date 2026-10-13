@@ -3,13 +3,15 @@ import pandas as pd
 import pytest
 from scipy import sparse
 from scipy.optimize import nnls
-from trafficflow.data import STATE_KEY,Release
+from trafficflow.data import STATE_KEY,Release,eligible
 from trafficflow.metrics import state_score,total_score,queue_iou,grouped_iou
 from trafficflow.odme import solve
 from trafficflow.submission import merge_files,validate_task
 from trafficflow.queue import queue_features
 from trafficflow.state import Profile,StateFeatures,StateModel,kalman_residual
 from trafficflow.fixture import make_fixture
+from trafficflow.experiments import evaluate_state,raw_for
+from trafficflow.research_eval import state_from_sufficient_stats
 from trafficflow.physics import conservation_operator
 from trafficflow.queue_calibration import decisions
 
@@ -100,6 +102,15 @@ def test_queue_rejects_future_and_historical_cutoff(fixture_release):
     origin=pd.Timestamp(h.timestamp.max())+pd.Timedelta(minutes=5)
     x=queue_features(h,target,r.network(p),r.topology(p),origin)
     assert len(x)==len(target)
+    # Only the channel shared with production window_history is required.
+    h['occupancy']=.15
+    h.loc[h.index[0],'pct_observed']=0.
+    h.loc[h.index[0],'is_score_eligible']=False
+    occ=queue_features(h,target,r.network(p),r.topology(p),origin,include_occupancy=True)
+    contaminated=h.copy()
+    contaminated.loc[h.index[0],'occupancy']=9999.
+    pd.testing.assert_frame_equal(occ,queue_features(contaminated,target,r.network(p),r.topology(p),origin,include_occupancy=True))
+    assert 'occupancy_current' in occ
     leaked=h.copy();leaked.iloc[-1,leaked.columns.get_loc('timestamp')]=origin.strftime('%Y-%m-%dT%H:%M:%SZ')
     with pytest.raises(ValueError,match='leakage'):
         queue_features(leaked,target,r.network(p),r.topology(p),origin)
@@ -108,7 +119,7 @@ def test_queue_rejects_future_and_historical_cutoff(fixture_release):
     assert len(at_origin)==len(target)
     leaked.iloc[-1,leaked.columns.get_loc('timestamp')]=(origin+pd.Timedelta(minutes=5)).strftime('%Y-%m-%dT%H:%M:%SZ')
     with pytest.raises(ValueError,match='leakage'):
-        queue_features(leaked,target,r.network(p),r.topology(p),origin,allow_origin=True)
+        queue_features(leaked,target,r.network(p),r.topology(p),origin,allow_origin=True,include_occupancy=True)
 
 def test_masked_features_cannot_access_target_truth(fixture_release):
     r=fixture_release;p=r.panels()[0]
@@ -122,6 +133,23 @@ def test_masked_features_cannot_access_target_truth(fixture_release):
     assert np.isfinite(prediction[['speed_kmh','flow_vph']]).all().all()
     # Extra blank horizon cells are excluded by the published template.
     assert len(target)<(masked.speed_kmh.isna()&masked.flow_vph.isna()&masked.is_score_eligible).sum()
+    channels=masked.copy()
+    channels['density_occ_linear_vehpkm']=channels.flow_vph/np.maximum(channels.speed_kmh,1.)
+    channels['occupancy']=channels.density_occ_linear_vehpkm/300.
+    extra=StateFeatures(channels,net,topo,profile,version=3)
+    poisoned=channels.copy()
+    poisoned.loc[~eligible(channels),['occupancy','density_occ_linear_vehpkm']]=9999.
+    pd.testing.assert_frame_equal(extra.features,StateFeatures(poisoned,net,topo,profile,version=3).features)
+    assert 'rho_occ_temporal' in extra.features
+
+def test_daily_state_statistics_pool_to_the_same_station_lane_score(fixture_release):
+    r=fixture_release;p=r.panels()[0]
+    paths=r.files(p,'train')
+    profile=Profile.fit(raw_for(r,p,paths[:3]))
+    score=evaluate_state(r,p,paths,StateModel(profile,'interpolation'),fd_bounds=True)
+    rows=score['daily_sufficient_statistics']
+    assert sum(row['n'] for row in rows)==score['n_targets']
+    assert state_from_sufficient_stats(rows)['S_state']==pytest.approx(score['S_state'],abs=1e-12)
 
 def test_strict_merge_rejects_missing_duplicate_and_nonbinary(tmp_path):
     truth=truth_frame();state=truth.iloc[:1].copy()

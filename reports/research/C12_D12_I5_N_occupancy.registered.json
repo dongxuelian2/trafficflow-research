@@ -1,0 +1,32 @@
+{
+  "protocol_sha256": "3f0bdc7f6697ac7a997ecd043a25a23396d213e97d608b08f96c1faccd98a749",
+  "protocol": {
+    "id": "C05_same_window_origin_inputs",
+    "panel": "D12_I5_N",
+    "fold": "rolling_autumn",
+    "methods": [
+      "before_T_400_23",
+      "before_T_600_63",
+      "at_T_400_23",
+      "at_T_600_63",
+      "at_T_occupancy_400_23",
+      "at_T_occupancy_600_63"
+    ],
+    "hypothesis": "Legal released T observations reduce age of the current estimate and expose early congestion.",
+    "no_future_inputs": true,
+    "label_source": "public train noisy observations, eligible future cells only",
+    "selection": "selection windows only, fit/refined threshold settings frozen before assessment",
+    "assessment_seeds": [
+      2909,
+      3253,
+      4001
+    ],
+    "formal_Queue": null,
+    "selection_per_condition": 30,
+    "assessment_per_condition": 20,
+    "fit_seed": 20261013,
+    "occupancy_feature_ablation": true,
+    "latest_valid_queue_bookkeeping_at_T": true,
+    "include_before_T_latest_bookkeeping_control": false
+  }
+}

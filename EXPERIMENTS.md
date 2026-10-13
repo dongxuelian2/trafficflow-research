@@ -35,6 +35,20 @@
 | D04 | 扩大独立 prior 失配分布 | 十方向、4 种 reverse noisy prior、3 assessment seed | Bayes 在 missing-prior-path 模拟下 .606048 vs Ridge .611359，负增益 | 50.28 秒 CPU；未解释正式全量退化，不以此调隐藏反馈 |
 | A16 | 冬季全标签 LGB 控制 | I5_N winter，全部 3,042,465 个标签 | State **.946854**，超过此前最佳冬季图组合 .944371 | 290.08 秒 CPU；强基线结论跨季节成立 |
 | C09–C11 | 扩大事件 cal 配额至每条件 30，assessment 至 20 | I5_N 秋/冬、I10_W 秋，实际配额由可用事件限制 | cal 选定候选未稳定改善；唯一 origin 的 at-T 配对 CI 均跨零 | 不晋级；保留 65 / 14 / 59 个唯一 origin 的按日 block 诊断 |
+| A17 | 冬季强 LGB 上重做图组合 | 同 A16，cal 选 graph FD α=.25 | State .946854 → .947299；日均增益 CI [−.000010,.000610] | 低于 .002 门槛，CI 跨零 |
+| A18 | 较大 I405_N 的全标签 LGB | 2,438,669 fitting labels，同 A12 | assessment State **.921455**，超过原图组合 .920775 | 245.22 秒 CPU |
+| A20 | I405_N 强 LGB 上重做图组合 | 同 A18，cal 选 graph FD α=.25 | assessment State **.922655**，增益 .001200 | 低于 .002 门槛 |
+| C12–C14 | occupancy 当前值/趋势/上游下游/速度密度一致性 | 同 C09–C11，全部特征 timestamp ≤T | I5_N 秋/冬去重代理增益 .062191 / .048073，CI 正；I10_W **−.050232** | 双方历史只用共同发布 occupancy，不使用 window_history 缺失的 density 字段 |
+| C15–C17 | 45 天 cal / 30 天 assessment；事件条件/正负类均衡损失 | I5_N 秋/冬、I10_W 秋；独立新开发划分 | cal 均选 occupancy 600/63；assessment .680572 / .658247 / .574586；I10_W before-T 400/23 为 .622312 | 更长 cal 未消除跨方向退化；事件权重候选未由 cal 选中 |
+| A19 | 全标签 direct density expectation 与 q/v 联合投影 | 同 A14；复用原 State 权重，仅拟合密度回归器 | cal State 选 .1，assessment .942174；joint 选 .5，State .940472、density L1 .727239 vs .771083 | 195.49 秒 CPU，峰值 2619 MiB；没有正式 Physics |
+| A23/A23b | 发布 occupancy/derived-density 的 State 树特征 | 同 A14，全 1,804,908 labels | A23 在拟合前因只读数组失败，保留；显式 copy 后 A23b State **.942621** vs .942340 | 219.06 秒 CPU；微小增益不晋级 |
+| C18/C19/C20 | 扩大合法训练事件预算 | 同 C15/C16/C17 的日期；fit 配额 500，spacing 30 分钟；assessment 仍六小时 | cal 选 occupancy，assessment I5_N 秋 .747888 / 冬 .725320；I10_W .657542 vs before-T .681712，仍退化 | 不将增加训练窗口视为增加独立事件样本 |
+| D05 | 坐标可识别性与完整网络负载诊断 | 公开网络/计数/本队两份 OD 预测 | 所有计数列模式均不同，**无重复列**；仍没有一般线性可识别的单独路径，max leverage 平均 .02779；K01 未计数链路负载漂移约 8.2% | 否定重复列猜想；大零空间来自线性组合，不读取隐藏 path truth |
+| A24/A25 | 与正式 500k 预算对应的强基线 / 第二个 full fit seed | I5_N autumn，同日期与模型参数 | 500k State .938184；full seed 20261029 .942295；seed 20261013 full .942340 | 145.94 / 200.76 秒 CPU；其余 seed 控制继续进行 |
+| A24–A28 汇总 | 三种子 500k vs 全标签配对 | I5_N autumn，同 14 assessment days | full 平均 pooled State 增益 **.003896**；平均跨 seed 的日均 gain .003146，block CI [.002445,.003846] | 三个 fit seed 不冒充 42 个独立日期；满足这一开发方向的 .002 门槛 |
+| C21/C22 | 合法公开 condition 与观测推导 condition 对照 | 同 C18/C19，所有窗口/标签匹配 | cal 仍选普通 occupancy；published-condition 候选没有稳定独立收益 | 保留失败，模型部署支持该显式可选标记但不默认开启 |
+| B02 | 学习 Δdensity 并固定可见观测的三对角同化 | 同 A14 全标签基线；public-train target-pair 标签、geometry 权重 | State 选 strength=0；joint 选 .1，assessment State .942160 vs .942340、density L1 .743408 vs .771083 | 317.45 秒 CPU；没有正式 Physics，可见锚硬固定 |
+| A29/A30 | 六个其他方向的 500k/full 对照 | autumn，同早期 profile / fit / selection / assessment | 运行中；完整标签一次加载，再按与旧函数相同的逐日 RNG 选 500k 子集 | 训练开始前源码 ZIP + 逐文件 SHA；每模型四线程，两套进程并行 |
 | K01 | 一次 OD-only 正式控制实验 | 同首轮所有 State / Queue 数值，全量 6,980,503 行 diff | **正式 Total 0.76474，下降 0.06466，拒绝晋级**；ref 57140644 | SHA 4976e6bc1fe45207b6ea05dda2031d7885c9b38e1d607efc62c97887ba1e9055 |
 | ENV01 | 独立 CUDA 环境 | Python 3.13.1 / RTX 4060 Laptop 8GB | torch 2.8.0+cu128 已安装；实际 CUDA 运算通过 | 当前沙箱临时目录访问失败，改为 E:\\ieee\\.cache\\build_tmp 后构建成功；原 .venv-repro 不修改 |
 

@@ -107,7 +107,7 @@ def kalman_residual(observed, prior, process=.025, measurement=.08):
 
 class StateFeatures:
     def __init__(self, frame: pd.DataFrame, net: pd.DataFrame, topo: pd.DataFrame, profile: Profile, version=2):
-        if version not in [1,2]:raise ValueError('Unknown state feature version')
+        if version not in [1,2,3]:raise ValueError('Unknown state feature version')
         self.version=version
         self.frame = frame.copy()
         self.net = net
@@ -223,6 +223,39 @@ class StateFeatures:
             fraction=np.divide(((self.raw[:,:,0]/vf)<=.6).sum(axis=1),valid.sum(axis=1),
                                out=np.full(len(self.times),np.nan),where=valid.sum(axis=1)>0)
             features['corridor_queue_fraction']=np.repeat(fraction,len(self.links))
+        if version>=3:
+            # All measurement channels are blanked together at Task 1 targets.
+            # Published occupancy supplies additional noisy density evidence.
+            for column,label,scale,per_lane in [('occupancy','occ',.25,False),
+                    ('density_occ_linear_vehpkm','rho_occ',25.,True)]:
+                if column not in frame:raise ValueError(f'Missing published State channel: {column}')
+                channel=frame[['timestamp','link_id',column]].copy()
+                channel.loc[~eligible(frame),column]=np.nan
+                values=channel.pivot_table(index='timestamp',columns='link_id',values=column,aggfunc='mean').reindex(index=self.times,columns=self.links).to_numpy(float,copy=True)
+                if per_lane:values/=lanes
+                tmp,age=temporal(values)
+                spatial=np.full_like(values,np.nan)
+                for t in range(len(self.times)):
+                    good=np.flatnonzero(np.isfinite(values[t]))
+                    if len(good):
+                        observed=values[t,good]*(lanes[good] if per_lane else 1)
+                        spatial[t]=np.interp(positions,positions[good],observed)/(lanes if per_lane else 1)
+                features[label+'_temporal']=tmp.ravel()/scale
+                features[label+'_age']=age.ravel()/60
+                features[label+'_spatial']=spatial.ravel()/scale
+                features[label+'_temporal_lag']=shifted(tmp,1).ravel()/scale
+                features[label+'_temporal_lead']=shifted(tmp,-1).ravel()/scale
+                for direction,side in [('incoming','up'),('outgoing','down')]:
+                    connected=neighbors(topo,self.links,direction)
+                    context=np.full_like(values,np.nan)
+                    for j,ns in enumerate(connected):
+                        if ns:
+                            selected=values[:,ns]
+                            count=np.isfinite(selected).sum(axis=1)
+                            context[:,j]=np.divide(np.nansum(selected,axis=1),count,out=np.full(len(self.times),np.nan),where=count>0)
+                    features[label+'_'+side]=context.ravel()/scale
+                    features[label+'_'+side+'_lag']=shifted(context,1).ravel()/scale
+                    features[label+'_'+side+'_lead']=shifted(context,-1).ravel()/scale
         dt=pd.to_datetime(grid.timestamp,utc=True)
         minute=dt.dt.hour*60+dt.dt.minute
         features['sin_tod']=np.sin(2*np.pi*minute/1440)

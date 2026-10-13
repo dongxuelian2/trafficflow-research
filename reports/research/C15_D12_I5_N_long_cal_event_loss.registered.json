@@ -1,0 +1,45 @@
+{
+  "protocol_sha256": "8c46a8dbfb402ad14aba72132c0f3da29ac4098829cacb42d8797453d30d6a3e",
+  "protocol": {
+    "id": "C05_same_window_origin_inputs",
+    "panel": "D12_I5_N",
+    "fold": "rolling_autumn",
+    "methods": [
+      "before_T_400_23",
+      "before_T_600_63",
+      "at_T_400_23",
+      "at_T_600_63",
+      "at_T_occupancy_400_23",
+      "at_T_occupancy_600_63",
+      "at_T_event_400_23",
+      "at_T_event_600_63",
+      "at_T_balanced_400_23",
+      "at_T_balanced_600_63"
+    ],
+    "fold_boundaries": {
+      "name": "rolling_autumn_long_cal",
+      "profile_end": "2030-07-15",
+      "fit_end": "2030-10-15",
+      "selection_end": "2030-11-29",
+      "assessment_end": "2030-12-29"
+    },
+    "hypothesis": "Legal released T observations reduce age of the current estimate and expose early congestion.",
+    "no_future_inputs": true,
+    "label_source": "public train noisy observations, eligible future cells only",
+    "selection": "selection windows only, fit/refined threshold settings frozen before assessment",
+    "assessment_seeds": [
+      2909,
+      3253,
+      4001
+    ],
+    "formal_Queue": null,
+    "selection_per_condition": 30,
+    "assessment_per_condition": 30,
+    "fit_seed": 20261013,
+    "occupancy_feature_ablation": true,
+    "event_loss_ablation": true,
+    "event_loss_hypothesis": "Condition/window-balanced losses can reduce domination by large ongoing queues. Class balancing can be harmed by noisy rare positives.",
+    "latest_valid_queue_bookkeeping_at_T": true,
+    "include_before_T_latest_bookkeeping_control": false
+  }
+}

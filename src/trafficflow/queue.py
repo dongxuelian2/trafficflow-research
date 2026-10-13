@@ -54,7 +54,7 @@ def road_context(stats,links,net,topo):
         stats[kind+'_ramp_count']=[len([s for s in str(topo.loc[link,field]).split(';') if s]) if link in topo.index and field in topo else 0 for link in links]
     return stats
 
-def queue_features(history,targets,net,topo,origin,allow_origin=False,latest_valid_queue=False):
+def queue_features(history,targets,net,topo,origin,allow_origin=False,latest_valid_queue=False,include_occupancy=False):
     origin=pd.Timestamp(origin)
     if origin.tzinfo is None:
         raise ValueError('Forecast origin must include timezone')
@@ -114,6 +114,33 @@ def queue_features(history,targets,net,topo,origin,allow_origin=False,latest_val
         for field in ['current','slope','flow_per_lane']:
             values=stats[field].to_numpy()
             stats[label+'_'+field]=[float(np.mean(values[idx])) if idx else np.nan for idx in ns]
+    if include_occupancy:
+        # window_history publishes occupancy but not its derived density.
+        # Use only the common released channel so training and inference agree.
+        occupancy=d['occupancy'].where(eligible(d))
+        measured=d.assign(_occupancy=occupancy)
+        occ=measured.pivot_table(index='timestamp',columns='link_id',values='_occupancy',aggfunc='mean').reindex(index=history_times,columns=links).to_numpy(float)
+        ov=np.isfinite(occ)
+        oi=np.maximum(np.max(np.where(ov,rows,-1),axis=0),0)
+        oc=ov.sum(axis=0)
+        recent_occ=ov&(minutes[:,None]>=-30)
+        on=recent_occ.sum(axis=0)
+        osx=np.where(recent_occ,xminutes,0).sum(axis=0)
+        osy=np.where(recent_occ,occ,0).sum(axis=0)
+        osxx=np.where(recent_occ,xminutes*xminutes,0).sum(axis=0)
+        osxy=np.where(recent_occ,xminutes*occ,0).sum(axis=0)
+        od=on*osxx-osx*osx
+        stats['occupancy_current']=np.where(oc>0,occ[oi,columns],np.nan)
+        stats['occupancy_age']=np.where(oc>0,-minutes[oi],65.)
+        stats['occupancy_mean30']=np.divide(osy,on,out=np.full(len(links),np.nan),where=on>0)
+        stats['occupancy_slope']=np.divide(on*osxy-osx*osy,od,out=np.zeros(len(links)),where=(on>1)&(od>0))
+        stats['occupancy_coverage']=oc/np.maximum(row_counts,1)
+        stats['occupancy_speed_density_ratio']=np.where(counts>0,flow/np.maximum(current*vf,1),np.nan)/np.maximum(stats.occupancy_current,.005)
+        for direction,label in [('incoming','up'),('outgoing','down')]:
+            ns=neighbors(topo,links,direction)
+            for field in ['occupancy_current','occupancy_slope']:
+                values=stats[field].to_numpy()
+                stats[label+'_'+field]=[float(np.nanmean(values[idx])) if idx and np.isfinite(values[idx]).any() else np.nan for idx in ns]
     stats=road_context(stats,links,net,topo)
     x=stats.reindex(targets.link_id).reset_index(drop=True)
     lead=(tt-origin).dt.total_seconds().to_numpy()/60
@@ -280,7 +307,11 @@ def predict_windows(release,panel,split,model):
             from .causal_queue import append_released_origin
             h=append_released_origin(h,release,panel,split,origin)
         x=queue_features(h,target,net,topo,origin,allow_origin=use_origin,
-                         latest_valid_queue=getattr(model,'latest_valid_queue_bookkeeping',False))
+                         latest_valid_queue=getattr(model,'latest_valid_queue_bookkeeping',False),
+                         include_occupancy=getattr(model,'uses_occupancy_features',False))
+        if getattr(model,'uses_published_condition',False):
+            if not hasattr(w,'condition'):raise ValueError('Published window condition is required')
+            x['condition_ongoing']=np.float32(str(w.condition)=='queue_ongoing')
         if hasattr(model,'classify'):
             if not hasattr(w,'condition'):
                 raise ValueError('Conditional calibration requires released window condition')

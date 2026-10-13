@@ -67,10 +67,14 @@ def main():
         score=lambda name:report['selection'][name]['metrics']['proxy_IoU']
         names=report['selection']
         baseline=max((n for n in names if n.startswith('before_T_') and not n.startswith('before_T_latest')),key=score)
-        at_t=max((n for n in names if n.startswith('at_T_')),key=score)
-        results.append({'report':path.as_posix(),'model_choice_source':'selection only; assessment choices unchanged',
+        at_t=max((n for n in names if n in ('at_T_400_23','at_T_600_63')),key=score)
+        result={'report':path.as_posix(),'model_choice_source':'selection only; assessment choices unchanged',
             'at_T_vs_before_T':comparison(report,baseline,at_t),
-            'selected_vs_before_T':comparison(report,baseline,report['selected'])})
+            'selected_vs_before_T':comparison(report,baseline,report['selected'])}
+        if any(n.startswith('at_T_occupancy') for n in names):
+            occ=max((n for n in names if n.startswith('at_T_occupancy')),key=score)
+            result['occupancy_vs_at_T']=comparison(report,at_t,occ)
+        results.append(result)
     args.output.write_text(json.dumps(results,indent=2),encoding='utf-8')
     for r in results:print(r['report'],r['at_T_vs_before_T']['paired_macro_gain'],r['at_T_vs_before_T']['ci95'],r['at_T_vs_before_T']['n_unique_origins'])
 
