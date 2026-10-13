@@ -1,0 +1,91 @@
+{
+  "split": "train",
+  "dataset": "fixture",
+  "Task1_train": {
+    "S_state": 0.9452016253289102,
+    "details": [
+      {
+        "panel": "D12_I5_N",
+        "regime": "R1",
+        "n": 4858,
+        "missing": 0,
+        "rmse_speed_kmh": 1.7184178704210495,
+        "rmse_flow_per_lane": 16.067732882202723,
+        "S_state": 0.9505635787892166
+      },
+      {
+        "panel": "D12_I5_N",
+        "regime": "R2",
+        "n": 7226,
+        "missing": 0,
+        "rmse_speed_kmh": 2.0956934641767524,
+        "rmse_flow_per_lane": 16.800106078017066,
+        "S_state": 0.9418529398473026
+      },
+      {
+        "panel": "D12_I5_N",
+        "regime": "R3",
+        "n": 12158,
+        "missing": 0,
+        "rmse_speed_kmh": 1.9151990077933592,
+        "rmse_flow_per_lane": 16.674926479490157,
+        "S_state": 0.945847591130721
+      },
+      {
+        "panel": "D7_I10_E",
+        "regime": "R1",
+        "n": 4918,
+        "missing": 0,
+        "rmse_speed_kmh": 1.6049884677079571,
+        "rmse_flow_per_lane": 21.136468682276803,
+        "S_state": 0.9491276231077626
+      },
+      {
+        "panel": "D7_I10_E",
+        "regime": "R2",
+        "n": 7330,
+        "missing": 0,
+        "rmse_speed_kmh": 1.9877158440446416,
+        "rmse_flow_per_lane": 22.12004501434571,
+        "S_state": 0.9401066365909708
+      },
+      {
+        "panel": "D7_I10_E",
+        "regime": "R3",
+        "n": 12156,
+        "missing": 0,
+        "rmse_speed_kmh": 1.8439059996251608,
+        "rmse_flow_per_lane": 21.469888566012067,
+        "S_state": 0.9437113825074873
+      }
+    ],
+    "panels": {
+      "D12_I5_N": 0.9460880365890801,
+      "D7_I10_E": 0.9443152140687402
+    },
+    "families": {
+      "D12_I5": 0.9460880365890801,
+      "D7_I10": 0.9443152140687402
+    }
+  },
+  "Task4_S_link": 0.9996367544707849,
+  "Task4_panels": {
+    "D12_I5_N": 0.9996321294966314,
+    "D7_I10_E": 0.9996413794449384
+  },
+  "formal_score_contract": {
+    "S_total": null,
+    "known_weighted_contribution": 0,
+    "unknown_components": [
+      "state",
+      "queue",
+      "physics",
+      "odme"
+    ],
+    "bounds": [
+      0,
+      1.0
+    ]
+  },
+  "note": "Local train metric and link fit do not determine the leaderboard total."
+}

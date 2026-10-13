@@ -1,0 +1,123 @@
+[
+  {
+    "command": [
+      "E:\\ieee\\.venv\\Scripts\\python.exe",
+      "E:\\ieee\\vendor\\official\\src\\task1\\build_task1_baseline_submission.py",
+      "--release-root",
+      "E:\\ieee\\artifacts\\fixture_v2",
+      "--split",
+      "train",
+      "--output",
+      "artifacts\\official_fixture_v2\\state.csv",
+      "--panel",
+      "D12_I5_N",
+      "--panel",
+      "D7_I10_E"
+    ],
+    "returncode": 0,
+    "stdout": "[Task1 submission] D7_I10_E\n  wrote 24,404 target rows\n[Task1 submission] D12_I5_N\n  wrote 24,242 target rows\nWrote 48,646 rows to E:\\ieee\\artifacts\\official_fixture_v2\\state.csv\n",
+    "stderr": "Failed to find real location of C:\\Users\\29848\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\n"
+  },
+  {
+    "command": [
+      "E:\\ieee\\.venv\\Scripts\\python.exe",
+      "E:\\ieee\\vendor\\official\\src\\task2\\build_task2_persistence_submission.py",
+      "--release-root",
+      "E:\\ieee\\artifacts\\fixture_v2",
+      "--split",
+      "train",
+      "--output",
+      "artifacts\\official_fixture_v2\\queue.csv"
+    ],
+    "returncode": 0,
+    "stdout": "Wrote 8,064 rows to E:\\ieee\\artifacts\\official_fixture_v2\\queue.csv\n",
+    "stderr": "Failed to find real location of C:\\Users\\29848\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\n"
+  },
+  {
+    "command": [
+      "E:\\ieee\\.venv\\Scripts\\python.exe",
+      "E:\\ieee\\vendor\\official\\src\\task4\\build_task4_odme_artifacts.py",
+      "--release-root",
+      "E:\\ieee\\artifacts\\fixture_v2",
+      "--split",
+      "train",
+      "--output-root",
+      "artifacts\\official_fixture_v2\\odme",
+      "--panel",
+      "D12_I5_N",
+      "--panel",
+      "D7_I10_E"
+    ],
+    "returncode": 0,
+    "stdout": "[Task4 ODME artifacts] D7_I10_E\n  paths=36, operator links=8\n[Task4 ODME artifacts] D12_I5_N\n  paths=36, operator links=8\nWrote artifacts to E:\\ieee\\artifacts\\official_fixture_v2\\odme\n",
+    "stderr": "Failed to find real location of C:\\Users\\29848\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\n"
+  },
+  {
+    "command": [
+      "E:\\ieee\\.venv\\Scripts\\python.exe",
+      "E:\\ieee\\vendor\\official\\src\\task1\\score_task1.py",
+      "--release-root",
+      "E:\\ieee\\artifacts\\fixture_v2",
+      "--split",
+      "train",
+      "--submission",
+      "artifacts\\official_fixture_v2\\state.csv",
+      "--output",
+      "artifacts\\official_fixture_v2\\state_official_score.csv",
+      "--panel",
+      "D12_I5_N",
+      "--panel",
+      "D7_I10_E"
+    ],
+    "returncode": 0,
+    "stdout": "[Task1 evaluator] D7_I10_E\n[Task1 evaluator] D12_I5_N\nWrote artifacts\\official_fixture_v2\\state_official_score.csv\nOverall S_state = 0.066917\n",
+    "stderr": "Failed to find real location of C:\\Users\\29848\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\n"
+  },
+  {
+    "command": [
+      "E:\\ieee\\.venv\\Scripts\\python.exe",
+      "E:\\ieee\\vendor\\official\\src\\task4\\score_task4.py",
+      "--release-root",
+      "E:\\ieee\\artifacts\\fixture_v2",
+      "--split",
+      "train",
+      "--submission",
+      "artifacts\\official_fixture_v2\\odme\\baseline_submission.csv",
+      "--output",
+      "artifacts\\official_fixture_v2\\odme_link_score.csv",
+      "--panel",
+      "D12_I5_N",
+      "--panel",
+      "D7_I10_E"
+    ],
+    "returncode": 0,
+    "stdout": "[Task4 link fit] D7_I10_E\n[Task4 link fit] D12_I5_N\nWrote artifacts\\official_fixture_v2\\odme_link_score.csv\nOverall S_link = 0.999637\nS_link is 25% of Task 4. S_od, S_dev and S_attr need the withheld path flows and are scored only on the leaderboard.\n",
+    "stderr": "Failed to find real location of C:\\Users\\29848\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\n"
+  },
+  {
+    "command": [
+      "E:\\ieee\\.venv\\Scripts\\python.exe",
+      "E:\\ieee\\vendor\\official\\src\\task3\\score_task3.py",
+      "--release-root",
+      "E:\\ieee\\artifacts\\fixture_v2",
+      "--split",
+      "train",
+      "--state-submission",
+      "artifacts\\official_fixture_v2\\state.csv",
+      "--output",
+      "artifacts\\official_fixture_v2\\physics_diagnostic_NOT_FORMAL.csv",
+      "--panel",
+      "D12_I5_N",
+      "--panel",
+      "D7_I10_E"
+    ],
+    "returncode": 0,
+    "stdout": "[Task3 LWR/FD evaluator] D7_I10_E\n[Task3 LWR/FD evaluator] D12_I5_N\nWrote artifacts\\official_fixture_v2\\physics_diagnostic_NOT_FORMAL.csv\nOverall S_physics = 0.293888\n",
+    "stderr": "Failed to find real location of C:\\Users\\29848\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\n"
+  },
+  {
+    "task3": "uses the same state.csv; formal score unknown, public diagnostic is not a leaderboard score",
+    "task2_score": null,
+    "task4_total": null
+  }
+]
