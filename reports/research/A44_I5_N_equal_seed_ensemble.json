@@ -1,0 +1,2363 @@
+{
+  "registered": {
+    "protocol_sha256": "11ca7b4b2cdb394cb4926751ddf64ac7a248aa815cf32eadba3a02388cd5d72e",
+    "protocol": {
+      "id": "Fixed_equal_seed_adaptive_State_ensemble",
+      "members": [
+        {
+          "study": "artifacts/research/A33_adaptive_attention_strong_autumn",
+          "seed": 20261013,
+          "selected": {
+            "name": "adaptive_attention_density",
+            "alpha": 0.75,
+            "selection_State": 0.9589775976903283
+          },
+          "model_sha256": "d5067934dec3facdf66ca1f4d22089aa69e646c9329a63ddbaeabfabc0d83cef",
+          "baseline_sha256": "578fc2ccf4284b5e5bcb749b27673f83051488917e2e9265f3d70c6a10a7c9a3"
+        },
+        {
+          "study": "artifacts/research/A35_adaptive_attention_autumn_seed20261029",
+          "seed": 20261029,
+          "selected": {
+            "name": "adaptive_attention_density",
+            "alpha": 0.75,
+            "selection_State": 0.9585345299474645
+          },
+          "model_sha256": "2468fac035e1967db1a6f8dc079cbe55ffe687fa1e192384e2ef903805bfd41d",
+          "baseline_sha256": "18c234a6f00fc90b6ed246677c11f4fdbe8a22b9766f400f05769c904fedb542"
+        },
+        {
+          "study": "artifacts/research/A41_adaptive_attention_autumn_seed20261107",
+          "seed": 20261107,
+          "selected": {
+            "name": "adaptive_attention",
+            "alpha": 0.75,
+            "selection_State": 0.958522858308439
+          },
+          "model_sha256": "3959ff1bbd63866d298ca32ae00f1fee12fe3ff1459f692400b2039a402b041a",
+          "baseline_sha256": "1a3da64d6a73c05489d40fa80da98342df8d8fd52ab737d7ebc17dc43e304332"
+        }
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "baseline_weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "selection": "Member checkpoints/architectures/alpha fixed on original calibration; equal weights predetermined here, no assessment selection",
+      "baseline": "Mean predictions of the same full-label LGB fit seeds, not a single seed",
+      "seed_uncertainty": "Average member daily statistics before block resampling; shared dates are not independent samples",
+      "assessment_status": "Previously inspected public-train development dates; not final blinded data",
+      "formal_State": null,
+      "formal_Physics": null,
+      "formal_Total": null
+    }
+  },
+  "source_snapshot": {
+    "archive": "artifacts/research/A44_I5_N_equal_seed_ensemble/source_snapshot.zip",
+    "archive_sha256": "50d8fc86e4db69c9ff840b982054b917d850740e761efe4c67b3f93d35421f07",
+    "captured_files": [
+      {
+        "path": "config/research_protocol_v2.json",
+        "sha256": "dd7318f99e56b826d42eac58ab9c3213803db8f6c740ed843d95879835703121"
+      },
+      {
+        "path": "config/research_targets.json",
+        "sha256": "9a524c7c728cf6ed7ab4920592541e38fe720b36a0879c6f488a77b833e3452f"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "8cd1033d7ceeaa616319d900e5a9990445f3881665420cf4cd9715941b0e52f5"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "db90c0f17353c586ec2b51f9f42748c254e2e6563e7aebff81b7dbf9a3e82ccd"
+      },
+      {
+        "path": "requirements.lock.txt",
+        "sha256": "f4c8602ed3a0c29541e42d23547672864aa487fe2fcf24f8cf2d140f53c16fde"
+      },
+      {
+        "path": "requirements.research.lock.txt",
+        "sha256": "12f5a3bd24e186a0c71512b18eea44548159ec37088546efd7cc3c14c95fae8c"
+      },
+      {
+        "path": "scripts/adaptive_graph_experiment.py",
+        "sha256": "20f067bb639496004300446f8ba8705824cae80b2e91225e5fe6abcb609a3570"
+      },
+      {
+        "path": "scripts/adaptive_graph_transfer.py",
+        "sha256": "b50f19a6427d6c3d7e8facddb071dbc22dc5cf3641b10f889dc2b4bfb2d40ec8"
+      },
+      {
+        "path": "scripts/adaptive_seed_ensemble_experiment.py",
+        "sha256": "3cf00abec0e697a7631c9b16d259ff4c966c88dfad5d23550834edf14999a1c3"
+      },
+      {
+        "path": "scripts/assemble_campaign.py",
+        "sha256": "e5b103ba8501775e049e14c89e3854e5e2a56b93942505330b5317d8023d6a5d"
+      },
+      {
+        "path": "scripts/assess_adaptive_ablation.py",
+        "sha256": "1ae73d734afe77a227629254cb67e002045a2894f094ed6bcc3e094d9297f442"
+      },
+      {
+        "path": "scripts/assess_joint_density.py",
+        "sha256": "92258a57238facc5153cc8c98c422ed71e92f69b0ae4ecada5a4edf77f00c2e6"
+      },
+      {
+        "path": "scripts/audit_kaggle_baseline.py",
+        "sha256": "3a8f78d8cb154fb1d4b25ed902d81e44b9665f4628162f3342641071b679193a"
+      },
+      {
+        "path": "scripts/audit_od_identifiability.py",
+        "sha256": "bce792650d2dfc0a5268a9e012aeaa846c87715620ee3e3e3a6e0659d4885c36"
+      },
+      {
+        "path": "scripts/audit_physics_topology.py",
+        "sha256": "5afabe6d2e6920fdda75988c936d44adcabbb3f57110552d4c269ea7949d308a"
+      },
+      {
+        "path": "scripts/audit_queue_origin.py",
+        "sha256": "dba7d16f51c6df6c6506a9e418d5aa3e3d7bdbe1693253772266bd170e36c242"
+      },
+      {
+        "path": "scripts/audit_released_onset_timing.py",
+        "sha256": "2cebf3e33c09f3a0f5e0f8e199ef58c84f0d39a93cfd303bf0f9e4b1e7647f68"
+      },
+      {
+        "path": "scripts/build_adaptive_state_candidate.py",
+        "sha256": "c2cb1fd567c1b8fd9ae22871407610d2393ea33ac9693f9cee655e3e9a50a337"
+      },
+      {
+        "path": "scripts/build_bayesian_od_candidate.py",
+        "sha256": "5cc8d8b513e668e269510447c508facd640f97b85335da77d69f3e289bb9a8be"
+      },
+      {
+        "path": "scripts/build_onset_timing_candidate.py",
+        "sha256": "8a5486d7e8b7c9dba17e2c163fd76f122f2e38becae95abd769eefca7851b86d"
+      },
+      {
+        "path": "scripts/campaign.py",
+        "sha256": "06cea939655896f9cef2ad404491d9418313c5cf1f0e525b20288a855a774418"
+      },
+      {
+        "path": "scripts/capture_environment.py",
+        "sha256": "5be825c14d82da31a2ca57459f8c6eead4f13ba2030f5488c465388a8e82d4f8"
+      },
+      {
+        "path": "scripts/causal_graph_queue_experiment.py",
+        "sha256": "f5d357a5f568172ad1dbbe1959a6642607e9474c8f6341fe12a87a3d8be58767"
+      },
+      {
+        "path": "scripts/check_public_competition.py",
+        "sha256": "5c69ba4b041bc668b6cfad397fe2c9c584003910757e68908137e320d92c0a64"
+      },
+      {
+        "path": "scripts/compare_queue_events.py",
+        "sha256": "d9d2e9e47eb2f21b1738d4e2d1ba762a776fc849bbfc4bde4c1fc8785b068194"
+      },
+      {
+        "path": "scripts/compare_state_direction_budgets.py",
+        "sha256": "47ff0bb82e2500aace15a72ca80b76719b657dd06492b8b60b09b31fce2803e4"
+      },
+      {
+        "path": "scripts/compare_state_label_budgets.py",
+        "sha256": "b7c27482c11904cbc0aa06fc86cfd692037e057985acdb93f00ff4e38da81b40"
+      },
+      {
+        "path": "scripts/cross_corridor_transfer.py",
+        "sha256": "e3ef2d288bfc617ea7985712be7c714de9e36ed947b59bc2bd81e3e5113b7c6a"
+      },
+      {
+        "path": "scripts/density_increment_experiment.py",
+        "sha256": "7c76be4eb9f893ff71a70f62ae47ac4f7b8cba8a8add1da1a9ebdbba074552fa"
+      },
+      {
+        "path": "scripts/density_interpolation_experiment.py",
+        "sha256": "98b586eed1bf49beea00db0b5b0473b6159d2e6e198bad4f7b9902a9847d6903"
+      },
+      {
+        "path": "scripts/diagnose_adaptive_scenarios.py",
+        "sha256": "fd73578210b6ab6a51984019f86d16f9c9fdd088ebc72261da20295ed692b0fe"
+      },
+      {
+        "path": "scripts/diagnose_failed_od_control.py",
+        "sha256": "bed0ecbfa0b21880ad852919b0285280fa2659f95c9a6513840baf3e22ab7b58"
+      },
+      {
+        "path": "scripts/diagnose_graph_density.py",
+        "sha256": "f6e48f203331ed2dddbd6917d2932fc8682cf4daa9da8d6e9a5c7ee52e75116f"
+      },
+      {
+        "path": "scripts/download_data.py",
+        "sha256": "c746052ff8192acd1679976da70faf2f54ae94d2370e2dda4e105bca08fee4b9"
+      },
+      {
+        "path": "scripts/export_adaptive_state_model.py",
+        "sha256": "631e109610a04aa4a5b0cef3b6b0a22e3acca28ea1f08659669bf55c2e7ca089"
+      },
+      {
+        "path": "scripts/freeze_first_submission.py",
+        "sha256": "17eb0cf856c43a0199c0bf73fcc4d100c76d818b2d1130f00b16f466bc4cc6cb"
+      },
+      {
+        "path": "scripts/freeze_research_models.py",
+        "sha256": "fd75a0e4f22f648e7daf55c8374aa9d174d11f0659b74d12665b800d09e4202c"
+      },
+      {
+        "path": "scripts/inspect_official_release.py",
+        "sha256": "17bc64125a2843f2af1eefc01ef22e930c22201df997eec99bedd021d1e32c7f"
+      },
+      {
+        "path": "scripts/large_baseline_graph_comparison.py",
+        "sha256": "ab3f399a46ca8366418ccca2a748124cd706a176706a20d7b491242c810ed75b"
+      },
+      {
+        "path": "scripts/od_prior_misspecification.py",
+        "sha256": "053dc64b2e9b8fb04ac1514d9991d8ddcbae9ab677e69a8dbc7fbd77045a7917"
+      },
+      {
+        "path": "scripts/od_probability_experiment.py",
+        "sha256": "fbb8ade089cec3fdd03b6f40687b4f8ef022c7766dc7c1c4011e6b7df3326c00"
+      },
+      {
+        "path": "scripts/physics_tradeoff.py",
+        "sha256": "b653cf6254196850113cbdb61a1afb5bf184900e6a5ad5d07a24151436e6c9f9"
+      },
+      {
+        "path": "scripts/plot_matched_research_comparisons.py",
+        "sha256": "bb2cdab5325243359d6a53f27c1814851b38d6ab85b3f0167d561c2995f19bef"
+      },
+      {
+        "path": "scripts/plot_strong_baseline_comparison.py",
+        "sha256": "060b1292bc663f0ba5d1fd352afd30fb0edc5badc83c1a42b3e4b4b23435c10b"
+      },
+      {
+        "path": "scripts/prepare_graph_experiment.py",
+        "sha256": "86a2d2bcc60c9cd408839d8883834aa75c089c176257bed551ff1d028ee320ac"
+      },
+      {
+        "path": "scripts/prepare_production_graph_state.py",
+        "sha256": "af640a34bf6f44a42e08fd50c06d9585acc1adadd160db867e4551ea16a71525"
+      },
+      {
+        "path": "scripts/promote_models.py",
+        "sha256": "b41f8af5fb9f5394595a1c1ded9b534ed89d2c41b85b7a3e3788b2d275c71339"
+      },
+      {
+        "path": "scripts/queue_event_experiment.py",
+        "sha256": "520d24e1f1e5fcde8166f3df16f437276b7185665a8e9394c6ac59a4823b0242"
+      },
+      {
+        "path": "scripts/queue_origin_experiment.py",
+        "sha256": "7cd00e8b0134ed1282353e9162ce6af7da20d1a3d0739ab2ec12b43f79891954"
+      },
+      {
+        "path": "scripts/queue_refinement.py",
+        "sha256": "4747af3e5e09d4e23b7d28856ed66732e54ad1d3586b7df067eb49aeffcc1dd1"
+      },
+      {
+        "path": "scripts/queue_research.py",
+        "sha256": "34e3fe815c5130431a512df258cfbfd0cb39c7b64b769950d76f20a9983fff5a"
+      },
+      {
+        "path": "scripts/queue_specialist_experiment.py",
+        "sha256": "b7f8ab609aa392a1308117e827919692dbe60137185fb6ec68a2334cbddaedc4"
+      },
+      {
+        "path": "scripts/queue_weight_calibration_experiment.py",
+        "sha256": "f2545c56581b388e724327a4c623d89ae18ea07efcc80d63e3e66fc94c6ce48d"
+      },
+      {
+        "path": "scripts/read_public_pages.py",
+        "sha256": "2056d46920d3b9f73b1268b86d122ac4daf318e72c298527b4b66376ac26e165"
+      },
+      {
+        "path": "scripts/record_formal_scores.py",
+        "sha256": "ee78da8b99edc9928c781c341f05af33dd28098ae313113879e8b3e3aad5fa0f"
+      },
+      {
+        "path": "scripts/record_local_state_controls.py",
+        "sha256": "55c6c8b9218207fbd51d0c1d3238c653272c0ed319064928065125eb98dbad9b"
+      },
+      {
+        "path": "scripts/record_onset_control_bounds.py",
+        "sha256": "0f18f8290e22a3a9b15f4287416bc9cbcf071a106d46909ee1962a5f1cc7f728"
+      },
+      {
+        "path": "scripts/refine_queues.py",
+        "sha256": "4af45c3a458feec60d6f7786166ef2cf0fb747fce492955ec4112312352f665d"
+      },
+      {
+        "path": "scripts/register_research_protocol.py",
+        "sha256": "2367504189c87f2103e10dfd99147ffcc9beba2f9d82409c38e92d4c5e2c3077"
+      },
+      {
+        "path": "scripts/run_official_diagnostics.py",
+        "sha256": "73221ca5f6014f8d7a011698fe0845d9448581c3896855b7dc19e1f47873a7e8"
+      },
+      {
+        "path": "scripts/run_official_state_baselines.py",
+        "sha256": "3ddd7eea81f350d50973813c50e4c0d90a184624d271aa64859c1c74c33a9e70"
+      },
+      {
+        "path": "scripts/scenario_audit.py",
+        "sha256": "3e2d7151d7587199aa672b78eee9dfbbfb8ac82e038afb22eb09f3488e1c7a19"
+      },
+      {
+        "path": "scripts/simulate_stress.py",
+        "sha256": "d0c4697c44f1c65848d83c1e396b9562d4151ad294f560b1576bcc6c49012140"
+      },
+      {
+        "path": "scripts/stage_zip_panel.py",
+        "sha256": "4ec5b59e058c52012bda91ff140fbc9620209bbf114aa5eb5ffbc259b4c69c15"
+      },
+      {
+        "path": "scripts/state_budget_suite.py",
+        "sha256": "d6fd23b3aacd79a6cdad38bbf0f3d845e0307dc4b4b7471ef279980035652477"
+      },
+      {
+        "path": "scripts/state_label_budget_control.py",
+        "sha256": "7cb05ba6e67f39106ea009468ce9215aebab9aec0c9a90295fe8641d3c7e4dbd"
+      },
+      {
+        "path": "scripts/state_research.py",
+        "sha256": "7f9043c7d753a5a6540ef81291ae7e3e00879ca330aea94f833b7017f29a759e"
+      },
+      {
+        "path": "scripts/strong_density_state_experiment.py",
+        "sha256": "faa4e2a0cb63a2e053ecf20a6a77a8c9c4f74960c3d39e145c9c0e41f138a7de"
+      },
+      {
+        "path": "scripts/submit_controlled_candidate.py",
+        "sha256": "72c67e384f488fd5e7afa454526e42aab56b43aef7d3671d91acf04a42997876"
+      },
+      {
+        "path": "scripts/summarize_adaptive_research.py",
+        "sha256": "a10e9fa3adce618d76b113d447f7ffe8e00d89aa6527ac4694bde9e63e3d3227"
+      },
+      {
+        "path": "scripts/summarize_campaign.py",
+        "sha256": "e09f36b6188d6a23698f0a27873fece09ba6fd3db1e2cd5ae767e4865d7c101f"
+      },
+      {
+        "path": "scripts/summarize_research_v2.py",
+        "sha256": "4f2239fb78d2d88de9117d289099874b41dc6f017b6c104e557cad168b0a8f17"
+      },
+      {
+        "path": "scripts/summarize_results.py",
+        "sha256": "3ede418e5a835ad3956b0332c335a54a4157654be9db16d4cde6411b5b12880c"
+      },
+      {
+        "path": "scripts/train_graph_experiment.py",
+        "sha256": "7036d5b3f14d5dd39de22b1aa94284285010359114deb3f38ead5461b6e5e04e"
+      },
+      {
+        "path": "scripts/train_production_adaptive_state.py",
+        "sha256": "6982e036ade77a7d8c5a950572619c5a9655d47c142fbce3cb125404955fed9d"
+      },
+      {
+        "path": "scripts/verify_controlled_candidate.py",
+        "sha256": "bc2c4155403cd3af602dbbed3328590b5dd86bbf446183ec394744684f752df9"
+      },
+      {
+        "path": "scripts/verify_graph_repeat.py",
+        "sha256": "2ec216b7fe481f52199b92b28baa40efbe3bde74ae19a17a86904d6f7d1189e9"
+      },
+      {
+        "path": "scripts/verify_queue_shared_repeat.py",
+        "sha256": "dd14df8d431667ffba2b6b9eb82a8e5169b6a57d4ee7e8e96dba40d2c25296d2"
+      },
+      {
+        "path": "scripts/verify_vendor.py",
+        "sha256": "232658ffcb66d34aea7c686d64e20bad86f7c172b0f900114dd683c5fd90bb85"
+      },
+      {
+        "path": "scripts/write_results.py",
+        "sha256": "efb8a4e80afdfaca2096ea7d2f65743e863b38c18dc41bac52fcdce07a70c83d"
+      },
+      {
+        "path": "src/trafficflow/__init__.py",
+        "sha256": "6432d23e18693162d87e81e22ac8f25158369302b9dc209d21154dba1351e7a8"
+      },
+      {
+        "path": "src/trafficflow/__main__.py",
+        "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+      },
+      {
+        "path": "src/trafficflow/adaptive_graph_state.py",
+        "sha256": "b098d10a76041ad6215b869b00dc6f71521852286bb0eaed418917e3cc2c8744"
+      },
+      {
+        "path": "src/trafficflow/bayesian_od.py",
+        "sha256": "5c5c76ab2848437af546a5fc3985f568b61c7a39dd3dbdf2a5551e266f1a1139"
+      },
+      {
+        "path": "src/trafficflow/causal_queue.py",
+        "sha256": "b12f3098ce79dc465545106b6d429fce2818499edd518f1909047b3ccbcda1b2"
+      },
+      {
+        "path": "src/trafficflow/cli.py",
+        "sha256": "8bb044f21541e3d0f639f01e20fc47a358152ec0c918ae4d644e73c96d7e73d3"
+      },
+      {
+        "path": "src/trafficflow/data.py",
+        "sha256": "f29fe070b21ac692b2cf9bd6d5b5fd018e94129b9626588325dd48edbd941ccd"
+      },
+      {
+        "path": "src/trafficflow/density_assimilation.py",
+        "sha256": "bbf771ae2d6ca93030aca029f3428fbb3f214cf4a5e39dca79925f08f7a30b46"
+      },
+      {
+        "path": "src/trafficflow/density_state.py",
+        "sha256": "ae91308f12b0c13d43f149d936a7c11704f712390f2fb593fbea5f053ff6a4b2"
+      },
+      {
+        "path": "src/trafficflow/digital_twin.py",
+        "sha256": "cfacb280f971faedceb2e404b35889891eef536a24a070804757ab6d92c49655"
+      },
+      {
+        "path": "src/trafficflow/experiments.py",
+        "sha256": "854abf59d2c560f84c704090741d6f8fce4ce6725d8a39139412194cc362a6ec"
+      },
+      {
+        "path": "src/trafficflow/fixture.py",
+        "sha256": "0709326abd7206a7ca1c3414dbb95c2d8c08749484802e2523d49c1ee7a2ef24"
+      },
+      {
+        "path": "src/trafficflow/graph_queue.py",
+        "sha256": "eaf91b8825c5f3e6491fb09413d9c5b8cdee04ecfd9c05feb6be5e8b00f65c46"
+      },
+      {
+        "path": "src/trafficflow/graph_state.py",
+        "sha256": "b32b4b81b7292472fab1eabbe183ebaae6ab295c6c7eb5ad4951719bfd8418cc"
+      },
+      {
+        "path": "src/trafficflow/increment_state.py",
+        "sha256": "52c6eb6a5cf959ac050f237a84cc8c487fae086fcec61a5aeac2fa5997185ea3"
+      },
+      {
+        "path": "src/trafficflow/metrics.py",
+        "sha256": "5f42eaa372894edfa1363135b61818e7ec4bf56110257a03aadf07de770aa346"
+      },
+      {
+        "path": "src/trafficflow/odme.py",
+        "sha256": "e61df62cbf3ff4af03069d6e028b2024ddee25578cc00558b2b04148370850ee"
+      },
+      {
+        "path": "src/trafficflow/physics.py",
+        "sha256": "3f559ca30157ebee155bb17ebdd42f0dc43a169ef6b45634ad875569beb03e30"
+      },
+      {
+        "path": "src/trafficflow/probability_calibration.py",
+        "sha256": "57f7c5487983a2572851331b20591ac21db15591d1dc85745706147ce3a657c7"
+      },
+      {
+        "path": "src/trafficflow/queue.py",
+        "sha256": "62c35a4ed8e1e882d386461aba41cf8f5f3ed809451e51008e34f23e211240c5"
+      },
+      {
+        "path": "src/trafficflow/queue_calibration.py",
+        "sha256": "645cfb0a15418f23b0b04354600d08ef831a6db49197e149e984074fc414392d"
+      },
+      {
+        "path": "src/trafficflow/queue_event_loss.py",
+        "sha256": "5b155f8255080e0ee8823ab366ce8f7dfb1f2d067c196109834e0338395b631c"
+      },
+      {
+        "path": "src/trafficflow/queue_events.py",
+        "sha256": "10051eb26948ea7fbec94dd1cd4e37d68c4c0703efb152f35d03ebee372e25bb"
+      },
+      {
+        "path": "src/trafficflow/queue_specialist.py",
+        "sha256": "915fce272c5d1c88eee37960cc5b1dee305119603509bb8bdc881bf6f64b303b"
+      },
+      {
+        "path": "src/trafficflow/research_eval.py",
+        "sha256": "197aa2c4d6091dbd551ca6d11f8a664e9feaa44c1fcaf568ec873185315ab3c9"
+      },
+      {
+        "path": "src/trafficflow/runtime.py",
+        "sha256": "c181d87a89ff8fa7ee92c00759e2674d77cd60a3ed0d407f1e52f0d2b95d197f"
+      },
+      {
+        "path": "src/trafficflow/state.py",
+        "sha256": "f7a8341d968ac55a6f87e01a439ce8dc8c014750afa61129c7175e733de23c17"
+      },
+      {
+        "path": "src/trafficflow/state_ensemble.py",
+        "sha256": "2bbfa587a79401c90a43502faa5410e5323b11cafe36a02b9ce244e8fae8d749"
+      },
+      {
+        "path": "src/trafficflow/submission.py",
+        "sha256": "87607c555e86f020e83f1ed9ac4054e49f88dc35eedd36cd8bf8ba442f85f2dc"
+      },
+      {
+        "path": "vendor/official/src/merge_submissions.py",
+        "sha256": "a8cd6c4c9f2cea777fde8f6b163c00835a4fb45672998b9fc71368810e792ee1"
+      },
+      {
+        "path": "vendor/official/src/release/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/release/score_overall.py",
+        "sha256": "b9b73e174eeb1ed742dd9cbd558f6b280a0bd14e7ec7001feb549f1b5fb9b4ee"
+      },
+      {
+        "path": "vendor/official/src/score_overall.py",
+        "sha256": "4a28d57a23950554a065f6254bf674f4a1b58b5d039f26bc5154dd28d28651fb"
+      },
+      {
+        "path": "vendor/official/src/task1/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_historical_mean.py",
+        "sha256": "66569dd55340d5e4509712e66172ea669893d7341a0ef2dd8c920c24f07209a1"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_structural_kf.py",
+        "sha256": "f3a63ba48bf867d993dd1b3cbc0da6ca4567da7aa519ed2b2e3fd93a61c06132"
+      },
+      {
+        "path": "vendor/official/src/task1/build_task1_baseline_submission.py",
+        "sha256": "cb91e19e20a5a546430917a884197c1ad6a7068c6a47d7fbec7fb8311b7237d7"
+      },
+      {
+        "path": "vendor/official/src/task1/score_task1.py",
+        "sha256": "bcd42e88fbc42cd499e93e3b50ddf367009b26b216df5ab3f710ee1d1d863163"
+      },
+      {
+        "path": "vendor/official/src/task2/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task2/build_task2_persistence_submission.py",
+        "sha256": "d3cb4ab23206c4c20058a074b24c23ba79b43dd4219f41e158329a39f5a3edd2"
+      },
+      {
+        "path": "vendor/official/src/task2/queue_utils.py",
+        "sha256": "cea193935e7af7ab1399b9955c3f26fcb65664a099344d35b9c3b91802b3135f"
+      },
+      {
+        "path": "vendor/official/src/task2/score_task2.py",
+        "sha256": "b5605ebae9b32b3ca974881be47b5f2e796728b94763a724314580fc93be28bb"
+      },
+      {
+        "path": "vendor/official/src/task3/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task3/build_task3_baseline_submission.py",
+        "sha256": "945ce4b28f264be6be35a1b8d0f67311bf666d5e6b516a5b79bb2617075e8bcf"
+      },
+      {
+        "path": "vendor/official/src/task3/score_task3.py",
+        "sha256": "98d88b6e7f6b7bb0e2bbb4b42e486d6690b6f14a5d3625649e85ddf828550409"
+      },
+      {
+        "path": "vendor/official/src/task4/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task4/build_task4_odme_artifacts.py",
+        "sha256": "5da75aea3004555bae080ee4d18f1baee01dbb9ed1caf7a6abadd2387e6ade58"
+      },
+      {
+        "path": "vendor/official/src/task4/score_task4.py",
+        "sha256": "be15d732438d305e3d35cb41d3105fc03e3fb9459e5c050af39fe192cede30e3"
+      }
+    ],
+    "n_files": 128,
+    "scope": "Own source, vendored official Python and dependency locks; no data, credentials or model weights"
+  },
+  "partitions": {
+    "selection": {
+      "LGB_equal_seed": {
+        "S_state": 0.9519477408940172,
+        "details": [
+          {
+            "regime": "R1",
+            "n": 33769,
+            "rmse_speed": 1.0792065711294618,
+            "rmse_lane_flow": 24.47812576251671,
+            "S_state": 0.9579225749790075
+          },
+          {
+            "regime": "R2",
+            "n": 51169,
+            "rmse_speed": 1.1607963139955169,
+            "rmse_lane_flow": 24.6242545671792,
+            "S_state": 0.9560482044495262
+          },
+          {
+            "regime": "R3",
+            "n": 227180,
+            "rmse_speed": 1.7146213506709005,
+            "rmse_lane_flow": 27.510959441727326,
+            "S_state": 0.9418724432535177
+          }
+        ],
+        "days": [
+          {
+            "regime": "R1",
+            "n": 11211,
+            "speed_sse": 11110.866892214439,
+            "lane_flow_sse": 6236731.863347192,
+            "daily_State": 0.9604139925280644
+          },
+          {
+            "regime": "R1",
+            "n": 11315,
+            "speed_sse": 14508.229290178424,
+            "lane_flow_sse": 7298212.9246104825,
+            "daily_State": 0.9560703136289717
+          },
+          {
+            "regime": "R3",
+            "n": 28492,
+            "speed_sse": 101462.66900740904,
+            "lane_flow_sse": 25786396.188170828,
+            "daily_State": 0.9361746356836342
+          },
+          {
+            "regime": "R3",
+            "n": 28348,
+            "speed_sse": 23600.912852706682,
+            "lane_flow_sse": 12637327.841058927,
+            "daily_State": 0.9641041000917431
+          },
+          {
+            "regime": "R3",
+            "n": 28361,
+            "speed_sse": 97654.44165850978,
+            "lane_flow_sse": 18528443.413009364,
+            "daily_State": 0.9403230570846877
+          },
+          {
+            "regime": "R3",
+            "n": 28418,
+            "speed_sse": 76875.66588484756,
+            "lane_flow_sse": 19300019.720082775,
+            "daily_State": 0.9444938923234109
+          },
+          {
+            "regime": "R2",
+            "n": 16959,
+            "speed_sse": 27165.15156159164,
+            "lane_flow_sse": 12434128.681050163,
+            "daily_State": 0.9519030746817496
+          },
+          {
+            "regime": "R3",
+            "n": 28414,
+            "speed_sse": 104771.12596298591,
+            "lane_flow_sse": 26072199.78774299,
+            "daily_State": 0.9352993181036893
+          },
+          {
+            "regime": "R3",
+            "n": 28454,
+            "speed_sse": 89591.03857280323,
+            "lane_flow_sse": 24959776.267467525,
+            "daily_State": 0.9389653926930562
+          },
+          {
+            "regime": "R2",
+            "n": 17121,
+            "speed_sse": 28325.872114444872,
+            "lane_flow_sse": 10109564.94731447,
+            "daily_State": 0.9535870891469225
+          },
+          {
+            "regime": "R3",
+            "n": 28250,
+            "speed_sse": 121461.29228227896,
+            "lane_flow_sse": 27091289.597836137,
+            "daily_State": 0.9314700930635196
+          },
+          {
+            "regime": "R1",
+            "n": 11243,
+            "speed_sse": 13711.213149201449,
+            "lane_flow_sse": 6698718.734756859,
+            "daily_State": 0.9574328111586136
+          },
+          {
+            "regime": "R2",
+            "n": 17089,
+            "speed_sse": 13456.54726178496,
+            "lane_flow_sse": 8482829.745382085,
+            "daily_State": 0.9637514323532175
+          },
+          {
+            "regime": "R3",
+            "n": 28443,
+            "speed_sse": 52475.3279182368,
+            "lane_flow_sse": 17566386.599515293,
+            "daily_State": 0.9516082566217496
+          }
+        ],
+        "density_target_pair_relative_L1": 0.7638208946927318
+      },
+      "adaptive_equal_seed": {
+        "S_state": 0.9597703891184349,
+        "details": [
+          {
+            "regime": "R1",
+            "n": 33769,
+            "rmse_speed": 0.88131362598403,
+            "rmse_lane_flow": 23.675043810776998,
+            "S_state": 0.9628127587571493
+          },
+          {
+            "regime": "R2",
+            "n": 51169,
+            "rmse_speed": 0.8318417980651704,
+            "rmse_lane_flow": 23.86545651165283,
+            "S_state": 0.9637353671695252
+          },
+          {
+            "regime": "R3",
+            "n": 227180,
+            "rmse_speed": 1.2315730629903903,
+            "rmse_lane_flow": 26.9151918401445,
+            "S_state": 0.9527630414286302
+          }
+        ],
+        "days": [
+          {
+            "regime": "R1",
+            "n": 11211,
+            "speed_sse": 6756.6208175882275,
+            "lane_flow_sse": 5843260.764295097,
+            "daily_State": 0.9657284359300533
+          },
+          {
+            "regime": "R1",
+            "n": 11315,
+            "speed_sse": 9800.503762652133,
+            "lane_flow_sse": 6878514.469720402,
+            "daily_State": 0.9609946508310727
+          },
+          {
+            "regime": "R3",
+            "n": 28492,
+            "speed_sse": 51879.8229093838,
+            "lane_flow_sse": 25054943.51970656,
+            "daily_State": 0.94811832062826
+          },
+          {
+            "regime": "R3",
+            "n": 28348,
+            "speed_sse": 17308.858176677677,
+            "lane_flow_sse": 12168039.500843557,
+            "daily_State": 0.9672379296492266
+          },
+          {
+            "regime": "R3",
+            "n": 28361,
+            "speed_sse": 46790.96513154452,
+            "lane_flow_sse": 17643011.656600274,
+            "daily_State": 0.9531337368029145
+          },
+          {
+            "regime": "R3",
+            "n": 28418,
+            "speed_sse": 53162.86696791542,
+            "lane_flow_sse": 17843103.297619272,
+            "daily_State": 0.9512457701300926
+          },
+          {
+            "regime": "R2",
+            "n": 16959,
+            "speed_sse": 13583.669432873063,
+            "lane_flow_sse": 11678523.025614003,
+            "daily_State": 0.9605499265394317
+          },
+          {
+            "regime": "R3",
+            "n": 28414,
+            "speed_sse": 46825.312048590546,
+            "lane_flow_sse": 24616581.482872166,
+            "daily_State": 0.9497054191349306
+          },
+          {
+            "regime": "R3",
+            "n": 28454,
+            "speed_sse": 41142.54786164489,
+            "lane_flow_sse": 24030582.73818528,
+            "daily_State": 0.9517465706953665
+          },
+          {
+            "regime": "R2",
+            "n": 17121,
+            "speed_sse": 11910.411433870184,
+            "lane_flow_sse": 9462908.16531078,
+            "daily_State": 0.9639601099530788
+          },
+          {
+            "regime": "R3",
+            "n": 28250,
+            "speed_sse": 60586.79186410277,
+            "lane_flow_sse": 26733723.11866146,
+            "daily_State": 0.9447829789934306
+          },
+          {
+            "regime": "R1",
+            "n": 11243,
+            "speed_sse": 9671.720603096948,
+            "lane_flow_sse": 6206009.268448496,
+            "daily_State": 0.9619537411487742
+          },
+          {
+            "regime": "R2",
+            "n": 17089,
+            "speed_sse": 9912.860131994243,
+            "lane_flow_sse": 8002385.191516553,
+            "daily_State": 0.9669584580263517
+          },
+          {
+            "regime": "R3",
+            "n": 28443,
+            "speed_sse": 26883.145590609136,
+            "lane_flow_sse": 16485465.901568288,
+            "daily_State": 0.9605432821819337
+          }
+        ],
+        "density_target_pair_relative_L1": 0.6714461887728248
+      }
+    },
+    "assessment": {
+      "LGB_equal_seed": {
+        "S_state": 0.9427419338549354,
+        "details": [
+          {
+            "regime": "R1",
+            "n": 22859,
+            "rmse_speed": 1.5208335268010162,
+            "rmse_lane_flow": 29.44291747283217,
+            "S_state": 0.9445770924252601
+          },
+          {
+            "regime": "R2",
+            "n": 119727,
+            "rmse_speed": 1.2961308767081037,
+            "rmse_lane_flow": 26.49446431110983,
+            "S_state": 0.9516911504245875
+          },
+          {
+            "regime": "R3",
+            "n": 141841,
+            "rmse_speed": 2.057297407395521,
+            "rmse_lane_flow": 30.788892111258864,
+            "S_state": 0.9319575587149584
+          }
+        ],
+        "days": [
+          {
+            "regime": "R3",
+            "n": 28409,
+            "speed_sse": 216106.8498998256,
+            "lane_flow_sse": 40158362.146176174,
+            "daily_State": 0.9116007296492994
+          },
+          {
+            "regime": "R2",
+            "n": 17148,
+            "speed_sse": 36863.24858755776,
+            "lane_flow_sse": 16109232.912310023,
+            "daily_State": 0.9448319647975809
+          },
+          {
+            "regime": "R2",
+            "n": 17373,
+            "speed_sse": 15792.64189846756,
+            "lane_flow_sse": 9957500.55291942,
+            "daily_State": 0.9610512811238702
+          },
+          {
+            "regime": "R3",
+            "n": 28352,
+            "speed_sse": 91067.06428796337,
+            "lane_flow_sse": 25905956.051987663,
+            "daily_State": 0.9381135484097736
+          },
+          {
+            "regime": "R2",
+            "n": 17134,
+            "speed_sse": 27055.739088668382,
+            "lane_flow_sse": 9802719.341042163,
+            "daily_State": 0.954519298643031
+          },
+          {
+            "regime": "R2",
+            "n": 17083,
+            "speed_sse": 20962.729713836387,
+            "lane_flow_sse": 10472976.929302009,
+            "daily_State": 0.957089825204229
+          },
+          {
+            "regime": "R2",
+            "n": 17029,
+            "speed_sse": 62505.32951536349,
+            "lane_flow_sse": 15976499.247768292,
+            "daily_State": 0.9351344476760252
+          },
+          {
+            "regime": "R2",
+            "n": 17048,
+            "speed_sse": 23103.97740062081,
+            "lane_flow_sse": 12718321.36064912,
+            "daily_State": 0.9539141025951641
+          },
+          {
+            "regime": "R3",
+            "n": 28511,
+            "speed_sse": 24617.905170581755,
+            "lane_flow_sse": 15729289.344453506,
+            "daily_State": 0.9619212507424524
+          },
+          {
+            "regime": "R1",
+            "n": 11446,
+            "speed_sse": 38157.50734928555,
+            "lane_flow_sse": 12350352.65545205,
+            "daily_State": 0.9353781272888834
+          },
+          {
+            "regime": "R3",
+            "n": 28336,
+            "speed_sse": 172482.456982665,
+            "lane_flow_sse": 30079680.848060645,
+            "daily_State": 0.9217296875453032
+          },
+          {
+            "regime": "R1",
+            "n": 11413,
+            "speed_sse": 14713.865043390724,
+            "lane_flow_sse": 7465780.458831096,
+            "daily_State": 0.9558660405086112
+          },
+          {
+            "regime": "R3",
+            "n": 28233,
+            "speed_sse": 96063.87290362985,
+            "lane_flow_sse": 22585721.221110113,
+            "daily_State": 0.9384724195865515
+          },
+          {
+            "regime": "R2",
+            "n": 16912,
+            "speed_sse": 14852.335959090848,
+            "lane_flow_sse": 9005912.189446453,
+            "daily_State": 0.9620661515272619
+          }
+        ],
+        "density_target_pair_relative_L1": 0.756318842852366
+      },
+      "adaptive_equal_seed": {
+        "S_state": 0.9511683591898746,
+        "details": [
+          {
+            "regime": "R1",
+            "n": 22859,
+            "rmse_speed": 1.1682646618805932,
+            "rmse_lane_flow": 29.253064508145393,
+            "S_state": 0.9523381338471344
+          },
+          {
+            "regime": "R2",
+            "n": 119727,
+            "rmse_speed": 1.0061535547510863,
+            "rmse_lane_flow": 26.590357845250566,
+            "S_state": 0.9578811422026845
+          },
+          {
+            "regime": "R3",
+            "n": 141841,
+            "rmse_speed": 1.5372452213374277,
+            "rmse_lane_flow": 30.664828303443148,
+            "S_state": 0.9432858015198051
+          }
+        ],
+        "days": [
+          {
+            "regime": "R3",
+            "n": 28409,
+            "speed_sse": 119950.2766147774,
+            "lane_flow_sse": 42406289.87050114,
+            "daily_State": 0.9259954106876609
+          },
+          {
+            "regime": "R2",
+            "n": 17148,
+            "speed_sse": 30962.075546139793,
+            "lane_flow_sse": 17754727.720454197,
+            "daily_State": 0.9463063789989798
+          },
+          {
+            "regime": "R2",
+            "n": 17373,
+            "speed_sse": 10685.468595418852,
+            "lane_flow_sse": 9143373.74905546,
+            "daily_State": 0.9654717698680519
+          },
+          {
+            "regime": "R3",
+            "n": 28352,
+            "speed_sse": 41839.4968842283,
+            "lane_flow_sse": 25150719.83365042,
+            "daily_State": 0.9509261081343701
+          },
+          {
+            "regime": "R2",
+            "n": 17134,
+            "speed_sse": 16379.728263894616,
+            "lane_flow_sse": 9397706.46748454,
+            "daily_State": 0.9609256748826295
+          },
+          {
+            "regime": "R2",
+            "n": 17083,
+            "speed_sse": 12049.510834123479,
+            "lane_flow_sse": 9908234.624172224,
+            "daily_State": 0.9633953354162262
+          },
+          {
+            "regime": "R2",
+            "n": 17029,
+            "speed_sse": 28442.97756661739,
+            "lane_flow_sse": 18138799.641506523,
+            "daily_State": 0.9470627473170896
+          },
+          {
+            "regime": "R2",
+            "n": 17048,
+            "speed_sse": 12212.75865637076,
+            "lane_flow_sse": 11834122.807401402,
+            "daily_State": 0.9615186174614421
+          },
+          {
+            "regime": "R3",
+            "n": 28511,
+            "speed_sse": 18587.540749621712,
+            "lane_flow_sse": 14764224.554372367,
+            "daily_State": 0.965113123570031
+          },
+          {
+            "regime": "R1",
+            "n": 11446,
+            "speed_sse": 23396.705911831443,
+            "lane_flow_sse": 12237006.253956297,
+            "daily_State": 0.9440502215579412
+          },
+          {
+            "regime": "R3",
+            "n": 28336,
+            "speed_sse": 109260.1189664919,
+            "lane_flow_sse": 29956645.93597514,
+            "daily_State": 0.9326576088571943
+          },
+          {
+            "regime": "R1",
+            "n": 11413,
+            "speed_sse": 7802.2246855969615,
+            "lane_flow_sse": 7324395.166331567,
+            "daily_State": 0.9627188183936992
+          },
+          {
+            "regime": "R3",
+            "n": 28233,
+            "speed_sse": 45550.2778629828,
+            "lane_flow_sse": 21099707.73892508,
+            "daily_State": 0.9516052087375123
+          },
+          {
+            "regime": "R2",
+            "n": 16912,
+            "speed_sse": 10472.50744764822,
+            "lane_flow_sse": 8475666.763960643,
+            "daily_State": 0.9658395229610385
+          }
+        ],
+        "density_target_pair_relative_L1": 0.6714239990208734
+      }
+    }
+  },
+  "member_stats": {
+    "selection": {
+      "20261013": {
+        "baseline": [
+          {
+            "regime": "R1",
+            "n": 11211,
+            "speed_sse": 11293.77871863695,
+            "lane_flow_sse": 6250311.442180835,
+            "daily_State": 0.9602180411190046
+          },
+          {
+            "regime": "R1",
+            "n": 11315,
+            "speed_sse": 15301.571175248251,
+            "lane_flow_sse": 7299047.282880942,
+            "daily_State": 0.9554093725998887
+          },
+          {
+            "regime": "R3",
+            "n": 28492,
+            "speed_sse": 103408.62693330945,
+            "lane_flow_sse": 25882494.61088183,
+            "daily_State": 0.9357426758392862
+          },
+          {
+            "regime": "R3",
+            "n": 28348,
+            "speed_sse": 23597.832042199778,
+            "lane_flow_sse": 12670204.883938171,
+            "daily_State": 0.9640843439484288
+          },
+          {
+            "regime": "R3",
+            "n": 28361,
+            "speed_sse": 102305.29003115477,
+            "lane_flow_sse": 18581241.361109715,
+            "daily_State": 0.9393518170426352
+          },
+          {
+            "regime": "R3",
+            "n": 28418,
+            "speed_sse": 77367.38357274336,
+            "lane_flow_sse": 19438658.0649479,
+            "daily_State": 0.9443088231986609
+          },
+          {
+            "regime": "R2",
+            "n": 16959,
+            "speed_sse": 27561.12432701638,
+            "lane_flow_sse": 12411865.546850171,
+            "daily_State": 0.9517231455957227
+          },
+          {
+            "regime": "R3",
+            "n": 28414,
+            "speed_sse": 104742.1695887789,
+            "lane_flow_sse": 26214491.3073877,
+            "daily_State": 0.9352417639351519
+          },
+          {
+            "regime": "R3",
+            "n": 28454,
+            "speed_sse": 92632.12875157536,
+            "lane_flow_sse": 25112726.050111353,
+            "daily_State": 0.9382508528547633
+          },
+          {
+            "regime": "R2",
+            "n": 17121,
+            "speed_sse": 29166.451773103654,
+            "lane_flow_sse": 10149106.659811836,
+            "daily_State": 0.9531414684503345
+          },
+          {
+            "regime": "R3",
+            "n": 28250,
+            "speed_sse": 122840.00490561905,
+            "lane_flow_sse": 27035577.413626958,
+            "daily_State": 0.9312410385104273
+          },
+          {
+            "regime": "R1",
+            "n": 11243,
+            "speed_sse": 14065.259799842153,
+            "lane_flow_sse": 6717876.660423261,
+            "daily_State": 0.9571000652219812
+          },
+          {
+            "regime": "R2",
+            "n": 17089,
+            "speed_sse": 13457.34246592025,
+            "lane_flow_sse": 8489065.260825723,
+            "daily_State": 0.9637445891902732
+          },
+          {
+            "regime": "R3",
+            "n": 28443,
+            "speed_sse": 54377.10392693513,
+            "lane_flow_sse": 17633922.845817797,
+            "daily_State": 0.9510447574211878
+          }
+        ],
+        "candidate": [
+          {
+            "regime": "R1",
+            "n": 11211,
+            "speed_sse": 6888.1126778486905,
+            "lane_flow_sse": 5926858.316035812,
+            "daily_State": 0.9654412939284613
+          },
+          {
+            "regime": "R1",
+            "n": 11315,
+            "speed_sse": 12313.5795217344,
+            "lane_flow_sse": 6983500.102075585,
+            "daily_State": 0.9584204895809794
+          },
+          {
+            "regime": "R3",
+            "n": 28492,
+            "speed_sse": 51729.71262352943,
+            "lane_flow_sse": 25595686.74964625,
+            "daily_State": 0.9479164928884635
+          },
+          {
+            "regime": "R3",
+            "n": 28348,
+            "speed_sse": 17554.172836254096,
+            "lane_flow_sse": 12232253.167511342,
+            "daily_State": 0.9670768884833878
+          },
+          {
+            "regime": "R3",
+            "n": 28361,
+            "speed_sse": 41328.59317387809,
+            "lane_flow_sse": 17986892.978815977,
+            "daily_State": 0.9546179576129301
+          },
+          {
+            "regime": "R3",
+            "n": 28418,
+            "speed_sse": 58767.84622974386,
+            "lane_flow_sse": 18278588.65798464,
+            "daily_State": 0.9494943805980863
+          },
+          {
+            "regime": "R2",
+            "n": 16959,
+            "speed_sse": 14632.304942360228,
+            "lane_flow_sse": 11831197.716054264,
+            "daily_State": 0.959686543560841
+          },
+          {
+            "regime": "R3",
+            "n": 28414,
+            "speed_sse": 53735.03627671437,
+            "lane_flow_sse": 25368093.88060456,
+            "daily_State": 0.9473880552611273
+          },
+          {
+            "regime": "R3",
+            "n": 28454,
+            "speed_sse": 49890.58302249178,
+            "lane_flow_sse": 24817029.908174846,
+            "daily_State": 0.9487565898661621
+          },
+          {
+            "regime": "R2",
+            "n": 17121,
+            "speed_sse": 12114.230648833014,
+            "lane_flow_sse": 9610526.35427425,
+            "daily_State": 0.9636665736094718
+          },
+          {
+            "regime": "R3",
+            "n": 28250,
+            "speed_sse": 69514.47940441742,
+            "lane_flow_sse": 27443306.974932574,
+            "daily_State": 0.9422215060818291
+          },
+          {
+            "regime": "R1",
+            "n": 11243,
+            "speed_sse": 8867.017831050063,
+            "lane_flow_sse": 6312561.056881636,
+            "daily_State": 0.962651291651254
+          },
+          {
+            "regime": "R2",
+            "n": 17089,
+            "speed_sse": 10096.618740528402,
+            "lane_flow_sse": 8105886.105648503,
+            "daily_State": 0.966699734231413
+          },
+          {
+            "regime": "R3",
+            "n": 28443,
+            "speed_sse": 24414.723965971938,
+            "lane_flow_sse": 16778347.35493705,
+            "daily_State": 0.9613673410284436
+          }
+        ]
+      },
+      "20261029": {
+        "baseline": [
+          {
+            "regime": "R1",
+            "n": 11211,
+            "speed_sse": 11533.156599749409,
+            "lane_flow_sse": 6246925.272542217,
+            "daily_State": 0.9599943945440639
+          },
+          {
+            "regime": "R1",
+            "n": 11315,
+            "speed_sse": 14661.360860150007,
+            "lane_flow_sse": 7335643.254738581,
+            "daily_State": 0.9558917074099953
+          },
+          {
+            "regime": "R3",
+            "n": 28492,
+            "speed_sse": 102195.30197971794,
+            "lane_flow_sse": 25786104.422768228,
+            "daily_State": 0.9360278688910724
+          },
+          {
+            "regime": "R3",
+            "n": 28348,
+            "speed_sse": 23652.04890483641,
+            "lane_flow_sse": 12636370.652008556,
+            "daily_State": 0.9640833733416458
+          },
+          {
+            "regime": "R3",
+            "n": 28361,
+            "speed_sse": 98114.64472863407,
+            "lane_flow_sse": 18554320.951621294,
+            "daily_State": 0.940215046380194
+          },
+          {
+            "regime": "R3",
+            "n": 28418,
+            "speed_sse": 78514.298607922,
+            "lane_flow_sse": 19296499.60935034,
+            "daily_State": 0.9441190816124949
+          },
+          {
+            "regime": "R2",
+            "n": 16959,
+            "speed_sse": 28768.96102415895,
+            "lane_flow_sse": 12467620.422432536,
+            "daily_State": 0.9510797133174653
+          },
+          {
+            "regime": "R3",
+            "n": 28414,
+            "speed_sse": 109682.42196060393,
+            "lane_flow_sse": 26087243.518771116,
+            "daily_State": 0.9343316032196417
+          },
+          {
+            "regime": "R3",
+            "n": 28454,
+            "speed_sse": 90732.32727240454,
+            "lane_flow_sse": 24960195.008088563,
+            "daily_State": 0.9387218480600968
+          },
+          {
+            "regime": "R2",
+            "n": 17121,
+            "speed_sse": 28336.90925688858,
+            "lane_flow_sse": 10114702.66557236,
+            "daily_State": 0.9535769435805591
+          },
+          {
+            "regime": "R3",
+            "n": 28250,
+            "speed_sse": 125546.11188212353,
+            "lane_flow_sse": 27170006.02734109,
+            "daily_State": 0.9306887264442523
+          },
+          {
+            "regime": "R1",
+            "n": 11243,
+            "speed_sse": 14070.941087459953,
+            "lane_flow_sse": 6717659.521239387,
+            "daily_State": 0.9570954893102055
+          },
+          {
+            "regime": "R2",
+            "n": 17089,
+            "speed_sse": 13566.415071449981,
+            "lane_flow_sse": 8493884.700829599,
+            "daily_State": 0.963662217545664
+          },
+          {
+            "regime": "R3",
+            "n": 28443,
+            "speed_sse": 51277.7190104659,
+            "lane_flow_sse": 17550860.00478992,
+            "daily_State": 0.951953401783062
+          }
+        ],
+        "candidate": [
+          {
+            "regime": "R1",
+            "n": 11211,
+            "speed_sse": 6943.543701354736,
+            "lane_flow_sse": 5869111.6509109065,
+            "daily_State": 0.9654593914291478
+          },
+          {
+            "regime": "R1",
+            "n": 11315,
+            "speed_sse": 10967.886073668516,
+            "lane_flow_sse": 6953609.225805969,
+            "daily_State": 0.9597281707403549
+          },
+          {
+            "regime": "R3",
+            "n": 28492,
+            "speed_sse": 56457.30590462413,
+            "lane_flow_sse": 25515921.854466826,
+            "daily_State": 0.9466514568474963
+          },
+          {
+            "regime": "R3",
+            "n": 28348,
+            "speed_sse": 18017.24178891059,
+            "lane_flow_sse": 12247576.406951027,
+            "daily_State": 0.9668441850091182
+          },
+          {
+            "regime": "R3",
+            "n": 28361,
+            "speed_sse": 63417.91443195304,
+            "lane_flow_sse": 18015388.79973436,
+            "daily_State": 0.9483775730277638
+          },
+          {
+            "regime": "R3",
+            "n": 28418,
+            "speed_sse": 54184.68278947186,
+            "lane_flow_sse": 17970714.579879053,
+            "daily_State": 0.9508946278404405
+          },
+          {
+            "regime": "R2",
+            "n": 16959,
+            "speed_sse": 14250.538429965392,
+            "lane_flow_sse": 11832118.723994704,
+            "daily_State": 0.9599492222443022
+          },
+          {
+            "regime": "R3",
+            "n": 28414,
+            "speed_sse": 49058.02692461291,
+            "lane_flow_sse": 24988674.030595027,
+            "daily_State": 0.9488821336676418
+          },
+          {
+            "regime": "R3",
+            "n": 28454,
+            "speed_sse": 46075.24931868339,
+            "lane_flow_sse": 24564780.73868123,
+            "daily_State": 0.9499873442033993
+          },
+          {
+            "regime": "R2",
+            "n": 17121,
+            "speed_sse": 14092.976165690898,
+            "lane_flow_sse": 9516771.002807915,
+            "daily_State": 0.9623276023153825
+          },
+          {
+            "regime": "R3",
+            "n": 28250,
+            "speed_sse": 63948.563628181015,
+            "lane_flow_sse": 27671366.57047781,
+            "daily_State": 0.9435072012392338
+          },
+          {
+            "regime": "R1",
+            "n": 11243,
+            "speed_sse": 11354.282940607976,
+            "lane_flow_sse": 6232429.915526921,
+            "daily_State": 0.960242659703785
+          },
+          {
+            "regime": "R2",
+            "n": 17089,
+            "speed_sse": 10274.19952056527,
+            "lane_flow_sse": 8016935.397087443,
+            "daily_State": 0.9666462316364091
+          },
+          {
+            "regime": "R3",
+            "n": 28443,
+            "speed_sse": 33776.05196194792,
+            "lane_flow_sse": 16703364.0258358,
+            "daily_State": 0.9578830127359614
+          }
+        ]
+      },
+      "20261107": {
+        "baseline": [
+          {
+            "regime": "R1",
+            "n": 11211,
+            "speed_sse": 10849.168843683721,
+            "lane_flow_sse": 6240940.344386531,
+            "daily_State": 0.9606626390678867
+          },
+          {
+            "regime": "R1",
+            "n": 11315,
+            "speed_sse": 14650.943039174863,
+            "lane_flow_sse": 7314086.54626063,
+            "daily_State": 0.9559291477466771
+          },
+          {
+            "regime": "R3",
+            "n": 28492,
+            "speed_sse": 104175.85370082123,
+            "lane_flow_sse": 25927995.60846254,
+            "daily_State": 0.935570001973401
+          },
+          {
+            "regime": "R3",
+            "n": 28348,
+            "speed_sse": 23633.788708737666,
+            "lane_flow_sse": 12651212.048029637,
+            "daily_State": 0.9640814881312602
+          },
+          {
+            "regime": "R3",
+            "n": 28361,
+            "speed_sse": 96326.06609032949,
+            "lane_flow_sse": 18610259.337748177,
+            "daily_State": 0.940553380948628
+          },
+          {
+            "regime": "R3",
+            "n": 28418,
+            "speed_sse": 77858.52235505421,
+            "lane_flow_sse": 19311653.0943425,
+            "daily_State": 0.9442614900907004
+          },
+          {
+            "regime": "R2",
+            "n": 16959,
+            "speed_sse": 27037.478847272312,
+            "lane_flow_sse": 12520422.47596088,
+            "daily_State": 0.9518954805959428
+          },
+          {
+            "regime": "R3",
+            "n": 28414,
+            "speed_sse": 105946.93238768973,
+            "lane_flow_sse": 26149090.863246076,
+            "daily_State": 0.9350330068048334
+          },
+          {
+            "regime": "R3",
+            "n": 28454,
+            "speed_sse": 90574.11583402837,
+            "lane_flow_sse": 24998340.18970966,
+            "daily_State": 0.9387381471241476
+          },
+          {
+            "regime": "R2",
+            "n": 17121,
+            "speed_sse": 28266.23173266836,
+            "lane_flow_sse": 10117392.618163463,
+            "daily_State": 0.953609142372734
+          },
+          {
+            "regime": "R3",
+            "n": 28250,
+            "speed_sse": 123308.9419537271,
+            "lane_flow_sse": 27344436.118511207,
+            "daily_State": 0.9310200576399158
+          },
+          {
+            "regime": "R1",
+            "n": 11243,
+            "speed_sse": 13697.144350373288,
+            "lane_flow_sse": 6711335.683663838,
+            "daily_State": 0.957427436771716
+          },
+          {
+            "regime": "R2",
+            "n": 17089,
+            "speed_sse": 13453.346446371648,
+            "lane_flow_sse": 8501545.312516725,
+            "daily_State": 0.9637348794377563
+          },
+          {
+            "regime": "R3",
+            "n": 28443,
+            "speed_sse": 53495.35388949764,
+            "lane_flow_sse": 17615303.025623266,
+            "daily_State": 0.9512979719873056
+          }
+        ],
+        "candidate": [
+          {
+            "regime": "R1",
+            "n": 11211,
+            "speed_sse": 7094.77445912186,
+            "lane_flow_sse": 5996159.739583001,
+            "daily_State": 0.9650864247658695
+          },
+          {
+            "regime": "R1",
+            "n": 11315,
+            "speed_sse": 9712.812771117751,
+            "lane_flow_sse": 7091643.816858996,
+            "daily_State": 0.9607941715970062
+          },
+          {
+            "regime": "R3",
+            "n": 28492,
+            "speed_sse": 64764.6580441967,
+            "lane_flow_sse": 26260949.028769836,
+            "daily_State": 0.9441586624035917
+          },
+          {
+            "regime": "R3",
+            "n": 28348,
+            "speed_sse": 17457.268316159913,
+            "lane_flow_sse": 12495593.043979725,
+            "daily_State": 0.9669533549271232
+          },
+          {
+            "regime": "R3",
+            "n": 28361,
+            "speed_sse": 48733.14822301698,
+            "lane_flow_sse": 18061568.561737567,
+            "daily_State": 0.9523382984706787
+          },
+          {
+            "regime": "R3",
+            "n": 28418,
+            "speed_sse": 55385.585274874036,
+            "lane_flow_sse": 18462865.724988356,
+            "daily_State": 0.9503037082756617
+          },
+          {
+            "regime": "R2",
+            "n": 16959,
+            "speed_sse": 16998.556912132797,
+            "lane_flow_sse": 12087359.747835923,
+            "daily_State": 0.9579069755476581
+          },
+          {
+            "regime": "R3",
+            "n": 28414,
+            "speed_sse": 52995.889549583415,
+            "lane_flow_sse": 25613179.8726481,
+            "daily_State": 0.9474826659255663
+          },
+          {
+            "regime": "R3",
+            "n": 28454,
+            "speed_sse": 43021.983359699116,
+            "lane_flow_sse": 24493967.25033525,
+            "daily_State": 0.95094616133203
+          },
+          {
+            "regime": "R2",
+            "n": 17121,
+            "speed_sse": 11530.038424446591,
+            "lane_flow_sse": 9689213.319015317,
+            "daily_State": 0.9640358715586326
+          },
+          {
+            "regime": "R3",
+            "n": 28250,
+            "speed_sse": 68812.19991023763,
+            "lane_flow_sse": 27580183.490051303,
+            "daily_State": 0.9423335779625415
+          },
+          {
+            "regime": "R1",
+            "n": 11243,
+            "speed_sse": 11459.23768268774,
+            "lane_flow_sse": 6418982.213115055,
+            "daily_State": 0.9598744068520595
+          },
+          {
+            "regime": "R2",
+            "n": 17089,
+            "speed_sse": 10086.06625220529,
+            "lane_flow_sse": 8194919.713284689,
+            "daily_State": 0.9666169626281934
+          },
+          {
+            "regime": "R3",
+            "n": 28443,
+            "speed_sse": 29483.650615355284,
+            "lane_flow_sse": 16901076.382206783,
+            "daily_State": 0.9593198379221334
+          }
+        ]
+      }
+    },
+    "assessment": {
+      "20261013": {
+        "baseline": [
+          {
+            "regime": "R3",
+            "n": 28409,
+            "speed_sse": 220254.86322033787,
+            "lane_flow_sse": 40362568.57286593,
+            "daily_State": 0.9109585085392913
+          },
+          {
+            "regime": "R2",
+            "n": 17148,
+            "speed_sse": 38361.966617833,
+            "lane_flow_sse": 16150390.261392089,
+            "daily_State": 0.9441645958430189
+          },
+          {
+            "regime": "R2",
+            "n": 17373,
+            "speed_sse": 16138.351354430188,
+            "lane_flow_sse": 9988054.069512846,
+            "daily_State": 0.9607989549734475
+          },
+          {
+            "regime": "R3",
+            "n": 28352,
+            "speed_sse": 93115.53179799643,
+            "lane_flow_sse": 25974082.9779122,
+            "daily_State": 0.9376501256275278
+          },
+          {
+            "regime": "R2",
+            "n": 17134,
+            "speed_sse": 27994.788367922873,
+            "lane_flow_sse": 9842873.216853758,
+            "daily_State": 0.9540147619871002
+          },
+          {
+            "regime": "R2",
+            "n": 17083,
+            "speed_sse": 21835.398892041332,
+            "lane_flow_sse": 10506485.542421816,
+            "daily_State": 0.9565665160015631
+          },
+          {
+            "regime": "R2",
+            "n": 17029,
+            "speed_sse": 63016.45553737709,
+            "lane_flow_sse": 16044034.759722129,
+            "daily_State": 0.9349160118473354
+          },
+          {
+            "regime": "R2",
+            "n": 17048,
+            "speed_sse": 23612.300906748857,
+            "lane_flow_sse": 12784952.831629524,
+            "daily_State": 0.9535842055793657
+          },
+          {
+            "regime": "R3",
+            "n": 28511,
+            "speed_sse": 24489.587358424807,
+            "lane_flow_sse": 15759537.09678399,
+            "daily_State": 0.9619563222445207
+          },
+          {
+            "regime": "R1",
+            "n": 11446,
+            "speed_sse": 38344.06870806133,
+            "lane_flow_sse": 12333118.814601652,
+            "daily_State": 0.9352994103608439
+          },
+          {
+            "regime": "R3",
+            "n": 28336,
+            "speed_sse": 176979.34934942826,
+            "lane_flow_sse": 30347816.37662957,
+            "daily_State": 0.9209283755939083
+          },
+          {
+            "regime": "R1",
+            "n": 11413,
+            "speed_sse": 15739.642243911068,
+            "lane_flow_sse": 7486747.465839508,
+            "daily_State": 0.9549980309768987
+          },
+          {
+            "regime": "R3",
+            "n": 28233,
+            "speed_sse": 97041.88603237798,
+            "lane_flow_sse": 22702021.956080966,
+            "daily_State": 0.9382143558249527
+          },
+          {
+            "regime": "R2",
+            "n": 16912,
+            "speed_sse": 14592.778996572022,
+            "lane_flow_sse": 9040120.018821044,
+            "daily_State": 0.9622102358479866
+          }
+        ],
+        "candidate": [
+          {
+            "regime": "R3",
+            "n": 28409,
+            "speed_sse": 135144.32861689132,
+            "lane_flow_sse": 43830258.036256164,
+            "daily_State": 0.9227749390335633
+          },
+          {
+            "regime": "R2",
+            "n": 17148,
+            "speed_sse": 37310.721823325286,
+            "lane_flow_sse": 18368871.326489545,
+            "daily_State": 0.9430463393482087
+          },
+          {
+            "regime": "R2",
+            "n": 17373,
+            "speed_sse": 10835.346092900316,
+            "lane_flow_sse": 9197736.127230322,
+            "daily_State": 0.9653011725599823
+          },
+          {
+            "regime": "R3",
+            "n": 28352,
+            "speed_sse": 47029.139674032755,
+            "lane_flow_sse": 25999081.76633605,
+            "daily_State": 0.9489644109789397
+          },
+          {
+            "regime": "R2",
+            "n": 17134,
+            "speed_sse": 17545.1638454714,
+            "lane_flow_sse": 9587223.787625164,
+            "daily_State": 0.960007115723996
+          },
+          {
+            "regime": "R2",
+            "n": 17083,
+            "speed_sse": 11288.23974077021,
+            "lane_flow_sse": 9984542.5797615,
+            "daily_State": 0.9639067762922916
+          },
+          {
+            "regime": "R2",
+            "n": 17029,
+            "speed_sse": 34347.08063906866,
+            "lane_flow_sse": 18903087.394412167,
+            "daily_State": 0.9437802401994742
+          },
+          {
+            "regime": "R2",
+            "n": 17048,
+            "speed_sse": 12705.09867300555,
+            "lane_flow_sse": 12088145.82099231,
+            "daily_State": 0.9609381100161836
+          },
+          {
+            "regime": "R3",
+            "n": 28511,
+            "speed_sse": 20106.829541684587,
+            "lane_flow_sse": 14957395.189818343,
+            "daily_State": 0.9643005952796642
+          },
+          {
+            "regime": "R1",
+            "n": 11446,
+            "speed_sse": 27461.372828191277,
+            "lane_flow_sse": 12610365.762973053,
+            "daily_State": 0.9410955145255278
+          },
+          {
+            "regime": "R3",
+            "n": 28336,
+            "speed_sse": 123245.98338187987,
+            "lane_flow_sse": 31052841.3207563,
+            "daily_State": 0.9295726946150895
+          },
+          {
+            "regime": "R1",
+            "n": 11413,
+            "speed_sse": 8377.596889414937,
+            "lane_flow_sse": 7555189.512945073,
+            "daily_State": 0.9617683962116514
+          },
+          {
+            "regime": "R3",
+            "n": 28233,
+            "speed_sse": 51794.25385129298,
+            "lane_flow_sse": 21404181.16969446,
+            "daily_State": 0.9496344549521474
+          },
+          {
+            "regime": "R2",
+            "n": 16912,
+            "speed_sse": 10512.699914360808,
+            "lane_flow_sse": 8579834.582554149,
+            "daily_State": 0.9657017899418341
+          }
+        ]
+      },
+      "20261029": {
+        "baseline": [
+          {
+            "regime": "R3",
+            "n": 28409,
+            "speed_sse": 218943.78726480025,
+            "lane_flow_sse": 40320176.712627545,
+            "daily_State": 0.9111529583924152
+          },
+          {
+            "regime": "R2",
+            "n": 17148,
+            "speed_sse": 38565.2456627828,
+            "lane_flow_sse": 16077740.177000975,
+            "daily_State": 0.9441320908005528
+          },
+          {
+            "regime": "R2",
+            "n": 17373,
+            "speed_sse": 15502.691812832525,
+            "lane_flow_sse": 9975236.385087334,
+            "daily_State": 0.9612248704421311
+          },
+          {
+            "regime": "R3",
+            "n": 28352,
+            "speed_sse": 93844.78264529882,
+            "lane_flow_sse": 25949285.98264485,
+            "daily_State": 0.9375082196668549
+          },
+          {
+            "regime": "R2",
+            "n": 17134,
+            "speed_sse": 27867.75311045388,
+            "lane_flow_sse": 9794023.482145792,
+            "daily_State": 0.9541231322951795
+          },
+          {
+            "regime": "R2",
+            "n": 17083,
+            "speed_sse": 21250.76905482116,
+            "lane_flow_sse": 10494607.707370263,
+            "daily_State": 0.9569064049583249
+          },
+          {
+            "regime": "R2",
+            "n": 17029,
+            "speed_sse": 64824.92001181781,
+            "lane_flow_sse": 16031725.042040423,
+            "daily_State": 0.9343330308369324
+          },
+          {
+            "regime": "R2",
+            "n": 17048,
+            "speed_sse": 23468.080298779903,
+            "lane_flow_sse": 12712428.22409479,
+            "daily_State": 0.9537215911348188
+          },
+          {
+            "regime": "R3",
+            "n": 28511,
+            "speed_sse": 24901.639750133818,
+            "lane_flow_sse": 15733093.702351132,
+            "daily_State": 0.9618037389391229
+          },
+          {
+            "regime": "R1",
+            "n": 11446,
+            "speed_sse": 40123.377088097746,
+            "lane_flow_sse": 12397687.500059295,
+            "daily_State": 0.9343267465749443
+          },
+          {
+            "regime": "R3",
+            "n": 28336,
+            "speed_sse": 175919.47962791292,
+            "lane_flow_sse": 30081822.571032777,
+            "daily_State": 0.9212004541707952
+          },
+          {
+            "regime": "R1",
+            "n": 11413,
+            "speed_sse": 14366.480269700249,
+            "lane_flow_sse": 7477326.816724636,
+            "daily_State": 0.956142127808421
+          },
+          {
+            "regime": "R3",
+            "n": 28233,
+            "speed_sse": 97869.38949260145,
+            "lane_flow_sse": 22532403.018115427,
+            "daily_State": 0.9381253462010528
+          },
+          {
+            "regime": "R2",
+            "n": 16912,
+            "speed_sse": 15107.592250143127,
+            "lane_flow_sse": 9013325.617663413,
+            "daily_State": 0.9618856699465171
+          }
+        ],
+        "candidate": [
+          {
+            "regime": "R3",
+            "n": 28409,
+            "speed_sse": 139704.3067498403,
+            "lane_flow_sse": 43358708.46833605,
+            "daily_State": 0.9221491578167365
+          },
+          {
+            "regime": "R2",
+            "n": 17148,
+            "speed_sse": 42299.77901872578,
+            "lane_flow_sse": 17397035.45875295,
+            "daily_State": 0.9416557569061729
+          },
+          {
+            "regime": "R2",
+            "n": 17373,
+            "speed_sse": 11436.815803794803,
+            "lane_flow_sse": 9229297.472164802,
+            "daily_State": 0.9648038716282097
+          },
+          {
+            "regime": "R3",
+            "n": 28352,
+            "speed_sse": 45801.239647663184,
+            "lane_flow_sse": 25449445.208299115,
+            "daily_State": 0.9495766989006861
+          },
+          {
+            "regime": "R2",
+            "n": 17134,
+            "speed_sse": 19193.55146249229,
+            "lane_flow_sse": 9445851.43448648,
+            "daily_State": 0.9591375945913543
+          },
+          {
+            "regime": "R2",
+            "n": 17083,
+            "speed_sse": 14066.375591066662,
+            "lane_flow_sse": 10117601.154042609,
+            "daily_State": 0.9617417743317808
+          },
+          {
+            "regime": "R2",
+            "n": 17029,
+            "speed_sse": 32611.496700374304,
+            "lane_flow_sse": 18108126.138402123,
+            "daily_State": 0.9451082138415974
+          },
+          {
+            "regime": "R2",
+            "n": 17048,
+            "speed_sse": 13631.42117475712,
+            "lane_flow_sse": 11935619.783969665,
+            "daily_State": 0.9603995064007405
+          },
+          {
+            "regime": "R3",
+            "n": 28511,
+            "speed_sse": 19752.290773351437,
+            "lane_flow_sse": 14887954.431316102,
+            "daily_State": 0.964502038540365
+          },
+          {
+            "regime": "R1",
+            "n": 11446,
+            "speed_sse": 25784.87260528819,
+            "lane_flow_sse": 12392526.926763814,
+            "daily_State": 0.9423536176210086
+          },
+          {
+            "regime": "R3",
+            "n": 28336,
+            "speed_sse": 141356.8696856324,
+            "lane_flow_sse": 30516616.67212277,
+            "daily_State": 0.9265963386475073
+          },
+          {
+            "regime": "R1",
+            "n": 11413,
+            "speed_sse": 8174.578349338454,
+            "lane_flow_sse": 7375212.840250342,
+            "daily_State": 0.9622303678544082
+          },
+          {
+            "regime": "R3",
+            "n": 28233,
+            "speed_sse": 53970.70477638939,
+            "lane_flow_sse": 21744578.73667982,
+            "daily_State": 0.9488589009231148
+          },
+          {
+            "regime": "R2",
+            "n": 16912,
+            "speed_sse": 11040.083134445542,
+            "lane_flow_sse": 8543598.433519004,
+            "daily_State": 0.9653163562087146
+          }
+        ]
+      },
+      "20261107": {
+        "baseline": [
+          {
+            "regime": "R3",
+            "n": 28409,
+            "speed_sse": 221808.88719966475,
+            "lane_flow_sse": 40342162.69013311,
+            "daily_State": 0.9107540139981324
+          },
+          {
+            "regime": "R2",
+            "n": 17148,
+            "speed_sse": 36609.00042389799,
+            "lane_flow_sse": 16281081.657907195,
+            "daily_State": 0.944816363335921
+          },
+          {
+            "regime": "R2",
+            "n": 17373,
+            "speed_sse": 16171.030313449999,
+            "lane_flow_sse": 9955647.10621378,
+            "daily_State": 0.9608077340977897
+          },
+          {
+            "regime": "R3",
+            "n": 28352,
+            "speed_sse": 92917.69756567017,
+            "lane_flow_sse": 26074571.609946948,
+            "daily_State": 0.9376468865547868
+          },
+          {
+            "regime": "R2",
+            "n": 17134,
+            "speed_sse": 26222.159487768753,
+            "lane_flow_sse": 9831926.438486865,
+            "daily_State": 0.9549134017341077
+          },
+          {
+            "regime": "R2",
+            "n": 17083,
+            "speed_sse": 20688.4449076453,
+            "lane_flow_sse": 10481779.200107537,
+            "daily_State": 0.9572389029463042
+          },
+          {
+            "regime": "R2",
+            "n": 17029,
+            "speed_sse": 63493.53097759725,
+            "lane_flow_sse": 16044637.073709985,
+            "daily_State": 0.9347585809913682
+          },
+          {
+            "regime": "R2",
+            "n": 17048,
+            "speed_sse": 23782.144621490977,
+            "lane_flow_sse": 12747617.08552917,
+            "daily_State": 0.9535236222822377
+          },
+          {
+            "regime": "R3",
+            "n": 28511,
+            "speed_sse": 24949.06583714959,
+            "lane_flow_sse": 15758239.804731684,
+            "daily_State": 0.961770138418292
+          },
+          {
+            "regime": "R1",
+            "n": 11446,
+            "speed_sse": 39200.0180417347,
+            "lane_flow_sse": 12482233.224086229,
+            "daily_State": 0.9347089052881746
+          },
+          {
+            "regime": "R3",
+            "n": 28336,
+            "speed_sse": 174591.00182369203,
+            "lane_flow_sse": 30182107.08283243,
+            "daily_State": 0.9213624491465109
+          },
+          {
+            "regime": "R1",
+            "n": 11413,
+            "speed_sse": 15537.088835487324,
+            "lane_flow_sse": 7489735.416281665,
+            "daily_State": 0.9551578587513398
+          },
+          {
+            "regime": "R3",
+            "n": 28233,
+            "speed_sse": 97405.74243467234,
+            "lane_flow_sse": 22721915.562664546,
+            "daily_State": 0.9381298277845287
+          },
+          {
+            "regime": "R2",
+            "n": 16912,
+            "speed_sse": 15094.363945526888,
+            "lane_flow_sse": 9005199.599741574,
+            "daily_State": 0.9619025899213447
+          }
+        ],
+        "candidate": [
+          {
+            "regime": "R3",
+            "n": 28409,
+            "speed_sse": 129556.00784936141,
+            "lane_flow_sse": 44115532.71184419,
+            "daily_State": 0.9236614244954051
+          },
+          {
+            "regime": "R2",
+            "n": 17148,
+            "speed_sse": 28609.093145222443,
+            "lane_flow_sse": 18702620.940296855,
+            "daily_State": 0.9467810662851757
+          },
+          {
+            "regime": "R2",
+            "n": 17373,
+            "speed_sse": 11051.46889384317,
+            "lane_flow_sse": 9402167.26465012,
+            "daily_State": 0.964936925443939
+          },
+          {
+            "regime": "R3",
+            "n": 28352,
+            "speed_sse": 48565.3414065948,
+            "lane_flow_sse": 26217042.54036648,
+            "daily_State": 0.9484165927249486
+          },
+          {
+            "regime": "R2",
+            "n": 17134,
+            "speed_sse": 15229.248414698426,
+            "lane_flow_sse": 9648616.068585953,
+            "daily_State": 0.9614427498308478
+          },
+          {
+            "regime": "R2",
+            "n": 17083,
+            "speed_sse": 14003.950090222928,
+            "lane_flow_sse": 10169049.093595114,
+            "daily_State": 0.9617379374585446
+          },
+          {
+            "regime": "R2",
+            "n": 17029,
+            "speed_sse": 29873.716573027472,
+            "lane_flow_sse": 18793709.407370556,
+            "daily_State": 0.9459215521371022
+          },
+          {
+            "regime": "R2",
+            "n": 17048,
+            "speed_sse": 13322.449331401254,
+            "lane_flow_sse": 12377670.107813407,
+            "daily_State": 0.9602474161234855
+          },
+          {
+            "regime": "R3",
+            "n": 28511,
+            "speed_sse": 18313.886276958325,
+            "lane_flow_sse": 15067722.127405038,
+            "daily_State": 0.9650635787475599
+          },
+          {
+            "regime": "R1",
+            "n": 11446,
+            "speed_sse": 23825.692102191788,
+            "lane_flow_sse": 12858825.937830705,
+            "daily_State": 0.9431393765422829
+          },
+          {
+            "regime": "R3",
+            "n": 28336,
+            "speed_sse": 98912.97699816737,
+            "lane_flow_sse": 31473290.33097092,
+            "daily_State": 0.9340926926831836
+          },
+          {
+            "regime": "R1",
+            "n": 11413,
+            "speed_sse": 8453.445280543765,
+            "lane_flow_sse": 7483894.669715576,
+            "daily_State": 0.9617781018587613
+          },
+          {
+            "regime": "R3",
+            "n": 28233,
+            "speed_sse": 48142.37430814881,
+            "lane_flow_sse": 21709335.42877998,
+            "daily_State": 0.950534747065213
+          },
+          {
+            "regime": "R2",
+            "n": 16912,
+            "speed_sse": 10770.267339857875,
+            "lane_flow_sse": 8658447.019201105,
+            "daily_State": 0.965415500852278
+          }
+        ]
+      }
+    }
+  },
+  "paired_daily_interval": {
+    "paired_day_mean_gain": 0.007992690824702125,
+    "ci95": [
+      0.007304073132086142,
+      0.008681308517318107
+    ],
+    "bootstrap_probability_gain_positive": 1.0,
+    "n_days": 14,
+    "block_days": 7,
+    "resamples": 4000,
+    "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+  },
+  "mean_seed_daily_gain_interval": {
+    "paired_day_mean_gain": 0.006858436606500365,
+    "ci95": [
+      0.006253395151848854,
+      0.007463478061151877
+    ],
+    "bootstrap_probability_gain_positive": 1.0,
+    "n_days": 14,
+    "block_days": 7,
+    "resamples": 4000,
+    "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+  },
+  "seconds": 108.25291860000016,
+  "model_sha256": "37b3f219a7264786abfc4c7b96ea5578e735fc8c058055b0823fc6135bf64be3",
+  "wrapper_prediction_and_reload_verified_on_last_assessment_day": true,
+  "wrapper_replay_scope": "One full assessment day for the wrapper/load path; all member predictions replayed on all selection/assessment days.",
+  "source": {
+    "python": "3.13.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus": 16,
+    "process_peak_working_set_MiB": 1989.3984375,
+    "peak_scope": "current process lifetime, not isolated per model",
+    "source_sha256": "ce889c506eb8c582a3fed8f08982740881e2fa0a8a75c19b3947fce009c5e161",
+    "model_threads": 4,
+    "gpu_used": true,
+    "source_fingerprint_scope": "On-disk source at evidence() call; a captured start archive is primary when present",
+    "versions": {
+      "numpy": "2.2.5",
+      "pandas": "3.0.5",
+      "scipy": "1.16.1",
+      "pyarrow": "25.0.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10",
+      "scikit-learn": "1.7.2"
+    }
+  },
+  "formal_State": null,
+  "formal_Physics": null,
+  "formal_Total": null
+}

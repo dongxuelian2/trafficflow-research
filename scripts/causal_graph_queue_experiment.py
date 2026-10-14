@@ -13,6 +13,7 @@ import numpy as np
 import pandas as pd
 import torch
 from trafficflow.graph_queue import queue_history_input, CausalGraphQueue, queue_event_loss
+from trafficflow.probability_calibration import weighted_bce_probability
 from trafficflow.data import Release, eligible
 from trafficflow.experiments import partition_date, raw_for
 from trafficflow.queue import QueueModel
@@ -39,13 +40,14 @@ class ProbabilityCalibration(RefinedQueueModel):
         return self.p
 
 
-def predict(model, events, graph, device):
+def predict(model, events, graph, device, corrected=False):
     probabilities = []
     with torch.no_grad():
         for event in events:
             x = torch.from_numpy(event['x'].transpose(2, 0, 1)[None].copy()).to(device)
             logits, _ = model(x, *graph)
-            probabilities.append(torch.sigmoid(logits).cpu().numpy()[0].ravel()[event['available'].ravel()])
+            probability = weighted_bce_probability(logits.cpu().numpy()[0], 4.) if corrected else torch.sigmoid(logits).cpu().numpy()[0]
+            probabilities.append(probability.ravel()[event['available'].ravel()])
     return np.concatenate(probabilities)
 
 
@@ -67,6 +69,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--matched-study', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--correct-probability', action='store_true', help='Subtract log(4) before sigmoid; original C30 behavior stays the default')
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError('Never overwrite causal graph research')
@@ -87,6 +90,7 @@ if __name__ == '__main__':
         'inputs': 'Thirteen legal past/current slots, availability, occupancy, day phase, public condition, public FD geometry',
         'tree_comparison_limit': 'The LGB uses engineered summaries and no occupancy or provided-condition feature. Both neural arms use identical richer history inputs; only their graph messages differ.',
         'checkpoint': 'Lowest calibration domain-condition-macro event Brier every five epochs',
+        'class_weight_probability_correction': bool(args.correct_probability),
         'mixture_grid': [0., .25, .5, .75, 1.],
         'decision_selection': 'Existing calibration-only conditional threshold/nonempty tuner with public onset timing',
         'assessment': 'Load assessment labels only after all choices are sealed; preserve original winner',
@@ -210,7 +214,7 @@ if __name__ == '__main__':
                 losses.append(float(loss.detach().cpu()))
             if (epoch+1) % 5 == 0:
                 model.eval()
-                p = predict(model, cal_events, graph, device)
+                p = predict(model, cal_events, graph, device, args.correct_probability)
                 value = brier(p, cal)
                 history.append({'epoch': epoch+1, 'training_loss': float(np.mean(losses)), 'calibration_domain_event_Brier': value})
                 if value < best:
@@ -219,7 +223,7 @@ if __name__ == '__main__':
                 print(name, epoch+1, 'cal domain Brier', value, flush=True)
         model.load_state_dict(torch.load(args.output/(name+'.pt'), map_location=device, weights_only=True))
         model.eval()
-        p = predict(model, cal_events, graph, device)
+        p = predict(model, cal_events, graph, device, args.correct_probability)
         choices = []
         for alpha in (0., .25, .5, .75, 1.):
             mixed = (1-alpha)*baseline_cal_p+alpha*p
@@ -250,7 +254,7 @@ if __name__ == '__main__':
             model.load_state_dict(torch.load(args.output/(name+'.pt'), map_location=device, weights_only=True))
             model.eval()
             choice = settings[name]
-            p = (1-choice['alpha'])*baseline_p+choice['alpha']*predict(model, events, graph, device)
+            p = (1-choice['alpha'])*baseline_p+choice['alpha']*predict(model, events, graph, device, args.correct_probability)
             metrics[name] = evaluate(p, data, choice['thresholds'], choice['require_nonempty'])
             del model
         result['assessment'].append({'seed': assessment_seed, 'sampler': meta, 'cache_sha256': digest, 'models': metrics})

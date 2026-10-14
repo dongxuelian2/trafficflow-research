@@ -2,6 +2,27 @@
 
 所有模拟指标、观测代理与正式 Kaggle 指标分别记录。失败实验不删除，既有模型与提交不覆盖。
 
+本轮完成 A40–A44、C31–C34、D06–D08。I5_N 三 seed 与 I405_N 两季的注意力收益均相对 full-label LGB 复核；三种子等权组合保留为开发模型。Queue 两季 cal-selected 波速图 CI 均跨零，不晋级。熵反演在同一生成分布的数值修复后通过模拟门槛，真实 OD 仍未知；原正式最佳不改变。
+
+| 编号 | 固定操作 / 对照 | 测量 | 资源 / 决策 |
+|---|---|---|---|
+| A40/A42 | I405_N 冬季图缓存、500k/full 同参数控制 | 153/14/14 日；full 3,985,807 labels；State .923899 → .925958 | 459.01 秒准备、497.09 秒 CPU 控制；非正式分项 |
+| A41 | I5_N 第三 NN/LGB seed 20261107 | cal 选 attention α=.75；State .942330 → .950416；日均 CI [.006530,.008567] | 504.70 秒 GPU，845.07 MiB；14 日 standalone cal 复跑通过 |
+| A43 | I405_N 冬季，同 NN 协议与 full-label 强基线 | State .925958 → .933986；CI [.007056,.009472]；increment proxy .765975 → .726403 | 705.18 秒 GPU，1180.95 MiB；14 日 standalone 复跑通过 |
+| A44 | 三个原 cal 成员等权 vs 同三 LGB 等权 | State .942742 → .951168；CI [.007304,.008681]；proxy L1 .756319 → .671424 | 108.25 秒；共享 14 日，不冒充 42 日；一个整日 wrapper/save/reload 核验 |
+| A45 | I10_W 监督注意力 vs 同日期 full-LGB | State .951973 → .955810；CI [.003496,.004039]；proxy L1 .719817 → .701798 | 401.02 秒 GPU，359.92 MiB；14 日部署复跑通过；原 cal 选择保持 |
+| C31 | 固定 checkpoint 的 class-weight 概率修正 | graph Brier .015419 → .012059；IoU 组合仍选 α=0 | 187.20 秒；概率误差下降不代表 Queue IoU 增益 |
+| C32 | 秋季 direct/15min/30min 波速图范围对照 | cal 选 30min α=.25；去重 gain .006606，CI [−.004692,.018938] | 176.90 秒 GPU；不反选 assessment 更好的 15min |
+| C33 | 冬季普通因果 temporal/graph，正确加权概率 | cal 选 graph；去重 gain .008485，CI [−.006698,.028666] | 219.89 秒 GPU；不晋级 |
+| C34 | 冬季同 C32 的三范围对照 | cal 选 30min α=.25；gain .011703，CI [−.001776,.032738] | 185.75 秒 GPU，111.27 MiB；跨季区间仍跨零 |
+| D06 | 七种已知真值分布，熵双空间 Newton vs Ridge/Bayes | 69 次优化失败；有效配置未过最差开发场景门槛，选 Ridge | 769.35 秒；不删除失败 |
+| D07 | 浮点舍入预算内接受残差下降步 | 原 69 例全部恢复；新增 1 例失败；dev 选 τ=.05/floor20 | 356.32 秒；该失败不在选定配置，继续数值修复 |
+| D08 | 用 Newton decrement 判定浮点精度附近步骤 | 全量 0 failures；Ridge 分数完全相同；既有成功 entropy 最大漂移 2.32e−9 | 341.75 秒；tol 2e−6 不变，全部生成/选择条件保持 |
+
+D08 的独立生成模拟 ODME：Ridge .691063、固定旧 Bayes .728094、开发选定 entropy .747273。family/seed bootstrap 的 entropy gain CI [.043844,.068733]，只适用于这七种生成分布与三个 assessment seed；final seeds 尚未生成。旧 Bayes 在模拟上更好却已正式失败，不能把新模拟收益当正式增益。公开 train 计数只能做稳定性诊断；entropy 约 99% 的变化在零空间。
+
+本轮源代码与模型结果均另存；A45 监督复核完成，不能抵消 A37 零样本失败。平台工作按用户指示暂缓，只有本地 Git 归档。43 research-env tests、CPU 38 passed / 3 optional-Torch module skips；数值修复还由 D06→D08、D07→D08 同场景比较核验。
+
 采样审计 C23 发现组织方公告 742350 已明确 onset 的最后一步属性。首轮代理和 C01–C22 不匹配该时序，全部保留为一般事件压力测试。只有 C24 起的 `--onset-last-step` 对照近似这一公开属性；仍未取得 underlying-state queue truth。
 
 | 编号 | 假设 / 操作 | 数据与划分 | 结果 | 资源 / 决策 |

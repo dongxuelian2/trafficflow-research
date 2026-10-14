@@ -1,0 +1,35 @@
+{
+  "protocol_sha256": "74ed4ca9e0042548e91a6d1daf7e1feecd8bbd6214c17ddcf30d2d068b7f021c",
+  "protocol": {
+    "id": "Fixed_Queue_checkpoint_positive_class_weight_correction",
+    "panel": "D12_I5_N",
+    "source_study_sha256": "2942157d4f6ed600709276372fae7955ab5a71b4e1be85c569cca2d6297ee8f5",
+    "checkpoint_sha256": {
+      "temporal": "09730355ae7a6bc7f44f0cb137ceae677a2feac5e2e344204442cb2c2c97d5b2",
+      "directed_graph": "cbba3bdb41b1d25ffd0e82241339b55872f0da9bd59d5a7648145d6dd01f8389"
+    },
+    "baseline_sha256": "1d6da7cff173c993fa779d3aad6e9eb61f1d03299ce1836d354bfb445e6cac4c",
+    "neural_training_or_checkpoint_reselection": false,
+    "positive_weight": 4.0,
+    "transform": "sigmoid(logit-log(4)); retain raw sigmoid as a control",
+    "architectures": [
+      "temporal",
+      "directed_graph"
+    ],
+    "mixture_grid": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "decisions": "Identical RefinedQueueModel calibration-only threshold/nonempty tuner",
+    "assessment_choice": "Seal all mixtures/decisions and winner before assessment arrays are loaded",
+    "events": "Original C30/C27 events, exact sampling metadata and target-array alignment checks",
+    "hypothesis": "Correcting weighted-BCE odds may improve probability mixing and reveal a calibration rather than representation failure",
+    "theory_limit": "Exact only for an ideal weighted BCE optimum; finite model, auxiliary speed loss, equal-event sampling and noise can still miscalibrate",
+    "formal_Queue": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

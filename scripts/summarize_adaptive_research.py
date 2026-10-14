@@ -53,7 +53,7 @@ if __name__ == '__main__':
         limitations='Each study keeps its calibration winner. Public-train assessment dates were already inspected. Seeds share dates and are not independent day replicates. Density increments are an observation-derived diagnostic. No global network or private-split claim.')
     args.output.write_text(json.dumps(result, indent=2), encoding='utf-8')
     rows = list(result['studies'].values())
-    fig, axes = plt.subplots(1, 2, figsize=(13, 5.5), layout='constrained')
+    fig, axes = plt.subplots(1, 2, figsize=(13, max(5.5, .85*len(rows)+1.5)), layout='constrained')
     y = np.arange(len(rows))
     labels = [f"{r['panel']} / {r['fold'].replace('rolling_', '')}\nseed {r['seed']}" for r in rows]
     for i, r in enumerate(rows):
@@ -71,7 +71,7 @@ if __name__ == '__main__':
     for j, (key, color, label) in enumerate(zip(keys, ('#617785', '#087E8B', '#D08C20'), ('Geometry graph', '+ spatial attention', '+ density increment loss'))):
         gains = [r['calibrated_architecture_comparison'][key]['State']-r['baseline_State'] for r in rows]
         axes[1].barh(y+(j-1)*.22, gains, height=.2, color=color, label=label)
-    axes[1].set_yticks(y, [r['fold'].replace('rolling_', '')+' / '+str(r['seed']) for r in rows], fontsize=8)
+    axes[1].set_yticks(y, [r['panel']+'\n'+r['fold'].replace('rolling_', '')+' / '+str(r['seed']) for r in rows], fontsize=8)
     axes[1].axvline(0, color='black', lw=.8)
     axes[1].set_xlabel('Regime-pooled State gain over strong baseline')
     axes[1].set_title('All calibration-fixed architectures; selection unchanged')

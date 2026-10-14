@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+本轮新增核验：六个 adaptive State 的独立 14 日 calibration 重建/预测均通过；A44 各成员在所有 cal/assessment 日复现，组合 wrapper/save/reload 只额外核验一个完整 assessment 日，不能把它写成组合的完整独立训练。Queue 原树在 C31–C34 的相同事件上逐窗复现；所有 NN 输入均来自 T 及此前一小时，波速图只用公开几何。
+
+Entropy 双空间 Newton 与独立 path-space 优化器及大数消减 scalar oracle 通过对照。D06 的 69 个失败来自目标值浮点分辨率附近线搜索停滞；D07 出现一个新失败，D08 改用与误差预算匹配的 Newton decrement 后全部闭合。tol 2e−6 未放宽；生成器/种子/全局选择 gate 不变，Ridge 原分数完全相同，既有成功 entropy 分数漂移最多 2.32e−9。数值回归不等于独立泛化或正式 OD 成绩；约 99% 解变化在计数零空间。
+
+当前研究环境 **43 passed（11.07 秒）**，CPU **38 passed / 3 optional-Torch module skips（6.51 秒）**。Causal Queue 的 class-weight 修正是显式 flag，默认保留 C30 原行为。旧源代码和所有失败实验均在各自 start snapshot/报告中保留；后续源文件修复不改旧模型或提交。
+
 基准源码固定在 `15036c8`；正式提交 ref 57138874 回下载 SHA 与本地文件一致。官方代码为 `c88cddf533bbf0afa4ff1fc6c031d760a08e7a31`，2026-10-13 再次 ls-remote 核查仍为此版本。完整公开 Rules、Evaluation、Foundational Rules 与 Timeline 已读取并保存于 `data/published_competition_pages.json`。
 
 | 路径 / 接口 | 审计结论 | 证据 / 限制 |
@@ -19,7 +25,7 @@
 | `runtime.py` / evidence | CPU 实验 source fingerprints、进程峰值、训练前源码 ZIP | A29/A30 新实验在训练前保存源代码、依赖锁与逐文件 SHA；过去实验仅有 Git/运行指纹与模型校验 |
 | 下载 / API / 发布 | 请求官方 public participant APIs 与本队 submissions；秘密和签名 URL 不写日志 | 用户最新指示先做模型；本阶段只做本地 Git 提交，不处理论坛/Notebook、GitHub 推送或新正式上传 |
 
-当前独立 CUDA 环境 **35 tests passed**（14.32 秒），CPU 环境 **30 passed / 3 optional-Torch module skips**（8.73 秒），源码 compileall 已通过。测试核验事件权重、density projection、target 隔离、锚点同化、daily pooling、onset 时序；新增独立枚举 expected-IoU 最优集合、density 缓存 key 对齐/不变、因果 Queue 十三步历史拒绝未来值/quality 过滤/无观测 fallback/onset-loss domain 检查。测试临时目录位于工作区 .cache。A01 与 A09 的共同模型 tensor/SHA 完全一致；C24–C29 三组共享模型独立重建/拟合后树文本、阈值、逐窗 IoU 一致。均不等于正式七百万行提交的全量独立复现。
+上一阶段独立 CUDA 环境 **35 tests passed**（14.32 秒），CPU 环境 **30 passed / 3 optional-Torch module skips**（8.73 秒），源码 compileall 已通过。测试核验事件权重、density projection、target 隔离、锚点同化、daily pooling、onset 时序；新增独立枚举 expected-IoU 最优集合、density 缓存 key 对齐/不变、因果 Queue 十三步历史拒绝未来值/quality 过滤/无观测 fallback/onset-loss domain 检查。测试临时目录位于工作区 .cache。A01 与 A09 的共同模型 tensor/SHA 完全一致；C24–C29 三组共享模型独立重建/拟合后树文本、阈值、逐窗 IoU 一致。均不等于正式七百万行提交的全量独立复现。
 
 A14 审计发现重要比较混杂：原 graph 与 LGB 的日期相同，但 LGB 只用 300k 标签。全标签 LGB 1,804,908 行得到更高 State，A15 重做强基线对照后 graph 独立收益仅 0.001077。所有旧实验保留，解释同步修正。
 

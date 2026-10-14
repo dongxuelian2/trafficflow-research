@@ -1,0 +1,33 @@
+{
+  "objective_status": "active; formal 0.95000+ target remains unachieved",
+  "previous_goal_turn_classification": "progress",
+  "formal_best_ref": 57138874,
+  "formal_best_Total": 0.82940,
+  "platform_policy": "Latest user instruction: focus on models. Local Git commits continue; defer publication, GitHub push and formal uploads.",
+  "completed_this_phase": [
+    "A40 I405_N winter cache; A42 matched 500k/full strong baseline",
+    "A41 I5_N third fit seed; A43 I405_N winter; A45 I10_W supervised attention, all calibration-only selected and independently replayed",
+    "A44 fixed equal-seed State mixture vs the corresponding equal-seed LGB mixture; shared-day uncertainty and wrapper/save/load verification",
+    "C31 fixed-checkpoint probability correction; C32/C34 three wave-range controls across seasons; C33 corrected ordinary graph winter control; no Queue promotion",
+    "D06 broad-prior entropy OD failure evidence; D07/D08 numerical repairs with original tolerance/generator/grid/gate retained; final optimizer failures zero",
+    "D06->D08 and D07->D08 full scene identities and numerical comparison; Ridge scores exact, successful entropy drift at most 2.32e-9",
+    "43 research tests, 38 CPU tests with three optional-Torch module skips; compileall and Git diff checks passed",
+    "RESULTS, EXPERIMENTS, MODEL_COMPARISON, RESEARCH_ROADMAP and independent-reproduction documents updated"
+  ],
+  "active_jobs_at_checkpoint": [],
+  "preserved_artifacts": {
+    "formal_best": "artifacts/frozen_baselines/57138874/submission.csv",
+    "complete_local_state_controls": ["artifacts/research/K03_I5_N_attention_State_Physics/submission.csv", "artifacts/research/K04_I5_N_attention_density_State_Physics/submission.csv"],
+    "equal_seed_development_model": "artifacts/research/A44_I5_N_equal_seed_ensemble/State_equal_seed.pkl",
+    "numerical_repair_comparisons": ["reports/research/D06_D08_numeric_repair_verification.json", "reports/research/D07_D08_numeric_repair_verification.json"]
+  },
+  "next_research_priorities": [
+    "Expand supervised State strong-baseline controls to remaining corridor families/directions; avoid extrapolating these three trained families to a global neural gate.",
+    "Use independent CTM assessment scenarios to test learned State predictions and density supervision against known dynamics, keeping simulated and formal Physics separate.",
+    "Replicate Queue wave-range controls on other directions and fit seeds; do not switch to the unselected 15min model based on inspected assessments.",
+    "Freeze D08 tau=.05/floor20 before new prior/route-choice mismatch and uncertainty experiments; simulator success alone cannot erase K01 formal failure.",
+    "Keep final simulator seeds 7907/8017/9109 unopened until final architecture and parameter freeze."
+  ],
+  "formal_candidate_scores": null,
+  "limitations": "Local State exceeds .950 on particular development panels, not formal Total. Current production remains single seed; no global ten-direction neural promotion or independent final blind evaluation. True Queue/Physics/ODME components and new formal candidate scores are unknown."
+}

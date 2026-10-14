@@ -1,0 +1,601 @@
+{
+  "formal_best_Total": 0.8294,
+  "formal_target_Total": 0.95,
+  "studies": {
+    "A33_adaptive_attention_strong_autumn": {
+      "panel": "D12_I5_N",
+      "fold": "rolling_autumn",
+      "seed": 20261013,
+      "selected": {
+        "name": "adaptive_attention_density",
+        "alpha": 0.75,
+        "selection_State": 0.9589775976903283
+      },
+      "baseline_State": 0.9423400762320654,
+      "selected_State": 0.9491918630601867,
+      "State_gain": 0.006851786828121265,
+      "paired_day_gain": {
+        "paired_day_mean_gain": 0.006752295602199492,
+        "ci95": [
+          0.006347541008703788,
+          0.007157050195695196
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "density_increment_proxy_baseline": 0.7710829179694114,
+      "density_increment_proxy_selected": 0.6876173884845681,
+      "calibrated_architecture_comparison": {
+        "graph_geometry": {
+          "alpha": 0.75,
+          "State": 0.9469285636969441,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "bootstrap_probability_gain_positive": 0.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        },
+        "adaptive_attention": {
+          "alpha": 0.75,
+          "State": 0.9488370355341718,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.0021461994318342026,
+            "ci95": [
+              0.0012320259508937146,
+              0.003060372912774691
+            ],
+            "bootstrap_probability_gain_positive": 1.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        },
+        "adaptive_attention_density": {
+          "alpha": 0.75,
+          "State": 0.9491918630601867,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.0024891385856113312,
+            "ci95": [
+              0.0016369211778834594,
+              0.003341355993339203
+            ],
+            "bootstrap_probability_gain_positive": 1.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        }
+      },
+      "density_vs_attention_day_interval": {
+        "paired_day_mean_gain": 0.00034293915377712835,
+        "ci95": [
+          -0.0003801888775328832,
+          0.00106606718508714
+        ],
+        "bootstrap_probability_gain_positive": 0.811,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "regime_gain": {
+        "R1": 0.005982482877263218,
+        "R2": 0.005122659464008805,
+        "R3": 0.009450218143091882
+      },
+      "seconds": 489.2735335,
+      "gpu_peak_allocated_MiB": 845.0712890625,
+      "report_sha256": "71e9a11c516026738d9df49bf6e3eed884a71743ced8df6cc8e64143f08c6737",
+      "ablation_sha256": "fba57036fb9182c94c9a06ad4d429f485f2c3da750b17935d112ebbc5d685376"
+    },
+    "A34_adaptive_attention_strong_winter": {
+      "panel": "D12_I5_N",
+      "fold": "rolling_winter",
+      "seed": 20261013,
+      "selected": {
+        "name": "adaptive_attention",
+        "alpha": 0.75,
+        "selection_State": 0.9530832017480154
+      },
+      "baseline_State": 0.9468544143891978,
+      "selected_State": 0.9543292887427693,
+      "State_gain": 0.007474874353571526,
+      "paired_day_gain": {
+        "paired_day_mean_gain": 0.006933069543894221,
+        "ci95": [
+          0.006258515279949172,
+          0.007607623807839271
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "density_increment_proxy_baseline": 0.7358240280973711,
+      "density_increment_proxy_selected": 0.6825711422374418,
+      "calibrated_architecture_comparison": {
+        "graph_geometry": {
+          "alpha": 0.75,
+          "State": 0.9521414418132133,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "bootstrap_probability_gain_positive": 0.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        },
+        "adaptive_attention": {
+          "alpha": 0.75,
+          "State": 0.9543292887427693,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.0022534714226545216,
+            "ci95": [
+              0.0018993558471895957,
+              0.002607586998119447
+            ],
+            "bootstrap_probability_gain_positive": 1.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        },
+        "adaptive_attention_density": {
+          "alpha": 0.75,
+          "State": 0.9533381312399376,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.001282074018259852,
+            "ci95": [
+              0.0009188898732406707,
+              0.001648258416793629
+            ],
+            "bootstrap_probability_gain_positive": 1.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        }
+      },
+      "density_vs_attention_day_interval": {
+        "paired_day_mean_gain": -0.0009713974043946694,
+        "ci95": [
+          -0.001629023754165404,
+          -0.00031377105462393473
+        ],
+        "bootstrap_probability_gain_positive": 0.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "regime_gain": {
+        "R1": 0.008007898767647736,
+        "R2": 0.0063870268931637275,
+        "R3": 0.008029697399903224
+      },
+      "seconds": 1139.9375530000002,
+      "gpu_peak_allocated_MiB": 845.0712890625,
+      "report_sha256": "ed36dbe42dec28a71c07536ddacf3d14a7ef18a6a59b28e983b3cec1139aa146",
+      "ablation_sha256": "4651a4916e942d4740f13eff06c8897364bdaf07c264bb56b72de0ffc6574177"
+    },
+    "A35_adaptive_attention_autumn_seed20261029": {
+      "panel": "D12_I5_N",
+      "fold": "rolling_autumn",
+      "seed": 20261029,
+      "selected": {
+        "name": "adaptive_attention_density",
+        "alpha": 0.75,
+        "selection_State": 0.9585345299474645
+      },
+      "baseline_State": 0.9422951369117696,
+      "selected_State": 0.9489931652624758,
+      "State_gain": 0.006698028350706209,
+      "paired_day_gain": {
+        "paired_day_mean_gain": 0.006274558003166675,
+        "ci95": [
+          0.005565852881959004,
+          0.006983263124374346
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "density_increment_proxy_baseline": 0.7698086886498902,
+      "density_increment_proxy_selected": 0.6860740929429721,
+      "calibrated_architecture_comparison": {
+        "graph_geometry": {
+          "alpha": 0.75,
+          "State": 0.9479358091654223,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "bootstrap_probability_gain_positive": 0.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        },
+        "adaptive_attention": {
+          "alpha": 0.75,
+          "State": 0.9492572041493137,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.0012951915323511523,
+            "ci95": [
+              0.0007452199777381319,
+              0.0018451630869641728
+            ],
+            "bootstrap_probability_gain_positive": 1.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        },
+        "adaptive_attention_density": {
+          "alpha": 0.75,
+          "State": 0.9489931652624758,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.001035292314276594,
+            "ci95": [
+              0.00011423454872790315,
+              0.0019563500798252848
+            ],
+            "bootstrap_probability_gain_positive": 1.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        }
+      },
+      "density_vs_attention_day_interval": {
+        "paired_day_mean_gain": -0.00025989921807455837,
+        "ci95": [
+          -0.0010456727304540836,
+          0.0005258742943049669
+        ],
+        "bootstrap_probability_gain_positive": 0.239,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "regime_gain": {
+        "R1": 0.0070828550175229266,
+        "R2": 0.004579958492277769,
+        "R3": 0.00843127154231782
+      },
+      "seconds": 1140.1066634000003,
+      "gpu_peak_allocated_MiB": 845.0712890625,
+      "report_sha256": "9c12c0f2f81a6e1f09e0c9ff85695e57ff2d8006a76042f7ecdee2e128f7c1c2",
+      "ablation_sha256": "98e5181dd4ad162f5fd89a8bee81b6ba12893984c74aa1603484c1d046c897c3"
+    },
+    "A36_adaptive_attention_I405_N": {
+      "panel": "D7_I405_N",
+      "fold": "rolling_autumn",
+      "seed": 20261013,
+      "selected": {
+        "name": "adaptive_attention",
+        "alpha": 0.75,
+        "selection_State": 0.9265277707239785
+      },
+      "baseline_State": 0.9214545648102032,
+      "selected_State": 0.9301302313912297,
+      "State_gain": 0.008675666581026586,
+      "paired_day_gain": {
+        "paired_day_mean_gain": 0.007785555669159608,
+        "ci95": [
+          0.006482222112844153,
+          0.009088889225475063
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "density_increment_proxy_baseline": 0.7532650602596067,
+      "density_increment_proxy_selected": 0.7064623199396749,
+      "calibrated_architecture_comparison": {
+        "graph_geometry": {
+          "alpha": 0.75,
+          "State": 0.9266619110992108,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "bootstrap_probability_gain_positive": 0.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        },
+        "adaptive_attention": {
+          "alpha": 0.75,
+          "State": 0.9301302313912297,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.003468919896921996,
+            "ci95": [
+              0.003215790216581384,
+              0.003734658680834272
+            ],
+            "bootstrap_probability_gain_positive": 1.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        },
+        "adaptive_attention_density": {
+          "alpha": 0.75,
+          "State": 0.9296381726358751,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.003238166477608186,
+            "ci95": [
+              0.002703956565036049,
+              0.0038041499162794123
+            ],
+            "bootstrap_probability_gain_positive": 1.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        }
+      },
+      "density_vs_attention_day_interval": {
+        "paired_day_mean_gain": -0.00023075341931381006,
+        "ci95": [
+          -0.0006528357084449718,
+          0.000229309968368095
+        ],
+        "bootstrap_probability_gain_positive": 0.1535,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "regime_gain": {
+        "R1": 0.006848784417538556,
+        "R2": 0.008407534791801785,
+        "R3": 0.01077068053373964
+      },
+      "seconds": 1212.187014,
+      "gpu_peak_allocated_MiB": 1180.95068359375,
+      "report_sha256": "6ee1d1cb43d663ba494201a9e0f35ec2f1546d87c4f3534251dfaa28832ad660",
+      "ablation_sha256": "3a1b6417bc9d93f4f0f93d31e6e38d6eb5a9871136a07911e302ee1a47b5d187"
+    },
+    "A41_adaptive_attention_autumn_seed20261107": {
+      "panel": "D12_I5_N",
+      "fold": "rolling_autumn",
+      "seed": 20261107,
+      "selected": {
+        "name": "adaptive_attention",
+        "alpha": 0.75,
+        "selection_State": 0.958522858308439
+      },
+      "baseline_State": 0.9423298937131307,
+      "selected_State": 0.9504158576735507,
+      "State_gain": 0.00808596396042005,
+      "paired_day_gain": {
+        "paired_day_mean_gain": 0.007548456214134905,
+        "ci95": [
+          0.006529984996020969,
+          0.008566927432248841
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "density_increment_proxy_baseline": 0.7686156069125366,
+      "density_increment_proxy_selected": 0.7241063277592484,
+      "calibrated_architecture_comparison": {
+        "graph_geometry": {
+          "alpha": 0.75,
+          "State": 0.9488701638045635,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "bootstrap_probability_gain_positive": 0.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        },
+        "adaptive_attention": {
+          "alpha": 0.75,
+          "State": 0.9504158576735507,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.0014120640330195936,
+            "ci95": [
+              0.001134375759852765,
+              0.0016897523061864222
+            ],
+            "bootstrap_probability_gain_positive": 1.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        },
+        "adaptive_attention_density": {
+          "alpha": 0.75,
+          "State": 0.9495426178508524,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.000660309438938768,
+            "ci95": [
+              0.0004249169848701194,
+              0.0009242383240240833
+            ],
+            "bootstrap_probability_gain_positive": 1.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        }
+      },
+      "density_vs_attention_day_interval": {
+        "paired_day_mean_gain": -0.0007517545940808255,
+        "ci95": [
+          -0.0011639571141451946,
+          -0.00033955207401645656
+        ],
+        "bootstrap_probability_gain_positive": 0.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "regime_gain": {
+        "R1": 0.007547565843679549,
+        "R2": 0.00577330288009259,
+        "R3": 0.01093702315748768
+      },
+      "seconds": 504.7023302000007,
+      "gpu_peak_allocated_MiB": 845.0712890625,
+      "report_sha256": "d89c6fda4792a5520f0dff769442a2bf142691f623d9bff4fd835b30555febad",
+      "ablation_sha256": "e98aedafd607b7a70a7c655cb42903bad1ef21117779ec7d5c56a0283c7c67cb"
+    },
+    "A43_adaptive_attention_I405_N_winter": {
+      "panel": "D7_I405_N",
+      "fold": "rolling_winter",
+      "seed": 20261013,
+      "selected": {
+        "name": "adaptive_attention",
+        "alpha": 0.75,
+        "selection_State": 0.9317674564329351
+      },
+      "baseline_State": 0.9259584170035167,
+      "selected_State": 0.9339863084956056,
+      "State_gain": 0.008027891492088934,
+      "paired_day_gain": {
+        "paired_day_mean_gain": 0.00826372351270319,
+        "ci95": [
+          0.0070556875003559005,
+          0.00947175952505048
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "density_increment_proxy_baseline": 0.7659751691898088,
+      "density_increment_proxy_selected": 0.7264032253952485,
+      "calibrated_architecture_comparison": {
+        "graph_geometry": {
+          "alpha": 0.75,
+          "State": 0.9311492079943889,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "bootstrap_probability_gain_positive": 0.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        },
+        "adaptive_attention": {
+          "alpha": 0.75,
+          "State": 0.9339863084956056,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.002931817099427501,
+            "ci95": [
+              0.002666008767557491,
+              0.003197625431297511
+            ],
+            "bootstrap_probability_gain_positive": 1.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        },
+        "adaptive_attention_density": {
+          "alpha": 0.75,
+          "State": 0.9338622916259128,
+          "vs_geometry_day_interval": {
+            "paired_day_mean_gain": 0.0027336941887214283,
+            "ci95": [
+              0.002321361846796623,
+              0.0031460265306462337
+            ],
+            "bootstrap_probability_gain_positive": 1.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          }
+        }
+      },
+      "density_vs_attention_day_interval": {
+        "paired_day_mean_gain": -0.00019812291070607304,
+        "ci95": [
+          -0.0004225215229876305,
+          2.6275701575484423e-05
+        ],
+        "bootstrap_probability_gain_positive": 0.0855,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "regime_gain": {
+        "R1": 0.00847822437300172,
+        "R2": 0.006459421372190688,
+        "R3": 0.009146028731074507
+      },
+      "seconds": 705.1823947999992,
+      "gpu_peak_allocated_MiB": 1180.95068359375,
+      "report_sha256": "509687c1a6c022f30fc1cabfa005b3b04e1985cd7982490fccb0fdfb018b321b",
+      "ablation_sha256": "dda9b8c60b4f61a29cbdb29877c57ea9980f7ac99bebb4cd5f2f02020e422a22"
+    }
+  },
+  "formal_State": null,
+  "formal_Physics": null,
+  "formal_Queue": null,
+  "formal_ODME": null,
+  "formal_candidate_Total": null,
+  "uploaded": false,
+  "limitations": "Each study keeps its calibration winner. Public-train assessment dates were already inspected. Seeds share dates and are not independent day replicates. Density increments are an observation-derived diagnostic. No global network or private-split claim."
+}

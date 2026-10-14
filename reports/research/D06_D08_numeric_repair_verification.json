@@ -1,0 +1,40 @@
+{
+  "source_study_sha256": {
+    "D06_entropy_OD_broad_prior.json": "37c30537c300d53925a8a7a4fb5995a402269429b976d17d804b85cf7a8bd45f",
+    "D08_entropy_OD_decrement_repair.json": "e27bd8f952d4c702abf9f2531d4896a71d1fe8d95d741ef10db7ab10720686ea"
+  },
+  "generators_grid_seeds_and_development_gate_unchanged": true,
+  "preserved_failed_development_solves": 69,
+  "closed_failed_solves": 69,
+  "remaining_total_optimizer_failures": 0,
+  "newly_failed_cases": [],
+  "Ridge_baseline_max_score_difference": 0.0,
+  "previous_successful_entropy_max_score_difference": 2.3114852254479956e-09,
+  "max_development_primal_stationarity": 1.984820539022419e-06,
+  "precision_fallback_total": 128,
+  "seconds_before": 769.3520510999997,
+  "seconds_after": 341.7503409000001,
+  "old_winner": "ridge_0.05",
+  "new_winner": "selected_entropy",
+  "new_selected_setting": {
+    "grid": 4,
+    "valid": true,
+    "mean_gain": 0.057002822099274986,
+    "regime_gain": {
+      "independent_paths": 0.030247684011963205,
+      "hierarchical_demand": 0.028446167750539875,
+      "prior_total_bias": 0.02358242064249938,
+      "absolute_additive_prior_noise": 0.060852760924365534,
+      "lognormal_prior_noise": 0.07904501192698188,
+      "missing_prior_paths": 0.07189383752851619,
+      "group_biased_prior": 0.10495187191005928
+    },
+    "worst_regime_gain": 0.02358242064249938,
+    "settings": {
+      "regularization": 0.05,
+      "prior_floor": 20.0
+    }
+  },
+  "formal_ODME": null,
+  "scope": "Numerical regression on existing synthetic cases, not an independent final benchmark or a formal gain"
+}

@@ -1,0 +1,37 @@
+{
+  "protocol_sha256": "a07c0ec1645d6b1133d3f5194e8f16266cd1edd691cdacecf267a20c139643a8",
+  "protocol": {
+    "id": "Causal_Queue_public_wave_range_graph_ablation",
+    "panel": "D12_I5_N",
+    "source_cache_report_sha256": "2942157d4f6ed600709276372fae7955ab5a71b4e1be85c569cca2d6297ee8f5",
+    "seed": 20261013,
+    "ranges": {
+      "direct": null,
+      "wave_15min": 15.0,
+      "wave_30min": 30.0
+    },
+    "model": "Same CausalGraphQueue, hidden 32, 20076 parameters; only spatial operators differ",
+    "inputs": "Same nine legal past/current channels, supplied condition and public FD geometry",
+    "labels": "Same noisy public-train observation labels and source event metadata",
+    "epochs": 20,
+    "steps_per_epoch": 80,
+    "batch_size": 4,
+    "optimizer": "AdamW lr=.001 weight_decay=.0001 clip_norm=1",
+    "loss": "Same equal-event BCE positive weight 4 + .1 speed MAE; onset classification at final step only",
+    "checkpoint": "Corrected domain-condition event Brier every five epochs; same rule for all three ranges",
+    "probability": "sigmoid(logit-log(4)) for all three models",
+    "mixture_grid": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "selection": "Checkpoint, range, mixture and conditional threshold/nonempty decision by calibration only; seal before assessment loading",
+    "physics_limit": "Travel-time neighborhoods are a representation. Repeated layers/GroupNorm do not enforce a hard propagation cone.",
+    "promotion": "Same original Queue gate: >=.01 proxy gain with positive day-block CI on two folds/directions, no direction loss >.01, multiple fit seeds",
+    "formal_Queue": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

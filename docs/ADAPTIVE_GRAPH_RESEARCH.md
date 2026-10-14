@@ -16,6 +16,14 @@
 
 晋级仍需跨季节、跨方向、多个拟合 seed 的强基线对照，以及受控正式 Kaggle 证据。calibration State、assessment State 与 density proxy 均不代表正式 Total 或正式 Physics。
 
+A41 完成第三个 I5_N fit seed，A43 完成 I405_N 冬季；六组 attention-vs-geometry 的日均 CI 为正。A44 对 A33/A35/A41 三个各自原 cal 封存成员固定等权，比较同三个 full-label LGB 的等权预测，assessment .951168 vs .942742。所有成员的逐日指标重建；组合 wrapper/save/reload 另外只检查一个完整 assessment 日。种子共享 14 个日期，平均种子日分数后再 bootstrap，不把它们算成 42 个独立日。源文件 `state_ensemble.py` 要求同 profile/version、相同完整 key 顺序、有限非负预测，保存时移除 GPU runtime cache。
+
+```powershell
+.\.venv-research\Scripts\python.exe scripts/adaptive_seed_ensemble_experiment.py --study artifacts/research/A33_adaptive_attention_strong_autumn --study artifacts/research/A35_adaptive_attention_autumn_seed20261029 --study artifacts/research/A41_adaptive_attention_autumn_seed20261107 --output artifacts/research/A44_independent_repeat
+```
+
+当前组合只有一个季节的开发证据，且推断需要三个成员；它保留为独立开发 artifact，不覆盖单 seed 的生产 K03/K04 或正式最佳。
+
 当前已完成 A33–A35 的两个季节、两个 NN/LGB fit seed 对照。原 cal winner 的三个部署文件各在 14 日 calibration 独立复跑通过。`assess_adaptive_ablation.py` 使用各架构原已封存的 checkpoint/alpha 评估模块贡献，不改原 winner。几何图本身有收益，注意力进一步改善；密度损失的独立 State 收益未稳定，冬季退化。A37 无目标历史标签的跨 family 迁移失败，不能据此部署全网共享模型。
 
 从项目根目录使用锁定的研究环境复跑，每次指定新输出目录：

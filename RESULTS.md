@@ -9,6 +9,22 @@
 新实验与失败结果见 `EXPERIMENTS.md`；候选对照见 `MODEL_COMPARISON.md`；优先路线见 `RESEARCH_ROADMAP.md`。
 登记协议 SHA：`91e48a8f2f86775466c8c9b5ad6bdbe693ea25554ef9b18d9e12cd80d3256143`。
 
+**最新复核：State 的监督收益扩展到两季、两走廊族；正式 Total 仍为 .82940。** I5_N 第三 NN/LGB seed 的 A41 仅按 cal 选纯 attention、α=.75，assessment **.942330 → .950416**，gain **.008086**，14 日配对 CI **[.006530,.008567]**。I405_N 冬季 A43 为 **.925958 → .933986**，gain **.008028**、CI **[.007056,.009472]**，increment 代理 L1 **.765975 → .726403**。六组匹配消融中，attention-vs-geometry 的日均 CI 均正；density 的独立 State 收益仍不稳定。A41/A43 standalone 各 14 日独立 cal 重建/预测通过；均是公开 train 开发测量。
+
+**A44 固定三种子组合通过独立数值复跑。** 三个原 cal 封存成员等权，比较组也是同三个 full-label LGB 的等权预测；assessment State **.942742 → .951168**，gain **.008426**，日均 CI **[.007304,.008681]**，increment 代理 L1 **.756319 → .671424**。平均三个 seed 的日分数后再 bootstrap，gain CI **[.006253,.007463]**，仍只有 14 个共享日期。组合 wrapper 的预测和保存/重载在一个完整 assessment 日核验，各成员在全部 cal/assessment 日复现。模型 SHA `37b3f219a7264786abfc4c7b96ea5578e735fc8c058055b0823fc6135bf64be3`。三倍成员推断、单季组合尚无跨季节或正式收益证明，暂不扩展生产组合。
+
+![六组强 State 对照与已封存架构消融](reports/research/adaptive_matched_comparison_v4.png)
+
+**Queue 的概率修正和波速邻域仍未达到晋级标准。** C31 固定 C30 checkpoint，减去 log(4) 修正理想加权 BCE 概率偏移；graph cal-domain Brier **.015419 → .012059**，但组合仍选 α=0。C32/C34 控制同输入、同预算、同校准规则的 direct / 15 分钟 / 30 分钟波速图，两季 cal 均选 30 分钟、α=.25；去重 proxy IoU 秋 **.897422 → .904028**、冬 **.868240 → .879943**，gain **.006606 / .011703**，day-block CI **[−.004692,.018938] / [−.001776,.032738]**，均跨零。未选中的 15 分钟图秋季 gain .014705、CI [.001545,.027350]；不能按 assessment 反选。C33 普通因果图冬季 gain .008485、CI [−.006698,.028666]，亦未晋级。波速图只是公开几何的表示，不是严格传播约束；真实 latent Queue 分数未知。
+
+**OD 熵反演通过模拟筛选，正式恢复精度未知。** D06 保留 69 次优化失败和未通过开发最差场景门槛的结果；D07 将原 69 例恢复，但新增一个未收敛案例；D08 按浮点误差预算与 Newton decrement 接受残差下降步，全量重跑 **0 failures**，最优性容差仍 **2e−6**。Ridge 的全部原开发分数完全一致，既有成功 entropy 分数最大变化仅 2.32e−9。开发数据选定 entropy **τ=.05、prior floor=20**；十方向、七种独立已知真值分布的 assessment 模拟 ODME **.691063 → .747273**，family/seed 配对 gain CI **[.043844,.068733]**。数据、种子、选择门槛未改变；这是数值回归和已查看模拟分布，不是新的盲测。
+
+Entropy 在公开 train 的 S_link-only 约 **.987973–.998652**，相对 Ridge 的改变量约 99% 位于计数零空间，总需求比率约 .920–1.084；这些只能描述稳定性，不能判定隐藏路径真值。已正式失败的固定 Bayes 在同一模拟里仍得 .728094，高于 Ridge，说明模拟增益不足以保证赛事迁移。保留原正式 OD 与 0.82940 最佳文件；没有新平台动作。
+
+A40 冬季图缓存完成（153 fit / 14 cal / 14 assessment）；A42 full-label LGB 用 **3,985,807** 个标签，500k/full **.923899 / .925958**。当前研究环境 **43 tests passed**，CPU **38 passed / 3 optional-Torch module skips**；完整候选 K03/K04 的此前全行核验仍有效。
+
+**A45 在第三个走廊族的监督对照也改善。** I10_W、107 sensors，cal 选纯 attention α=.75，assessment State **.951973 → .955810**，gain **.003837**，14 日日均 CI **[.003496,.004039]**；increment 代理 L1 **.719817 → .701798**。401.02 秒 GPU，359.92 MiB，14 日 cal 独立部署复跑通过。geometry 的 cal α=.25，attention/density 为 .75，因此各自校准后的模型差异不能全部归因于单一模块。未选中的 density assessment .955828 略高，保留原 pure-attention 选择。A37 的零样本失败仍有效：A45 使用了目标走廊公开 train 标签，不能把它称为零样本泛化。
+
 **A33 取得强基线上的本地收益，尚未正式提交。** I5_N 秋季，仅按 calibration 选 attention+density、α=.75，assessment State **.942340 → .949192**，gain **.006852**；14 天配对日均 CI **[.006348,.007157]**。increment 代理 L1 **.771083 → .687617**，不能当作正式 Physics。完整实验 489.27 秒，GPU 峰值 **845.07 MiB**。几何图对照 / 注意力 / 注意力+密度损失控制相同 NN 宽度、patch RNG、优化器和预算，cal 组合 State 为 .956208 / .957598 / .958978；不是正式总分。
 
 A34 冬季 cal 选纯 attention、α=.75，assessment State **.946854 → .954329**，gain **.007475**，日均 CI **[.006259,.007608]**；increment 代理 L1 **.735824 → .682571**。A35 第二个 NN/LGB seed 20261029，cal 选 attention+density、α=.75，State **.942295 → .948993**，gain **.006698**，CI **[.005566,.006983]**；代理 L1 **.769809 → .686074**。两次并行训练各约 1140 秒，单进程峰值 845.07 MiB。两季、两种子仍只覆盖 I5_N，assessment 是已查看的公开 train 开发日期，不是正式分项或最终盲测。

@@ -1,0 +1,64 @@
+{
+  "protocol_sha256": "c4efd89238b34820a92094fcb380608e21f6e3fc76c6d40c8b55a6e17b02354b",
+  "protocol": {
+    "id": "Measurement_space_entropy_OD_broad_prior_control",
+    "grid": [
+      {
+        "regularization": 0.005,
+        "prior_floor": 2.0
+      },
+      {
+        "regularization": 0.05,
+        "prior_floor": 2.0
+      },
+      {
+        "regularization": 1.0,
+        "prior_floor": 2.0
+      },
+      {
+        "regularization": 0.005,
+        "prior_floor": 20.0
+      },
+      {
+        "regularization": 0.05,
+        "prior_floor": 20.0
+      },
+      {
+        "regularization": 1.0,
+        "prior_floor": 20.0
+      }
+    ],
+    "generating_regimes": [
+      "independent_paths",
+      "hierarchical_demand",
+      "prior_total_bias",
+      "absolute_additive_prior_noise",
+      "lognormal_prior_noise",
+      "missing_prior_paths",
+      "group_biased_prior"
+    ],
+    "development_seeds": [
+      411,
+      829,
+      1201
+    ],
+    "assessment_seeds": [
+      2909,
+      3253,
+      4001
+    ],
+    "final_seeds_generated": false,
+    "generator": "Three public-prior forward perturbations and four independent gamma-truth reverse-generated prior regimes",
+    "selection": "One global entropy setting chosen by maximum worst-regime development gain, then mean gain; no direction-specific tuning",
+    "development_gate": "At least .005 global mean gain and no regime mean loss below -.002, no optimizer failures; otherwise retain Ridge .05",
+    "comparators": [
+      "Ridge .05",
+      "D02 Bayesian fixed settings (formally rejected K01)",
+      "best development entropy setting"
+    ],
+    "truth": "Independently generated path flows only. Never reads public_reference or hidden answers.",
+    "formal_ODME": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "protocol_sha256": "11ca7b4b2cdb394cb4926751ddf64ac7a248aa815cf32eadba3a02388cd5d72e",
+  "protocol": {
+    "id": "Fixed_equal_seed_adaptive_State_ensemble",
+    "members": [
+      {
+        "study": "artifacts/research/A33_adaptive_attention_strong_autumn",
+        "seed": 20261013,
+        "selected": {
+          "name": "adaptive_attention_density",
+          "alpha": 0.75,
+          "selection_State": 0.9589775976903283
+        },
+        "model_sha256": "d5067934dec3facdf66ca1f4d22089aa69e646c9329a63ddbaeabfabc0d83cef",
+        "baseline_sha256": "578fc2ccf4284b5e5bcb749b27673f83051488917e2e9265f3d70c6a10a7c9a3"
+      },
+      {
+        "study": "artifacts/research/A35_adaptive_attention_autumn_seed20261029",
+        "seed": 20261029,
+        "selected": {
+          "name": "adaptive_attention_density",
+          "alpha": 0.75,
+          "selection_State": 0.9585345299474645
+        },
+        "model_sha256": "2468fac035e1967db1a6f8dc079cbe55ffe687fa1e192384e2ef903805bfd41d",
+        "baseline_sha256": "18c234a6f00fc90b6ed246677c11f4fdbe8a22b9766f400f05769c904fedb542"
+      },
+      {
+        "study": "artifacts/research/A41_adaptive_attention_autumn_seed20261107",
+        "seed": 20261107,
+        "selected": {
+          "name": "adaptive_attention",
+          "alpha": 0.75,
+          "selection_State": 0.958522858308439
+        },
+        "model_sha256": "3959ff1bbd63866d298ca32ae00f1fee12fe3ff1459f692400b2039a402b041a",
+        "baseline_sha256": "1a3da64d6a73c05489d40fa80da98342df8d8fd52ab737d7ebc17dc43e304332"
+      }
+    ],
+    "weights": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "baseline_weights": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "selection": "Member checkpoints/architectures/alpha fixed on original calibration; equal weights predetermined here, no assessment selection",
+    "baseline": "Mean predictions of the same full-label LGB fit seeds, not a single seed",
+    "seed_uncertainty": "Average member daily statistics before block resampling; shared dates are not independent samples",
+    "assessment_status": "Previously inspected public-train development dates; not final blinded data",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null
+  }
+}

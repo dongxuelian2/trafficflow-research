@@ -1,0 +1,25 @@
+{
+  "previous_goal_turn_classification": "progress",
+  "previous_turn_evidence": "Local commits fd560fe/cbca785/976447a, measured adaptive State comparisons, complete K03/K04 verification and running registered replications",
+  "formal_best_Total": 0.82940,
+  "formal_target_Total": 0.95000,
+  "research_tests": {"passed": 43, "seconds": 11.07, "exit_code": 0},
+  "cpu_tests": {"passed": 38, "optional_torch_module_skips": 3, "seconds": 6.51, "exit_code": 0},
+  "compileall": {"exit_code": 0, "scope": "src scripts tests"},
+  "standalone_14_day_calibration_replays": ["A33", "A34", "A35", "A36", "A41", "A43", "A45"],
+  "original_calibration_winner_preserved": true,
+  "A44_scope": "All member predictions replay on calibration/assessment days; ensemble wrapper/save/reload checked on one complete assessment day, not a full independent ensemble retraining",
+  "C31_C34_scope": "Same original tree, proxy event metadata and per-window comparison; all numeric history inputs at or before T; noisy observation labels are not latent truth",
+  "entropy_numeric_repair": {
+    "D06_preserved_failures": 69,
+    "D07_new_failure": 1,
+    "D08_total_failures": 0,
+    "primal_stationarity_tolerance": 0.000002,
+    "Ridge_original_scores_exact": true,
+    "max_previous_success_entropy_score_difference": 0.0000000023114852254479956,
+    "generator_grid_seeds_gate_unchanged": true
+  },
+  "formal_candidate_score": null,
+  "platform_policy": "Local models and commits only; no new publication, push or formal upload in this phase",
+  "limitations": "No global ten-direction neural gate, final blind simulation or formal 0.950+ score. Public-train assessments and numerical-repair simulator assessments are development evidence. Complete previously verified K03/K04 files remain local."
+}
