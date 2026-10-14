@@ -2,6 +2,14 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**C55–C61：两个新方向×两个时间 fit 的五阶段 Queue 验证完成，未晋级。** fit之后，15天仅选checkpoint，30天仅选决策阈值/参考tree，后15天用于challenger gate，最后30天assessment；三次选择均先封存才读后段标签。四组新权重从各自fit重新训练，没有把旧selected checkpoint的cal切片冒充独立验证。原第一轮I5_S秋完成、冬在checkpoint失败；其记录与模型保留。修订四组全部运行同一预注册worker/sampler，三optimizer seed/组，mean α=.25固定。
+
+**采样器确有可修复的条件不平衡。** 原I5_S冬checkpoint存在15个onset/944个ongoing候选；旧按全部候选随机排列，加6小时spacing后选0/22。新的按条件均衡候选策略同日同seed选9/13；秋checkpoint从1个onset变为10个。原selector默认行为保留，两个旧cache的8组sampler metadata与eligible labels精确复现。新策略只是合法观测代理，不能声称组织方selector或latent bias已解决。
+
+四组cal决策最优全部为tree，后段gate比较自身为零，**没有出现非零challenger，不能据此证明gate能减少过拟合**。balanced assessment去重proxy为I5_S秋 **.781151**、冬 **.797255**，I10_W秋 **.557659**、冬 **.814942**。未被选中的三seed graph_mean相对这些参考为 **+.007361/−.007431/+.047203/+.000306**，四个区间均跨零；没有按assessment改选。I10_W两季checkpoint只有3个onset，样本仍少。原I5_S秋未经同域的 .840835 与新 .781151 不可直接比较；C60把两份冻结selected模型放在同样balanced assessment上，旧 **.781706** vs新 **.781151**，差 **−.000555**、CI **[−.025070,.018913]**，未见采样策略的模型收益。
+
+原/修订五份完整研究保存15个NN与10个tree；失败冬另两fit-only tree保留。四修订 wall time **316.33/302.96/141.75/154.03秒**、GPU allocated峰值 **81.85/83.08MiB**，期间与独立复核/测试有并行。原研究156次、修订452次，共 **608个decision-phase导出role/window** 的input/score/binary独立重建精确，重复角色不算独立样本；全部date/seal读序核验通过。**83 research passed；CPU71 passed/4 optional-Torch skips**。既有完整submission和K06均冻结，无正式成绩、候选替换或平台操作。详见 `docs/FIVE_PHASE_QUEUE_RESEARCH.md`。
+
 **C49–C54：两种子概率集成及校准敏感性策略未晋级。** 冻结原两 seed/三 loss 的权重，不新增训练；每季比较 tree 与五种分数来源×四个非零 α，共21个 cal 候选。秋 cal argmax 仍原 BCE α=.25；两 seed BCE 组合 α=.25 的 assessment 观测 proxy **.879028→.880013**，gain **+.000985**、CI **[−.001310,.003718]**。冬 cal 选 mean-BCE α=.5，仅比旧 α=.25 的 cal 高 **.000160**，assessment 却 **.879943→.858806**，gain **−.021137**、CI **[−.040511,−.004430]**。没有按 assessment 改选其他 α。
 
 “cal 最优与候选的配对 bootstrap gap 不超过1SE就优先简化”的 primary，两季都退回 tree，分别损失 **.006606/.011703**、区间跨零；不作为新最佳。该 bootstrap 复用已经用于 checkpoint/threshold 的 cal，**仅为 in-sample 选择敏感性，不是独立置信保证**。平均概率、α和各自 cal 阈值共同构成策略比较，冬季下降不能全归因平均操作。两个种子仍共享事件；没有新的走廊、latent truth 或正式测量。

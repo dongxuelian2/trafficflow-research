@@ -69,3 +69,22 @@ def test_ensemble_save_discards_live_networks_and_restores_current_process_cache
     path=tmp_path/'ensemble.pkl';model.save(path);loaded=QueueModel.load(path)
     assert loaded._networks is None and loaded._network is None
     assert model._networks is live and model._network=='legacy_transient'
+
+
+def test_portable_tree_uses_only_registered_occupancy_and_public_condition(monkeypatch):
+    observed=[]
+    def features(history,target,net,topology,origin,**kwargs):
+        observed.append(kwargs['include_occupancy'])
+        return pd.DataFrame({'lead_minutes':[5,10,15,20,25,30], 'condition_ongoing':0.,'occupancy_current':.1})
+    class CheckBaseline(Baseline):
+        uses_occupancy_features=True;uses_published_condition=True
+        def probability(self,x):
+            assert (x.condition_ongoing==1.).all()
+            return super().probability(x)
+    monkeypatch.setattr('trafficflow.full_domain_queue.queue_features',features)
+    setting={'thresholds':{'global':.5},'require_nonempty':False,'timing':'before'}
+    model=FullDomainQueueModel(CheckBaseline(),['a'],setting)
+    origin=pd.Timestamp('2030-10-01T00:00:00Z')
+    target=pd.DataFrame({'timestamp':[(origin+pd.Timedelta(minutes=m)).strftime('%Y-%m-%dT%H:%M:%SZ') for m in [5,10,15,20,25,30]],'link_id':'a'})
+    model.predict_window(pd.DataFrame({'timestamp':[str(origin)]}),target,None,None,origin,'queue_ongoing')
+    assert observed==[True]

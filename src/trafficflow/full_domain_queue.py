@@ -28,7 +28,10 @@ class FullDomainQueueModel(QueueModel):
         if len(target)!=len(canonical) or (lookup<0).any() or index.has_duplicates:
             raise ValueError('Queue model requires the complete public panel forecast template')
         full=canonical.to_frame(index=False)
-        features=queue_features(history,full,net,topology,origin,allow_origin=True,include_occupancy=False)
+        features=queue_features(history,full,net,topology,origin,allow_origin=True,
+            include_occupancy=getattr(self.baseline,'uses_occupancy_features',False))
+        if getattr(self.baseline,'uses_published_condition',False):
+            features['condition_ongoing']=float(condition=='queue_ongoing')
         probability=self.baseline.probability(features)
         if self.alpha:
             neural=self._graph_probability(history,net,origin,condition).ravel()

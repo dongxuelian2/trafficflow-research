@@ -129,3 +129,15 @@ proxy 改善不是正式 Physics；A55 用 raw train 的非目标 evaluator anch
 21个候选/季共用已选checkpoint和cal labels，bootstrap只检查选择敏感性；不能提供独立覆盖率。冬平均、α和threshold一起变化；不是固定决策下仅平均的因果对照。C53全部10个导出角色独立历史重建，score/binary各550次精确；这些角色和windows重复，不是10个新训练模型或550个独立事件。无新走廊或正式增益，不覆盖K06/正式最佳。
 
 C51/C52仅测试两种history-only基线的已知latent/观测标签契约，不是将公开模型在数字孪生上验证通过。σ8的onset persistence mean-scene latent IoU0 vsobserved .029412说明指标差异，不能宣称模型改善；只有3个独立seed，场景/overlap依赖保留。
+# C55–C61 五阶段同协议对照
+
+| direction / fit_end | decision-selected参考及最终选择 | assessment noisy proxy | 固定三seed graph_mean |
+|---|---|---:|---:|
+| I5_S /2030-10-15 | rich600/63 tree | .781151 | .788512 |
+| I5_S /2030-11-30 | plain600/63 tree | .797255 | .789825 |
+| I10_W /2030-10-15 | rich600/63 tree | .557659 | .604862 |
+| I10_W /2030-11-30 | rich600/63 tree | .814942 | .815249 |
+
+graph_mean均未由decision选中，四个paired day/origin CI跨零，不反选assessment赢家。三种子图只与同划分最强plain/rich参照比較，表示完整预测策略，不能把神经原序列与树summary的差异全归因图结构。后段selection没有非零challenger，本轮无法评价gate对实际替换的效力。
+
+新版条件均衡采样是代理的采样机制变化。C55原版 .840835与新版.781151的raw score不可比较；同新版事件上原selected .781706 vs新selected .781151，差−.000555/CI跨零。所有模型通过独立history和完整域复核，共608重复role/window调用；不等于608独立测试样本。三optimizer seeds共享事件，公开开发日历跨fold重叠，正式分项仍未知，无新晋级。

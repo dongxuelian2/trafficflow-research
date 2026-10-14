@@ -11,9 +11,34 @@ from .queue import ProxyData, queue_features
 from .metrics import queue_iou
 
 
+def select_event_candidates(candidates,seed,per_condition,spacing_minutes,balanced=False):
+    """Keep global spacing; optionally sample conditions before their candidate rows."""
+    rng=np.random.default_rng(seed);chosen=[]
+    counts={'queue_onset':0,'queue_ongoing':0}
+    if balanced:
+        pools={c:list(rng.permutation([i for i,r in enumerate(candidates) if r['condition']==c])) for c in counts}
+        positions={c:0 for c in counts}
+        def order():
+            while True:
+                active=[c for c in counts if counts[c]<per_condition and positions[c]<len(pools[c])]
+                if not active:return
+                least=min(counts[c] for c in active);ties=[c for c in active if counts[c]==least]
+                c=ties[int(rng.integers(len(ties)))];i=pools[c][positions[c]];positions[c]+=1
+                yield i
+        indices=order()
+    else:indices=rng.permutation(len(candidates))
+    for i in indices:
+        candidate=candidates[i];condition=candidate['condition']
+        if counts[condition]>=per_condition:continue
+        if any(abs((candidate['origin']-old['origin']).total_seconds())<spacing_minutes*60 for old in chosen):continue
+        chosen.append(candidate);counts[condition]+=1
+        if all(n>=per_condition for n in counts.values()):break
+    return chosen,counts
+
+
 def sample_events(frames, net, topo, panel, seed, per_condition=5,
-                  spacing_minutes=360, maximum_persistence_iou=.9,origin_reader=None,include_occupancy=False,onset_last_step=False):
-    rng = np.random.default_rng(seed)
+                  spacing_minutes=360, maximum_persistence_iou=.9,origin_reader=None,include_occupancy=False,onset_last_step=False,
+                  balanced_conditions=False):
     days = []
     candidates = []
     for raw in frames:
@@ -54,21 +79,7 @@ def sample_events(frames, net, topo, panel, seed, per_condition=5,
                 'origin': pd.Timestamp(times[at]), 'persistence_proxy_iou': iou,
                 'future_label_coverage': float(valid_future.mean()),
                 'near_cutoff_share': float((np.abs(future-cutoff)[valid_future] <= 2.).mean())})
-    chosen = []
-    counts = {'queue_onset': 0, 'queue_ongoing': 0}
-    # Candidate origins are uniformly permuted; spacing rejection is explicit.
-    # This is an approximation, not a claim about organizer selection weights.
-    for i in rng.permutation(len(candidates)):
-        candidate = candidates[i]
-        condition = candidate['condition']
-        if counts[condition] >= per_condition:
-            continue
-        if any(abs((candidate['origin']-old['origin']).total_seconds()) < spacing_minutes*60 for old in chosen):
-            continue
-        chosen.append(candidate)
-        counts[condition] += 1
-        if all(n >= per_condition for n in counts.values()):
-            break
+    chosen,counts=select_event_candidates(candidates,seed,per_condition,spacing_minutes,balanced_conditions)
     if not chosen:
         raise ValueError('No eligible proxy events')
     xs, ys, windows, conditions, dates = [], [], [], [], []
@@ -99,6 +110,8 @@ def sample_events(frames, net, topo, panel, seed, per_condition=5,
         'occupancy_features':include_occupancy,
         'onset_observation_first_queue_at_30':onset_last_step,
         'windows': [{**c, 'origin': c['origin'].isoformat()} for c in chosen]}
+    if balanced_conditions:
+        metadata['condition_sampling']='Uniform within each condition; alternate least-filled quota,global spacing. Own proxy policy,not organizer implementation.'
     return ProxyData(pd.concat(xs, ignore_index=True), np.array(ys), np.array(windows),
                      np.array(conditions), np.array(dates)), metadata
 

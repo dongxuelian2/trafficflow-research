@@ -250,3 +250,17 @@ C09/C10/C11 的去重、按 condition 等权、日期 block bootstrap 增益分�
 | C54 | 6旧graph NPZ | 公共FD/拓扑/节点顺序全部数组精确重建，补入hash清单，无新模型增益 |
 
 C49首次job20156在cal seal之后、assessment之前因旧清单缺graph NPZ失败；zip/seal/失败JSON保留。v2先核对SHA保留模型中的geometry，再登记图字节，258.92秒CPU完成；C54再独立公开重建六份。C51首次CPU import旧GPU脚本CASES失败，尚未注册/建输出；旧源快照与记录保留，共用场景配置拆入无Torch模块后复跑。共享六case值不变。78 research passed；CPU66 passed/4 Torch skips。没有新增训练、fit seed、正式成绩、晋级或新完整候选；原/K06不变。预测只接收≤T历史，所有latent/未来label/qc只在独立模拟selector或scorer中使用。
+# C55–C61：五阶段、新方向与采样条件平衡
+
+四个balanced-v2研究统一预注册：I5_S/I10_W，fit_end10-15/11-30；之后checkpoint15/decision30/selection15/assessment30日。三optimizer seeds共享各组fit事件；Checkpoint最低Brier每5epoch，20×80/batch4/AdamW.001。两tree为600/63 plain与合法occupancy+provided-condition；图采用30min public kernels，三单seed/mean均固定α.25。decision确定强参考及challenger；后段仅gain≥.01且95CI下界正时替换，不重新调参。
+
+| 研究 | checkpoint onset | decision/最终选择 | assessment proxy IoU | graph_mean次要gain/CI |
+|---|---:|---|---:|---|
+| C55 I5_S秋 balanced-v2 | 10 | rich tree | .781151 | +.007361 [−.002108,.019077] |
+| C56 I5_S冬 balanced-v2 | 9 | plain tree | .797255 | −.007431 [−.045926,.033042] |
+| C57 I10_W秋 balanced-v2 | 3 | rich tree | .557659 | +.047203 [−.012979,.100827] |
+| C58 I10_W冬 balanced-v2 | 3 | rich tree | .814942 | +.000306 [−.003037,.003516] |
+
+四个decision winner都是incumbent，selection gate零，不晋级；次要graph均CI跨零。C55原版秋 .840835在不同事件人口上；原版冬有15 onset候选却选0、worker退出1，未读decision/assessment，后两子任务未启动。所有失败源、两fit-only tree及status保留。C59同checkpoint/seed条件平衡选9 onset/13 ongoing；默认代码8组旧cache的metadata与labels完全复现。新campaign在独立注册/目录重跑，未修改旧报告。
+
+C60同样balanced assessment冻结模型对照为原.781706 vs新.781151，−.000555/CI[−.025070,.018913]，未见策略收益。25个完成研究的训练模型（15NN/10tree），失败另2tree；四v2 wall316.33/302.96/141.75/154.03秒，allocated81.85/83.08MiB。独立decision输入/score/binary 608个role/window精确，五phase/date/seal一致；重复角色/seed采样不是独立事件。83研究/71CPU通过，CPU4 optional-Torch skips。Formal仍.82940，K06冻结，无平台操作。

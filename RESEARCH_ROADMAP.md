@@ -2,6 +2,12 @@
 
 目标为可复现的正式 Kaggle **0.95000+**；当前正式 **0.82940**。不将阶段性较低分数作为终点。
 
+C55–C61补齐两个新方向、两个fit时间及真正分开的checkpoint/decision/selection数据，四组同协议源SHA一致。三seed graph没有在decision赢过plain/rich tree；不扩大当前graph/α网格，保留所有权重与完整复核。后段gate本轮全部为零比较，流程有效不代表非零候选选择已验证。I10_W只有3个checkpoint onset，复杂模型的选择证据仍弱。
+
+C59确认旧pool permutation会使罕见condition被spacing挤掉；balanced可缓解，不等于官方采样。C60同事件控制差−.000555/CI跨零，原新绝对IoU差主要由评估人口变化造成，禁止把balanced raw分数当收益。下一步研究Queue时保持双人口诊断与同事件模型控制，先解决真正的观测/latent标签与事件位置、传播模型信息不足；不继续仅改变采样后报告新高分。也应把投入转回State潜在动力学和OD概率需求/先验失配，避免只在Queue基础设施停留。
+
+当前没有新模型晋级，无正式或private分项成绩，原.82940/K06不变。四fold/方向仍复用公开开发日历，不能称四个独立盲测；final simulator seeds不生成，平台任务继续按用户指示暂缓。
+
 C49 的两种子 mean-BCE 只有秋+.000985/CI跨零，冬 cal 只多.000160却有−.021137 assessment代价；简化到 tree 的 bootstrap-gap primary 也退化。暂不部署这些新政策，不扩张平均权重/同一阈值网格。下一步优先训练与校准数据真正分开的选择机制：固定 checkpoint 或仅在前段 cal 选 checkpoint/threshold，再在后段保留原强参考而非默认退回更弱 tree；该后段必须未参与这次权重选择，不能把已有模型的 cal 切片包装成独立验证。先增加一个新方向及其合法时间划分，保留 source 参考与小幅收益拒绝门槛。
 
 C51/C52 确认已知 latent 队列、带噪 threshold labels 和未来可评分域可以给同样预测不同 IoU；零噪声也会丢失正例。优先结合公开 TRAIN 历史与独立模拟做噪声/未来可用率建模，不能使用实际 future mask 推断。503 origins 重叠、六 case 共用三个 seed，不把72个counterfactual当独立样本。C54 补齐旧 geometry 的公开重建和校验；当前hash不追溯冒充以前完整覆盖。原 .82940/K06继续冻结，无平台动作，final seeds不生成。

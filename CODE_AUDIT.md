@@ -88,3 +88,10 @@ C44/C45 明确限定 TRAIN，将 future reads 标为 evaluator-only；future_cov
 `select_with_cal_uncertainty`使用相同cal-window/key/condition、全部45日含空日期、4000个7日块重采样；gap SE不再除sqrt(resamples)。这是已拟合cal上的敏感性，不能宣称held-out coverage。五项测试检验确定增益、单日敏感性、key错配、完整域逆序恢复及缓存序列化。两项CTM基线测试验证只有13个past/current slots、当前缺测仍合法外推及全缺测fallback。
 
 独立CTM forecaster只接收past noisy speed/history qc和提供condition，latent仅决定自主模拟事件，future qc/label在预测后评分。C51 shared CASES移到CPU-only模块，六值未改。C49初次清单缺项和C51初次可选Torch import失败均保留。旧六geometry NPZ此前未纳入manifest，当前bytes先登记并由C54公共网络逐数组重建；不追溯声称先前字节完全覆盖。全部旧模型/完整submission/依赖锁SHA保持不变。
+# 五个互斥机制阶段与可选条件平衡 C55–C61
+
+`queue_phase_split.py`严格要求全部TRAIN日历、fit之后15/30/15/30日、不重叠；event origin必须属于注册phase。worker请求decision/selection/assessment必须先存在checkpoint/decision/selection seal，逐读记录原seal SHA；部署复核核对全部原seal及date。NN参数只按checkpoint期Brier选择，threshold/参考仅decision期，后段gate不调参，assessment在gate封存后读取。
+
+`queue_events.select_event_candidates`新可选按condition分池/最小已填quota轮换，仍保持全窗口global spacing；default仍原RNG permutation，旧metadata不新增字段。两测试检验密集class不挤掉rare class、spacing及default兼容，八组旧cache metadata/labels精确重构。C59冬15/944候选旧选0/22，balanced选9/13；这不是组织方selector或latent truth。
+
+FullDomain树features按保存baseline的occupancy/provided-condition flags构建，default旧模型不变。新测试核查该输入契约；5份完整研究全部decision输入、score/binary 608role/window独立raw历史重建精确，查验两个tree原特征以及9channel causal arrays。C60两个冻结策略在相同新assessment完整域比对，新selected原指标精确重放。原失败冬只有fit数据及checkpoint标签，无decision/assessment标签读取；不虚构缺失condition的分数。研究/CPU83/71最终测试与失败记录均保留。
