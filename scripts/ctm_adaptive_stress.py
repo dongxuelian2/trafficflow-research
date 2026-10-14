@@ -15,17 +15,9 @@ from trafficflow.adaptive_graph_state import AdaptiveGraphState
 from trafficflow.ctm_state_adapter import synthetic_state_input
 from trafficflow.data import Release
 from trafficflow.digital_twin import Scenario, simulate, simulated_physics
+from trafficflow.ctm_scenarios import CASES
 from trafficflow.research_eval import register_protocol
 from trafficflow.runtime import capture_source_snapshot, evidence, sha256_file
-
-
-CASES = {
-    'mild': dict(capacity_retained=.85, demand_multiplier=.9, incident_cell=8, failure_fraction=0.),
-    'onset': dict(capacity_retained=.5, demand_multiplier=1.1, incident_cell=20),
-    'severe_upstream': dict(capacity_retained=.3, demand_multiplier=1.25, incident_cell=8),
-    'severe_downstream': dict(capacity_retained=.3, demand_multiplier=1.25, incident_cell=27),
-    'failures': dict(capacity_retained=.5, failure_fraction=.4, failure_steps=36),
-    'noisy': dict(capacity_retained=.5, speed_noise=3., relative_flow_noise=.05)}
 
 
 def metrics(sim, v, q):

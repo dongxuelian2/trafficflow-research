@@ -81,3 +81,10 @@ K03/K04 各 6,980,503 行严格自然 key 覆盖通过，独立 streaming diff �
 四组初始化与 batch digest 内部相同；全部选择封存后读取 assessment。相同 optimizer seed 的两个 BCE 参数控制与 C32/C34 全张量完全相同。独立从 `<T` RAW TRAIN 及仅 `T` masked 公共帧重建全部 cal histories，raw probability/导出全模板 binary 各660次精确。C46 固定 alpha 只引用已封存设置，后验诊断不反写 primary。首次 verifier numpy.str_ 错误保留失败源快照并在新目录修复复跑。
 
 C44/C45 明确限定 TRAIN，将 future reads 标为 evaluator-only；future_coverage、future qc 和 raw future speeds 从未进入预测。80 窗口仅为公开观测审计，不能将 thresholded speed 或低质量 finite speed 冒充官方 queue_true。新增 Lovász/soft loss 的 sigmoid(logit-log4) 仅作可校准 score；加 overlap 后不保证 proper posterior。
+# 两种子概率接口及模拟标签契约 C49–C54
+
+`FullDomainQueueModel`抽取共同完整域概率路径，binary始终在canonical域决策后恢复target顺序；旧PKL接口660次原始cal输出精确复现。新ensemble只平均冻结网络的corrected score，状态保留CPU tensor，保存清除live GPU cache；全部550个导出角色/window的score及binary独立重建精确。未来 mask/label 仍不在forecast API参数中。
+
+`select_with_cal_uncertainty`使用相同cal-window/key/condition、全部45日含空日期、4000个7日块重采样；gap SE不再除sqrt(resamples)。这是已拟合cal上的敏感性，不能宣称held-out coverage。五项测试检验确定增益、单日敏感性、key错配、完整域逆序恢复及缓存序列化。两项CTM基线测试验证只有13个past/current slots、当前缺测仍合法外推及全缺测fallback。
+
+独立CTM forecaster只接收past noisy speed/history qc和提供condition，latent仅决定自主模拟事件，future qc/label在预测后评分。C51 shared CASES移到CPU-only模块，六值未改。C49初次清单缺项和C51初次可选Torch import失败均保留。旧六geometry NPZ此前未纳入manifest，当前bytes先登记并由C54公共网络逐数组重建；不追溯声称先前字节完全覆盖。全部旧模型/完整submission/依赖锁SHA保持不变。

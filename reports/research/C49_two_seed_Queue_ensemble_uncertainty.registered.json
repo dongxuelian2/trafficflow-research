@@ -1,0 +1,50 @@
+{
+  "protocol_sha256": "3ca45721ee8d1e36697d38dcc46fad70673f4fe5b1a00e6eaf6bc3d1de789bac",
+  "protocol": {
+    "id": "Frozen_Queue_two_optimizer_seed_score_ensemble",
+    "pairs": [
+      [
+        "C32_D12_I5_N_wave_graph_Queue",
+        "C47_I5_N_autumn_window_overlap_seed1",
+        "C42_I5_N_autumn_window_overlap_seed2"
+      ],
+      [
+        "C34_D12_I5_N_winter_wave_Queue",
+        "C48_I5_N_winter_window_overlap_seed1",
+        "C43_I5_N_winter_window_overlap_seed2"
+      ]
+    ],
+    "source_reports_sha256": {
+      "C47_I5_N_autumn_window_overlap_seed1": "cfce9c3fdc38543e3ebedf2ebc0f9c5c1c10b59f31e0aa1c2006d9a2da4ee65e",
+      "C42_I5_N_autumn_window_overlap_seed2": "55062bbb61738796c8c50508e2faaf3af45e7d4f123c3ef117fcf7086d0c1b47",
+      "C48_I5_N_winter_window_overlap_seed1": "56de17dec73de85ab024d230e0af85a1788699b60a64151cdf708e92f81912df",
+      "C43_I5_N_winter_window_overlap_seed2": "c910cdb37bbd98d7d1e3aeb9b416f303924e2fa2d503f46a000f520fcd5003a7"
+    },
+    "source_manifest_sha256": "0761ede83a290fff337e0ee503be602c4c90dcbbf6f1a410fea8af3b1e08a7c1",
+    "probability_report_sha256": "469f4411fe35c1539842f9e8ff3c3a5733e257f64f00adf192c937cba366ebf8",
+    "sources": [
+      "old_bce",
+      "new_bce",
+      "mean_bce",
+      "mean_soft_iou",
+      "mean_lovasz"
+    ],
+    "averaging": "Equal arithmetic mean of two corrected scores; same method across seeds, no extra fitting",
+    "alpha_grid": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "calibration": "Full-template threshold/force calibration, old single-seed choices reused and replayed exactly",
+    "selection": "Primary: simplest candidate within one paired-bootstrap SE gap of cal argmax; secondary: raw argmax and best mean-BCE",
+    "bootstrap": "4000 circular 7-day resamples,seed20261013,all45 cal calendar days including event-empty days",
+    "complexity": "number of active neural members,alpha,conditional thresholds,force,prefer BCE,prior old seed",
+    "uncertainty_scope": "In-sample sensitivity only: checkpoints and thresholds used full cal. No independent confidence bound.",
+    "assessment": "Old inspected public TRAIN development dates; all policy choices sealed before assessment cache load",
+    "formal_Queue": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

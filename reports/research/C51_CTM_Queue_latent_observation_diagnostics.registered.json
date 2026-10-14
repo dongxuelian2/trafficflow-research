@@ -1,0 +1,77 @@
+{
+  "protocol_sha256": "521a6f82bb497c410a84d33c0694bb89ab8ca9bee6ca35388baf5701a77ce95a",
+  "protocol": {
+    "id": "Independent_CTM_latent_vs_observed_Queue_event_diagnostic",
+    "seeds": [
+      943003,
+      943013,
+      943031
+    ],
+    "noise_kmh": [
+      0.0,
+      1.0,
+      3.0,
+      8.0
+    ],
+    "base": {
+      "seed": 943003,
+      "cells": 32,
+      "days": 2,
+      "length_km": 0.75,
+      "lanes": 4.0,
+      "free_speed": 110.0,
+      "capacity": 7600.0,
+      "jam_density": 400.0,
+      "demand_multiplier": 1.0,
+      "incident_cell": 20,
+      "incident_start_hour": 8.0,
+      "incident_hours": 1.5,
+      "capacity_retained": 0.45,
+      "speed_noise": 1.0,
+      "relative_flow_noise": 0.015,
+      "failure_fraction": 0.1,
+      "failure_steps": 18,
+      "mask_rate": 0.0
+    },
+    "cases": {
+      "mild": {
+        "capacity_retained": 0.85,
+        "demand_multiplier": 0.9,
+        "incident_cell": 8,
+        "failure_fraction": 0.0
+      },
+      "onset": {
+        "capacity_retained": 0.5,
+        "demand_multiplier": 1.1,
+        "incident_cell": 20
+      },
+      "severe_upstream": {
+        "capacity_retained": 0.3,
+        "demand_multiplier": 1.25,
+        "incident_cell": 8
+      },
+      "severe_downstream": {
+        "capacity_retained": 0.3,
+        "demand_multiplier": 1.25,
+        "incident_cell": 27
+      },
+      "failures": {
+        "capacity_retained": 0.5,
+        "failure_fraction": 0.4,
+        "failure_steps": 36
+      },
+      "noisy": {
+        "capacity_retained": 0.5,
+        "relative_flow_noise": 0.05
+      }
+    },
+    "final_seeds_generated": false,
+    "latent_selector": "History visible latent>=2 same-link defines ongoing; else onset. Latent queue required in horizon; onset first occurrence T+30; latent persistence IoU<=.9; history quality>=.7.",
+    "observation_subset": "Within the same latent-selected events, require observed eligible future positive, onset first observed at T+30, and observed persistence IoU<=.9",
+    "prediction": "Two fixed baselines see only thirteen noisy past/current slots and history quality. No future quality/latent inputs.",
+    "scores": "Known latent and noisy-threshold labels scored after predictions, same future eligible mask. Separate all-latent-selected versus observation-subset populations.",
+    "sampling_limit": "All qualifying five-minute origins overlap; scene/seed is the evidence unit, no per-origin independent CI",
+    "formal_Queue": null,
+    "formal_Total": null
+  }
+}

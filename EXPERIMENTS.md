@@ -237,3 +237,16 @@ C09/C10/C11 的去重、按 condition 等权、日期 block bootstrap 增益分�
 | 独立部署 | 四组全部 cal windows | 非性能实验 | 原始概率/完整预测各 660 次精确复现；两个原 BCE 参数控制精确 |
 
 四组 GPU wall time 199.11/216.23/203.29/216.44 秒；约 110.33 MiB allocated 峰值。末组与部署复核并行。首次部署 job7692 退出1：pandas 拒绝 numpy.str_，未产生成绩；原失败 zip 和记录保留，str 转换后新目录复跑。部署两份成功记录 73.53/29.37 秒。71 research passed，CPU59 passed/4 Torch skips。损失数学测试枚举 64 个离散真值/误差顶点，并检验 onset/unavailable 零梯度与窗口等权。正式 Total 仍 .82940，无模型晋级、无新完整候选替换、无平台动作。
+# C49–C54：两种子集成、选择敏感性与已知真值标签契约
+
+| 实验 | 模型/数据 | 结果与资源 |
+|---|---|---|
+| C49 v2 秋 | 两 seed mean-BCE/calα.25 | .880013 vs旧.879028，+.000985，CI[−.001310,.003718]；全体cal argmax仍旧BCE |
+| C49 v2 冬 | 两 seed mean-BCE/calα.5 | .858806 vs旧.879943，−.021137，CI[−.040511,−.004430]；cal仅+.000160 |
+| C49 primary | 21候选/季，1 paired-gap SE 简化 | 两季都tree，−.006606/−.011703；仅in-sample sensitivity，不是独立CI保证 |
+| C50 | 重构后的全部旧概率/决策接口 | 660次window/model输出精确，94.75秒GPU；旧tensor控制一致 |
+| C51/C52 | 自主CTM，3seeds×6cases×4noise | 72场景，18组latent/quality匹配；503重叠origins/噪声，观测subset495/495/492/490；9.29秒CPU |
+| C53 | 10导出角色/全部110cal windows | score/binary各550次精确，134.66秒GPU；重复角色不算独立样本 |
+| C54 | 6旧graph NPZ | 公共FD/拓扑/节点顺序全部数组精确重建，补入hash清单，无新模型增益 |
+
+C49首次job20156在cal seal之后、assessment之前因旧清单缺graph NPZ失败；zip/seal/失败JSON保留。v2先核对SHA保留模型中的geometry，再登记图字节，258.92秒CPU完成；C54再独立公开重建六份。C51首次CPU import旧GPU脚本CASES失败，尚未注册/建输出；旧源快照与记录保留，共用场景配置拆入无Torch模块后复跑。共享六case值不变。78 research passed；CPU66 passed/4 Torch skips。没有新增训练、fit seed、正式成绩、晋级或新完整候选；原/K06不变。预测只接收≤T历史，所有latent/未来label/qc只在独立模拟selector或scorer中使用。

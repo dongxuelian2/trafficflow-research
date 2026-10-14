@@ -15,7 +15,7 @@ class FullDomainQueueModel(QueueModel):
         self.geometry={k:np.asarray(v).copy() for k,v in geometry.items()} if geometry is not None else None
         self._network=None
 
-    def predict_window(self,history,target,net,topology,origin,condition):
+    def _full_probability(self,history,target,net,topology,origin,condition):
         if condition not in ['queue_onset','queue_ongoing']:raise ValueError('Public Queue condition required')
         origin=pd.Timestamp(origin)
         if origin.tzinfo is None:raise ValueError('Queue origin needs timezone')
@@ -31,24 +31,36 @@ class FullDomainQueueModel(QueueModel):
         features=queue_features(history,full,net,topology,origin,allow_origin=True,include_occupancy=False)
         probability=self.baseline.probability(features)
         if self.alpha:
-            import os
-            os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG',':4096:8')
-            import torch
-            from .graph_queue import CausalGraphQueue,queue_history_input
-            from .probability_calibration import weighted_bce_probability
-            device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-            if self._network is None:
-                torch.set_num_threads(4);torch.use_deterministic_algorithms(True);torch.backends.cudnn.benchmark=False
-                self._network=CausalGraphQueue(hidden=32,use_graph=True).to(device)
-                self._network.load_state_dict(self.state);self._network.eval()
-            x=queue_history_input(history,self.links,net,origin,condition)
-            graph=[torch.tensor(self.geometry[k],device=device) for k in ['incoming','outgoing','geometry']]
-            with torch.no_grad():
-                logits,_=self._network(torch.from_numpy(x.transpose(2,0,1)[None].copy()).to(device),*graph)
-                neural=weighted_bce_probability(logits.cpu().numpy()[0],4.).ravel()
+            neural=self._graph_probability(history,net,origin,condition).ravel()
             probability=(1-self.alpha)*probability+self.alpha*neural
-        pred=full_queue_decisions(probability,np.full(len(full),'public_window'),np.full(len(full),condition),
-            features.lead_minutes.to_numpy(),self.setting['thresholds'],self.setting['require_nonempty'],self.setting['timing'])
+        return probability,features.lead_minutes.to_numpy(),lookup
+
+    def _graph_probability(self,history,net,origin,condition):
+        import os
+        os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG',':4096:8')
+        import torch
+        from .graph_queue import CausalGraphQueue,queue_history_input
+        from .probability_calibration import weighted_bce_probability
+        device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        if self._network is None:
+            torch.set_num_threads(4);torch.use_deterministic_algorithms(True);torch.backends.cudnn.benchmark=False
+            self._network=CausalGraphQueue(hidden=32,use_graph=True).to(device)
+            self._network.load_state_dict(self.state);self._network.eval()
+        x=queue_history_input(history,self.links,net,origin,condition)
+        graph=[torch.tensor(self.geometry[k],device=device) for k in ['incoming','outgoing','geometry']]
+        with torch.no_grad():
+            logits,_=self._network(torch.from_numpy(x.transpose(2,0,1)[None].copy()).to(device),*graph)
+            return weighted_bce_probability(logits.cpu().numpy()[0],4.)
+
+    def forecast_probability(self,history,target,net,topology,origin,condition):
+        probability,_,lookup=self._full_probability(history,target,net,topology,origin,condition)
+        result=target.copy();result['queue_score']=probability[lookup]
+        return result
+
+    def predict_window(self,history,target,net,topology,origin,condition):
+        probability,lead,lookup=self._full_probability(history,target,net,topology,origin,condition)
+        pred=full_queue_decisions(probability,np.full(len(probability),'public_window'),np.full(len(probability),condition),
+            lead,self.setting['thresholds'],self.setting['require_nonempty'],self.setting['timing'])
         result=target.copy();result['queue_pred']=pred[lookup]
         return result
 

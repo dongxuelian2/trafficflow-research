@@ -117,3 +117,15 @@ proxy 改善不是正式 Physics；A55 用 raw train 的非目标 evaluator anch
 均为同一公开 TRAIN 观测事件的去重 condition-macro proxy，不是正式 Queue。冬新 seed 的 BCE 虽在 assessment 更高，cal 选择已封存，不能反选。原 seed 的 BCE 参数与旧 wave30 完全相同；新 seed 检验初始化/优化与 batch 变化，事件集合仍相同。12 个导出模型及 raw probability 660 次 cal-window 独立复现通过。
 
 等 alpha 的 C46 保留次要正例：冬原 seed Lovász α.25 .883696 vs BCE .879943，gain+.003753，名义 CI 正；cal 原选 α.5，另一 seed α.25 的 gain−.002783、CI 跨零。纯网络最高 .830712 仍弱于强 tree .868240。16 个次要比较未校正多重性，不以某一正区间替换 primary。真实分项与综合分未知，K06 及正式最佳保持冻结。
+# C49 跨种子集成：策略对照未晋级
+
+| policy | 秋 proxy IoU / vs旧BCE | 冬 proxy IoU / vs旧BCE |
+|---|---|---|
+| 旧cal BCE α.25 | .879028 / 0 | .879943 / 0 |
+| cal-selected mean-BCE | .880013 / +.000985 CI跨零 | .858806 / −.021137 CI[−.040511,−.004430] |
+| 全候选cal argmax | 旧BCE，无改变 | mean-BCE α.5，同上 |
+| 最简单 within1 paired-gap SE | tree .872422 / −.006606 | tree .868240 / −.011703 |
+
+21个候选/季共用已选checkpoint和cal labels，bootstrap只检查选择敏感性；不能提供独立覆盖率。冬平均、α和threshold一起变化；不是固定决策下仅平均的因果对照。C53全部10个导出角色独立历史重建，score/binary各550次精确；这些角色和windows重复，不是10个新训练模型或550个独立事件。无新走廊或正式增益，不覆盖K06/正式最佳。
+
+C51/C52仅测试两种history-only基线的已知latent/观测标签契约，不是将公开模型在数字孪生上验证通过。σ8的onset persistence mean-scene latent IoU0 vsobserved .029412说明指标差异，不能宣称模型改善；只有3个独立seed，场景/overlap依赖保留。

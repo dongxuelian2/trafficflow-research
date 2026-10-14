@@ -2,6 +2,14 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**C49–C54：两种子概率集成及校准敏感性策略未晋级。** 冻结原两 seed/三 loss 的权重，不新增训练；每季比较 tree 与五种分数来源×四个非零 α，共21个 cal 候选。秋 cal argmax 仍原 BCE α=.25；两 seed BCE 组合 α=.25 的 assessment 观测 proxy **.879028→.880013**，gain **+.000985**、CI **[−.001310,.003718]**。冬 cal 选 mean-BCE α=.5，仅比旧 α=.25 的 cal 高 **.000160**，assessment 却 **.879943→.858806**，gain **−.021137**、CI **[−.040511,−.004430]**。没有按 assessment 改选其他 α。
+
+“cal 最优与候选的配对 bootstrap gap 不超过1SE就优先简化”的 primary，两季都退回 tree，分别损失 **.006606/.011703**、区间跨零；不作为新最佳。该 bootstrap 复用已经用于 checkpoint/threshold 的 cal，**仅为 in-sample 选择敏感性，不是独立置信保证**。平均概率、α和各自 cal 阈值共同构成策略比较，冬季下降不能全归因平均操作。两个种子仍共享事件；没有新的走廊、latent truth 或正式测量。
+
+**C51/C52 独立 CTM 标签诊断完成。** 三个 research seed、六种事故/需求/失效配置、四种速度噪声，共72个配对场景；同一 seed/case 的 latent 状态及质量数组逐值不变。每个噪声水平有 **503个重叠 latent-selected origins**；按观测代理 safeguards 保留 **495/495/492/490**，没有 eligible 观测正例的为 **5/5/8/9**。零噪声时也有丢失，速度噪声并非唯一原因；这不是实际赛事 selector。σ=8 时，17个有事件 scene/condition 的均值中，onset persistence 在已知 latent 标签为 **0**、观测标签为 **.029412**；同样预测因标签契约不同而表现不同，不能当交通模型增益。只有3个独立 seed，窗口重叠，无逐窗口独立 CI。
+
+C50 对概率接口重构后全部旧模型 **660次 cal-window** 输出精确复现；C53 对10个导出政策角色的 score/binary 各 **550次**独立重建精确复现，角色/日期存在重复，数量不是独立统计样本。C54 用公共网络完整重建六个旧 graph NPZ 的全部数组，并补入此前漏掉的文件校验；当前字节首次登记，不声称旧字节已核验。集成首次因清单缺项、CPU CTM 首次因复用Torch模块失败，源快照与记录均保留，修正后新目录/未创建输出复跑。成功集成258.92秒CPU，部署134.66秒GPU；**78 research passed，CPU66 passed/4 optional-Torch skips**。原正式基准、K06及全部完整候选保持冻结，未发布、推送或上传。详见 `docs/QUEUE_ENSEMBLE_NOISE_RESEARCH.md`。
+
 **C42–C48：两季、两训练 seed 的 12 个窗口 IoU 损失对照完成，未晋级。** 固定原事件、30min graph、初始化/每个 batch 和 20×80 预算，比较原 BCE、BCE+.25 soft-IoU、BCE+.25 Lovász hinge；统一按 cal Brier 选 checkpoint、完整预测域校准决策。秋 seed1/seed2 主选择为 BCE/tree，proxy IoU **.879028/.872422**；冬 seed1/seed2 主选择为 BCE/Lovász，**.879943/.878723**。冬 seed2 的获选 Lovász 相对同 seed BCE **−.002783**、CI **[−.006516,.001192]**，相对原 seed1 混合 **−.001220**、CI **[−.004399,.001768]**。soft-IoU 在冬 seed2 为 **−.002763**、CI **[−.004825,−.000714]**。原 seed1 冬 Lovász 为 **−.022573**、CI **[−.045600,−.005924]**。没有按 assessment 反选较好的 BCE。
 
 C46 等 alpha 补充诊断保留正面结果：冬 seed1 Lovász α=.25 有 **+.003753**、名义 CI **[.000310,.007953]**，但 cal 原选 α=.5，且 seed2 同 alpha 没有复现；不替换原选择。两种纯网络 IoU 损失也改善了较弱的纯 BCE 对照，最高仍只有 **.830712**，低于该 fold 的 tree **.868240**。这些是 16 个次要对照，区间未做多重比较校正；不能声称强基线增益。loss、cal checkpoint/threshold 策略一起变化，结果不是固定 epoch 的单一梯度因果结论。

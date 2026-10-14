@@ -2,6 +2,10 @@
 
 目标为可复现的正式 Kaggle **0.95000+**；当前正式 **0.82940**。不将阶段性较低分数作为终点。
 
+C49 的两种子 mean-BCE 只有秋+.000985/CI跨零，冬 cal 只多.000160却有−.021137 assessment代价；简化到 tree 的 bootstrap-gap primary 也退化。暂不部署这些新政策，不扩张平均权重/同一阈值网格。下一步优先训练与校准数据真正分开的选择机制：固定 checkpoint 或仅在前段 cal 选 checkpoint/threshold，再在后段保留原强参考而非默认退回更弱 tree；该后段必须未参与这次权重选择，不能把已有模型的 cal 切片包装成独立验证。先增加一个新方向及其合法时间划分，保留 source 参考与小幅收益拒绝门槛。
+
+C51/C52 确认已知 latent 队列、带噪 threshold labels 和未来可评分域可以给同样预测不同 IoU；零噪声也会丢失正例。优先结合公开 TRAIN 历史与独立模拟做噪声/未来可用率建模，不能使用实际 future mask 推断。503 origins 重叠、六 case 共用三个 seed，不把72个counterfactual当独立样本。C54 补齐旧 geometry 的公开重建和校验；当前hash不追溯冒充以前完整覆盖。原 .82940/K06继续冻结，无平台动作，final seeds不生成。
+
 C42–C48 的 12 个配对模型否定了“直接加 λ=.25 窗口 IoU surrogate 即可稳定改善”的当前设计：两季两 optimizer seed 的 primary 均无可靠新收益，部分有明确代价。暂不扩张这一固定 loss/旧 Brier-checkpoint 网格。C46 的原 seed Lovász α.25 次要正例不能按 assessment 晋级；另一个 seed 没有复现。下一步可封存跨种子平均概率和校准选择的不确定性规则，先与同数据的多 seed BCE 组合比较，再做跨方向；不将多模型或单个正 CI 作为成功标准。
 
 C44/C45 在实际公开 TRAIN 窗口发现 1/40 onset 没有有限速度阈值正例，质量过滤不是原因。故观测正例 sampler 的缺口已有公开实例，仍不能识别潜在 queue_true。优先用独立 CTM 的已知 latent/带噪观测作事件采样、标签阈值和未来可用率联合诊断；显式分离观察标签、latent 标签和 scorer mask。允许历史估计未知未来可用率，禁止把实际 future mask 放入预测。最终模拟 seeds 仍不生成；原 .82940/K06 冻结，平台按用户指示暂缓。
