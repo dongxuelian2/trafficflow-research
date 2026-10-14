@@ -19,10 +19,12 @@
 | `runtime.py` / evidence | CPU 实验 source fingerprints、进程峰值、训练前源码 ZIP | A29/A30 新实验在训练前保存源代码、依赖锁与逐文件 SHA；过去实验仅有 Git/运行指纹与模型校验 |
 | 下载 / API / 发布 | 请求官方 public participant APIs 与本队 submissions；秘密和签名 URL 不写日志 | 用户选择手动论坛发布；Notebook 草稿不公开发布；GitHub 推送继续授权 |
 
-当前独立 CUDA 环境 **25 tests passed**，CPU 环境 **24 passed / 1 optional-Torch skipped**，源码 compileall 已通过。新增测试核验 event/class 权重质量守恒、density projection 的零 blend 与边界、occupancy/density channel 的质量与 target 隔离、三对角同化可见锚点不变、daily sufficient-statistics 与直接 pooled State 一致、公告 onset 时序约束保留其他条件。测试临时目录位于工作区 .cache。A01 与 A09 中相同缓存、相同 seed 的三个共同模型独立训练后，tensor 和模型文件 SHA 完全相同；这不等于全量独立重训首轮七百万预测的复现。
+当前独立 CUDA 环境 **33 tests passed**，CPU 环境 **30 passed / 2 optional-Torch module skips**，源码 compileall 已通过。测试核验事件权重、density projection、target 隔离、锚点同化、daily pooling、onset 时序；新增独立枚举 expected-IoU 最优集合和 density 缓存 key 对齐/不变检查。测试临时目录位于工作区 .cache。A01 与 A09 的共同模型 tensor/SHA 完全一致；C24–C29 三组共享模型独立重建/拟合后树文本、阈值、逐窗 IoU 一致。均不等于正式七百万行提交的全量独立复现。
 
 A14 审计发现重要比较混杂：原 graph 与 LGB 的日期相同，但 LGB 只用 300k 标签。全标签 LGB 1,804,908 行得到更高 State，A15 重做强基线对照后 graph 独立收益仅 0.001077。所有旧实验保留，解释同步修正。
 
 开放瓶颈：缺乏正式分项；独立模拟分布与赛事分布失配；Queue latent labels 未公开；物理 flux 投影使单纯 CTM surrogate 不可靠；OD 大零空间；Graph 单走廊模型的跨 family 泛化尚不确定。
+
+A33–A35：可变节点的 FD 几何条件与拓扑偏置图注意力通过形状/有限梯度测试；33 research-env tests passed（12.87 秒），CPU 30 passed / 2 optional-Torch module skips（6.47 秒）。三个 standalone 各在完整 14 天 calibration 独立构造输入并预测，数组逐通道一致，State/密度诊断匹配封存结果。配对架构消融复现原赢家 assessment，原选择保持。A38 场景差分按 station AND link 分组，且严格相隔五分钟；原历史 scenario 脚本的 link-only 分组不能保证共址站点差分正确，新诊断不复用该分组。训练前源码快照是主记录；运行结束的 on-disk fingerprint 可能包含期间新增的部署代码。当前正式成绩仍为 .82940，未上传新候选。
 
 `public_onset_timing()` 只约束标记为 onset 的 T+5…T+25，保留 ongoing 与 T+30。模型默认不开启，新公告对齐实验显式设置标记，旧冻结模型行为不变；针对条件/lead 的测试通过。K02 使用本队冻结预测与公开 metadata，未读任何隐藏标签或 val/private 未来数值；完整 6,980,503 行独立 diff 仅 5 个 Queue 值。计分 eligibility 未公开，因此更紧的 .001369 Total 界必须注明条件，安全界为 .0075。

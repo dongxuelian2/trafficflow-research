@@ -1,0 +1,58 @@
+{
+  "protocol_sha256": "eea489e61c8fee9245f9811a71ca502635519f7632b8fca39d51871749eaf98c",
+  "protocol": {
+    "id": "Production_adaptive_State_public_train",
+    "panel": "D12_I5_N",
+    "prepared_sha256": "fbcef5ba74f9342888f14127be6d36d0e7e7b66acc9a2d66c25e096d3d55532f",
+    "development_studies": {
+      "A33_adaptive_attention_strong_autumn": {
+        "sha256": "71e9a11c516026738d9df49bf6e3eed884a71743ced8df6cc8e64143f08c6737",
+        "selected": {
+          "name": "adaptive_attention_density",
+          "alpha": 0.75,
+          "selection_State": 0.9589775976903283
+        },
+        "State_gain": 0.006851786828121265
+      },
+      "A34_adaptive_attention_strong_winter": {
+        "sha256": "ed36dbe42dec28a71c07536ddacf3d14a7ef18a6a59b28e983b3cec1139aa146",
+        "selected": {
+          "name": "adaptive_attention",
+          "alpha": 0.75,
+          "selection_State": 0.9530832017480154
+        },
+        "State_gain": 0.007474874353571526
+      },
+      "A35_adaptive_attention_autumn_seed20261029": {
+        "sha256": "9c12c0f2f81a6e1f09e0c9ff85695e57ff2d8006a76042f7ecdee2e128f7c1c2",
+        "selected": {
+          "name": "adaptive_attention_density",
+          "alpha": 0.75,
+          "selection_State": 0.9585345299474645
+        },
+        "State_gain": 0.006698028350706209
+      }
+    },
+    "architectures": {
+      "adaptive_attention": 0.0,
+      "adaptive_attention_density": 0.01
+    },
+    "seed": 20261013,
+    "hidden": 48,
+    "heads": 2,
+    "epochs": 24,
+    "steps_per_epoch": 120,
+    "batch_size": 4,
+    "patch_steps": 64,
+    "alpha": 0.75,
+    "optimizer": "AdamW lr=.001 weight_decay=.0001 clip_norm=1",
+    "loss": "Uniform-regime equal-patch channel-scaled RMSE; optional .01 supervised density increments",
+    "checkpoint_policy": "Fixed epoch 24 for both cases; no production calibration or assessment selection",
+    "public_train_scope": "All 228 dates after the frozen 45-day profile prefix, including earlier development assessments",
+    "limitations": "Two development-selected hypotheses for one direction. No production holdout or global ten-direction gate is claimed.",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

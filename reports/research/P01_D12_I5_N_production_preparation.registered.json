@@ -1,0 +1,20 @@
+{
+  "protocol_sha256": "b179d53265213233777d602e20d9b47ad1f357870fccb5251fb8f64ad5fa47f9",
+  "protocol": {
+    "id": "Production_State_full_public_train_preparation",
+    "panel": "D12_I5_N",
+    "seed": 20261013,
+    "baseline_file": "artifacts/best_models/D12_I5_N/state_final.pkl",
+    "baseline_sha256": "32ba855fb12986c66e54fcba514f1facf67f4bfd8c82ddeacc6c29a6540e7967",
+    "profile": "Preserve the frozen formal model profile; public-train prefix only",
+    "fit_dates": "All public train dates after the preserved profile prefix",
+    "large_max_labels": 10000000,
+    "model": "LGB 400/63, same version-2 features; public train labels only",
+    "neural_architecture_selection": "Not selected here. Future architecture/alpha must come from sealed development studies.",
+    "inference_scope": "Offline State only; no future information supplied to Queue",
+    "formal_Total": null,
+    "formal_State": null,
+    "formal_Physics": null,
+    "uploaded": false
+  }
+}

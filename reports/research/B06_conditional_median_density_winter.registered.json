@@ -1,0 +1,27 @@
+{
+  "protocol_sha256": "eb904a0b47ccd14851be2f110e927c45de4eae771c3209838fd5e3cad172bc7f",
+  "protocol": {
+    "id": "strong_density_expectation",
+    "panel": "D12_I5_N",
+    "fold": "rolling_winter",
+    "fit_labels": 3042465,
+    "seed": 20261013,
+    "baseline_weights_reused": "artifacts/research/A16_winter_full_label_LGB_control",
+    "density_target": "public train lane flow / max(observed speed,1)",
+    "density_objective": "regression_l1",
+    "maximum_selection_State_loss": 0.005,
+    "blend_grid": [
+      0,
+      0.05,
+      0.1,
+      0.25,
+      0.5,
+      1
+    ],
+    "State_selection": "maximum selection State; tie favors zero blend",
+    "joint_selection": "minimum target-pair density-increment L1 among selection State >= baseline - 0.005",
+    "projection": "geometry-bound baseline first; weighted quadratic projection, then final bounds",
+    "formal_State": null,
+    "formal_Physics": null
+  }
+}

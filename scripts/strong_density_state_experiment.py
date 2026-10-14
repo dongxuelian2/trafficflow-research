@@ -10,7 +10,7 @@ from trafficflow.state import StateFeatures,StateModel
 from trafficflow.density_state import DensityStateModel
 from trafficflow.experiments import partition_date,training_rows,day_template
 from trafficflow.research_eval import register_protocol,state_from_sufficient_stats,paired_block_interval
-from trafficflow.runtime import evidence
+from trafficflow.runtime import evidence,capture_source_snapshot
 from train_graph_experiment import stats
 from diagnose_graph_density import increment_stats
 
@@ -20,21 +20,26 @@ def main():
     parser.add_argument('--cache',type=Path,default=Path('artifacts/research/A01_D12_I5_N_autumn_seed20261013'))
     parser.add_argument('--baseline',type=Path,default=Path('artifacts/research/A14_full_label_LGB_control'))
     parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--objective',choices=['regression','regression_l1'],default='regression')
+    parser.add_argument('--max-state-loss',type=float,default=.002)
     args=parser.parse_args()
+    if not 0<=args.max_state_loss<=.02:raise ValueError('Invalid State tradeoff tolerance')
     if args.output.exists():raise FileExistsError('Never overwrite density experiments')
     args.output.mkdir(parents=True)
     prepared=json.loads((args.cache/'prepared.json').read_text())
     budget=json.loads((args.baseline/'experiment.json').read_text())
     report=Path('reports/research')/(args.output.name+'.json')
     registered=register_protocol(report.with_suffix('.registered.json'),{
-        'id':'A19_strong_density_expectation','panel':prepared['panel'],'fold':prepared['fold'],
+        'id':'strong_density_expectation','panel':prepared['panel'],'fold':prepared['fold'],
         'fit_labels':budget['n_fitting_labels'],'seed':prepared['seed'],
         'baseline_weights_reused':args.baseline.as_posix(),'density_target':'public train lane flow / max(observed speed,1)',
+        'density_objective':args.objective,'maximum_selection_State_loss':args.max_state_loss,
         'blend_grid':[0,.05,.1,.25,.5,1],
         'State_selection':'maximum selection State; tie favors zero blend',
-        'joint_selection':'minimum target-pair density-increment L1 among selection State >= baseline - .002',
+        'joint_selection':f'minimum target-pair density-increment L1 among selection State >= baseline - {args.max_state_loss}',
         'projection':'geometry-bound baseline first; weighted quadratic projection, then final bounds',
         'formal_State':None,'formal_Physics':None})
+    snapshot=capture_source_snapshot(args.output/'source_snapshot.zip')
     start=time.perf_counter()
     release=Release('data/kaggle_public')
     panel=prepared['panel']
@@ -45,6 +50,7 @@ def main():
     density=y[:,1]/np.maximum(y[:,0],1.)
     residual=(density-x.density_base.to_numpy(float)*25)/25
     dm=LGBMRegressor(**old.models[0].get_params())
+    dm.set_params(objective=args.objective)
     dm.fit(x,residual)
     n=len(y)
     del x,y,density,residual
@@ -78,7 +84,7 @@ def main():
 
     selection=evaluate('selection',registered['protocol']['blend_grid'])
     best=max(selection,key=lambda b:(selection[b]['S_state'],-b))
-    eligible=[b for b in selection if selection[b]['S_state']>=selection[0]['S_state']-.002]
+    eligible=[b for b in selection if selection[b]['S_state']>=selection[0]['S_state']-args.max_state_loss]
     joint=min(eligible,key=lambda b:(selection[b]['density_target_pair_relative_L1'],b))
     seal={'selection':selection,'State_blend':best,'joint_blend':joint}
     report.with_suffix('.selection.json').write_text(json.dumps(seal,indent=2),encoding='utf-8')
@@ -86,7 +92,7 @@ def main():
     for name,b in [('State_selected',best),('joint_selected',joint)]:
         model.blend=b
         model.save(args.output/(name+'.pkl'))
-    result={'registered':registered,'fitting_labels':n,**seal,'assessment':assessment,
+    result={'registered':registered,'source_snapshot':snapshot,'fitting_labels':n,**seal,'assessment':assessment,
             'joint_paired_day_interval':paired_block_interval(assessment[0]['daily_State'],assessment[joint]['daily_State']),
             'seconds':time.perf_counter()-start,'source':evidence(),
             'formal_State':None,'formal_Physics':None,

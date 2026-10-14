@@ -1,0 +1,44 @@
+{
+  "protocol_sha256": "510a8a8ae8d6f66d5938ff22d3f1c7cdc842d741309e67aefe5397dcf303141b",
+  "protocol": {
+    "id": "Queue_onset_final_step_specialist",
+    "panel": "D12_I5_N",
+    "fold": {
+      "name": "rolling_winter_long_cal",
+      "profile_end": "2030-07-15",
+      "fit_end": "2030-12-15",
+      "selection_end": "2031-01-29",
+      "assessment_end": "2031-02-28"
+    },
+    "fit_seed": 20261013,
+    "fit_per_condition": 500,
+    "fit_spacing_minutes": 30,
+    "selection_seed": 411,
+    "assessment_seeds": [
+      2909,
+      3253,
+      4001
+    ],
+    "selection_assessment_per_condition": 30,
+    "evaluation_spacing_minutes": 360,
+    "model": "LGB 600 iterations / 63 leaves; same causal features and public-train events",
+    "candidates": [
+      "shared_threshold",
+      "experts_threshold",
+      "shared_expected_IoU",
+      "experts_expected_IoU"
+    ],
+    "hypotheses": [
+      "Removing known-empty early onset cells from expert fitting improves final-step location recovery.",
+      "Independent-Bernoulli expected IoU can choose a better predicted set size than fixed probability thresholds."
+    ],
+    "onset_timing_source": "https://www.kaggle.com/competitions/2026-ieee-big-data-traffic-flow-bench/discussion/742350",
+    "inputs": "Only legal history and released T rows; provided condition routes experts; no >T numeric inputs",
+    "label_source": "Noisy eligible public-train observations; not underlying queue truth",
+    "selection": "Calibration only; freeze before assessment loading. No assessment-driven model choice.",
+    "promotion": "Require >=.01 origin-macro gain and positive day-block CI in at least two prespecified folds/directions; no assessed panel loss >.01; multiple fit seeds required.",
+    "final_test": "These public-train assessment periods have already been inspected for other architectures.",
+    "formal_Queue": null,
+    "official_Physics": null
+  }
+}

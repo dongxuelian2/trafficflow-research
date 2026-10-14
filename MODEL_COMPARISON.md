@@ -29,6 +29,16 @@
 | 公告对齐 at-T Queue | C24 I5_N 秋 / C26 冬，45 cal / 30 assessment | 不适用 | 去重 .897422 vs .871047 / .868240 vs .876610 | 不适用 | 两季 CI 均跨零，冬季退化；未晋级 |
 | 公告对齐 occupancy Queue | C25 I10_W 秋，45 cal / 30 assessment | 不适用 | cal 选 .628012 vs before-T .606343，CI [−.064953,.082322] | 不适用 | 只有 5 个独立 onset；不晋级 |
 | 时序修正 K02 | 原正式预测，仅 5 个早期 Queue 值 | 全部保留 | 未取得正式 Queue | 全部保留 | private 完全不变；完整候选本地保留，未上传 |
+| 全标签 LGB，十方向 | A29–A31 同秋季/参数 | family State .938659 vs .937382，gain .001277 | 不适用 | 无正式 Physics | 低于全局 .002 门槛，不全网晋级 |
+| 全标签 LGB，冬季 | A32 I5_N，同 500k 对照 | .946854 vs .941587，gain .005268 | 不适用 | 无正式 Physics | 单方向预算收益跨季节成立 |
+| onset / ongoing 专家 | C27–C29，对齐时序，cal 选 threshold | 不适用 | 去重 gain −.007850 / +.034186 / +.013551；所有 CI 跨零 | 不适用 | 不晋级；不按 assessment 改选 expected-IoU |
+| temporal-density 投影 | B03 / B04 强比较组 | joint State .937994 / .946067，均低于基准 | 不适用 | increment L1 .757656 / .729182 | State 保留 baseline，未证明正式 Physics |
+| L1 密度回归 | B05 / B06 强比较组 | joint State .939019 / .944348 | 不适用 | increment L1 .732209 / .707246 | 秋季不如 A19 L2，State 两季保留 baseline |
+| 图注意力 + 密度损失 α=.75 | A33 I5_N autumn，强 LGB 比较 | **.949192 vs .942340**；日均 CI [.006348,.007157] | 不适用 | proxy increment L1 **.687617 vs .771083** | standalone 已验证；真实 Physics 未知 |
+| 图注意力 α=.75 | A34 I5_N winter，强 LGB 比较 | **.954329 vs .946854**；日均 CI [.006259,.007608] | 不适用 | proxy increment L1 **.682571 vs .735824** | 两季单方向开发证据；standalone 通过 |
+| 图注意力 + 密度损失 α=.75 | A35 I5_N autumn，NN/LGB seed 20261029 | **.948993 vs .942295**；日均 CI [.005566,.006983] | 不适用 | proxy increment L1 **.686074 vs .769809** | 与 A33 共享日期；不反选更高的纯 attention |
+| 匹配几何图 / attention / density 消融 | A33–A35，原 cal checkpoints/α 固定 | attention 的三组配对 CI 均正；density 两组跨零、冬季全负 | 不适用 | 独立 density State 收益未确认 | 原赢家保留；开发消融不是新最终测试 |
+| 跨 family 零样本 attention | A37 I5_N → I10_W | 半数组合 **.922352 vs 插值 .928998**；纯 NN .884405 | 不适用 | 不适用 | CI 全负，迁移失败；不部署共享全网模型 |
 
 模型晋级需要相同划分、多个拟合种子、按天或事件配对不确定性分析和分方向退化检查。行级随机拆分不可作为依据。跨走廊 transfer 必须整组排除一个 family 的训练标签；当前逐走廊训练不冒充 transfer。
 

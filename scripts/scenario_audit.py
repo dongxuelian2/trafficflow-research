@@ -27,9 +27,9 @@ def main():
             full,_=reconstruct(frame,pred);times,links,_,_=grids(full,net)
             pred=refine(frame,pred,net,topo,r.ramps(p,'train',times,links),selection['physics_strength'],selection['fd_bounds'])
         truth=target_truth(r,p,target,raw)
-        raw=raw.sort_values(['link_id','timestamp']).copy();raw.loc[~eligible(raw),'speed_kmh']=np.nan
-        raw['drop_kmh']=raw.groupby('link_id').speed_kmh.shift()-raw.speed_kmh
-        gap=pd.to_datetime(raw.timestamp,utc=True).groupby(raw.link_id).diff().dt.total_seconds()
+        raw=raw.sort_values(['station_id','link_id','timestamp']).copy();raw.loc[~eligible(raw),'speed_kmh']=np.nan
+        raw['drop_kmh']=raw.groupby(['station_id','link_id']).speed_kmh.shift()-raw.speed_kmh
+        gap=pd.to_datetime(raw.timestamp,utc=True).groupby([raw.station_id,raw.link_id]).diff().dt.total_seconds()
         raw.loc[gap.ne(300),'drop_kmh']=np.nan
         delta=target[['timestamp','station_id','link_id']].merge(raw[['timestamp','station_id','link_id','drop_kmh']],
                    on=['timestamp','station_id','link_id'],validate='one_to_one').drop_kmh.to_numpy(float)

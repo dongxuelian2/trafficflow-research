@@ -35,7 +35,10 @@ def main():
     if limits.num_allowed_now<1:
         raise RuntimeError('No submissions remaining; retain candidate locally')
     hypothesis=verification['hypothesis']['id']
-    message=f'{hypothesis}; baseline 57138874; OD only; SHA256 {sha[:16]}'
+    task=difference['allowed_task']
+    if task not in ('state','queue','odme'):raise ValueError('Unregistered changed task')
+    label={'state':'State-Physics','queue':'Queue','odme':'ODME'}[task]
+    message=f'{hypothesis}; baseline 57138874; {label} only; SHA256 {sha[:16]}'
     # Write before mutation so an interrupted upload cannot trigger a blind retry.
     record={'candidate_sha256':sha,'hypothesis':hypothesis,'started_utc':datetime.now(timezone.utc).isoformat(),
             'previous_submission_refs':[s.ref for s in previous],'state':'upload_started',

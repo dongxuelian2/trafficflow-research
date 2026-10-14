@@ -56,11 +56,29 @@
 | C25 | 公告对齐的跨方向检查 | I10_W autumn，同 C24 方法 | 26 个去重 origin；before-T .606343 → cal 选 occupancy .628012；CI [−.064953,.082322] | 80.95 秒 CPU；仅 5 个 onset，证据弱，不晋级 |
 | C26 | 公告对齐的跨季节检查 | I5_N winter，同 C24 方法 | 103 个去重 origin；before-T .876610 → cal 选 at-T .868240；gain −.008370，CI [−.032518,.009781] | 401.91 秒 CPU；保留退化，不按 assessment 改选 occupancy |
 | K02 | 组织方已公开时序的 Queue-only 修正 | 原正式提交，所有其他值逐行保留 | 完整 diff 仅 5 个 Queue 值，private 完全相同；未上传，正式分未知 | 合并 125.42 秒；保留本地，正式比较优先具有 private 改善空间的模型 |
+| A31 | 补齐三方向 500k/full 对照 | 同秋季，D12_I405_N/S、D7_I405_N | gain .000741 / 0 / .002521；I405_S 两组均已覆盖全部 fit 标签 | 145.61 / 89.65 / 392.02 秒 CPU |
+| A32 | 冬季 500k/full 对照 | I5_N，同 A16 日期/参数 | .941587 → .946854，gain .005268；日均 CI [.004170,.005316] | 398.53 秒 CPU；full 复跑 pooled State 与 A16 一致 |
+| A29–A31 汇总 | 按官方五族权重合并十方向 | 秋季，seed 20261013，同 14 天 | .937382 → .938659，global gain .001277；日均 CI [.000823,.001327] | 52.93 秒重建日统计/汇总；低于全局门槛 |
+| C27/C28/C29 | onset 最后一步 / ongoing 六步专家与 expected-IoU | matched C24/C25/C26 事件与合法特征 | cal 都选专家 threshold；去重 gain −.007850 / +.034186 / +.013551，CI 全跨零 | 208.83 / 50.54 / 218.37 秒 CPU；不反选未被 cal 选中的胜者 |
+| C24–C29 复跑 | 共享对照从公开帧重建并拟合 | 三组原对照与独立新研究 | 树文本、阈值、逐窗 proxy IoU 完全一致 | 不等于真实 Queue 或正式全量复现 |
+| B03/B04 | 无新训练的 masked density 插值投影 | I5_N 秋/冬，强 LGB；cal State 容忍 .005 | State 都选 baseline；joint 秋 .937994/.757656、冬 .946067/.729182 | 39.58 / 37.03 秒 CPU；诊断收益小，State 代价明确 |
+| B05/B06 | L1 条件中位数密度回归 | 全 fit labels，强 LGB；cal State 容忍 .005 | State 都选 baseline；joint .5 秋 .939019/.732209、冬 .944348/.707246 | 215.40 / 262.97 秒 CPU；秋季不如 A19 L2；无正式 Physics |
+| A33 | 几何图 / attention / attention+density 的强基线匹配对照 | I5_N 秋，seed 20261013，全标签 LGB，cal 选择 | State .942340 → .949192，α=.75；日均 CI [.006348,.007157] | 489.27 秒 GPU，845.07 MiB；standalone 14 日独立复跑通过 |
+| A34 | 同协议跨季节 | I5_N 冬，seed 20261013 | State .946854 → .954329，纯 attention α=.75；CI [.006259,.007608] | 1139.94 秒并行 GPU，845.07 MiB；不是正式分项 |
+| A35 | 同协议第二 NN/LGB fit seed | I5_N 秋，seed 20261029 | State .942295 → .948993，attention+density α=.75；CI [.005566,.006983] | 1140.11 秒并行 GPU，845.07 MiB；与 A33 共享日期 |
+| A33–A35 消融 | 所有架构的原 cal checkpoint / blend 均封存 | same assessment；原赢家保留 | attention 比几何图的三组日均 CI 均正；density 比 attention 两组跨零、冬季全负 | 不反选 A35 的 assessment 胜者；所有原赢家指标复现 |
+| A37 | 新 attention 模型跨 family 零样本迁移 | I5_N → I10_W；目标标签仅用于评分 | 插值 .928998 / 半数组合 .922352 / 纯 NN .884405；半数组合 CI 全负 | 31.44 秒；失败，不部署共享模型 |
+| A38 | 急降速、恢复、拥堵观测、缺失诊断 | 同 A33–A35，按 station/link 五分钟差 | 三组 R3 均改善；少数急降速目标改善，完整 RMSE/计数/日区间记录 | 诊断 score 跨 regime 按 cell pooled，不冒充正式宏平均或真实事故标签 |
+| P01 | 全公开 train 的生产准备 | I5_N，45 日 frozen profile 后 228 日 | 4,409,727 labels，全标签 LGB / NN 缓存覆盖完整 | 444.90 秒 CPU；没有 holdout 或正式成绩 |
 | K01 | 一次 OD-only 正式控制实验 | 同首轮所有 State / Queue 数值，全量 6,980,503 行 diff | **正式 Total 0.76474，下降 0.06466，拒绝晋级**；ref 57140644 | SHA 4976e6bc1fe45207b6ea05dda2031d7885c9b38e1d607efc62c97887ba1e9055 |
 | ENV01 | 独立 CUDA 环境 | Python 3.13.1 / RTX 4060 Laptop 8GB | torch 2.8.0+cu128 已安装；实际 CUDA 运算通过 | 当前沙箱临时目录访问失败，改为 E:\\ieee\\.cache\\build_tmp 后构建成功；原 .venv-repro 不修改 |
 
 复现入口：`scripts/register_research_protocol.py`、`audit_physics_topology.py`、`simulate_stress.py`、`od_probability_experiment.py`、`queue_event_experiment.py`。
 正式反馈只读本队提交。禁止隐藏标签、组织方内部资产和其他队伍预测。
+
+A33–A35 已完成，两季、两种子都在强 LGB 上改善；三个 standalone 各 14 日重建/预测验证通过。仅 I5_N 的开发证据，A37 跨 family 迁移失败。各架构的匹配 assessment 消融保留 cal 选择，attention 增益稳定，density 独立 State 收益不稳定；不能按已看的 assessment 改选 A35。P01 完成，P02 的两个固定生产假设与 A36 I405_N 监督复核运行中。两个 GPU 训练进程合计曾观察约 3.2 GiB / 8 GiB。原正式 profile 与开发 profile 的数值最大差约 4e-12，仅浮点舍入，不能据 equals=False 推断日期变化。
+
+专家/密度阶段 31 tests passed。expected-IoU 与小规模独立枚举全部标签、全部预测集合一致；独立 Bernoulli 假设不代表交通单元真实独立。density 投影网格严格核对完整 key，并保留缓存预测不变；测试发现 Pandas 可返回只读 NumPy 视图，已显式 copy 并验证与直接预测一致。新实验在开始前保存源代码与依赖锁。
 
 A01 的 CI 是按天配对的诊断，不是非线性 pooled State 或 Kaggle Total 的置信区间。A14 已证实标签预算混杂：全标签 LGB 超过原神经网络组合；A15 的独立增益低于登记门槛。后续必须继续比较强基线和多个 fit seed。
 

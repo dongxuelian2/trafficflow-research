@@ -9,6 +9,30 @@
 新实验与失败结果见 `EXPERIMENTS.md`；候选对照见 `MODEL_COMPARISON.md`；优先路线见 `RESEARCH_ROADMAP.md`。
 登记协议 SHA：`91e48a8f2f86775466c8c9b5ad6bdbe693ea25554ef9b18d9e12cd80d3256143`。
 
+**A33 取得强基线上的本地收益，尚未正式提交。** I5_N 秋季，仅按 calibration 选 attention+density、α=.75，assessment State **.942340 → .949192**，gain **.006852**；14 天配对日均 CI **[.006348,.007157]**。increment 代理 L1 **.771083 → .687617**，不能当作正式 Physics。完整实验 489.27 秒，GPU 峰值 **845.07 MiB**。几何图对照 / 注意力 / 注意力+密度损失控制相同 NN 宽度、patch RNG、优化器和预算，cal 组合 State 为 .956208 / .957598 / .958978；不是正式总分。
+
+A34 冬季 cal 选纯 attention、α=.75，assessment State **.946854 → .954329**，gain **.007475**，日均 CI **[.006259,.007608]**；increment 代理 L1 **.735824 → .682571**。A35 第二个 NN/LGB seed 20261029，cal 选 attention+density、α=.75，State **.942295 → .948993**，gain **.006698**，CI **[.005566,.006983]**；代理 L1 **.769809 → .686074**。两次并行训练各约 1140 秒，单进程峰值 845.07 MiB。两季、两种子仍只覆盖 I5_N，assessment 是已查看的公开 train 开发日期，不是正式分项或最终盲测。
+
+A33–A35 standalone 各在 14 天 calibration 独立重建输入并预测，逐通道数组精确一致、指标匹配封存选择。部署模型 SHA 分别为 `d5067934dec3facdf66ca1f4d22089aa69e646c9329a63ddbaeabfabc0d83cef`、`bb052c476ba09717363e4d29efba4fb2fd16a1e4446a475a0cf64535d009534a`、`2468fac035e1967db1a6f8dc079cbe55ffe687fa1e192384e2ef903805bfd41d`。
+
+**匹配消融支持注意力，暂不支持密度损失的稳定独立收益。** 三组几何图 / attention / attention+density 的 assessment State 依次为秋 seed613 **.946929 / .948837 / .949192**、冬 seed613 **.952141 / .954329 / .953338**、秋 seed629 **.947936 / .949257 / .948993**；各架构使用原 calibration 封存的 checkpoint 与 α=.75，没有按 assessment 改选。注意力相对几何图的日均增益区间三组均为正；密度损失相对纯注意力的区间两组跨零、冬季全负 **[−.001629,−.000314]**。A35 未选中的纯 attention 更高，保留原选择。
+
+![强基线上的神经网络匹配对照](reports/research/adaptive_matched_comparison_v2.png)
+
+A38 按同 station/link 且相隔恰好五分钟的公开观测划分场景，避免混合共址站点。三组 R3 的 State gain 为 **.009450 / .008030 / .008431**。严重降速 ≥30 km/h 的诊断 channel-score gain 为秋 seed613 **+.158233（213 targets）**、冬 **+.036653（181）**、秋 seed629 **+.199325（同 213）**；样本少且种子共享日期，不能当作真实事故或独立事件重复。三个恢复分组与拥堵观测分组也改善，具体 RMSE、计数、按日区间见 A38 报告。
+
+**A37 零样本迁移失败。** I5_N → I10_W 不用目标历史标签或校准，固定半数组合 **.922352 vs 插值 .928998**，gain **−.006646**，日均 CI **[−.008168,−.005565]**；纯神经模型仅 .884405。不能据单方向收益部署共享全网模型。较大 I405_N 的监督训练 A36 正在同协议检查。
+
+P01 已完成公开 train 生产准备：228 日期、4,409,727 个 required fit labels，全标签 LGB 与 NN 缓存保存，耗时 444.90 秒；没有生产留出成绩。P02 固定两个 attention / attention+density 假设、24 epochs、α=.75，训练中。生产使用先前开发日期的公开标签是合法拟合，不能再把它们称作生产 holdout。按用户最新指示，先做模型，暂不处理平台发布。
+
+![匹配的十方向 State 与公告对齐 Queue 对照](reports/research/matched_state_queue_comparison_v3.png)
+
+**十方向预算对照 A29–A31 已完成。** 秋季按五个走廊族等权，500k / full State 为 **.937382 / .938659**，增益 **.001277**。同一 14 天的跨方向配对日均 gain 为 .001075，block CI [.000823,.001327]；低于全局 .002 门槛，且只有 I5_N 有三个 fit seed，不晋级全网候选。I5_N 冬季 A32 为 **.941587 → .946854**，gain .005268、日均 CI [.004170,.005316]。D12_I405_S 的 500k 组已覆盖全部 fit 标签，其零增益不代表增加数据无效。
+
+**C27–C29 的最后一步 onset 专家未晋级。** 相同事件上，calibration 均选专家阈值模型；去重代理 gain I5_N 秋 / I10_W 秋 / I5_N 冬为 **−.007850 / +.034186 / +.013551**，day-block CI [−.045468,.018747] / [−.003698,.105194] / [−.001254,.032408]，全部跨零。I10_W 未选中的 expected-IoU 在 assessment 更好，不能反选。三个共享对照从公开帧独立重建和拟合，树文本、阈值、逐窗 IoU 与 C24–C26 全部一致；不是正式全量复跑或 latent-truth 验证。
+
+B03/B04 无训练的 masked temporal-density 投影，State 选择器两季都选基准；joint 秋 .25 / 冬 .1，State **.937994 / .946067**、increment L1 **.757656 / .729182**，存在明确 State 代价。B05/B06 L1 密度回归的 joint 都选 .5：秋 **.939019 / .732209**，不如 A19 同 blend 的 L2 **.940472 / .727239**；冬 **.944348 / .707246**，相对基准 State 损失 .002506、代理 L1 改善 .028578。selection 预先允许最多 .005 State 损失。这些权衡不证明正式 Physics 增益；新实现 **31 tests passed**。
+
 **Queue 采样审计修正了验证范围。** 组织方在 2026-09-21 的[公开公告](https://www.kaggle.com/competitions/2026-ieee-big-data-traffic-flow-bench/discussion/742350)确认：已发布的 onset 窗口在 T+5…T+25 没有拥堵，只有 T+30 可以出现拥堵，并明确允许使用此属性。公告作者已通过官方公开论坛 API 核验。C23 独立检查 40 个公开 train onset 窗口：39 个带噪观测在 T+30 首次出现队列，1 个未观测到队列。这不是 underlying-state 标签或正式 Queue 成绩。此前首轮代理与 C01–C22 的随机 onset 分布没有匹配这一属性，以下历史数值只作为一般事件压力测试保留，不能作为比赛采样下的晋级证据。
 
 C24–C26 改为仅抽取公开 train 观测代理在最后一步首次拥堵的 onset，保留 45 天 calibration / 30 天 assessment 和相同候选窗口，所有候选执行公告时序约束。唯一 origin 去重、condition 等权后的 at-T 对 before-T 增益为 I5_N 秋季 **+.026375**、I10_W 秋季 **+.020772**、I5_N 冬季 **−.008370**；95% day-block CI 分别为 [−.007666,.065189] / [−.059299,.077061] / [−.032518,.009781]。三组区间全部跨零，尚不晋级。I5_N 秋季 occupancy 对 at-T 反而退化 .029563，CI [−.071365,−.001998]。真实状态与带噪代理仍有差异，正式 selector 的其他细节仍未知。

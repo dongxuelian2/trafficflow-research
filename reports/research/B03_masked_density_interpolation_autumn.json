@@ -1,0 +1,1025 @@
+{
+  "registered": {
+    "protocol_sha256": "891b5c44dfbb9ae068c1db03c4224ac014fad5ad99b4ba18163964d85fa5105e",
+    "protocol": {
+      "id": "Masked_density_interpolation_control",
+      "panel": "D12_I5_N",
+      "fold": "rolling_autumn",
+      "baseline_file": "artifacts/research/A14_full_label_LGB_control/lightgbm_large_budget.pkl",
+      "baseline_sha256": "578fc2ccf4284b5e5bcb749b27673f83051488917e2e9265f3d70c6a10a7c9a3",
+      "hypothesis": "Temporal density anchors can improve accumulation-increment estimates independently of trained density regression.",
+      "candidates": {
+        "baseline": [
+          "base",
+          0.0
+        ],
+        "base_0.1": [
+          "base",
+          0.1
+        ],
+        "base_0.25": [
+          "base",
+          0.25
+        ],
+        "base_0.5": [
+          "base",
+          0.5
+        ],
+        "base_1.0": [
+          "base",
+          1.0
+        ],
+        "temporal_0.1": [
+          "temporal",
+          0.1
+        ],
+        "temporal_0.25": [
+          "temporal",
+          0.25
+        ],
+        "temporal_0.5": [
+          "temporal",
+          0.5
+        ],
+        "temporal_1.0": [
+          "temporal",
+          1.0
+        ]
+      },
+      "new_fitted_models": false,
+      "inputs": "Published masked Task 1 observations only; offline future visible observations allowed",
+      "State_selection": "Maximum calibration State; ties favor baseline",
+      "joint_selection": "Minimum calibration target-pair increment relative L1 with State >= baseline - 0.005",
+      "assessment": "Only baseline and calibration-chosen candidates; existing public-train development dates",
+      "formal_State": null,
+      "formal_Physics": null,
+      "no_official_flux": true
+    }
+  },
+  "source_snapshot": {
+    "archive": "artifacts/research/B03_masked_density_interpolation_autumn/source_snapshot.zip",
+    "archive_sha256": "28403179ee875476a6f337bd6ada226b7deffc3b382ddc6026f3c8f3f15d33a6",
+    "captured_files": [
+      {
+        "path": "config/research_protocol_v2.json",
+        "sha256": "dd7318f99e56b826d42eac58ab9c3213803db8f6c740ed843d95879835703121"
+      },
+      {
+        "path": "config/research_targets.json",
+        "sha256": "9a524c7c728cf6ed7ab4920592541e38fe720b36a0879c6f488a77b833e3452f"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "8cd1033d7ceeaa616319d900e5a9990445f3881665420cf4cd9715941b0e52f5"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "db90c0f17353c586ec2b51f9f42748c254e2e6563e7aebff81b7dbf9a3e82ccd"
+      },
+      {
+        "path": "requirements.lock.txt",
+        "sha256": "f4c8602ed3a0c29541e42d23547672864aa487fe2fcf24f8cf2d140f53c16fde"
+      },
+      {
+        "path": "requirements.research.lock.txt",
+        "sha256": "12f5a3bd24e186a0c71512b18eea44548159ec37088546efd7cc3c14c95fae8c"
+      },
+      {
+        "path": "scripts/assemble_campaign.py",
+        "sha256": "e5b103ba8501775e049e14c89e3854e5e2a56b93942505330b5317d8023d6a5d"
+      },
+      {
+        "path": "scripts/assess_joint_density.py",
+        "sha256": "92258a57238facc5153cc8c98c422ed71e92f69b0ae4ecada5a4edf77f00c2e6"
+      },
+      {
+        "path": "scripts/audit_kaggle_baseline.py",
+        "sha256": "3a8f78d8cb154fb1d4b25ed902d81e44b9665f4628162f3342641071b679193a"
+      },
+      {
+        "path": "scripts/audit_od_identifiability.py",
+        "sha256": "bce792650d2dfc0a5268a9e012aeaa846c87715620ee3e3e3a6e0659d4885c36"
+      },
+      {
+        "path": "scripts/audit_physics_topology.py",
+        "sha256": "5afabe6d2e6920fdda75988c936d44adcabbb3f57110552d4c269ea7949d308a"
+      },
+      {
+        "path": "scripts/audit_queue_origin.py",
+        "sha256": "dba7d16f51c6df6c6506a9e418d5aa3e3d7bdbe1693253772266bd170e36c242"
+      },
+      {
+        "path": "scripts/audit_released_onset_timing.py",
+        "sha256": "2cebf3e33c09f3a0f5e0f8e199ef58c84f0d39a93cfd303bf0f9e4b1e7647f68"
+      },
+      {
+        "path": "scripts/build_bayesian_od_candidate.py",
+        "sha256": "5cc8d8b513e668e269510447c508facd640f97b85335da77d69f3e289bb9a8be"
+      },
+      {
+        "path": "scripts/build_onset_timing_candidate.py",
+        "sha256": "8a5486d7e8b7c9dba17e2c163fd76f122f2e38becae95abd769eefca7851b86d"
+      },
+      {
+        "path": "scripts/campaign.py",
+        "sha256": "06cea939655896f9cef2ad404491d9418313c5cf1f0e525b20288a855a774418"
+      },
+      {
+        "path": "scripts/capture_environment.py",
+        "sha256": "5be825c14d82da31a2ca57459f8c6eead4f13ba2030f5488c465388a8e82d4f8"
+      },
+      {
+        "path": "scripts/check_public_competition.py",
+        "sha256": "5c69ba4b041bc668b6cfad397fe2c9c584003910757e68908137e320d92c0a64"
+      },
+      {
+        "path": "scripts/compare_queue_events.py",
+        "sha256": "d9d2e9e47eb2f21b1738d4e2d1ba762a776fc849bbfc4bde4c1fc8785b068194"
+      },
+      {
+        "path": "scripts/compare_state_label_budgets.py",
+        "sha256": "b7c27482c11904cbc0aa06fc86cfd692037e057985acdb93f00ff4e38da81b40"
+      },
+      {
+        "path": "scripts/cross_corridor_transfer.py",
+        "sha256": "e3ef2d288bfc617ea7985712be7c714de9e36ed947b59bc2bd81e3e5113b7c6a"
+      },
+      {
+        "path": "scripts/density_increment_experiment.py",
+        "sha256": "7c76be4eb9f893ff71a70f62ae47ac4f7b8cba8a8add1da1a9ebdbba074552fa"
+      },
+      {
+        "path": "scripts/density_interpolation_experiment.py",
+        "sha256": "98b586eed1bf49beea00db0b5b0473b6159d2e6e198bad4f7b9902a9847d6903"
+      },
+      {
+        "path": "scripts/diagnose_failed_od_control.py",
+        "sha256": "bed0ecbfa0b21880ad852919b0285280fa2659f95c9a6513840baf3e22ab7b58"
+      },
+      {
+        "path": "scripts/diagnose_graph_density.py",
+        "sha256": "f6e48f203331ed2dddbd6917d2932fc8682cf4daa9da8d6e9a5c7ee52e75116f"
+      },
+      {
+        "path": "scripts/download_data.py",
+        "sha256": "c746052ff8192acd1679976da70faf2f54ae94d2370e2dda4e105bca08fee4b9"
+      },
+      {
+        "path": "scripts/freeze_first_submission.py",
+        "sha256": "17eb0cf856c43a0199c0bf73fcc4d100c76d818b2d1130f00b16f466bc4cc6cb"
+      },
+      {
+        "path": "scripts/freeze_research_models.py",
+        "sha256": "fd75a0e4f22f648e7daf55c8374aa9d174d11f0659b74d12665b800d09e4202c"
+      },
+      {
+        "path": "scripts/inspect_official_release.py",
+        "sha256": "17bc64125a2843f2af1eefc01ef22e930c22201df997eec99bedd021d1e32c7f"
+      },
+      {
+        "path": "scripts/large_baseline_graph_comparison.py",
+        "sha256": "ab3f399a46ca8366418ccca2a748124cd706a176706a20d7b491242c810ed75b"
+      },
+      {
+        "path": "scripts/od_prior_misspecification.py",
+        "sha256": "053dc64b2e9b8fb04ac1514d9991d8ddcbae9ab677e69a8dbc7fbd77045a7917"
+      },
+      {
+        "path": "scripts/od_probability_experiment.py",
+        "sha256": "fbb8ade089cec3fdd03b6f40687b4f8ef022c7766dc7c1c4011e6b7df3326c00"
+      },
+      {
+        "path": "scripts/physics_tradeoff.py",
+        "sha256": "b653cf6254196850113cbdb61a1afb5bf184900e6a5ad5d07a24151436e6c9f9"
+      },
+      {
+        "path": "scripts/plot_strong_baseline_comparison.py",
+        "sha256": "060b1292bc663f0ba5d1fd352afd30fb0edc5badc83c1a42b3e4b4b23435c10b"
+      },
+      {
+        "path": "scripts/prepare_graph_experiment.py",
+        "sha256": "dd713db0b6b492b67f970042f9ddc7283474924cf0369b709c2fccb0353971e1"
+      },
+      {
+        "path": "scripts/promote_models.py",
+        "sha256": "b41f8af5fb9f5394595a1c1ded9b534ed89d2c41b85b7a3e3788b2d275c71339"
+      },
+      {
+        "path": "scripts/queue_event_experiment.py",
+        "sha256": "520d24e1f1e5fcde8166f3df16f437276b7185665a8e9394c6ac59a4823b0242"
+      },
+      {
+        "path": "scripts/queue_origin_experiment.py",
+        "sha256": "7cd00e8b0134ed1282353e9162ce6af7da20d1a3d0739ab2ec12b43f79891954"
+      },
+      {
+        "path": "scripts/queue_refinement.py",
+        "sha256": "4747af3e5e09d4e23b7d28856ed66732e54ad1d3586b7df067eb49aeffcc1dd1"
+      },
+      {
+        "path": "scripts/queue_research.py",
+        "sha256": "34e3fe815c5130431a512df258cfbfd0cb39c7b64b769950d76f20a9983fff5a"
+      },
+      {
+        "path": "scripts/queue_specialist_experiment.py",
+        "sha256": "b7f8ab609aa392a1308117e827919692dbe60137185fb6ec68a2334cbddaedc4"
+      },
+      {
+        "path": "scripts/read_public_pages.py",
+        "sha256": "2056d46920d3b9f73b1268b86d122ac4daf318e72c298527b4b66376ac26e165"
+      },
+      {
+        "path": "scripts/record_formal_scores.py",
+        "sha256": "ee78da8b99edc9928c781c341f05af33dd28098ae313113879e8b3e3aad5fa0f"
+      },
+      {
+        "path": "scripts/record_onset_control_bounds.py",
+        "sha256": "0f18f8290e22a3a9b15f4287416bc9cbcf071a106d46909ee1962a5f1cc7f728"
+      },
+      {
+        "path": "scripts/refine_queues.py",
+        "sha256": "4af45c3a458feec60d6f7786166ef2cf0fb747fce492955ec4112312352f665d"
+      },
+      {
+        "path": "scripts/register_research_protocol.py",
+        "sha256": "2367504189c87f2103e10dfd99147ffcc9beba2f9d82409c38e92d4c5e2c3077"
+      },
+      {
+        "path": "scripts/run_official_diagnostics.py",
+        "sha256": "73221ca5f6014f8d7a011698fe0845d9448581c3896855b7dc19e1f47873a7e8"
+      },
+      {
+        "path": "scripts/run_official_state_baselines.py",
+        "sha256": "3ddd7eea81f350d50973813c50e4c0d90a184624d271aa64859c1c74c33a9e70"
+      },
+      {
+        "path": "scripts/scenario_audit.py",
+        "sha256": "b094d67aadc000463db95a235d71a9bc3a97624b1a017cb35be2b88612f1a417"
+      },
+      {
+        "path": "scripts/simulate_stress.py",
+        "sha256": "d0c4697c44f1c65848d83c1e396b9562d4151ad294f560b1576bcc6c49012140"
+      },
+      {
+        "path": "scripts/stage_zip_panel.py",
+        "sha256": "4ec5b59e058c52012bda91ff140fbc9620209bbf114aa5eb5ffbc259b4c69c15"
+      },
+      {
+        "path": "scripts/state_budget_suite.py",
+        "sha256": "d6fd23b3aacd79a6cdad38bbf0f3d845e0307dc4b4b7471ef279980035652477"
+      },
+      {
+        "path": "scripts/state_label_budget_control.py",
+        "sha256": "7cb05ba6e67f39106ea009468ce9215aebab9aec0c9a90295fe8641d3c7e4dbd"
+      },
+      {
+        "path": "scripts/state_research.py",
+        "sha256": "7f9043c7d753a5a6540ef81291ae7e3e00879ca330aea94f833b7017f29a759e"
+      },
+      {
+        "path": "scripts/strong_density_state_experiment.py",
+        "sha256": "ac3386b8130af81a7c2efb960823d7dc0aad17bb1894635cbca877cd40dca4f3"
+      },
+      {
+        "path": "scripts/submit_controlled_candidate.py",
+        "sha256": "8da1d9d94c675505d9bca87470da5959166443e268d7dcdde0a4c20e9a6cbba7"
+      },
+      {
+        "path": "scripts/summarize_campaign.py",
+        "sha256": "e09f36b6188d6a23698f0a27873fece09ba6fd3db1e2cd5ae767e4865d7c101f"
+      },
+      {
+        "path": "scripts/summarize_research_v2.py",
+        "sha256": "4f2239fb78d2d88de9117d289099874b41dc6f017b6c104e557cad168b0a8f17"
+      },
+      {
+        "path": "scripts/summarize_results.py",
+        "sha256": "3ede418e5a835ad3956b0332c335a54a4157654be9db16d4cde6411b5b12880c"
+      },
+      {
+        "path": "scripts/train_graph_experiment.py",
+        "sha256": "7036d5b3f14d5dd39de22b1aa94284285010359114deb3f38ead5461b6e5e04e"
+      },
+      {
+        "path": "scripts/verify_controlled_candidate.py",
+        "sha256": "34e3d7cc3767dc543f7fb9011f2088aebd5995ce7aebca751217fda3c713de52"
+      },
+      {
+        "path": "scripts/verify_graph_repeat.py",
+        "sha256": "2ec216b7fe481f52199b92b28baa40efbe3bde74ae19a17a86904d6f7d1189e9"
+      },
+      {
+        "path": "scripts/verify_vendor.py",
+        "sha256": "232658ffcb66d34aea7c686d64e20bad86f7c172b0f900114dd683c5fd90bb85"
+      },
+      {
+        "path": "scripts/write_results.py",
+        "sha256": "efb8a4e80afdfaca2096ea7d2f65743e863b38c18dc41bac52fcdce07a70c83d"
+      },
+      {
+        "path": "src/trafficflow/__init__.py",
+        "sha256": "6432d23e18693162d87e81e22ac8f25158369302b9dc209d21154dba1351e7a8"
+      },
+      {
+        "path": "src/trafficflow/__main__.py",
+        "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+      },
+      {
+        "path": "src/trafficflow/bayesian_od.py",
+        "sha256": "5c5c76ab2848437af546a5fc3985f568b61c7a39dd3dbdf2a5551e266f1a1139"
+      },
+      {
+        "path": "src/trafficflow/causal_queue.py",
+        "sha256": "b12f3098ce79dc465545106b6d429fce2818499edd518f1909047b3ccbcda1b2"
+      },
+      {
+        "path": "src/trafficflow/cli.py",
+        "sha256": "8bb044f21541e3d0f639f01e20fc47a358152ec0c918ae4d644e73c96d7e73d3"
+      },
+      {
+        "path": "src/trafficflow/data.py",
+        "sha256": "f29fe070b21ac692b2cf9bd6d5b5fd018e94129b9626588325dd48edbd941ccd"
+      },
+      {
+        "path": "src/trafficflow/density_assimilation.py",
+        "sha256": "bbf771ae2d6ca93030aca029f3428fbb3f214cf4a5e39dca79925f08f7a30b46"
+      },
+      {
+        "path": "src/trafficflow/density_state.py",
+        "sha256": "ae91308f12b0c13d43f149d936a7c11704f712390f2fb593fbea5f053ff6a4b2"
+      },
+      {
+        "path": "src/trafficflow/digital_twin.py",
+        "sha256": "cfacb280f971faedceb2e404b35889891eef536a24a070804757ab6d92c49655"
+      },
+      {
+        "path": "src/trafficflow/experiments.py",
+        "sha256": "854abf59d2c560f84c704090741d6f8fce4ce6725d8a39139412194cc362a6ec"
+      },
+      {
+        "path": "src/trafficflow/fixture.py",
+        "sha256": "0709326abd7206a7ca1c3414dbb95c2d8c08749484802e2523d49c1ee7a2ef24"
+      },
+      {
+        "path": "src/trafficflow/graph_state.py",
+        "sha256": "b32b4b81b7292472fab1eabbe183ebaae6ab295c6c7eb5ad4951719bfd8418cc"
+      },
+      {
+        "path": "src/trafficflow/increment_state.py",
+        "sha256": "52c6eb6a5cf959ac050f237a84cc8c487fae086fcec61a5aeac2fa5997185ea3"
+      },
+      {
+        "path": "src/trafficflow/metrics.py",
+        "sha256": "5f42eaa372894edfa1363135b61818e7ec4bf56110257a03aadf07de770aa346"
+      },
+      {
+        "path": "src/trafficflow/odme.py",
+        "sha256": "e61df62cbf3ff4af03069d6e028b2024ddee25578cc00558b2b04148370850ee"
+      },
+      {
+        "path": "src/trafficflow/physics.py",
+        "sha256": "3f559ca30157ebee155bb17ebdd42f0dc43a169ef6b45634ad875569beb03e30"
+      },
+      {
+        "path": "src/trafficflow/queue.py",
+        "sha256": "62c35a4ed8e1e882d386461aba41cf8f5f3ed809451e51008e34f23e211240c5"
+      },
+      {
+        "path": "src/trafficflow/queue_calibration.py",
+        "sha256": "645cfb0a15418f23b0b04354600d08ef831a6db49197e149e984074fc414392d"
+      },
+      {
+        "path": "src/trafficflow/queue_event_loss.py",
+        "sha256": "5b155f8255080e0ee8823ab366ce8f7dfb1f2d067c196109834e0338395b631c"
+      },
+      {
+        "path": "src/trafficflow/queue_events.py",
+        "sha256": "10051eb26948ea7fbec94dd1cd4e37d68c4c0703efb152f35d03ebee372e25bb"
+      },
+      {
+        "path": "src/trafficflow/queue_specialist.py",
+        "sha256": "915fce272c5d1c88eee37960cc5b1dee305119603509bb8bdc881bf6f64b303b"
+      },
+      {
+        "path": "src/trafficflow/research_eval.py",
+        "sha256": "197aa2c4d6091dbd551ca6d11f8a664e9feaa44c1fcaf568ec873185315ab3c9"
+      },
+      {
+        "path": "src/trafficflow/runtime.py",
+        "sha256": "c181d87a89ff8fa7ee92c00759e2674d77cd60a3ed0d407f1e52f0d2b95d197f"
+      },
+      {
+        "path": "src/trafficflow/state.py",
+        "sha256": "f7a8341d968ac55a6f87e01a439ce8dc8c014750afa61129c7175e733de23c17"
+      },
+      {
+        "path": "src/trafficflow/submission.py",
+        "sha256": "87607c555e86f020e83f1ed9ac4054e49f88dc35eedd36cd8bf8ba442f85f2dc"
+      },
+      {
+        "path": "vendor/official/src/merge_submissions.py",
+        "sha256": "a8cd6c4c9f2cea777fde8f6b163c00835a4fb45672998b9fc71368810e792ee1"
+      },
+      {
+        "path": "vendor/official/src/release/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/release/score_overall.py",
+        "sha256": "b9b73e174eeb1ed742dd9cbd558f6b280a0bd14e7ec7001feb549f1b5fb9b4ee"
+      },
+      {
+        "path": "vendor/official/src/score_overall.py",
+        "sha256": "4a28d57a23950554a065f6254bf674f4a1b58b5d039f26bc5154dd28d28651fb"
+      },
+      {
+        "path": "vendor/official/src/task1/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_historical_mean.py",
+        "sha256": "66569dd55340d5e4509712e66172ea669893d7341a0ef2dd8c920c24f07209a1"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_structural_kf.py",
+        "sha256": "f3a63ba48bf867d993dd1b3cbc0da6ca4567da7aa519ed2b2e3fd93a61c06132"
+      },
+      {
+        "path": "vendor/official/src/task1/build_task1_baseline_submission.py",
+        "sha256": "cb91e19e20a5a546430917a884197c1ad6a7068c6a47d7fbec7fb8311b7237d7"
+      },
+      {
+        "path": "vendor/official/src/task1/score_task1.py",
+        "sha256": "bcd42e88fbc42cd499e93e3b50ddf367009b26b216df5ab3f710ee1d1d863163"
+      },
+      {
+        "path": "vendor/official/src/task2/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task2/build_task2_persistence_submission.py",
+        "sha256": "d3cb4ab23206c4c20058a074b24c23ba79b43dd4219f41e158329a39f5a3edd2"
+      },
+      {
+        "path": "vendor/official/src/task2/queue_utils.py",
+        "sha256": "cea193935e7af7ab1399b9955c3f26fcb65664a099344d35b9c3b91802b3135f"
+      },
+      {
+        "path": "vendor/official/src/task2/score_task2.py",
+        "sha256": "b5605ebae9b32b3ca974881be47b5f2e796728b94763a724314580fc93be28bb"
+      },
+      {
+        "path": "vendor/official/src/task3/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task3/build_task3_baseline_submission.py",
+        "sha256": "945ce4b28f264be6be35a1b8d0f67311bf666d5e6b516a5b79bb2617075e8bcf"
+      },
+      {
+        "path": "vendor/official/src/task3/score_task3.py",
+        "sha256": "98d88b6e7f6b7bb0e2bbb4b42e486d6690b6f14a5d3625649e85ddf828550409"
+      },
+      {
+        "path": "vendor/official/src/task4/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task4/build_task4_odme_artifacts.py",
+        "sha256": "5da75aea3004555bae080ee4d18f1baee01dbb9ed1caf7a6abadd2387e6ade58"
+      },
+      {
+        "path": "vendor/official/src/task4/score_task4.py",
+        "sha256": "be15d732438d305e3d35cb41d3105fc03e3fb9459e5c050af39fe192cede30e3"
+      }
+    ],
+    "n_files": 108,
+    "scope": "Own source, vendored official Python and dependency locks; no data, credentials or model weights"
+  },
+  "selection": {
+    "baseline": {
+      "S_state": 0.9515993470222467,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 33769,
+          "rmse_speed": 1.0973062256085386,
+          "rmse_lane_flow": 24.498424500954393,
+          "S_state": 0.9575160600761239
+        },
+        {
+          "regime": "R2",
+          "n": 51169,
+          "rmse_speed": 1.1711659445375437,
+          "rmse_lane_flow": 24.633583800747513,
+          "S_state": 0.955817068017416
+        },
+        {
+          "regime": "R3",
+          "n": 227180,
+          "rmse_speed": 1.7317083735368692,
+          "rmse_lane_flow": 27.561112380526303,
+          "S_state": 0.9414649129732001
+        }
+      ],
+      "density_target_pair_relative_L1": 0.7754871023128816,
+      "daily_State": [
+        0.9602180411190046,
+        0.9554093725998887,
+        0.9357426758392862,
+        0.9640843439484288,
+        0.9393518170426352,
+        0.9443088231986609,
+        0.9517231455957227,
+        0.9352417639351519,
+        0.9382508528547633,
+        0.9531414684503345,
+        0.9312410385104273,
+        0.9571000652219812,
+        0.9637445891902732,
+        0.9510447574211878
+      ],
+      "n_target_pairs": 384958
+    },
+    "base_0.1": {
+      "S_state": 0.9510127857271259,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 33769,
+          "rmse_speed": 1.112491994049674,
+          "rmse_lane_flow": 24.778851477440078,
+          "S_state": 0.9569730534624897
+        },
+        {
+          "regime": "R2",
+          "n": 51169,
+          "rmse_speed": 1.1731766461137445,
+          "rmse_lane_flow": 24.89998919313602,
+          "S_state": 0.9555693927292057
+        },
+        {
+          "regime": "R3",
+          "n": 227180,
+          "rmse_speed": 1.754099731443088,
+          "rmse_lane_flow": 28.194175840626944,
+          "S_state": 0.940495910989682
+        }
+      ],
+      "density_target_pair_relative_L1": 0.7769051201591057,
+      "daily_State": [
+        0.9597848267780521,
+        0.9545407684605425,
+        0.9344664549887569,
+        0.9639877585136283,
+        0.9388079578798818,
+        0.943596740479479,
+        0.9509371361457601,
+        0.9339395737164282,
+        0.9370073602597203,
+        0.9533565180305534,
+        0.929510195938708,
+        0.9567968138557749,
+        0.963588273122902,
+        0.9507077112268489
+      ],
+      "n_target_pairs": 384958
+    },
+    "base_0.25": {
+      "S_state": 0.9486458235205327,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 33769,
+          "rmse_speed": 1.1676199092892514,
+          "rmse_lane_flow": 26.031340180026188,
+          "S_state": 0.9548220491546655
+        },
+        {
+          "regime": "R2",
+          "n": 51169,
+          "rmse_speed": 1.194207675137766,
+          "rmse_lane_flow": 25.931992466512696,
+          "S_state": 0.9543239199926978
+        },
+        {
+          "regime": "R3",
+          "n": 227180,
+          "rmse_speed": 1.8374186903419392,
+          "rmse_lane_flow": 30.67859331440764,
+          "S_state": 0.936791501414235
+        }
+      ],
+      "density_target_pair_relative_L1": 0.8130909812098381,
+      "daily_State": [
+        0.958394638576668,
+        0.9516368403900719,
+        0.9292453666503941,
+        0.9637792766144968,
+        0.9364765773398656,
+        0.9408823318404089,
+        0.9480135091264994,
+        0.9290032902797237,
+        0.9326010108125296,
+        0.9532000929696707,
+        0.9232949767939143,
+        0.9547508091078518,
+        0.9631713619979907,
+        0.9492100469770974
+      ],
+      "n_target_pairs": 384958
+    },
+    "base_0.5": {
+      "S_state": 0.9417517679149491,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 33769,
+          "rmse_speed": 1.331839649206293,
+          "rmse_lane_flow": 29.578658964474595,
+          "S_state": 0.9485552917043802
+        },
+        {
+          "regime": "R2",
+          "n": 51169,
+          "rmse_speed": 1.2739808348629145,
+          "rmse_lane_flow": 28.868962136417572,
+          "S_state": 0.9503491429957077
+        },
+        {
+          "regime": "R3",
+          "n": 227180,
+          "rmse_speed": 2.0882080909558844,
+          "rmse_lane_flow": 37.23109068338289,
+          "S_state": 0.9263508690447594
+        }
+      ],
+      "density_target_pair_relative_L1": 0.9278243110740579,
+      "daily_State": [
+        0.9544695537242633,
+        0.9436799556323288,
+        0.9148344363836478,
+        0.9632687136525062,
+        0.9294302347082035,
+        0.9331449739386759,
+        0.9397887269000218,
+        0.9152868190004702,
+        0.9203867335569945,
+        0.9517665144670631,
+        0.906791871261292,
+        0.9482355857318725,
+        0.9620218797726277,
+        0.9445175045953242
+      ],
+      "n_target_pairs": 384958
+    },
+    "base_1.0": {
+      "S_state": 0.921169806088272,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 33769,
+          "rmse_speed": 1.8298453336050846,
+          "rmse_lane_flow": 39.94566010578157,
+          "S_state": 0.9298503347130311
+        },
+        {
+          "regime": "R2",
+          "n": 51169,
+          "rmse_speed": 1.5633285782771384,
+          "rmse_lane_flow": 37.722218819400496,
+          "S_state": 0.9373117349476734
+        },
+        {
+          "regime": "R3",
+          "n": 227180,
+          "rmse_speed": 2.855041209998859,
+          "rmse_lane_flow": 54.761427730321415,
+          "S_state": 0.8963473486041116
+        }
+      ],
+      "density_target_pair_relative_L1": 1.2396918085601543,
+      "daily_State": [
+        0.9424503760722496,
+        0.9208558755120886,
+        0.8744802789376682,
+        0.9616956093646947,
+        0.9079670497486569,
+        0.9105478142880646,
+        0.9158984195903892,
+        0.876820669370427,
+        0.8863663750429995,
+        0.9452952754849224,
+        0.8619466031469887,
+        0.9283604803520209,
+        0.9583071895482317,
+        0.9293654877877775
+      ],
+      "n_target_pairs": 384958
+    },
+    "temporal_0.1": {
+      "S_state": 0.9510894122908712,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 33769,
+          "rmse_speed": 1.1057052036324904,
+          "rmse_lane_flow": 24.81315965578338,
+          "S_state": 0.957093345198771
+        },
+        {
+          "regime": "R2",
+          "n": 51169,
+          "rmse_speed": 1.1785744105951972,
+          "rmse_lane_flow": 24.95761520808662,
+          "S_state": 0.9554086210716107
+        },
+        {
+          "regime": "R3",
+          "n": 227180,
+          "rmse_speed": 1.7432498816979967,
+          "rmse_lane_flow": 28.147215590988964,
+          "S_state": 0.9407662706022317
+        }
+      ],
+      "density_target_pair_relative_L1": 0.7666853986637254,
+      "daily_State": [
+        0.9597206569626393,
+        0.9546980126678045,
+        0.9348705665704031,
+        0.9638375078885033,
+        0.9393255741911318,
+        0.9436850893879096,
+        0.9509668620343665,
+        0.9342486962088203,
+        0.9369962719619008,
+        0.9529213217429278,
+        0.9303150024776341,
+        0.957046396299686,
+        0.9635434680324885,
+        0.95062523527104
+      ],
+      "n_target_pairs": 384958
+    },
+    "temporal_0.25": {
+      "S_state": 0.9492321493536254,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 33769,
+          "rmse_speed": 1.1371384106658728,
+          "rmse_lane_flow": 26.04996278264589,
+          "S_state": 0.9554661721962554
+        },
+        {
+          "regime": "R2",
+          "n": 51169,
+          "rmse_speed": 1.201595252501859,
+          "rmse_lane_flow": 26.067148895263394,
+          "S_state": 0.9540607283929247
+        },
+        {
+          "regime": "R3",
+          "n": 227180,
+          "rmse_speed": 1.7856363504134722,
+          "rmse_lane_flow": 30.340053077442906,
+          "S_state": 0.9381695474716962
+        }
+      ],
+      "density_target_pair_relative_L1": 0.7643529747912803,
+      "daily_State": [
+        0.9583562430602675,
+        0.9523324087705807,
+        0.9315892151866687,
+        0.9632424051562447,
+        0.9379586152531914,
+        0.9415961500058765,
+        0.9484082617849641,
+        0.9303924587683983,
+        0.9331450550714102,
+        0.9521957417305311,
+        0.9270759193215492,
+        0.9559579129559053,
+        0.962990825114822,
+        0.9491456919643229
+      ],
+      "n_target_pairs": 384958
+    },
+    "temporal_0.5": {
+      "S_state": 0.9436732917963025,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 33769,
+          "rmse_speed": 1.2347350241784993,
+          "rmse_lane_flow": 29.818117028625544,
+          "S_state": 0.9504691670891314
+        },
+        {
+          "regime": "R2",
+          "n": 51169,
+          "rmse_speed": 1.2695029757545389,
+          "rmse_lane_flow": 29.335061575946927,
+          "S_state": 0.9500885218488094
+        },
+        {
+          "regime": "R3",
+          "n": 227180,
+          "rmse_speed": 1.9173521460091463,
+          "rmse_lane_flow": 36.682183298133886,
+          "S_state": 0.9304621864509666
+        }
+      ],
+      "density_target_pair_relative_L1": 0.7811590220234718,
+      "daily_State": [
+        0.9546278781089632,
+        0.9455281543577376,
+        0.921941905514106,
+        0.9617150351448196,
+        0.9326821563344441,
+        0.9355365742063579,
+        0.9410212353745131,
+        0.9190198370080267,
+        0.9226283701940212,
+        0.9500229971618719,
+        0.9176951286502971,
+        0.9517534682865003,
+        0.9614547989445215,
+        0.9447027410795028
+      ],
+      "n_target_pairs": 384958
+    },
+    "temporal_1.0": {
+      "S_state": 0.9268377924748358,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 33769,
+          "rmse_speed": 1.5540258098830242,
+          "rmse_lane_flow": 40.987785695800646,
+          "S_state": 0.9350090734730796
+        },
+        {
+          "regime": "R2",
+          "n": 51169,
+          "rmse_speed": 1.4946794422053435,
+          "rmse_lane_flow": 38.93862031567548,
+          "S_state": 0.9378619818063467
+        },
+        {
+          "regime": "R3",
+          "n": 227180,
+          "rmse_speed": 2.354973413103603,
+          "rmse_lane_flow": 54.11772017201903,
+          "S_state": 0.9076423221450809
+        }
+      ],
+      "density_target_pair_relative_L1": 0.8796986367802826,
+      "daily_State": [
+        0.9432640107291571,
+        0.9257299673509121,
+        0.8941722676253899,
+        0.9571418314256523,
+        0.9150292227414296,
+        0.9173415921752934,
+        0.919581398385978,
+        0.8863376418633837,
+        0.8931652026281287,
+        0.9431093447361463,
+        0.8907260666041159,
+        0.9374066403374408,
+        0.9566738667506682,
+        0.9307035075807287
+      ],
+      "n_target_pairs": 384958
+    }
+  },
+  "State_selected": "baseline",
+  "joint_selected": "temporal_0.25",
+  "assessment": {
+    "baseline": {
+      "S_state": 0.9423400762320654,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 22859,
+          "rmse_speed": 1.5381710305023357,
+          "rmse_lane_flow": 29.445690721432538,
+          "S_state": 0.9442004761880514
+        },
+        {
+          "regime": "R2",
+          "n": 119727,
+          "rmse_speed": 1.3102822146759632,
+          "rmse_lane_flow": 26.5438725301248,
+          "S_state": 0.9513476018899036
+        },
+        {
+          "regime": "R3",
+          "n": 141841,
+          "rmse_speed": 2.0769816947718645,
+          "rmse_lane_flow": 30.867449706113206,
+          "S_state": 0.9314721506182411
+        }
+      ],
+      "density_target_pair_relative_L1": 0.771082907195908,
+      "daily_State": [
+        0.9109585085392913,
+        0.9441645958430189,
+        0.9607989549734475,
+        0.9376501256275278,
+        0.9540147619871002,
+        0.9565665160015631,
+        0.9349160118473354,
+        0.9535842055793657,
+        0.9619563222445207,
+        0.9352994103608439,
+        0.9209283755939083,
+        0.9549980309768987,
+        0.9382143558249527,
+        0.9622102358479866
+      ],
+      "n_target_pairs": 360660
+    },
+    "temporal_0.25": {
+      "S_state": 0.9379935388123277,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 22859,
+          "rmse_speed": 1.6666284011692005,
+          "rmse_lane_flow": 32.55437636931369,
+          "S_state": 0.9390424713182715
+        },
+        {
+          "regime": "R2",
+          "n": 119727,
+          "rmse_speed": 1.373191740803612,
+          "rmse_lane_flow": 28.908356027108802,
+          "S_state": 0.9481759854445253
+        },
+        {
+          "regime": "R3",
+          "n": 141841,
+          "rmse_speed": 2.158161227393722,
+          "rmse_lane_flow": 34.723771061881564,
+          "S_state": 0.9267621596741864
+        }
+      ],
+      "density_target_pair_relative_L1": 0.7576563671639902,
+      "daily_State": [
+        0.9037348962661065,
+        0.9392220814101839,
+        0.9600152384181124,
+        0.9332649707819545,
+        0.9511645166694497,
+        0.9548144784479837,
+        0.9292051320596925,
+        0.9500753858963722,
+        0.961194299411771,
+        0.9285211724806846,
+        0.9156330492357356,
+        0.9520020123943058,
+        0.9340399678128326,
+        0.9614011021102667
+      ],
+      "n_target_pairs": 360660
+    }
+  },
+  "joint_paired_day_interval": {
+    "paired_day_mean_gain": -0.0037122934180220707,
+    "ci95": [
+      -0.004276242288756116,
+      -0.0031204460536524386
+    ],
+    "bootstrap_probability_gain_positive": 0.0,
+    "n_days": 14,
+    "block_days": 7,
+    "resamples": 4000,
+    "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+  },
+  "seconds": 39.5765265,
+  "source": {
+    "python": "3.13.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus": 16,
+    "process_peak_working_set_MiB": 1695.00390625,
+    "peak_scope": "current process lifetime, not isolated per model",
+    "source_sha256": "34c680685232539ed6735455fb8fcfcc0d6c8ca70ac135cce3d60baebbde4170",
+    "model_threads": 4,
+    "gpu_used": false,
+    "source_fingerprint_scope": "On-disk source at evidence() call; a captured start archive is primary when present",
+    "versions": {
+      "numpy": "2.2.5",
+      "pandas": "3.0.5",
+      "scipy": "1.16.1",
+      "pyarrow": "25.0.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10",
+      "scikit-learn": "1.7.2"
+    }
+  },
+  "formal_State": null,
+  "formal_Physics": null,
+  "limitation": "Observed accumulation increments are a supervised diagnostic. They are not organizer boundary-flow residuals, and .005 State tolerance is a preregistered tradeoff rather than a total-score guarantee."
+}

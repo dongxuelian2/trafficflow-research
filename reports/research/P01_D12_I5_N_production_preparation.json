@@ -1,0 +1,1941 @@
+{
+  "registered": {
+    "protocol_sha256": "b179d53265213233777d602e20d9b47ad1f357870fccb5251fb8f64ad5fa47f9",
+    "protocol": {
+      "id": "Production_State_full_public_train_preparation",
+      "panel": "D12_I5_N",
+      "seed": 20261013,
+      "baseline_file": "artifacts/best_models/D12_I5_N/state_final.pkl",
+      "baseline_sha256": "32ba855fb12986c66e54fcba514f1facf67f4bfd8c82ddeacc6c29a6540e7967",
+      "profile": "Preserve the frozen formal model profile; public-train prefix only",
+      "fit_dates": "All public train dates after the preserved profile prefix",
+      "large_max_labels": 10000000,
+      "model": "LGB 400/63, same version-2 features; public train labels only",
+      "neural_architecture_selection": "Not selected here. Future architecture/alpha must come from sealed development studies.",
+      "inference_scope": "Offline State only; no future information supplied to Queue",
+      "formal_Total": null,
+      "formal_State": null,
+      "formal_Physics": null,
+      "uploaded": false
+    }
+  },
+  "source_snapshot": {
+    "archive": "artifacts/research/P01_D12_I5_N_production_preparation/source_snapshot.zip",
+    "archive_sha256": "78469be62aeb801b0956ca4b8a65ae43fec5e670d77ce37651e95550020c1389",
+    "captured_files": [
+      {
+        "path": "config/research_protocol_v2.json",
+        "sha256": "dd7318f99e56b826d42eac58ab9c3213803db8f6c740ed843d95879835703121"
+      },
+      {
+        "path": "config/research_targets.json",
+        "sha256": "9a524c7c728cf6ed7ab4920592541e38fe720b36a0879c6f488a77b833e3452f"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "8cd1033d7ceeaa616319d900e5a9990445f3881665420cf4cd9715941b0e52f5"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "db90c0f17353c586ec2b51f9f42748c254e2e6563e7aebff81b7dbf9a3e82ccd"
+      },
+      {
+        "path": "requirements.lock.txt",
+        "sha256": "f4c8602ed3a0c29541e42d23547672864aa487fe2fcf24f8cf2d140f53c16fde"
+      },
+      {
+        "path": "requirements.research.lock.txt",
+        "sha256": "12f5a3bd24e186a0c71512b18eea44548159ec37088546efd7cc3c14c95fae8c"
+      },
+      {
+        "path": "scripts/adaptive_graph_experiment.py",
+        "sha256": "20f067bb639496004300446f8ba8705824cae80b2e91225e5fe6abcb609a3570"
+      },
+      {
+        "path": "scripts/assemble_campaign.py",
+        "sha256": "e5b103ba8501775e049e14c89e3854e5e2a56b93942505330b5317d8023d6a5d"
+      },
+      {
+        "path": "scripts/assess_joint_density.py",
+        "sha256": "92258a57238facc5153cc8c98c422ed71e92f69b0ae4ecada5a4edf77f00c2e6"
+      },
+      {
+        "path": "scripts/audit_kaggle_baseline.py",
+        "sha256": "3a8f78d8cb154fb1d4b25ed902d81e44b9665f4628162f3342641071b679193a"
+      },
+      {
+        "path": "scripts/audit_od_identifiability.py",
+        "sha256": "bce792650d2dfc0a5268a9e012aeaa846c87715620ee3e3e3a6e0659d4885c36"
+      },
+      {
+        "path": "scripts/audit_physics_topology.py",
+        "sha256": "5afabe6d2e6920fdda75988c936d44adcabbb3f57110552d4c269ea7949d308a"
+      },
+      {
+        "path": "scripts/audit_queue_origin.py",
+        "sha256": "dba7d16f51c6df6c6506a9e418d5aa3e3d7bdbe1693253772266bd170e36c242"
+      },
+      {
+        "path": "scripts/audit_released_onset_timing.py",
+        "sha256": "2cebf3e33c09f3a0f5e0f8e199ef58c84f0d39a93cfd303bf0f9e4b1e7647f68"
+      },
+      {
+        "path": "scripts/build_bayesian_od_candidate.py",
+        "sha256": "5cc8d8b513e668e269510447c508facd640f97b85335da77d69f3e289bb9a8be"
+      },
+      {
+        "path": "scripts/build_onset_timing_candidate.py",
+        "sha256": "8a5486d7e8b7c9dba17e2c163fd76f122f2e38becae95abd769eefca7851b86d"
+      },
+      {
+        "path": "scripts/campaign.py",
+        "sha256": "06cea939655896f9cef2ad404491d9418313c5cf1f0e525b20288a855a774418"
+      },
+      {
+        "path": "scripts/capture_environment.py",
+        "sha256": "5be825c14d82da31a2ca57459f8c6eead4f13ba2030f5488c465388a8e82d4f8"
+      },
+      {
+        "path": "scripts/check_public_competition.py",
+        "sha256": "5c69ba4b041bc668b6cfad397fe2c9c584003910757e68908137e320d92c0a64"
+      },
+      {
+        "path": "scripts/compare_queue_events.py",
+        "sha256": "d9d2e9e47eb2f21b1738d4e2d1ba762a776fc849bbfc4bde4c1fc8785b068194"
+      },
+      {
+        "path": "scripts/compare_state_direction_budgets.py",
+        "sha256": "47ff0bb82e2500aace15a72ca80b76719b657dd06492b8b60b09b31fce2803e4"
+      },
+      {
+        "path": "scripts/compare_state_label_budgets.py",
+        "sha256": "b7c27482c11904cbc0aa06fc86cfd692037e057985acdb93f00ff4e38da81b40"
+      },
+      {
+        "path": "scripts/cross_corridor_transfer.py",
+        "sha256": "e3ef2d288bfc617ea7985712be7c714de9e36ed947b59bc2bd81e3e5113b7c6a"
+      },
+      {
+        "path": "scripts/density_increment_experiment.py",
+        "sha256": "7c76be4eb9f893ff71a70f62ae47ac4f7b8cba8a8add1da1a9ebdbba074552fa"
+      },
+      {
+        "path": "scripts/density_interpolation_experiment.py",
+        "sha256": "98b586eed1bf49beea00db0b5b0473b6159d2e6e198bad4f7b9902a9847d6903"
+      },
+      {
+        "path": "scripts/diagnose_failed_od_control.py",
+        "sha256": "bed0ecbfa0b21880ad852919b0285280fa2659f95c9a6513840baf3e22ab7b58"
+      },
+      {
+        "path": "scripts/diagnose_graph_density.py",
+        "sha256": "f6e48f203331ed2dddbd6917d2932fc8682cf4daa9da8d6e9a5c7ee52e75116f"
+      },
+      {
+        "path": "scripts/download_data.py",
+        "sha256": "c746052ff8192acd1679976da70faf2f54ae94d2370e2dda4e105bca08fee4b9"
+      },
+      {
+        "path": "scripts/export_adaptive_state_model.py",
+        "sha256": "631e109610a04aa4a5b0cef3b6b0a22e3acca28ea1f08659669bf55c2e7ca089"
+      },
+      {
+        "path": "scripts/freeze_first_submission.py",
+        "sha256": "17eb0cf856c43a0199c0bf73fcc4d100c76d818b2d1130f00b16f466bc4cc6cb"
+      },
+      {
+        "path": "scripts/freeze_research_models.py",
+        "sha256": "fd75a0e4f22f648e7daf55c8374aa9d174d11f0659b74d12665b800d09e4202c"
+      },
+      {
+        "path": "scripts/inspect_official_release.py",
+        "sha256": "17bc64125a2843f2af1eefc01ef22e930c22201df997eec99bedd021d1e32c7f"
+      },
+      {
+        "path": "scripts/large_baseline_graph_comparison.py",
+        "sha256": "ab3f399a46ca8366418ccca2a748124cd706a176706a20d7b491242c810ed75b"
+      },
+      {
+        "path": "scripts/od_prior_misspecification.py",
+        "sha256": "053dc64b2e9b8fb04ac1514d9991d8ddcbae9ab677e69a8dbc7fbd77045a7917"
+      },
+      {
+        "path": "scripts/od_probability_experiment.py",
+        "sha256": "fbb8ade089cec3fdd03b6f40687b4f8ef022c7766dc7c1c4011e6b7df3326c00"
+      },
+      {
+        "path": "scripts/physics_tradeoff.py",
+        "sha256": "b653cf6254196850113cbdb61a1afb5bf184900e6a5ad5d07a24151436e6c9f9"
+      },
+      {
+        "path": "scripts/plot_matched_research_comparisons.py",
+        "sha256": "bb2cdab5325243359d6a53f27c1814851b38d6ab85b3f0167d561c2995f19bef"
+      },
+      {
+        "path": "scripts/plot_strong_baseline_comparison.py",
+        "sha256": "060b1292bc663f0ba5d1fd352afd30fb0edc5badc83c1a42b3e4b4b23435c10b"
+      },
+      {
+        "path": "scripts/prepare_graph_experiment.py",
+        "sha256": "dd713db0b6b492b67f970042f9ddc7283474924cf0369b709c2fccb0353971e1"
+      },
+      {
+        "path": "scripts/prepare_production_graph_state.py",
+        "sha256": "af640a34bf6f44a42e08fd50c06d9585acc1adadd160db867e4551ea16a71525"
+      },
+      {
+        "path": "scripts/promote_models.py",
+        "sha256": "b41f8af5fb9f5394595a1c1ded9b534ed89d2c41b85b7a3e3788b2d275c71339"
+      },
+      {
+        "path": "scripts/queue_event_experiment.py",
+        "sha256": "520d24e1f1e5fcde8166f3df16f437276b7185665a8e9394c6ac59a4823b0242"
+      },
+      {
+        "path": "scripts/queue_origin_experiment.py",
+        "sha256": "7cd00e8b0134ed1282353e9162ce6af7da20d1a3d0739ab2ec12b43f79891954"
+      },
+      {
+        "path": "scripts/queue_refinement.py",
+        "sha256": "4747af3e5e09d4e23b7d28856ed66732e54ad1d3586b7df067eb49aeffcc1dd1"
+      },
+      {
+        "path": "scripts/queue_research.py",
+        "sha256": "34e3fe815c5130431a512df258cfbfd0cb39c7b64b769950d76f20a9983fff5a"
+      },
+      {
+        "path": "scripts/queue_specialist_experiment.py",
+        "sha256": "b7f8ab609aa392a1308117e827919692dbe60137185fb6ec68a2334cbddaedc4"
+      },
+      {
+        "path": "scripts/read_public_pages.py",
+        "sha256": "2056d46920d3b9f73b1268b86d122ac4daf318e72c298527b4b66376ac26e165"
+      },
+      {
+        "path": "scripts/record_formal_scores.py",
+        "sha256": "ee78da8b99edc9928c781c341f05af33dd28098ae313113879e8b3e3aad5fa0f"
+      },
+      {
+        "path": "scripts/record_onset_control_bounds.py",
+        "sha256": "0f18f8290e22a3a9b15f4287416bc9cbcf071a106d46909ee1962a5f1cc7f728"
+      },
+      {
+        "path": "scripts/refine_queues.py",
+        "sha256": "4af45c3a458feec60d6f7786166ef2cf0fb747fce492955ec4112312352f665d"
+      },
+      {
+        "path": "scripts/register_research_protocol.py",
+        "sha256": "2367504189c87f2103e10dfd99147ffcc9beba2f9d82409c38e92d4c5e2c3077"
+      },
+      {
+        "path": "scripts/run_official_diagnostics.py",
+        "sha256": "73221ca5f6014f8d7a011698fe0845d9448581c3896855b7dc19e1f47873a7e8"
+      },
+      {
+        "path": "scripts/run_official_state_baselines.py",
+        "sha256": "3ddd7eea81f350d50973813c50e4c0d90a184624d271aa64859c1c74c33a9e70"
+      },
+      {
+        "path": "scripts/scenario_audit.py",
+        "sha256": "b094d67aadc000463db95a235d71a9bc3a97624b1a017cb35be2b88612f1a417"
+      },
+      {
+        "path": "scripts/simulate_stress.py",
+        "sha256": "d0c4697c44f1c65848d83c1e396b9562d4151ad294f560b1576bcc6c49012140"
+      },
+      {
+        "path": "scripts/stage_zip_panel.py",
+        "sha256": "4ec5b59e058c52012bda91ff140fbc9620209bbf114aa5eb5ffbc259b4c69c15"
+      },
+      {
+        "path": "scripts/state_budget_suite.py",
+        "sha256": "d6fd23b3aacd79a6cdad38bbf0f3d845e0307dc4b4b7471ef279980035652477"
+      },
+      {
+        "path": "scripts/state_label_budget_control.py",
+        "sha256": "7cb05ba6e67f39106ea009468ce9215aebab9aec0c9a90295fe8641d3c7e4dbd"
+      },
+      {
+        "path": "scripts/state_research.py",
+        "sha256": "7f9043c7d753a5a6540ef81291ae7e3e00879ca330aea94f833b7017f29a759e"
+      },
+      {
+        "path": "scripts/strong_density_state_experiment.py",
+        "sha256": "faa4e2a0cb63a2e053ecf20a6a77a8c9c4f74960c3d39e145c9c0e41f138a7de"
+      },
+      {
+        "path": "scripts/submit_controlled_candidate.py",
+        "sha256": "72c67e384f488fd5e7afa454526e42aab56b43aef7d3671d91acf04a42997876"
+      },
+      {
+        "path": "scripts/summarize_campaign.py",
+        "sha256": "e09f36b6188d6a23698f0a27873fece09ba6fd3db1e2cd5ae767e4865d7c101f"
+      },
+      {
+        "path": "scripts/summarize_research_v2.py",
+        "sha256": "4f2239fb78d2d88de9117d289099874b41dc6f017b6c104e557cad168b0a8f17"
+      },
+      {
+        "path": "scripts/summarize_results.py",
+        "sha256": "3ede418e5a835ad3956b0332c335a54a4157654be9db16d4cde6411b5b12880c"
+      },
+      {
+        "path": "scripts/train_graph_experiment.py",
+        "sha256": "7036d5b3f14d5dd39de22b1aa94284285010359114deb3f38ead5461b6e5e04e"
+      },
+      {
+        "path": "scripts/verify_controlled_candidate.py",
+        "sha256": "34e3d7cc3767dc543f7fb9011f2088aebd5995ce7aebca751217fda3c713de52"
+      },
+      {
+        "path": "scripts/verify_graph_repeat.py",
+        "sha256": "2ec216b7fe481f52199b92b28baa40efbe3bde74ae19a17a86904d6f7d1189e9"
+      },
+      {
+        "path": "scripts/verify_queue_shared_repeat.py",
+        "sha256": "dd14df8d431667ffba2b6b9eb82a8e5169b6a57d4ee7e8e96dba40d2c25296d2"
+      },
+      {
+        "path": "scripts/verify_vendor.py",
+        "sha256": "232658ffcb66d34aea7c686d64e20bad86f7c172b0f900114dd683c5fd90bb85"
+      },
+      {
+        "path": "scripts/write_results.py",
+        "sha256": "efb8a4e80afdfaca2096ea7d2f65743e863b38c18dc41bac52fcdce07a70c83d"
+      },
+      {
+        "path": "src/trafficflow/__init__.py",
+        "sha256": "6432d23e18693162d87e81e22ac8f25158369302b9dc209d21154dba1351e7a8"
+      },
+      {
+        "path": "src/trafficflow/__main__.py",
+        "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+      },
+      {
+        "path": "src/trafficflow/adaptive_graph_state.py",
+        "sha256": "b098d10a76041ad6215b869b00dc6f71521852286bb0eaed418917e3cc2c8744"
+      },
+      {
+        "path": "src/trafficflow/bayesian_od.py",
+        "sha256": "5c5c76ab2848437af546a5fc3985f568b61c7a39dd3dbdf2a5551e266f1a1139"
+      },
+      {
+        "path": "src/trafficflow/causal_queue.py",
+        "sha256": "b12f3098ce79dc465545106b6d429fce2818499edd518f1909047b3ccbcda1b2"
+      },
+      {
+        "path": "src/trafficflow/cli.py",
+        "sha256": "8bb044f21541e3d0f639f01e20fc47a358152ec0c918ae4d644e73c96d7e73d3"
+      },
+      {
+        "path": "src/trafficflow/data.py",
+        "sha256": "f29fe070b21ac692b2cf9bd6d5b5fd018e94129b9626588325dd48edbd941ccd"
+      },
+      {
+        "path": "src/trafficflow/density_assimilation.py",
+        "sha256": "bbf771ae2d6ca93030aca029f3428fbb3f214cf4a5e39dca79925f08f7a30b46"
+      },
+      {
+        "path": "src/trafficflow/density_state.py",
+        "sha256": "ae91308f12b0c13d43f149d936a7c11704f712390f2fb593fbea5f053ff6a4b2"
+      },
+      {
+        "path": "src/trafficflow/digital_twin.py",
+        "sha256": "cfacb280f971faedceb2e404b35889891eef536a24a070804757ab6d92c49655"
+      },
+      {
+        "path": "src/trafficflow/experiments.py",
+        "sha256": "854abf59d2c560f84c704090741d6f8fce4ce6725d8a39139412194cc362a6ec"
+      },
+      {
+        "path": "src/trafficflow/fixture.py",
+        "sha256": "0709326abd7206a7ca1c3414dbb95c2d8c08749484802e2523d49c1ee7a2ef24"
+      },
+      {
+        "path": "src/trafficflow/graph_state.py",
+        "sha256": "b32b4b81b7292472fab1eabbe183ebaae6ab295c6c7eb5ad4951719bfd8418cc"
+      },
+      {
+        "path": "src/trafficflow/increment_state.py",
+        "sha256": "52c6eb6a5cf959ac050f237a84cc8c487fae086fcec61a5aeac2fa5997185ea3"
+      },
+      {
+        "path": "src/trafficflow/metrics.py",
+        "sha256": "5f42eaa372894edfa1363135b61818e7ec4bf56110257a03aadf07de770aa346"
+      },
+      {
+        "path": "src/trafficflow/odme.py",
+        "sha256": "e61df62cbf3ff4af03069d6e028b2024ddee25578cc00558b2b04148370850ee"
+      },
+      {
+        "path": "src/trafficflow/physics.py",
+        "sha256": "3f559ca30157ebee155bb17ebdd42f0dc43a169ef6b45634ad875569beb03e30"
+      },
+      {
+        "path": "src/trafficflow/queue.py",
+        "sha256": "62c35a4ed8e1e882d386461aba41cf8f5f3ed809451e51008e34f23e211240c5"
+      },
+      {
+        "path": "src/trafficflow/queue_calibration.py",
+        "sha256": "645cfb0a15418f23b0b04354600d08ef831a6db49197e149e984074fc414392d"
+      },
+      {
+        "path": "src/trafficflow/queue_event_loss.py",
+        "sha256": "5b155f8255080e0ee8823ab366ce8f7dfb1f2d067c196109834e0338395b631c"
+      },
+      {
+        "path": "src/trafficflow/queue_events.py",
+        "sha256": "10051eb26948ea7fbec94dd1cd4e37d68c4c0703efb152f35d03ebee372e25bb"
+      },
+      {
+        "path": "src/trafficflow/queue_specialist.py",
+        "sha256": "915fce272c5d1c88eee37960cc5b1dee305119603509bb8bdc881bf6f64b303b"
+      },
+      {
+        "path": "src/trafficflow/research_eval.py",
+        "sha256": "197aa2c4d6091dbd551ca6d11f8a664e9feaa44c1fcaf568ec873185315ab3c9"
+      },
+      {
+        "path": "src/trafficflow/runtime.py",
+        "sha256": "c181d87a89ff8fa7ee92c00759e2674d77cd60a3ed0d407f1e52f0d2b95d197f"
+      },
+      {
+        "path": "src/trafficflow/state.py",
+        "sha256": "f7a8341d968ac55a6f87e01a439ce8dc8c014750afa61129c7175e733de23c17"
+      },
+      {
+        "path": "src/trafficflow/submission.py",
+        "sha256": "87607c555e86f020e83f1ed9ac4054e49f88dc35eedd36cd8bf8ba442f85f2dc"
+      },
+      {
+        "path": "vendor/official/src/merge_submissions.py",
+        "sha256": "a8cd6c4c9f2cea777fde8f6b163c00835a4fb45672998b9fc71368810e792ee1"
+      },
+      {
+        "path": "vendor/official/src/release/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/release/score_overall.py",
+        "sha256": "b9b73e174eeb1ed742dd9cbd558f6b280a0bd14e7ec7001feb549f1b5fb9b4ee"
+      },
+      {
+        "path": "vendor/official/src/score_overall.py",
+        "sha256": "4a28d57a23950554a065f6254bf674f4a1b58b5d039f26bc5154dd28d28651fb"
+      },
+      {
+        "path": "vendor/official/src/task1/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_historical_mean.py",
+        "sha256": "66569dd55340d5e4509712e66172ea669893d7341a0ef2dd8c920c24f07209a1"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_structural_kf.py",
+        "sha256": "f3a63ba48bf867d993dd1b3cbc0da6ca4567da7aa519ed2b2e3fd93a61c06132"
+      },
+      {
+        "path": "vendor/official/src/task1/build_task1_baseline_submission.py",
+        "sha256": "cb91e19e20a5a546430917a884197c1ad6a7068c6a47d7fbec7fb8311b7237d7"
+      },
+      {
+        "path": "vendor/official/src/task1/score_task1.py",
+        "sha256": "bcd42e88fbc42cd499e93e3b50ddf367009b26b216df5ab3f710ee1d1d863163"
+      },
+      {
+        "path": "vendor/official/src/task2/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task2/build_task2_persistence_submission.py",
+        "sha256": "d3cb4ab23206c4c20058a074b24c23ba79b43dd4219f41e158329a39f5a3edd2"
+      },
+      {
+        "path": "vendor/official/src/task2/queue_utils.py",
+        "sha256": "cea193935e7af7ab1399b9955c3f26fcb65664a099344d35b9c3b91802b3135f"
+      },
+      {
+        "path": "vendor/official/src/task2/score_task2.py",
+        "sha256": "b5605ebae9b32b3ca974881be47b5f2e796728b94763a724314580fc93be28bb"
+      },
+      {
+        "path": "vendor/official/src/task3/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task3/build_task3_baseline_submission.py",
+        "sha256": "945ce4b28f264be6be35a1b8d0f67311bf666d5e6b516a5b79bb2617075e8bcf"
+      },
+      {
+        "path": "vendor/official/src/task3/score_task3.py",
+        "sha256": "98d88b6e7f6b7bb0e2bbb4b42e486d6690b6f14a5d3625649e85ddf828550409"
+      },
+      {
+        "path": "vendor/official/src/task4/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task4/build_task4_odme_artifacts.py",
+        "sha256": "5da75aea3004555bae080ee4d18f1baee01dbb9ed1caf7a6abadd2387e6ade58"
+      },
+      {
+        "path": "vendor/official/src/task4/score_task4.py",
+        "sha256": "be15d732438d305e3d35cb41d3105fc03e3fb9459e5c050af39fe192cede30e3"
+      }
+    ],
+    "n_files": 115,
+    "scope": "Own source, vendored official Python and dependency locks; no data, credentials or model weights"
+  },
+  "panel": "D12_I5_N",
+  "fit_dates": [
+    "2030-07-16",
+    "2030-07-17",
+    "2030-07-18",
+    "2030-07-19",
+    "2030-07-20",
+    "2030-07-21",
+    "2030-07-22",
+    "2030-07-23",
+    "2030-07-24",
+    "2030-07-25",
+    "2030-07-26",
+    "2030-07-27",
+    "2030-07-28",
+    "2030-07-29",
+    "2030-07-30",
+    "2030-07-31",
+    "2030-08-01",
+    "2030-08-02",
+    "2030-08-03",
+    "2030-08-04",
+    "2030-08-05",
+    "2030-08-06",
+    "2030-08-07",
+    "2030-08-08",
+    "2030-08-09",
+    "2030-08-10",
+    "2030-08-11",
+    "2030-08-12",
+    "2030-08-13",
+    "2030-08-14",
+    "2030-08-15",
+    "2030-08-16",
+    "2030-08-17",
+    "2030-08-18",
+    "2030-08-19",
+    "2030-08-20",
+    "2030-08-21",
+    "2030-08-22",
+    "2030-08-23",
+    "2030-08-24",
+    "2030-08-25",
+    "2030-08-26",
+    "2030-08-27",
+    "2030-08-28",
+    "2030-08-29",
+    "2030-08-30",
+    "2030-08-31",
+    "2030-09-01",
+    "2030-09-02",
+    "2030-09-03",
+    "2030-09-04",
+    "2030-09-05",
+    "2030-09-06",
+    "2030-09-07",
+    "2030-09-08",
+    "2030-09-09",
+    "2030-09-10",
+    "2030-09-11",
+    "2030-09-12",
+    "2030-09-13",
+    "2030-09-14",
+    "2030-09-15",
+    "2030-09-16",
+    "2030-09-17",
+    "2030-09-18",
+    "2030-09-19",
+    "2030-09-20",
+    "2030-09-21",
+    "2030-09-22",
+    "2030-09-23",
+    "2030-09-24",
+    "2030-09-25",
+    "2030-09-26",
+    "2030-09-27",
+    "2030-09-28",
+    "2030-09-29",
+    "2030-09-30",
+    "2030-10-01",
+    "2030-10-02",
+    "2030-10-03",
+    "2030-10-04",
+    "2030-10-05",
+    "2030-10-06",
+    "2030-10-07",
+    "2030-10-08",
+    "2030-10-09",
+    "2030-10-10",
+    "2030-10-11",
+    "2030-10-12",
+    "2030-10-13",
+    "2030-10-14",
+    "2030-10-15",
+    "2030-10-16",
+    "2030-10-17",
+    "2030-10-18",
+    "2030-10-19",
+    "2030-10-20",
+    "2030-10-21",
+    "2030-10-22",
+    "2030-10-23",
+    "2030-10-24",
+    "2030-10-25",
+    "2030-10-26",
+    "2030-10-27",
+    "2030-10-28",
+    "2030-10-29",
+    "2030-10-30",
+    "2030-10-31",
+    "2030-11-01",
+    "2030-11-02",
+    "2030-11-03",
+    "2030-11-04",
+    "2030-11-05",
+    "2030-11-06",
+    "2030-11-07",
+    "2030-11-08",
+    "2030-11-09",
+    "2030-11-10",
+    "2030-11-11",
+    "2030-11-12",
+    "2030-11-13",
+    "2030-11-14",
+    "2030-11-15",
+    "2030-11-16",
+    "2030-11-17",
+    "2030-11-18",
+    "2030-11-19",
+    "2030-11-20",
+    "2030-11-21",
+    "2030-11-22",
+    "2030-11-23",
+    "2030-11-24",
+    "2030-11-25",
+    "2030-11-26",
+    "2030-11-27",
+    "2030-11-28",
+    "2030-11-29",
+    "2030-11-30",
+    "2030-12-01",
+    "2030-12-02",
+    "2030-12-03",
+    "2030-12-04",
+    "2030-12-05",
+    "2030-12-06",
+    "2030-12-07",
+    "2030-12-08",
+    "2030-12-09",
+    "2030-12-10",
+    "2030-12-11",
+    "2030-12-12",
+    "2030-12-13",
+    "2030-12-14",
+    "2030-12-15",
+    "2030-12-16",
+    "2030-12-17",
+    "2030-12-18",
+    "2030-12-19",
+    "2030-12-20",
+    "2030-12-21",
+    "2030-12-22",
+    "2030-12-23",
+    "2030-12-24",
+    "2030-12-25",
+    "2030-12-26",
+    "2030-12-27",
+    "2030-12-28",
+    "2030-12-29",
+    "2030-12-30",
+    "2030-12-31",
+    "2031-01-01",
+    "2031-01-02",
+    "2031-01-03",
+    "2031-01-04",
+    "2031-01-05",
+    "2031-01-06",
+    "2031-01-07",
+    "2031-01-08",
+    "2031-01-09",
+    "2031-01-10",
+    "2031-01-11",
+    "2031-01-12",
+    "2031-01-13",
+    "2031-01-14",
+    "2031-01-15",
+    "2031-01-16",
+    "2031-01-17",
+    "2031-01-18",
+    "2031-01-19",
+    "2031-01-20",
+    "2031-01-21",
+    "2031-01-22",
+    "2031-01-23",
+    "2031-01-24",
+    "2031-01-25",
+    "2031-01-26",
+    "2031-01-27",
+    "2031-01-28",
+    "2031-01-29",
+    "2031-01-30",
+    "2031-01-31",
+    "2031-02-01",
+    "2031-02-02",
+    "2031-02-03",
+    "2031-02-04",
+    "2031-02-05",
+    "2031-02-06",
+    "2031-02-07",
+    "2031-02-08",
+    "2031-02-09",
+    "2031-02-10",
+    "2031-02-11",
+    "2031-02-12",
+    "2031-02-13",
+    "2031-02-14",
+    "2031-02-15",
+    "2031-02-16",
+    "2031-02-17",
+    "2031-02-18",
+    "2031-02-19",
+    "2031-02-20",
+    "2031-02-21",
+    "2031-02-22",
+    "2031-02-23",
+    "2031-02-24",
+    "2031-02-25",
+    "2031-02-26",
+    "2031-02-27",
+    "2031-02-28"
+  ],
+  "profile_dates": [
+    "2030-06-01",
+    "2030-06-02",
+    "2030-06-03",
+    "2030-06-04",
+    "2030-06-05",
+    "2030-06-06",
+    "2030-06-07",
+    "2030-06-08",
+    "2030-06-09",
+    "2030-06-10",
+    "2030-06-11",
+    "2030-06-12",
+    "2030-06-13",
+    "2030-06-14",
+    "2030-06-15",
+    "2030-06-16",
+    "2030-06-17",
+    "2030-06-18",
+    "2030-06-19",
+    "2030-06-20",
+    "2030-06-21",
+    "2030-06-22",
+    "2030-06-23",
+    "2030-06-24",
+    "2030-06-25",
+    "2030-06-26",
+    "2030-06-27",
+    "2030-06-28",
+    "2030-06-29",
+    "2030-06-30",
+    "2030-07-01",
+    "2030-07-02",
+    "2030-07-03",
+    "2030-07-04",
+    "2030-07-05",
+    "2030-07-06",
+    "2030-07-07",
+    "2030-07-08",
+    "2030-07-09",
+    "2030-07-10",
+    "2030-07-11",
+    "2030-07-12",
+    "2030-07-13",
+    "2030-07-14",
+    "2030-07-15"
+  ],
+  "n_fitting_labels": 4409727,
+  "n_grid_fit_dates": 228,
+  "sources": [
+    {
+      "date": "2030-07-16",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_16.parquet",
+      "cache_sha256": "3809c667461e6b2359da146f0b058885fb26585c2348794ebe34124697132b15"
+    },
+    {
+      "date": "2030-07-17",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_17.parquet",
+      "cache_sha256": "022dd6845e03013ce5a6bda80d39acbc0d35d249339f037767a4a9b330cdc75d"
+    },
+    {
+      "date": "2030-07-18",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_18.parquet",
+      "cache_sha256": "bae8becc4a4bcb2f9a07a5c726050d14af490d9a4b038c5ec98a974478fdddca"
+    },
+    {
+      "date": "2030-07-19",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_19.parquet",
+      "cache_sha256": "0a0d89ad01b377a739fb7964fac47105a680e835e1ced8aea4528ed644ebaf51"
+    },
+    {
+      "date": "2030-07-20",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_20.parquet",
+      "cache_sha256": "f0018a1c9f088988b7f95ce9e9044a5a9e225bfbc432765adddd46545b91894a"
+    },
+    {
+      "date": "2030-07-21",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_21.parquet",
+      "cache_sha256": "3439093e5a569235aa4b3a981ba81c41b7fcd943e232c94a286f25e502617d59"
+    },
+    {
+      "date": "2030-07-22",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_22.parquet",
+      "cache_sha256": "2dc478024b1f2bd115eaad970325e9f9fc8686e80ad8df9fbb07446d64b64be2"
+    },
+    {
+      "date": "2030-07-23",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_23.parquet",
+      "cache_sha256": "103894e25693b50d4759854e762e4170bcf160663c0a7e2f84e7ab4efe9cd370"
+    },
+    {
+      "date": "2030-07-24",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_24.parquet",
+      "cache_sha256": "500dfdb5bfaf27f5b9977b26c586b2fa455e8d902ea241a094c123db24971700"
+    },
+    {
+      "date": "2030-07-25",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_25.parquet",
+      "cache_sha256": "1a361b719665446a285cb611d21198cfedc9e41cd2f1270ab9f531b119da1af0"
+    },
+    {
+      "date": "2030-07-26",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_26.parquet",
+      "cache_sha256": "b628e49400536331f8cbb1f72a0b4384adc741c7538b503d52b8472e65a6ed8a"
+    },
+    {
+      "date": "2030-07-27",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_27.parquet",
+      "cache_sha256": "2108a0a90aa66d71bef310ff14054deae3a6af9b90b668926819065bee9b903f"
+    },
+    {
+      "date": "2030-07-28",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_07_28.parquet",
+      "cache_sha256": "07a0433eca2e0bdd78484577f36ed6cd7150081207ac0bf6697d43878a686bcd"
+    },
+    {
+      "date": "2030-07-29",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_07_29.parquet",
+      "cache_sha256": "bae16e575dfe6743c5664fff10db498e0ddb3b852b0ac72cd8b5db0e6faeb674"
+    },
+    {
+      "date": "2030-07-30",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_30.parquet",
+      "cache_sha256": "7cfc3e032598a4cb7ebeea8f5c112dae9c5c9ec7694dc9c9a5e570bf73d22e1f"
+    },
+    {
+      "date": "2030-07-31",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_31.parquet",
+      "cache_sha256": "bf6500d3fc23ebf16ff8fc37f6d5576990c66e33a1f728c37fa13546bc09e1ae"
+    },
+    {
+      "date": "2030-08-01",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_01.parquet",
+      "cache_sha256": "916a85b755cbe9e8ef841a5f2bdd0503d26163fdf7138492a381ff1edc99d40d"
+    },
+    {
+      "date": "2030-08-02",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_02.parquet",
+      "cache_sha256": "74e753c2354cbf98ff3355bdac8629b9d5fcf79165ec4ddee229644c270d53e4"
+    },
+    {
+      "date": "2030-08-03",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_03.parquet",
+      "cache_sha256": "0eaf42ccdf95c4f3269ebbe9204b6b84b17a47bfd73b53bb461f2507e13bb22d"
+    },
+    {
+      "date": "2030-08-04",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_04.parquet",
+      "cache_sha256": "60622c2982be8f285d1171a1cfac0ea3f9a0fabdc95572d468578a4dcbf9fdd3"
+    },
+    {
+      "date": "2030-08-05",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_05.parquet",
+      "cache_sha256": "dcecd12974e35f2efbf9d978d14e60504bfa7314506173bcfdae3989de87e665"
+    },
+    {
+      "date": "2030-08-06",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_06.parquet",
+      "cache_sha256": "f0743baed7d8244561107dc7c7d1fa307db078e40681cd7c466a27b435b9d0a9"
+    },
+    {
+      "date": "2030-08-07",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_07.parquet",
+      "cache_sha256": "6df3b1c9e81d986b41cd000e1e375167cc72ce4175e65ca96e1c24867d421b98"
+    },
+    {
+      "date": "2030-08-08",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_08.parquet",
+      "cache_sha256": "ce76ab930e0bd1ee3f36e5e55f190191656d3e170c269d28bde3111e4b9a1edb"
+    },
+    {
+      "date": "2030-08-09",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_09.parquet",
+      "cache_sha256": "5d8fb416abcba4cdc7b60e1a59a5f8fe06ee7b7093df98a0463e310e8bb93e97"
+    },
+    {
+      "date": "2030-08-10",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_10.parquet",
+      "cache_sha256": "0d92e6384e8e5572e8c786438c48ed075ee26da9e5cd37590a65cb515139ebc7"
+    },
+    {
+      "date": "2030-08-11",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_11.parquet",
+      "cache_sha256": "911e8484b6763774a8fed9795664f64b4f06169ac7608b8637e146162dae8a8c"
+    },
+    {
+      "date": "2030-08-12",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_12.parquet",
+      "cache_sha256": "3c94e276ca1e881a00a21740bc8b0c548f9e90e7f2b558e36f8bfc7382e40229"
+    },
+    {
+      "date": "2030-08-13",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_13.parquet",
+      "cache_sha256": "37f0260a9a26c7579ea92e536d681d8636f69ba06c12b3e8eac5296ce648441d"
+    },
+    {
+      "date": "2030-08-14",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_14.parquet",
+      "cache_sha256": "551f661cd41cb87c712bd42486be99cccbd00d6d50b12ba7be2dda642b16946a"
+    },
+    {
+      "date": "2030-08-15",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_15.parquet",
+      "cache_sha256": "6069a193d579da01386229fcad929d96e44ae91ae962a0f5422dcc9240b65e2f"
+    },
+    {
+      "date": "2030-08-16",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_16.parquet",
+      "cache_sha256": "00d91f30fc876eb15331268f9f952fb9862594a19ee978c9da2fca18ce9d5ea5"
+    },
+    {
+      "date": "2030-08-17",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_17.parquet",
+      "cache_sha256": "782f28a5e2b7d3e46c69deeaba28ea47a936934365bfedaf2391b3dd17d91c9e"
+    },
+    {
+      "date": "2030-08-18",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_18.parquet",
+      "cache_sha256": "6c9cf20edf3db47340d441c3845ddfb4e727f27609819923d3b603811689ce17"
+    },
+    {
+      "date": "2030-08-19",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_19.parquet",
+      "cache_sha256": "ab10b65472b547152da66dcb0c5ee66ebdc71dc20ca934409c5f2b9a04c8e59a"
+    },
+    {
+      "date": "2030-08-20",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_20.parquet",
+      "cache_sha256": "59d5c822bb97b58ee65cdd53429a8695c1526d552ab166864b5713ae52f53b26"
+    },
+    {
+      "date": "2030-08-21",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_21.parquet",
+      "cache_sha256": "f8a54bdb419927cfdfd96351dabe23d1819992f5939c38a2013e32331703ee41"
+    },
+    {
+      "date": "2030-08-22",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_22.parquet",
+      "cache_sha256": "c95293acd3949420f46ed4f1aa7cc7b47e97b110c292b33e643581f97c907ed8"
+    },
+    {
+      "date": "2030-08-23",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_23.parquet",
+      "cache_sha256": "dfc44392356e552f3f6a68fc786956b97a2e3ca511e821cd5211b3600cf705ea"
+    },
+    {
+      "date": "2030-08-24",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_24.parquet",
+      "cache_sha256": "b7f537dc5811a048d88d69ce17f9aebffacf01ebc39ed95b0fa25deed6e4bbc1"
+    },
+    {
+      "date": "2030-08-25",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_25.parquet",
+      "cache_sha256": "adcc5db348285beaf93655b81d2fadfed5ae882b8548eeb8d3ca31911fb1660d"
+    },
+    {
+      "date": "2030-08-26",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_26.parquet",
+      "cache_sha256": "c297f8b3131c344a0ef991a9c1c08a3473d172e4954bfe6acbb8290586b70324"
+    },
+    {
+      "date": "2030-08-27",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_27.parquet",
+      "cache_sha256": "4718c1e1cff66e8d617ae3efb7819bc9c0f05b1e5ea70dfbde70dcf7620269ed"
+    },
+    {
+      "date": "2030-08-28",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_28.parquet",
+      "cache_sha256": "afffbc42a90e093c124bc7877692c4f6a7df30c9f12eb30402e84eedb27af122"
+    },
+    {
+      "date": "2030-08-29",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_29.parquet",
+      "cache_sha256": "e40b981364a89a3d8f22b950922bb6cfebe581cab87152857056079c32d84d32"
+    },
+    {
+      "date": "2030-08-30",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_30.parquet",
+      "cache_sha256": "2e5dcfa2da36e5020016990bdd645ba8722790d72a5277c9f4e2492414d8c62f"
+    },
+    {
+      "date": "2030-08-31",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_31.parquet",
+      "cache_sha256": "0e2db107afa29fd9df837415c55d3fb6a8edd29d3673433a6fdce0978ea586b3"
+    },
+    {
+      "date": "2030-09-01",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_01.parquet",
+      "cache_sha256": "5f16d8a5f6a4a27b7c8dab89c5b5ed185ba92fab08d3f55502a055375ae49716"
+    },
+    {
+      "date": "2030-09-02",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_02.parquet",
+      "cache_sha256": "f3153abc006ed2a3170e7d97f04c52ddace06deaecf5fa079dd3d8643ac8b617"
+    },
+    {
+      "date": "2030-09-03",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_03.parquet",
+      "cache_sha256": "01797ff02c32249a80f7e9a81dd1c76357a99e02d1f59f41a89fb343f720b5ca"
+    },
+    {
+      "date": "2030-09-04",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_04.parquet",
+      "cache_sha256": "a44d74748e9dcc640bb8f42ce02becb296efbca3bbbfb436b691c67fa060db4e"
+    },
+    {
+      "date": "2030-09-05",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_09_05.parquet",
+      "cache_sha256": "d6c37d2b8a1ee8b163df6497b29de591513f4a772bf8cb098ba0585888a2e79b"
+    },
+    {
+      "date": "2030-09-06",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_06.parquet",
+      "cache_sha256": "117d758429a6286f4a33a86f6e5b98c4c425ca955450ecabcde4456746f1ae61"
+    },
+    {
+      "date": "2030-09-07",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_07.parquet",
+      "cache_sha256": "e662f622f64f55e4061a00b8c8dcdfce108632811c16c2b097f191de925c27e4"
+    },
+    {
+      "date": "2030-09-08",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_09_08.parquet",
+      "cache_sha256": "a2f6f798db4b8e211b3098f263831d040146b55055d31aa81a604b7b5483b168"
+    },
+    {
+      "date": "2030-09-09",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_09.parquet",
+      "cache_sha256": "46dc7c30779fd170b04e6b7fa210e70f7c3716e50b10c9a53a8db54f28ec2946"
+    },
+    {
+      "date": "2030-09-10",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_10.parquet",
+      "cache_sha256": "95cf451f5825019612cb99663386d4be3f60ccb6f4f88a34ee16c9be9b7a2857"
+    },
+    {
+      "date": "2030-09-11",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_11.parquet",
+      "cache_sha256": "1b86ff8e91d1723772fe6df8b7ad8bb0f828d4210ff5e78600b5a1fc0179519d"
+    },
+    {
+      "date": "2030-09-12",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_12.parquet",
+      "cache_sha256": "78fa522d9ddf6bcb9fcbc39be29e0bb6ff6340a48719d21675691102942bf3ec"
+    },
+    {
+      "date": "2030-09-13",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_13.parquet",
+      "cache_sha256": "d2bf9dfa30fb73e6ebf26ac32fe507401adbf37129df889665ad1aa9abcab663"
+    },
+    {
+      "date": "2030-09-14",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_14.parquet",
+      "cache_sha256": "e043da178fd8db93f16f0a1107a9e3011c609e8a9ce086eddc4969513898db1e"
+    },
+    {
+      "date": "2030-09-15",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_09_15.parquet",
+      "cache_sha256": "20a3c8bddd9d57ca29810e743462b058aad6c0e432ead38a503d985ef33a4457"
+    },
+    {
+      "date": "2030-09-16",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_16.parquet",
+      "cache_sha256": "b04df83e609d83b416f3edf8b4294c769ea1f5746ebbe713b2eabd73461d58cc"
+    },
+    {
+      "date": "2030-09-17",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_17.parquet",
+      "cache_sha256": "f14417faefba2ed5d2e198f7a2f0e5eb3df8b14dc27ed9b122344532a746d164"
+    },
+    {
+      "date": "2030-09-18",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_18.parquet",
+      "cache_sha256": "4e80248ff4cb47da73fa0d4ef5a8372e38a9fa60fa72d790a710fd6437d0acc9"
+    },
+    {
+      "date": "2030-09-19",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_19.parquet",
+      "cache_sha256": "72b676b4b2cb16f5200b8030dfed23c27a668a5374f41cb1f8e1f17cb5d5fbaf"
+    },
+    {
+      "date": "2030-09-20",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_20.parquet",
+      "cache_sha256": "ae582dbda6d9609a0f05eebed1e50fe9b40a2ade686efd1b406cd76d9b81ea16"
+    },
+    {
+      "date": "2030-09-21",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_21.parquet",
+      "cache_sha256": "392140500b74fbafd7a477e11cd8965fed5c6367b420120996bd8a001ff796fd"
+    },
+    {
+      "date": "2030-09-22",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_22.parquet",
+      "cache_sha256": "b0feebb6a4ca26e1d3917d89a1ecd701f1198e4f20db0eef781a4cbb3d34754b"
+    },
+    {
+      "date": "2030-09-23",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_23.parquet",
+      "cache_sha256": "9ca8f88f0801f80f2a36ee87d4fe01f5dc455ef9d5526e473946b016f88c0e94"
+    },
+    {
+      "date": "2030-09-24",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_24.parquet",
+      "cache_sha256": "6cc0b2d0a335b81146b8aa7c3ce41eb0bebca820d0a8ac9cc4f06bcb7e51ae0c"
+    },
+    {
+      "date": "2030-09-25",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_25.parquet",
+      "cache_sha256": "35d064dd08af0cb7009f3690353586dc29b490eed4c4ce5bc49661cbf074866c"
+    },
+    {
+      "date": "2030-09-26",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_26.parquet",
+      "cache_sha256": "85422059ceb35ac5a893776341911973067739068ac77f2b8c8d1bb65729c08a"
+    },
+    {
+      "date": "2030-09-27",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_27.parquet",
+      "cache_sha256": "ff3367416ff6096b1f58f038894d269daa6a06cfc76fe85d1aa55abc5b175abd"
+    },
+    {
+      "date": "2030-09-28",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_28.parquet",
+      "cache_sha256": "2ec2c3a701a3b42b1125dad1487a1da702e19010049ea9ec8d9145d20465abe4"
+    },
+    {
+      "date": "2030-09-29",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_29.parquet",
+      "cache_sha256": "07a36b45142a7576f7c8f7c360602c2d655049de5fe75fb2bd60066baf4b6393"
+    },
+    {
+      "date": "2030-09-30",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_30.parquet",
+      "cache_sha256": "7e894ea77fd13ede8583440f9eea0bbe488e3993e9c5be02bd8b157c990512eb"
+    },
+    {
+      "date": "2030-10-01",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_01.parquet",
+      "cache_sha256": "e02fd672f2f7af317cdd6729194f4d8c70460bc9b40f6bce3fe2bdafa846351e"
+    },
+    {
+      "date": "2030-10-02",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_02.parquet",
+      "cache_sha256": "79974ce38aca9574bbb950670d16f5ac1ad1e9e2e46cc9903facc5326bcce905"
+    },
+    {
+      "date": "2030-10-03",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_03.parquet",
+      "cache_sha256": "51952787f52cd9d343e7e38bf9c20e0dcedb661f17336b73bb9f159c035e1d1f"
+    },
+    {
+      "date": "2030-10-04",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_04.parquet",
+      "cache_sha256": "5b13cc1dd68a8aa72999246cd813b8bfc5fecb847652eefbcf7a82a3cca08e1e"
+    },
+    {
+      "date": "2030-10-05",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_05.parquet",
+      "cache_sha256": "226d5d337a4bf9903274a442ba72c37810ce401b4e5996c14c5796cab6f12900"
+    },
+    {
+      "date": "2030-10-06",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_06.parquet",
+      "cache_sha256": "1e04ad366cabb99c8f5fb54d63122b9c9a839c582d4d20567e2b8ff01ed92229"
+    },
+    {
+      "date": "2030-10-07",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_07.parquet",
+      "cache_sha256": "fe109ec38bf7ab53c45a03b9772c1a45dc3f4771b057587ff87a06562c94f617"
+    },
+    {
+      "date": "2030-10-08",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_08.parquet",
+      "cache_sha256": "4e7fca1f57d40171bce3919973b270af806940f2f357dd4abafd4042d098c7cd"
+    },
+    {
+      "date": "2030-10-09",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_09.parquet",
+      "cache_sha256": "a3751f4d1af3b14b9d102e38061597567c46171594b5c6bc9193c9d5c57d9fe2"
+    },
+    {
+      "date": "2030-10-10",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_10.parquet",
+      "cache_sha256": "274a034e9c18cb9342fd4b7c27d54d110675cc7a029ea9e588a835a880fa0f69"
+    },
+    {
+      "date": "2030-10-11",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_11.parquet",
+      "cache_sha256": "393827f03e411446a802e08e94e0fff75509be93c1134000f28db649dfb05cd1"
+    },
+    {
+      "date": "2030-10-12",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_12.parquet",
+      "cache_sha256": "1560f2d9b5eaa0837b4154c24c5bac544e4ec8cac0d022519316d5d4c6c7c79b"
+    },
+    {
+      "date": "2030-10-13",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_13.parquet",
+      "cache_sha256": "85e9ce82526d92e4b13f86c9b744231496c3d30c5a1406e87a4449971f69b72c"
+    },
+    {
+      "date": "2030-10-14",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_14.parquet",
+      "cache_sha256": "a3bae152ba440871f6095b97d576aecab0732634fd0518878a70638a5c679b91"
+    },
+    {
+      "date": "2030-10-15",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_15.parquet",
+      "cache_sha256": "24e8c4f0ee790f3b7a4d8faa0b791661e9feedba72cbb6b473bd748c61bd249b"
+    },
+    {
+      "date": "2030-10-16",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_16.parquet",
+      "cache_sha256": "fff19636bdcc59c397516b75e5b3d93759b876955ece1cb35ba1f2a341188a21"
+    },
+    {
+      "date": "2030-10-17",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_17.parquet",
+      "cache_sha256": "68dd59c4c3990f3afff6b19445660025405fa1bf80be409472b54de98e4e07d8"
+    },
+    {
+      "date": "2030-10-18",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_18.parquet",
+      "cache_sha256": "60b77f22b37da93d7b6ecec4a8c0a9b12ce7083c89943b449d22bcd097669395"
+    },
+    {
+      "date": "2030-10-19",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_19.parquet",
+      "cache_sha256": "b38ebba247f3b88de602f1bf3634edfc2a62ffd73f9d83fbd7e5bb942b9fcc2e"
+    },
+    {
+      "date": "2030-10-20",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_20.parquet",
+      "cache_sha256": "beb9eabfd15e65b9791842db35b525dbba2c084ab5c858f790911e85f01ecf1e"
+    },
+    {
+      "date": "2030-10-21",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_21.parquet",
+      "cache_sha256": "5e41f6879fa92f38c80409b5bdb66cf24348e27b54bcbe1eb657909111c9031d"
+    },
+    {
+      "date": "2030-10-22",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_22.parquet",
+      "cache_sha256": "8b4c3507a876c7a3b91b629ef4bf54781dc38c3ca4f16f18252eb245820a375f"
+    },
+    {
+      "date": "2030-10-23",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_23.parquet",
+      "cache_sha256": "77155ae06855f93b596507f4a09cd0c79d59b4f5bc51ea84bcb279039510564a"
+    },
+    {
+      "date": "2030-10-24",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_24.parquet",
+      "cache_sha256": "03366337530c399ca0c53dc94cd89be7d86282a8ef29ebabf278a42cfef11cb6"
+    },
+    {
+      "date": "2030-10-25",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_25.parquet",
+      "cache_sha256": "0377d1b587f3c5c2965aafd08ba84cdb861b3d28b403ccf3d632a54838b43c69"
+    },
+    {
+      "date": "2030-10-26",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_26.parquet",
+      "cache_sha256": "5f0e0245d1192f24c7638d36566abda250fdcc7e63e27b1e3ae2ac796656e2dc"
+    },
+    {
+      "date": "2030-10-27",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_27.parquet",
+      "cache_sha256": "d0b66f0e27b20970fb73bc374497197af69098e7eae39c0d3676c6278c3a2bec"
+    },
+    {
+      "date": "2030-10-28",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_28.parquet",
+      "cache_sha256": "a5f8be1c95fc7b9a34053bea8895af85656b397efcb05fbc73dc58d91a22068a"
+    },
+    {
+      "date": "2030-10-29",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_29.parquet",
+      "cache_sha256": "57dfb1a6da0595912f7c6db4d4deab9891b1d37f5cca23dd235611c6c9ab6718"
+    },
+    {
+      "date": "2030-10-30",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_30.parquet",
+      "cache_sha256": "fa684531ff711e8c64245f74910a22bba7681065dbf07dc33714d250794a9019"
+    },
+    {
+      "date": "2030-10-31",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_31.parquet",
+      "cache_sha256": "438fce8d45264b3cc154d9543757a474e7b495b2e6dec4ba23a521dd12913b02"
+    },
+    {
+      "date": "2030-11-01",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_11_01.parquet",
+      "cache_sha256": "73be544fed091e5e298f63f25a2f7fcf2f40ef08e58b6e35eb96314fc6548d1b"
+    },
+    {
+      "date": "2030-11-02",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_02.parquet",
+      "cache_sha256": "e05097a88993a8072845204e9d02f0ee55940df18678d125a7c9d2947ce1a94c"
+    },
+    {
+      "date": "2030-11-03",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_11_03.parquet",
+      "cache_sha256": "fe33ce0d2046f2d08003ac53324080d042622349e9dd4eaffc67243b6e08360f"
+    },
+    {
+      "date": "2030-11-04",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_11_04.parquet",
+      "cache_sha256": "455a3fcad755bfc9fe52353dcdecf6f5e07de3d51ce47bf70209bf397589860b"
+    },
+    {
+      "date": "2030-11-05",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_11_05.parquet",
+      "cache_sha256": "b776a4e303476752980570443bb657c37d2674d168899123b62a4fcab6fce814"
+    },
+    {
+      "date": "2030-11-06",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_11_06.parquet",
+      "cache_sha256": "4293a606c00ff1db435ee6d6b88229ca940344e87bfbf120d521c0504c3410f0"
+    },
+    {
+      "date": "2030-11-07",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_07.parquet",
+      "cache_sha256": "7c7fb24ad3dd45fcbb14de5c1e74a8a64e966f2c8aa623802708b06ed60b28cd"
+    },
+    {
+      "date": "2030-11-08",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_11_08.parquet",
+      "cache_sha256": "cc021bb993ff4029cd23eccebef1bed311056ff670487e1484024139b09f6b8e"
+    },
+    {
+      "date": "2030-11-09",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_09.parquet",
+      "cache_sha256": "bec57c82aa4450472ded0cb519e7bc03f5eae71ad5ec81687dbfbe2a3fdf9409"
+    },
+    {
+      "date": "2030-11-10",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_11_10.parquet",
+      "cache_sha256": "2062d91f39208173bb33abc84097507f719b1d19e5806c308fede104acf6d49a"
+    },
+    {
+      "date": "2030-11-11",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_11.parquet",
+      "cache_sha256": "c6f75cd25b96320978d8564d0470622db475d9fd4bed3472239f8fb304991db8"
+    },
+    {
+      "date": "2030-11-12",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_11_12.parquet",
+      "cache_sha256": "0a314179b91efb648aef8593c5dc3e8a8d08892a8c3d4f939cc3fe6b31ac6028"
+    },
+    {
+      "date": "2030-11-13",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_11_13.parquet",
+      "cache_sha256": "94b29b9116fb6c8dbf7a2564e5f2178e03ff6f4c660a80364bc18411c7760b5b"
+    },
+    {
+      "date": "2030-11-14",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_11_14.parquet",
+      "cache_sha256": "e6874c82db66aab1749eff36e2acb1f791508b601b38a2a45b442f2b944713f6"
+    },
+    {
+      "date": "2030-11-15",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_15.parquet",
+      "cache_sha256": "616d5ec373a87410f9691fd8cc542fd921159d99bb80030dc625f03a61d0c16f"
+    },
+    {
+      "date": "2030-11-16",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_11_16.parquet",
+      "cache_sha256": "2de9516d4fff95f52829f6a39a687e9161c140bd9c2b2118277a091692924563"
+    },
+    {
+      "date": "2030-11-17",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_17.parquet",
+      "cache_sha256": "621f0a2ae027c1a77f03086f36ffa943b9c0a8b47b3b903bfb732740a5dfb88e"
+    },
+    {
+      "date": "2030-11-18",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_18.parquet",
+      "cache_sha256": "0668aaebc7f887a852137c09691efbee5e2b425ee56bd5dcb0829db2dca57e7e"
+    },
+    {
+      "date": "2030-11-19",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_19.parquet",
+      "cache_sha256": "935e408742e07e3f1ad823a8bb83ca1fd138967de793811125cac737cc1b9073"
+    },
+    {
+      "date": "2030-11-20",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_20.parquet",
+      "cache_sha256": "e1121306998fa784e0c44ba9b18746e89a2c6951eb4c038012ec7f9c133300de"
+    },
+    {
+      "date": "2030-11-21",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_21.parquet",
+      "cache_sha256": "f98ab3022ef5e1dc07b2a128a020e68a938b097a705cefff766a1c852f5e854e"
+    },
+    {
+      "date": "2030-11-22",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_22.parquet",
+      "cache_sha256": "4606f1aab773a44e3296712ef3433eb4a6586bbed03fc07120ec3f9451e2ad7b"
+    },
+    {
+      "date": "2030-11-23",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_11_23.parquet",
+      "cache_sha256": "791f31c1c5e81a4778cf7ab7b60ce6d324325f66cb25ccc047d4a8979b96513d"
+    },
+    {
+      "date": "2030-11-24",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_11_24.parquet",
+      "cache_sha256": "8cde85c180f93a4018ca2a452449e7610a4362bbdef0d28764b2a6bb1f85952f"
+    },
+    {
+      "date": "2030-11-25",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_11_25.parquet",
+      "cache_sha256": "504a39398f287cacddac57d20a49a3164c301460fdefb07b9febee10244ae49b"
+    },
+    {
+      "date": "2030-11-26",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_11_26.parquet",
+      "cache_sha256": "e173e85bbbd9bc461689881192d21061bec3d825f03f696547d1115099c3910d"
+    },
+    {
+      "date": "2030-11-27",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_11_27.parquet",
+      "cache_sha256": "0d010751dd9b6ae3d124e98dbd171ffd708bf5b52c91be234e8ceb3538eefb0d"
+    },
+    {
+      "date": "2030-11-28",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_11_28.parquet",
+      "cache_sha256": "a1518be8568cd455f25210bce13029761125ccc5096470f2333e808930cbcfde"
+    },
+    {
+      "date": "2030-11-29",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_11_29.parquet",
+      "cache_sha256": "2c0fa6ef1144887a1daef8c9cb8f0b6721c4d2291d5aef6b2dca66c9256d8144"
+    },
+    {
+      "date": "2030-11-30",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_11_30.parquet",
+      "cache_sha256": "94aa14c174ba7d1a67eb7d14da669e892e4f734a318a83f9c5a2f0dba2700d99"
+    },
+    {
+      "date": "2030-12-01",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_12_01.parquet",
+      "cache_sha256": "34e38b38e79ae05da235af2e85b45ca7e32e1098111ad58d5422768313a7a07a"
+    },
+    {
+      "date": "2030-12-02",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_12_02.parquet",
+      "cache_sha256": "728c99c361b2bed6996be4b24502f9e07476fd1f206f49a74d7a5fd27033c470"
+    },
+    {
+      "date": "2030-12-03",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_12_03.parquet",
+      "cache_sha256": "185d90688cdf35215ab8044aeb6d6e357435ba8f665a52746efcadb80be7f527"
+    },
+    {
+      "date": "2030-12-04",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_12_04.parquet",
+      "cache_sha256": "b820ec9f11ed413b5a20af5f5c017fc89a00ea2cd7202b2af9da61938e464fa5"
+    },
+    {
+      "date": "2030-12-05",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_12_05.parquet",
+      "cache_sha256": "9de14be3dbf6a5ec35671dbd1425bb834ecf787d04cf0d237f30842641385fd4"
+    },
+    {
+      "date": "2030-12-06",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_12_06.parquet",
+      "cache_sha256": "f326ce64070f295b16419500c173d75157647f2365548724c7177993fb3762b3"
+    },
+    {
+      "date": "2030-12-07",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_12_07.parquet",
+      "cache_sha256": "a02ddd81a046275a570cb08035b6702ef10c47e23d3aa95f0bdf7d66aaa25025"
+    },
+    {
+      "date": "2030-12-08",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_12_08.parquet",
+      "cache_sha256": "81c431162200ae0bb8f08b503e3632127bf2ff4ae5c0865e922140d404d6f881"
+    },
+    {
+      "date": "2030-12-09",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_12_09.parquet",
+      "cache_sha256": "5ad2348c9efc5caf80e3365813f4bddd501d9a50d5ac7ca2893451665e9c77b8"
+    },
+    {
+      "date": "2030-12-10",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_12_10.parquet",
+      "cache_sha256": "d980e05d245fe10d33d5c8ce6371e58ca50d5520846cbd6f64c50bd0b04b556f"
+    },
+    {
+      "date": "2030-12-11",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_12_11.parquet",
+      "cache_sha256": "428736bb6d95b1999356f662c5162d9574cf49d416da272e5e7aecbd97b546c6"
+    },
+    {
+      "date": "2030-12-12",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_12_12.parquet",
+      "cache_sha256": "71850e66638845c9c95dda69078c165c66e3cac75d18c9a6bc63fb385c391d54"
+    },
+    {
+      "date": "2030-12-13",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_12_13.parquet",
+      "cache_sha256": "817eab594f41080ffb6b26666305a31cb24650293f7b78cb12d4b2147263c868"
+    },
+    {
+      "date": "2030-12-14",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_12_14.parquet",
+      "cache_sha256": "df54895e630c06631fc74aa7b9d42b406e8641a4d39b7ef3b5620ecd793b5792"
+    },
+    {
+      "date": "2030-12-15",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_12_15.parquet",
+      "cache_sha256": "c31d1f95345626af669e7e9ae5ef78ca2ab5f932285509c3d84bbc5b454dde2b"
+    },
+    {
+      "date": "2030-12-16",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_12_16.parquet",
+      "cache_sha256": "a27c14866bfb85654f28c2493253b2fa4e173ee5d1b1b06c62bea81641590ba0"
+    },
+    {
+      "date": "2030-12-17",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_12_17.parquet",
+      "cache_sha256": "8438b1467aa7e54e11d91ef6a2113b823b821c21f0cd261a3ec999a571c9af13"
+    },
+    {
+      "date": "2030-12-18",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_12_18.parquet",
+      "cache_sha256": "6a48e87602b7496e7e60591f5b40841d3e5a005ce68ab55db133cdb71461f401"
+    },
+    {
+      "date": "2030-12-19",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_12_19.parquet",
+      "cache_sha256": "6fb7d95f5b38ede925be05929105f2aeeea55cded58f431b1d263ae23216aec4"
+    },
+    {
+      "date": "2030-12-20",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_12_20.parquet",
+      "cache_sha256": "76e418017460dc258b66c65a14c4773407700e25bd010d25953239aab11be3f7"
+    },
+    {
+      "date": "2030-12-21",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_12_21.parquet",
+      "cache_sha256": "4725ca19ca39cf7ddfa7d74eadb19bcc1c6355dd1a81b3277be79f173d4e2760"
+    },
+    {
+      "date": "2030-12-22",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_12_22.parquet",
+      "cache_sha256": "82596b16fe66dacd4e5704025f53ee62d7c2618ff9cbc89fc3b991f728d8ec0f"
+    },
+    {
+      "date": "2030-12-23",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_12_23.parquet",
+      "cache_sha256": "13e31714807703139a4b15e0dec60afb1e88fd7c70b3f4405111c58adb9f74f0"
+    },
+    {
+      "date": "2030-12-24",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_12_24.parquet",
+      "cache_sha256": "e54ad7b414227f0c07ede856394afe4458578f0a2e9390cd6799d7956489923b"
+    },
+    {
+      "date": "2030-12-25",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_12_25.parquet",
+      "cache_sha256": "a02d27c602ad081d7027850d30225e81ea0e99619c3b4ec985f70ed76a0dacc1"
+    },
+    {
+      "date": "2030-12-26",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_12_26.parquet",
+      "cache_sha256": "51b59b5e70fd2297284e3b4676e6b815ed97924182e159ca57863c9837947e10"
+    },
+    {
+      "date": "2030-12-27",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_12_27.parquet",
+      "cache_sha256": "58e466134264aa262560ac12ef7dba2f5677b377d5434b13b86b7f5ab24c3b43"
+    },
+    {
+      "date": "2030-12-28",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_12_28.parquet",
+      "cache_sha256": "f4e8939c024cdc98e62d474600812852ddc017f2ca2221d07deae9cf7945893a"
+    },
+    {
+      "date": "2030-12-29",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_12_29.parquet",
+      "cache_sha256": "b56d474c555b28f06cb667af6ab95835ed9f85224ba019b666e0aa4699d9e4f0"
+    },
+    {
+      "date": "2030-12-30",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_12_30.parquet",
+      "cache_sha256": "e30ecd67528e275a32e178b0dcb5742c5a16371daa535272b3682e1f23e150c9"
+    },
+    {
+      "date": "2030-12-31",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_12_31.parquet",
+      "cache_sha256": "f1861942084bc342e4aee8c1517d40f3d64665e8ebe81cc067a2c6aa20c70c22"
+    },
+    {
+      "date": "2031-01-01",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_01_01.parquet",
+      "cache_sha256": "b5b0b1b60af8236dd1356303fd87ef7e994b9d75ce407eae38b938ea19ddcb34"
+    },
+    {
+      "date": "2031-01-02",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_01_02.parquet",
+      "cache_sha256": "32b28754bf9beb65bd3e11afff81b921501c1f794d7082c38a003456bd2fc277"
+    },
+    {
+      "date": "2031-01-03",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_01_03.parquet",
+      "cache_sha256": "bd7d9d2c7d370582ec21c42df711ff7d6c95160a8723bbae79549c5efc81a41e"
+    },
+    {
+      "date": "2031-01-04",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_01_04.parquet",
+      "cache_sha256": "d02c8e22fc78e6589d47a1c97d85ac93956a898d3ccc31f658cf91ae63f78a74"
+    },
+    {
+      "date": "2031-01-05",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_01_05.parquet",
+      "cache_sha256": "0a8906b5ed4b59b8fb6f91ee616c408027abedf13cf8a340a5263387e56981ff"
+    },
+    {
+      "date": "2031-01-06",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_01_06.parquet",
+      "cache_sha256": "64a9180ddd7946b09192b69f4fe4cf8d6c966d34bab450708c89934a7ccbe504"
+    },
+    {
+      "date": "2031-01-07",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_01_07.parquet",
+      "cache_sha256": "3ae1abb31c61ecefdbe74103cf8a4fe7de72e848e6b17f97d293de1df93f8141"
+    },
+    {
+      "date": "2031-01-08",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_01_08.parquet",
+      "cache_sha256": "c5f86fb9365180a3c4a4f7aa10e74a9c637a606ff3e42a97763dabb9b618a898"
+    },
+    {
+      "date": "2031-01-09",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_01_09.parquet",
+      "cache_sha256": "f99229a3e75bc974ed84cc08dfad3f4db6c483a6d4be718a365d3ce330862a5f"
+    },
+    {
+      "date": "2031-01-10",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_01_10.parquet",
+      "cache_sha256": "63b77e721afe74254d37f8fdab6b3781481e0ddb5f22ca65dd18c12d5d3f7a68"
+    },
+    {
+      "date": "2031-01-11",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_01_11.parquet",
+      "cache_sha256": "e1d22fda1e3a4bf5e2cf10e4db85a099a088d1edc317dd34d1a4038f65350a1c"
+    },
+    {
+      "date": "2031-01-12",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_01_12.parquet",
+      "cache_sha256": "c33ca13e3b50f1a04796a130bd9ba25bd57fb67d02e1a9a12538d06f1005a040"
+    },
+    {
+      "date": "2031-01-13",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_01_13.parquet",
+      "cache_sha256": "1f0a13e7206f4a03f2f4b0ac1ab5188806a35370547d613ac662cab9f8e41185"
+    },
+    {
+      "date": "2031-01-14",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_01_14.parquet",
+      "cache_sha256": "5c33e59f43f74d9eea5d4b723ba63d7d5772239b8fc982d2778ee92031fce503"
+    },
+    {
+      "date": "2031-01-15",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_01_15.parquet",
+      "cache_sha256": "e8d530cb8baacd80251ac215a0b32e1e5dae3deea1b25ab095923e9a5830cf82"
+    },
+    {
+      "date": "2031-01-16",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_01_16.parquet",
+      "cache_sha256": "57715a15aeca0c42e89cc6b6a59c68b47cc04e18a23573376b6aefb49e05ae60"
+    },
+    {
+      "date": "2031-01-17",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_01_17.parquet",
+      "cache_sha256": "5b345516f77941f7c3c1f6ee9853c909b4f64ec3460c5e7e6675e862ee26f19a"
+    },
+    {
+      "date": "2031-01-18",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_01_18.parquet",
+      "cache_sha256": "235b3c450e22d6241dacae8b2d3fde97bf4eb95377c9742a1da9f3d8e8764628"
+    },
+    {
+      "date": "2031-01-19",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_01_19.parquet",
+      "cache_sha256": "2feac2d7b6d1b4bc967dbfaab098c2cbd22175e096066d77e9847889174e4f24"
+    },
+    {
+      "date": "2031-01-20",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_01_20.parquet",
+      "cache_sha256": "f9b67e1c6777c85bfcc3aa02b16e4add20a8eb8220c59ec540ccfe6dee464ef6"
+    },
+    {
+      "date": "2031-01-21",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_01_21.parquet",
+      "cache_sha256": "8c9e67cde125b601402403d01625636718bcb8911956810f4631dbbcab9c129b"
+    },
+    {
+      "date": "2031-01-22",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_01_22.parquet",
+      "cache_sha256": "4324d934d05a1481a0a23f4c85289c000770a0b374f4ea4d3602d32d1f5fa688"
+    },
+    {
+      "date": "2031-01-23",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_01_23.parquet",
+      "cache_sha256": "2c778376903b08a574d7afec6616a35d16994b3f28fcee169e562c0de7afb98b"
+    },
+    {
+      "date": "2031-01-24",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_01_24.parquet",
+      "cache_sha256": "bf15c13199a1fabb755bf45a32fe7847e26a60f6d1f0d604544ca767017db1f1"
+    },
+    {
+      "date": "2031-01-25",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_01_25.parquet",
+      "cache_sha256": "8b0730aa5cf912bb7fc48ef3d3929d1fa37c3d7d281ce98eb6cbbc2dcc923448"
+    },
+    {
+      "date": "2031-01-26",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_01_26.parquet",
+      "cache_sha256": "31ae641d924a3a9dd5a10c91dd5b22da23580d56ee07b705d6034facb4f3acc1"
+    },
+    {
+      "date": "2031-01-27",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_01_27.parquet",
+      "cache_sha256": "bfdc1a3151dda775206c0cc28fdf9833ceffaf5c43a96b916d15b1bdad4461d8"
+    },
+    {
+      "date": "2031-01-28",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_01_28.parquet",
+      "cache_sha256": "b83fc32b761033606bcc53489e641fdaf1873fc31f4a7b78094ad7cf3c450923"
+    },
+    {
+      "date": "2031-01-29",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_01_29.parquet",
+      "cache_sha256": "1c6f111e1da6acc66dc7a66a63dee07b2d252c4e2aee3e9fbecdeb8615f4e1f6"
+    },
+    {
+      "date": "2031-01-30",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_01_30.parquet",
+      "cache_sha256": "0afaecd0e7194d0964e3fc5cdedae582130332d5fc07feea8b1a60ec227bed33"
+    },
+    {
+      "date": "2031-01-31",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_01_31.parquet",
+      "cache_sha256": "e796e4cffd3f48ce84b4331ff4f8eb3c91bd35ac654e3ed9d9750fe9e216ac71"
+    },
+    {
+      "date": "2031-02-01",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_02_01.parquet",
+      "cache_sha256": "51a5f6f3a09fdd1a859605bf145efa6170dc15ee8be6eeeb32fc629012f32589"
+    },
+    {
+      "date": "2031-02-02",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_02.parquet",
+      "cache_sha256": "d3ca23bef1ba6cab160fd7f9507ef2dbfaddcb9b7c90b73d9cf6c2159da2ef2d"
+    },
+    {
+      "date": "2031-02-03",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_02_03.parquet",
+      "cache_sha256": "e91209bf0344d71a944b44d7146ba88c87eb75058a77a1d40de49bb7ba895875"
+    },
+    {
+      "date": "2031-02-04",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_02_04.parquet",
+      "cache_sha256": "4d15f5016d8edb37bfd0a8db51bbf0a1e9caa954bf07667941a87f3c59cbc28f"
+    },
+    {
+      "date": "2031-02-05",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_05.parquet",
+      "cache_sha256": "129cbe4bb3997f199a0555663c0c8830d23b7111c6d2b9d2a904f1ef13301494"
+    },
+    {
+      "date": "2031-02-06",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_02_06.parquet",
+      "cache_sha256": "6138836c6bb26e6ec07a739887ba4197a05c2ea32dfc86effc09190f3cf2f205"
+    },
+    {
+      "date": "2031-02-07",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_02_07.parquet",
+      "cache_sha256": "fe0cce67eb74dd11f72b788076fe5ef9065ff00ffad6860a5c4515787f5ecc71"
+    },
+    {
+      "date": "2031-02-08",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_08.parquet",
+      "cache_sha256": "5de635688942b6a76cdd44250c2b3c19e348950dcc80b9c5bbbf141897936bf0"
+    },
+    {
+      "date": "2031-02-09",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_09.parquet",
+      "cache_sha256": "95c9441ed46e71046d053ed7940bead76ff386902d5577f337d91c7004b87862"
+    },
+    {
+      "date": "2031-02-10",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_02_10.parquet",
+      "cache_sha256": "45641e99d01c10cf32c86b997c6fcf0fa269dc7f045522c6a9d5f18418149b8d"
+    },
+    {
+      "date": "2031-02-11",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_11.parquet",
+      "cache_sha256": "848cb64da34d72f2fd4eb9a700a3d6103301e49fa5bd168a9c2feffb6eeefbf7"
+    },
+    {
+      "date": "2031-02-12",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_02_12.parquet",
+      "cache_sha256": "2316a136a806a2ccb20d2da511f70f5f7c4c138418e1e29e7ed8a5d07b948d51"
+    },
+    {
+      "date": "2031-02-13",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_02_13.parquet",
+      "cache_sha256": "1828e7871acf6565d525100012d4cb8b839ad2599a5105a47d89e036ece365d2"
+    },
+    {
+      "date": "2031-02-14",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_14.parquet",
+      "cache_sha256": "0fcd5cf1f037a64ab2095f58aad752a8496193b40f13724bf3fefd178a44a109"
+    },
+    {
+      "date": "2031-02-15",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_02_15.parquet",
+      "cache_sha256": "81b6aab32e625369228687cdfc5590335fcc885857e12efae20433a1eeda06e1"
+    },
+    {
+      "date": "2031-02-16",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_16.parquet",
+      "cache_sha256": "df0174c8ab91ffc7d7db55c8f4d8a3f9a7bce3b36986dbc67868291529282994"
+    },
+    {
+      "date": "2031-02-17",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_02_17.parquet",
+      "cache_sha256": "aa7c4490de7cea1ed7ffccffa8522fbe25a42654c4413bd235bf79c7fb919f60"
+    },
+    {
+      "date": "2031-02-18",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_18.parquet",
+      "cache_sha256": "ad86896659511e3b872cd49ae7df657ba7fcce117a5d850de4224344725c9aa8"
+    },
+    {
+      "date": "2031-02-19",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_02_19.parquet",
+      "cache_sha256": "b105993d42feb261e1a5a85dd6eb30843645e78430664aa36950eb1994f5ea76"
+    },
+    {
+      "date": "2031-02-20",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_02_20.parquet",
+      "cache_sha256": "a53d1bc60371519144bc3fdcb0704b058fd1566f263c97f4b291b1209667cfdf"
+    },
+    {
+      "date": "2031-02-21",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_02_21.parquet",
+      "cache_sha256": "a615b8ccffdb4e4780678bb677bf3dc287e56a0379283552057cec65802a0085"
+    },
+    {
+      "date": "2031-02-22",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_22.parquet",
+      "cache_sha256": "3e0bc722ccc845919a92cfda4c06a16cdba679ec9b872c8d6dd9e35f0da2b512"
+    },
+    {
+      "date": "2031-02-23",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_23.parquet",
+      "cache_sha256": "820bf47fb6497a753621ab0ae5268a7199a8e6b2a998316e133c0dc7877d46c8"
+    },
+    {
+      "date": "2031-02-24",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_02_24.parquet",
+      "cache_sha256": "a3c98373f2101b051f951221498c87a0d636eeddd856c67690545de2c8f8d1cd"
+    },
+    {
+      "date": "2031-02-25",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_02_25.parquet",
+      "cache_sha256": "bf70ea0a296996076aa0956376896285acbcb1d918d1f5cbc453cd22838359b2"
+    },
+    {
+      "date": "2031-02-26",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_26.parquet",
+      "cache_sha256": "9a2dc54459252323122567d984ee68deefdbeca7b50b1783ab0e92432f1d9361"
+    },
+    {
+      "date": "2031-02-27",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_27.parquet",
+      "cache_sha256": "a253d81507ba604174e124d442ef71e48ca92cc18bd391676ce3617fcc93a5af"
+    },
+    {
+      "date": "2031-02-28",
+      "masked_path": "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_28.parquet",
+      "cache_sha256": "8fb24152aaf6554a93ba6d615ad40d0e6185ba81089a34e28f4ab5d6cdc97946"
+    }
+  ],
+  "large_State_model_sha256": "ba39c8879378a896f6c01164608a8ae07165bc6b0ce950b4a1e548c8055fe09e",
+  "graph_sha256": "52ddd75ed7f6d3bf291607acfeaca107bd114ba2151a4e6cddb868c9fa1c1fc5",
+  "seconds": 444.8982033000002,
+  "source": {
+    "python": "3.13.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus": 16,
+    "process_peak_working_set_MiB": 4168.55078125,
+    "peak_scope": "current process lifetime, not isolated per model",
+    "source_sha256": "0437f4d401371514b3a550a55380c832a4b5f696e546be0f185d06c89661c974",
+    "model_threads": 4,
+    "gpu_used": false,
+    "source_fingerprint_scope": "On-disk source at evidence() call; a captured start archive is primary when present",
+    "versions": {
+      "numpy": "2.2.5",
+      "pandas": "3.0.5",
+      "scipy": "1.16.1",
+      "pyarrow": "25.0.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10",
+      "scikit-learn": "1.7.2"
+    }
+  },
+  "formal_State": null,
+  "formal_Physics": null,
+  "formal_Total": null,
+  "training_fit_score": null,
+  "uploaded": false,
+  "limitations": "Production preparation reuses all public train labels, including earlier development assessments. No holdout score is claimed. Neural grid targets average colocated stations; scoring retains station-level truth."
+}

@@ -1,0 +1,1141 @@
+{
+  "registered": {
+    "protocol_sha256": "6fab33f4ddfca2192c0c421319d40dd0bdf45e3cb63beb90f814e40dff555bc8",
+    "protocol": {
+      "id": "Calibrated_neural_architecture_development_ablation",
+      "original_report_sha256": "9c12c0f2f81a6e1f09e0c9ff85695e57ff2d8006a76042f7ecdee2e128f7c1c2",
+      "panel": "D12_I5_N",
+      "fold": "rolling_autumn",
+      "choices": {
+        "graph_geometry": {
+          "alpha": 0.75,
+          "checkpoint_sha256": "0c184c449b521910608f649faad1c644283dc32edb996f0d2801fbc02b631eab"
+        },
+        "adaptive_attention": {
+          "alpha": 0.75,
+          "checkpoint_sha256": "ed31ab44eac55e8afb4ff7b5dfc66f723a6442b6f3cb648d42ea48ed5c79f6e6"
+        },
+        "adaptive_attention_density": {
+          "alpha": 0.75,
+          "checkpoint_sha256": "b55522b8097c23086f485a726730fb500f2c5f82583092902b3d9947d3ff0c80"
+        }
+      },
+      "original_selected": {
+        "name": "adaptive_attention_density",
+        "alpha": 0.75,
+        "selection_State": 0.9585345299474645
+      },
+      "selection_policy": "Keep the original calibration winner. No assessment-driven reselection.",
+      "assessment_status": "Previously inspected public-train development dates",
+      "formal_State": null,
+      "formal_Physics": null,
+      "formal_Total": null
+    }
+  },
+  "source_snapshot": {
+    "archive": "artifacts/research/A35_adaptive_attention_autumn_seed20261029/matched_ablation/source_snapshot.zip",
+    "archive_sha256": "61da7bf349f4f29698708652c4b800e20265543ffdc93806b2bf3321c8ca0965",
+    "captured_files": [
+      {
+        "path": "config/research_protocol_v2.json",
+        "sha256": "dd7318f99e56b826d42eac58ab9c3213803db8f6c740ed843d95879835703121"
+      },
+      {
+        "path": "config/research_targets.json",
+        "sha256": "9a524c7c728cf6ed7ab4920592541e38fe720b36a0879c6f488a77b833e3452f"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "8cd1033d7ceeaa616319d900e5a9990445f3881665420cf4cd9715941b0e52f5"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "db90c0f17353c586ec2b51f9f42748c254e2e6563e7aebff81b7dbf9a3e82ccd"
+      },
+      {
+        "path": "requirements.lock.txt",
+        "sha256": "f4c8602ed3a0c29541e42d23547672864aa487fe2fcf24f8cf2d140f53c16fde"
+      },
+      {
+        "path": "requirements.research.lock.txt",
+        "sha256": "12f5a3bd24e186a0c71512b18eea44548159ec37088546efd7cc3c14c95fae8c"
+      },
+      {
+        "path": "scripts/adaptive_graph_experiment.py",
+        "sha256": "20f067bb639496004300446f8ba8705824cae80b2e91225e5fe6abcb609a3570"
+      },
+      {
+        "path": "scripts/adaptive_graph_transfer.py",
+        "sha256": "b50f19a6427d6c3d7e8facddb071dbc22dc5cf3641b10f889dc2b4bfb2d40ec8"
+      },
+      {
+        "path": "scripts/assemble_campaign.py",
+        "sha256": "e5b103ba8501775e049e14c89e3854e5e2a56b93942505330b5317d8023d6a5d"
+      },
+      {
+        "path": "scripts/assess_adaptive_ablation.py",
+        "sha256": "1ae73d734afe77a227629254cb67e002045a2894f094ed6bcc3e094d9297f442"
+      },
+      {
+        "path": "scripts/assess_joint_density.py",
+        "sha256": "92258a57238facc5153cc8c98c422ed71e92f69b0ae4ecada5a4edf77f00c2e6"
+      },
+      {
+        "path": "scripts/audit_kaggle_baseline.py",
+        "sha256": "3a8f78d8cb154fb1d4b25ed902d81e44b9665f4628162f3342641071b679193a"
+      },
+      {
+        "path": "scripts/audit_od_identifiability.py",
+        "sha256": "bce792650d2dfc0a5268a9e012aeaa846c87715620ee3e3e3a6e0659d4885c36"
+      },
+      {
+        "path": "scripts/audit_physics_topology.py",
+        "sha256": "5afabe6d2e6920fdda75988c936d44adcabbb3f57110552d4c269ea7949d308a"
+      },
+      {
+        "path": "scripts/audit_queue_origin.py",
+        "sha256": "dba7d16f51c6df6c6506a9e418d5aa3e3d7bdbe1693253772266bd170e36c242"
+      },
+      {
+        "path": "scripts/audit_released_onset_timing.py",
+        "sha256": "2cebf3e33c09f3a0f5e0f8e199ef58c84f0d39a93cfd303bf0f9e4b1e7647f68"
+      },
+      {
+        "path": "scripts/build_bayesian_od_candidate.py",
+        "sha256": "5cc8d8b513e668e269510447c508facd640f97b85335da77d69f3e289bb9a8be"
+      },
+      {
+        "path": "scripts/build_onset_timing_candidate.py",
+        "sha256": "8a5486d7e8b7c9dba17e2c163fd76f122f2e38becae95abd769eefca7851b86d"
+      },
+      {
+        "path": "scripts/campaign.py",
+        "sha256": "06cea939655896f9cef2ad404491d9418313c5cf1f0e525b20288a855a774418"
+      },
+      {
+        "path": "scripts/capture_environment.py",
+        "sha256": "5be825c14d82da31a2ca57459f8c6eead4f13ba2030f5488c465388a8e82d4f8"
+      },
+      {
+        "path": "scripts/check_public_competition.py",
+        "sha256": "5c69ba4b041bc668b6cfad397fe2c9c584003910757e68908137e320d92c0a64"
+      },
+      {
+        "path": "scripts/compare_queue_events.py",
+        "sha256": "d9d2e9e47eb2f21b1738d4e2d1ba762a776fc849bbfc4bde4c1fc8785b068194"
+      },
+      {
+        "path": "scripts/compare_state_direction_budgets.py",
+        "sha256": "47ff0bb82e2500aace15a72ca80b76719b657dd06492b8b60b09b31fce2803e4"
+      },
+      {
+        "path": "scripts/compare_state_label_budgets.py",
+        "sha256": "b7c27482c11904cbc0aa06fc86cfd692037e057985acdb93f00ff4e38da81b40"
+      },
+      {
+        "path": "scripts/cross_corridor_transfer.py",
+        "sha256": "e3ef2d288bfc617ea7985712be7c714de9e36ed947b59bc2bd81e3e5113b7c6a"
+      },
+      {
+        "path": "scripts/density_increment_experiment.py",
+        "sha256": "7c76be4eb9f893ff71a70f62ae47ac4f7b8cba8a8add1da1a9ebdbba074552fa"
+      },
+      {
+        "path": "scripts/density_interpolation_experiment.py",
+        "sha256": "98b586eed1bf49beea00db0b5b0473b6159d2e6e198bad4f7b9902a9847d6903"
+      },
+      {
+        "path": "scripts/diagnose_failed_od_control.py",
+        "sha256": "bed0ecbfa0b21880ad852919b0285280fa2659f95c9a6513840baf3e22ab7b58"
+      },
+      {
+        "path": "scripts/diagnose_graph_density.py",
+        "sha256": "f6e48f203331ed2dddbd6917d2932fc8682cf4daa9da8d6e9a5c7ee52e75116f"
+      },
+      {
+        "path": "scripts/download_data.py",
+        "sha256": "c746052ff8192acd1679976da70faf2f54ae94d2370e2dda4e105bca08fee4b9"
+      },
+      {
+        "path": "scripts/export_adaptive_state_model.py",
+        "sha256": "631e109610a04aa4a5b0cef3b6b0a22e3acca28ea1f08659669bf55c2e7ca089"
+      },
+      {
+        "path": "scripts/freeze_first_submission.py",
+        "sha256": "17eb0cf856c43a0199c0bf73fcc4d100c76d818b2d1130f00b16f466bc4cc6cb"
+      },
+      {
+        "path": "scripts/freeze_research_models.py",
+        "sha256": "fd75a0e4f22f648e7daf55c8374aa9d174d11f0659b74d12665b800d09e4202c"
+      },
+      {
+        "path": "scripts/inspect_official_release.py",
+        "sha256": "17bc64125a2843f2af1eefc01ef22e930c22201df997eec99bedd021d1e32c7f"
+      },
+      {
+        "path": "scripts/large_baseline_graph_comparison.py",
+        "sha256": "ab3f399a46ca8366418ccca2a748124cd706a176706a20d7b491242c810ed75b"
+      },
+      {
+        "path": "scripts/od_prior_misspecification.py",
+        "sha256": "053dc64b2e9b8fb04ac1514d9991d8ddcbae9ab677e69a8dbc7fbd77045a7917"
+      },
+      {
+        "path": "scripts/od_probability_experiment.py",
+        "sha256": "fbb8ade089cec3fdd03b6f40687b4f8ef022c7766dc7c1c4011e6b7df3326c00"
+      },
+      {
+        "path": "scripts/physics_tradeoff.py",
+        "sha256": "b653cf6254196850113cbdb61a1afb5bf184900e6a5ad5d07a24151436e6c9f9"
+      },
+      {
+        "path": "scripts/plot_matched_research_comparisons.py",
+        "sha256": "bb2cdab5325243359d6a53f27c1814851b38d6ab85b3f0167d561c2995f19bef"
+      },
+      {
+        "path": "scripts/plot_strong_baseline_comparison.py",
+        "sha256": "060b1292bc663f0ba5d1fd352afd30fb0edc5badc83c1a42b3e4b4b23435c10b"
+      },
+      {
+        "path": "scripts/prepare_graph_experiment.py",
+        "sha256": "dd713db0b6b492b67f970042f9ddc7283474924cf0369b709c2fccb0353971e1"
+      },
+      {
+        "path": "scripts/prepare_production_graph_state.py",
+        "sha256": "af640a34bf6f44a42e08fd50c06d9585acc1adadd160db867e4551ea16a71525"
+      },
+      {
+        "path": "scripts/promote_models.py",
+        "sha256": "b41f8af5fb9f5394595a1c1ded9b534ed89d2c41b85b7a3e3788b2d275c71339"
+      },
+      {
+        "path": "scripts/queue_event_experiment.py",
+        "sha256": "520d24e1f1e5fcde8166f3df16f437276b7185665a8e9394c6ac59a4823b0242"
+      },
+      {
+        "path": "scripts/queue_origin_experiment.py",
+        "sha256": "7cd00e8b0134ed1282353e9162ce6af7da20d1a3d0739ab2ec12b43f79891954"
+      },
+      {
+        "path": "scripts/queue_refinement.py",
+        "sha256": "4747af3e5e09d4e23b7d28856ed66732e54ad1d3586b7df067eb49aeffcc1dd1"
+      },
+      {
+        "path": "scripts/queue_research.py",
+        "sha256": "34e3fe815c5130431a512df258cfbfd0cb39c7b64b769950d76f20a9983fff5a"
+      },
+      {
+        "path": "scripts/queue_specialist_experiment.py",
+        "sha256": "b7f8ab609aa392a1308117e827919692dbe60137185fb6ec68a2334cbddaedc4"
+      },
+      {
+        "path": "scripts/read_public_pages.py",
+        "sha256": "2056d46920d3b9f73b1268b86d122ac4daf318e72c298527b4b66376ac26e165"
+      },
+      {
+        "path": "scripts/record_formal_scores.py",
+        "sha256": "ee78da8b99edc9928c781c341f05af33dd28098ae313113879e8b3e3aad5fa0f"
+      },
+      {
+        "path": "scripts/record_onset_control_bounds.py",
+        "sha256": "0f18f8290e22a3a9b15f4287416bc9cbcf071a106d46909ee1962a5f1cc7f728"
+      },
+      {
+        "path": "scripts/refine_queues.py",
+        "sha256": "4af45c3a458feec60d6f7786166ef2cf0fb747fce492955ec4112312352f665d"
+      },
+      {
+        "path": "scripts/register_research_protocol.py",
+        "sha256": "2367504189c87f2103e10dfd99147ffcc9beba2f9d82409c38e92d4c5e2c3077"
+      },
+      {
+        "path": "scripts/run_official_diagnostics.py",
+        "sha256": "73221ca5f6014f8d7a011698fe0845d9448581c3896855b7dc19e1f47873a7e8"
+      },
+      {
+        "path": "scripts/run_official_state_baselines.py",
+        "sha256": "3ddd7eea81f350d50973813c50e4c0d90a184624d271aa64859c1c74c33a9e70"
+      },
+      {
+        "path": "scripts/scenario_audit.py",
+        "sha256": "b094d67aadc000463db95a235d71a9bc3a97624b1a017cb35be2b88612f1a417"
+      },
+      {
+        "path": "scripts/simulate_stress.py",
+        "sha256": "d0c4697c44f1c65848d83c1e396b9562d4151ad294f560b1576bcc6c49012140"
+      },
+      {
+        "path": "scripts/stage_zip_panel.py",
+        "sha256": "4ec5b59e058c52012bda91ff140fbc9620209bbf114aa5eb5ffbc259b4c69c15"
+      },
+      {
+        "path": "scripts/state_budget_suite.py",
+        "sha256": "d6fd23b3aacd79a6cdad38bbf0f3d845e0307dc4b4b7471ef279980035652477"
+      },
+      {
+        "path": "scripts/state_label_budget_control.py",
+        "sha256": "7cb05ba6e67f39106ea009468ce9215aebab9aec0c9a90295fe8641d3c7e4dbd"
+      },
+      {
+        "path": "scripts/state_research.py",
+        "sha256": "7f9043c7d753a5a6540ef81291ae7e3e00879ca330aea94f833b7017f29a759e"
+      },
+      {
+        "path": "scripts/strong_density_state_experiment.py",
+        "sha256": "faa4e2a0cb63a2e053ecf20a6a77a8c9c4f74960c3d39e145c9c0e41f138a7de"
+      },
+      {
+        "path": "scripts/submit_controlled_candidate.py",
+        "sha256": "72c67e384f488fd5e7afa454526e42aab56b43aef7d3671d91acf04a42997876"
+      },
+      {
+        "path": "scripts/summarize_campaign.py",
+        "sha256": "e09f36b6188d6a23698f0a27873fece09ba6fd3db1e2cd5ae767e4865d7c101f"
+      },
+      {
+        "path": "scripts/summarize_research_v2.py",
+        "sha256": "4f2239fb78d2d88de9117d289099874b41dc6f017b6c104e557cad168b0a8f17"
+      },
+      {
+        "path": "scripts/summarize_results.py",
+        "sha256": "3ede418e5a835ad3956b0332c335a54a4157654be9db16d4cde6411b5b12880c"
+      },
+      {
+        "path": "scripts/train_graph_experiment.py",
+        "sha256": "7036d5b3f14d5dd39de22b1aa94284285010359114deb3f38ead5461b6e5e04e"
+      },
+      {
+        "path": "scripts/train_production_adaptive_state.py",
+        "sha256": "6982e036ade77a7d8c5a950572619c5a9655d47c142fbce3cb125404955fed9d"
+      },
+      {
+        "path": "scripts/verify_controlled_candidate.py",
+        "sha256": "34e3d7cc3767dc543f7fb9011f2088aebd5995ce7aebca751217fda3c713de52"
+      },
+      {
+        "path": "scripts/verify_graph_repeat.py",
+        "sha256": "2ec216b7fe481f52199b92b28baa40efbe3bde74ae19a17a86904d6f7d1189e9"
+      },
+      {
+        "path": "scripts/verify_queue_shared_repeat.py",
+        "sha256": "dd14df8d431667ffba2b6b9eb82a8e5169b6a57d4ee7e8e96dba40d2c25296d2"
+      },
+      {
+        "path": "scripts/verify_vendor.py",
+        "sha256": "232658ffcb66d34aea7c686d64e20bad86f7c172b0f900114dd683c5fd90bb85"
+      },
+      {
+        "path": "scripts/write_results.py",
+        "sha256": "efb8a4e80afdfaca2096ea7d2f65743e863b38c18dc41bac52fcdce07a70c83d"
+      },
+      {
+        "path": "src/trafficflow/__init__.py",
+        "sha256": "6432d23e18693162d87e81e22ac8f25158369302b9dc209d21154dba1351e7a8"
+      },
+      {
+        "path": "src/trafficflow/__main__.py",
+        "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+      },
+      {
+        "path": "src/trafficflow/adaptive_graph_state.py",
+        "sha256": "b098d10a76041ad6215b869b00dc6f71521852286bb0eaed418917e3cc2c8744"
+      },
+      {
+        "path": "src/trafficflow/bayesian_od.py",
+        "sha256": "5c5c76ab2848437af546a5fc3985f568b61c7a39dd3dbdf2a5551e266f1a1139"
+      },
+      {
+        "path": "src/trafficflow/causal_queue.py",
+        "sha256": "b12f3098ce79dc465545106b6d429fce2818499edd518f1909047b3ccbcda1b2"
+      },
+      {
+        "path": "src/trafficflow/cli.py",
+        "sha256": "8bb044f21541e3d0f639f01e20fc47a358152ec0c918ae4d644e73c96d7e73d3"
+      },
+      {
+        "path": "src/trafficflow/data.py",
+        "sha256": "f29fe070b21ac692b2cf9bd6d5b5fd018e94129b9626588325dd48edbd941ccd"
+      },
+      {
+        "path": "src/trafficflow/density_assimilation.py",
+        "sha256": "bbf771ae2d6ca93030aca029f3428fbb3f214cf4a5e39dca79925f08f7a30b46"
+      },
+      {
+        "path": "src/trafficflow/density_state.py",
+        "sha256": "ae91308f12b0c13d43f149d936a7c11704f712390f2fb593fbea5f053ff6a4b2"
+      },
+      {
+        "path": "src/trafficflow/digital_twin.py",
+        "sha256": "cfacb280f971faedceb2e404b35889891eef536a24a070804757ab6d92c49655"
+      },
+      {
+        "path": "src/trafficflow/experiments.py",
+        "sha256": "854abf59d2c560f84c704090741d6f8fce4ce6725d8a39139412194cc362a6ec"
+      },
+      {
+        "path": "src/trafficflow/fixture.py",
+        "sha256": "0709326abd7206a7ca1c3414dbb95c2d8c08749484802e2523d49c1ee7a2ef24"
+      },
+      {
+        "path": "src/trafficflow/graph_state.py",
+        "sha256": "b32b4b81b7292472fab1eabbe183ebaae6ab295c6c7eb5ad4951719bfd8418cc"
+      },
+      {
+        "path": "src/trafficflow/increment_state.py",
+        "sha256": "52c6eb6a5cf959ac050f237a84cc8c487fae086fcec61a5aeac2fa5997185ea3"
+      },
+      {
+        "path": "src/trafficflow/metrics.py",
+        "sha256": "5f42eaa372894edfa1363135b61818e7ec4bf56110257a03aadf07de770aa346"
+      },
+      {
+        "path": "src/trafficflow/odme.py",
+        "sha256": "e61df62cbf3ff4af03069d6e028b2024ddee25578cc00558b2b04148370850ee"
+      },
+      {
+        "path": "src/trafficflow/physics.py",
+        "sha256": "3f559ca30157ebee155bb17ebdd42f0dc43a169ef6b45634ad875569beb03e30"
+      },
+      {
+        "path": "src/trafficflow/queue.py",
+        "sha256": "62c35a4ed8e1e882d386461aba41cf8f5f3ed809451e51008e34f23e211240c5"
+      },
+      {
+        "path": "src/trafficflow/queue_calibration.py",
+        "sha256": "645cfb0a15418f23b0b04354600d08ef831a6db49197e149e984074fc414392d"
+      },
+      {
+        "path": "src/trafficflow/queue_event_loss.py",
+        "sha256": "5b155f8255080e0ee8823ab366ce8f7dfb1f2d067c196109834e0338395b631c"
+      },
+      {
+        "path": "src/trafficflow/queue_events.py",
+        "sha256": "10051eb26948ea7fbec94dd1cd4e37d68c4c0703efb152f35d03ebee372e25bb"
+      },
+      {
+        "path": "src/trafficflow/queue_specialist.py",
+        "sha256": "915fce272c5d1c88eee37960cc5b1dee305119603509bb8bdc881bf6f64b303b"
+      },
+      {
+        "path": "src/trafficflow/research_eval.py",
+        "sha256": "197aa2c4d6091dbd551ca6d11f8a664e9feaa44c1fcaf568ec873185315ab3c9"
+      },
+      {
+        "path": "src/trafficflow/runtime.py",
+        "sha256": "c181d87a89ff8fa7ee92c00759e2674d77cd60a3ed0d407f1e52f0d2b95d197f"
+      },
+      {
+        "path": "src/trafficflow/state.py",
+        "sha256": "f7a8341d968ac55a6f87e01a439ce8dc8c014750afa61129c7175e733de23c17"
+      },
+      {
+        "path": "src/trafficflow/submission.py",
+        "sha256": "87607c555e86f020e83f1ed9ac4054e49f88dc35eedd36cd8bf8ba442f85f2dc"
+      },
+      {
+        "path": "vendor/official/src/merge_submissions.py",
+        "sha256": "a8cd6c4c9f2cea777fde8f6b163c00835a4fb45672998b9fc71368810e792ee1"
+      },
+      {
+        "path": "vendor/official/src/release/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/release/score_overall.py",
+        "sha256": "b9b73e174eeb1ed742dd9cbd558f6b280a0bd14e7ec7001feb549f1b5fb9b4ee"
+      },
+      {
+        "path": "vendor/official/src/score_overall.py",
+        "sha256": "4a28d57a23950554a065f6254bf674f4a1b58b5d039f26bc5154dd28d28651fb"
+      },
+      {
+        "path": "vendor/official/src/task1/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_historical_mean.py",
+        "sha256": "66569dd55340d5e4509712e66172ea669893d7341a0ef2dd8c920c24f07209a1"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_structural_kf.py",
+        "sha256": "f3a63ba48bf867d993dd1b3cbc0da6ca4567da7aa519ed2b2e3fd93a61c06132"
+      },
+      {
+        "path": "vendor/official/src/task1/build_task1_baseline_submission.py",
+        "sha256": "cb91e19e20a5a546430917a884197c1ad6a7068c6a47d7fbec7fb8311b7237d7"
+      },
+      {
+        "path": "vendor/official/src/task1/score_task1.py",
+        "sha256": "bcd42e88fbc42cd499e93e3b50ddf367009b26b216df5ab3f710ee1d1d863163"
+      },
+      {
+        "path": "vendor/official/src/task2/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task2/build_task2_persistence_submission.py",
+        "sha256": "d3cb4ab23206c4c20058a074b24c23ba79b43dd4219f41e158329a39f5a3edd2"
+      },
+      {
+        "path": "vendor/official/src/task2/queue_utils.py",
+        "sha256": "cea193935e7af7ab1399b9955c3f26fcb65664a099344d35b9c3b91802b3135f"
+      },
+      {
+        "path": "vendor/official/src/task2/score_task2.py",
+        "sha256": "b5605ebae9b32b3ca974881be47b5f2e796728b94763a724314580fc93be28bb"
+      },
+      {
+        "path": "vendor/official/src/task3/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task3/build_task3_baseline_submission.py",
+        "sha256": "945ce4b28f264be6be35a1b8d0f67311bf666d5e6b516a5b79bb2617075e8bcf"
+      },
+      {
+        "path": "vendor/official/src/task3/score_task3.py",
+        "sha256": "98d88b6e7f6b7bb0e2bbb4b42e486d6690b6f14a5d3625649e85ddf828550409"
+      },
+      {
+        "path": "vendor/official/src/task4/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task4/build_task4_odme_artifacts.py",
+        "sha256": "5da75aea3004555bae080ee4d18f1baee01dbb9ed1caf7a6abadd2387e6ade58"
+      },
+      {
+        "path": "vendor/official/src/task4/score_task4.py",
+        "sha256": "be15d732438d305e3d35cb41d3105fc03e3fb9459e5c050af39fe192cede30e3"
+      }
+    ],
+    "n_files": 118,
+    "scope": "Own source, vendored official Python and dependency locks; no data, credentials or model weights"
+  },
+  "baseline": {
+    "S_state": 0.9422951369117696,
+    "details": [
+      {
+        "regime": "R1",
+        "n": 22859,
+        "rmse_speed": 1.5439357437164374,
+        "rmse_lane_flow": 29.48662803092523,
+        "S_state": 0.9440445731120156
+      },
+      {
+        "regime": "R2",
+        "n": 119727,
+        "rmse_speed": 1.3135768896430506,
+        "rmse_lane_flow": 26.503277834279345,
+        "S_state": 0.9513075595107627
+      },
+      {
+        "regime": "R3",
+        "n": 141841,
+        "rmse_speed": 2.0762990683491678,
+        "rmse_lane_flow": 30.806950449297098,
+        "S_state": 0.9315332781125303
+      }
+    ],
+    "days": [
+      {
+        "regime": "R3",
+        "n": 28409,
+        "speed_sse": 218943.78726480025,
+        "lane_flow_sse": 40320176.712627545,
+        "daily_State": 0.9111529583924152
+      },
+      {
+        "regime": "R2",
+        "n": 17148,
+        "speed_sse": 38565.2456627828,
+        "lane_flow_sse": 16077740.177000975,
+        "daily_State": 0.9441320908005528
+      },
+      {
+        "regime": "R2",
+        "n": 17373,
+        "speed_sse": 15502.691812832525,
+        "lane_flow_sse": 9975236.385087334,
+        "daily_State": 0.9612248704421311
+      },
+      {
+        "regime": "R3",
+        "n": 28352,
+        "speed_sse": 93844.78264529882,
+        "lane_flow_sse": 25949285.98264485,
+        "daily_State": 0.9375082196668549
+      },
+      {
+        "regime": "R2",
+        "n": 17134,
+        "speed_sse": 27867.75311045388,
+        "lane_flow_sse": 9794023.482145792,
+        "daily_State": 0.9541231322951795
+      },
+      {
+        "regime": "R2",
+        "n": 17083,
+        "speed_sse": 21250.76905482116,
+        "lane_flow_sse": 10494607.707370263,
+        "daily_State": 0.9569064049583249
+      },
+      {
+        "regime": "R2",
+        "n": 17029,
+        "speed_sse": 64824.92001181781,
+        "lane_flow_sse": 16031725.042040423,
+        "daily_State": 0.9343330308369324
+      },
+      {
+        "regime": "R2",
+        "n": 17048,
+        "speed_sse": 23468.080298779903,
+        "lane_flow_sse": 12712428.22409479,
+        "daily_State": 0.9537215911348188
+      },
+      {
+        "regime": "R3",
+        "n": 28511,
+        "speed_sse": 24901.639750133818,
+        "lane_flow_sse": 15733093.702351132,
+        "daily_State": 0.9618037389391229
+      },
+      {
+        "regime": "R1",
+        "n": 11446,
+        "speed_sse": 40123.377088097746,
+        "lane_flow_sse": 12397687.500059295,
+        "daily_State": 0.9343267465749443
+      },
+      {
+        "regime": "R3",
+        "n": 28336,
+        "speed_sse": 175919.47962791292,
+        "lane_flow_sse": 30081822.571032777,
+        "daily_State": 0.9212004541707952
+      },
+      {
+        "regime": "R1",
+        "n": 11413,
+        "speed_sse": 14366.480269700249,
+        "lane_flow_sse": 7477326.816724636,
+        "daily_State": 0.956142127808421
+      },
+      {
+        "regime": "R3",
+        "n": 28233,
+        "speed_sse": 97869.38949260145,
+        "lane_flow_sse": 22532403.018115427,
+        "daily_State": 0.9381253462010528
+      },
+      {
+        "regime": "R2",
+        "n": 16912,
+        "speed_sse": 15107.592250143127,
+        "lane_flow_sse": 9013325.617663413,
+        "daily_State": 0.9618856699465171
+      }
+    ],
+    "density_target_pair_relative_L1": 0.7698086886498902
+  },
+  "architectures": {
+    "graph_geometry": {
+      "sealed_choice": {
+        "alpha": 0.75,
+        "checkpoint_sha256": "0c184c449b521910608f649faad1c644283dc32edb996f0d2801fbc02b631eab"
+      },
+      "metrics": {
+        "S_state": 0.9479358091654223,
+        "details": [
+          {
+            "regime": "R1",
+            "n": 22859,
+            "rmse_speed": 1.2976983558125215,
+            "rmse_lane_flow": 30.092887894770094,
+            "S_state": 0.9488985014617926
+          },
+          {
+            "regime": "R2",
+            "n": 119727,
+            "rmse_speed": 1.12591830242648,
+            "rmse_lane_flow": 27.053681228053275,
+            "S_state": 0.9549390090594139
+          },
+          {
+            "regime": "R3",
+            "n": 141841,
+            "rmse_speed": 1.6617617532115516,
+            "rmse_lane_flow": 31.481777159439353,
+            "S_state": 0.9399699169750604
+          }
+        ],
+        "days": [
+          {
+            "regime": "R3",
+            "n": 28409,
+            "speed_sse": 143154.3058701764,
+            "lane_flow_sse": 44211584.8051915,
+            "daily_State": 0.9212681850306452
+          },
+          {
+            "regime": "R2",
+            "n": 17148,
+            "speed_sse": 30987.60515960638,
+            "lane_flow_sse": 17645065.366916303,
+            "daily_State": 0.9463707187086428
+          },
+          {
+            "regime": "R2",
+            "n": 17373,
+            "speed_sse": 13564.585280148242,
+            "lane_flow_sse": 9720388.03618755,
+            "daily_State": 0.9627790693065903
+          },
+          {
+            "regime": "R3",
+            "n": 28352,
+            "speed_sse": 50531.89679327701,
+            "lane_flow_sse": 27118414.916260175,
+            "daily_State": 0.9474525201458275
+          },
+          {
+            "regime": "R2",
+            "n": 17134,
+            "speed_sse": 16568.17934461577,
+            "lane_flow_sse": 9919432.365086466,
+            "daily_State": 0.9603128635918528
+          },
+          {
+            "regime": "R2",
+            "n": 17083,
+            "speed_sse": 15852.317284448765,
+            "lane_flow_sse": 10402112.43182567,
+            "daily_State": 0.9602741500852816
+          },
+          {
+            "regime": "R2",
+            "n": 17029,
+            "speed_sse": 43815.79273506725,
+            "lane_flow_sse": 18511744.338265646,
+            "daily_State": 0.9400747007612072
+          },
+          {
+            "regime": "R2",
+            "n": 17048,
+            "speed_sse": 17699.318775916785,
+            "lane_flow_sse": 12523107.904739907,
+            "daily_State": 0.9572121921878807
+          },
+          {
+            "regime": "R3",
+            "n": 28511,
+            "speed_sse": 22704.043588088407,
+            "lane_flow_sse": 15655558.708805194,
+            "daily_State": 0.9627594824409601
+          },
+          {
+            "regime": "R1",
+            "n": 11446,
+            "speed_sse": 28176.955610623805,
+            "lane_flow_sse": 12889651.943826446,
+            "daily_State": 0.940382155912118
+          },
+          {
+            "regime": "R3",
+            "n": 28336,
+            "speed_sse": 120839.01718153033,
+            "lane_flow_sse": 31483046.84368167,
+            "daily_State": 0.9298395466298375
+          },
+          {
+            "regime": "R1",
+            "n": 11413,
+            "speed_sse": 10318.08094678452,
+            "lane_flow_sse": 7811044.750498708,
+            "daily_State": 0.9594054478177021
+          },
+          {
+            "regime": "R3",
+            "n": 28233,
+            "speed_sse": 54457.86734915802,
+            "lane_flow_sse": 22110335.08401275,
+            "daily_State": 0.9485462224931529
+          },
+          {
+            "regime": "R2",
+            "n": 16912,
+            "speed_sse": 13289.164346387233,
+            "lane_flow_sse": 8906540.56031207,
+            "daily_State": 0.9632588467008255
+          }
+        ],
+        "density_target_pair_relative_L1": 0.811624746128399
+      },
+      "paired_daily_vs_strong_LGB": {
+        "paired_day_mean_gain": 0.005239265688890081,
+        "ci95": [
+          0.004555061778480275,
+          0.005904694500281506
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "paired_daily_vs_geometry_graph": {
+        "paired_day_mean_gain": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_probability_gain_positive": 0.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    "adaptive_attention": {
+      "sealed_choice": {
+        "alpha": 0.75,
+        "checkpoint_sha256": "ed31ab44eac55e8afb4ff7b5dfc66f723a6442b6f3cb648d42ea48ed5c79f6e6"
+      },
+      "metrics": {
+        "S_state": 0.9492572041493137,
+        "details": [
+          {
+            "regime": "R1",
+            "n": 22859,
+            "rmse_speed": 1.2400289044031954,
+            "rmse_lane_flow": 29.825535900264157,
+            "S_state": 0.9503491314746886
+          },
+          {
+            "regime": "R2",
+            "n": 119727,
+            "rmse_speed": 1.0541175105110696,
+            "rmse_lane_flow": 27.21303741640016,
+            "S_state": 0.9563677330870541
+          },
+          {
+            "regime": "R3",
+            "n": 141841,
+            "rmse_speed": 1.607668171897975,
+            "rmse_lane_flow": 31.590808174964057,
+            "S_state": 0.9410547478861981
+          }
+        ],
+        "days": [
+          {
+            "regime": "R3",
+            "n": 28409,
+            "speed_sse": 137760.91769241742,
+            "lane_flow_sse": 45055914.42303243,
+            "daily_State": 0.9219029108287007
+          },
+          {
+            "regime": "R2",
+            "n": 17148,
+            "speed_sse": 28918.630414973213,
+            "lane_flow_sse": 18208897.715057813,
+            "daily_State": 0.9469669734195221
+          },
+          {
+            "regime": "R2",
+            "n": 17373,
+            "speed_sse": 11478.552314135497,
+            "lane_flow_sse": 9665875.330952713,
+            "daily_State": 0.9643588093076549
+          },
+          {
+            "regime": "R3",
+            "n": 28352,
+            "speed_sse": 52141.619051251284,
+            "lane_flow_sse": 26791149.121117666,
+            "daily_State": 0.9471403228439454
+          },
+          {
+            "regime": "R2",
+            "n": 17134,
+            "speed_sse": 19135.881914426613,
+            "lane_flow_sse": 9872083.99573126,
+            "daily_State": 0.9587703088109374
+          },
+          {
+            "regime": "R2",
+            "n": 17083,
+            "speed_sse": 13684.406854440731,
+            "lane_flow_sse": 10332439.76631801,
+            "daily_State": 0.9618126744780078
+          },
+          {
+            "regime": "R2",
+            "n": 17029,
+            "speed_sse": 33594.178665593194,
+            "lane_flow_sse": 19138745.88940555,
+            "daily_State": 0.9439595952966822
+          },
+          {
+            "regime": "R2",
+            "n": 17048,
+            "speed_sse": 14913.715631682491,
+            "lane_flow_sse": 12616636.806920685,
+            "daily_State": 0.958940763330052
+          },
+          {
+            "regime": "R3",
+            "n": 28511,
+            "speed_sse": 20650.884311636128,
+            "lane_flow_sse": 15448830.295098627,
+            "daily_State": 0.9637706815913001
+          },
+          {
+            "regime": "R1",
+            "n": 11446,
+            "speed_sse": 26560.26507587411,
+            "lane_flow_sse": 12721801.99486511,
+            "daily_State": 0.9415368268700779
+          },
+          {
+            "regime": "R3",
+            "n": 28336,
+            "speed_sse": 110771.13310336017,
+            "lane_flow_sse": 31758581.019051827,
+            "daily_State": 0.9316265553742207
+          },
+          {
+            "regime": "R1",
+            "n": 11413,
+            "speed_sse": 8589.371943090326,
+            "lane_flow_sse": 7612709.2896726,
+            "daily_State": 0.9614610056011574
+          },
+          {
+            "regime": "R3",
+            "n": 28233,
+            "speed_sse": 45277.26195873288,
+            "lane_flow_sse": 22499887.338004388,
+            "daily_State": 0.9510033092993537
+          },
+          {
+            "regime": "R2",
+            "n": 16912,
+            "speed_sse": 11310.933623486128,
+            "lane_flow_sse": 8829079.159099959,
+            "daily_State": 0.964818046213828
+          }
+        ],
+        "density_target_pair_relative_L1": 0.7356572700709143
+      },
+      "paired_daily_vs_strong_LGB": {
+        "paired_day_mean_gain": 0.006534457221241233,
+        "ci95": [
+          0.005631200482330567,
+          0.007437713960151899
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "paired_daily_vs_geometry_graph": {
+        "paired_day_mean_gain": 0.0012951915323511523,
+        "ci95": [
+          0.0007452199777381319,
+          0.0018451630869641728
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    "adaptive_attention_density": {
+      "sealed_choice": {
+        "alpha": 0.75,
+        "checkpoint_sha256": "b55522b8097c23086f485a726730fb500f2c5f82583092902b3d9947d3ff0c80"
+      },
+      "metrics": {
+        "S_state": 0.9489931652624758,
+        "details": [
+          {
+            "regime": "R1",
+            "n": 22859,
+            "rmse_speed": 1.218854082257764,
+            "rmse_lane_flow": 29.40694394829627,
+            "S_state": 0.9511274281295385
+          },
+          {
+            "regime": "R2",
+            "n": 119727,
+            "rmse_speed": 1.097757210708978,
+            "rmse_lane_flow": 26.609903798668213,
+            "S_state": 0.9558875180030405
+          },
+          {
+            "regime": "R3",
+            "n": 141841,
+            "rmse_speed": 1.680531558381204,
+            "rmse_lane_flow": 30.95995915319733,
+            "S_state": 0.9399645496548481
+          }
+        ],
+        "days": [
+          {
+            "regime": "R3",
+            "n": 28409,
+            "speed_sse": 139704.3067498403,
+            "lane_flow_sse": 43358708.46833605,
+            "daily_State": 0.9221491578167365
+          },
+          {
+            "regime": "R2",
+            "n": 17148,
+            "speed_sse": 42299.77901872578,
+            "lane_flow_sse": 17397035.45875295,
+            "daily_State": 0.9416557569061729
+          },
+          {
+            "regime": "R2",
+            "n": 17373,
+            "speed_sse": 11436.815803794803,
+            "lane_flow_sse": 9229297.472164804,
+            "daily_State": 0.9648038716282097
+          },
+          {
+            "regime": "R3",
+            "n": 28352,
+            "speed_sse": 45801.239647663184,
+            "lane_flow_sse": 25449445.208299115,
+            "daily_State": 0.9495766989006861
+          },
+          {
+            "regime": "R2",
+            "n": 17134,
+            "speed_sse": 19193.55146249229,
+            "lane_flow_sse": 9445851.43448648,
+            "daily_State": 0.9591375945913543
+          },
+          {
+            "regime": "R2",
+            "n": 17083,
+            "speed_sse": 14066.375591066662,
+            "lane_flow_sse": 10117601.154042609,
+            "daily_State": 0.9617417743317808
+          },
+          {
+            "regime": "R2",
+            "n": 17029,
+            "speed_sse": 32611.496700374304,
+            "lane_flow_sse": 18108126.138402123,
+            "daily_State": 0.9451082138415974
+          },
+          {
+            "regime": "R2",
+            "n": 17048,
+            "speed_sse": 13631.42117475712,
+            "lane_flow_sse": 11935619.783969665,
+            "daily_State": 0.9603995064007405
+          },
+          {
+            "regime": "R3",
+            "n": 28511,
+            "speed_sse": 19752.290773351437,
+            "lane_flow_sse": 14887954.431316104,
+            "daily_State": 0.964502038540365
+          },
+          {
+            "regime": "R1",
+            "n": 11446,
+            "speed_sse": 25784.87260528819,
+            "lane_flow_sse": 12392526.926763814,
+            "daily_State": 0.9423536176210086
+          },
+          {
+            "regime": "R3",
+            "n": 28336,
+            "speed_sse": 141356.8696856324,
+            "lane_flow_sse": 30516616.672122765,
+            "daily_State": 0.9265963386475075
+          },
+          {
+            "regime": "R1",
+            "n": 11413,
+            "speed_sse": 8174.578349338454,
+            "lane_flow_sse": 7375212.840250342,
+            "daily_State": 0.9622303678544082
+          },
+          {
+            "regime": "R3",
+            "n": 28233,
+            "speed_sse": 53970.70477638939,
+            "lane_flow_sse": 21744578.736679815,
+            "daily_State": 0.9488589009231148
+          },
+          {
+            "regime": "R2",
+            "n": 16912,
+            "speed_sse": 11040.083134445542,
+            "lane_flow_sse": 8543598.433519004,
+            "daily_State": 0.9653163562087146
+          }
+        ],
+        "density_target_pair_relative_L1": 0.6860740929429721
+      },
+      "paired_daily_vs_strong_LGB": {
+        "paired_day_mean_gain": 0.006274558003166675,
+        "ci95": [
+          0.005565852881959004,
+          0.006983263124374346
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "paired_daily_vs_geometry_graph": {
+        "paired_day_mean_gain": 0.001035292314276594,
+        "ci95": [
+          0.00011423454872790315,
+          0.0019563500798252848
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    }
+  },
+  "seconds": 25.64386800000011,
+  "source": {
+    "python": "3.13.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus": 16,
+    "process_peak_working_set_MiB": 2035.12109375,
+    "peak_scope": "current process lifetime, not isolated per model",
+    "source_sha256": "0437f4d401371514b3a550a55380c832a4b5f696e546be0f185d06c89661c974",
+    "model_threads": 4,
+    "gpu_used": true,
+    "source_fingerprint_scope": "On-disk source at evidence() call; a captured start archive is primary when present",
+    "versions": {
+      "numpy": "2.2.5",
+      "pandas": "3.0.5",
+      "scipy": "1.16.1",
+      "pyarrow": "25.0.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10",
+      "scikit-learn": "1.7.2"
+    }
+  },
+  "original_selection_preserved": true,
+  "formal_State": null,
+  "formal_Physics": null,
+  "formal_Total": null,
+  "limitations": "Calibration-selected mixtures and checkpoints are fixed. Assessments were already seen; these paired ablations diagnose modules and cannot validate a new assessment-selected winner."
+}
