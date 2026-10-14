@@ -3,6 +3,17 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+最新质量/密度模型采用相同初始化、采样和强 LGB；下面为公开 train 开发对照，所有模型/α 先在 cal 封存。A52 的 strict12 权重复现 A49，不作为新 seed。
+
+| 冻结模型 | 原14日 State | 追加30日 State | A55 v2 projected increment L1 | 结论 |
+|---|---:|---:|---:|---|
+| full-label LGB | .927102 | .927004 | .419699 | 同分割强基线 |
+| 原 strict12 attention | .933577 | .932585 | .404858 | 保留匹配 State 控制 |
+| quality18 attention | .932965 | .932977 | .398451 | 追加 gain +.000392、日均 CI 跨零；不晋级 |
+| density coordinates + λ=.01 | .932951 | .932583 | .389999 | State 无独立增益；仅物理代理 challenger |
+
+proxy 改善不是正式 Physics；A55 用 raw train 的非目标 evaluator anchors、Mode A 和全部有效相邻对，旧 density-target-pair 指标口径不同。追加30日含10/13/7个R1/R2/R3日期，无调参或选择，质量日均 CI [−.000510,.000797]、密度 [−.001017,.000476]。正式 .82940、原最佳 SHA 与全任务候选均不改动。
+
 组织方公开公告 742350 明确 onset 只在最后一步出现 queue。首轮 proxy 及 C01–C22 未匹配此采样属性，表内历史 Queue 数值均是一般事件压力测试。C24 起对齐公开时序；带噪观测仍不等于 latent truth。
 
 | 模型 | 证据集 | State / OD 指标 | Queue 指标 | Physics 证据 | 状态 |

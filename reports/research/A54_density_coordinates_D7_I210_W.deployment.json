@@ -1,0 +1,97 @@
+{
+  "source_report_sha256": "3eab001ce86c6edc2fc91b0bbc8dde63821dabdf5bf463cd9d40c89de4cbda29",
+  "roles": {
+    "primary": {
+      "model_sha256": "1789ad1e8f59dc32369f460ed67e23ea84c013942af03aff6c0dfd810388f971",
+      "n_calibration_days": 14,
+      "schema": "strict12",
+      "output_coordinates": "density",
+      "replayed_metrics": {
+        "S_state": 0.9328963775371676,
+        "details": [
+          {
+            "regime": "R1",
+            "n": 21485,
+            "rmse_speed": 1.7608174525224298,
+            "rmse_lane_flow": 31.32624182527289,
+            "S_state": 0.9379495576261397
+          },
+          {
+            "regime": "R2",
+            "n": 16099,
+            "rmse_speed": 1.630573596573307,
+            "rmse_lane_flow": 31.462383758166492,
+            "S_state": 0.9406584494327557
+          },
+          {
+            "regime": "R3",
+            "n": 44561,
+            "rmse_speed": 2.4978634975883076,
+            "rmse_lane_flow": 33.867421173241716,
+            "S_state": 0.9200811255526073
+          }
+        ],
+        "density_target_pair_relative_L1": 0.7421711988827537
+      },
+      "independent_masked_frame_inputs_exact": true
+    },
+    "joint": {
+      "model_sha256": "d64d0fd1c6e2b9efa2cecea7c6649567ba93c57a24ec966f954839199f88cc2a",
+      "n_calibration_days": 14,
+      "schema": "strict12",
+      "output_coordinates": "density",
+      "replayed_metrics": {
+        "S_state": 0.9328963775371676,
+        "details": [
+          {
+            "regime": "R1",
+            "n": 21485,
+            "rmse_speed": 1.7608174525224298,
+            "rmse_lane_flow": 31.32624182527289,
+            "S_state": 0.9379495576261397
+          },
+          {
+            "regime": "R2",
+            "n": 16099,
+            "rmse_speed": 1.630573596573307,
+            "rmse_lane_flow": 31.462383758166492,
+            "S_state": 0.9406584494327557
+          },
+          {
+            "regime": "R3",
+            "n": 44561,
+            "rmse_speed": 2.4978634975883076,
+            "rmse_lane_flow": 33.867421173241716,
+            "S_state": 0.9200811255526073
+          }
+        ],
+        "density_target_pair_relative_L1": 0.7421711988827537
+      },
+      "independent_masked_frame_inputs_exact": true
+    }
+  },
+  "formal_State": null,
+  "formal_Physics": null,
+  "formal_Total": null,
+  "source": {
+    "python": "3.13.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus": 16,
+    "process_peak_working_set_MiB": 1463.91796875,
+    "peak_scope": "current process lifetime, not isolated per model",
+    "source_sha256": "fa5eb270938e95ed31439196262f68cb2a8f658905f6ba036cad079301a129ce",
+    "model_threads": 4,
+    "gpu_used": true,
+    "source_fingerprint_scope": "On-disk source at evidence() call; a captured start archive is primary when present",
+    "versions": {
+      "numpy": "2.2.5",
+      "pandas": "3.0.5",
+      "scipy": "1.16.1",
+      "pyarrow": "25.0.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10",
+      "scikit-learn": "1.7.2"
+    }
+  },
+  "scope": "Independent full-cal input construction and saved-model prediction replay; not independent training, untouched final or hidden score"
+}

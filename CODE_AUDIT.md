@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+A51–A57 新质量输入严格来自 supplied masked frame，六通道为 any-quality v/q、两 availability、pct_observed 与其 availability；首12通道、标签和 target lookup 逐值核验。Torch 为质量基础函数的可选依赖。新增 input 权重零初始化，旧全部共享参数不变；A52 strict12 的最终张量与 A49 精确复现。旧 AdaptiveStateModel pickle 缺少新属性时默认 strict12/vq，14日 cal 原值重建；没有重写旧模型。
+
+密度参数化使用公开观测基准速度把 density residual 转为 flow-equivalent units，保证初始化的非负流量及密度与 speed head 解耦；独立手算/有限梯度测试通过。输出 clipping 与 LGB 混合会改变这项解析关系，不能把它当完整离散守恒解。新模型14日cal输入、预测和保存/重载验证通过；53 research /46 CPU tests、3 optional Torch skips。
+
+重新读公开 scorer 后确认：非目标 eligible RAW observations 进入正式 Task3 state_for_regime，即使对应 masked 输入因 Task2 horizon/buffer 已空；只替换 Task1 targets。旧 mask|strictvisible 与 target-touching 分母不等价。A55 v2 仅在公开 train 对齐这些 evaluator anchors、observable topology、Mode A start-ramp validity 和 all valid adjacent pairs，不访问 boundary_flux，不输出正式 S_LWR。v1 未统一 LGB 上界，源 snapshot 为 postrun/preedit，均明确保留；v2 有 start snapshot。A55/A57 GPU 标志默认 false 的元数据错误在独立记录更正，原 JSON 与 SHA 不改写。后续 code 修复实际 network-device 标志及 pandas copy；A54 joint selector 文字补充 optional strict12 reference，原 source/seal 保留，本次 primary 更高使数值门槛不受该文字修正影响。
+
 本轮 A49 的14日cal独立输入重建及部署预测通过；B08独立进程72组完全相同，B09扩展参数的72组原默认对照也精确相同。适配器默认保留既有temporal-first语义，新 weighted 选项按StateFeatures的权重构造，手工 age/space 案例及缺失prior回退测试通过。CTM历史profile只使用独立 dev eligible observations，未向网络输入latent density/flux，未作occupancy合成。
 
 Zero-aware MAP 与独立 SLSQP/903-path augmented TRF-LSMR 对照通过；Huber核验原目标KKT而非代理二次目标。D12旧540评分逐项相同，1,350个assessment method/case完整。其保守规则在30份实际输入不触发，明确不视为实用增益。D13选择仅从development-only cache重算，三个新research seed与final seed及偏移不重叠，两种当前代码分支的预测SHA复跑相同；不提供未经验证的离散hurdle概率。

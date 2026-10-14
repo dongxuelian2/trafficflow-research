@@ -2,6 +2,20 @@
 
 所有模拟指标、观测代理与正式 Kaggle 指标分别记录。失败实验不删除，既有模型与提交不覆盖。
 
+最新完成 A51–A57；formal Total 仍 .82940，未晋级新 State 或声称 Physics 提升。
+
+| 编号 | 假设 / 对照 | 实测结果 | 资源 / 决策 |
+|---|---|---|---|
+| A51 | 在原 strict12 缓存追加六个合法质量通道 | 120 日原输入/target/labels 不变；fit 151,109 行低质量且 v/q 有限 | 43.23 秒 CPU；训练目标的 occupancy 全缺失 |
+| A52 | 12/18 通道 × λ=0/.01，完全共享初始参数与 patch RNG | cal 选 18 通道、epoch24/α=.5；State .932965 vs strict12 .933577 | 410.51 秒 GPU、288.59 MiB；不晋级；两控制复现 A49 全部张量/历史 |
+| A53 | 质量可见率与旧模型兼容审计 | R3 .381506→.451711；旧模型 14 日 cal .932591 重建一致 | 不把可见率当准确率；旧 pickle 未重新保存 |
+| A54 | 同初始化 strict12，联合 v/ρ 坐标代替独立 v/q | cal 选密度 loss；State .932951 vs 原 .933577；旧 proxy L1 .701016 vs .716127 | 222.82 秒 GPU、288.42 MiB；State 不晋级，保留 joint challenger |
+| A55 v1/v2 | 对齐公开 Task3 非目标真值 anchors、Mode A 与全部有效相邻对 | v2 projected L1 .404858→.389999；统一上界仅改4个 LGB 预测 | 真边界流未访问，真实 Physics 未知；v1 无统一上界原样保留 |
+| A56 | 匹配 State / coverage-proxy 的日块不确定性 | 两新模型 pooled State 为负；density proxy 日均 reduction CI [.006049,.009574] | 不用 proxy 替代正式分项，不根据 assessment 改选 |
+| A57 | 冻结模型追加30日时间复核，无训练/调参 | 原 .932585；质量 .932977；密度 .932583，两 gain CI 跨零 | 37.38 秒；7个 R3 日；public-train development，不是 final |
+
+primary/joint 在 A52、A54 各选同一 checkpoint；每个角色全部14日 cal 部署复跑一致。53 research /46 CPU tests +3 Torch skips；全脚本 compileall 通过。A55/A57 GPU 标志默认 false 的记录错误单独披露于 `quality_density_metadata_corrections_v1.json`，不覆盖原 SHA 链；后续 code 已记录实际 network device。复现命令、参数化公式和覆盖差异见 `docs/QUALITY_DENSITY_RESEARCH.md`。
+
 本轮完成 A48–A50、B08/B09、D12/D13，以及完整 LOCAL K05。正式 Total 仍 .82940，没有上传或替换正式最佳。
 
 | 编号 | 假设 / 对照 | 实测结果 | 资源 / 决策 |

@@ -1,0 +1,58 @@
+{
+  "protocol_sha256": "e21736576bd311e079acb1c436e882bd7cc65dc6f1e1cbc7a670a636d97e3cc2",
+  "protocol": {
+    "id": "Quality18_density_matched_State_factorial",
+    "cache": "artifacts/research/A51_quality_D7_I210_W_autumn_cache",
+    "prepared_sha256": "3cf05de19568a092a7d05181040869f95cc755784bdba5731a907a88bce0c25b",
+    "baseline_file": "artifacts/research/A30_State_budget_directions_b/D7_I210_W/full.pkl",
+    "baseline_sha256": "73061d49ea39bf3969750cac739e5235ac550b6191461afa94047fa0b4daca3d",
+    "panel": "D7_I210_W",
+    "fold": "rolling_autumn",
+    "seed": 20261013,
+    "architectures": [
+      [
+        "attention12",
+        12,
+        0.0
+      ],
+      [
+        "attention12_density",
+        12,
+        0.01
+      ],
+      [
+        "attention18_quality",
+        18,
+        0.0
+      ],
+      [
+        "attention18_quality_density",
+        18,
+        0.01
+      ]
+    ],
+    "hidden": 48,
+    "heads": 2,
+    "epochs": 24,
+    "steps_per_epoch": 120,
+    "batch_size": 4,
+    "patch_steps": 64,
+    "optimizer": "AdamW .001, weight_decay 1e-4, clip_norm 1",
+    "initialization": "Identical strict12 shared tensors; six additional Conv input weights exactly zero",
+    "labels": "Same full-label LGB fit dates; neural patches repeat targets and regimes sampled uniformly",
+    "primary_selection": "Per-model best pure calibration State checkpoint, then cal alpha grid; matches original A49 procedure",
+    "joint_selection": "Lowest calibration anchored density L1 across saved checkpoint/alpha pairs with State >= full-LGB cal and >= best primary State-.001",
+    "blend_grid": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "physical_scope": "Supervised public observation increments and strict12 visible anchors only; extra low-quality values are inputs, never truth anchors",
+    "assessment_scope": "Previously inspected public-train development dates, not unopened final",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null
+  }
+}

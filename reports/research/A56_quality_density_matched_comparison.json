@@ -1,0 +1,124 @@
+{
+  "source_reports_sha256": {
+    "A52_quality_density_D7_I210_W.json": "e2fbd1c0d86e4dc382395bf262b7252d0995d686501457dd288f0bf24dfe1015",
+    "A54_density_coordinates_D7_I210_W.json": "3eab001ce86c6edc2fc91b0bbc8dde63821dabdf5bf463cd9d40c89de4cbda29",
+    "A55_observed_increment_coverage_v2.json": "dab64eb0dee4758fe42a2b18c641fbf39e6ddc8dc53ba5da791f60276d223470"
+  },
+  "shared_initialization_and_patch_sequence_exact": true,
+  "matched_state_comparisons": {
+    "quality18": {
+      "pooled_State_gain_vs_matched_vq": -0.0006125061180473068,
+      "day_mean_State_interval": {
+        "paired_day_mean_gain": -0.00042918913321683086,
+        "ci95": [
+          -0.0013087072217124937,
+          0.0003491968583452877
+        ],
+        "bootstrap_probability_gain_positive": 0.1435,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "target_touching_density_L1_change": -0.0048650202523353725,
+      "regime_State": [
+        {
+          "regime": "R1",
+          "n": 24888,
+          "rmse_speed": 1.6370160604274404,
+          "rmse_lane_flow": 32.017497405469655,
+          "S_state": 0.9400937050839073
+        },
+        {
+          "regime": "R2",
+          "n": 32344,
+          "rmse_speed": 1.870277940745884,
+          "rmse_lane_flow": 31.68844630169724,
+          "S_state": 0.935307520981921
+        },
+        {
+          "regime": "R3",
+          "n": 8910,
+          "rmse_speed": 2.31556513474515,
+          "rmse_lane_flow": 34.5530205373912,
+          "S_state": 0.9234931440108383
+        }
+      ]
+    },
+    "density_coordinates": {
+      "pooled_State_gain_vs_matched_vq": -0.0006258991128839098,
+      "day_mean_State_interval": {
+        "paired_day_mean_gain": 7.526527727303682e-05,
+        "ci95": [
+          -0.0014693044248921974,
+          0.00159032842066692
+        ],
+        "bootstrap_probability_gain_positive": 0.56175,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "target_touching_density_L1_change": -0.01511128197524969,
+      "regime_State": [
+        {
+          "regime": "R1",
+          "n": 24888,
+          "rmse_speed": 1.6790622154268335,
+          "rmse_lane_flow": 31.241356780341075,
+          "S_state": 0.9397805492818523
+        },
+        {
+          "regime": "R2",
+          "n": 32344,
+          "rmse_speed": 1.7967994986656521,
+          "rmse_lane_flow": 31.016441656694976,
+          "S_state": 0.9374098588920226
+        },
+        {
+          "regime": "R3",
+          "n": 8910,
+          "rmse_speed": 2.420913505830078,
+          "rmse_lane_flow": 33.97106785537564,
+          "S_state": 0.9216637829182823
+        }
+      ]
+    }
+  },
+  "coverage_proxy_comparisons": {
+    "A52_quality_density_D7_I210_W": {
+      "macro_error_reduction_vs_matched_vq": 0.006407052867695273,
+      "day_mean_error_reduction_interval": {
+        "paired_day_mean_gain": 0.0035323230886886753,
+        "ci95": [
+          0.0015542019818828381,
+          0.005580380065592412
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    "A54_density_coordinates_D7_I210_W": {
+      "macro_error_reduction_vs_matched_vq": 0.014858930181421648,
+      "day_mean_error_reduction_interval": {
+        "paired_day_mean_gain": 0.0078115895643564625,
+        "ci95": [
+          0.0060490002649739244,
+          0.009574178863739
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    }
+  },
+  "formal_State": null,
+  "formal_Physics": null,
+  "formal_Total": null,
+  "decision": "No State promotion: both new choices lose pooled State to the matched vq control. Retain density coordinate model only as a local State-Physics challenger; actual hidden Physics unknown. No assessment reselection."
+}

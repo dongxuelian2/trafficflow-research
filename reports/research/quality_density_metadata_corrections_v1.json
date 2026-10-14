@@ -1,0 +1,14 @@
+{
+  "created_UTC": "2026-10-14T09:21:57.997172+00:00",
+  "preserved_reports": {
+    "A55_observed_increment_coverage_diagnostic.json": "451d119fbba311ecd0ba2e4f9d3fdbb1b044b4b74da0f7228a0bb9e1dcc6f079",
+    "A55_observed_increment_coverage_v2.json": "dab64eb0dee4758fe42a2b18c641fbf39e6ddc8dc53ba5da791f60276d223470",
+    "A57_frozen_State_temporal_extension.json": "2b02ba007ec4004aa4c77a163c03a34a4455684749396cb732547f210596837a"
+  },
+  "correction": "These original evidence() calls left gpu_used at default false. This field does not establish CPU-only execution.",
+  "device_inference": "Executed AdaptiveStateModel source selects CUDA when available; the same research environment had CUDA available. GPU inference is inferred, not separately logged by these runs.",
+  "original_GPU_peak_MiB": null,
+  "original_scores_and_source_snapshots_preserved": true,
+  "future_fix": "Diagnostic and temporal runner now inspect actual cached network parameter device for evidence(). No metric changes.",
+  "joint_selection_text": "Current source now states optional strict12 calibration reference. A54 executed source already used it; current primary exceeds control so original wording omission does not change this result."
+}

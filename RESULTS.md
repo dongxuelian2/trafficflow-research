@@ -2,6 +2,16 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**最新 A51–A57：质量通道与密度参数化未获得稳定的独立 State 增益，保留负面结果。** D7_I210_W 同划分、同初始化、同 patch 序列和训练预算，cal 选质量 18 通道 epoch24/α=.5，14 日 assessment State **.932965 vs 原 attention .933577**（−.000613）；密度坐标加 λ=.01 为 **.932951**（−.000626）。两组日均配对区间均跨零；没有按 assessment 反选架构。
+
+冻结三个模型后追加 **2030-11-13…12-12 的 30 天公开 train 开发复核**，R1/R2/R3 各 10/13/7 日：原 attention **.932585**、质量通道 **.932977**、密度坐标 **.932583**。质量 pooled gain +.000392，日均 CI **[−.000510,.000797]**；密度 pooled gain −.000003，日均 CI **[−.001017,.000476]**。追加日期与这些模型的 profile/fit/cal/原 assessment 不重叠；它们仍是开发证据，不是最终盲测或新的训练 seed。均未达到 .002 晋级门槛，原 State 模型继续保留。
+
+重新对齐公开 Task 3 coverage 后，A55 v2 的 observation-projected increment relative L1（越低越好）为 **full-LGB .419699 / 原 attention .404858 / 质量通道 .398451 / 密度坐标 .389999**。密度相对 attention 的日均误差减小 CI **[.006049,.009574]**。这一诊断使用公开 train 真值为非目标 evaluator anchors，包含 Mode A 可观测拓扑、公开匝道有效性及全部有效相邻对；没有读取真实边界流，**不是正式 Physics，不能换算正式 Total**。旧 target-touching proxy 的覆盖和分母与此不同，数值不直接比较。
+
+质量通道只读取 masked 公共帧的有限速度/流量及可见质量，原 12 通道逐值保留；额外输入权重以零初始化。R3 输入可见率 .381506→.451711，但更多可见值没有转化为可靠 State 收益。A52 两个 strict12 控制的权重和训练历史与 A49 精确一致，这验证控制复现，不算独立 seed。新模型各 primary/joint 14 日 cal 独立部署复跑通过，旧 pickle 的 strict12/vq fallback 也通过。
+
+本轮 **53 research tests passed；CPU 46 passed / 3 optional-Torch module skips**。A52 四模型 410.51 秒 GPU、峰值 288.59 MiB；A54 两模型 222.82 秒、288.42 MiB；A57 30 日 37.38 秒。A55/A57 原报告 GPU 标志误用了默认 false，已另存更正说明并修复后续记录；原报告和源快照不改写。详见 `docs/QUALITY_DENSITY_RESEARCH.md` 与 A51–A57 JSON。只归档本地成果，不进行平台发布、推送或正式上传。
+
 **本轮新增可运行的完整本地 OD 控制候选 K05，并完成第五走廊族 State 复核。** A49 D7_I210_W 秋季仅按 cal 选纯 attention、α=.5：相对 full-label LGB，公开 train assessment State **.927102 → .933577**，pooled gain **.006476**；14 日配对日均 gain .005391、CI **[.004342,.006415]**。increment 代理 L1 **.740967 → .716127**；14 日独立 cal 输入/预测重建通过。Geometry 的原 cal 混合为零，density .932989，未按 assessment 反选架构。全网与真实 Physics 增益仍未知。
 
 D13 的正向均值不代表所有案例改善：270 个配对案例中 **14 个退化**，最差为 D7_I405_N / seed7001 / count_outliers，模拟 ODME **.555405 → .527118**、下降 **.028287**，实际走 entropy 分支。最差十例与分布内负例数量保留在 `D13_OD_expert_error_analysis.json`，未按这批新 seed 重新选择模型。

@@ -36,9 +36,11 @@ class AdaptiveSpatialBlock(nn.Module):
 
 
 class AdaptiveGraphState(nn.Module):
-    def __init__(self, channels=12, hidden=48, heads=2, attention=True):
+    def __init__(self, channels=12, hidden=48, heads=2, attention=True,output_coordinates='vq'):
         super().__init__()
         if hidden % heads or hidden % 4:raise ValueError('Hidden width must match heads and GroupNorm')
+        if output_coordinates not in {'vq','density'}:raise ValueError('Unknown State output coordinates')
+        self.output_coordinates=output_coordinates
         self.input = nn.Conv2d(channels, hidden, 1)
         self.geometry = nn.Conv2d(3, hidden, 1)
         self.blocks = nn.ModuleList([GraphBlock(hidden, d) for d in (1, 2, 4, 8)])
@@ -58,7 +60,17 @@ class AdaptiveGraphState(nn.Module):
         for i, block in enumerate(self.blocks):
             z = block(z, incoming, outgoing)
             if self.attention_enabled and i in (1, 3):z = self.spatial[i//2](z, incoming, outgoing)
-        return x[:, 6:8]+self.output(z)
+        residual=self.output(z)
+        if self.output_coordinates=='vq':
+            return x[:, 6:8]+residual
+        speed=x[:,6]+residual[:,0]
+        # Density residual is expressed in flow-equivalent units at base speed.
+        # Initial flow-head Jacobian remains 600, and q/max(v,1) depends only
+        # on its own head. No hidden flux or hard jam-density label is used.
+        base_speed=(x[:,6]*25).clamp(min=1)
+        speed_ratio=(speed*25).clamp(min=1)/base_speed
+        flow=(x[:,7]+residual[:,1]).clamp(min=0)*speed_ratio
+        return torch.stack([speed,flow],dim=1)
 
 
 def patch_score_loss(prediction,truth,target):
@@ -93,12 +105,16 @@ def reconstruction_input(features):
 
 class AdaptiveStateModel(StateModel):
     """Deployable strong-LGB/attention mixture, containing CPU weights."""
-    def __init__(self,baseline,state,topology,alpha,hidden=48,attention=True):
+    def __init__(self,baseline,state,topology,alpha,hidden=48,attention=True,input_schema='strict12',output_coordinates='vq'):
         if not 0<=alpha<=1:raise ValueError('Invalid State ensemble fraction')
+        if input_schema not in {'strict12','quality18'}:raise ValueError('Unknown State input schema')
+        if output_coordinates not in {'vq','density'}:raise ValueError('Unknown State output coordinates')
+        if state['input.weight'].shape[1] != (18 if input_schema=='quality18' else 12):
+            raise ValueError('State weights and input schema disagree')
         self.baseline=baseline
         self.state={k:v.detach().cpu().clone() for k,v in state.items()}
         self.topology=topology
-        self.alpha=alpha;self.hidden=hidden;self.attention=attention
+        self.alpha=alpha;self.hidden=hidden;self.attention=attention;self.input_schema=input_schema;self.output_coordinates=output_coordinates
         self.profile=baseline.profile;self.feature_version=baseline.feature_version
         self._network=None
 
@@ -116,7 +132,9 @@ class AdaptiveStateModel(StateModel):
             if self._network is None:
                 torch.set_num_threads(4);torch.use_deterministic_algorithms(True)
                 torch.backends.cudnn.benchmark=False
-                self._network=AdaptiveGraphState(hidden=self.hidden,heads=2,attention=self.attention).to(device)
+                channels=18 if getattr(self,'input_schema','strict12')=='quality18' else 12
+                self._network=AdaptiveGraphState(channels=channels,hidden=self.hidden,heads=2,attention=self.attention,
+                    output_coordinates=getattr(self,'output_coordinates','vq')).to(device)
                 self._network.load_state_dict(self.state);self._network.eval()
             graph=[]
             for direction in ('incoming','outgoing'):
@@ -127,7 +145,11 @@ class AdaptiveStateModel(StateModel):
             node_lane=net.lanes.reindex(features.links).to_numpy(float)
             fd=np.stack([net.free_speed_kmh.reindex(features.links),net.capacity_vph.reindex(features.links)/node_lane,
                 net.k_jam.reindex(features.links)/node_lane]).astype(np.float32)
-            x=torch.from_numpy(reconstruction_input(features).transpose(2,0,1)[None].copy()).to(device)
+            prepared=reconstruction_input(features)
+            if getattr(self,'input_schema','strict12')=='quality18':
+                from .quality_state import quality_reconstruction_input
+                prepared=quality_reconstruction_input(features,prepared)
+            x=torch.from_numpy(prepared.transpose(2,0,1)[None].copy()).to(device)
             with torch.no_grad():
                 output=self._network(x,*graph,torch.tensor(fd,device=device)).cpu().numpy()[0].transpose(1,2,0)
             output[...,0]=np.clip(output[...,0]*25,0,fd[0][None]*1.05)
