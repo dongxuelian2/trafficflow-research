@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+A58–A65新增纯NumPy/SciPy二次残差同化，冻结State先验，不读raw标签当measurement。严格finite观测优先，extra观测需已知pct；未知质量和缺失值权重0。正prior precision令全grid Hessian SPD；手工dense normal equations及实际24-slot SuperLU reference核验。3836次实验channel CG都满足真实相对线性残差<=约1e−8；这不构成物理动力学正确性证据。
+
+CF按照固定public panel/date/grid/seed分组，仅临时遮四个measurement字段，全部visible cells各遮一次；原frame不改，原target prior不改。测试直接读取假prior的输入帧验证自身四字段不可见。仍可用State公开前后观测，禁止将结果作Queue未来输入。三个paired案例28日prior/strict/quality/edges逐值相同。旧A58/A59 pickle缺少anchor属性时default0的独立cal复跑通过；保存嵌套prior前清除GPU网络cache。
+
+A58第一版因pandas datetime64[us]整数单位误判5分钟间隔，在cal前失败；原源snapshot/注册保留，之后显式as_unit('ns')，测试还拒绝真正10分钟间隔。A65另加full raw TRAIN标签与公共Mode A pair validity，全部parent arrays及scored labels逐值保留；raw标签仅在loss/评估使用，不是推断输入。I210_W的120日没有非target eligible input blanks，因此该fold无新buffer锚点信息；旧loss多惩罚177808个fit pairs且分母不同。新loss kernel手算检验12/42全分母、coverage后的1/3、gradient[-.25,1/3]及非目标零梯度；未训练。测试编辑边界错误的snapshot/失败保留，修复后59 research /51 CPU tests与3可选Torch模块跳过。无正式boundary_flux访问、无正式Physics分数。
+
 A51–A57 新质量输入严格来自 supplied masked frame，六通道为 any-quality v/q、两 availability、pct_observed 与其 availability；首12通道、标签和 target lookup 逐值核验。Torch 为质量基础函数的可选依赖。新增 input 权重零初始化，旧全部共享参数不变；A52 strict12 的最终张量与 A49 精确复现。旧 AdaptiveStateModel pickle 缺少新属性时默认 strict12/vq，14日 cal 原值重建；没有重写旧模型。
 
 密度参数化使用公开观测基准速度把 density residual 转为 flow-equivalent units，保证初始化的非负流量及密度与 speed head 解耦；独立手算/有限梯度测试通过。输出 clipping 与 LGB 混合会改变这项解析关系，不能把它当完整离散守恒解。新模型14日cal输入、预测和保存/重载验证通过；53 research /46 CPU tests、3 optional Torch skips。

@@ -2,6 +2,14 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**最新 A58–A65：完成冻结先验的质量/鲁棒/图残差同化，只有很小的局部收益，未晋级。** 20 个 precision 配置×3个非零strength及α=0，均仅在cal选择；三个panel/fold各比较原条件观测中心和遮观测中心。I210_W秋季两者都选α=0，保留 State **.933577**。I5_N冬季普通/遮观测 State **.954406 / .954453 vs .954329**，pooled gain **.000076 / .000124**；I405_N冬季为 **.933992 / .934099 vs .933986**，gain **.000005 / .000112**。虽然两组遮观测的日均区间为正，均远低于 .002 门槛；只有既有先验的一个fit seed和已查看开发日期，未改正式最佳。
+
+遮观测方案把每个有限公开观测分成5组，临时遮住自身四个measurement字段后预测anchor center；原Task1目标先验保持不变。同一panel/fold全部28日的原先验、strict/quality观测及graph数组逐值一致。CF与普通策略各用原cal封存选择，参数不同，不把策略差异全归因单个门控。I5_N CF primary的旧increment proxy **.679941**，普通primary **.676296**，虽有略高State却有更差proxy；不宣传多评分模块同时改善。六实验 **3,836 次channel求解全部成功**，实际相对线性残差≤约1e−8；CG数值证书不是交通物理证明。
+
+**A65覆盖审计否定了本fold“遗漏额外buffer锚点信息”的假设。** I210_W的92fit/14cal/14assessment，非目标eligible输入空白全部为 **0**；新raw-train标签没有新增该类信息。差异在公开Mode A coverage及分母：fit旧loss有 **177,808** 对不满足公开coverage（约26.4%），新全部有效对 **952,300**，触及target **494,725**。标签缓存新增y_full/eligible_full/lwr_pair_valid，原全部输入和target标签逐值保留；尚未训练或取得新成绩，没有读取真实boundary_flux。
+
+新增五项同化测试及一项full-coverage loss的独立手算/梯度测试；研究环境 **59 passed**，CPU **51 passed / 3 optional-Torch skips**。A65对应loss kernel已实现，尚未训练；测试编辑时旧断言位置放错造成一次失败，原源快照与记录保留，修复后全套59项通过。A58初次启动的pandas时间单位错误原注册/源快照保留，无分数产生；修复后按新目录重跑。每个保存角色的全部14日cal独立复现，文件SHA相同时显式共享复跑。详见 `docs/STATE_ASSIMILATION_RESEARCH.md`、A64对照及本轮checkpoint。正式分项仍未知，只做本地研发与Git归档。
+
 **最新 A51–A57：质量通道与密度参数化未获得稳定的独立 State 增益，保留负面结果。** D7_I210_W 同划分、同初始化、同 patch 序列和训练预算，cal 选质量 18 通道 epoch24/α=.5，14 日 assessment State **.932965 vs 原 attention .933577**（−.000613）；密度坐标加 λ=.01 为 **.932951**（−.000626）。两组日均配对区间均跨零；没有按 assessment 反选架构。
 
 冻结三个模型后追加 **2030-11-13…12-12 的 30 天公开 train 开发复核**，R1/R2/R3 各 10/13/7 日：原 attention **.932585**、质量通道 **.932977**、密度坐标 **.932583**。质量 pooled gain +.000392，日均 CI **[−.000510,.000797]**；密度 pooled gain −.000003，日均 CI **[−.001017,.000476]**。追加日期与这些模型的 profile/fit/cal/原 assessment 不重叠；它们仍是开发证据，不是最终盲测或新的训练 seed。均未达到 .002 晋级门槛，原 State 模型继续保留。

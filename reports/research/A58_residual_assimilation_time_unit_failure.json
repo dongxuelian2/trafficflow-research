@@ -1,0 +1,15 @@
+{
+  "session_id": 35981,
+  "exit_code": 1,
+  "stage": "Before first calibration prior grid, no scores/models produced",
+  "exception": "ValueError: Assimilation time grid must have adjacent five-minute slots",
+  "cause": "pandas datetime integer array uses microseconds; original validation assumed nanoseconds",
+  "datetime_dtype": "datetime64[us, UTC]",
+  "first_integer_delta": 300000000,
+  "first_nanosecond_delta": 300000000000,
+  "source_snapshot_sha256": "857da2fbdf87178211925d38eea7d58b8ef5e878577541130ba9c9b711734bc1",
+  "original_registered_sha256": "e56106b60ded6af0368cb7175db3e7b17e9002a1fb18e83e334c1fa9e71b59a4",
+  "repair": "Convert index to ns before exact 5-minute validation; validate real gaps independently",
+  "assessment_read": false,
+  "formal_Total": null
+}

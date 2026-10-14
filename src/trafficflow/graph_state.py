@@ -75,3 +75,25 @@ def density_change_loss(prediction, truth, target, inputs, accumulation_factor):
     delta_pred,delta_true = npred[:,1:]-npred[:,:-1],ntrue[:,1:]-ntrue[:,:-1]
     pair = valid[:,1:]&valid[:,:-1]&(target[:,1:]|target[:,:-1])
     return ((delta_pred-delta_true).abs()*pair).sum()/((delta_true.abs()*pair).sum().clamp(min=1))
+
+
+def public_density_change_loss(prediction, full_truth, target, pair_valid, accumulation_factor):
+    """Supervised full-coverage TRAIN observation increments, not flux truth.
+
+    Non-target labels are evaluator anchors, including any legal train buffer
+    labels. They must never enter inference input channels. Pair validity comes
+    from the public Mode-A topology/ramp contract. The denominator contains all
+    valid pairs, including non-target pairs whose numerator is exactly zero.
+    full_truth must use finite zeros for cells outside its eligibility mask.
+    """
+    if prediction.shape != full_truth.shape or prediction.ndim != 4 or prediction.shape[1] != 2:
+        raise ValueError('Full density labels and prediction grids disagree')
+    if target.shape != prediction.shape[:1]+prediction.shape[2:] or pair_valid.shape != (target.shape[0],target.shape[1]-1,target.shape[2]):
+        raise ValueError('Full density target/coverage masks disagree')
+    estimate=torch.where(target[:,None],prediction,full_truth)
+    factor=accumulation_factor[None,None,:]
+    def accumulation(values):
+        return (values[:,1]*600).clamp(min=0)/(values[:,0]*25).clamp(min=1)*factor
+    expected,observed=accumulation(estimate),accumulation(full_truth)
+    delta_pred,delta_true=expected[:,1:]-expected[:,:-1],observed[:,1:]-observed[:,:-1]
+    return ((delta_pred-delta_true).abs()*pair_valid).sum()/((delta_true.abs()*pair_valid).sum().clamp(min=1))

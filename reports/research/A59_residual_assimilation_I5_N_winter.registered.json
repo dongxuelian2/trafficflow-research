@@ -1,0 +1,319 @@
+{
+  "protocol_sha256": "9c7e5d3c3050645b7a5c1d85e30ee5057582d1780bf6aaf1f0a4025362fa1005",
+  "protocol": {
+    "id": "Frozen_learned_prior_quality_residual_assimilation",
+    "cache_sha256": "d428938ec42b4eaa766a76b021e0fe7de1db6f6e5abc91cd6a4f6b44c76db4bb",
+    "panel": "D12_I5_N",
+    "fold": "rolling_winter",
+    "prior_file": "artifacts/research/A34_adaptive_attention_strong_winter/State_selected.pkl",
+    "prior_sha256": "bb052c476ba09717363e4d29efba4fb2fd16a1e4446a475a0cf64535d009534a",
+    "configurations": [
+      {
+        "id": "strict_temporal_p0.25_t1.0",
+        "family": "strict_temporal",
+        "parameters": {
+          "prior_precision": 0.25,
+          "temporal_precision": 1.0,
+          "spatial_precision": 0.0,
+          "low_quality_weight": 0.0,
+          "innovation_cutoffs": null,
+          "time_edge_cutoffs": null
+        }
+      },
+      {
+        "id": "strict_temporal_p0.25_t4.0",
+        "family": "strict_temporal",
+        "parameters": {
+          "prior_precision": 0.25,
+          "temporal_precision": 4.0,
+          "spatial_precision": 0.0,
+          "low_quality_weight": 0.0,
+          "innovation_cutoffs": null,
+          "time_edge_cutoffs": null
+        }
+      },
+      {
+        "id": "strict_temporal_p1.0_t1.0",
+        "family": "strict_temporal",
+        "parameters": {
+          "prior_precision": 1.0,
+          "temporal_precision": 1.0,
+          "spatial_precision": 0.0,
+          "low_quality_weight": 0.0,
+          "innovation_cutoffs": null,
+          "time_edge_cutoffs": null
+        }
+      },
+      {
+        "id": "strict_temporal_p1.0_t4.0",
+        "family": "strict_temporal",
+        "parameters": {
+          "prior_precision": 1.0,
+          "temporal_precision": 4.0,
+          "spatial_precision": 0.0,
+          "low_quality_weight": 0.0,
+          "innovation_cutoffs": null,
+          "time_edge_cutoffs": null
+        }
+      },
+      {
+        "id": "quality_temporal_p0.25_t1.0",
+        "family": "quality_temporal",
+        "parameters": {
+          "prior_precision": 0.25,
+          "temporal_precision": 1.0,
+          "spatial_precision": 0.0,
+          "low_quality_weight": 0.25,
+          "innovation_cutoffs": null,
+          "time_edge_cutoffs": null
+        }
+      },
+      {
+        "id": "quality_temporal_p0.25_t4.0",
+        "family": "quality_temporal",
+        "parameters": {
+          "prior_precision": 0.25,
+          "temporal_precision": 4.0,
+          "spatial_precision": 0.0,
+          "low_quality_weight": 0.25,
+          "innovation_cutoffs": null,
+          "time_edge_cutoffs": null
+        }
+      },
+      {
+        "id": "quality_temporal_p1.0_t1.0",
+        "family": "quality_temporal",
+        "parameters": {
+          "prior_precision": 1.0,
+          "temporal_precision": 1.0,
+          "spatial_precision": 0.0,
+          "low_quality_weight": 0.25,
+          "innovation_cutoffs": null,
+          "time_edge_cutoffs": null
+        }
+      },
+      {
+        "id": "quality_temporal_p1.0_t4.0",
+        "family": "quality_temporal",
+        "parameters": {
+          "prior_precision": 1.0,
+          "temporal_precision": 4.0,
+          "spatial_precision": 0.0,
+          "low_quality_weight": 0.25,
+          "innovation_cutoffs": null,
+          "time_edge_cutoffs": null
+        }
+      },
+      {
+        "id": "quality_robust_temporal_p0.25_t1.0",
+        "family": "quality_robust_temporal",
+        "parameters": {
+          "prior_precision": 0.25,
+          "temporal_precision": 1.0,
+          "spatial_precision": 0.0,
+          "low_quality_weight": 0.25,
+          "innovation_cutoffs": [
+            0.4,
+            0.2
+          ],
+          "time_edge_cutoffs": null
+        }
+      },
+      {
+        "id": "quality_robust_temporal_p0.25_t4.0",
+        "family": "quality_robust_temporal",
+        "parameters": {
+          "prior_precision": 0.25,
+          "temporal_precision": 4.0,
+          "spatial_precision": 0.0,
+          "low_quality_weight": 0.25,
+          "innovation_cutoffs": [
+            0.4,
+            0.2
+          ],
+          "time_edge_cutoffs": null
+        }
+      },
+      {
+        "id": "quality_robust_temporal_p1.0_t1.0",
+        "family": "quality_robust_temporal",
+        "parameters": {
+          "prior_precision": 1.0,
+          "temporal_precision": 1.0,
+          "spatial_precision": 0.0,
+          "low_quality_weight": 0.25,
+          "innovation_cutoffs": [
+            0.4,
+            0.2
+          ],
+          "time_edge_cutoffs": null
+        }
+      },
+      {
+        "id": "quality_robust_temporal_p1.0_t4.0",
+        "family": "quality_robust_temporal",
+        "parameters": {
+          "prior_precision": 1.0,
+          "temporal_precision": 4.0,
+          "spatial_precision": 0.0,
+          "low_quality_weight": 0.25,
+          "innovation_cutoffs": [
+            0.4,
+            0.2
+          ],
+          "time_edge_cutoffs": null
+        }
+      },
+      {
+        "id": "quality_robust_graph_p0.25_t1.0",
+        "family": "quality_robust_graph",
+        "parameters": {
+          "prior_precision": 0.25,
+          "temporal_precision": 1.0,
+          "spatial_precision": 0.5,
+          "low_quality_weight": 0.25,
+          "innovation_cutoffs": [
+            0.4,
+            0.2
+          ],
+          "time_edge_cutoffs": null
+        }
+      },
+      {
+        "id": "quality_robust_graph_p0.25_t4.0",
+        "family": "quality_robust_graph",
+        "parameters": {
+          "prior_precision": 0.25,
+          "temporal_precision": 4.0,
+          "spatial_precision": 0.5,
+          "low_quality_weight": 0.25,
+          "innovation_cutoffs": [
+            0.4,
+            0.2
+          ],
+          "time_edge_cutoffs": null
+        }
+      },
+      {
+        "id": "quality_robust_graph_p1.0_t1.0",
+        "family": "quality_robust_graph",
+        "parameters": {
+          "prior_precision": 1.0,
+          "temporal_precision": 1.0,
+          "spatial_precision": 0.5,
+          "low_quality_weight": 0.25,
+          "innovation_cutoffs": [
+            0.4,
+            0.2
+          ],
+          "time_edge_cutoffs": null
+        }
+      },
+      {
+        "id": "quality_robust_graph_p1.0_t4.0",
+        "family": "quality_robust_graph",
+        "parameters": {
+          "prior_precision": 1.0,
+          "temporal_precision": 4.0,
+          "spatial_precision": 0.5,
+          "low_quality_weight": 0.25,
+          "innovation_cutoffs": [
+            0.4,
+            0.2
+          ],
+          "time_edge_cutoffs": null
+        }
+      },
+      {
+        "id": "quality_robust_adaptive_graph_p0.25_t1.0",
+        "family": "quality_robust_adaptive_graph",
+        "parameters": {
+          "prior_precision": 0.25,
+          "temporal_precision": 1.0,
+          "spatial_precision": 0.5,
+          "low_quality_weight": 0.25,
+          "innovation_cutoffs": [
+            0.4,
+            0.2
+          ],
+          "time_edge_cutoffs": [
+            0.4,
+            0.2
+          ]
+        }
+      },
+      {
+        "id": "quality_robust_adaptive_graph_p0.25_t4.0",
+        "family": "quality_robust_adaptive_graph",
+        "parameters": {
+          "prior_precision": 0.25,
+          "temporal_precision": 4.0,
+          "spatial_precision": 0.5,
+          "low_quality_weight": 0.25,
+          "innovation_cutoffs": [
+            0.4,
+            0.2
+          ],
+          "time_edge_cutoffs": [
+            0.4,
+            0.2
+          ]
+        }
+      },
+      {
+        "id": "quality_robust_adaptive_graph_p1.0_t1.0",
+        "family": "quality_robust_adaptive_graph",
+        "parameters": {
+          "prior_precision": 1.0,
+          "temporal_precision": 1.0,
+          "spatial_precision": 0.5,
+          "low_quality_weight": 0.25,
+          "innovation_cutoffs": [
+            0.4,
+            0.2
+          ],
+          "time_edge_cutoffs": [
+            0.4,
+            0.2
+          ]
+        }
+      },
+      {
+        "id": "quality_robust_adaptive_graph_p1.0_t4.0",
+        "family": "quality_robust_adaptive_graph",
+        "parameters": {
+          "prior_precision": 1.0,
+          "temporal_precision": 4.0,
+          "spatial_precision": 0.5,
+          "low_quality_weight": 0.25,
+          "innovation_cutoffs": [
+            0.4,
+            0.2
+          ],
+          "time_edge_cutoffs": [
+            0.4,
+            0.2
+          ]
+        }
+      }
+    ],
+    "strengths": [
+      0.0,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "fit": "No learned prior refitting or raw-train feature inputs",
+    "precision": "lambda_prior I + observed precision + temporal and compressed undirected spatial Laplacians",
+    "quality": "Strict finite observations weight1; extra values weight .25*min(pct/.75,1)^2 with known quality",
+    "robustness": "Fixed normalized innovation cutoffs speed .4, lane-flow .2; same cutoffs optionally gate time edges",
+    "solver": "Jacobi-preconditioned CG rtol1e-8, max400; verify actual relative residual<=2e-8",
+    "selection": "Highest calibration pooled State, ties favor strength0/lower strength; architecture/hyperparameters cal only",
+    "joint_selection": "Minimum incomplete target-touching increment L1, cal State >= frozen prior -.001",
+    "assessment": "Existing public-train development dates; all choices sealed before reading assessment caches",
+    "causality": "Offline State with bidirectional observations; prohibited as future Queue features",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null
+  }
+}

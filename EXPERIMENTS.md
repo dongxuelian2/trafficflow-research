@@ -2,6 +2,22 @@
 
 所有模拟指标、观测代理与正式 Kaggle 指标分别记录。失败实验不删除，既有模型与提交不覆盖。
 
+最新A58–A65完成；没有新State晋级或正式成绩。同化不重新训练先验，仅选择cal precision/strength；含CPU求解及GPU冻结先验推断。
+
+| 编号 | 假设 / 对照 | 实测结果 | 资源 / 决策 |
+|---|---|---|---|
+| A58初次 | 原条件先验残差同化 | 第一份cal输入前时间单位验证失败，无分数/模型 | 原注册与start snapshot保留；显式转ns修复 |
+| A58修复 | I210_W秋，20配置×3strength+原对照 | 所有因素组都cal选原先验；assessment .933577不变 | 39.94秒；不测未选非零assessment方案 |
+| A59 | I5_N冬，相同配置网格 | primary .954329→.954406，gain .000076；joint gain .000003 | 118.90秒；增益过小，不晋级 |
+| A60 | I210_W秋，5组遮观测anchor center | 原观测/目标先验逐值不变；cal仍选α=0 | 146.01秒；额外推断未取得收益 |
+| A61 | I5_N冬，相同遮观测中心规则 | .954329→.954453，gain .000124、日均CI [.000059,.000151] | 472.95秒；proxy比A59 primary更差，不晋级 |
+| A62 | I405_N冬，普通中心跨方向 | .933986→.933992，gain .000005、日均CI跨零 | 223.48秒；不晋级 |
+| A63 | I405_N冬，5组遮观测跨方向 | .933986→.934099，gain .000112、日均CI [.000075,.000156] | 769.57秒；远低于gate，不晋级 |
+| A64 | 三paired策略的输入/数值/误差对照 | 三组各28日prior/strict/quality/edges完全一致；3836次channel CG成功 | cal选择参数不同，非单一模块归因；旧proxy口径保留 |
+| A65 | public TRAIN full-label/Mode A coverage缓存 | 120日全部input/target不变；额外eligible buffer anchors=0；fit旧损失177808对不计入公开coverage | 75.68秒CPU；未训练，没有模型增益 |
+
+时间为完整实验的实测wall time，多任务存在并行，不能作为隔离吞吐比；遮观测机制本身需额外五次全帧先验推断。每项保留注册、源快照、selection seal和部署模型。各不同文件SHA的模型都在14日cal独立推断；相同角色SHA共享复跑明确记录。直接求解对照仅为真实24-slot子集，全grid另有CG残差证书；不扩大验证范围。59 research /51 CPU tests、3 Torch skips；正式Total仍 .82940。full-coverage density loss已实现并手算验证，但未训练；测试编辑边界错误导致一次58 passed/1 failed，原snapshot保留，复跑59 passed，没有修改实验分数。
+
 最新完成 A51–A57；formal Total 仍 .82940，未晋级新 State 或声称 Physics 提升。
 
 | 编号 | 假设 / 对照 | 实测结果 | 资源 / 决策 |

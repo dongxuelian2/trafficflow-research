@@ -1,0 +1,2603 @@
+{
+  "registered": {
+    "protocol_sha256": "baf95594656eac1d7a29ccd67f8222f824e85f99bfbbcbd69f14b56f805c7608",
+    "protocol": {
+      "id": "Public_train_full_observation_density_loss_labels",
+      "parent_prepared_sha256": "3cf05de19568a092a7d05181040869f95cc755784bdba5731a907a88bce0c25b",
+      "panel": "D7_I210_W",
+      "fold": "rolling_autumn",
+      "coverage_mode": "A",
+      "inputs": "Every parent input/target/label array copied unchanged; full truth exists only in label arrays",
+      "labels": "Normalized raw eligible public TRAIN v/q, q per network lane; non-target evaluator anchors include released-input buffer blanks",
+      "pair_coverage": "Eligible adjacent <=5.1min endpoints, observable internal topology, Mode A public on/off ramp validity at interval start",
+      "boundary_flux_accessed": false,
+      "formal_Physics": null,
+      "formal_Total": null
+    }
+  },
+  "source_snapshot": {
+    "archive": "artifacts/research/A65_full_public_density_labels_I210_W_autumn/source_snapshot.zip",
+    "archive_sha256": "6dffec0faa7ed3e3ae617718069755fe5ff9036db3b577bda3f5c2da80867e47",
+    "captured_files": [
+      {
+        "path": "config/research_protocol_v2.json",
+        "sha256": "dd7318f99e56b826d42eac58ab9c3213803db8f6c740ed843d95879835703121"
+      },
+      {
+        "path": "config/research_targets.json",
+        "sha256": "9a524c7c728cf6ed7ab4920592541e38fe720b36a0879c6f488a77b833e3452f"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "8cd1033d7ceeaa616319d900e5a9990445f3881665420cf4cd9715941b0e52f5"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "db90c0f17353c586ec2b51f9f42748c254e2e6563e7aebff81b7dbf9a3e82ccd"
+      },
+      {
+        "path": "requirements.lock.txt",
+        "sha256": "f4c8602ed3a0c29541e42d23547672864aa487fe2fcf24f8cf2d140f53c16fde"
+      },
+      {
+        "path": "requirements.research.lock.txt",
+        "sha256": "12f5a3bd24e186a0c71512b18eea44548159ec37088546efd7cc3c14c95fae8c"
+      },
+      {
+        "path": "scripts/adaptive_graph_experiment.py",
+        "sha256": "20f067bb639496004300446f8ba8705824cae80b2e91225e5fe6abcb609a3570"
+      },
+      {
+        "path": "scripts/adaptive_graph_transfer.py",
+        "sha256": "b50f19a6427d6c3d7e8facddb071dbc22dc5cf3641b10f889dc2b4bfb2d40ec8"
+      },
+      {
+        "path": "scripts/adaptive_seed_ensemble_experiment.py",
+        "sha256": "3cf00abec0e697a7631c9b16d259ff4c966c88dfad5d23550834edf14999a1c3"
+      },
+      {
+        "path": "scripts/assemble_campaign.py",
+        "sha256": "e5b103ba8501775e049e14c89e3854e5e2a56b93942505330b5317d8023d6a5d"
+      },
+      {
+        "path": "scripts/assess_adaptive_ablation.py",
+        "sha256": "1ae73d734afe77a227629254cb67e002045a2894f094ed6bcc3e094d9297f442"
+      },
+      {
+        "path": "scripts/assess_joint_density.py",
+        "sha256": "92258a57238facc5153cc8c98c422ed71e92f69b0ae4ecada5a4edf77f00c2e6"
+      },
+      {
+        "path": "scripts/audit_kaggle_baseline.py",
+        "sha256": "3a8f78d8cb154fb1d4b25ed902d81e44b9665f4628162f3342641071b679193a"
+      },
+      {
+        "path": "scripts/audit_od_identifiability.py",
+        "sha256": "bce792650d2dfc0a5268a9e012aeaa846c87715620ee3e3e3a6e0659d4885c36"
+      },
+      {
+        "path": "scripts/audit_od_path_choice.py",
+        "sha256": "a4f66b3c5f96ad5639567dbd66ca0dfe3185e355b660b5a6c43282e4ea075bdc"
+      },
+      {
+        "path": "scripts/audit_physics_topology.py",
+        "sha256": "5afabe6d2e6920fdda75988c936d44adcabbb3f57110552d4c269ea7949d308a"
+      },
+      {
+        "path": "scripts/audit_public_missing_runs.py",
+        "sha256": "a75e7de2f4314f42214d17c63f213a85cd943f7074bc6f0c82094df06aa825ae"
+      },
+      {
+        "path": "scripts/audit_quality_state_context.py",
+        "sha256": "eab5635ee306051b7a391dc0f205f6bbcd7be009caf7ea22842c14bba75f1cb3"
+      },
+      {
+        "path": "scripts/audit_queue_origin.py",
+        "sha256": "dba7d16f51c6df6c6506a9e418d5aa3e3d7bdbe1693253772266bd170e36c242"
+      },
+      {
+        "path": "scripts/audit_released_onset_timing.py",
+        "sha256": "2cebf3e33c09f3a0f5e0f8e199ef58c84f0d39a93cfd303bf0f9e4b1e7647f68"
+      },
+      {
+        "path": "scripts/audit_state_increment_coverage.py",
+        "sha256": "aed74a5d49250e3c7c92bfbb203eb1c731d86387d5f5bdcceffd3015182fdd94"
+      },
+      {
+        "path": "scripts/build_adaptive_state_candidate.py",
+        "sha256": "c2cb1fd567c1b8fd9ae22871407610d2393ea33ac9693f9cee655e3e9a50a337"
+      },
+      {
+        "path": "scripts/build_bayesian_od_candidate.py",
+        "sha256": "5cc8d8b513e668e269510447c508facd640f97b85335da77d69f3e289bb9a8be"
+      },
+      {
+        "path": "scripts/build_od_expert_candidate.py",
+        "sha256": "85cd7dd8827d5375b42799091c67f6495c00ec16d68af6d425bb30db9d0dac1b"
+      },
+      {
+        "path": "scripts/build_onset_timing_candidate.py",
+        "sha256": "8a5486d7e8b7c9dba17e2c163fd76f122f2e38becae95abd769eefca7851b86d"
+      },
+      {
+        "path": "scripts/campaign.py",
+        "sha256": "06cea939655896f9cef2ad404491d9418313c5cf1f0e525b20288a855a774418"
+      },
+      {
+        "path": "scripts/capture_environment.py",
+        "sha256": "5be825c14d82da31a2ca57459f8c6eead4f13ba2030f5488c465388a8e82d4f8"
+      },
+      {
+        "path": "scripts/causal_graph_queue_experiment.py",
+        "sha256": "5cb9e9a4c8d4482a53f7ebdefad43b6db4ef50a53bb1297bbfdc4598b5cdcace"
+      },
+      {
+        "path": "scripts/check_public_competition.py",
+        "sha256": "5c69ba4b041bc668b6cfad397fe2c9c584003910757e68908137e320d92c0a64"
+      },
+      {
+        "path": "scripts/checkpoint_ctm_od_phase.py",
+        "sha256": "63295f1e9926c1a8c5e15f31ab6a3e21ead79d75be9f1201cbd763ab948bb383"
+      },
+      {
+        "path": "scripts/checkpoint_quality_density_phase.py",
+        "sha256": "de2ab9295c0519c6e189a2f0f3b65b4e02027a7bd67997df1746aa11e219bbe2"
+      },
+      {
+        "path": "scripts/compare_entropy_numeric_repair.py",
+        "sha256": "a38f9204e0078fc443e9a3e48ac8e772159ae645cb3ae222d0ffb049cdb5811c"
+      },
+      {
+        "path": "scripts/compare_queue_events.py",
+        "sha256": "d9d2e9e47eb2f21b1738d4e2d1ba762a776fc849bbfc4bde4c1fc8785b068194"
+      },
+      {
+        "path": "scripts/compare_state_assimilation.py",
+        "sha256": "d89b87a83ecb5a05bae4be3cf4f137d2625d639bca4dac723d94b92d31415a1c"
+      },
+      {
+        "path": "scripts/compare_state_direction_budgets.py",
+        "sha256": "47ff0bb82e2500aace15a72ca80b76719b657dd06492b8b60b09b31fce2803e4"
+      },
+      {
+        "path": "scripts/compare_state_label_budgets.py",
+        "sha256": "b7c27482c11904cbc0aa06fc86cfd692037e057985acdb93f00ff4e38da81b40"
+      },
+      {
+        "path": "scripts/cross_corridor_transfer.py",
+        "sha256": "e3ef2d288bfc617ea7985712be7c714de9e36ed947b59bc2bd81e3e5113b7c6a"
+      },
+      {
+        "path": "scripts/ctm_adaptive_stress.py",
+        "sha256": "a577fada1eef7532bfd06fafc71675087ed2374aa32916954ee62dbcf4d5ad62"
+      },
+      {
+        "path": "scripts/ctm_contiguous_stress.py",
+        "sha256": "24fcb6625ee2f64e1b5267c6c3fab292dc78ddb2d3b6d02241c1ec6f815b95ae"
+      },
+      {
+        "path": "scripts/ctm_profile_ablation.py",
+        "sha256": "5a65e47430782893da7bae8792995d7b63ae9cf45fe38f895715ac011ddbb5d6"
+      },
+      {
+        "path": "scripts/density_increment_experiment.py",
+        "sha256": "7c76be4eb9f893ff71a70f62ae47ac4f7b8cba8a8add1da1a9ebdbba074552fa"
+      },
+      {
+        "path": "scripts/density_interpolation_experiment.py",
+        "sha256": "98b586eed1bf49beea00db0b5b0473b6159d2e6e198bad4f7b9902a9847d6903"
+      },
+      {
+        "path": "scripts/diagnose_adaptive_scenarios.py",
+        "sha256": "fd73578210b6ab6a51984019f86d16f9c9fdd088ebc72261da20295ed692b0fe"
+      },
+      {
+        "path": "scripts/diagnose_entropy_failure.py",
+        "sha256": "1c8e0b00933b2132eedb92cd0ddc3fb1aab8125b6f3a6994913818b6ff0c3ff4"
+      },
+      {
+        "path": "scripts/diagnose_failed_od_control.py",
+        "sha256": "bed0ecbfa0b21880ad852919b0285280fa2659f95c9a6513840baf3e22ab7b58"
+      },
+      {
+        "path": "scripts/diagnose_graph_density.py",
+        "sha256": "f6e48f203331ed2dddbd6917d2932fc8682cf4daa9da8d6e9a5c7ee52e75116f"
+      },
+      {
+        "path": "scripts/download_data.py",
+        "sha256": "c746052ff8192acd1679976da70faf2f54ae94d2370e2dda4e105bca08fee4b9"
+      },
+      {
+        "path": "scripts/entropy_od_experiment.py",
+        "sha256": "639c6fde371c078759d557025dd60943ac7c6d170fef046c9866d0a7efa9689b"
+      },
+      {
+        "path": "scripts/entropy_od_uncertainty.py",
+        "sha256": "dcc088faa752d137a3f73c993cf272280879185ad9e38ea6b127e82d6b1bfd9f"
+      },
+      {
+        "path": "scripts/export_adaptive_state_model.py",
+        "sha256": "631e109610a04aa4a5b0cef3b6b0a22e3acca28ea1f08659669bf55c2e7ca089"
+      },
+      {
+        "path": "scripts/freeze_first_submission.py",
+        "sha256": "17eb0cf856c43a0199c0bf73fcc4d100c76d818b2d1130f00b16f466bc4cc6cb"
+      },
+      {
+        "path": "scripts/freeze_research_models.py",
+        "sha256": "fd75a0e4f22f648e7daf55c8374aa9d174d11f0659b74d12665b800d09e4202c"
+      },
+      {
+        "path": "scripts/inspect_official_release.py",
+        "sha256": "17bc64125a2843f2af1eefc01ef22e930c22201df997eec99bedd021d1e32c7f"
+      },
+      {
+        "path": "scripts/large_baseline_graph_comparison.py",
+        "sha256": "ab3f399a46ca8366418ccca2a748124cd706a176706a20d7b491242c810ed75b"
+      },
+      {
+        "path": "scripts/matched_queue_cache.py",
+        "sha256": "bbd42d02b645514d38faf062917e19e08ebe551096e547ca93fe92266061df19"
+      },
+      {
+        "path": "scripts/od_expert_experiment.py",
+        "sha256": "b26a6457c0390bedbe85e9a5a29f2a4c403bff499ff539cd230f71f7cfc0fbb2"
+      },
+      {
+        "path": "scripts/od_prior_misspecification.py",
+        "sha256": "053dc64b2e9b8fb04ac1514d9991d8ddcbae9ab677e69a8dbc7fbd77045a7917"
+      },
+      {
+        "path": "scripts/od_probability_experiment.py",
+        "sha256": "fbb8ade089cec3fdd03b6f40687b4f8ef022c7766dc7c1c4011e6b7df3326c00"
+      },
+      {
+        "path": "scripts/physics_tradeoff.py",
+        "sha256": "b653cf6254196850113cbdb61a1afb5bf184900e6a5ad5d07a24151436e6c9f9"
+      },
+      {
+        "path": "scripts/plot_matched_research_comparisons.py",
+        "sha256": "bb2cdab5325243359d6a53f27c1814851b38d6ab85b3f0167d561c2995f19bef"
+      },
+      {
+        "path": "scripts/plot_strong_baseline_comparison.py",
+        "sha256": "060b1292bc663f0ba5d1fd352afd30fb0edc5badc83c1a42b3e4b4b23435c10b"
+      },
+      {
+        "path": "scripts/prepare_full_density_labels.py",
+        "sha256": "aaeae325549a2f3e885c75cb584037b6669902c1ab4fedb50a1c7655de116979"
+      },
+      {
+        "path": "scripts/prepare_graph_experiment.py",
+        "sha256": "86a2d2bcc60c9cd408839d8883834aa75c089c176257bed551ff1d028ee320ac"
+      },
+      {
+        "path": "scripts/prepare_production_graph_state.py",
+        "sha256": "af640a34bf6f44a42e08fd50c06d9585acc1adadd160db867e4551ea16a71525"
+      },
+      {
+        "path": "scripts/prepare_quality_state.py",
+        "sha256": "b6e2bcde753916c9e73ced210900438ba217b35118e51044e8d22ea98638de90"
+      },
+      {
+        "path": "scripts/promote_models.py",
+        "sha256": "b41f8af5fb9f5394595a1c1ded9b534ed89d2c41b85b7a3e3788b2d275c71339"
+      },
+      {
+        "path": "scripts/quality_state_experiment.py",
+        "sha256": "0a5bd90efe8b95427f811cee6577cdad8323f631ba5bb6d6eaa6823fa1b3fa10"
+      },
+      {
+        "path": "scripts/queue_event_experiment.py",
+        "sha256": "520d24e1f1e5fcde8166f3df16f437276b7185665a8e9394c6ac59a4823b0242"
+      },
+      {
+        "path": "scripts/queue_origin_experiment.py",
+        "sha256": "7cd00e8b0134ed1282353e9162ce6af7da20d1a3d0739ab2ec12b43f79891954"
+      },
+      {
+        "path": "scripts/queue_refinement.py",
+        "sha256": "4747af3e5e09d4e23b7d28856ed66732e54ad1d3586b7df067eb49aeffcc1dd1"
+      },
+      {
+        "path": "scripts/queue_research.py",
+        "sha256": "34e3fe815c5130431a512df258cfbfd0cb39c7b64b769950d76f20a9983fff5a"
+      },
+      {
+        "path": "scripts/queue_specialist_experiment.py",
+        "sha256": "b7f8ab609aa392a1308117e827919692dbe60137185fb6ec68a2334cbddaedc4"
+      },
+      {
+        "path": "scripts/queue_wave_graph_experiment.py",
+        "sha256": "ebc0ba895a29d5887cdee52b0dab665a8cf9f2370e3a110b2b6930e746ccb245"
+      },
+      {
+        "path": "scripts/queue_weight_calibration_experiment.py",
+        "sha256": "f2545c56581b388e724327a4c623d89ae18ea07efcc80d63e3e66fc94c6ce48d"
+      },
+      {
+        "path": "scripts/read_public_pages.py",
+        "sha256": "2056d46920d3b9f73b1268b86d122ac4daf318e72c298527b4b66376ac26e165"
+      },
+      {
+        "path": "scripts/record_formal_scores.py",
+        "sha256": "ee78da8b99edc9928c781c341f05af33dd28098ae313113879e8b3e3aad5fa0f"
+      },
+      {
+        "path": "scripts/record_local_state_controls.py",
+        "sha256": "55c6c8b9218207fbd51d0c1d3238c653272c0ed319064928065125eb98dbad9b"
+      },
+      {
+        "path": "scripts/record_onset_control_bounds.py",
+        "sha256": "0f18f8290e22a3a9b15f4287416bc9cbcf071a106d46909ee1962a5f1cc7f728"
+      },
+      {
+        "path": "scripts/refine_queues.py",
+        "sha256": "4af45c3a458feec60d6f7786166ef2cf0fb747fce492955ec4112312352f665d"
+      },
+      {
+        "path": "scripts/register_research_protocol.py",
+        "sha256": "2367504189c87f2103e10dfd99147ffcc9beba2f9d82409c38e92d4c5e2c3077"
+      },
+      {
+        "path": "scripts/run_official_diagnostics.py",
+        "sha256": "73221ca5f6014f8d7a011698fe0845d9448581c3896855b7dc19e1f47873a7e8"
+      },
+      {
+        "path": "scripts/run_official_state_baselines.py",
+        "sha256": "3ddd7eea81f350d50973813c50e4c0d90a184624d271aa64859c1c74c33a9e70"
+      },
+      {
+        "path": "scripts/scenario_audit.py",
+        "sha256": "3e2d7151d7587199aa672b78eee9dfbbfb8ac82e038afb22eb09f3488e1c7a19"
+      },
+      {
+        "path": "scripts/simulate_stress.py",
+        "sha256": "d0c4697c44f1c65848d83c1e396b9562d4151ad294f560b1576bcc6c49012140"
+      },
+      {
+        "path": "scripts/stage_zip_panel.py",
+        "sha256": "4ec5b59e058c52012bda91ff140fbc9620209bbf114aa5eb5ffbc259b4c69c15"
+      },
+      {
+        "path": "scripts/state_assimilation_experiment.py",
+        "sha256": "26a1ecf243bb30a10259b100df6d4f2dd317939e4707c6f4a1b3542d9a97c2ba"
+      },
+      {
+        "path": "scripts/state_budget_suite.py",
+        "sha256": "d6fd23b3aacd79a6cdad38bbf0f3d845e0307dc4b4b7471ef279980035652477"
+      },
+      {
+        "path": "scripts/state_label_budget_control.py",
+        "sha256": "7cb05ba6e67f39106ea009468ce9215aebab9aec0c9a90295fe8641d3c7e4dbd"
+      },
+      {
+        "path": "scripts/state_research.py",
+        "sha256": "7f9043c7d753a5a6540ef81291ae7e3e00879ca330aea94f833b7017f29a759e"
+      },
+      {
+        "path": "scripts/state_temporal_extension.py",
+        "sha256": "0ef7550a56904fc953a6deaa814f7ebad67e9aa7f91817f087fe5fb58db26b9b"
+      },
+      {
+        "path": "scripts/strong_density_state_experiment.py",
+        "sha256": "faa4e2a0cb63a2e053ecf20a6a77a8c9c4f74960c3d39e145c9c0e41f138a7de"
+      },
+      {
+        "path": "scripts/submit_controlled_candidate.py",
+        "sha256": "72c67e384f488fd5e7afa454526e42aab56b43aef7d3671d91acf04a42997876"
+      },
+      {
+        "path": "scripts/summarize_adaptive_research.py",
+        "sha256": "82c2832a34ee9cd39f20ead401994c2dcf7f15d0cebe19cb67fd4476000c720a"
+      },
+      {
+        "path": "scripts/summarize_campaign.py",
+        "sha256": "e09f36b6188d6a23698f0a27873fece09ba6fd3db1e2cd5ae767e4865d7c101f"
+      },
+      {
+        "path": "scripts/summarize_ctm_adaptive.py",
+        "sha256": "fe548c56eef38fe78b378056f8def6a4213a8c526336808faa880947c68547bf"
+      },
+      {
+        "path": "scripts/summarize_research_v2.py",
+        "sha256": "4f2239fb78d2d88de9117d289099874b41dc6f017b6c104e557cad168b0a8f17"
+      },
+      {
+        "path": "scripts/summarize_results.py",
+        "sha256": "3ede418e5a835ad3956b0332c335a54a4157654be9db16d4cde6411b5b12880c"
+      },
+      {
+        "path": "scripts/train_graph_experiment.py",
+        "sha256": "7036d5b3f14d5dd39de22b1aa94284285010359114deb3f38ead5461b6e5e04e"
+      },
+      {
+        "path": "scripts/train_production_adaptive_state.py",
+        "sha256": "6982e036ade77a7d8c5a950572619c5a9655d47c142fbce3cb125404955fed9d"
+      },
+      {
+        "path": "scripts/verify_controlled_candidate.py",
+        "sha256": "bc2c4155403cd3af602dbbed3328590b5dd86bbf446183ec394744684f752df9"
+      },
+      {
+        "path": "scripts/verify_entropy_uncertainty.py",
+        "sha256": "747adfc0ca342b6148f730935394afef929aa7a56850b8cf82291987523c728e"
+      },
+      {
+        "path": "scripts/verify_graph_repeat.py",
+        "sha256": "2ec216b7fe481f52199b92b28baa40efbe3bde74ae19a17a86904d6f7d1189e9"
+      },
+      {
+        "path": "scripts/verify_quality_state.py",
+        "sha256": "6cf7c7780cf77d6f203aebb3f517d12ce11655c26fbb433a1ee2add0e710b764"
+      },
+      {
+        "path": "scripts/verify_queue_shared_repeat.py",
+        "sha256": "dd14df8d431667ffba2b6b9eb82a8e5169b6a57d4ee7e8e96dba40d2c25296d2"
+      },
+      {
+        "path": "scripts/verify_sparse_profile_phase.py",
+        "sha256": "2561cd5fef5041afe9baa71d27086d3d9bb0fd86d0901783d9079f0cabdc1261"
+      },
+      {
+        "path": "scripts/verify_state_assimilation.py",
+        "sha256": "f5d98ebe50be14b01f4172ae2befadd49df3dfcbfdb95e30e3eadf3d52ab8024"
+      },
+      {
+        "path": "scripts/verify_vendor.py",
+        "sha256": "232658ffcb66d34aea7c686d64e20bad86f7c172b0f900114dd683c5fd90bb85"
+      },
+      {
+        "path": "scripts/write_results.py",
+        "sha256": "efb8a4e80afdfaca2096ea7d2f65743e863b38c18dc41bac52fcdce07a70c83d"
+      },
+      {
+        "path": "scripts/zero_aware_od_experiment.py",
+        "sha256": "1b422f735023c0b6e82038f55d1c17906871546affe642c10b60d45d214e4068"
+      },
+      {
+        "path": "src/trafficflow/__init__.py",
+        "sha256": "6432d23e18693162d87e81e22ac8f25158369302b9dc209d21154dba1351e7a8"
+      },
+      {
+        "path": "src/trafficflow/__main__.py",
+        "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+      },
+      {
+        "path": "src/trafficflow/adaptive_graph_state.py",
+        "sha256": "52e7bbe95a36000f14a4a9d00e9629a0dd05eff023854b730b27c0ec6289e785"
+      },
+      {
+        "path": "src/trafficflow/bayesian_od.py",
+        "sha256": "5c5c76ab2848437af546a5fc3985f568b61c7a39dd3dbdf2a5551e266f1a1139"
+      },
+      {
+        "path": "src/trafficflow/causal_queue.py",
+        "sha256": "b12f3098ce79dc465545106b6d429fce2818499edd518f1909047b3ccbcda1b2"
+      },
+      {
+        "path": "src/trafficflow/cli.py",
+        "sha256": "8bb044f21541e3d0f639f01e20fc47a358152ec0c918ae4d644e73c96d7e73d3"
+      },
+      {
+        "path": "src/trafficflow/ctm_state_adapter.py",
+        "sha256": "3afe56f0c577d5d3ae05ee0583ddb180842980a874876f99e046e275b7d5194c"
+      },
+      {
+        "path": "src/trafficflow/data.py",
+        "sha256": "f29fe070b21ac692b2cf9bd6d5b5fd018e94129b9626588325dd48edbd941ccd"
+      },
+      {
+        "path": "src/trafficflow/density_assimilation.py",
+        "sha256": "bbf771ae2d6ca93030aca029f3428fbb3f214cf4a5e39dca79925f08f7a30b46"
+      },
+      {
+        "path": "src/trafficflow/density_state.py",
+        "sha256": "ae91308f12b0c13d43f149d936a7c11704f712390f2fb593fbea5f053ff6a4b2"
+      },
+      {
+        "path": "src/trafficflow/digital_twin.py",
+        "sha256": "cfacb280f971faedceb2e404b35889891eef536a24a070804757ab6d92c49655"
+      },
+      {
+        "path": "src/trafficflow/entropy_od.py",
+        "sha256": "521a66563ff099aee9e3e50d180367ad25d7e90acdef174a1ed8d80b16337727"
+      },
+      {
+        "path": "src/trafficflow/experiments.py",
+        "sha256": "854abf59d2c560f84c704090741d6f8fce4ce6725d8a39139412194cc362a6ec"
+      },
+      {
+        "path": "src/trafficflow/fixture.py",
+        "sha256": "0709326abd7206a7ca1c3414dbb95c2d8c08749484802e2523d49c1ee7a2ef24"
+      },
+      {
+        "path": "src/trafficflow/graph_queue.py",
+        "sha256": "eaf91b8825c5f3e6491fb09413d9c5b8cdee04ecfd9c05feb6be5e8b00f65c46"
+      },
+      {
+        "path": "src/trafficflow/graph_state.py",
+        "sha256": "b32b4b81b7292472fab1eabbe183ebaae6ab295c6c7eb5ad4951719bfd8418cc"
+      },
+      {
+        "path": "src/trafficflow/increment_state.py",
+        "sha256": "52c6eb6a5cf959ac050f237a84cc8c487fae086fcec61a5aeac2fa5997185ea3"
+      },
+      {
+        "path": "src/trafficflow/metrics.py",
+        "sha256": "5f42eaa372894edfa1363135b61818e7ec4bf56110257a03aadf07de770aa346"
+      },
+      {
+        "path": "src/trafficflow/od_expert.py",
+        "sha256": "1dff245ae5d347e32d2b3b1473a129964cf28e5b259e93478cfad6cb4d5688bd"
+      },
+      {
+        "path": "src/trafficflow/od_uncertainty.py",
+        "sha256": "0df9a337b1b302952489a32517512a77ebc2c9420bee5d291dc92ad337bc85c3"
+      },
+      {
+        "path": "src/trafficflow/odme.py",
+        "sha256": "e61df62cbf3ff4af03069d6e028b2024ddee25578cc00558b2b04148370850ee"
+      },
+      {
+        "path": "src/trafficflow/physics.py",
+        "sha256": "3f559ca30157ebee155bb17ebdd42f0dc43a169ef6b45634ad875569beb03e30"
+      },
+      {
+        "path": "src/trafficflow/probability_calibration.py",
+        "sha256": "57f7c5487983a2572851331b20591ac21db15591d1dc85745706147ce3a657c7"
+      },
+      {
+        "path": "src/trafficflow/quality_state.py",
+        "sha256": "243757e80c651dfcf32c846b54e548afdd2f04215c612f725855497bb802a7d8"
+      },
+      {
+        "path": "src/trafficflow/queue.py",
+        "sha256": "62c35a4ed8e1e882d386461aba41cf8f5f3ed809451e51008e34f23e211240c5"
+      },
+      {
+        "path": "src/trafficflow/queue_calibration.py",
+        "sha256": "645cfb0a15418f23b0b04354600d08ef831a6db49197e149e984074fc414392d"
+      },
+      {
+        "path": "src/trafficflow/queue_event_loss.py",
+        "sha256": "5b155f8255080e0ee8823ab366ce8f7dfb1f2d067c196109834e0338395b631c"
+      },
+      {
+        "path": "src/trafficflow/queue_events.py",
+        "sha256": "10051eb26948ea7fbec94dd1cd4e37d68c4c0703efb152f35d03ebee372e25bb"
+      },
+      {
+        "path": "src/trafficflow/queue_graph_geometry.py",
+        "sha256": "bc1596ed66dbf9c02960f6b5f3c759385fcdef65f7b1e83e9481c1b9800c9cad"
+      },
+      {
+        "path": "src/trafficflow/queue_specialist.py",
+        "sha256": "915fce272c5d1c88eee37960cc5b1dee305119603509bb8bdc881bf6f64b303b"
+      },
+      {
+        "path": "src/trafficflow/research_eval.py",
+        "sha256": "197aa2c4d6091dbd551ca6d11f8a664e9feaa44c1fcaf568ec873185315ab3c9"
+      },
+      {
+        "path": "src/trafficflow/runtime.py",
+        "sha256": "c181d87a89ff8fa7ee92c00759e2674d77cd60a3ed0d407f1e52f0d2b95d197f"
+      },
+      {
+        "path": "src/trafficflow/state.py",
+        "sha256": "f7a8341d968ac55a6f87e01a439ce8dc8c014750afa61129c7175e733de23c17"
+      },
+      {
+        "path": "src/trafficflow/state_assimilation.py",
+        "sha256": "96291a9c9977924c6abff3e611ecf58125a586a9dfbdf9c70e090aa97ec4b85d"
+      },
+      {
+        "path": "src/trafficflow/state_ensemble.py",
+        "sha256": "2bbfa587a79401c90a43502faa5410e5323b11cafe36a02b9ce244e8fae8d749"
+      },
+      {
+        "path": "src/trafficflow/submission.py",
+        "sha256": "87607c555e86f020e83f1ed9ac4054e49f88dc35eedd36cd8bf8ba442f85f2dc"
+      },
+      {
+        "path": "src/trafficflow/zero_aware_od.py",
+        "sha256": "42192b9d19dcaa2fc7d7801cb4ef7782c3cb6d71a3c73736936b5a064a072f6d"
+      },
+      {
+        "path": "vendor/official/src/merge_submissions.py",
+        "sha256": "a8cd6c4c9f2cea777fde8f6b163c00835a4fb45672998b9fc71368810e792ee1"
+      },
+      {
+        "path": "vendor/official/src/release/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/release/score_overall.py",
+        "sha256": "b9b73e174eeb1ed742dd9cbd558f6b280a0bd14e7ec7001feb549f1b5fb9b4ee"
+      },
+      {
+        "path": "vendor/official/src/score_overall.py",
+        "sha256": "4a28d57a23950554a065f6254bf674f4a1b58b5d039f26bc5154dd28d28651fb"
+      },
+      {
+        "path": "vendor/official/src/task1/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_historical_mean.py",
+        "sha256": "66569dd55340d5e4509712e66172ea669893d7341a0ef2dd8c920c24f07209a1"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_structural_kf.py",
+        "sha256": "f3a63ba48bf867d993dd1b3cbc0da6ca4567da7aa519ed2b2e3fd93a61c06132"
+      },
+      {
+        "path": "vendor/official/src/task1/build_task1_baseline_submission.py",
+        "sha256": "cb91e19e20a5a546430917a884197c1ad6a7068c6a47d7fbec7fb8311b7237d7"
+      },
+      {
+        "path": "vendor/official/src/task1/score_task1.py",
+        "sha256": "bcd42e88fbc42cd499e93e3b50ddf367009b26b216df5ab3f710ee1d1d863163"
+      },
+      {
+        "path": "vendor/official/src/task2/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task2/build_task2_persistence_submission.py",
+        "sha256": "d3cb4ab23206c4c20058a074b24c23ba79b43dd4219f41e158329a39f5a3edd2"
+      },
+      {
+        "path": "vendor/official/src/task2/queue_utils.py",
+        "sha256": "cea193935e7af7ab1399b9955c3f26fcb65664a099344d35b9c3b91802b3135f"
+      },
+      {
+        "path": "vendor/official/src/task2/score_task2.py",
+        "sha256": "b5605ebae9b32b3ca974881be47b5f2e796728b94763a724314580fc93be28bb"
+      },
+      {
+        "path": "vendor/official/src/task3/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task3/build_task3_baseline_submission.py",
+        "sha256": "945ce4b28f264be6be35a1b8d0f67311bf666d5e6b516a5b79bb2617075e8bcf"
+      },
+      {
+        "path": "vendor/official/src/task3/score_task3.py",
+        "sha256": "98d88b6e7f6b7bb0e2bbb4b42e486d6690b6f14a5d3625649e85ddf828550409"
+      },
+      {
+        "path": "vendor/official/src/task4/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task4/build_task4_odme_artifacts.py",
+        "sha256": "5da75aea3004555bae080ee4d18f1baee01dbb9ed1caf7a6abadd2387e6ade58"
+      },
+      {
+        "path": "vendor/official/src/task4/score_task4.py",
+        "sha256": "be15d732438d305e3d35cb41d3105fc03e3fb9459e5c050af39fe192cede30e3"
+      }
+    ],
+    "n_files": 165,
+    "scope": "Own source, vendored official Python and dependency locks; no data, credentials or model weights"
+  },
+  "parent_cache": "artifacts/research/A51_quality_D7_I210_W_autumn_cache",
+  "panel": "D7_I210_W",
+  "fold": "rolling_autumn",
+  "dates": {
+    "profile": [
+      "2030-06-01",
+      "2030-06-02",
+      "2030-06-03",
+      "2030-06-04",
+      "2030-06-05",
+      "2030-06-06",
+      "2030-06-07",
+      "2030-06-08",
+      "2030-06-09",
+      "2030-06-10",
+      "2030-06-11",
+      "2030-06-12",
+      "2030-06-13",
+      "2030-06-14",
+      "2030-06-15",
+      "2030-06-16",
+      "2030-06-17",
+      "2030-06-18",
+      "2030-06-19",
+      "2030-06-20",
+      "2030-06-21",
+      "2030-06-22",
+      "2030-06-23",
+      "2030-06-24",
+      "2030-06-25",
+      "2030-06-26",
+      "2030-06-27",
+      "2030-06-28",
+      "2030-06-29",
+      "2030-06-30",
+      "2030-07-01",
+      "2030-07-02",
+      "2030-07-03",
+      "2030-07-04",
+      "2030-07-05",
+      "2030-07-06",
+      "2030-07-07",
+      "2030-07-08",
+      "2030-07-09",
+      "2030-07-10",
+      "2030-07-11",
+      "2030-07-12",
+      "2030-07-13",
+      "2030-07-14",
+      "2030-07-15"
+    ],
+    "fit": [
+      "2030-07-16",
+      "2030-07-17",
+      "2030-07-18",
+      "2030-07-19",
+      "2030-07-20",
+      "2030-07-21",
+      "2030-07-22",
+      "2030-07-23",
+      "2030-07-24",
+      "2030-07-25",
+      "2030-07-26",
+      "2030-07-27",
+      "2030-07-28",
+      "2030-07-29",
+      "2030-07-30",
+      "2030-07-31",
+      "2030-08-01",
+      "2030-08-02",
+      "2030-08-03",
+      "2030-08-04",
+      "2030-08-05",
+      "2030-08-06",
+      "2030-08-07",
+      "2030-08-08",
+      "2030-08-09",
+      "2030-08-10",
+      "2030-08-11",
+      "2030-08-12",
+      "2030-08-13",
+      "2030-08-14",
+      "2030-08-15",
+      "2030-08-16",
+      "2030-08-17",
+      "2030-08-18",
+      "2030-08-19",
+      "2030-08-20",
+      "2030-08-21",
+      "2030-08-22",
+      "2030-08-23",
+      "2030-08-24",
+      "2030-08-25",
+      "2030-08-26",
+      "2030-08-27",
+      "2030-08-28",
+      "2030-08-29",
+      "2030-08-30",
+      "2030-08-31",
+      "2030-09-01",
+      "2030-09-02",
+      "2030-09-03",
+      "2030-09-04",
+      "2030-09-05",
+      "2030-09-06",
+      "2030-09-07",
+      "2030-09-08",
+      "2030-09-09",
+      "2030-09-10",
+      "2030-09-11",
+      "2030-09-12",
+      "2030-09-13",
+      "2030-09-14",
+      "2030-09-15",
+      "2030-09-16",
+      "2030-09-17",
+      "2030-09-18",
+      "2030-09-19",
+      "2030-09-20",
+      "2030-09-21",
+      "2030-09-22",
+      "2030-09-23",
+      "2030-09-24",
+      "2030-09-25",
+      "2030-09-26",
+      "2030-09-27",
+      "2030-09-28",
+      "2030-09-29",
+      "2030-09-30",
+      "2030-10-01",
+      "2030-10-02",
+      "2030-10-03",
+      "2030-10-04",
+      "2030-10-05",
+      "2030-10-06",
+      "2030-10-07",
+      "2030-10-08",
+      "2030-10-09",
+      "2030-10-10",
+      "2030-10-11",
+      "2030-10-12",
+      "2030-10-13",
+      "2030-10-14",
+      "2030-10-15"
+    ],
+    "selection": [
+      "2030-10-16",
+      "2030-10-17",
+      "2030-10-18",
+      "2030-10-19",
+      "2030-10-20",
+      "2030-10-21",
+      "2030-10-22",
+      "2030-10-23",
+      "2030-10-24",
+      "2030-10-25",
+      "2030-10-26",
+      "2030-10-27",
+      "2030-10-28",
+      "2030-10-29"
+    ],
+    "assessment": [
+      "2030-10-30",
+      "2030-10-31",
+      "2030-11-01",
+      "2030-11-02",
+      "2030-11-03",
+      "2030-11-04",
+      "2030-11-05",
+      "2030-11-06",
+      "2030-11-07",
+      "2030-11-08",
+      "2030-11-09",
+      "2030-11-10",
+      "2030-11-11",
+      "2030-11-12"
+    ]
+  },
+  "records": [
+    {
+      "part": "fit",
+      "date": "2030-07-16",
+      "parent_day_sha256": "f8842e42c092edc70cc72203f0b01798f29175257b29f511eef8068c733ac87e",
+      "raw_TRAIN_label_source_sha256": "e86cf26013a4480aa4e6addacd42fe2dd1d0bfaa0689a8220638c631011858f8",
+      "full_label_cache_sha256": "e642dc92a8ac68a917d5fbae46a2b31e1d8723c20ca565b1945ec8dd1013e19d",
+      "days": 1,
+      "eligible_full_cells": 17748,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10321,
+      "target_touching_valid_pairs": 7780,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2739
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-17",
+      "parent_day_sha256": "4e0e360c6b48e0715616a0902274d4900142693adecbd68e403cf911b858c1ba",
+      "raw_TRAIN_label_source_sha256": "69a031e847b0f00dab39005ef9d35fdc1e0667488602af400c5dded84091b56a",
+      "full_label_cache_sha256": "855fc4dd6c10c7dc53fa41ef7c5d68b42368c2afcf61863c965eb5b41f18a74c",
+      "days": 1,
+      "eligible_full_cells": 17840,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10421,
+      "target_touching_valid_pairs": 7884,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2763
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-18",
+      "parent_day_sha256": "1bba032297e109f5b5251e3bb384070acd7ae0a602f2c1b8fbfe6431ad50cb53",
+      "raw_TRAIN_label_source_sha256": "bdc3af605fedde03b1c0b3c98e39845cfd2710584263aa3a8ca83778dac6f155",
+      "full_label_cache_sha256": "0e5dee78070a266c3f4030b0ddf103c1e7af76bd5f860ba61c8c42cdf533fcf4",
+      "days": 1,
+      "eligible_full_cells": 17841,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10430,
+      "target_touching_valid_pairs": 5260,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1893
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-19",
+      "parent_day_sha256": "fc73389a51db4f8542e2986af3138c34718440a99b87e249fc7d79c3eb7f105e",
+      "raw_TRAIN_label_source_sha256": "612f3d4256c7cc63ac2f899e74a1625b27d287a5b7ccae539cb422fa3ff01be5",
+      "full_label_cache_sha256": "825af814fe727f5b3eb67c401e4fa936c5e44705c6229f543b023a8931b3879a",
+      "days": 1,
+      "eligible_full_cells": 17922,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10435,
+      "target_touching_valid_pairs": 5372,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1852
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-20",
+      "parent_day_sha256": "7d0da23002f9ccd23a1a4d0b57ac11e07e5efd5f2356ede706395422318da1f5",
+      "raw_TRAIN_label_source_sha256": "a9138229b1c871dcbf9fed1dec4c6a9cc344f3b43477e67453b2935231031620",
+      "full_label_cache_sha256": "0285fc15eca5cf3d7de9e1a48665fb3a3bd78e1af6b161f53471b9f01e56e484",
+      "days": 1,
+      "eligible_full_cells": 17735,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10177,
+      "target_touching_valid_pairs": 5331,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2002
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-21",
+      "parent_day_sha256": "832d1dad3d13a422e77fd73036da3ef9b32a254e648a34c135331fcba2a96c07",
+      "raw_TRAIN_label_source_sha256": "082adb9bbaf1859da3a545676c1a34110005ab36744db5e3cc4daad061fe09ac",
+      "full_label_cache_sha256": "3a1e9dd42ccc459cc24c2c3aa77316f76c9de47e6af1e2e66e5042bc1f682bd1",
+      "days": 1,
+      "eligible_full_cells": 17862,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10358,
+      "target_touching_valid_pairs": 3685,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1356
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-22",
+      "parent_day_sha256": "843788c70ba4c3fbcc11646ef7c7f430da8bfbf07c8558d3202371c9db36ee01",
+      "raw_TRAIN_label_source_sha256": "6c564935ed053c47847a363bd0076f1e7acc62d3192940a8f01134daa489037e",
+      "full_label_cache_sha256": "5a992aa1c1a09a4d43fbf33e15af746d31f4501e421ba4df836baab3a5a02d8c",
+      "days": 1,
+      "eligible_full_cells": 18034,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10538,
+      "target_touching_valid_pairs": 3926,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1389
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-23",
+      "parent_day_sha256": "70452eeb3fb2923d61ce636fc17a90ba24a2edd2bd5a92eb802743d2a91d52c5",
+      "raw_TRAIN_label_source_sha256": "d9954030bd89d81751925ef5e8fc72387c41b261c48ddedbb15db9fda1269603",
+      "full_label_cache_sha256": "a6befee0b25ebecf03e5532cf3609be6f1df84ea98e7ae029463c26cb856ebdb",
+      "days": 1,
+      "eligible_full_cells": 17905,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10420,
+      "target_touching_valid_pairs": 5343,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1970
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-24",
+      "parent_day_sha256": "0de41108cb370403f0b85b878aad17d0929cc53306e6cebe5f1bc32f2958756c",
+      "raw_TRAIN_label_source_sha256": "d46c0daa02323fa21967ddda6d0652278ab8ae6e93f0a5a61c4c18ee3eccab81",
+      "full_label_cache_sha256": "766830b23c2171ef496fc37821a26251a2f6fbfb03572d22e43d4598b227d507",
+      "days": 1,
+      "eligible_full_cells": 17548,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10073,
+      "target_touching_valid_pairs": 5193,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1865
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-25",
+      "parent_day_sha256": "1bd91336803a6620bcdbd8b3dce2610503ac4fb3ee7f08b786c2282522c1feb6",
+      "raw_TRAIN_label_source_sha256": "bad66959d9d4d4d8dce853c9d8694a8b8050ee068ebb62e2d9a031ead10288c4",
+      "full_label_cache_sha256": "f19f3dd9e01a3e2d63b290da9ab36667b3f31057c5d2acb5238385b07815df9a",
+      "days": 1,
+      "eligible_full_cells": 17866,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10348,
+      "target_touching_valid_pairs": 5297,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1915
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-26",
+      "parent_day_sha256": "615451a3ae5d0835565a483319150a52a94fbe06afeef135c9be36f7f7682669",
+      "raw_TRAIN_label_source_sha256": "fc7ca9b5fb338b330aebfe9c56fb30ed895a9e68593c0adc03951bc54e1ad60e",
+      "full_label_cache_sha256": "4141b1b67fab9d9cc9c8520578643e6dac73d081f779fc844c5ca1256c406a33",
+      "days": 1,
+      "eligible_full_cells": 17768,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10211,
+      "target_touching_valid_pairs": 5191,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1924
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-27",
+      "parent_day_sha256": "f6b49887b4df3dde2a053d90857b6523ba0d5f102e3d896623245e7c37619cb9",
+      "raw_TRAIN_label_source_sha256": "aac9c5c0ef7da4b1a455a7edaf3918a35f4b6bf7a0e0c9746c3e3f2109edca82",
+      "full_label_cache_sha256": "1bbc7df49dbc547d3ed757549253d0274ec253ef201c6105123d64aaec3bf4c3",
+      "days": 1,
+      "eligible_full_cells": 17836,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10286,
+      "target_touching_valid_pairs": 5197,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1938
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-28",
+      "parent_day_sha256": "95bfa5438c9e0189480b123acf945b695e161e58f0580302cf9dd5b5e4df9ee2",
+      "raw_TRAIN_label_source_sha256": "819b157c580883d5b6e6cef4fc3c7947171de818a9fce6a14ea4035defe91f5a",
+      "full_label_cache_sha256": "e51c52a95b61b122a0e6154a277fda4a3e858b49b03a21acc35b75c054dfaab4",
+      "days": 1,
+      "eligible_full_cells": 18006,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10445,
+      "target_touching_valid_pairs": 5285,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1919
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-29",
+      "parent_day_sha256": "d457161342abbc63f536215b94ae0186d2bdb5030dfd2aa40456dda5a2197946",
+      "raw_TRAIN_label_source_sha256": "a9f0b392ef7b46b8a8d47fd194cdc9fcaec76812771a43b245af7d020a8ccabc",
+      "full_label_cache_sha256": "fe08095e30f5cbed3a7dd4584eb6967b5e6faf4746bac3219bee34798dc4ec1e",
+      "days": 1,
+      "eligible_full_cells": 17709,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10170,
+      "target_touching_valid_pairs": 5101,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1952
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-30",
+      "parent_day_sha256": "a6e6cf677ce4aab4a5dbe9e6ea0d409ca7a9bd960bddf2a1570ea8a5d0e8dd73",
+      "raw_TRAIN_label_source_sha256": "a636d3dd9d88c9e512e2d22863d55c6dff6638e78bbda9e6683b54d36927109b",
+      "full_label_cache_sha256": "e3dc6167791fdb285b3c4263dd2ab8b605442d1885f54206d991500f9f3134e1",
+      "days": 1,
+      "eligible_full_cells": 17817,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10308,
+      "target_touching_valid_pairs": 5234,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1866
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-31",
+      "parent_day_sha256": "eb9f868d355dedb975440c10a26843a2284e955e314425fead32df91835f4e02",
+      "raw_TRAIN_label_source_sha256": "87bd8deb1f4963b7cccecd9eaa7e0faacc1099b6e4ccfffb8f0c687d63454748",
+      "full_label_cache_sha256": "415e0bdb5f56b0742d6a0ac2fea534c11efdabbd941c82265f3f4cb63826d16e",
+      "days": 1,
+      "eligible_full_cells": 17951,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10440,
+      "target_touching_valid_pairs": 7957,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2900
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-01",
+      "parent_day_sha256": "d8a93261785fbd40f1ce0e2aff800cf0913c7062f57db9639c49fc0948edc7d3",
+      "raw_TRAIN_label_source_sha256": "0b3d140e53b658e184ad48166453c1f34725c5aea1cd16672f3b3c5bdc1bf790",
+      "full_label_cache_sha256": "ce5eb7a89f7f92188dd5bafd688825d948c71dc3cf9edc0410a853fe80a7850a",
+      "days": 1,
+      "eligible_full_cells": 17992,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10575,
+      "target_touching_valid_pairs": 5435,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1856
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-02",
+      "parent_day_sha256": "5a369f6ac3ac72401b33119b27dd1ac405c72c1c108acf5dd1ba5e4b7e4762ce",
+      "raw_TRAIN_label_source_sha256": "4b2474a388af4e3a22edb42d57a8e7851a50dd268bb5c8a2db3aa14a18f41cb2",
+      "full_label_cache_sha256": "69c8ef9be8b85bd368d03f2be6e3a93c98a17c10867339fbc0bbf264b29d107f",
+      "days": 1,
+      "eligible_full_cells": 17618,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10115,
+      "target_touching_valid_pairs": 7535,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2768
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-03",
+      "parent_day_sha256": "dcd0a5e5fd8d5f0c662ddf509d734edf3afd262f11051e49a64b0228cf73fa9f",
+      "raw_TRAIN_label_source_sha256": "cff87d564f04d3afbdeecb68cf2591c936df64093d12b253b9945446379adb25",
+      "full_label_cache_sha256": "b5104fad4cd2b2cdfc5acfaa1f7b2074b838cf2146db05d08bd326058ece4839",
+      "days": 1,
+      "eligible_full_cells": 17816,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10257,
+      "target_touching_valid_pairs": 5252,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1934
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-04",
+      "parent_day_sha256": "1b42e6438b2c95ff81e6a77a2b2c8696b1d3143339ac117a67538e7cd3945f87",
+      "raw_TRAIN_label_source_sha256": "dd823261f2dcfc5c00716d46589cf6c1f9f812e53a56b3c133c04e1b699f999f",
+      "full_label_cache_sha256": "b8a9a73c57dd58160c4f3ba087052c6c861f45a300a3c8e8adcf47cbd06d6dcf",
+      "days": 1,
+      "eligible_full_cells": 17721,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10355,
+      "target_touching_valid_pairs": 5280,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1821
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-05",
+      "parent_day_sha256": "f4ed42a18fa1f5aef05112b5d5ffd8edbca375ad224e512252c045cc8808134f",
+      "raw_TRAIN_label_source_sha256": "9cd05880729581f027f37570701b1d464bc996debe949e4fff53b5a3b74911d0",
+      "full_label_cache_sha256": "45171a09c6eba9cabca9e6753f77db438fd4bcd044997408de78669e1ac7fca0",
+      "days": 1,
+      "eligible_full_cells": 17830,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10231,
+      "target_touching_valid_pairs": 5227,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2069
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-06",
+      "parent_day_sha256": "df3163b68efb496766a1acac70be5d9cf2fd163b4bec7be00404a2877a9868e5",
+      "raw_TRAIN_label_source_sha256": "340902224f2f5fd93da8990e9c76d4c951f9a1a34d1ce227e5cf04e5000663e7",
+      "full_label_cache_sha256": "8884b5dbab3d10405b1fade08354485e81152aa806954a8c7568d42b86ee67d1",
+      "days": 1,
+      "eligible_full_cells": 18056,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10448,
+      "target_touching_valid_pairs": 5343,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1925
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-07",
+      "parent_day_sha256": "c6eb2f98993ca23150a6ed2c3be64b88d39cd889d3b1ee209268d454c256d680",
+      "raw_TRAIN_label_source_sha256": "3e5b466d0e79252089575a9722a65bf85ce02c9363a11030045d52dcb34106a1",
+      "full_label_cache_sha256": "5fe76eb89db6a370708576eeca89ccf113f7757ee5d4e87ceca833c4b2e4e3b7",
+      "days": 1,
+      "eligible_full_cells": 17881,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10473,
+      "target_touching_valid_pairs": 5388,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1862
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-08",
+      "parent_day_sha256": "4d7a6d8efdb731aaf65a785b8aca951710a42ea194f597e19d6401c0b48fd49a",
+      "raw_TRAIN_label_source_sha256": "4d0cc17dc42da64a5d35a028e384e2169a8cbe048d69a1a1b536ce097bc10361",
+      "full_label_cache_sha256": "399c248e18d29b9933c398b2a254fc52ba48bcaff9c16b7d8cc7a1ed0a59ea65",
+      "days": 1,
+      "eligible_full_cells": 17627,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10217,
+      "target_touching_valid_pairs": 7636,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2739
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-09",
+      "parent_day_sha256": "8f7249c5a46a0304bfd54ec3c70d171f5f52fbd42d79e9691f6fd63deff58410",
+      "raw_TRAIN_label_source_sha256": "c59d596acdc3c89857a08e0d4400065b77d9bbf252e3572a5c53c266a79ea8a8",
+      "full_label_cache_sha256": "78f0b37eae04f8081d2c10a94dabda355f84353521e4cea1522c80c737560c07",
+      "days": 1,
+      "eligible_full_cells": 17853,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10311,
+      "target_touching_valid_pairs": 3731,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1327
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-10",
+      "parent_day_sha256": "e904b0b5d0d839e075d4d43545a476cb6c20fac2250a90dc05259abc2349d404",
+      "raw_TRAIN_label_source_sha256": "1d473e18e964287007cb771b63a04c1935397aca411032123ce890eb29fb2b1f",
+      "full_label_cache_sha256": "f62dc8f86435c31e3d99321b71b0f4bbd61b22864f612e76d07597856939028d",
+      "days": 1,
+      "eligible_full_cells": 17984,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10532,
+      "target_touching_valid_pairs": 3833,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1368
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-11",
+      "parent_day_sha256": "3f1696e429a7d4053859459f80b4e1512d4db4601c3b02e561cc76710e1af123",
+      "raw_TRAIN_label_source_sha256": "bed8be1604951f19f2da09d1c29f9bc43f4f24e70e2e53658840d2b520bc201c",
+      "full_label_cache_sha256": "865d84a90380043be2566395456efda784b321f4d8fc3dc03e13c3b4166d5252",
+      "days": 1,
+      "eligible_full_cells": 17574,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10073,
+      "target_touching_valid_pairs": 3602,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1280
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-12",
+      "parent_day_sha256": "b3bc82971278efb76a7ef4de23158692c810eedbe83683a163090cc2e7c03373",
+      "raw_TRAIN_label_source_sha256": "f5ed327a0ddafa5f311a0427e83e354c674abddb46bddb3556a9d09bc4967893",
+      "full_label_cache_sha256": "b3de61bbff25243c03019b19586063e5427509d83a7210badc6549c85683e67c",
+      "days": 1,
+      "eligible_full_cells": 17918,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10327,
+      "target_touching_valid_pairs": 5371,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1949
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-13",
+      "parent_day_sha256": "dd429684558b992689bf1a7dd275c602889bb775d3da78679b64df7382beb820",
+      "raw_TRAIN_label_source_sha256": "99e9679ced2f041c8edc09897281660fff2fab22efef71771c3c17ba787b1c77",
+      "full_label_cache_sha256": "50e297e5e1c907fdfff652ae8a6eb0790187a932a9f0c280557c51c9ee02c3d7",
+      "days": 1,
+      "eligible_full_cells": 17811,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10456,
+      "target_touching_valid_pairs": 5448,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1950
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-14",
+      "parent_day_sha256": "b5ee2dd8632ea259542302ffb7f8684b458297f40d0fab718805cba26d517f5f",
+      "raw_TRAIN_label_source_sha256": "193acec6105d92fafee7cd6983dcf436d0b8d6ee3e6f42eb2a55245f6d41ee15",
+      "full_label_cache_sha256": "163a36c061a0c7c51e00db3286dc45283b012af918f820ee317d294d1b85d459",
+      "days": 1,
+      "eligible_full_cells": 17923,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10485,
+      "target_touching_valid_pairs": 3673,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1357
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-15",
+      "parent_day_sha256": "845d0509ec13d5804c9e6698c02a71e6f7efa4bace60a5c69132361335aa7e93",
+      "raw_TRAIN_label_source_sha256": "0b2e02ef05051a6948477af09ce3e12ffd6f2351a8221f841f1471b989ebe572",
+      "full_label_cache_sha256": "ed21958b67667bb02cfb55203729808904adf4e0720063980c8e975e08420d1b",
+      "days": 1,
+      "eligible_full_cells": 17848,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10328,
+      "target_touching_valid_pairs": 3825,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1315
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-16",
+      "parent_day_sha256": "e7e5e4c283953f23c6986095cacc7823a304c8dc9cc93a6afa92eae022e1a317",
+      "raw_TRAIN_label_source_sha256": "5422859db7a7142170042556a1eaa57c0dadb9aad96de713bc8d963f76f03771",
+      "full_label_cache_sha256": "5404e5475b345b727e07735bf78974d77cf4da37bf2a367ea02678ee712a9adc",
+      "days": 1,
+      "eligible_full_cells": 17890,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10345,
+      "target_touching_valid_pairs": 5277,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1928
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-17",
+      "parent_day_sha256": "9507248b6aa436666bc808cc97ebde825aef48a95071bb1fd03b1723463a921f",
+      "raw_TRAIN_label_source_sha256": "feb1e6a9c205c6fd3c4490cb1c59313c288156c28e4688ff6ee7654ce75ce5a3",
+      "full_label_cache_sha256": "7b5293c6cbfd11dfc71ac622f65f1c30b6e99f5175242c69cc6488f3cc770590",
+      "days": 1,
+      "eligible_full_cells": 17969,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10348,
+      "target_touching_valid_pairs": 7781,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2910
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-18",
+      "parent_day_sha256": "618551624aeb8102d58ed062ae16b77e4545c6f75f65ff42fe093703fd9273f3",
+      "raw_TRAIN_label_source_sha256": "959a3d7e17411e7bfcf611733d5006393341631db90ea48b33229306fe5d3e59",
+      "full_label_cache_sha256": "78aa4c4b52d6dcce2f5487542ffb2f40652902f0562bc247eb043957012459ec",
+      "days": 1,
+      "eligible_full_cells": 17865,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10267,
+      "target_touching_valid_pairs": 5239,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1879
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-19",
+      "parent_day_sha256": "7c0338d1879112216e0a898dbb1b940af414961e1332375f899e519839af53cf",
+      "raw_TRAIN_label_source_sha256": "03ad6179d1d8e806442c3dbaf73fd8433df9d54af1938331f9ba3144120c1eb1",
+      "full_label_cache_sha256": "7eec3dc1dc5a1074842a459e33ad1717250214164a54ee37e888d2d478de777e",
+      "days": 1,
+      "eligible_full_cells": 17801,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10344,
+      "target_touching_valid_pairs": 3714,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1277
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-20",
+      "parent_day_sha256": "29b62bd02ee8c6880dedee5c05a7ce379c9b5c9f7921bac9aea505363bc05656",
+      "raw_TRAIN_label_source_sha256": "54da5c3d520c5cd62af58ea898d86028cf6bed03d95f88f5132337541fb1cf4b",
+      "full_label_cache_sha256": "fd1c586f388d1ee477c064d8592681395ee6d0b814aa137eedbe484a8dd4f9bc",
+      "days": 1,
+      "eligible_full_cells": 17898,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10293,
+      "target_touching_valid_pairs": 3722,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1361
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-21",
+      "parent_day_sha256": "3094722241a9a707e85daff3c260760e5275aff6e7f93dce71d82ba13c1d1687",
+      "raw_TRAIN_label_source_sha256": "c15f90c7679cb1b4bb9634fa78ed55ce52ba9b161ed84f4a589b80b8b534c011",
+      "full_label_cache_sha256": "c44524da136330dc4f1ec6ea9549a0b80204eb1c1b631cb603a86c956cec8111",
+      "days": 1,
+      "eligible_full_cells": 17874,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10369,
+      "target_touching_valid_pairs": 3823,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1359
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-22",
+      "parent_day_sha256": "12c01a2857de059fbc80beca7ee4b7c6e6050141b6d60467ab4287fffb650add",
+      "raw_TRAIN_label_source_sha256": "82cbfe19e3af3e6bb89d2e556b479acc3b745a1f4a7ac705b5de6adb6c5cb99d",
+      "full_label_cache_sha256": "2e2a3b43fd40e2442d51a421923836e5436a94cc6b4b2bbd9d3faee64d977712",
+      "days": 1,
+      "eligible_full_cells": 17845,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10268,
+      "target_touching_valid_pairs": 5286,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1963
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-23",
+      "parent_day_sha256": "02ba2fa89a878e67324374a1ceebef352c3c67ef7615b96cb73637eedc0aafa6",
+      "raw_TRAIN_label_source_sha256": "e2010255c54fa2c0689324a09a32397703b4a8a5952f1ccc66784711d8aa2125",
+      "full_label_cache_sha256": "20e45b1000b7be1d2ec8303c8467959a4d41bfc88a014f955a39c3b24afae781",
+      "days": 1,
+      "eligible_full_cells": 17782,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10337,
+      "target_touching_valid_pairs": 3680,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1332
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-24",
+      "parent_day_sha256": "31eb612de2269aeb32b605197978c0cdf0e3e8d4d5654f0fccf0137566b0ea89",
+      "raw_TRAIN_label_source_sha256": "3aa985d46864b5d1f3ef773bf5d76ff203c9cdcd8ef08369df7b5b2680be6ab5",
+      "full_label_cache_sha256": "09aa578bf3fa407ccd6e4c96c3ca0b09f8e976c1bc3de6f7e99387e010862046",
+      "days": 1,
+      "eligible_full_cells": 17629,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10130,
+      "target_touching_valid_pairs": 3586,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1370
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-25",
+      "parent_day_sha256": "71ecda36b95bfffff867af86d001c5152accbb89edb4ab48e99841f686d831cd",
+      "raw_TRAIN_label_source_sha256": "cb20d0000463d2ba5adbc1c958f307ff701295f034a5b2ec3181122651ceca97",
+      "full_label_cache_sha256": "d60244112b3fa305bc3320c5393cc9fae8b98e9149b5a5330d590fb7f6daf059",
+      "days": 1,
+      "eligible_full_cells": 17857,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10435,
+      "target_touching_valid_pairs": 3763,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1349
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-26",
+      "parent_day_sha256": "11f68ebf400f8f9637965da8d4a34fc0da932e83af2b1a357382b8eb1e3c9270",
+      "raw_TRAIN_label_source_sha256": "82413ab0a06869864c99728eac8e58b0a9215f9e932663697867e247b1636bd8",
+      "full_label_cache_sha256": "39711fb690ea50ad95a7b5308da6f986fff9716e295266d9257af23ffdca1b6f",
+      "days": 1,
+      "eligible_full_cells": 17970,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10631,
+      "target_touching_valid_pairs": 3815,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1303
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-27",
+      "parent_day_sha256": "d8e1ec053c3be7cdbed2ac4d18851b052fc93e4bcf1d1102e2a4440974f59fc4",
+      "raw_TRAIN_label_source_sha256": "1973e65aaa885687d6c01feca1d38fefc032b04a6fe5cece8a10e651779b15f6",
+      "full_label_cache_sha256": "822d78537a763d237a109f2f5545063b396fd72828f77f70dd52876d8d06d130",
+      "days": 1,
+      "eligible_full_cells": 17846,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10336,
+      "target_touching_valid_pairs": 3754,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1311
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-28",
+      "parent_day_sha256": "4a9cc1b32f9ae674c8c4843069f70739695497c1a3470433a0e6d4a00e6de4d5",
+      "raw_TRAIN_label_source_sha256": "f3f5395ba94bf594d57bb0cb5e88041fb5f8284ab73115521d74d1eb1289cb73",
+      "full_label_cache_sha256": "541c31224074a63b21f2007f94752f0699d94d76a23814f46e6933859bbbbd0d",
+      "days": 1,
+      "eligible_full_cells": 17867,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10347,
+      "target_touching_valid_pairs": 7717,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2769
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-29",
+      "parent_day_sha256": "45f36345557d598287e8ca630e81267efd4debdbfe3e0c27c20c98d0b789b605",
+      "raw_TRAIN_label_source_sha256": "983bd901fe68f278ac969f339514dbe5ecedb167c8d29f915d77ab56b32c85cb",
+      "full_label_cache_sha256": "49a3d75ca5c850c5a591cd7b5a1d90f5e209a14f9e4fa28c7c5ff38fb96b6cba",
+      "days": 1,
+      "eligible_full_cells": 17643,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10159,
+      "target_touching_valid_pairs": 3670,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1341
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-30",
+      "parent_day_sha256": "bd4a2d17586c8f2aecc3fdca8412c3c29251b4d52050abd94631d55f49e6b4eb",
+      "raw_TRAIN_label_source_sha256": "93dcbda928a0ab2e2d6d9fa9a643f4cb2c5972627da083f6d4474d1c34d912c2",
+      "full_label_cache_sha256": "ff2da24403d76e2069b885999a9c930f17142094944acff80c048d8d1be4f8c8",
+      "days": 1,
+      "eligible_full_cells": 17907,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10441,
+      "target_touching_valid_pairs": 5208,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1877
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-31",
+      "parent_day_sha256": "352c3f093fdd9ca229fe37d62a441d4f12c29f328be5244f4cf69dd253b63062",
+      "raw_TRAIN_label_source_sha256": "98dcf5c73e1038b65531572acecc417ada4c6a958297b02f00751085e501d35b",
+      "full_label_cache_sha256": "2d00d3f862daae61bdb1b68ee83a91d027a3c545f4667f09f37af36f8f3976c0",
+      "days": 1,
+      "eligible_full_cells": 17692,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10181,
+      "target_touching_valid_pairs": 3723,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1375
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-01",
+      "parent_day_sha256": "e03592bfe513f993b851506a16102bcfff6204514d3f726dd1bb9cee4499b6c7",
+      "raw_TRAIN_label_source_sha256": "85d6945cd8715efef8a4aef676f85bbd9fc6c4889dec7d6a6cf0eda83ff6b65f",
+      "full_label_cache_sha256": "2b8e794ec29f9c7b8143f546e27bc77b9a76caebe62883ecf841bfad9121feeb",
+      "days": 1,
+      "eligible_full_cells": 17739,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10146,
+      "target_touching_valid_pairs": 5270,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1927
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-02",
+      "parent_day_sha256": "b8b0d24aea3882423653198f6200855310a9c846e400337ea65c0d374c73811c",
+      "raw_TRAIN_label_source_sha256": "6a317035db6af4e041008281eebfe9cabc63c66aba3836e1f97e4ea20849925e",
+      "full_label_cache_sha256": "ad6330553cbcb09a6dcfe11c6cdf4cd4d34b8ec3d760a915ab724a7c4e1d2972",
+      "days": 1,
+      "eligible_full_cells": 17922,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10361,
+      "target_touching_valid_pairs": 5190,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1936
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-03",
+      "parent_day_sha256": "3054f5e3bebaa795c55e950533299356c29768df5c0a228abcd82cf28fa58587",
+      "raw_TRAIN_label_source_sha256": "7efffe3470f9a6375dc8d31eb0d668c5b8ef55d8dac95c33a5ae42c2a0d74a0f",
+      "full_label_cache_sha256": "0736e8d4f1601c4a4ce6f98566452f390306ea1a2b325f13fe7ed820f6307011",
+      "days": 1,
+      "eligible_full_cells": 17949,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10444,
+      "target_touching_valid_pairs": 5298,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1905
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-04",
+      "parent_day_sha256": "a7a97a58513a4871f62dd47473f53362fe61fecaf55e066ea60116de79e162e2",
+      "raw_TRAIN_label_source_sha256": "f62fd3e999bc6d4519c02b1b2e0da6e85b14037ae6667554c2ef98e01689397b",
+      "full_label_cache_sha256": "9b3c23e692d70df6aff0651116939ede368deedebec338bdb6e0a2b0aba8e1ff",
+      "days": 1,
+      "eligible_full_cells": 17852,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10373,
+      "target_touching_valid_pairs": 3738,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1324
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-05",
+      "parent_day_sha256": "3710daa5580d2592ee19c47596104d5adf05821fb10298d08796bd4335ce472a",
+      "raw_TRAIN_label_source_sha256": "7d31f7ec83f8abd9d7f0fff9c82c798ab47840b3aa4d30c7a8d0d940a67215da",
+      "full_label_cache_sha256": "e89b23d39ed7e9fa8880c46adf61bab6d9b4010a0e080b148739302ecb22aeb8",
+      "days": 1,
+      "eligible_full_cells": 17768,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10310,
+      "target_touching_valid_pairs": 5329,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1857
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-06",
+      "parent_day_sha256": "c63d63b36ebb108cb9b48d91ea7933bab3dc47df7a96d0073d1b3d2c4fac4c25",
+      "raw_TRAIN_label_source_sha256": "dae93b9f7f4751f4a58048449b6b43fed2998a50d1df3c6c67d4978580e2ad70",
+      "full_label_cache_sha256": "c3be08c1391e838d356889e0de1fd33c0755ea9e317b2ba23bdd2134a989254d",
+      "days": 1,
+      "eligible_full_cells": 17909,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10451,
+      "target_touching_valid_pairs": 3769,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1296
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-07",
+      "parent_day_sha256": "33431c97ae0d4ffc7e8a4803919033a4c17e37fabfeca231c09c5a2e448f6931",
+      "raw_TRAIN_label_source_sha256": "aa675669221002f350d65954b54b59bb7c4c318b1b876544172732b77f119766",
+      "full_label_cache_sha256": "cda327e4fcfa02fa8a5d3925dd76505c21a05cf5231d92e5f8f4c9a2bc2869d1",
+      "days": 1,
+      "eligible_full_cells": 17755,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10182,
+      "target_touching_valid_pairs": 5194,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1924
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-08",
+      "parent_day_sha256": "cd42ce4952a0d2b65d32bf24658855e99207c5d9901e0a83ad28abb621c48661",
+      "raw_TRAIN_label_source_sha256": "5618285927fd4acd0758f92e7bf6f964fae4d7bbe739619877a89fc342c14b18",
+      "full_label_cache_sha256": "b968cb41c046bb42302c51351547966b47ac8be3fe3e7c7883ce105ac8cc1821",
+      "days": 1,
+      "eligible_full_cells": 17805,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10455,
+      "target_touching_valid_pairs": 7885,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2675
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-09",
+      "parent_day_sha256": "54e075bff7fbbd7e5432b541eb1dee1273ae26f2cc6d387974388034cb4865c5",
+      "raw_TRAIN_label_source_sha256": "b2a5ea798f21392c15f198dbf2e48f923101d9e6662dbf9cfeae160d8dc7f56c",
+      "full_label_cache_sha256": "923f06f79d2d552dd296f1aa680f4c4795929e591a28fd1c8fe7c6ca381131d0",
+      "days": 1,
+      "eligible_full_cells": 17764,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10235,
+      "target_touching_valid_pairs": 3703,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1382
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-10",
+      "parent_day_sha256": "2f0a526aec627ff530bda3e31b2268948f5922ca5779c544395da43d88d9e2a9",
+      "raw_TRAIN_label_source_sha256": "93fb2d00c6f0576dd04be51b0c85b0de7a00044d6c413bf905c711b9d282e09d",
+      "full_label_cache_sha256": "28a644ae75b6fcdd3e5fc38e1d4cab3451ec3604613dce8aa7cc3406fcb0c659",
+      "days": 1,
+      "eligible_full_cells": 17948,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10479,
+      "target_touching_valid_pairs": 7893,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2769
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-11",
+      "parent_day_sha256": "1cf38c59c4c9ed95787851921358e20447e0db1cfa3cb5e434e28fc41cde2929",
+      "raw_TRAIN_label_source_sha256": "785278ec9c1faa37ef53adca26502d709aa8c71a12da8f2813fe79af40fd20c2",
+      "full_label_cache_sha256": "2ff32fc2f7201da50dcc7ab0bd17f6e58b6e00d0f2a27a1bcb507326cf56103a",
+      "days": 1,
+      "eligible_full_cells": 17814,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10367,
+      "target_touching_valid_pairs": 7684,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2781
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-12",
+      "parent_day_sha256": "795287d938ac32ec257a7bc83fc18383dd45e57ddb82f3c9e99344db83c1cc3d",
+      "raw_TRAIN_label_source_sha256": "b295026913bb0bea03df3a79c07367696268c19650966c05643c001244410490",
+      "full_label_cache_sha256": "a780769a0230325fd98ba53c6a3e23c7768f7558d68317fe5044a8a4540acb3b",
+      "days": 1,
+      "eligible_full_cells": 17851,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10327,
+      "target_touching_valid_pairs": 7806,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2792
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-13",
+      "parent_day_sha256": "e370474a68d644bc2af90c4068957299dc74bf915824abc76447224a2953ae03",
+      "raw_TRAIN_label_source_sha256": "9bfc751d60615c13420c6778c7c535ff720b80d1bae243b05481779339965d4e",
+      "full_label_cache_sha256": "93dc62b47deb01058270e7c415f981e178c000a7aca98d9cb1dc1b7586cfdda9",
+      "days": 1,
+      "eligible_full_cells": 17838,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10428,
+      "target_touching_valid_pairs": 3659,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1278
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-14",
+      "parent_day_sha256": "5073b462ba4f1f62502963d5964ce3b36fdaa2ae2ff17baa5cb0d85ee9154ad7",
+      "raw_TRAIN_label_source_sha256": "4dab58d132ffabec820fe9600b81e99692bb98dd2676afaa97f2167fbef148e6",
+      "full_label_cache_sha256": "9603503ea1c93d1d45bda8616e0d454e1d97b75328eaf6a5c69a4ced56c3348e",
+      "days": 1,
+      "eligible_full_cells": 17992,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10604,
+      "target_touching_valid_pairs": 3959,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1310
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-15",
+      "parent_day_sha256": "ad5e39158bbe065ad2dc1f106cea8b669c4049114eee40d3203825340fd333e1",
+      "raw_TRAIN_label_source_sha256": "2ba60c9e1fbf9ba01971bbfe7c0ccb23cdd1a0b5299f2d6e7d910b017f625473",
+      "full_label_cache_sha256": "86ec90fbc7db0081460906c0fe1db8f20a1fba5af1740b311007f40ff32af8b5",
+      "days": 1,
+      "eligible_full_cells": 17828,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10259,
+      "target_touching_valid_pairs": 5208,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1937
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-16",
+      "parent_day_sha256": "6ece16bacb9d49996cdc208b9c6d491ac7fe392e17483bb8d3bb648236ef22f8",
+      "raw_TRAIN_label_source_sha256": "9170f7227008d5e6f3c9febe21e41cc70cee9b078d988f7e5913e253d73d4302",
+      "full_label_cache_sha256": "5b8003b2e0662843222f484ee0dfdbf2197fc84d50cb5f272e925e566390e5ab",
+      "days": 1,
+      "eligible_full_cells": 17778,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10401,
+      "target_touching_valid_pairs": 5331,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1796
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-17",
+      "parent_day_sha256": "898d966c66c76110bce13e23bc2d221a68e8e293205b99e404562d0029849986",
+      "raw_TRAIN_label_source_sha256": "222898a2519236f3d2a562768a5bb4c758cf6055890dfdfdb160bad73a5b299e",
+      "full_label_cache_sha256": "3adbebe7dd10cc4ecc372547e11f00288df5502044e8286c30e4a61007def002",
+      "days": 1,
+      "eligible_full_cells": 17822,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10398,
+      "target_touching_valid_pairs": 7722,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2765
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-18",
+      "parent_day_sha256": "fad1c7e481f6c690f371fd926fd19e60f60619acc4b7aced136dbd13f066ac6b",
+      "raw_TRAIN_label_source_sha256": "b86832bf707f0a5be729b16e3ad4eef35f3ce0f8e70f0d390bb9cba978fa767f",
+      "full_label_cache_sha256": "a223a0d7333c1d33d7ab3e6037bb77aa0484d8f32e4e01a3cad44e10e6060ff6",
+      "days": 1,
+      "eligible_full_cells": 17883,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10420,
+      "target_touching_valid_pairs": 7856,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2807
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-19",
+      "parent_day_sha256": "b5ae3ff2cca75290aee0dc40c5d45cb3db9502577bd501b8846dc69b03cbfae1",
+      "raw_TRAIN_label_source_sha256": "d8d3ed6fdd2e3eadecb22a36b8527d80b2770206d031c8a8a0c1a3a00fb60970",
+      "full_label_cache_sha256": "066a0b6c248b95696e03ecd6bec3040ce677e9c3329e959103c81853fe6c6392",
+      "days": 1,
+      "eligible_full_cells": 17780,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10163,
+      "target_touching_valid_pairs": 5169,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1871
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-20",
+      "parent_day_sha256": "aa5956d9a2d515d97d2e3b5bbdbad56217b4f5869de7f1e31e3754048eafbb89",
+      "raw_TRAIN_label_source_sha256": "28b4d1e635669ab123414464b6754026d8a8dbbfcd0e45d6ddba483955d99160",
+      "full_label_cache_sha256": "50491eb093b8ca2d3e45923cb417bcc5409a9e2567c3d9b835f029d35fdd4145",
+      "days": 1,
+      "eligible_full_cells": 17819,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10280,
+      "target_touching_valid_pairs": 7760,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2839
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-21",
+      "parent_day_sha256": "d4f831b733661c9552aa0f9a19402a90fd47b97b6da2739ef31ebc5d69c4c00a",
+      "raw_TRAIN_label_source_sha256": "d15eddd871ebc9acc08e945bd905de0fc5f83fdcd4d4e8ebe7b0514d8179669f",
+      "full_label_cache_sha256": "b3c73dfd72e9b148e0c15135a2635387acfa085d1b775e70ed666bd4462af275",
+      "days": 1,
+      "eligible_full_cells": 17780,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10297,
+      "target_touching_valid_pairs": 7656,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2795
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-22",
+      "parent_day_sha256": "df0cd12a144b3030865aa2275a08d41d4fabf6b3f19db7a572c7b97614c9b427",
+      "raw_TRAIN_label_source_sha256": "0f30033816ab698db6c931fe5b7583c2f59950c4d740e90817e3f16a53c4591f",
+      "full_label_cache_sha256": "16ed57877ba04e5c7876bc2c2ddd26bbdb0b5355a9312e208478fb9421a36c4a",
+      "days": 1,
+      "eligible_full_cells": 17828,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10308,
+      "target_touching_valid_pairs": 5222,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1934
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-23",
+      "parent_day_sha256": "f8e3340d61879759ad524591d15a4ba4187bed5b769de0955283fa1e55ba23f2",
+      "raw_TRAIN_label_source_sha256": "fd8bfb5f7fc2905a599fd7c12c8adafeb201985c1a5c91e6216af51d41199dcf",
+      "full_label_cache_sha256": "baa617f3682ea8b29e997d437e5f8204abf27218a2f8b4548381c68c35f05c62",
+      "days": 1,
+      "eligible_full_cells": 17770,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10339,
+      "target_touching_valid_pairs": 3716,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1266
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-24",
+      "parent_day_sha256": "ed2e8bfbe994673a6d8253f47ff4a9e064fe8462464e2fdb70d14f6d88bd3317",
+      "raw_TRAIN_label_source_sha256": "681e64133d5d20661d357ee159b393dcd2149bbe9f6366ad1abb2c2f37dc32d2",
+      "full_label_cache_sha256": "542dcfb7f52b0757f305d52b0d3284447e3e394e87ea79d157e0e33b6bd2fb7d",
+      "days": 1,
+      "eligible_full_cells": 17761,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10224,
+      "target_touching_valid_pairs": 3668,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1331
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-25",
+      "parent_day_sha256": "dae86192e584e6f27df57272f3f4185e2003484a654f5e3e3fea9d0db53a1be4",
+      "raw_TRAIN_label_source_sha256": "ffa113e7a819465981a3c3406a3d6fe62b8c35e299c4e87694e7a0ec49854d1c",
+      "full_label_cache_sha256": "2130235f9b82d00e8f5633a11e60a97d188d226a54b93edde0e4bb7c30dc68a2",
+      "days": 1,
+      "eligible_full_cells": 17994,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10547,
+      "target_touching_valid_pairs": 7892,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2799
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-26",
+      "parent_day_sha256": "07dd5e66b2bf602b2b6de84a9a71080b52990736a0fe241d42b3af9bbe3df3f6",
+      "raw_TRAIN_label_source_sha256": "f9c511be54cf7597048b98e1b952f94b3a2e5616968b93339bba4ca04356c0c1",
+      "full_label_cache_sha256": "a69f843e2e0d2fa652566cd27221c4904525165d8be9db104534330a2efe7206",
+      "days": 1,
+      "eligible_full_cells": 17711,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10266,
+      "target_touching_valid_pairs": 5271,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1840
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-27",
+      "parent_day_sha256": "debf36d8971b34cbfcf38f29fb22f8efea2821ad4947634961897db2c28f10dd",
+      "raw_TRAIN_label_source_sha256": "534663683a8aecde0a26f4f404abea6549256ee2c4d31e94571746924edc8c28",
+      "full_label_cache_sha256": "9a2edb091f8b1014540742188586065f95e8a4cb5b135570fd79fdfd5d826705",
+      "days": 1,
+      "eligible_full_cells": 17898,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10524,
+      "target_touching_valid_pairs": 5326,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1882
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-28",
+      "parent_day_sha256": "227a5b26f7898a68c1492fe7495d8ed992f1187ebd655541daeea7228d6b1f0e",
+      "raw_TRAIN_label_source_sha256": "3bd14df64560e212acc29cb3ed3f146114317e1848f6889abf1c119fd507344d",
+      "full_label_cache_sha256": "7f846e2ece4effbdb729b8dfe667e6a3033bd41f3ce465b7b317f8e76554420b",
+      "days": 1,
+      "eligible_full_cells": 17989,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10593,
+      "target_touching_valid_pairs": 5416,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1948
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-29",
+      "parent_day_sha256": "b9ced97f5f377a0d31b8f95b7ee8e844b3859138b353b521a2cebe387d0a4f7a",
+      "raw_TRAIN_label_source_sha256": "c174fa8e32369f8034ed214208331330a0a056e04b17d02db4ddce56ffa9f123",
+      "full_label_cache_sha256": "8c84ae2be4822dd73498ca020d4907a5b4348d6e12dc65f4c0af69c216c76b21",
+      "days": 1,
+      "eligible_full_cells": 17700,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10395,
+      "target_touching_valid_pairs": 5281,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1838
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-30",
+      "parent_day_sha256": "8832df5c724bc47efc495b8802ec945198f6051b0aab9b9810b4625985dfe89d",
+      "raw_TRAIN_label_source_sha256": "a3adff4281e0fdcb3f25a4557c37afe271696e25e1a6e34b3d145b1933911ac9",
+      "full_label_cache_sha256": "4265c1298d7524d447c7e196cf72c6a21446008f329eb12cba9c9d40640fcf4c",
+      "days": 1,
+      "eligible_full_cells": 17831,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10291,
+      "target_touching_valid_pairs": 3601,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1355
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-01",
+      "parent_day_sha256": "dfe3e0f983b13985aa48950c4033c5b95299f316a49324dae0928f6ddc10f495",
+      "raw_TRAIN_label_source_sha256": "28ec23c3852cb42ad626a1893fcd52658f3bb13eec13c44ff0831754873125dc",
+      "full_label_cache_sha256": "c0c719d0a4af6d2b8142a357b0fa56d7770dcac088a400fa473eb6dc46378a73",
+      "days": 1,
+      "eligible_full_cells": 17719,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10213,
+      "target_touching_valid_pairs": 7678,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2827
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-02",
+      "parent_day_sha256": "d898ef29f248773994e14ae646e39698e316f62702d07da87f6b52d14a484c21",
+      "raw_TRAIN_label_source_sha256": "55f8650459a9e78786975d1d5adc975af1affa3ea9618e20425818e9bc6c930f",
+      "full_label_cache_sha256": "fddab8fc5f460df6fd081a63a1ef9f4a7c27565deefea7f73af9e5bd9b64234b",
+      "days": 1,
+      "eligible_full_cells": 17825,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10315,
+      "target_touching_valid_pairs": 7721,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2837
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-03",
+      "parent_day_sha256": "fe17084c4e68cf91806aebd77f626f0024cba52060cb8f0b3373db4e9c7fdd2d",
+      "raw_TRAIN_label_source_sha256": "0ba6f3982d4a639a329365c263290d8376fe74ec3a85b75e8427e6943593523d",
+      "full_label_cache_sha256": "137b79c462052e48a7ea6df086467171fa121cc759fc6196684cf3bc1f6b52d4",
+      "days": 1,
+      "eligible_full_cells": 17934,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10512,
+      "target_touching_valid_pairs": 5378,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1914
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-04",
+      "parent_day_sha256": "ad3a7f5830cfe5874e3177ce1c42fe4422e9198969ad925dd68c85432923c8a3",
+      "raw_TRAIN_label_source_sha256": "3b6ed69be32af596f450dfa6fbd4683b0f08fb98071db69ca2876480c2224bca",
+      "full_label_cache_sha256": "34b386449e9d5adf55be0fabf58a4553e1e1d36efd65659da186804ad105f98a",
+      "days": 1,
+      "eligible_full_cells": 17786,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10306,
+      "target_touching_valid_pairs": 5174,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1940
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-05",
+      "parent_day_sha256": "91fae6fdff27b8395fcd7da103ae69cd568e6212b953a79ad4cb9a0e7d03d600",
+      "raw_TRAIN_label_source_sha256": "225cab7035da67faff8b20fb766c7994f51c54198c0e0f14daaf0443855e3b71",
+      "full_label_cache_sha256": "842594c8a68442c3e73f9fb629b186fb8299fadf9b6f444c2026e279c79f4000",
+      "days": 1,
+      "eligible_full_cells": 17835,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10408,
+      "target_touching_valid_pairs": 3671,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1304
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-06",
+      "parent_day_sha256": "462ff99c6d9c24135ece5096a0e3b819d9258f5469ba017b2b9f41407e3804a1",
+      "raw_TRAIN_label_source_sha256": "587f72d75d025fa80c087251823ed53b99eab4fd3ede7cc2278cc5e77f9b80a5",
+      "full_label_cache_sha256": "bec8c998959f4c07b9a943b3afca48e9499ecd83325631e0614a102a4573736c",
+      "days": 1,
+      "eligible_full_cells": 17960,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10457,
+      "target_touching_valid_pairs": 3868,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1340
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-07",
+      "parent_day_sha256": "864b384a929f8303998be86e6f76e56ba2299cd15ef368b6555d119857be678f",
+      "raw_TRAIN_label_source_sha256": "2118613e8a06668ce898a98238f6fa7a2c9ea9f9e4625c9f36cdb8653939f287",
+      "full_label_cache_sha256": "23bf0fe43c77a398bf8a953367f9a496a6b3213894042fa910a65b3071c9d29b",
+      "days": 1,
+      "eligible_full_cells": 17800,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10415,
+      "target_touching_valid_pairs": 5210,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1828
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-08",
+      "parent_day_sha256": "4895fd5679e7871d7e59c7934ea62a5eaaab7a3e504f90c4e787cd132ddda175",
+      "raw_TRAIN_label_source_sha256": "04cf762ec77c62145844f012c0cfc7b104f08a737ed6129566df204d2b094c1e",
+      "full_label_cache_sha256": "8382449c0d0fb28da95e8384ecf8e388c43e1913b24c487080a8e21143af06bb",
+      "days": 1,
+      "eligible_full_cells": 17807,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10322,
+      "target_touching_valid_pairs": 7747,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2834
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-09",
+      "parent_day_sha256": "41ab3b398e4b31a93c017a12aab2d424ff61ac1f446cc0b6a3cc88a7756a1a8a",
+      "raw_TRAIN_label_source_sha256": "879273b877718fcbe2a98eb21486ff85d7b7265dfe7b5763d887ca277b13a8d7",
+      "full_label_cache_sha256": "0be2563cc3da9ab055a814d1a694000fbcf43a2d1eeffd1652ff3b603c03c3d1",
+      "days": 1,
+      "eligible_full_cells": 17871,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10486,
+      "target_touching_valid_pairs": 5287,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1942
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-10",
+      "parent_day_sha256": "7ebda2b367e352b42a41ad58f9c81033d48f4d9378832f4324767c44b5c4fa10",
+      "raw_TRAIN_label_source_sha256": "09da718400e36e5586b8ace4461ceb81513799c3a1c789d05ab8fe2ee387ace9",
+      "full_label_cache_sha256": "e29da38dae23216b38561891ea68b7aa6c9fa6f21543dd7842cdc71c3020b732",
+      "days": 1,
+      "eligible_full_cells": 17877,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10355,
+      "target_touching_valid_pairs": 3642,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1334
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-11",
+      "parent_day_sha256": "fa76348a87a152969c7353c35fa176a9f7679acd887f9b4d854da217e939ceab",
+      "raw_TRAIN_label_source_sha256": "d6322e2c569c7920af268fd2fdfe551df659f2ee6f206767e87c0b97805b6b75",
+      "full_label_cache_sha256": "5195bdd9771ada3ca4482759af11f29dce1db7f7dae96a2f25ef7a26748f753e",
+      "days": 1,
+      "eligible_full_cells": 17847,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10431,
+      "target_touching_valid_pairs": 5277,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1819
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-12",
+      "parent_day_sha256": "c767c6ac84ee6a772a9dd4732e0f31012b7ef25cebc155cc342b864d6055b3f6",
+      "raw_TRAIN_label_source_sha256": "3edbf388bb8b32a323f9fecb441382a4bb3dd543159c3174d981be9b5798e643",
+      "full_label_cache_sha256": "9b1442d038c3b09a8d5ed2ef82732655350fd274e037a117b91d787cab39f7d4",
+      "days": 1,
+      "eligible_full_cells": 17813,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10455,
+      "target_touching_valid_pairs": 7878,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2715
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-13",
+      "parent_day_sha256": "fc1fd71518c94aa8f8248bba6a90766967e428a21c6866737131fd59d3900d1f",
+      "raw_TRAIN_label_source_sha256": "e308765803960a9df34ef9cb8e854f931386dc680392e6a5894256a643439a9b",
+      "full_label_cache_sha256": "4479169722d9982fd728887de9fa33e5cf5831ce578f30398ed68c8d86ce67c6",
+      "days": 1,
+      "eligible_full_cells": 17812,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10359,
+      "target_touching_valid_pairs": 7763,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2782
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-14",
+      "parent_day_sha256": "28dcb5e5dc162066b84d27e068bb62086e463972ee7dc6a032a105059d7bf260",
+      "raw_TRAIN_label_source_sha256": "8985d62a2fe7d300927856b340f208d9644fe639eabfa8c593220f87b3dabb55",
+      "full_label_cache_sha256": "19e6a7bf5a287f2cb87a3990b473bd25a3efd0c129c5fb29b351efb14604c4fe",
+      "days": 1,
+      "eligible_full_cells": 17719,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10331,
+      "target_touching_valid_pairs": 5292,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1889
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-15",
+      "parent_day_sha256": "b0849ba9c93f11a04dca65ff425d56fcf9f422fa581ab59d1e8dd50b2802dfa1",
+      "raw_TRAIN_label_source_sha256": "95a5ed719d9353204f6949f0f1cedc9da8a6059fc0cccfa3ac572cd8911382d5",
+      "full_label_cache_sha256": "caf17c356b54c2ad523a3a7f4143f7f934e952a6324f82c4deeae2a5df1fede8",
+      "days": 1,
+      "eligible_full_cells": 17724,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10273,
+      "target_touching_valid_pairs": 5294,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1877
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-16",
+      "parent_day_sha256": "70420a4f0ce7204dd9843c7ac0c0e45d8efe757da911562373e0098c6181c76f",
+      "raw_TRAIN_label_source_sha256": "e316840cfd4eaa3e654752742fe2d3958adb996895908c3c89fc1058baf88b27",
+      "full_label_cache_sha256": "bb25cc8f06d41ff9da16710f9495af35df5dc283646315e50171300c57bd31e0",
+      "days": 1,
+      "eligible_full_cells": 17662,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10126,
+      "target_touching_valid_pairs": 3580,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1305
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-17",
+      "parent_day_sha256": "6eb5bb4d3d49bd812eaf746ecd4ebceeedd0eb1ade213a9252e06e68ee83e166",
+      "raw_TRAIN_label_source_sha256": "ca71a3c6543f752881e4c4b1025a0e6ec99b12e87ebe2c4dac2eb796190d29dc",
+      "full_label_cache_sha256": "8da4a0b4ef582298bc697e556707964601a4c5d617d2f0ee58053ab7d3456ce9",
+      "days": 1,
+      "eligible_full_cells": 18058,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10543,
+      "target_touching_valid_pairs": 3822,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1390
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-18",
+      "parent_day_sha256": "98ae69d04ea488642f42199f69a4aa6417ba2e56c151a7ca9d37e37245a4593b",
+      "raw_TRAIN_label_source_sha256": "d8601babb3291529a2ba5106574884882c92ac5c46523d46b678f957edc41a29",
+      "full_label_cache_sha256": "44386b27a921e48952403869113561085b76f0a7a52fe545a0bd9341238f71a7",
+      "days": 1,
+      "eligible_full_cells": 17960,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10665,
+      "target_touching_valid_pairs": 3925,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1318
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-19",
+      "parent_day_sha256": "83f5ccb2b6669df9a6ecda1b8d5dadc0fef9bd0a3b7940a455c1960947263c79",
+      "raw_TRAIN_label_source_sha256": "0c7c9fc16867663c6eceae307077aa626aad4d36ad067334055b89127d1ba8bd",
+      "full_label_cache_sha256": "b64cc7c5c240dbe02da95c13bd2091de237efd5574ffe3acc9bb399e7d65e403",
+      "days": 1,
+      "eligible_full_cells": 17913,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10440,
+      "target_touching_valid_pairs": 5305,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1923
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-20",
+      "parent_day_sha256": "d70a8243e8c8930f4b51eb099f693551e7349bbbd5d669651319fca951187c76",
+      "raw_TRAIN_label_source_sha256": "1392ff1cdc709b4e8705485577edd0a54ea0a98a054920efa26229569f478745",
+      "full_label_cache_sha256": "fc0bcce84d95473d5f0b7127976d3f3ae38bda20dd62a15f9476b8eb2cfde585",
+      "days": 1,
+      "eligible_full_cells": 17703,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10329,
+      "target_touching_valid_pairs": 3775,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1314
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-21",
+      "parent_day_sha256": "8978c1973a65ce597935906424ce79212a085bddc1e55eb61b54766be3758d81",
+      "raw_TRAIN_label_source_sha256": "cb1903497d9fc22e8a75a74e6a81afeab54f05a82f6af58d509eb152c836f217",
+      "full_label_cache_sha256": "c83a41564090048e4c3854975942436676dbbccee9960b15d7ae996917e9cf76",
+      "days": 1,
+      "eligible_full_cells": 17795,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10289,
+      "target_touching_valid_pairs": 5265,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1860
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-22",
+      "parent_day_sha256": "ce01205093dca465a8ded785edb7cb843410d2c6e87bd4fbfc56e870015e7411",
+      "raw_TRAIN_label_source_sha256": "403623874acae4f82b10894f66f55c1579d9a93b5f6da25af179c02c73fb09e6",
+      "full_label_cache_sha256": "e3d21939ea03125cf3fadb723a79f6e2ea7b152bb4d0adce01bc924d298317c0",
+      "days": 1,
+      "eligible_full_cells": 17880,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10349,
+      "target_touching_valid_pairs": 7739,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2769
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-23",
+      "parent_day_sha256": "4bd0bb33f48a445e709ec04febdf7effcee8213828adade69f429427ac8a55da",
+      "raw_TRAIN_label_source_sha256": "b9ce9601144fd936decef9a3b08f781969475b2203b20d4087f54245874ae9fd",
+      "full_label_cache_sha256": "eb6d4b52e44bb9d1b63838b9d463faff47f16ad839cf3b9cfd4375a284d73dcf",
+      "days": 1,
+      "eligible_full_cells": 17683,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10223,
+      "target_touching_valid_pairs": 7668,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2755
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-24",
+      "parent_day_sha256": "7a44b1796a167318af7b549135a7ca52eacc90a77727901b9da26d9ece0d137c",
+      "raw_TRAIN_label_source_sha256": "b001b10063f57ec7e27ddb2165895492b7183fe06186e2e08bb2987eb0e63156",
+      "full_label_cache_sha256": "480879866511517c81bb8f91efc2cebc084b2a89d6961c10a07eaf7c4cefc573",
+      "days": 1,
+      "eligible_full_cells": 17732,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10029,
+      "target_touching_valid_pairs": 5195,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2011
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-25",
+      "parent_day_sha256": "d1c90cca3c468d7399d959848d77bda5d5f536a47590b76f87763d0822521d10",
+      "raw_TRAIN_label_source_sha256": "6837c05ed63f3597ff523d73e19c713d9797fc419b032b141251ad36d899c865",
+      "full_label_cache_sha256": "bc1f5043eaaff0bce7f4177179fb7da6da0ebf945fe1b13673a027f1d6655332",
+      "days": 1,
+      "eligible_full_cells": 17794,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10258,
+      "target_touching_valid_pairs": 3665,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1348
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-26",
+      "parent_day_sha256": "394845d05ab0fb4808a23c0b913c6916390a65130d1c46a27d187883250779e3",
+      "raw_TRAIN_label_source_sha256": "8e664f2ff37ef48e16045f43946c1ce262c57b2ceddfb0c19fc2d5df22067e4d",
+      "full_label_cache_sha256": "bf59fcf613c8ad910ea8914aacffb19ad95d2d1f2925eac25705e62c90c49098",
+      "days": 1,
+      "eligible_full_cells": 17659,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10304,
+      "target_touching_valid_pairs": 7708,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2621
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-27",
+      "parent_day_sha256": "97f15f07fa0557b595699931f103b42285ce8ebcb3da582f58982fd0f541c758",
+      "raw_TRAIN_label_source_sha256": "1fd3cdc1c5fcff799e00ba3af77215ff7d2d27d5e186c3e8a6c032cd7d0c885a",
+      "full_label_cache_sha256": "3bdfd3d2bcbfe0cdab03dea8e6a721d1d861df7d2d809a3244792fd4e489ac38",
+      "days": 1,
+      "eligible_full_cells": 18066,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10629,
+      "target_touching_valid_pairs": 3739,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1344
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-28",
+      "parent_day_sha256": "21a028021b746e05cb398b6feaf4792db741fb5014724288a3a148bf45d6f124",
+      "raw_TRAIN_label_source_sha256": "2d9f3002f1d9ea90fcf1f3f3c5584e8619388fe6fa0ae02e560d88ef3887439c",
+      "full_label_cache_sha256": "57538afeb9569ab17cfcf3ef51bb62d050330dd545c6254d2b2baba45d2ecf4b",
+      "days": 1,
+      "eligible_full_cells": 17856,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10308,
+      "target_touching_valid_pairs": 7759,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2871
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-29",
+      "parent_day_sha256": "cadf66c50c28157fd8c220d87c48ead4d6375a17cd88b4b031f71835f58c6684",
+      "raw_TRAIN_label_source_sha256": "4d9ecfa3b5ac1def5d67a7dd28eccb235c60d07a9b06b379a3057fbc628b8e07",
+      "full_label_cache_sha256": "205b83dabf614e49b9c828a499d49767198a82e3a654415230a5d4182579ab70",
+      "days": 1,
+      "eligible_full_cells": 17922,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10503,
+      "target_touching_valid_pairs": 7860,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2807
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-30",
+      "parent_day_sha256": "989b280cc1ba4a32e04fdeeb639ea036da3cde562aea873a27b938b7c4c38cf8",
+      "raw_TRAIN_label_source_sha256": "23f5b82ba6dff25c2dbe76157c85686ad6d188e060fa5159e2966e212c4bdf5c",
+      "full_label_cache_sha256": "1584b2713100c02dfe43fd87733fa64efa30865a559170a26578019d80f99d2f",
+      "days": 1,
+      "eligible_full_cells": 17899,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10424,
+      "target_touching_valid_pairs": 5382,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1912
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-31",
+      "parent_day_sha256": "41adcecc879e71492b6d25bde8a1c32e95a961f4012cbb75f01830927b2d16a2",
+      "raw_TRAIN_label_source_sha256": "5851ae33c0d38bff255ba602be75788d0e40a6e980b956a51b8f5064865a065d",
+      "full_label_cache_sha256": "f7a9f1ba361cf027ff9b60a600a96417f109119256131bb388ba10a8207e8879",
+      "days": 1,
+      "eligible_full_cells": 17941,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10331,
+      "target_touching_valid_pairs": 3759,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1397
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-01",
+      "parent_day_sha256": "a0ae9afc5fd08b404f9b15915a3b235739abe7eb50d22e142bcadec4ed47166f",
+      "raw_TRAIN_label_source_sha256": "587c8cbe63f78f43d9a782a21645b297ff78af37840271904e24f83265335d6f",
+      "full_label_cache_sha256": "56c7feb6efad9d4ba7aab1daaf647294bf11b33630bc47e68a68034a1dc5dbb4",
+      "days": 1,
+      "eligible_full_cells": 17892,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10408,
+      "target_touching_valid_pairs": 3724,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1349
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-02",
+      "parent_day_sha256": "2daccbd3f21e6496244d82e465459acebc284b13bd590d2d2aa5fe414dba4bf2",
+      "raw_TRAIN_label_source_sha256": "fc3c92cf3ec68d8d60a3be8aa232b9e8e8fce1f380be472ad2d9846eed1430f1",
+      "full_label_cache_sha256": "6fe3b6dfbcff9a22d6ef7e794a0bb7a3a50df2bb183707157c57cc1f6ef8339b",
+      "days": 1,
+      "eligible_full_cells": 17730,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10266,
+      "target_touching_valid_pairs": 5291,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1898
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-03",
+      "parent_day_sha256": "9fc7a46700fbd4c39c38134287581bd2d85a7060f7bc228970d25e5190d8173b",
+      "raw_TRAIN_label_source_sha256": "7f8eeef07b960dc337d8e5dc7a8aa1771f8b4d56486e5f2950a5192e3d25a867",
+      "full_label_cache_sha256": "05e1701cd911f6745fabe791abb9fcb9b3c48ef0932c6cf54241fd375b5406c6",
+      "days": 1,
+      "eligible_full_cells": 17913,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10499,
+      "target_touching_valid_pairs": 3713,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1314
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-04",
+      "parent_day_sha256": "179d95ead4b1808deef751ddb4b3df6c6459f4c6e450606d4d582c6b9ec173b3",
+      "raw_TRAIN_label_source_sha256": "fb8206eab254a072d01067f9bf11ea5a63d81b09536de71a83038bf15b33b094",
+      "full_label_cache_sha256": "c10335c90b3a2d5fe1b4f4ebc7b08980d0da1676494a2a95c91c3adaa77d9b82",
+      "days": 1,
+      "eligible_full_cells": 17693,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10189,
+      "target_touching_valid_pairs": 3670,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1311
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-05",
+      "parent_day_sha256": "3eeaac20ba5f3024ffb7a5d5697863820a26a403dc75d808292de7e05959bbfa",
+      "raw_TRAIN_label_source_sha256": "dcd71930b4cd9926093aa12542d52e9258709108173249ffcfa001ecae132b27",
+      "full_label_cache_sha256": "bdb4186f701dacf7b01d4659550ba37b09260c2a5aec2ebb2204a95005b847a5",
+      "days": 1,
+      "eligible_full_cells": 17602,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10303,
+      "target_touching_valid_pairs": 5242,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1790
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-06",
+      "parent_day_sha256": "e75b758fd940d2040ee2617fb6bf6867db8f65e7c424b1376679683132399e5e",
+      "raw_TRAIN_label_source_sha256": "39ed5e1a14cdf3ba171e13583d6ce9c411a80dd7be9948b58a9932f76697d1f1",
+      "full_label_cache_sha256": "de16465cdeb481f1eaa12501d09ac1c5758d9c25e3c58f131a7eaf27393b3f1b",
+      "days": 1,
+      "eligible_full_cells": 17792,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10263,
+      "target_touching_valid_pairs": 5215,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1928
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-07",
+      "parent_day_sha256": "cbd364743aede7aaa45ca5c381dac7cddf5b647b8e479855b7d8db7b2e0bffe7",
+      "raw_TRAIN_label_source_sha256": "ff3e57d933d3ae7333f767df48ba51d53149cb902dfdfc55609c6ed62e06afb1",
+      "full_label_cache_sha256": "8e86b508c350189013cdabd9a580c6531dd1d11dd0757e2783b7eacc958f572f",
+      "days": 1,
+      "eligible_full_cells": 17745,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10328,
+      "target_touching_valid_pairs": 5300,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1951
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-08",
+      "parent_day_sha256": "2dd4d56b1078bd31dfaeaaecc4c6836cba8c6b5147f710e1ef4995147d00c081",
+      "raw_TRAIN_label_source_sha256": "58e8945ae0af75baf531386afb5c544c01f986282e080ffb1a763d23d5ca6d71",
+      "full_label_cache_sha256": "b005cd0113131677ec97c8e2857b6925eac3d8619fa335b2ccd57e7ded141c05",
+      "days": 1,
+      "eligible_full_cells": 17857,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10258,
+      "target_touching_valid_pairs": 3631,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1363
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-09",
+      "parent_day_sha256": "5de47edb8f05f18a31f0adcb343fd5959d477159c3e216ecf5009e2811bdb544",
+      "raw_TRAIN_label_source_sha256": "9bc8941048fcea1c80be204f9d478c3ba5a786028879208dab4dc6fc80123654",
+      "full_label_cache_sha256": "20902d58e30637d97fec85c08c086545cc63d278d68ebf63557c891d496b4f26",
+      "days": 1,
+      "eligible_full_cells": 17866,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10389,
+      "target_touching_valid_pairs": 3886,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1306
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-10",
+      "parent_day_sha256": "c098d3123b5e76d170e80d7af6410aaf64f3088161b20c7722b09ab3c00e9195",
+      "raw_TRAIN_label_source_sha256": "fd335d347a2dfda81c8bf140be8fd6e395fd40c92e0148206358c7c0076ed1c2",
+      "full_label_cache_sha256": "c71d4b2e9ef9b5ed7a2deee4f4f94baf5b9eac79d79dd667f059f9b04a25fe5b",
+      "days": 1,
+      "eligible_full_cells": 17875,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10361,
+      "target_touching_valid_pairs": 5392,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1999
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-11",
+      "parent_day_sha256": "6d945c162330c58fd170f008c2afecb8d505c6544e1049f165904aad4fa7ba65",
+      "raw_TRAIN_label_source_sha256": "967c54ded389d18b4338c036c8e443d124d2235ac4c598a76d48711adeb13b51",
+      "full_label_cache_sha256": "feacf2bf51402b25ead23ff815e377d57c7ce731272da74d79ac3525a1277775",
+      "days": 1,
+      "eligible_full_cells": 17695,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10242,
+      "target_touching_valid_pairs": 3610,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1220
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-12",
+      "parent_day_sha256": "9848acf1664959ea3b2150ac8453dd6604043a8e1f62716c670feed162a1f45f",
+      "raw_TRAIN_label_source_sha256": "8ecc78586a3010eda2b952f8d446dbb6faeacd61a91b63b4e18247244a989bfe",
+      "full_label_cache_sha256": "99a4efcbe38597fb2220adf565ec27466740a651b3aadb4b4aa7d0f39d008a9b",
+      "days": 1,
+      "eligible_full_cells": 17864,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 10311,
+      "target_touching_valid_pairs": 7778,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2808
+    }
+  ],
+  "coverage_summary": {
+    "fit": {
+      "days": 92,
+      "eligible_full_cells": 1640582,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 952300,
+      "target_touching_valid_pairs": 494725,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 177808
+    },
+    "selection": {
+      "days": 14,
+      "eligible_full_cells": 249683,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 144995,
+      "target_touching_valid_pairs": 77005,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 27636
+    },
+    "assessment": {
+      "days": 14,
+      "eligible_full_cells": 249364,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 144572,
+      "target_touching_valid_pairs": 65593,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 23546
+    }
+  },
+  "graph_sha256": "a773f9bec7e6112d6e9cbfd67df65df1b593dd88c6be22268ac8478f5d41605d",
+  "parent_prepared_sha256": "3cf05de19568a092a7d05181040869f95cc755784bdba5731a907a88bce0c25b",
+  "seconds": 75.68001319999894,
+  "source": {
+    "python": "3.13.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus": 16,
+    "process_peak_working_set_MiB": 1332.578125,
+    "peak_scope": "current process lifetime, not isolated per model",
+    "source_sha256": "2009f0136d3d7ea9fac2e2c9df00920365d6abd059033a5fd1b9fb8ae8350cc3",
+    "model_threads": 4,
+    "gpu_used": false,
+    "source_fingerprint_scope": "On-disk source at evidence() call; a captured start archive is primary when present",
+    "versions": {
+      "numpy": "2.2.5",
+      "pandas": "3.0.5",
+      "scipy": "1.16.1",
+      "pyarrow": "25.0.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10",
+      "scikit-learn": "1.7.2"
+    }
+  },
+  "boundary_flux_accessed": false,
+  "formal_State": null,
+  "formal_Physics": null,
+  "formal_Total": null,
+  "limitations": "Training/scoring label cache only, not a trained model or measured gain. New full labels must not enter inference channels; raw train unavailable outside train split. Mode A public coverage still does not expose actual organizer flux."
+}
