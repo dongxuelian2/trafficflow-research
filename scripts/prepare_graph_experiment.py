@@ -10,7 +10,7 @@ from trafficflow.data import Release, VALUES, eligible
 from trafficflow.experiments import partition_date, raw_for, day_template, target_truth, training_rows
 from trafficflow.state import Profile, StateModel, StateFeatures, neighbors
 from trafficflow.research_eval import Fold, canonical_hash
-from trafficflow.runtime import evidence
+from trafficflow.runtime import evidence,capture_source_snapshot,sha256_file
 
 
 def main():
@@ -20,7 +20,7 @@ def main():
     parser.add_argument('--seed', type=int, default=20261013)
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
-    if (args.output/'prepared.json').exists():
+    if args.output.exists():
         raise FileExistsError('Use a new cache/version')
     started = time.perf_counter()
     release = Release('data/kaggle_public')
@@ -29,7 +29,8 @@ def main():
     paths = release.files(args.panel, 'train')
     dates = fold.assign([partition_date(release, p) for p in paths])
     parts = {key:[p for p in paths if partition_date(release, p) in days] for key, days in dates.items()}
-    args.output.mkdir(parents=True, exist_ok=True)
+    args.output.mkdir(parents=True)
+    snapshot=capture_source_snapshot(args.output/'source_snapshot.zip')
     profile = Profile.fit(raw_for(release, args.panel, parts['profile']))
     model = StateModel(profile, 'lightgbm', seed=args.seed, iterations=400, feature_version=2, num_leaves=63)
     model.density_blend = 0.
@@ -68,14 +69,14 @@ def main():
             indices = features.lookup(target)
             y = np.zeros((*shape,2), np.float32)
             mask = np.zeros(shape, bool)
-            truth_lane = truth[VALUES].to_numpy(float)
+            truth_lane = truth[VALUES].to_numpy(float,copy=True)
             truth_lane[:,1] /= target.link_id.map(net.lanes).to_numpy(float)
             # Multiple stations on a link share the grid estimate; retain all
             # station labels separately for exact public-template evaluation.
             aggregate = pd.DataFrame({'i': indices, 'v': truth_lane[:,0], 'q': truth_lane[:,1]}).groupby('i')[['v','q']].mean()
             y.reshape(-1,2)[aggregate.index] = aggregate.to_numpy()/scale
             mask.ravel()[indices] = True
-            comparator = model.predict(features, target)[VALUES].to_numpy(float)
+            comparator = model.predict(features, target)[VALUES].to_numpy(float,copy=True)
             comparator[:,0] = np.minimum(comparator[:,0], target.link_id.map(net.free_speed_kmh).to_numpy(float)*1.05)
             comparator[:,1] = np.minimum(comparator[:,1], target.link_id.map(net.capacity_vph).to_numpy(float)*1.05)
             comparator[:,1] /= target.link_id.map(net.lanes).to_numpy(float)
@@ -102,7 +103,9 @@ def main():
         'protocol_sha256':protocol['protocol_sha256'],'dates':dates,'source':evidence(),
         'channels':['speed/25','lane_flow/600','speed_available','flow_available','profile_speed/25',
         'profile_lane_flow/600','base_speed/25','base_lane_flow/600','occupancy/.25','occupancy_available','sin_tod','cos_tod'],
-        'sources':sources,'seconds':time.perf_counter()-started,'formal_score':None}
+        'sources':sources,'seconds':time.perf_counter()-started,'formal_score':None,
+        'source_snapshot':snapshot,'LGB_model_sha256':sha256_file(args.output/'lightgbm.pkl'),
+        'graph_sha256':sha256_file(args.output/'graph.npz')}
     (args.output/'prepared.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
     print({'prepared_seconds':result['seconds'],'links':len(links)},flush=True)
 

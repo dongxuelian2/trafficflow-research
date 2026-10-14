@@ -17,14 +17,16 @@
 | `graph_state.py` / graph experiment | missing-aware temporal conv + directed graph diffusion；occupancy 仅来自 masked 输入；joint speed/flow residual | 日前 profile、相同 fit/selection/assessment 日期、selection seal 后 assessment；GPU 344 MiB；多 seed/跨走廊继续研究 |
 | `queue_events.py` | 均匀打乱候选、条件配额、六小时间隔、quality 和 persistence 筛选；C24 起可选 onset 首次观测 queue at T+30 | 组织方公告 742350 公开时序属性；其余 selector 未公开，仍为带噪代理。C01–C22 不匹配时序，仅压力测试；不同 seed 可重复 origin |
 | `runtime.py` / evidence | CPU 实验 source fingerprints、进程峰值、训练前源码 ZIP | A29/A30 新实验在训练前保存源代码、依赖锁与逐文件 SHA；过去实验仅有 Git/运行指纹与模型校验 |
-| 下载 / API / 发布 | 请求官方 public participant APIs 与本队 submissions；秘密和签名 URL 不写日志 | 用户选择手动论坛发布；Notebook 草稿不公开发布；GitHub 推送继续授权 |
+| 下载 / API / 发布 | 请求官方 public participant APIs 与本队 submissions；秘密和签名 URL 不写日志 | 用户最新指示先做模型；本阶段只做本地 Git 提交，不处理论坛/Notebook、GitHub 推送或新正式上传 |
 
-当前独立 CUDA 环境 **33 tests passed**，CPU 环境 **30 passed / 2 optional-Torch module skips**，源码 compileall 已通过。测试核验事件权重、density projection、target 隔离、锚点同化、daily pooling、onset 时序；新增独立枚举 expected-IoU 最优集合和 density 缓存 key 对齐/不变检查。测试临时目录位于工作区 .cache。A01 与 A09 的共同模型 tensor/SHA 完全一致；C24–C29 三组共享模型独立重建/拟合后树文本、阈值、逐窗 IoU 一致。均不等于正式七百万行提交的全量独立复现。
+当前独立 CUDA 环境 **35 tests passed**（14.32 秒），CPU 环境 **30 passed / 3 optional-Torch module skips**（8.73 秒），源码 compileall 已通过。测试核验事件权重、density projection、target 隔离、锚点同化、daily pooling、onset 时序；新增独立枚举 expected-IoU 最优集合、density 缓存 key 对齐/不变、因果 Queue 十三步历史拒绝未来值/quality 过滤/无观测 fallback/onset-loss domain 检查。测试临时目录位于工作区 .cache。A01 与 A09 的共同模型 tensor/SHA 完全一致；C24–C29 三组共享模型独立重建/拟合后树文本、阈值、逐窗 IoU 一致。均不等于正式七百万行提交的全量独立复现。
 
 A14 审计发现重要比较混杂：原 graph 与 LGB 的日期相同，但 LGB 只用 300k 标签。全标签 LGB 1,804,908 行得到更高 State，A15 重做强基线对照后 graph 独立收益仅 0.001077。所有旧实验保留，解释同步修正。
 
 开放瓶颈：缺乏正式分项；独立模拟分布与赛事分布失配；Queue latent labels 未公开；物理 flux 投影使单纯 CTM surrogate 不可靠；OD 大零空间；Graph 单走廊模型的跨 family 泛化尚不确定。
 
-A33–A35：可变节点的 FD 几何条件与拓扑偏置图注意力通过形状/有限梯度测试；33 research-env tests passed（12.87 秒），CPU 30 passed / 2 optional-Torch module skips（6.47 秒）。三个 standalone 各在完整 14 天 calibration 独立构造输入并预测，数组逐通道一致，State/密度诊断匹配封存结果。配对架构消融复现原赢家 assessment，原选择保持。A38 场景差分按 station AND link 分组，且严格相隔五分钟；原历史 scenario 脚本的 link-only 分组不能保证共址站点差分正确，新诊断不复用该分组。训练前源码快照是主记录；运行结束的 on-disk fingerprint 可能包含期间新增的部署代码。当前正式成绩仍为 .82940，未上传新候选。
+A33–A36：可变节点的 FD 几何条件与拓扑偏置图注意力通过形状/有限梯度测试。四个 standalone 各在完整 14 天 calibration 独立构造输入并预测，数组逐通道一致，State/密度诊断匹配封存结果。配对架构消融复现原赢家 assessment，原选择保持。A38/A39 场景差分按 station AND link 分组，且严格相隔五分钟；原历史 scenario 脚本也已修正，当前 I5_N 原 50 日复跑的全部指标/计数仍相同，新文件另存。训练前源码快照是主记录；运行结束的 on-disk fingerprint 可能包含期间新增的部署代码。当前正式成绩仍为 .82940，未上传新候选。
+
+K03/K04 各 6,980,503 行严格自然 key 覆盖通过，独立 streaming diff 同时验证 task、数值字段、方向与 master-key 身份。只有 I5_N 的 1,131,560 State rows 改变；原 Queue/OD 文件 SHA 相同，其他 State 方向字段逐行相同。不是全量独立训练复現或正式成绩验证。A38 初版 runtime 的 `gpu_used=false` 是调用 evidence() 时漏传参数，不能用它判断设备或 GPU 峰值；数值与部署验证不受影响。脚本现在记录实际 CUDA availability，A39/生产候选记录为 true；A38 原记录与训练源码快照保留。
 
 `public_onset_timing()` 只约束标记为 onset 的 T+5…T+25，保留 ongoing 与 T+30。模型默认不开启，新公告对齐实验显式设置标记，旧冻结模型行为不变；针对条件/lead 的测试通过。K02 使用本队冻结预测与公开 metadata，未读任何隐藏标签或 val/private 未来数值；完整 6,980,503 行独立 diff 仅 5 个 Queue 值。计分 eligibility 未公开，因此更紧的 .001369 Total 界必须注明条件，安全界为 .0075。

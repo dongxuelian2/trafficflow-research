@@ -9,6 +9,7 @@ from pathlib import Path
 import time
 import numpy as np
 import pandas as pd
+import torch
 from trafficflow.data import Release, VALUES, eligible
 from trafficflow.state import StateModel, StateFeatures
 from trafficflow.experiments import partition_date, day_template, target_truth, raw_for
@@ -121,7 +122,7 @@ if __name__ == '__main__':
             row['selected']['channel_score_diagnostic']-row['baseline']['channel_score_diagnostic'] if row['baseline'] else None)
             for key, row in summary.items()}, flush=True)
         del selected, baseline
-    result.update(seconds=time.perf_counter()-start, source=evidence(gpu_used=True), formal_State=None,
+    result.update(seconds=time.perf_counter()-start, source=evidence(gpu_used=torch.cuda.is_available()), formal_State=None,
         formal_Physics=None, formal_Total=None,
         limitations='Public-observation strata are diagnostic, not true incident labels. Empty days are excluded from stratum day intervals. Existing development dates and model choices are reused; no untouched final generalization claim.')
     (args.output/'experiment.json').write_text(json.dumps(result, indent=2), encoding='utf-8')

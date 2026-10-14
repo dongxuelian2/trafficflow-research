@@ -36,9 +36,12 @@
 | L1 密度回归 | B05 / B06 强比较组 | joint State .939019 / .944348 | 不适用 | increment L1 .732209 / .707246 | 秋季不如 A19 L2，State 两季保留 baseline |
 | 图注意力 + 密度损失 α=.75 | A33 I5_N autumn，强 LGB 比较 | **.949192 vs .942340**；日均 CI [.006348,.007157] | 不适用 | proxy increment L1 **.687617 vs .771083** | standalone 已验证；真实 Physics 未知 |
 | 图注意力 α=.75 | A34 I5_N winter，强 LGB 比较 | **.954329 vs .946854**；日均 CI [.006259,.007608] | 不适用 | proxy increment L1 **.682571 vs .735824** | 两季单方向开发证据；standalone 通过 |
+| 图注意力 α=.75 | A36 I405_N autumn，强 LGB 比较 | **.930130 vs .921455**；日均 CI [.006482,.009089] | 不适用 | increment proxy 仍非正式 Physics | 第二方向监督模型；仅单季单 seed；standalone 通过 |
 | 图注意力 + 密度损失 α=.75 | A35 I5_N autumn，NN/LGB seed 20261029 | **.948993 vs .942295**；日均 CI [.005566,.006983] | 不适用 | proxy increment L1 **.686074 vs .769809** | 与 A33 共享日期；不反选更高的纯 attention |
 | 匹配几何图 / attention / density 消融 | A33–A35，原 cal checkpoints/α 固定 | attention 的三组配对 CI 均正；density 两组跨零、冬季全负 | 不适用 | 独立 density State 收益未确认 | 原赢家保留；开发消融不是新最终测试 |
 | 跨 family 零样本 attention | A37 I5_N → I10_W | 半数组合 **.922352 vs 插值 .928998**；纯 NN .884405 | 不适用 | 不适用 | CI 全负，迁移失败；不部署共享全网模型 |
+| 因果 Queue temporal / graph | C30，matched C27 事件/标签 | 不适用 | cal 纯 NN .456449 / .775337 vs 树 .898170；组合都选 α=0 | 没有 State 未来信息输入 | 253.87 秒 GPU；不晋级；选定 assessment 与原树相同 |
+| 生产 attention / attention+density | P02，I5_N 全公开 train | **无生产 holdout 分数** | 保留原 Queue | 真正 Physics 未知 | K03/K04 全任务覆盖及限定方向全行 diff 通过；未上传 |
 
 模型晋级需要相同划分、多个拟合种子、按天或事件配对不确定性分析和分方向退化检查。行级随机拆分不可作为依据。跨走廊 transfer 必须整组排除一个 family 的训练标签；当前逐走廊训练不冒充 transfer。
 

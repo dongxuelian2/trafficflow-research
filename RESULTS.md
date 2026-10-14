@@ -17,13 +17,19 @@ A33–A35 standalone 各在 14 天 calibration 独立重建输入并预测，逐
 
 **匹配消融支持注意力，暂不支持密度损失的稳定独立收益。** 三组几何图 / attention / attention+density 的 assessment State 依次为秋 seed613 **.946929 / .948837 / .949192**、冬 seed613 **.952141 / .954329 / .953338**、秋 seed629 **.947936 / .949257 / .948993**；各架构使用原 calibration 封存的 checkpoint 与 α=.75，没有按 assessment 改选。注意力相对几何图的日均增益区间三组均为正；密度损失相对纯注意力的区间两组跨零、冬季全负 **[−.001629,−.000314]**。A35 未选中的纯 attention 更高，保留原选择。
 
-![强基线上的神经网络匹配对照](reports/research/adaptive_matched_comparison_v2.png)
+![强基线上的神经网络匹配对照](reports/research/adaptive_matched_comparison_v3.png)
 
 A38 按同 station/link 且相隔恰好五分钟的公开观测划分场景，避免混合共址站点。三组 R3 的 State gain 为 **.009450 / .008030 / .008431**。严重降速 ≥30 km/h 的诊断 channel-score gain 为秋 seed613 **+.158233（213 targets）**、冬 **+.036653（181）**、秋 seed629 **+.199325（同 213）**；样本少且种子共享日期，不能当作真实事故或独立事件重复。三个恢复分组与拥堵观测分组也改善，具体 RMSE、计数、按日区间见 A38 报告。
 
-**A37 零样本迁移失败。** I5_N → I10_W 不用目标历史标签或校准，固定半数组合 **.922352 vs 插值 .928998**，gain **−.006646**，日均 CI **[−.008168,−.005565]**；纯神经模型仅 .884405。不能据单方向收益部署共享全网模型。较大 I405_N 的监督训练 A36 正在同协议检查。
+**A36 在第二个走廊族的监督训练也改善。** I405_N、352 sensors，cal 选纯 attention α=.75；强 LGB **.921455 → .930130**，gain **.008676**，14 日配对 CI **[.006482,.009089]**，R3 gain **.010771**。耗时 1212.19 秒，GPU 峰值 1180.95 MiB，standalone 14 日复跑通过。几何图 / attention / density 的原 cal 固定组合为 **.926662 / .930130 / .929638**；attention-vs-geometry 日均 CI [.003216,.003735]，density-vs-attention 区间跨零。A39 严重降速诊断 gain +.115282（275 targets），恢复 +.033326（641）；这些仍是带噪观测诊断。第二个方向仅一个季节/seed，尚不满足全网晋级。
 
-P01 已完成公开 train 生产准备：228 日期、4,409,727 个 required fit labels，全标签 LGB 与 NN 缓存保存，耗时 444.90 秒；没有生产留出成绩。P02 固定两个 attention / attention+density 假设、24 epochs、α=.75，训练中。生产使用先前开发日期的公开标签是合法拟合，不能再把它们称作生产 holdout。按用户最新指示，先做模型，暂不处理平台发布。
+**A37 零样本迁移失败。** I5_N → I10_W 不用目标历史标签或校准，固定半数组合 **.922352 vs 插值 .928998**，gain **−.006646**，日均 CI **[−.008168,−.005565]**；纯神经模型仅 .884405。A36 是使用该方向公开 train 标签的监督模型，不能抵消 A37 的零样本失败。
+
+P01 已完成公开 train 生产准备：228 日期、4,409,727 个 required fit labels，全标签 LGB 与 NN 缓存保存，耗时 444.90 秒；没有生产留出成绩。P02 固定两个 attention / attention+density 假设、24 epochs、α=.75，已训练完成，891.96 秒、GPU 峰值 844.85 MiB。生产使用先前开发日期的公开标签是合法拟合，不能再把它们称作生产 holdout。按用户最新指示，先做模型，暂不处理平台发布。
+
+**K03/K04 两份完整候选已生成，均未上传。** 各 **6,980,503 rows**，严格自然 key 覆盖核验与独立完整 streaming diff 均通过；仅 I5_N 的 **1,131,560 State rows** 改变（validation 588,468、private 543,092），Queue/OD 源文件 SHA 与原基准相同，其他 State 方向字段逐行相同。Task 3 使用这些 State 输入，真实 Physics 改变未知。K03 SHA **`a4645b6a5100b71b138afc37ca89bf167dd0026e7243398bba29e69d00ffd694`**；K04 SHA **`404e059f8169aa71c0a5387a40a544c346b889c98711ea03299def4d7a8560b6`**。候选各在约 243 秒完成预测/合并，保存在 `artifacts/research/K03_I5_N_attention_State_Physics` 与 `K04_I5_N_attention_density_State_Physics`；正式最佳仍是原 0.82940 文件。
+
+C30 因果 Queue 序列模型首轮未晋级：十三个 T 及此前历史 slot 预测六个未来 horizon，时间卷积与有向图使用相同输入/预算/事件，图消息是两者唯一结构差异。相对原 LGB，NN 还使用合法 occupancy 与公开 condition，因此树对照不能单独归因架构。calibration 中 LGB **.898170**，纯 temporal **.456449**、纯 graph **.775337**，两种 NN 的最优组合权重都为 **0**；原树继续获选。assessment 去重代理 .897422，与原树相同，不能称 NN 改善；未测的纯 NN assessment 不作推断。253.87 秒 GPU，峰值 110.75 MiB。future-input 拒绝、质量过滤、无观测 fallback 与 onset-loss domain 测试通过；全套研究环境 **35 passed**，CPU **30 passed / 3 optional-Torch module skips**。
 
 ![匹配的十方向 State 与公告对齐 Queue 对照](reports/research/matched_state_queue_comparison_v3.png)
 
@@ -142,7 +148,7 @@ D12 开发消融（同一日期分组）：V1 插值 test 0.889830，Kalman 0.84
 400/63 V1 calibration 0.935305；V2 calibration 0.939690。联合 density projection 的 blend 0.5/1.0 calibration 为 0.938578/0.934725，本轮采用 blend 0，未为复杂度保留无收益投影。
 最终 bounds 后 D12 test 0.939808。完整原始记录在 `artifacts/official_experiments/D12_I5_N` 与 `artifacts/state_physics/D12_I5_N`。
 
-急降速代理暴露瓶颈：D12 五分钟降速 ≥30 km/h 的 647 个目标 State=0.404768，恢复 ≥15 km/h 的 1,083 个目标=0.497832，稳定变化 <5 km/h 的 712,397 个目标=0.950816。
+历史急降速诊断曾报告 D12 降速 ≥30 km/h 的 647 个目标 State=0.404768、恢复 ≥15 km/h 的 1,083 个目标=0.497832、稳定变化 <5 km/h 的 712,397 个目标=0.950816。审计发现原脚本只按 link 分组，对于共址 station 不能保证正确的五分钟差分；已改为 station AND link 并对原模型、原 50 日复跑，当前 I5_N 的全部分组计数与指标仍一致。新复跑另存 `reports/research/first_delivery_scenario_station_corrected.json`，未覆盖冻结记录；其日期和模型与 A38/A39 不同，不用于直接计算新模型增益。
 这些是公开观测分组，不能命名为真实事故类型；详见 [scenario_D12_I5_N.json](reports/official/scenario_D12_I5_N.json)。后续优先研究拥堵前缘和突变，而非仅增加树数量。
 
 ## Queue：合法观测代理，真实 S_queue 未知

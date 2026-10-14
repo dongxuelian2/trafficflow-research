@@ -1,0 +1,127 @@
+{
+  "formal_best_ref": 57138874,
+  "formal_best_Total": 0.8294,
+  "formal_target_Total": 0.95,
+  "candidates": [
+    {
+      "directory": "artifacts/research/K03_I5_N_attention_State_Physics",
+      "submission_sha256": "a4645b6a5100b71b138afc37ca89bf167dd0026e7243398bba29e69d00ffd694",
+      "submission_bytes": 409227320,
+      "hypothesis": {
+        "id": "Local_one_direction_adaptive_State_Physics_control",
+        "panel": "D12_I5_N",
+        "architecture": "adaptive_attention",
+        "model_sha256": "f071e50c2a6cef6c04956b5366f5698fdb6af33aa8536236ac9e48affa270148",
+        "production_report_sha256": "4841f9448406869beacc607851ec09b46a6d5dddf359c55fb2ccb92e4c2661da",
+        "alpha": 0.75,
+        "baseline_ref": 57138874,
+        "baseline_formal_Total": 0.8294,
+        "hypothesis": "A development-supported missing-aware State mixture may improve reconstruction; true Physics impact remains unmeasured.",
+        "changed_fields": "Only speed_kmh and flow_vph for this direction, validation and private",
+        "frozen_fields": "Every other State direction, every Queue prediction and every OD path flow",
+        "legal_inputs": "Public train labels for fitting; released masked frames for offline State inference",
+        "future_State_to_Queue": false,
+        "uploaded": false,
+        "formal_State": null,
+        "formal_Physics": null,
+        "formal_Total": null
+      },
+      "coverage": {
+        "rows": 6980503,
+        "task_rows": {
+          "state": 6735795,
+          "queue": 174000,
+          "odme": 70708
+        },
+        "complete": true
+      },
+      "full_row_diff": {
+        "baseline_sha256": "43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1",
+        "candidate_sha256": "a4645b6a5100b71b138afc37ca89bf167dd0026e7243398bba29e69d00ffd694",
+        "rows": 6980503,
+        "changed_rows": {
+          "state": 1131560
+        },
+        "allowed_task": "state",
+        "full_row_diff_passed": true,
+        "formal_score": null,
+        "allowed_panel": "D12_I5_N",
+        "changed_by_panel_split": {
+          "D12_I5_N/validation": 588468,
+          "D12_I5_N/private": 543092
+        },
+        "public_master_key_sha256": "8232c9ce6682fdd3120e6729a30e4514866ab492ef7b167ad3952e00478bd071"
+      },
+      "component_sha256": {
+        "state": "cc20244282fef8bdf2aae697a3b2a3a5f2666c7b131a29b8e443b148f61b612e",
+        "queue": "420080d4582ff74f96a33bc5ca726aedb541ca3f576ced416be307d6c22d3fa4",
+        "odme": "7091490ad973fe0ebc017f1a69523441fce330d1d731fcda02ba7f6ff4bd5f83"
+      },
+      "prediction_merge_seconds": 242.9698459000001,
+      "verification_record_sha256": "d6c369d51ce3c19acd5f313a9113cb468140b7e4144220fbfea3d023308fb8f2",
+      "diff_record_sha256": "e5770cd01ee433251c9642180e7b7cc3ca4e48f02b4d92c9506586daa6633e4a"
+    },
+    {
+      "directory": "artifacts/research/K04_I5_N_attention_density_State_Physics",
+      "submission_sha256": "404e059f8169aa71c0a5387a40a544c346b889c98711ea03299def4d7a8560b6",
+      "submission_bytes": 409227336,
+      "hypothesis": {
+        "id": "Local_one_direction_adaptive_State_Physics_control",
+        "panel": "D12_I5_N",
+        "architecture": "adaptive_attention_density",
+        "model_sha256": "20d8d4e075dacf018f3567b8e36fe96c756d24243d7addd2763dc661198d35a1",
+        "production_report_sha256": "4841f9448406869beacc607851ec09b46a6d5dddf359c55fb2ccb92e4c2661da",
+        "alpha": 0.75,
+        "baseline_ref": 57138874,
+        "baseline_formal_Total": 0.8294,
+        "hypothesis": "A development-supported missing-aware State mixture may improve reconstruction; true Physics impact remains unmeasured.",
+        "changed_fields": "Only speed_kmh and flow_vph for this direction, validation and private",
+        "frozen_fields": "Every other State direction, every Queue prediction and every OD path flow",
+        "legal_inputs": "Public train labels for fitting; released masked frames for offline State inference",
+        "future_State_to_Queue": false,
+        "uploaded": false,
+        "formal_State": null,
+        "formal_Physics": null,
+        "formal_Total": null
+      },
+      "coverage": {
+        "rows": 6980503,
+        "task_rows": {
+          "state": 6735795,
+          "queue": 174000,
+          "odme": 70708
+        },
+        "complete": true
+      },
+      "full_row_diff": {
+        "baseline_sha256": "43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1",
+        "candidate_sha256": "404e059f8169aa71c0a5387a40a544c346b889c98711ea03299def4d7a8560b6",
+        "rows": 6980503,
+        "changed_rows": {
+          "state": 1131560
+        },
+        "allowed_task": "state",
+        "full_row_diff_passed": true,
+        "formal_score": null,
+        "allowed_panel": "D12_I5_N",
+        "changed_by_panel_split": {
+          "D12_I5_N/validation": 588468,
+          "D12_I5_N/private": 543092
+        },
+        "public_master_key_sha256": "8232c9ce6682fdd3120e6729a30e4514866ab492ef7b167ad3952e00478bd071"
+      },
+      "component_sha256": {
+        "state": "9faf6755d7ce56dc0dc49f7ffde4bb09f6a1afe4fd5d50bd00cd2d9c4730731c",
+        "queue": "420080d4582ff74f96a33bc5ca726aedb541ca3f576ced416be307d6c22d3fa4",
+        "odme": "7091490ad973fe0ebc017f1a69523441fce330d1d731fcda02ba7f6ff4bd5f83"
+      },
+      "prediction_merge_seconds": 242.2186856999997,
+      "verification_record_sha256": "0d1324979fb649cee3597830bd0b74a9c6c531dcc1fcf66623aaf0f62fef87ac",
+      "diff_record_sha256": "a85f236672ae18b5ae2cee95d431b0adb4b1ccbc6e949bad329018856e9aa5f0"
+    }
+  ],
+  "uploaded": false,
+  "formal_candidate_Total": null,
+  "platform_policy": "User requested local model research; no forum, Notebook, GitHub push or formal submission in this phase.",
+  "limitations": "Production fits all public train labels and has no production holdout metric. True State/Physics impact requires formal measurement. Task 3 changes with State; other directions, Queue and OD values are preserved."
+}

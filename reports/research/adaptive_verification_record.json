@@ -1,0 +1,35 @@
+{
+  "scope": "Adaptive State and causal Queue research; local verification only",
+  "research_environment_tests": {
+    "command": ".venv-research/Scripts/python.exe -m pytest -q --basetemp E:/ieee/.cache/pytest_causal_queue_full_research",
+    "exit_code": 0,
+    "passed": 35,
+    "skipped": 0,
+    "seconds": 14.32
+  },
+  "cpu_environment_tests": {
+    "command": ".venv-repro/Scripts/python.exe -m pytest -q --basetemp E:/ieee/.cache/pytest_causal_queue_full_cpu",
+    "exit_code": 0,
+    "passed": 30,
+    "optional_torch_module_skips": 3,
+    "seconds": 8.73
+  },
+  "standalone_State_calibration_replays": {
+    "A33": "14 days; independently rebuilt channels match exactly; sealed metrics reproduce",
+    "A34": "14 days; independently rebuilt channels match exactly; sealed metrics reproduce",
+    "A35": "14 days; independently rebuilt channels match exactly; sealed metrics reproduce",
+    "A36": "14 days; independently rebuilt channels match exactly; sealed metrics reproduce"
+  },
+  "architecture_ablations": "All four original calibration winners reproduce on their existing assessment dates; no assessment-driven reselection",
+  "controlled_candidates": "K03 and K04 each cover 6980503 rows. Streaming diff validates task, changed numeric fields, direction and public master-key identity. Only D12_I5_N State rows change.",
+  "first_delivery_scenario_replay": "Station AND link five-minute grouping on original I5_N model/dates reproduces all historical scenario counts and metrics",
+  "source_compileall": {
+    "command": ".venv-research/Scripts/python.exe -m compileall -q src scripts tests",
+    "exit_code": 0
+  },
+  "metadata_correction": "A38 initial evidence gpu_used=false reflects a missing argument, not measured GPU inactivity. That record remains preserved; subsequent scripts record actual CUDA availability. GPU peak allocation for A38 is not known.",
+  "formal_best_Total": 0.82940,
+  "formal_candidate_Total": null,
+  "uploaded": false,
+  "limitations": "Tests and replays establish contracts/repeatability, not hidden-label accuracy, production holdout performance or a formal 0.950+ score. Core full suites preceded later script-only bookkeeping changes; compileall and real full-candidate verification cover those scripts."
+}

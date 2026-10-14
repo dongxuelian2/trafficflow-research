@@ -66,17 +66,26 @@
 | A33 | 几何图 / attention / attention+density 的强基线匹配对照 | I5_N 秋，seed 20261013，全标签 LGB，cal 选择 | State .942340 → .949192，α=.75；日均 CI [.006348,.007157] | 489.27 秒 GPU，845.07 MiB；standalone 14 日独立复跑通过 |
 | A34 | 同协议跨季节 | I5_N 冬，seed 20261013 | State .946854 → .954329，纯 attention α=.75；CI [.006259,.007608] | 1139.94 秒并行 GPU，845.07 MiB；不是正式分项 |
 | A35 | 同协议第二 NN/LGB fit seed | I5_N 秋，seed 20261029 | State .942295 → .948993，attention+density α=.75；CI [.005566,.006983] | 1140.11 秒并行 GPU，845.07 MiB；与 A33 共享日期 |
+| A36 | 同协议第二个走廊族的监督模型 | I405_N 秋，seed 20261013，352 sensors | State .921455 → .930130，纯 attention α=.75；CI [.006482,.009089]，R3 +.010771 | 1212.19 秒 GPU，1180.95 MiB；14 日 standalone 复跑通过 |
 | A33–A35 消融 | 所有架构的原 cal checkpoint / blend 均封存 | same assessment；原赢家保留 | attention 比几何图的三组日均 CI 均正；density 比 attention 两组跨零、冬季全负 | 不反选 A35 的 assessment 胜者；所有原赢家指标复现 |
 | A37 | 新 attention 模型跨 family 零样本迁移 | I5_N → I10_W；目标标签仅用于评分 | 插值 .928998 / 半数组合 .922352 / 纯 NN .884405；半数组合 CI 全负 | 31.44 秒；失败，不部署共享模型 |
 | A38 | 急降速、恢复、拥堵观测、缺失诊断 | 同 A33–A35，按 station/link 五分钟差 | 三组 R3 均改善；少数急降速目标改善，完整 RMSE/计数/日区间记录 | 诊断 score 跨 regime 按 cell pooled，不冒充正式宏平均或真实事故标签 |
 | P01 | 全公开 train 的生产准备 | I5_N，45 日 frozen profile 后 228 日 | 4,409,727 labels，全标签 LGB / NN 缓存覆盖完整 | 444.90 秒 CPU；没有 holdout 或正式成绩 |
+| P02 | 固定两种生产 NN 假设 | P01 的全部公开 fit 日期，24 epochs / α=.75 | attention 与 attention+density CPU 权重及 standalone 均保存 | 891.96 秒 GPU，844.85 MiB；仅训练记录，没有 holdout |
+| K03/K04 | 两种生产假设的完整本地控制候选 | 只改 I5_N State/Physics 输入；其他任务固定 | 各 6,980,503 行，全行 diff 通过，仅 1,131,560 State rows 改变 | 242.97 / 242.22 秒；未上传，正式成绩未知，原最佳不覆盖 |
+| C30 | 因果十三步历史预测六步 Queue | matched C27，同事件/标签；NN 使用合法 occupancy/condition | cal 原树 .898170，纯 temporal .456449、纯 graph .775337；组合都选 α=0 | 253.87 秒 GPU，110.75 MiB；拒绝晋级，原树 assessment .897422 保持 |
+| A39 | 较大方向的场景诊断 | 同 A36，station/link 五分钟差 | 严重降速诊断 +.115282（275），恢复 +.033326（641） | 带噪观测，不能视为真实事故标签 |
 | K01 | 一次 OD-only 正式控制实验 | 同首轮所有 State / Queue 数值，全量 6,980,503 行 diff | **正式 Total 0.76474，下降 0.06466，拒绝晋级**；ref 57140644 | SHA 4976e6bc1fe45207b6ea05dda2031d7885c9b38e1d607efc62c97887ba1e9055 |
 | ENV01 | 独立 CUDA 环境 | Python 3.13.1 / RTX 4060 Laptop 8GB | torch 2.8.0+cu128 已安装；实际 CUDA 运算通过 | 当前沙箱临时目录访问失败，改为 E:\\ieee\\.cache\\build_tmp 后构建成功；原 .venv-repro 不修改 |
 
 复现入口：`scripts/register_research_protocol.py`、`audit_physics_topology.py`、`simulate_stress.py`、`od_probability_experiment.py`、`queue_event_experiment.py`。
 正式反馈只读本队提交。禁止隐藏标签、组织方内部资产和其他队伍预测。
 
-A33–A35 已完成，两季、两种子都在强 LGB 上改善；三个 standalone 各 14 日重建/预测验证通过。仅 I5_N 的开发证据，A37 跨 family 迁移失败。各架构的匹配 assessment 消融保留 cal 选择，attention 增益稳定，density 独立 State 收益不稳定；不能按已看的 assessment 改选 A35。P01 完成，P02 的两个固定生产假设与 A36 I405_N 监督复核运行中。两个 GPU 训练进程合计曾观察约 3.2 GiB / 8 GiB。原正式 profile 与开发 profile 的数值最大差约 4e-12，仅浮点舍入，不能据 equals=False 推断日期变化。
+A33–A36 已完成，四个 standalone 各 14 日重建/预测验证通过。I5_N 两季两 seed、I405_N 单季单 seed 的开发证据均正；A37 跨 family 迁移失败。各架构的匹配 assessment 消融保留 cal 选择，attention 增益稳定，density 独立 State 收益不稳定；不能按已看的 assessment 改选 A35。P01/P02 完成，K03/K04 各 6,980,503 行覆盖与限定任务/方向的全行 diff 通过；正式成绩未知。C30 未超越树模型，拒绝晋级。两个 GPU 训练进程合计曾观察约 3.2 GiB / 8 GiB。原正式 profile 与开发 profile 的数值最大差约 4e-12，仅浮点舍入，不能据 equals=False 推断日期变化。
+
+当前研究环境 35 tests passed（14.32 秒），CPU 30 passed / 3 optional-Torch module skips（8.73 秒）。首轮场景诊断改为按 station/link 差分后，对原模型与原日期独立复跑，所有分组计数和指标仍与历史 I5_N 记录一致；原冻结结果保留。
+
+当前完整模型/配置快照 `model_artifacts_checkpoint_adaptive_v2.json` 保存 **334 项**已完成 artifact SHA。`K03_K04_local_state_controls.json` 保存完整候选 SHA、大小、覆盖及全行 diff；`adaptive_verification_record.json` 记录实际测试与独立复跑的范围。所有文件仅在本地，重要代码与报告通过本地 Git 提交归档。
 
 专家/密度阶段 31 tests passed。expected-IoU 与小规模独立枚举全部标签、全部预测集合一致；独立 Bernoulli 假设不代表交通单元真实独立。density 投影网格严格核对完整 key，并保留缓存预测不变；测试发现 Pandas 可返回只读 NumPy 视图，已显式 copy 并验证与直接预测一致。新实验在开始前保存源代码与依赖锁。
 

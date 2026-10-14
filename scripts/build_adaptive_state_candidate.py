@@ -9,6 +9,7 @@ from pathlib import Path
 import time
 import numpy as np
 import pandas as pd
+import torch
 from trafficflow.data import Release, STATE_KEY, VALUES, csv
 from trafficflow.experiments import day_template
 from trafficflow.state import StateModel, StateFeatures
@@ -105,7 +106,7 @@ if __name__ == '__main__':
         'replaced_State_rows': replaced, 'prediction_days': daily,
         'component_sha256': {task: sha256_file(path) for task, path in files.items()},
         'submission_sha256': sha256_file(args.output/'submission.csv'),
-        'seconds': time.perf_counter()-start, 'source': evidence(gpu_used=True),
+        'seconds': time.perf_counter()-start, 'source': evidence(gpu_used=torch.cuda.is_available()),
         'uploaded': False, 'formal_State': None, 'formal_Physics': None, 'formal_Total': None,
         'limitations': 'Local complete candidate, not a promoted formal best. No validation/private labels are read. Task 3 uses changed State values, and its hidden boundary-flow score is unknown.'}
     (args.output/'verification.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
