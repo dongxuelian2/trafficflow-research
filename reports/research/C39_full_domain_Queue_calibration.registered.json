@@ -1,0 +1,35 @@
+{
+  "protocol_sha256": "21e8beeba51cc0a5d4febb8585fe980760c961f1bb317221365951b29b3b9e2e",
+  "protocol": {
+    "id": "Full_forecast_Queue_calibration_time_order_control",
+    "probability_report_sha256": "469f4411fe35c1539842f9e8ff3c3a5733e257f64f00adf192c937cba366ebf8",
+    "timing_orders": [
+      "after",
+      "before"
+    ],
+    "ranges": [
+      "tree",
+      "direct",
+      "wave_15min",
+      "wave_30min"
+    ],
+    "alpha_grid": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "threshold_grid": "31 values .05… .80, global or public condition",
+    "nonempty": [
+      false,
+      true
+    ],
+    "calibration": "Full public domain; future availability exclusively scorer mask",
+    "weights": "Frozen source checkpoints chosen previously by per-cell cal Brier; no refit or new training seed",
+    "selection": "Best calibration IoU, ties lower alpha then tree; seal both timing orders before assessment load",
+    "assessment": "Already inspected public TRAIN periods and same event origins; not final",
+    "formal_Queue": null,
+    "formal_Total": null
+  }
+}

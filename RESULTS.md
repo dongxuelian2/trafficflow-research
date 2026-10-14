@@ -2,6 +2,14 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**最新 C38–C41：完整预测域的Queue重新校准与可部署模型已完成，时序规则没有取得独立收益。** 固定原三个graph checkpoint及tree，在完整公共六步模板上校准alpha/threshold/nonempty，未来eligible mask只进入scorer。对照“先force再清零onset”和“先限制onset候选再force”，两季cal均选择 **30min graph / α=.25 / force=false**。秋去重proxy IoU **.879028 vs同样全域校准tree .872422**，gain **.006606**、CI **[−.004692,.018938]**；冬 **.879943 vs .868240**，gain **.011703**、CI **[−.001776,.032738]**。before/after时序策略在两季输出相同，gain 0；不把接口修正声称新的模型增益。仍只有一个fit seed、已查看的公开train观测代理，未晋级。
+
+四个导出模型从≤T Parquet历史独立重建并精确复现 **220次model/cal-window调用**；不接受未来mask/label作为推断参数，要求完整模板。新模型对当前I5_N validation/private各覆盖 **15,480** 行。C40自主模拟135,000个事件、27case、81条规则case结果，仅说明选择偏差：单格queue、r=.75条件下，合法非空规则在latent-positive总体的模拟IoU **.095533**，空预测 **.252533**；若只筛scored-positive事件，二者变为 **.032356 / 0**。这不是赛事实际采样、交通预测成绩或正式Queue；oracle未来mask规则仅用于诊断。
+
+**K06完整LOCAL Queue-only控制已生成，未上传、非新最佳。** `artifacts/research/K06_I5_N_full_domain_Queue_LOCAL/submission.csv` 共 **6,980,503** 行，SHA-256 **`d280c84352bff14b46c05ca64c6c8c9da2b7988e9c450a78f897088957280459`**。独立master-key全行diff仅I5_N **415个queue_pred**改变（validation132/private283），State、OD、其他Queue及所有其他字段相同，Physics输入不变。正式Queue/Total均未知，原.82940文件保持冻结。
+
+本轮 **67 research tests passed；CPU59 passed/3 optional-Torch skips**。完整概率缓存58.77秒GPU推断/复核，重新校准395.24秒CPU，独立部署复核45.06秒。更新结果、实验、对照及路线图；只在本地归档，不发布、推送或上传。下一步优先合法train-window采样/噪声偏差、跨方向和新fit seed，再探索事件级联合概率，而不是继续调整同一阈值网格。
+
 **最新 A66–A71：公开覆盖/完整分母密度损失未获得可晋级的独立 State 增益。** 两组各四个strict12/vq模型共享初始化、patch序列、24×120预算，只有loss不同。I210_W秋季cal选coverage、α=.5；assessment State **.933577 → .931394**（−.002184），公开coverage增量代理L1 **.404858 → .396416**。完整分母为 **.932287 / .399691**，也损失State；没有根据assessment更换原选择。追加30日冻结复核 **.932585 → .932105**（−.000480），日均CI **[−.001044,−.000118]**，持续有代价，原模型保留。
 
 I5_N冬季cal仍选State-only、α=.75。未被primary选中的coverage/full模型assessment State **.954403 / .954407 vs .954329**，增益仅 **.000074 / .000077**，日均CI均跨零；公开proxyL1 **.365023 / .365453 vs .373316**。这些是旧公开train开发日期，非final或真实Physics；不同cal checkpoint/α的策略比较不能完全归因单个梯度项。两组State-only及legacy-density的参数张量分别与A52/A34完全一致，四模型patch序列一致；两个保存角色各14日cal输入、raw TRAIN evaluator labels及预测复现通过。

@@ -2,6 +2,12 @@
 
 目标为可复现的正式 Kaggle **0.95000+**；当前正式 **0.82940**。不将阶段性较低分数作为终点。
 
+C38–C41已完成正确全域calibration、时间约束before/after的独立对照、可部署模型及完整LOCAL K06。两季选择均force=false，时序修正gain为0；不要继续扫同一threshold网格。模型与tree的proxy gain仍CI跨零，保持一个fit seed的研究候选，不推广生产、不上传K06。
+
+下一轮优先检验已发布TRAIN窗口及rolling历史对当前观测正例采样的偏差，并增加跨方向/新fit seed。C40的已知真值模拟表明条件化scored-positive会改变nonempty评价，但不能推断实际组织方附加采样规则。可比较事件发生/传播范围和联合概率模型，明确未知未来质量仅可用历史估计，真实future eligibility不得进入推断。所有新概率方法必须先在已知真值模拟与同一完整域tree对照，再进行合法观测proxy验证。
+
+K06只作完整Queue-only控制，State/OD/Physics输入保持原最佳；后续正式测量继续等待用户恢复平台任务。最终模拟seed不启用。0.95000+正式目标不改变，不以当前可部署接口或零增益对照作为完成标准。
+
 A66–A71再次证明density loss不是稳定State增益：秋cal获选方案有.002184 State代价，30日复核CI仍负；冬只有未获primary的.000074–.000077变化。暂停扩张这一固定λ网格，保留State-only和仅作proxy challenger的模型。完整分母约把有效λ减半，若未来继续这条路线，必须比较等平均强度及观测噪声/潜在动力学模型，而不是把λ效应包装成物理结构收益。
 
 **下一步优先修正Queue模型选择的完整forecast域。** C35/C37已证实filtered未来eligible域会改变global-prefix/nonempty决策；只把mask放在scorer。C27–29原专家权重可复用，但需从完整域重新校准候选阈值/集合规则；C32波速checkpoint的Brier训练仍为逐点scorer，旧nonempty绝对IoU需要更正。独立对照“先按公开onset时序限制候选，再做nonempty”与旧先force再清零次序，不能静默改旧成绩。之后再比较事件级概率/空间相关集合模型及观察标签噪声，继续多个fit seeds、跨方向与rolling验证。

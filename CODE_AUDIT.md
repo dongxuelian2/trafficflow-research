@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+C38完整保存tree与三个graph的全模板概率，future labels/score mask独立存为evaluator数据。C39推断函数full_queue_decisions不接受score mask；只有FullForecastScorer校准utility使用label/mask。两套时间规则先在cal封存，之后才读assessment；不重训、没有新fit seed。fast scorer与逐窗scorer含无eligible evidence=0的手算一致。before模式nonempty只能在公开允许的onset T+30候选中选择，避免旧清零顺序删掉强制点；实际selected force=false，所以两季结果相同。
+
+FullDomainQueueModel只接受history、完整template、public net/topology、origin与condition；UTC标准化、拒绝>T测量及缺失template。导出CPU weights，保存前清除GPU cache；实际220次cal-window由Parquet≤T谓词和公开T行重建，binary predictions精确复现。validation/private推断各15480行，完整master-key diff证明K06只改I5_N415个Queue值，State/OD/其他字段逐行不变。67 research /59 CPU tests、3可选Torch跳过；新测试含time-before-force反例、scorer一致性、完整预测域及因果/完整模板拒绝。
+
+C40oracle使用模拟future mask仅作非法决策域的诊断，没有进入任何导出model/候选；其未来真值来自自主模拟，不是组织方latent标签。81条policy/case共享27个事件case，不能当405000独立事件。不同采样总体绝对分数不当算法gain，实际组织方额外选择规则仍未知。
+
 A66/A68四个strict12/vq组的初始化、采样与预算完全相同。新增raw TRAIN y_full及public Mode A pair masks仅进入loss/evaluator；cal/assessment推断从masked帧重建，导出的AdaptiveStateModel只存已有baseline、CPU weights与public topology，不含full labels。两组State-only/legacy参数分别与A52/A34逐张量一致；不算新fit seed。public coverage metric用完整有效对分母与R1/R2/R3等权，单独字段避免与legacy proxy混淆。手算单元测试核验12/42及6/18分母、regime mean非pooled比率。完整分母等价batch强度重缩放，不能宣称新增物理信息。
 
 C35发现sample_events在构造ProxyData时按未来available筛行；pointwise threshold本身不依赖集合，expected prefix与force-nonempty却会利用这个未知未来域。C35/C37固定旧策略重放分别48/32组旧指标精确一致；新的预测函数不接受score mask，完整预测完成后才调用score_full_forecast。未来全不可评分window按官方规则为0，不返回empty-empty满分。反例p=[.9,.4]、future mask=[False,True]说明旧域可将合法full预测的IoU0变成1。没有隐藏label读取；这是公共train代理评测接口的泄漏，不改变已正式提交的全template预测文件。

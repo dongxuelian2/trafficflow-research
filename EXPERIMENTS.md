@@ -2,6 +2,19 @@
 
 所有模拟指标、观测代理与正式 Kaggle 指标分别记录。失败实验不删除，既有模型与提交不覆盖。
 
+最新C38–C41与完整LOCAL K06完成，正式Total仍.82940；新时序规则gain为0，没有新模型晋级。
+
+| 编号 | 假设 / 对照 | 实测结果 | 资源 / 决策 |
+|---|---|---|---|
+| C38 | 完整forecast概率、raw graph logits校正概率cache | 两季8个cal/assessment cache；原C37旧指标及新全域回放均复现 | 58.77秒GPU推断，无权重训练 |
+| C39 | 固定checkpoints，全域混合/threshold校准；onset时间约束before/after force | 两季都wave30 α=.25 force=false；两时序输出相同 | 395.24秒CPU；不宣称新性能收益 |
+| C39 deploy | 四模型全部校准历史重建与保存/加载推断 | 52/58窗口×两个时序，220次全部binary predictions精确一致 | 45.06秒；validation/private各15480行完整 |
+| C40 | 合法latent-positive与scored-positive过滤的已知真值压力测试 | 单格/r.75 latent总体force .095533 vs空.252533；过滤后force .032356 vs空0 | 27case×5000事件，81rule/case共享样本；非官方生成器 |
+| C41 | 选中混合与同样全域校准tree公平对照 | 秋gain.006606、冬.011703，两CI均跨零 | 旧观测proxy/一个fit seed，未晋级 |
+| K06 | I5_N Queue-only完整本地控制 | 6980503行；只415个Queue值变，132val/283private | master-key全行diff通过；正式分数未知、未上传 |
+
+C39 cal同时比较两种规则，先封存全部选择，再读取assessment。graph checkpoint早先按逐点Brier选择，当前不重训；source probabilities及geometry保持冻结。推断没有future score mask参数；scorer包含无eligible证据window=0。cal非空假设在当前观测正例采样中仍可能偏置，C40不是实际组织方政策证据。67 research /59 CPU tests、3Torch skips，完整本地候选不覆盖正式最佳。
+
 最新A66–A71与C35–C37完成；没有新模型晋级，正式Total仍.82940。
 
 | 编号 | 假设 / 对照 | 实测结果 | 资源 / 决策 |

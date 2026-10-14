@@ -32,6 +32,7 @@ class FixedDecision:
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--save-probabilities',action='store_true')
     args=parser.parse_args();folder=Path('artifacts/research')/args.output.stem
     if args.output.exists() or folder.exists():raise FileExistsError('Never overwrite a wave-domain replay')
     names=['C32_D12_I5_N_wave_graph_Queue','C34_D12_I5_N_winter_wave_Queue']
@@ -41,12 +42,13 @@ def main():
         'causality':'Fresh history restricted to <=T; all reconstructed nine-channel inputs must equal cache',
         'decision':'Full public template before evaluator-only future availability filtering',
         'timing':'Retain original decision-then-onset-zero ordering for controlled replay; do not silently repair another rule',
+        'save_full_probability_cache':args.save_probabilities,
         'formal_Queue':None,'formal_Total':None})
     folder.mkdir(parents=True);snapshot=capture_source_snapshot(folder/'source_snapshot.zip');start=time.perf_counter()
     release=Release('data/kaggle_public');manifest=json.loads(Path('reports/research/model_artifacts_checkpoint_assimilation_v1.json').read_text())
     device=torch.device('cuda' if torch.cuda.is_available() else 'cpu');torch.set_num_threads(4)
     torch.use_deterministic_algorithms(True);torch.backends.cudnn.benchmark=False
-    rows,source_records,comparisons=[],[],[]
+    rows,source_records,comparisons,probability_caches=[],[],[],[]
     for study in names:
         path=Path('reports/research')/(study+'.json');run=json.loads(path.read_text());producer=Path('artifacts/research')/study
         expected=run['registered']['protocol']['source_cache_report_sha256']
@@ -73,6 +75,7 @@ def main():
             expected_hash=cached['cache_sha256']['selection'] if phase=='selection' else next(r['cache_sha256'] for r in cached['assessment'] if r['seed']==seed)
             if sha256_file(source_npz)!=expected_hash:raise ValueError('Sequence cache changed')
             arrays=dict(np.load(source_npz,allow_pickle=False));labels=[];masks=[];windows=[];conditions=[]
+            base_probabilities=[];neural_probabilities={n:[] for n in neural};lead_minutes=[]
             legacy_pred={n:[] for n in settings};full_pred={n:[] for n in settings};changes={n:0 for n in settings}
             for i,event in enumerate(sorted(metadata['windows'],key=lambda r:r['origin'])):
                 origin=pd.Timestamp(event['origin']);token=origin.strftime('%Y-%m-%dT%H:%M:%SZ');rawpath=rawpaths[origin.date().isoformat()]
@@ -87,10 +90,12 @@ def main():
                 x=queue_features(history,target,net,topology,origin,allow_origin=True,include_occupancy=False)
                 wid=f'{panel}:{token}:{seed}';window=np.full(len(x),wid);condition=np.full(len(x),event['condition'])
                 reference=baseline.probability(x);probabilities={'shared_threshold':reference}
+                base_probabilities.extend(reference);lead_minutes.extend(x.lead_minutes.to_numpy())
                 with torch.no_grad():
                     tensor=torch.from_numpy(rebuilt.transpose(2,0,1)[None].copy()).to(device)
                     for name,model in neural.items():
                         logits,_=model(tensor,*graphs[name]);p=weighted_bce_probability(logits.cpu().numpy()[0],4.).ravel()
+                        neural_probabilities[name].extend(p)
                         probabilities[name]=(1-settings[name]['alpha'])*reference+settings[name]['alpha']*p
                 predictions={name:predict_full_forecast(FixedDecision(p,settings[name]),x,window,condition) for name,p in probabilities.items()}
                 # Future eligibility is used only here, after all full decisions.
@@ -100,6 +105,13 @@ def main():
                     legacy_pred[name].extend(old);full_pred[name].extend(predictions[name]);changes[name]+=int((old!=predictions[name][valid]).sum())
                 labels.extend(truth);masks.extend(valid);windows.extend(window);conditions.extend(condition)
             labels,masks,windows,conditions=map(np.asarray,[labels,masks,windows,conditions]);metrics={}
+            if args.save_probabilities:
+                destination=folder/(study+'_'+phase+'_'+str(seed)+'.npz')
+                np.savez_compressed(destination,base=np.array(base_probabilities),
+                    neural=np.stack([neural_probabilities[n] for n in ['direct','wave_15min','wave_30min']],axis=1),
+                    labels=labels,score_mask=masks,window=windows,condition=conditions,lead_minutes=np.array(lead_minutes),links=np.array(links))
+                probability_caches.append({'study':study,'phase':phase,'seed':seed,'path':destination.as_posix(),
+                    'sha256':sha256_file(destination),'n_full_forecast_cells':len(labels),'source_sequence_sha256':expected_hash})
             for name in settings:
                 legacy=grouped_iou(labels[masks],np.array(legacy_pred[name]),windows[masks],conditions[masks])
                 if abs(legacy['proxy_IoU']-old_metrics[name]['proxy_IoU'])>1e-12:raise ValueError('Legacy wave replay failed')
@@ -115,6 +127,7 @@ def main():
         source_records.append({'report':path.as_posix(),'sha256':sha256_file(path),'causal_cache':cache.as_posix(),
             'causal_cache_report_sha256':expected,'baseline_sha256':sha256_file(base_path)})
     result={'registered':registered,'source_snapshot':snapshot,'source_records':source_records,'rows':rows,'comparisons':comparisons,
+        'full_probability_caches':probability_caches,
         'seconds':time.perf_counter()-start,'source':evidence(gpu_used=device.type=='cuda'),'formal_Queue':None,'formal_Total':None,
         'limitations':'Frozen checkpoint/alpha/decision settings; no corrected cal reselection. Approximate noisy observation events, not latent labels or final tests. Future timing-before-force and full-domain calibration still require their own comparison.'}
     args.output.write_text(json.dumps(result,indent=2,allow_nan=False),encoding='utf-8');print(comparisons,flush=True)

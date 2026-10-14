@@ -3,6 +3,15 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+最新完整域校准（冻结fit权重，参数只由cal选择）：
+
+| fold / 模型 | tree proxy IoU | selected mixture proxy IoU | 去重gain CI | before/after timing差异 |
+|---|---:|---:|---|---|
+| I5_N秋 / wave30 α=.25 | .872422 | .879028 | [−.004692,.018938] | 0；两者force=false |
+| I5_N冬 / wave30 α=.25 | .868240 | .879943 | [−.001776,.032738] | 0；两者force=false |
+
+两季均未通过Queue晋级门槛，C39可部署wrapper及独立220个cal-window复跑完成。K06 LOCAL完整文件只改变I5_N的415个Queue值，其他全行一致；正式分数未知，不替代.82940最佳。C40模拟仅检验采样/未来eligibility假设，所有模拟IoU不得填入本表的真实Queue列。
+
 最新同初始化/采样的density-loss对照（每个checkpoint/α由原cal封存）：
 
 | panel / fold | State-only | legacy density | coverage-target density | full-denominator density | primary选择 |

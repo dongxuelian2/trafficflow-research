@@ -1,0 +1,37 @@
+{
+  "protocol_sha256": "50fd7dbcfe661ea03574a96f5c0e1d9c7bf399b55c74069220f2ccafe0ff0a6b",
+  "protocol": {
+    "id": "Synthetic_Queue_horizon_selection_eligibility_bias",
+    "nodes": 32,
+    "onset_steps": 6,
+    "block_sizes": [
+      1,
+      4,
+      16
+    ],
+    "eligible_probabilities": [
+      0.5,
+      0.75,
+      0.95
+    ],
+    "seeds": [
+      941831,
+      941839,
+      941843
+    ],
+    "events_per_case": 5000,
+    "latent_truth": "One uniformly located contiguous final-step queue block; early five steps empty",
+    "probability_input": "Exact marginal over uniform block start, computed before event sampling; never individual truth or mask",
+    "populations": [
+      "latent_positive",
+      "same_events_conditioned_scored_positive"
+    ],
+    "decisions": [
+      "threshold.5",
+      "full_template_nonempty",
+      "future_eligibility_oracle_nonempty_for_diagnostic_only"
+    ],
+    "formal_Queue": null,
+    "formal_Total": null
+  }
+}
