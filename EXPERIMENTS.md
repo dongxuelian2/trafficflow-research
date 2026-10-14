@@ -2,6 +2,22 @@
 
 所有模拟指标、观测代理与正式 Kaggle 指标分别记录。失败实验不删除，既有模型与提交不覆盖。
 
+最新A66–A71与C35–C37完成；没有新模型晋级，正式Total仍.82940。
+
+| 编号 | 假设 / 对照 | 实测结果 | 资源 / 决策 |
+|---|---|---|---|
+| A66 | I210_W秋：State / legacy / coverage / full-denominator，λ=.01 | cal选coverage；State相对State-only−.002184，proxy L1改善.008442 | 689.64秒GPU；不反选、不晋级 |
+| A67 | I5_N冬full标签缓存，153fit/14cal/14assessment | 原inputs/targets不变，额外eligible buffer labels=0；旧fit对304034不计公开coverage | 117.13秒CPU；无新模型信息增益 |
+| A68 | I5_N冬，同四损失 | cal仍State-only；其他coverage/full State gain.000074/.000077，CI跨零 | 1122.99秒GPU；不按assessment反选 |
+| A69 | 两组匹配对照及日级不确定性 | I210coverage State CI全负；冬proxy error-reduction CI正但State收益小 | 只有一个fit seed、两个panel/fold，不晋级 |
+| A70 | 固定fit采样的分母强度审计 | 两组full/target系数均值.542741/.538899；batch有变化 | λ变化不是新增物理信息；无cal/assessment调参 |
+| A71 | A66 cal模型冻结，追加30日 | State .932585→.932105，日均CI[−.001044,−.000118] | 33.51秒；public-train开发复核，非final |
+| C35 | 旧C27–29模型同origins，full-domain vs future-eligible domain | 41次评分单元决策变化，选中expert模型全部不变；48组旧指标精确复现 | 127.79秒CPU；不重调权重或threshold |
+| C36 | 使用修正域去重重算CI，保留旧cal选择 | C27 gain改为+.017150但CI跨零；C28/C29不变 | 不构成新模型收益；旧负/正记录保留 |
+| C37 | C32/C34固定波速checkpoint/alpha/threshold全域复跑 | 秋absolute IoU整体−.025，gain不变；冬不变；32组旧指标精确复现 | 因nonempty/domain而非输入未来值；不重新选模型 |
+
+A66/A68 State-only与legacy参数张量复现A52/A34，新的两种loss只改监督条件与分母。原seed不是新replication。cal保存角色各14日从masked数据和raw TRAIN evaluator labels独立重建。63 research /55 CPU tests、3 Torch skips；全源码compileall通过。C35/C37未来mask只可在scorer使用；旧nonempty/expected-prefix的filtered-domain数字标记为历史诊断。新的全域校准和timing-before-force尚待独立实验，不能把当前fixed-rule重放包装成已经完成的重新优化。
+
 最新A58–A65完成；没有新State晋级或正式成绩。同化不重新训练先验，仅选择cal precision/strength；含CPU求解及GPU冻结先验推断。
 
 | 编号 | 假设 / 对照 | 实测结果 | 资源 / 决策 |

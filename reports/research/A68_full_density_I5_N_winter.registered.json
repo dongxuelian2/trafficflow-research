@@ -1,0 +1,57 @@
+{
+  "protocol_sha256": "2f0d9b28a85e82482ca89b63284086cd199959485cc70eefff0d0d29639b6986",
+  "protocol": {
+    "id": "Matched_public_coverage_density_loss",
+    "cache": "artifacts/research/A67_full_public_density_labels_I5_N_winter",
+    "prepared_sha256": "688f80f085ccbb40c3a8b6ce133b364983b2015d3b26b640ed1bfdcf122126e0",
+    "panel": "D12_I5_N",
+    "fold": "rolling_winter",
+    "baseline_file": "artifacts/research/A16_winter_full_label_LGB_control/lightgbm_large_budget.pkl",
+    "baseline_sha256": "6342f040ba86c837b9b657d9f7dd67ad19c12263bcf9a7f4839b850cc409ab17",
+    "initialization_sha256": "e459390fe57bedebf51bc1fcf42e2beb30a94c34d9602b6f59426f97071f0e05",
+    "seed": 20261013,
+    "variants": [
+      [
+        "state_only",
+        "none"
+      ],
+      [
+        "legacy_density",
+        "legacy"
+      ],
+      [
+        "coverage_density",
+        "public_target_pairs"
+      ],
+      [
+        "full_density",
+        "public_all_pairs"
+      ]
+    ],
+    "density_weight": 0.01,
+    "channels": 12,
+    "output_coordinates": "vq",
+    "hidden": 48,
+    "heads": 2,
+    "epochs": 24,
+    "steps_per_epoch": 120,
+    "batch_size": 4,
+    "patch_steps": 64,
+    "optimizer": "AdamW .001, weight_decay1e-4, clip_norm1",
+    "sampling": "Identical RNG and shared weights across four variants",
+    "selection": "Per-variant best pure cal State checkpoint, then alpha grid; primary by cal State only",
+    "joint_selection": "Minimum cal macro-regime public increment L1, State >= strong LGB and >= best primary-.001",
+    "blend_grid": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "label_scope": "Full eligible raw TRAIN labels and public Mode A pair validity only in loss/evaluation; never input channels",
+    "normalization_caveat": "Constant lambda .01; denominator changes effective regularization scale. Not an equal-gradient-strength comparison",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null
+  }
+}

@@ -2,6 +2,14 @@
 
 目标为可复现的正式 Kaggle **0.95000+**；当前正式 **0.82940**。不将阶段性较低分数作为终点。
 
+A66–A71再次证明density loss不是稳定State增益：秋cal获选方案有.002184 State代价，30日复核CI仍负；冬只有未获primary的.000074–.000077变化。暂停扩张这一固定λ网格，保留State-only和仅作proxy challenger的模型。完整分母约把有效λ减半，若未来继续这条路线，必须比较等平均强度及观测噪声/潜在动力学模型，而不是把λ效应包装成物理结构收益。
+
+**下一步优先修正Queue模型选择的完整forecast域。** C35/C37已证实filtered未来eligible域会改变global-prefix/nonempty决策；只把mask放在scorer。C27–29原专家权重可复用，但需从完整域重新校准候选阈值/集合规则；C32波速checkpoint的Brier训练仍为逐点scorer，旧nonempty绝对IoU需要更正。独立对照“先按公开onset时序限制候选，再做nonempty”与旧先force再清零次序，不能静默改旧成绩。之后再比较事件级概率/空间相关集合模型及观察标签噪声，继续多个fit seeds、跨方向与rolling验证。
+
+公开latent horizon有queue并不保证future eligible评分域仍有positive，nonempty不是安全增益定理；旧代理采样还要求观测future positive，存在选择偏差。需要合法的已知真值模拟压力测试及已发布train windows的观测诊断，始终与真实Queue分数区分。OD继续count/prior失配路线；最后模拟seeds与正式最佳保持冻结。平台任务按用户指示继续暂缓。
+
+正式冻结Queue中D7_I10_W及D7_I405_N为force=true；它们的实际推断使用完整模板，正式分数可信，但原本地校准应加入新的完整域对照。先校准和评估完整模板上的集合规则，再建立未知未来可用率的概率模型；不能把真实future scoring mask当决策输入。
+
 A58–A64提供了明确停止扩张同化网格的证据：三组最多只有.000124/.000112的State gain，I210_W无收益，额外五次先验推断的代价较大。保留可复现代码和cal fallback，暂不全网生产或继续扫更多近邻超参数。CF策略两冬季日均CI为正仍低于原晋级门槛；不能用统计显著替代实际增益大小。
 
 下一轮优先用已完成A65标签缓存做**相同strict12/vq初始化、patch、budget下仅改变density loss coverage/分母**的实验。审计已更正最初假设：I210_W本fold没有额外eligible buffer锚点信息，旧loss有约26.4%相邻对不属公开Mode A coverage。新full标签不能进入模型输入；真实边界流仍未知。检查State代价及公开coverage proxy，避免把旧target-touching分母的下降称正式Physics增益。

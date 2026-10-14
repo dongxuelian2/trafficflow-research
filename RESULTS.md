@@ -2,6 +2,20 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**最新 A66–A71：公开覆盖/完整分母密度损失未获得可晋级的独立 State 增益。** 两组各四个strict12/vq模型共享初始化、patch序列、24×120预算，只有loss不同。I210_W秋季cal选coverage、α=.5；assessment State **.933577 → .931394**（−.002184），公开coverage增量代理L1 **.404858 → .396416**。完整分母为 **.932287 / .399691**，也损失State；没有根据assessment更换原选择。追加30日冻结复核 **.932585 → .932105**（−.000480），日均CI **[−.001044,−.000118]**，持续有代价，原模型保留。
+
+I5_N冬季cal仍选State-only、α=.75。未被primary选中的coverage/full模型assessment State **.954403 / .954407 vs .954329**，增益仅 **.000074 / .000077**，日均CI均跨零；公开proxyL1 **.365023 / .365453 vs .373316**。这些是旧公开train开发日期，非final或真实Physics；不同cal checkpoint/α的策略比较不能完全归因单个梯度项。两组State-only及legacy-density的参数张量分别与A52/A34完全一致，四模型patch序列一致；两个保存角色各14日cal输入、raw TRAIN evaluator labels及预测复现通过。
+
+A70只用fit标签审查同一2,880个batch：完整分母等价于coverage-target loss的batch强度重缩放，平均系数 **.542741 / .538899**，λ=.01平均约等效 **.005427 / .005389**，系数随batch变化。因此不能将结果解释为新增物理信息或等强度正则对照。两组GPU完整wall time **689.64 / 1122.99秒**，存在并行；正式Physics与Total未测量。
+
+**C35–C37纠正Queue代理验证的未来评分域依赖。** 历史sample_events先丢弃future不eligible的cell，再做expected-IoU排序或nonempty，集合决策因此隐式利用了未来评分可用性。固定旧模型、参数和origins，对完整公共forecast template先预测、最后才筛评分域：C27–C29共 **41次**评分cell决策变化，原选expert-threshold（force=false）输出全部未变；C32/C34再有 **8次**变化，数量包含模型/seed重复，不是49个独立事件。全部 **80组model/phase旧指标**精确复现，旧报告未覆盖。
+
+C27相对强制nonempty基准的去重proxy gain更正为 **+.017150**，CI **[−.044440,.080005]**，此前−.007850不再作为正确域比较；C28/C29 gain **+.034186 / +.013551**不变、区间仍跨零。C32秋季基准/30min-wave绝对proxy IoU更正为 **.872422 / .879028**（原.897422/.904028），gain及CI不变；C34冬季不变。没有重新校准或按更正后的assessment重新选模型，均不晋级。新增full-domain预测/评分API及反例测试；旧global-set调参runner仅作为历史复现，下一轮必须在完整域校准，并独立检验时间约束与nonempty次序。正式提交始终使用公共全template，未读取隐藏future eligibility，原0.82940及提交SHA不变。
+
+最新 **63 research tests passed；CPU55 passed /3 optional-Torch skips**。四份报告持续更新，本轮只有本地研究、复现和Git归档；平台发布、推送、上传继续暂缓。详见 `docs/FULL_DENSITY_QUEUE_DOMAIN_RESEARCH.md`。
+
+正式基准推断另从Git代码15036c8核验：predict_windows使用完整公共template且不读取future eligibility/queue_true。八个冻结Queue最终模型重新校验SHA；其中D7_I10_W、D7_I405_N为force=true，后续应重新验证它们的本地校准域，但这不改变正式.82940的已测记录，也不表示正式推断用了隐藏信息。证据见 `full_density_formal_queue_inference_scope_v1.json`。
+
 **最新 A58–A65：完成冻结先验的质量/鲁棒/图残差同化，只有很小的局部收益，未晋级。** 20 个 precision 配置×3个非零strength及α=0，均仅在cal选择；三个panel/fold各比较原条件观测中心和遮观测中心。I210_W秋季两者都选α=0，保留 State **.933577**。I5_N冬季普通/遮观测 State **.954406 / .954453 vs .954329**，pooled gain **.000076 / .000124**；I405_N冬季为 **.933992 / .934099 vs .933986**，gain **.000005 / .000112**。虽然两组遮观测的日均区间为正，均远低于 .002 门槛；只有既有先验的一个fit seed和已查看开发日期，未改正式最佳。
 
 遮观测方案把每个有限公开观测分成5组，临时遮住自身四个measurement字段后预测anchor center；原Task1目标先验保持不变。同一panel/fold全部28日的原先验、strict/quality观测及graph数组逐值一致。CF与普通策略各用原cal封存选择，参数不同，不把策略差异全归因单个门控。I5_N CF primary的旧increment proxy **.679941**，普通primary **.676296**，虽有略高State却有更差proxy；不宣传多评分模块同时改善。六实验 **3,836 次channel求解全部成功**，实际相对线性残差≤约1e−8；CG数值证书不是交通物理证明。

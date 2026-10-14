@@ -1,0 +1,3530 @@
+{
+  "registered": {
+    "protocol_sha256": "5c1ed435b199b5f6320cb8c8281644ba5bc04c31447ca9828fa50c34af8194af",
+    "protocol": {
+      "id": "Public_train_full_observation_density_loss_labels",
+      "parent_prepared_sha256": "d428938ec42b4eaa766a76b021e0fe7de1db6f6e5abc91cd6a4f6b44c76db4bb",
+      "panel": "D12_I5_N",
+      "fold": "rolling_winter",
+      "coverage_mode": "A",
+      "inputs": "Every parent input/target/label array copied unchanged; full truth exists only in label arrays",
+      "labels": "Normalized raw eligible public TRAIN v/q, q per network lane; non-target evaluator anchors include released-input buffer blanks",
+      "pair_coverage": "Eligible adjacent <=5.1min endpoints, observable internal topology, Mode A public on/off ramp validity at interval start",
+      "boundary_flux_accessed": false,
+      "formal_Physics": null,
+      "formal_Total": null
+    }
+  },
+  "source_snapshot": {
+    "archive": "artifacts/research/A67_full_public_density_labels_I5_N_winter/source_snapshot.zip",
+    "archive_sha256": "7e492b999d2a49a54b496cf4ffc3c9fc9fc48c37b1789b18f5010a1e9c731e4b",
+    "captured_files": [
+      {
+        "path": "config/research_protocol_v2.json",
+        "sha256": "dd7318f99e56b826d42eac58ab9c3213803db8f6c740ed843d95879835703121"
+      },
+      {
+        "path": "config/research_targets.json",
+        "sha256": "9a524c7c728cf6ed7ab4920592541e38fe720b36a0879c6f488a77b833e3452f"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "8cd1033d7ceeaa616319d900e5a9990445f3881665420cf4cd9715941b0e52f5"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "db90c0f17353c586ec2b51f9f42748c254e2e6563e7aebff81b7dbf9a3e82ccd"
+      },
+      {
+        "path": "requirements.lock.txt",
+        "sha256": "f4c8602ed3a0c29541e42d23547672864aa487fe2fcf24f8cf2d140f53c16fde"
+      },
+      {
+        "path": "requirements.research.lock.txt",
+        "sha256": "12f5a3bd24e186a0c71512b18eea44548159ec37088546efd7cc3c14c95fae8c"
+      },
+      {
+        "path": "scripts/adaptive_graph_experiment.py",
+        "sha256": "20f067bb639496004300446f8ba8705824cae80b2e91225e5fe6abcb609a3570"
+      },
+      {
+        "path": "scripts/adaptive_graph_transfer.py",
+        "sha256": "b50f19a6427d6c3d7e8facddb071dbc22dc5cf3641b10f889dc2b4bfb2d40ec8"
+      },
+      {
+        "path": "scripts/adaptive_seed_ensemble_experiment.py",
+        "sha256": "3cf00abec0e697a7631c9b16d259ff4c966c88dfad5d23550834edf14999a1c3"
+      },
+      {
+        "path": "scripts/assemble_campaign.py",
+        "sha256": "e5b103ba8501775e049e14c89e3854e5e2a56b93942505330b5317d8023d6a5d"
+      },
+      {
+        "path": "scripts/assess_adaptive_ablation.py",
+        "sha256": "1ae73d734afe77a227629254cb67e002045a2894f094ed6bcc3e094d9297f442"
+      },
+      {
+        "path": "scripts/assess_joint_density.py",
+        "sha256": "92258a57238facc5153cc8c98c422ed71e92f69b0ae4ecada5a4edf77f00c2e6"
+      },
+      {
+        "path": "scripts/audit_kaggle_baseline.py",
+        "sha256": "3a8f78d8cb154fb1d4b25ed902d81e44b9665f4628162f3342641071b679193a"
+      },
+      {
+        "path": "scripts/audit_od_identifiability.py",
+        "sha256": "bce792650d2dfc0a5268a9e012aeaa846c87715620ee3e3e3a6e0659d4885c36"
+      },
+      {
+        "path": "scripts/audit_od_path_choice.py",
+        "sha256": "a4f66b3c5f96ad5639567dbd66ca0dfe3185e355b660b5a6c43282e4ea075bdc"
+      },
+      {
+        "path": "scripts/audit_physics_topology.py",
+        "sha256": "5afabe6d2e6920fdda75988c936d44adcabbb3f57110552d4c269ea7949d308a"
+      },
+      {
+        "path": "scripts/audit_public_missing_runs.py",
+        "sha256": "a75e7de2f4314f42214d17c63f213a85cd943f7074bc6f0c82094df06aa825ae"
+      },
+      {
+        "path": "scripts/audit_quality_state_context.py",
+        "sha256": "eab5635ee306051b7a391dc0f205f6bbcd7be009caf7ea22842c14bba75f1cb3"
+      },
+      {
+        "path": "scripts/audit_queue_origin.py",
+        "sha256": "dba7d16f51c6df6c6506a9e418d5aa3e3d7bdbe1693253772266bd170e36c242"
+      },
+      {
+        "path": "scripts/audit_released_onset_timing.py",
+        "sha256": "2cebf3e33c09f3a0f5e0f8e199ef58c84f0d39a93cfd303bf0f9e4b1e7647f68"
+      },
+      {
+        "path": "scripts/audit_state_increment_coverage.py",
+        "sha256": "aed74a5d49250e3c7c92bfbb203eb1c731d86387d5f5bdcceffd3015182fdd94"
+      },
+      {
+        "path": "scripts/build_adaptive_state_candidate.py",
+        "sha256": "c2cb1fd567c1b8fd9ae22871407610d2393ea33ac9693f9cee655e3e9a50a337"
+      },
+      {
+        "path": "scripts/build_bayesian_od_candidate.py",
+        "sha256": "5cc8d8b513e668e269510447c508facd640f97b85335da77d69f3e289bb9a8be"
+      },
+      {
+        "path": "scripts/build_od_expert_candidate.py",
+        "sha256": "85cd7dd8827d5375b42799091c67f6495c00ec16d68af6d425bb30db9d0dac1b"
+      },
+      {
+        "path": "scripts/build_onset_timing_candidate.py",
+        "sha256": "8a5486d7e8b7c9dba17e2c163fd76f122f2e38becae95abd769eefca7851b86d"
+      },
+      {
+        "path": "scripts/campaign.py",
+        "sha256": "06cea939655896f9cef2ad404491d9418313c5cf1f0e525b20288a855a774418"
+      },
+      {
+        "path": "scripts/capture_environment.py",
+        "sha256": "5be825c14d82da31a2ca57459f8c6eead4f13ba2030f5488c465388a8e82d4f8"
+      },
+      {
+        "path": "scripts/causal_graph_queue_experiment.py",
+        "sha256": "5cb9e9a4c8d4482a53f7ebdefad43b6db4ef50a53bb1297bbfdc4598b5cdcace"
+      },
+      {
+        "path": "scripts/check_public_competition.py",
+        "sha256": "5c69ba4b041bc668b6cfad397fe2c9c584003910757e68908137e320d92c0a64"
+      },
+      {
+        "path": "scripts/checkpoint_assimilation_phase.py",
+        "sha256": "b70d53c3e065da9e0ba9a48db04960afc433998686e463f9ece4f0d9dd29d778"
+      },
+      {
+        "path": "scripts/checkpoint_ctm_od_phase.py",
+        "sha256": "63295f1e9926c1a8c5e15f31ab6a3e21ead79d75be9f1201cbd763ab948bb383"
+      },
+      {
+        "path": "scripts/checkpoint_quality_density_phase.py",
+        "sha256": "de2ab9295c0519c6e189a2f0f3b65b4e02027a7bd67997df1746aa11e219bbe2"
+      },
+      {
+        "path": "scripts/compare_entropy_numeric_repair.py",
+        "sha256": "a38f9204e0078fc443e9a3e48ac8e772159ae645cb3ae222d0ffb049cdb5811c"
+      },
+      {
+        "path": "scripts/compare_queue_events.py",
+        "sha256": "d9d2e9e47eb2f21b1738d4e2d1ba762a776fc849bbfc4bde4c1fc8785b068194"
+      },
+      {
+        "path": "scripts/compare_state_assimilation.py",
+        "sha256": "d89b87a83ecb5a05bae4be3cf4f137d2625d639bca4dac723d94b92d31415a1c"
+      },
+      {
+        "path": "scripts/compare_state_direction_budgets.py",
+        "sha256": "47ff0bb82e2500aace15a72ca80b76719b657dd06492b8b60b09b31fce2803e4"
+      },
+      {
+        "path": "scripts/compare_state_label_budgets.py",
+        "sha256": "b7c27482c11904cbc0aa06fc86cfd692037e057985acdb93f00ff4e38da81b40"
+      },
+      {
+        "path": "scripts/cross_corridor_transfer.py",
+        "sha256": "e3ef2d288bfc617ea7985712be7c714de9e36ed947b59bc2bd81e3e5113b7c6a"
+      },
+      {
+        "path": "scripts/ctm_adaptive_stress.py",
+        "sha256": "a577fada1eef7532bfd06fafc71675087ed2374aa32916954ee62dbcf4d5ad62"
+      },
+      {
+        "path": "scripts/ctm_contiguous_stress.py",
+        "sha256": "24fcb6625ee2f64e1b5267c6c3fab292dc78ddb2d3b6d02241c1ec6f815b95ae"
+      },
+      {
+        "path": "scripts/ctm_profile_ablation.py",
+        "sha256": "5a65e47430782893da7bae8792995d7b63ae9cf45fe38f895715ac011ddbb5d6"
+      },
+      {
+        "path": "scripts/density_increment_experiment.py",
+        "sha256": "7c76be4eb9f893ff71a70f62ae47ac4f7b8cba8a8add1da1a9ebdbba074552fa"
+      },
+      {
+        "path": "scripts/density_interpolation_experiment.py",
+        "sha256": "98b586eed1bf49beea00db0b5b0473b6159d2e6e198bad4f7b9902a9847d6903"
+      },
+      {
+        "path": "scripts/diagnose_adaptive_scenarios.py",
+        "sha256": "fd73578210b6ab6a51984019f86d16f9c9fdd088ebc72261da20295ed692b0fe"
+      },
+      {
+        "path": "scripts/diagnose_entropy_failure.py",
+        "sha256": "1c8e0b00933b2132eedb92cd0ddc3fb1aab8125b6f3a6994913818b6ff0c3ff4"
+      },
+      {
+        "path": "scripts/diagnose_failed_od_control.py",
+        "sha256": "bed0ecbfa0b21880ad852919b0285280fa2659f95c9a6513840baf3e22ab7b58"
+      },
+      {
+        "path": "scripts/diagnose_graph_density.py",
+        "sha256": "f6e48f203331ed2dddbd6917d2932fc8682cf4daa9da8d6e9a5c7ee52e75116f"
+      },
+      {
+        "path": "scripts/download_data.py",
+        "sha256": "c746052ff8192acd1679976da70faf2f54ae94d2370e2dda4e105bca08fee4b9"
+      },
+      {
+        "path": "scripts/entropy_od_experiment.py",
+        "sha256": "639c6fde371c078759d557025dd60943ac7c6d170fef046c9866d0a7efa9689b"
+      },
+      {
+        "path": "scripts/entropy_od_uncertainty.py",
+        "sha256": "dcc088faa752d137a3f73c993cf272280879185ad9e38ea6b127e82d6b1bfd9f"
+      },
+      {
+        "path": "scripts/export_adaptive_state_model.py",
+        "sha256": "631e109610a04aa4a5b0cef3b6b0a22e3acca28ea1f08659669bf55c2e7ca089"
+      },
+      {
+        "path": "scripts/freeze_first_submission.py",
+        "sha256": "17eb0cf856c43a0199c0bf73fcc4d100c76d818b2d1130f00b16f466bc4cc6cb"
+      },
+      {
+        "path": "scripts/freeze_research_models.py",
+        "sha256": "fd75a0e4f22f648e7daf55c8374aa9d174d11f0659b74d12665b800d09e4202c"
+      },
+      {
+        "path": "scripts/full_density_experiment.py",
+        "sha256": "d53835b13f5ba488708b8397eb8b805a9a4dbba268dd7a1ac221e2555209cc4f"
+      },
+      {
+        "path": "scripts/inspect_official_release.py",
+        "sha256": "17bc64125a2843f2af1eefc01ef22e930c22201df997eec99bedd021d1e32c7f"
+      },
+      {
+        "path": "scripts/large_baseline_graph_comparison.py",
+        "sha256": "ab3f399a46ca8366418ccca2a748124cd706a176706a20d7b491242c810ed75b"
+      },
+      {
+        "path": "scripts/matched_queue_cache.py",
+        "sha256": "bbd42d02b645514d38faf062917e19e08ebe551096e547ca93fe92266061df19"
+      },
+      {
+        "path": "scripts/od_expert_experiment.py",
+        "sha256": "b26a6457c0390bedbe85e9a5a29f2a4c403bff499ff539cd230f71f7cfc0fbb2"
+      },
+      {
+        "path": "scripts/od_prior_misspecification.py",
+        "sha256": "053dc64b2e9b8fb04ac1514d9991d8ddcbae9ab677e69a8dbc7fbd77045a7917"
+      },
+      {
+        "path": "scripts/od_probability_experiment.py",
+        "sha256": "fbb8ade089cec3fdd03b6f40687b4f8ef022c7766dc7c1c4011e6b7df3326c00"
+      },
+      {
+        "path": "scripts/physics_tradeoff.py",
+        "sha256": "b653cf6254196850113cbdb61a1afb5bf184900e6a5ad5d07a24151436e6c9f9"
+      },
+      {
+        "path": "scripts/plot_matched_research_comparisons.py",
+        "sha256": "bb2cdab5325243359d6a53f27c1814851b38d6ab85b3f0167d561c2995f19bef"
+      },
+      {
+        "path": "scripts/plot_strong_baseline_comparison.py",
+        "sha256": "060b1292bc663f0ba5d1fd352afd30fb0edc5badc83c1a42b3e4b4b23435c10b"
+      },
+      {
+        "path": "scripts/prepare_full_density_labels.py",
+        "sha256": "aaeae325549a2f3e885c75cb584037b6669902c1ab4fedb50a1c7655de116979"
+      },
+      {
+        "path": "scripts/prepare_graph_experiment.py",
+        "sha256": "86a2d2bcc60c9cd408839d8883834aa75c089c176257bed551ff1d028ee320ac"
+      },
+      {
+        "path": "scripts/prepare_production_graph_state.py",
+        "sha256": "af640a34bf6f44a42e08fd50c06d9585acc1adadd160db867e4551ea16a71525"
+      },
+      {
+        "path": "scripts/prepare_quality_state.py",
+        "sha256": "b6e2bcde753916c9e73ced210900438ba217b35118e51044e8d22ea98638de90"
+      },
+      {
+        "path": "scripts/promote_models.py",
+        "sha256": "b41f8af5fb9f5394595a1c1ded9b534ed89d2c41b85b7a3e3788b2d275c71339"
+      },
+      {
+        "path": "scripts/quality_state_experiment.py",
+        "sha256": "0a5bd90efe8b95427f811cee6577cdad8323f631ba5bb6d6eaa6823fa1b3fa10"
+      },
+      {
+        "path": "scripts/queue_event_experiment.py",
+        "sha256": "520d24e1f1e5fcde8166f3df16f437276b7185665a8e9394c6ac59a4823b0242"
+      },
+      {
+        "path": "scripts/queue_origin_experiment.py",
+        "sha256": "7cd00e8b0134ed1282353e9162ce6af7da20d1a3d0739ab2ec12b43f79891954"
+      },
+      {
+        "path": "scripts/queue_refinement.py",
+        "sha256": "4747af3e5e09d4e23b7d28856ed66732e54ad1d3586b7df067eb49aeffcc1dd1"
+      },
+      {
+        "path": "scripts/queue_research.py",
+        "sha256": "34e3fe815c5130431a512df258cfbfd0cb39c7b64b769950d76f20a9983fff5a"
+      },
+      {
+        "path": "scripts/queue_specialist_experiment.py",
+        "sha256": "b7f8ab609aa392a1308117e827919692dbe60137185fb6ec68a2334cbddaedc4"
+      },
+      {
+        "path": "scripts/queue_wave_graph_experiment.py",
+        "sha256": "ebc0ba895a29d5887cdee52b0dab665a8cf9f2370e3a110b2b6930e746ccb245"
+      },
+      {
+        "path": "scripts/queue_weight_calibration_experiment.py",
+        "sha256": "f2545c56581b388e724327a4c623d89ae18ea07efcc80d63e3e66fc94c6ce48d"
+      },
+      {
+        "path": "scripts/read_public_pages.py",
+        "sha256": "2056d46920d3b9f73b1268b86d122ac4daf318e72c298527b4b66376ac26e165"
+      },
+      {
+        "path": "scripts/record_formal_scores.py",
+        "sha256": "ee78da8b99edc9928c781c341f05af33dd28098ae313113879e8b3e3aad5fa0f"
+      },
+      {
+        "path": "scripts/record_local_state_controls.py",
+        "sha256": "55c6c8b9218207fbd51d0c1d3238c653272c0ed319064928065125eb98dbad9b"
+      },
+      {
+        "path": "scripts/record_onset_control_bounds.py",
+        "sha256": "0f18f8290e22a3a9b15f4287416bc9cbcf071a106d46909ee1962a5f1cc7f728"
+      },
+      {
+        "path": "scripts/refine_queues.py",
+        "sha256": "4af45c3a458feec60d6f7786166ef2cf0fb747fce492955ec4112312352f665d"
+      },
+      {
+        "path": "scripts/register_research_protocol.py",
+        "sha256": "2367504189c87f2103e10dfd99147ffcc9beba2f9d82409c38e92d4c5e2c3077"
+      },
+      {
+        "path": "scripts/run_official_diagnostics.py",
+        "sha256": "73221ca5f6014f8d7a011698fe0845d9448581c3896855b7dc19e1f47873a7e8"
+      },
+      {
+        "path": "scripts/run_official_state_baselines.py",
+        "sha256": "3ddd7eea81f350d50973813c50e4c0d90a184624d271aa64859c1c74c33a9e70"
+      },
+      {
+        "path": "scripts/scenario_audit.py",
+        "sha256": "3e2d7151d7587199aa672b78eee9dfbbfb8ac82e038afb22eb09f3488e1c7a19"
+      },
+      {
+        "path": "scripts/simulate_stress.py",
+        "sha256": "d0c4697c44f1c65848d83c1e396b9562d4151ad294f560b1576bcc6c49012140"
+      },
+      {
+        "path": "scripts/stage_zip_panel.py",
+        "sha256": "4ec5b59e058c52012bda91ff140fbc9620209bbf114aa5eb5ffbc259b4c69c15"
+      },
+      {
+        "path": "scripts/state_assimilation_experiment.py",
+        "sha256": "26a1ecf243bb30a10259b100df6d4f2dd317939e4707c6f4a1b3542d9a97c2ba"
+      },
+      {
+        "path": "scripts/state_budget_suite.py",
+        "sha256": "d6fd23b3aacd79a6cdad38bbf0f3d845e0307dc4b4b7471ef279980035652477"
+      },
+      {
+        "path": "scripts/state_label_budget_control.py",
+        "sha256": "7cb05ba6e67f39106ea009468ce9215aebab9aec0c9a90295fe8641d3c7e4dbd"
+      },
+      {
+        "path": "scripts/state_research.py",
+        "sha256": "7f9043c7d753a5a6540ef81291ae7e3e00879ca330aea94f833b7017f29a759e"
+      },
+      {
+        "path": "scripts/state_temporal_extension.py",
+        "sha256": "0ef7550a56904fc953a6deaa814f7ebad67e9aa7f91817f087fe5fb58db26b9b"
+      },
+      {
+        "path": "scripts/strong_density_state_experiment.py",
+        "sha256": "faa4e2a0cb63a2e053ecf20a6a77a8c9c4f74960c3d39e145c9c0e41f138a7de"
+      },
+      {
+        "path": "scripts/submit_controlled_candidate.py",
+        "sha256": "72c67e384f488fd5e7afa454526e42aab56b43aef7d3671d91acf04a42997876"
+      },
+      {
+        "path": "scripts/summarize_adaptive_research.py",
+        "sha256": "82c2832a34ee9cd39f20ead401994c2dcf7f15d0cebe19cb67fd4476000c720a"
+      },
+      {
+        "path": "scripts/summarize_campaign.py",
+        "sha256": "e09f36b6188d6a23698f0a27873fece09ba6fd3db1e2cd5ae767e4865d7c101f"
+      },
+      {
+        "path": "scripts/summarize_ctm_adaptive.py",
+        "sha256": "fe548c56eef38fe78b378056f8def6a4213a8c526336808faa880947c68547bf"
+      },
+      {
+        "path": "scripts/summarize_research_v2.py",
+        "sha256": "4f2239fb78d2d88de9117d289099874b41dc6f017b6c104e557cad168b0a8f17"
+      },
+      {
+        "path": "scripts/summarize_results.py",
+        "sha256": "3ede418e5a835ad3956b0332c335a54a4157654be9db16d4cde6411b5b12880c"
+      },
+      {
+        "path": "scripts/train_graph_experiment.py",
+        "sha256": "7036d5b3f14d5dd39de22b1aa94284285010359114deb3f38ead5461b6e5e04e"
+      },
+      {
+        "path": "scripts/train_production_adaptive_state.py",
+        "sha256": "6982e036ade77a7d8c5a950572619c5a9655d47c142fbce3cb125404955fed9d"
+      },
+      {
+        "path": "scripts/verify_controlled_candidate.py",
+        "sha256": "bc2c4155403cd3af602dbbed3328590b5dd86bbf446183ec394744684f752df9"
+      },
+      {
+        "path": "scripts/verify_entropy_uncertainty.py",
+        "sha256": "747adfc0ca342b6148f730935394afef929aa7a56850b8cf82291987523c728e"
+      },
+      {
+        "path": "scripts/verify_graph_repeat.py",
+        "sha256": "2ec216b7fe481f52199b92b28baa40efbe3bde74ae19a17a86904d6f7d1189e9"
+      },
+      {
+        "path": "scripts/verify_quality_state.py",
+        "sha256": "6cf7c7780cf77d6f203aebb3f517d12ce11655c26fbb433a1ee2add0e710b764"
+      },
+      {
+        "path": "scripts/verify_queue_shared_repeat.py",
+        "sha256": "dd14df8d431667ffba2b6b9eb82a8e5169b6a57d4ee7e8e96dba40d2c25296d2"
+      },
+      {
+        "path": "scripts/verify_sparse_profile_phase.py",
+        "sha256": "2561cd5fef5041afe9baa71d27086d3d9bb0fd86d0901783d9079f0cabdc1261"
+      },
+      {
+        "path": "scripts/verify_state_assimilation.py",
+        "sha256": "f5d98ebe50be14b01f4172ae2befadd49df3dfcbfdb95e30e3eadf3d52ab8024"
+      },
+      {
+        "path": "scripts/verify_vendor.py",
+        "sha256": "232658ffcb66d34aea7c686d64e20bad86f7c172b0f900114dd683c5fd90bb85"
+      },
+      {
+        "path": "scripts/write_results.py",
+        "sha256": "efb8a4e80afdfaca2096ea7d2f65743e863b38c18dc41bac52fcdce07a70c83d"
+      },
+      {
+        "path": "scripts/zero_aware_od_experiment.py",
+        "sha256": "1b422f735023c0b6e82038f55d1c17906871546affe642c10b60d45d214e4068"
+      },
+      {
+        "path": "src/trafficflow/__init__.py",
+        "sha256": "6432d23e18693162d87e81e22ac8f25158369302b9dc209d21154dba1351e7a8"
+      },
+      {
+        "path": "src/trafficflow/__main__.py",
+        "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+      },
+      {
+        "path": "src/trafficflow/adaptive_graph_state.py",
+        "sha256": "52e7bbe95a36000f14a4a9d00e9629a0dd05eff023854b730b27c0ec6289e785"
+      },
+      {
+        "path": "src/trafficflow/bayesian_od.py",
+        "sha256": "5c5c76ab2848437af546a5fc3985f568b61c7a39dd3dbdf2a5551e266f1a1139"
+      },
+      {
+        "path": "src/trafficflow/causal_queue.py",
+        "sha256": "b12f3098ce79dc465545106b6d429fce2818499edd518f1909047b3ccbcda1b2"
+      },
+      {
+        "path": "src/trafficflow/cli.py",
+        "sha256": "8bb044f21541e3d0f639f01e20fc47a358152ec0c918ae4d644e73c96d7e73d3"
+      },
+      {
+        "path": "src/trafficflow/ctm_state_adapter.py",
+        "sha256": "3afe56f0c577d5d3ae05ee0583ddb180842980a874876f99e046e275b7d5194c"
+      },
+      {
+        "path": "src/trafficflow/data.py",
+        "sha256": "f29fe070b21ac692b2cf9bd6d5b5fd018e94129b9626588325dd48edbd941ccd"
+      },
+      {
+        "path": "src/trafficflow/density_assimilation.py",
+        "sha256": "bbf771ae2d6ca93030aca029f3428fbb3f214cf4a5e39dca79925f08f7a30b46"
+      },
+      {
+        "path": "src/trafficflow/density_label_metrics.py",
+        "sha256": "5fcb4714fa7be5e1fd953da4707be274a7ff37af051cb9bc74083cd2666cf87b"
+      },
+      {
+        "path": "src/trafficflow/density_state.py",
+        "sha256": "ae91308f12b0c13d43f149d936a7c11704f712390f2fb593fbea5f053ff6a4b2"
+      },
+      {
+        "path": "src/trafficflow/digital_twin.py",
+        "sha256": "cfacb280f971faedceb2e404b35889891eef536a24a070804757ab6d92c49655"
+      },
+      {
+        "path": "src/trafficflow/entropy_od.py",
+        "sha256": "521a66563ff099aee9e3e50d180367ad25d7e90acdef174a1ed8d80b16337727"
+      },
+      {
+        "path": "src/trafficflow/experiments.py",
+        "sha256": "854abf59d2c560f84c704090741d6f8fce4ce6725d8a39139412194cc362a6ec"
+      },
+      {
+        "path": "src/trafficflow/fixture.py",
+        "sha256": "0709326abd7206a7ca1c3414dbb95c2d8c08749484802e2523d49c1ee7a2ef24"
+      },
+      {
+        "path": "src/trafficflow/graph_queue.py",
+        "sha256": "eaf91b8825c5f3e6491fb09413d9c5b8cdee04ecfd9c05feb6be5e8b00f65c46"
+      },
+      {
+        "path": "src/trafficflow/graph_state.py",
+        "sha256": "806defac6f40c13f3ba51e74b09252a9b9d29bdd4779cb988a3d503a66364fa9"
+      },
+      {
+        "path": "src/trafficflow/increment_state.py",
+        "sha256": "52c6eb6a5cf959ac050f237a84cc8c487fae086fcec61a5aeac2fa5997185ea3"
+      },
+      {
+        "path": "src/trafficflow/metrics.py",
+        "sha256": "5f42eaa372894edfa1363135b61818e7ec4bf56110257a03aadf07de770aa346"
+      },
+      {
+        "path": "src/trafficflow/od_expert.py",
+        "sha256": "1dff245ae5d347e32d2b3b1473a129964cf28e5b259e93478cfad6cb4d5688bd"
+      },
+      {
+        "path": "src/trafficflow/od_uncertainty.py",
+        "sha256": "0df9a337b1b302952489a32517512a77ebc2c9420bee5d291dc92ad337bc85c3"
+      },
+      {
+        "path": "src/trafficflow/odme.py",
+        "sha256": "e61df62cbf3ff4af03069d6e028b2024ddee25578cc00558b2b04148370850ee"
+      },
+      {
+        "path": "src/trafficflow/physics.py",
+        "sha256": "3f559ca30157ebee155bb17ebdd42f0dc43a169ef6b45634ad875569beb03e30"
+      },
+      {
+        "path": "src/trafficflow/probability_calibration.py",
+        "sha256": "57f7c5487983a2572851331b20591ac21db15591d1dc85745706147ce3a657c7"
+      },
+      {
+        "path": "src/trafficflow/quality_state.py",
+        "sha256": "243757e80c651dfcf32c846b54e548afdd2f04215c612f725855497bb802a7d8"
+      },
+      {
+        "path": "src/trafficflow/queue.py",
+        "sha256": "62c35a4ed8e1e882d386461aba41cf8f5f3ed809451e51008e34f23e211240c5"
+      },
+      {
+        "path": "src/trafficflow/queue_calibration.py",
+        "sha256": "645cfb0a15418f23b0b04354600d08ef831a6db49197e149e984074fc414392d"
+      },
+      {
+        "path": "src/trafficflow/queue_event_loss.py",
+        "sha256": "5b155f8255080e0ee8823ab366ce8f7dfb1f2d067c196109834e0338395b631c"
+      },
+      {
+        "path": "src/trafficflow/queue_events.py",
+        "sha256": "10051eb26948ea7fbec94dd1cd4e37d68c4c0703efb152f35d03ebee372e25bb"
+      },
+      {
+        "path": "src/trafficflow/queue_graph_geometry.py",
+        "sha256": "bc1596ed66dbf9c02960f6b5f3c759385fcdef65f7b1e83e9481c1b9800c9cad"
+      },
+      {
+        "path": "src/trafficflow/queue_specialist.py",
+        "sha256": "915fce272c5d1c88eee37960cc5b1dee305119603509bb8bdc881bf6f64b303b"
+      },
+      {
+        "path": "src/trafficflow/research_eval.py",
+        "sha256": "197aa2c4d6091dbd551ca6d11f8a664e9feaa44c1fcaf568ec873185315ab3c9"
+      },
+      {
+        "path": "src/trafficflow/runtime.py",
+        "sha256": "c181d87a89ff8fa7ee92c00759e2674d77cd60a3ed0d407f1e52f0d2b95d197f"
+      },
+      {
+        "path": "src/trafficflow/state.py",
+        "sha256": "f7a8341d968ac55a6f87e01a439ce8dc8c014750afa61129c7175e733de23c17"
+      },
+      {
+        "path": "src/trafficflow/state_assimilation.py",
+        "sha256": "96291a9c9977924c6abff3e611ecf58125a586a9dfbdf9c70e090aa97ec4b85d"
+      },
+      {
+        "path": "src/trafficflow/state_ensemble.py",
+        "sha256": "2bbfa587a79401c90a43502faa5410e5323b11cafe36a02b9ce244e8fae8d749"
+      },
+      {
+        "path": "src/trafficflow/submission.py",
+        "sha256": "87607c555e86f020e83f1ed9ac4054e49f88dc35eedd36cd8bf8ba442f85f2dc"
+      },
+      {
+        "path": "src/trafficflow/zero_aware_od.py",
+        "sha256": "42192b9d19dcaa2fc7d7801cb4ef7782c3cb6d71a3c73736936b5a064a072f6d"
+      },
+      {
+        "path": "vendor/official/src/merge_submissions.py",
+        "sha256": "a8cd6c4c9f2cea777fde8f6b163c00835a4fb45672998b9fc71368810e792ee1"
+      },
+      {
+        "path": "vendor/official/src/release/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/release/score_overall.py",
+        "sha256": "b9b73e174eeb1ed742dd9cbd558f6b280a0bd14e7ec7001feb549f1b5fb9b4ee"
+      },
+      {
+        "path": "vendor/official/src/score_overall.py",
+        "sha256": "4a28d57a23950554a065f6254bf674f4a1b58b5d039f26bc5154dd28d28651fb"
+      },
+      {
+        "path": "vendor/official/src/task1/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_historical_mean.py",
+        "sha256": "66569dd55340d5e4509712e66172ea669893d7341a0ef2dd8c920c24f07209a1"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_structural_kf.py",
+        "sha256": "f3a63ba48bf867d993dd1b3cbc0da6ca4567da7aa519ed2b2e3fd93a61c06132"
+      },
+      {
+        "path": "vendor/official/src/task1/build_task1_baseline_submission.py",
+        "sha256": "cb91e19e20a5a546430917a884197c1ad6a7068c6a47d7fbec7fb8311b7237d7"
+      },
+      {
+        "path": "vendor/official/src/task1/score_task1.py",
+        "sha256": "bcd42e88fbc42cd499e93e3b50ddf367009b26b216df5ab3f710ee1d1d863163"
+      },
+      {
+        "path": "vendor/official/src/task2/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task2/build_task2_persistence_submission.py",
+        "sha256": "d3cb4ab23206c4c20058a074b24c23ba79b43dd4219f41e158329a39f5a3edd2"
+      },
+      {
+        "path": "vendor/official/src/task2/queue_utils.py",
+        "sha256": "cea193935e7af7ab1399b9955c3f26fcb65664a099344d35b9c3b91802b3135f"
+      },
+      {
+        "path": "vendor/official/src/task2/score_task2.py",
+        "sha256": "b5605ebae9b32b3ca974881be47b5f2e796728b94763a724314580fc93be28bb"
+      },
+      {
+        "path": "vendor/official/src/task3/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task3/build_task3_baseline_submission.py",
+        "sha256": "945ce4b28f264be6be35a1b8d0f67311bf666d5e6b516a5b79bb2617075e8bcf"
+      },
+      {
+        "path": "vendor/official/src/task3/score_task3.py",
+        "sha256": "98d88b6e7f6b7bb0e2bbb4b42e486d6690b6f14a5d3625649e85ddf828550409"
+      },
+      {
+        "path": "vendor/official/src/task4/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task4/build_task4_odme_artifacts.py",
+        "sha256": "5da75aea3004555bae080ee4d18f1baee01dbb9ed1caf7a6abadd2387e6ade58"
+      },
+      {
+        "path": "vendor/official/src/task4/score_task4.py",
+        "sha256": "be15d732438d305e3d35cb41d3105fc03e3fb9459e5c050af39fe192cede30e3"
+      }
+    ],
+    "n_files": 168,
+    "scope": "Own source, vendored official Python and dependency locks; no data, credentials or model weights"
+  },
+  "parent_cache": "artifacts/research/A02_D12_I5_N_winter_seed20261013",
+  "panel": "D12_I5_N",
+  "fold": "rolling_winter",
+  "dates": {
+    "profile": [
+      "2030-06-01",
+      "2030-06-02",
+      "2030-06-03",
+      "2030-06-04",
+      "2030-06-05",
+      "2030-06-06",
+      "2030-06-07",
+      "2030-06-08",
+      "2030-06-09",
+      "2030-06-10",
+      "2030-06-11",
+      "2030-06-12",
+      "2030-06-13",
+      "2030-06-14",
+      "2030-06-15",
+      "2030-06-16",
+      "2030-06-17",
+      "2030-06-18",
+      "2030-06-19",
+      "2030-06-20",
+      "2030-06-21",
+      "2030-06-22",
+      "2030-06-23",
+      "2030-06-24",
+      "2030-06-25",
+      "2030-06-26",
+      "2030-06-27",
+      "2030-06-28",
+      "2030-06-29",
+      "2030-06-30",
+      "2030-07-01",
+      "2030-07-02",
+      "2030-07-03",
+      "2030-07-04",
+      "2030-07-05",
+      "2030-07-06",
+      "2030-07-07",
+      "2030-07-08",
+      "2030-07-09",
+      "2030-07-10",
+      "2030-07-11",
+      "2030-07-12",
+      "2030-07-13",
+      "2030-07-14",
+      "2030-07-15"
+    ],
+    "fit": [
+      "2030-07-16",
+      "2030-07-17",
+      "2030-07-18",
+      "2030-07-19",
+      "2030-07-20",
+      "2030-07-21",
+      "2030-07-22",
+      "2030-07-23",
+      "2030-07-24",
+      "2030-07-25",
+      "2030-07-26",
+      "2030-07-27",
+      "2030-07-28",
+      "2030-07-29",
+      "2030-07-30",
+      "2030-07-31",
+      "2030-08-01",
+      "2030-08-02",
+      "2030-08-03",
+      "2030-08-04",
+      "2030-08-05",
+      "2030-08-06",
+      "2030-08-07",
+      "2030-08-08",
+      "2030-08-09",
+      "2030-08-10",
+      "2030-08-11",
+      "2030-08-12",
+      "2030-08-13",
+      "2030-08-14",
+      "2030-08-15",
+      "2030-08-16",
+      "2030-08-17",
+      "2030-08-18",
+      "2030-08-19",
+      "2030-08-20",
+      "2030-08-21",
+      "2030-08-22",
+      "2030-08-23",
+      "2030-08-24",
+      "2030-08-25",
+      "2030-08-26",
+      "2030-08-27",
+      "2030-08-28",
+      "2030-08-29",
+      "2030-08-30",
+      "2030-08-31",
+      "2030-09-01",
+      "2030-09-02",
+      "2030-09-03",
+      "2030-09-04",
+      "2030-09-05",
+      "2030-09-06",
+      "2030-09-07",
+      "2030-09-08",
+      "2030-09-09",
+      "2030-09-10",
+      "2030-09-11",
+      "2030-09-12",
+      "2030-09-13",
+      "2030-09-14",
+      "2030-09-15",
+      "2030-09-16",
+      "2030-09-17",
+      "2030-09-18",
+      "2030-09-19",
+      "2030-09-20",
+      "2030-09-21",
+      "2030-09-22",
+      "2030-09-23",
+      "2030-09-24",
+      "2030-09-25",
+      "2030-09-26",
+      "2030-09-27",
+      "2030-09-28",
+      "2030-09-29",
+      "2030-09-30",
+      "2030-10-01",
+      "2030-10-02",
+      "2030-10-03",
+      "2030-10-04",
+      "2030-10-05",
+      "2030-10-06",
+      "2030-10-07",
+      "2030-10-08",
+      "2030-10-09",
+      "2030-10-10",
+      "2030-10-11",
+      "2030-10-12",
+      "2030-10-13",
+      "2030-10-14",
+      "2030-10-15",
+      "2030-10-16",
+      "2030-10-17",
+      "2030-10-18",
+      "2030-10-19",
+      "2030-10-20",
+      "2030-10-21",
+      "2030-10-22",
+      "2030-10-23",
+      "2030-10-24",
+      "2030-10-25",
+      "2030-10-26",
+      "2030-10-27",
+      "2030-10-28",
+      "2030-10-29",
+      "2030-10-30",
+      "2030-10-31",
+      "2030-11-01",
+      "2030-11-02",
+      "2030-11-03",
+      "2030-11-04",
+      "2030-11-05",
+      "2030-11-06",
+      "2030-11-07",
+      "2030-11-08",
+      "2030-11-09",
+      "2030-11-10",
+      "2030-11-11",
+      "2030-11-12",
+      "2030-11-13",
+      "2030-11-14",
+      "2030-11-15",
+      "2030-11-16",
+      "2030-11-17",
+      "2030-11-18",
+      "2030-11-19",
+      "2030-11-20",
+      "2030-11-21",
+      "2030-11-22",
+      "2030-11-23",
+      "2030-11-24",
+      "2030-11-25",
+      "2030-11-26",
+      "2030-11-27",
+      "2030-11-28",
+      "2030-11-29",
+      "2030-11-30",
+      "2030-12-01",
+      "2030-12-02",
+      "2030-12-03",
+      "2030-12-04",
+      "2030-12-05",
+      "2030-12-06",
+      "2030-12-07",
+      "2030-12-08",
+      "2030-12-09",
+      "2030-12-10",
+      "2030-12-11",
+      "2030-12-12",
+      "2030-12-13",
+      "2030-12-14",
+      "2030-12-15"
+    ],
+    "selection": [
+      "2030-12-16",
+      "2030-12-17",
+      "2030-12-18",
+      "2030-12-19",
+      "2030-12-20",
+      "2030-12-21",
+      "2030-12-22",
+      "2030-12-23",
+      "2030-12-24",
+      "2030-12-25",
+      "2030-12-26",
+      "2030-12-27",
+      "2030-12-28",
+      "2030-12-29"
+    ],
+    "assessment": [
+      "2030-12-30",
+      "2030-12-31",
+      "2031-01-01",
+      "2031-01-02",
+      "2031-01-03",
+      "2031-01-04",
+      "2031-01-05",
+      "2031-01-06",
+      "2031-01-07",
+      "2031-01-08",
+      "2031-01-09",
+      "2031-01-10",
+      "2031-01-11",
+      "2031-01-12"
+    ]
+  },
+  "records": [
+    {
+      "part": "fit",
+      "date": "2030-07-16",
+      "parent_day_sha256": "57e334fb5d900174be64445313067d18efb842fcef731d9256687a24e8d494f4",
+      "raw_TRAIN_label_source_sha256": "d87d4c856392ee51d3a564a60762ceb24f961856c7c0c74e6da5149f28d535d5",
+      "full_label_cache_sha256": "dc4a35cab00a543196a7d7251fcdb677f733abdf2107e708b5309ab40f5d5fff",
+      "days": 1,
+      "eligible_full_cells": 56495,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41034,
+      "target_touching_valid_pairs": 30689,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2593
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-17",
+      "parent_day_sha256": "6f9043fa7668f03a68f4b2524c910e319d7e43f8323ce6602974bf1c87844b02",
+      "raw_TRAIN_label_source_sha256": "f8c07c64f5a0a855c96ca329f2758586097a0e2008e88592e2ba302334bc62c3",
+      "full_label_cache_sha256": "32451cc5fc577d972d160017675d8e47b90d7d855a88b22b511c31ececcae914",
+      "days": 1,
+      "eligible_full_cells": 56941,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41486,
+      "target_touching_valid_pairs": 31093,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2713
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-18",
+      "parent_day_sha256": "6d7013a8ed24721bcc19904dff2662177d7e010291e36f08f2c8e8856ddc298d",
+      "raw_TRAIN_label_source_sha256": "e1a99f7d77793e552e76070f24073041ce3e2e5666802f31946f302d9d260c83",
+      "full_label_cache_sha256": "ca064b58b4acbb98ef895ed0321e6bcf377ca94c3fa6af4545863e8fe87ba822",
+      "days": 1,
+      "eligible_full_cells": 56837,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41250,
+      "target_touching_valid_pairs": 20935,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1809
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-19",
+      "parent_day_sha256": "ad1c7bd09dbea0dd4fa2e1c4efad971cc27dce0509b8312fcf07801ada1992f6",
+      "raw_TRAIN_label_source_sha256": "d3502b7b930bf40ac4906ea8b80c500b1787d09f150941a19b04eadf87377864",
+      "full_label_cache_sha256": "94e7d302829880e78f85e72f6330099d9bae33fa34e4f116935ee26aed37e36b",
+      "days": 1,
+      "eligible_full_cells": 56699,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41259,
+      "target_touching_valid_pairs": 31068,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2620
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-20",
+      "parent_day_sha256": "e00fc1de61a5cea191f5a784146b5120f3bca5a0303a4f020c7d897f370f9c60",
+      "raw_TRAIN_label_source_sha256": "07366406408de2cea6b97d4360998293972603bc026433c91db0e9811a9afffd",
+      "full_label_cache_sha256": "81d3d88826a54f128479a85949340c363cec914dff081ce7f9e00eeac15c6b66",
+      "days": 1,
+      "eligible_full_cells": 56727,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41217,
+      "target_touching_valid_pairs": 21212,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1746
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-21",
+      "parent_day_sha256": "b6f92e6928494baa27e6d1f09f2a73d230b0cc8fb36771ce448b9dc1b170b839",
+      "raw_TRAIN_label_source_sha256": "6d15c8a70f0ff63406cbc455a5fa01a313a586d1e28da196a2a796e4d70f8577",
+      "full_label_cache_sha256": "9376749a28c68e8c76bf9916de9eb4cf66bd767a24e352431776bed5c5c48a56",
+      "days": 1,
+      "eligible_full_cells": 56511,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 40908,
+      "target_touching_valid_pairs": 30811,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2544
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-22",
+      "parent_day_sha256": "25347721dafaa70bb1601cd14c09eb3707784af66d2c43476ea0117de8efda57",
+      "raw_TRAIN_label_source_sha256": "3a84d7ea020af3cd0eb4a3ebfceb23f24729347bc6bea96c52bb2a97ee51f1e2",
+      "full_label_cache_sha256": "874f08aa7b1875c067767416a5164ffe1061b23db61a613a8e97783d24c0da89",
+      "days": 1,
+      "eligible_full_cells": 56829,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41329,
+      "target_touching_valid_pairs": 31016,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2692
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-23",
+      "parent_day_sha256": "fd51de0be8c532912ae65bb962af33e06177fa727a25b634e9d7b29ce16fb94b",
+      "raw_TRAIN_label_source_sha256": "277f180bbfaf1e607cac31d6ce28678f8649e991c36a196ddb0083101d2805d4",
+      "full_label_cache_sha256": "434e3a0b1acca58f3319991992443cb1c8d06ca390c8af6b5b2757d76ab8ccd5",
+      "days": 1,
+      "eligible_full_cells": 56713,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41125,
+      "target_touching_valid_pairs": 30757,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2715
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-24",
+      "parent_day_sha256": "220b9f5eb602309d88d60b70a1ec2f1347e34f569441236d67e12e5b5afede47",
+      "raw_TRAIN_label_source_sha256": "b29a407f08ba4fb659694cc597e2a2e7f07bf98357916f32223a346e40b42fc4",
+      "full_label_cache_sha256": "bad5922040f3b66c8672819e03e35580d8d33d6067db23a21f9264b8863fcb06",
+      "days": 1,
+      "eligible_full_cells": 56579,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 40997,
+      "target_touching_valid_pairs": 30668,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2672
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-25",
+      "parent_day_sha256": "a50ab29af0edeb5f4b45ea38517cc0a7b8081a83c69552d8ecb562b9ba8ddf82",
+      "raw_TRAIN_label_source_sha256": "da2a0742ad572ca29e68f97fa4248df3c3d58d89f0ce6116c8bcc50a8cff5b8b",
+      "full_label_cache_sha256": "50ccc65c4399adcf88f0e5d8a076170c4f0ddf26ffa095bbeca9469e0e739627",
+      "days": 1,
+      "eligible_full_cells": 56791,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41157,
+      "target_touching_valid_pairs": 21040,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1808
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-26",
+      "parent_day_sha256": "6482cb3fa7032c716f033c476ff60440f93d041ebca4ae0fa75cbcef700becd0",
+      "raw_TRAIN_label_source_sha256": "484fef10f98c555c2bc846aea33773f43467487f84244d454862413d5260a7ce",
+      "full_label_cache_sha256": "4e7eb8c22c9465cbb4e4053bcc2d2ef60ca8303c60a75cef150b106ce8343472",
+      "days": 1,
+      "eligible_full_cells": 56772,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41245,
+      "target_touching_valid_pairs": 21229,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1805
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-27",
+      "parent_day_sha256": "ecc8c04b6de0220fcbdfaeeb25c43acc7c9a90bf391853343df0cc4da8846841",
+      "raw_TRAIN_label_source_sha256": "f0b65e86deef8252870e276b85bef9ad0a28acc48fcb9731d38830c8e7e5eb7f",
+      "full_label_cache_sha256": "f7db7464ae24eea4dec649304d1b5023472bd4d1fa59ed7eb74d7429a46e7fc2",
+      "days": 1,
+      "eligible_full_cells": 56716,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41160,
+      "target_touching_valid_pairs": 20828,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1817
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-28",
+      "parent_day_sha256": "0adbeec816a6eea29de214fa354fcf9c39ada99627c23b8f4902a230c9d6b569",
+      "raw_TRAIN_label_source_sha256": "fc92151de3be7b68dbee89c17c0efd38e59484f76c91844dd31f68c18fcbea31",
+      "full_label_cache_sha256": "40849bab1cbb289fbf9e940262fdf175247be85f86791731acc2c641906649a3",
+      "days": 1,
+      "eligible_full_cells": 56567,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41014,
+      "target_touching_valid_pairs": 14683,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1281
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-29",
+      "parent_day_sha256": "6db7bdaf142e19a9cad51367e939c97c04a5f245359b4f4237676145ffd4465b",
+      "raw_TRAIN_label_source_sha256": "ccd18830cfc662163c1c5a853376e90a72411ed1617f9205c78e910a1f8327d4",
+      "full_label_cache_sha256": "3d6ec14f4146112678093d07a1c0bd08bd841460939d9415535f278744af9695",
+      "days": 1,
+      "eligible_full_cells": 56851,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41401,
+      "target_touching_valid_pairs": 14816,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1287
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-30",
+      "parent_day_sha256": "b20d5934cd202b9be908bdbc06dd3bd1ce604746e13092875521c2cfcd4ecea8",
+      "raw_TRAIN_label_source_sha256": "d175ea68f445a9be4f8517a947899a73a33e9973c40f096c77def7c4d788cef0",
+      "full_label_cache_sha256": "8a9d455908f61dc095977ac1d00068b233b9cf8d4a3db218feb6c83a90fed643",
+      "days": 1,
+      "eligible_full_cells": 56796,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41353,
+      "target_touching_valid_pairs": 20963,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1766
+    },
+    {
+      "part": "fit",
+      "date": "2030-07-31",
+      "parent_day_sha256": "401d176912f312db590f555148e8cb3248b068448b0cc06a97740174bf85db16",
+      "raw_TRAIN_label_source_sha256": "9f6aed39822bdd7388af1659fd7e8adf7c008f721344b02f096cf0df7d96f016",
+      "full_label_cache_sha256": "3a66b108d72351f05ac314164c32264458a412c7bbc0d060787394f1b57ec2d0",
+      "days": 1,
+      "eligible_full_cells": 56674,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41184,
+      "target_touching_valid_pairs": 20903,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1835
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-01",
+      "parent_day_sha256": "ad6863213b5ca47216db60bde55f1ce0e6c0224f55cb78075104ad0a6a923ecd",
+      "raw_TRAIN_label_source_sha256": "19ae0bc80d73f3d11fb927e95cd6ee4e81eefc32f0a0d153051c8f6b46e51c96",
+      "full_label_cache_sha256": "5b6898278cd572f24878ad1cc1c467195333b2546d5a284379912f4914dcaba5",
+      "days": 1,
+      "eligible_full_cells": 56861,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41343,
+      "target_touching_valid_pairs": 30963,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2648
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-02",
+      "parent_day_sha256": "253780cba3912ed2bed34a88de153c567ea6e6003a487fc6df275ae4cd0e527b",
+      "raw_TRAIN_label_source_sha256": "bcd77464f6e6a464c1f90e51cdbd031f82e99c0e1212699f161bdedd6d47f924",
+      "full_label_cache_sha256": "71c79679f21068a2a98536e497ca72d92d276f0b32499e2327b83dabebab40da",
+      "days": 1,
+      "eligible_full_cells": 56796,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41317,
+      "target_touching_valid_pairs": 15058,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1275
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-03",
+      "parent_day_sha256": "fa6d8ec65b6b36dfd8deccf87624c793afdb950d1f0371512ef4827be0c0b97c",
+      "raw_TRAIN_label_source_sha256": "a07d2a27c2df1959dc7dd0656ea8d1370498d80548d6e8003ad59d23ccf4cddc",
+      "full_label_cache_sha256": "a2b5c8d7c9d118bab1641f1c4edb41e8fedf3046b84391bf0d485a9f2a409b72",
+      "days": 1,
+      "eligible_full_cells": 56794,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41359,
+      "target_touching_valid_pairs": 31056,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2646
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-04",
+      "parent_day_sha256": "d5689ca4568e8232f63aed1fa50792955161a038942b4b89e4e32040c1552587",
+      "raw_TRAIN_label_source_sha256": "621781bffc4b81d494dde60790c765a086a4fd9beb450424b98dbf8639f87f85",
+      "full_label_cache_sha256": "a5da86a0f8c6399537c7d44f1722120da330d6aa24b04475b244bf0210a70682",
+      "days": 1,
+      "eligible_full_cells": 56894,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41366,
+      "target_touching_valid_pairs": 30912,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2735
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-05",
+      "parent_day_sha256": "30341e819ed9ba4b6b0a235ab9ed588e68781807631aa2d75f9b57541ff18183",
+      "raw_TRAIN_label_source_sha256": "1b4ba9972186d6de5d3d83e656993eebc1277030fe8fb1b8e58ac5054175cf44",
+      "full_label_cache_sha256": "01e540403e32f3f1614a7f7ac7832effa5081f8d7fa1d75a0f82c6007e0269ea",
+      "days": 1,
+      "eligible_full_cells": 56757,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41206,
+      "target_touching_valid_pairs": 30986,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2635
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-06",
+      "parent_day_sha256": "1a5f6b4c24408e29ed3195f553ffbdaac4c642ec89a8368534434217ecd32ac3",
+      "raw_TRAIN_label_source_sha256": "11de91d297d2d416c0122626a7bc2c2f1ccc6e78da5f8ce7ef893946c1d9c44c",
+      "full_label_cache_sha256": "c2cc735cc74a8a12c8e4b05eef7abb6362bf9119a05bc71c01d793fb13ed659d",
+      "days": 1,
+      "eligible_full_cells": 56565,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41046,
+      "target_touching_valid_pairs": 20857,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1757
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-07",
+      "parent_day_sha256": "0f77512789dfb9151980b8ba39e71302f3f3c254c48b03f480e3fc92f777e11f",
+      "raw_TRAIN_label_source_sha256": "bba97b5150a9d016155da36a929f7225d7938dcdf691563280bb7fe49e6cf053",
+      "full_label_cache_sha256": "adbb985824e1668d49a0ab1be2571363da678005e36dc690812e8ca296c9782e",
+      "days": 1,
+      "eligible_full_cells": 56906,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41178,
+      "target_touching_valid_pairs": 20931,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1882
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-08",
+      "parent_day_sha256": "124003091f76a585e85a7c39de4d4d22fae807766a4b65618d0686fa95bc7280",
+      "raw_TRAIN_label_source_sha256": "9a2444c5b4916dcbbe6d1c5c9ad721b317ebd0c1ccde9fe244cbc42d1f2f41ca",
+      "full_label_cache_sha256": "e584d79b095111934ab49257eaa3374af9ad91e3851bbb6a78b0734beb6cf34f",
+      "days": 1,
+      "eligible_full_cells": 56856,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41230,
+      "target_touching_valid_pairs": 30859,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2726
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-09",
+      "parent_day_sha256": "3c6fc498a50f34b7d95d148df4f0220e37c7511c2b0ae1bc22d81448bf6b19a2",
+      "raw_TRAIN_label_source_sha256": "3015335abc3a077dac5323a571dd4c17bf59027a1a0958260881d8cc5ecad6a9",
+      "full_label_cache_sha256": "c80b8028c1853f40990ef6414aa5665c0b121483241b422eda16fb68d78bbe33",
+      "days": 1,
+      "eligible_full_cells": 56990,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41503,
+      "target_touching_valid_pairs": 31214,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2728
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-10",
+      "parent_day_sha256": "204cbbdddff26dd8cee0e74f1d788b6f5d310120a183e071203e7e5b4f11f5d7",
+      "raw_TRAIN_label_source_sha256": "e69c95a4b63c84977c5c61e299083674d191570825bab300b553e44829f7b07c",
+      "full_label_cache_sha256": "2492bf19aef678bb0f9cdfe20adb9dd3f3d0c24ed5170754ccb21b54edc0ccc3",
+      "days": 1,
+      "eligible_full_cells": 56669,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41276,
+      "target_touching_valid_pairs": 14710,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1308
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-11",
+      "parent_day_sha256": "625a043c1de1ddc1e160379d8fc23db533770cb7c7504be93f8a6f4741249fe4",
+      "raw_TRAIN_label_source_sha256": "77ddcd9cf6fe97b990068901a3068e62a0c89efe75796dbd378bd7894b9ded69",
+      "full_label_cache_sha256": "976382ca6cdd708dcb38de86f3ee14311d4d5517f334c7b50296f52abc13164d",
+      "days": 1,
+      "eligible_full_cells": 57020,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41632,
+      "target_touching_valid_pairs": 31274,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2685
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-12",
+      "parent_day_sha256": "124f0411ebc4c12667ad59bba8d96b200a7b3ea083f8816cd2962de4670d495d",
+      "raw_TRAIN_label_source_sha256": "ade14ffd259ac218e5f81f9ad383f99629dc2807cc79816af7894bb475b0efd3",
+      "full_label_cache_sha256": "160530457169ff25ecfe2d02452e6cc35ab0cd07b6e6c9ddef46edd2dd391992",
+      "days": 1,
+      "eligible_full_cells": 56645,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41029,
+      "target_touching_valid_pairs": 14998,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1263
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-13",
+      "parent_day_sha256": "d008353337a8884324a5714469f418861cc55aa2c726db23d43cd49a8a6ee9f1",
+      "raw_TRAIN_label_source_sha256": "a69f93f1bc457075c7472a19b2ff0c0d158ad35fa5240f9726ca4be2caf802fe",
+      "full_label_cache_sha256": "e02ef0c7c00e0d2df1f1249ccd7176cf223ee0074c4389788609b87932437c5c",
+      "days": 1,
+      "eligible_full_cells": 56722,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41081,
+      "target_touching_valid_pairs": 30853,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2626
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-14",
+      "parent_day_sha256": "7df1970fdb035327bc281742f2a8ed095164cbe8c59f2a2f35b69f327e4698e9",
+      "raw_TRAIN_label_source_sha256": "da7fdfe77867d10be7d5fba436d12a91d735b05086e763046131c1fac9435859",
+      "full_label_cache_sha256": "c9cfee704a33f2cee5c03a32c59c0829a147a3175cd0b3edd1276239daf625ad",
+      "days": 1,
+      "eligible_full_cells": 56873,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41266,
+      "target_touching_valid_pairs": 14932,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1284
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-15",
+      "parent_day_sha256": "81faef665919e63e793755bc5d87ae51e7ae0dddbe3a4f4a91596bdb9051700f",
+      "raw_TRAIN_label_source_sha256": "4b0798357bb184ecf31044c49063e8d6106ec16536f2ebaa94a6384463a18ccc",
+      "full_label_cache_sha256": "098a5460f9f2ea23fe255f387d7648eb5e6a18d2e78099086ddf855ce74eff43",
+      "days": 1,
+      "eligible_full_cells": 56913,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41488,
+      "target_touching_valid_pairs": 31137,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2564
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-16",
+      "parent_day_sha256": "41ad5c7aa823b134d8c8189e9c41432e01c1e0b8b66b08f24c50894da5f718b3",
+      "raw_TRAIN_label_source_sha256": "1aba30d07dfff3d39aea70effbc5dcef5bd5c9bebed7e7cc54d98018590e3b50",
+      "full_label_cache_sha256": "16ec1473ebca1fb024b0bcdc1cc927041f6efa5daf9643e07ce9c2ab174609db",
+      "days": 1,
+      "eligible_full_cells": 56837,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41283,
+      "target_touching_valid_pairs": 30975,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2662
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-17",
+      "parent_day_sha256": "f0f20962d6e441a75122397e03545fdf1595273c9f422d6dde3faaaf75e3f646",
+      "raw_TRAIN_label_source_sha256": "b1ed2837f4273323d736fbf4b1111b0be645c32b65158971d3cb1af501a57a17",
+      "full_label_cache_sha256": "86868cb80f5b4064748eb65c417f6d5e165374ac0258396306b315ab7bd9a098",
+      "days": 1,
+      "eligible_full_cells": 56680,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41129,
+      "target_touching_valid_pairs": 14742,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1316
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-18",
+      "parent_day_sha256": "33d8ae6b6bf567a91da6f332e38b15d8e684a96fb179cc0cd2746b34ffd1bc40",
+      "raw_TRAIN_label_source_sha256": "60fc4f0dc1ea7b10380ec1e92c6290064346cc9e80df41eaf50d44c1230e6639",
+      "full_label_cache_sha256": "c88c684bb09ed0c4e7501a0c62db7c566950aedd786129c412762727aee45c30",
+      "days": 1,
+      "eligible_full_cells": 56749,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41230,
+      "target_touching_valid_pairs": 20948,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1893
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-19",
+      "parent_day_sha256": "2213b268dd6d374ce62e0648bcf8ad0c7863934f0107486ef9b38db244ea1fa9",
+      "raw_TRAIN_label_source_sha256": "1f4f42c16995ed38198f01d9b08c7192159aef5354f5179854df5676b35f3c92",
+      "full_label_cache_sha256": "049445bdba1e0803dd897119b58c76c71d9b92f2996c84489ff13a6c6ec99965",
+      "days": 1,
+      "eligible_full_cells": 56771,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41225,
+      "target_touching_valid_pairs": 15004,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1293
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-20",
+      "parent_day_sha256": "89766cd66683b8e8695bdd42f47ce45d51f055c147efb26b66a56950ca9248c8",
+      "raw_TRAIN_label_source_sha256": "14ab651a7860cc8567cb8f941a761126f0e526053a5b9fa27bab4da503573b3f",
+      "full_label_cache_sha256": "bc3475a0999e443c7aa7197666da18418afe0deeab872745dd2125f88e8e3add",
+      "days": 1,
+      "eligible_full_cells": 56683,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41242,
+      "target_touching_valid_pairs": 21159,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1843
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-21",
+      "parent_day_sha256": "471008a7d04202f912dd87c045a10bd3cb58d11d40061e586aaac0177d06c42d",
+      "raw_TRAIN_label_source_sha256": "1028114420d2b1b431dc2313203e740ca7be4ddb8314f78c1443b334d0d59e24",
+      "full_label_cache_sha256": "434dc3fb9fcac2b404f608081b8204daff436a0362d06d63b3c65d2dd413f270",
+      "days": 1,
+      "eligible_full_cells": 56847,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41379,
+      "target_touching_valid_pairs": 20923,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1815
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-22",
+      "parent_day_sha256": "7afa0d18b99f2c8cbf04f725b17afc2fe2330b3d4e60d8af316c56ad6094fa80",
+      "raw_TRAIN_label_source_sha256": "6b3bf020a854b511cb3750675d9fa97e178d4de41019b617360178e0937616ba",
+      "full_label_cache_sha256": "eaff286c9089dae6143f57d2787eaffab4fd9b7a3623a9752ac4a5e70cbd0aab",
+      "days": 1,
+      "eligible_full_cells": 56572,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41151,
+      "target_touching_valid_pairs": 14581,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1255
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-23",
+      "parent_day_sha256": "19e2d328280313fd26eca9901a955be4389fe6ca87ceb33cc5d4c2436fad83a1",
+      "raw_TRAIN_label_source_sha256": "f7eca9961e82b1fcfa5f0595b0b110bf26041c2f74535f297ad687b7da63c482",
+      "full_label_cache_sha256": "774f1c4f4ec52eda40e5434f9888fc41ce4d11153f1c6164283cc12680405b0d",
+      "days": 1,
+      "eligible_full_cells": 56474,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41032,
+      "target_touching_valid_pairs": 30924,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2650
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-24",
+      "parent_day_sha256": "22946d6b4d39aee0c3ce4c7b40d8d713b9851f1744a88ddda823efdcd7529273",
+      "raw_TRAIN_label_source_sha256": "eb20de61fb7617d3b4c53b2c870808df268db860ff04f5d20714fc9acd4e43d2",
+      "full_label_cache_sha256": "8f820bcda69265c9d2b045ed22b15ecdcb097aeeb1b2743de3f017376d15b36a",
+      "days": 1,
+      "eligible_full_cells": 56896,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41492,
+      "target_touching_valid_pairs": 21032,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1771
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-25",
+      "parent_day_sha256": "3a281dc328ce1ad0bf5693830a9a500d3a0690cfc5bf26b9ea3405d2922fb95d",
+      "raw_TRAIN_label_source_sha256": "087dddb7318e85503e713ff463654a371e3653235a86c94f8b3a9b1ba6acd2b3",
+      "full_label_cache_sha256": "f77ebe14c3fff306024420cbf006ab09206abd440eed604db03e9b861944d3ec",
+      "days": 1,
+      "eligible_full_cells": 56584,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41041,
+      "target_touching_valid_pairs": 14548,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1276
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-26",
+      "parent_day_sha256": "129ee561ab7856b5d26c64a0e872282fc6a8065d40d56712abf835f6e8d4a9b7",
+      "raw_TRAIN_label_source_sha256": "928e9e8fe10294532e7c492aa7e6b0e4f59f962a9fc7ceb65774821431ebc988",
+      "full_label_cache_sha256": "8d066a77d6a06a7676743757eefce8a0b7d8994e1250baa6a7872d946f119500",
+      "days": 1,
+      "eligible_full_cells": 56676,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41121,
+      "target_touching_valid_pairs": 21098,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1819
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-27",
+      "parent_day_sha256": "48c0b5c3ed500ca1d2b61fb47688981094959d7f13a9d0c32e9797718cfdc6a2",
+      "raw_TRAIN_label_source_sha256": "a208a3fe42d8a6aa6fd407c6f302b29ded9893ef0f10892ede85c95a2a8d343b",
+      "full_label_cache_sha256": "826b84ed7225d7c7ac79ece7afadf6a78ffbdf446c17442e8178fd43a0f88743",
+      "days": 1,
+      "eligible_full_cells": 56862,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41368,
+      "target_touching_valid_pairs": 21010,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1751
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-28",
+      "parent_day_sha256": "de33a0c37d9e1e26d3e50b79116acc42240da193ea1207dd9b24da5580cb9bf5",
+      "raw_TRAIN_label_source_sha256": "c457cfffd8ecf962c913918ed9d8223488612f48f608d528681ef13200aa7443",
+      "full_label_cache_sha256": "5cd1f95a4346ed3dd29492efbc2bcc39cb93d01e9a182c1a15cfcf8a4e396938",
+      "days": 1,
+      "eligible_full_cells": 57016,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41452,
+      "target_touching_valid_pairs": 31193,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2802
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-29",
+      "parent_day_sha256": "22bdbfe70fe73e07d44f84abc6cb1fae8b260c3196e7a7a5aaa66966e93166d0",
+      "raw_TRAIN_label_source_sha256": "99b5ca8d460cb5fd09154c43ac88158914508d88e3624e67470857748964aad1",
+      "full_label_cache_sha256": "fa7c75b75203260225dcbec5de1d56340af704f329ca56c955796a829a666316",
+      "days": 1,
+      "eligible_full_cells": 56854,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41337,
+      "target_touching_valid_pairs": 31183,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2675
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-30",
+      "parent_day_sha256": "4eda12c886eaf49f605de04ba8560f45ca357a90e850f6c7d58bb6aba8686b61",
+      "raw_TRAIN_label_source_sha256": "d83e65c35d891c40af500eecd23df5cb561e4c322c43d6e2a65339fdef30c7ad",
+      "full_label_cache_sha256": "4eba72da057579e9067f9231f09d1be3b327b01e6c270fd42c14545f239566a6",
+      "days": 1,
+      "eligible_full_cells": 56679,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41080,
+      "target_touching_valid_pairs": 21004,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1803
+    },
+    {
+      "part": "fit",
+      "date": "2030-08-31",
+      "parent_day_sha256": "88fe74fdd5b818e09388f93f9cc1bb3870621ae712f13f97f9ffba854bdca60a",
+      "raw_TRAIN_label_source_sha256": "f8208053b6fb0f0ed3cde1d1e182862465eb84f2758c345792bb30b60628da94",
+      "full_label_cache_sha256": "d0b26e52e1d97300559ca6dd50f16df129d21ec81077aa76ad926cab2dd3a981",
+      "days": 1,
+      "eligible_full_cells": 56867,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41461,
+      "target_touching_valid_pairs": 14999,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1292
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-01",
+      "parent_day_sha256": "dce22825c15f779a62ace8720c2721443ac0f4a40999f583681d6bbfa85bc252",
+      "raw_TRAIN_label_source_sha256": "16c1a2179184a21ecae8324a97fd365a8f75fd7b566e632c2b2142e7e6350c23",
+      "full_label_cache_sha256": "e848537dbeecdde5c105c03ab2b3a374e3494a9ac86ff24af4dd6c2635abaa5b",
+      "days": 1,
+      "eligible_full_cells": 56644,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41255,
+      "target_touching_valid_pairs": 30955,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2587
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-02",
+      "parent_day_sha256": "32f78c73510509e6498691634f8f8e949fb5c691e2402617696638c54fb60b4d",
+      "raw_TRAIN_label_source_sha256": "9704f3d90d8c88aabdb5bb332fe15ed0e611724a81d91c617770e4b35d23cd3c",
+      "full_label_cache_sha256": "db7ff64fe70afd61b695f071ca16b355a30db12d26287f51ea41b783bb7b4336",
+      "days": 1,
+      "eligible_full_cells": 56695,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41090,
+      "target_touching_valid_pairs": 14861,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1278
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-03",
+      "parent_day_sha256": "dc41123f3f0b8c0220a477459e06353f17e2e188c4b8dc88b5bb6a82a6e25678",
+      "raw_TRAIN_label_source_sha256": "3dd8b57760a9be17bfb6ac7578542a7f3b9596074995741c741abf3a4b405465",
+      "full_label_cache_sha256": "425cebb0f654fe32cca8742760259a0d7d591e1b3a61af1ccffb4e53bc249600",
+      "days": 1,
+      "eligible_full_cells": 56731,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41279,
+      "target_touching_valid_pairs": 14768,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1193
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-04",
+      "parent_day_sha256": "a1b05e1dc127fa2f5ce873e6aad49bb8bbfe61b4e261b93e3b555a4efc9e3d04",
+      "raw_TRAIN_label_source_sha256": "09b7c40d752e8eb4d297b9074480a44e1f384a6ccbaf98c3ac756e98a3c434ab",
+      "full_label_cache_sha256": "df5dd5c368a5f41fbd401ca21ecf6d5a29a946114b0bf00b6ecba75a1e1dc7d1",
+      "days": 1,
+      "eligible_full_cells": 56787,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41343,
+      "target_touching_valid_pairs": 31036,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2579
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-05",
+      "parent_day_sha256": "72951cb77601beaae09b53ce5dc34b807b18c55c32d2d9cce89d17bf6b42cf5e",
+      "raw_TRAIN_label_source_sha256": "a1b759c0b26a2cb70f74fd17f20cb50c97ac723dcccdc74cdd193766c3ec22b9",
+      "full_label_cache_sha256": "13cbe980fa2c5ae280bbd089642fd84531e0ec88d5637e5dbb60873205a3f291",
+      "days": 1,
+      "eligible_full_cells": 56872,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41486,
+      "target_touching_valid_pairs": 21260,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1827
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-06",
+      "parent_day_sha256": "747b04a1ed3d2e07343f1ea5ae624f931f296321810a86df40cf78016d480ec1",
+      "raw_TRAIN_label_source_sha256": "55e5e28868b1a5dd8246b9cc3a2658d9a43ce2b9dbc7ca2f969228d2f413d685",
+      "full_label_cache_sha256": "e50fc6c982a680da2a63c0b1b1ae484ee72cb3a55816d66faad8b0a6e18d746f",
+      "days": 1,
+      "eligible_full_cells": 56706,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41216,
+      "target_touching_valid_pairs": 14921,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1339
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-07",
+      "parent_day_sha256": "f0182ce30ef80c6476034c8818306147c53a10a553340fa084897ec3960027fb",
+      "raw_TRAIN_label_source_sha256": "30a67d7c43245eef71d0a89fea43e71e06fc3d806f07722fc207efc3dd2facb6",
+      "full_label_cache_sha256": "cfd5738726a09e9d4d711f5501e5da08efd3ff104a593bca111e77e8a9b4b13b",
+      "days": 1,
+      "eligible_full_cells": 56769,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41311,
+      "target_touching_valid_pairs": 31067,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2667
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-08",
+      "parent_day_sha256": "f0847473a686a3a8615720fefd5fbbc0a1c0fb041998573b1910fb6fd380aba0",
+      "raw_TRAIN_label_source_sha256": "e1207216b856c905741a626e8711dfe41044083286038faff542bff4c210553a",
+      "full_label_cache_sha256": "bf7faca32a692665c633359a99362109ba2bf41c21a84771ebd958ec157d748f",
+      "days": 1,
+      "eligible_full_cells": 56981,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41551,
+      "target_touching_valid_pairs": 21163,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1764
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-09",
+      "parent_day_sha256": "6e19c03d782c227c7f8a5d5ba318406b52db2e02fb2c11d64aaddf32abd9616e",
+      "raw_TRAIN_label_source_sha256": "53117cad47d5cbca554664b9aaf07fe893ba24fc1b600940f3e549299a26824c",
+      "full_label_cache_sha256": "e72f42dbf58ae86f417642aad8b1609c81674bba2b4616f868a3cdc897edbf1b",
+      "days": 1,
+      "eligible_full_cells": 56862,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41408,
+      "target_touching_valid_pairs": 30947,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2638
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-10",
+      "parent_day_sha256": "34940664fd63bf00f42d668a169661a38919caac360a8c99c121d2f670760071",
+      "raw_TRAIN_label_source_sha256": "8880f4a4629fb55ebc0f4ecef41906533fb1046dd67842475c2a5ab76600981b",
+      "full_label_cache_sha256": "c07cc2652f826881d81a44f8c54c048c7a53b6080c16b1c1db37483ccc99d5c2",
+      "days": 1,
+      "eligible_full_cells": 56670,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41141,
+      "target_touching_valid_pairs": 30791,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2669
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-11",
+      "parent_day_sha256": "0927cb2f640912ab41210dfda067d55402b9d67e37b982c635b95b99b10e992d",
+      "raw_TRAIN_label_source_sha256": "1417b29cd434e8f5a19ed7adb10f65ac692ff0b67f26fc52e8a4332b1dc7e77f",
+      "full_label_cache_sha256": "f97ed3f74faa30f08858f35405791eea2da5de108957d887e290cab7f5c1e9b2",
+      "days": 1,
+      "eligible_full_cells": 56998,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41490,
+      "target_touching_valid_pairs": 31014,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2668
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-12",
+      "parent_day_sha256": "d214376ccde26f85e8861226ddf6ab26f93b0cd9d4deeca26b26c26bc41fd4ae",
+      "raw_TRAIN_label_source_sha256": "2531323774c0be3993cc2901e105d47d7e32a36320861679176bc452442e0e24",
+      "full_label_cache_sha256": "1d1e45e3c95886977d64c8d0780f0b4b30ff932640e153e6131d8966fa0eb8b4",
+      "days": 1,
+      "eligible_full_cells": 56674,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41158,
+      "target_touching_valid_pairs": 14832,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1282
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-13",
+      "parent_day_sha256": "7e4ed78c73cb04c1a258fbc1420da96f113d341fb7035f2dca217e7f9a503d79",
+      "raw_TRAIN_label_source_sha256": "8fc008d2a8ddb3e3c8fcfaab6ce13efcf7b372ac49446b7f469c74e9c0453b95",
+      "full_label_cache_sha256": "ab1c446f73b2876fbdbe4720183608de9523a073e2240da27d5dc8d4ae245c5e",
+      "days": 1,
+      "eligible_full_cells": 56736,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41249,
+      "target_touching_valid_pairs": 14741,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1236
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-14",
+      "parent_day_sha256": "fdc9936dca4c87f24286bbeeb4f67783f137807b5cf2ebb8a96567cc4e30cb58",
+      "raw_TRAIN_label_source_sha256": "5ca5059a2af889405138eb857f47cc60d7e112b7cf87bee6e41b26d7c3892fae",
+      "full_label_cache_sha256": "5f9f7431e4029bce54e3a66b56af2c9330525384edd85b991a2e97b58fbd8e09",
+      "days": 1,
+      "eligible_full_cells": 56735,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41276,
+      "target_touching_valid_pairs": 15020,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1299
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-15",
+      "parent_day_sha256": "dab87cbd41b83ace4f0d85004edde73c2d3a49fd3cc34c3a723d34bde8cf72e2",
+      "raw_TRAIN_label_source_sha256": "f709756ce338618e719387ab627d0721071c9e6ead1a7fe4ff0f90d3a9c18fd2",
+      "full_label_cache_sha256": "7c125d76ee963ea8a4543fbec35f7e5c8f22adba2df42117ed834effd873995a",
+      "days": 1,
+      "eligible_full_cells": 56693,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41164,
+      "target_touching_valid_pairs": 20885,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1775
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-16",
+      "parent_day_sha256": "87761df8933ffd38de1f7a2fc318d978a838a00d1601743f4a3015aa88f90ef4",
+      "raw_TRAIN_label_source_sha256": "7ddc8d4ea81f811202ec989c6e78f2417dd3cb31c735a47a9d32f7dc33ea79d2",
+      "full_label_cache_sha256": "bc5253d30d47baae9d8cd5a77d9c017275a7ccd8762e793ae4dede74a9755e30",
+      "days": 1,
+      "eligible_full_cells": 56793,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41257,
+      "target_touching_valid_pairs": 30914,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2658
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-17",
+      "parent_day_sha256": "e2dc6bd1028c6e5ce8630c1ac7328e01d938918693eac64048f52e25613d818c",
+      "raw_TRAIN_label_source_sha256": "2c1e10df0dba82132761fea9b55f4dff6615a162cf76669e6160a4a7bbb2c304",
+      "full_label_cache_sha256": "66f5c4c2e91acdae398d22fbc90ea1227078bd0d1842ae74213912fc6fb2de14",
+      "days": 1,
+      "eligible_full_cells": 56957,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41430,
+      "target_touching_valid_pairs": 14991,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1267
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-18",
+      "parent_day_sha256": "a9528b3821860d88d5c49163be84c356902c910c761f4cf72fef9bc82c272c84",
+      "raw_TRAIN_label_source_sha256": "82bcb793ebd2d72d2dcb4805ba0dd807b357b737987154f439d94bb4efa4cd51",
+      "full_label_cache_sha256": "7ac23dec0259eb23e3af28206e8cc96b960420bfa7daea33523ac79889e52499",
+      "days": 1,
+      "eligible_full_cells": 56816,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41207,
+      "target_touching_valid_pairs": 30839,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2699
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-19",
+      "parent_day_sha256": "9c7cfc4e1419a618157b308d857c74bfb257bd1fde0bc3be1c5e897f63ec0aed",
+      "raw_TRAIN_label_source_sha256": "3304e7765196ebcce4bd9276fb06a5471c199eb0340821a6a62572945fb513ab",
+      "full_label_cache_sha256": "96f46bc0bc593221b9cd701da2b577d10999cdc2b8b50589fb30e3a5930d0adb",
+      "days": 1,
+      "eligible_full_cells": 56512,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 40918,
+      "target_touching_valid_pairs": 14745,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1214
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-20",
+      "parent_day_sha256": "d650be9cb9ccb34bce98ef24a98cbb185371b84243b675c03f77f7dc0d57be40",
+      "raw_TRAIN_label_source_sha256": "5e45b3f225e24b57a1d5e32071b61e5469e37c1f57b48897c2a313141a0ade6f",
+      "full_label_cache_sha256": "ace1cc9f34e974661372eaf6d62254df1339843eac6dec6f756a356817a670b2",
+      "days": 1,
+      "eligible_full_cells": 56644,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41043,
+      "target_touching_valid_pairs": 30750,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2676
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-21",
+      "parent_day_sha256": "e8f4d607822a6ebedc41daf5af45690280908cdcc659dd2a88a2bb7a6ea41acb",
+      "raw_TRAIN_label_source_sha256": "29bf6890649132210716d337e6e175fc759629deeda631ebc322bdb64ff45229",
+      "full_label_cache_sha256": "092f9e0c4d73efe679b34bf3891f444d7673101fb46f8f31a97d626a839dd332",
+      "days": 1,
+      "eligible_full_cells": 56838,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41386,
+      "target_touching_valid_pairs": 14812,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1330
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-22",
+      "parent_day_sha256": "f15e73981ce2cdd0f64399df89ae2cbfb0de0f0064f0d113d9f87685820c79f0",
+      "raw_TRAIN_label_source_sha256": "1a26feef58a2e2006b493b0e1f35425263398358b7ecc0f4c0752f542e348925",
+      "full_label_cache_sha256": "1e54bbdccde5222d5fe0614f355d7bd46adab49eb004cc7dd193bce09008ea4d",
+      "days": 1,
+      "eligible_full_cells": 56913,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41532,
+      "target_touching_valid_pairs": 31252,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2707
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-23",
+      "parent_day_sha256": "46a7d5b220ff49539a14990aa8b48b86be0967c8c894a32e2201857bccfbfa6b",
+      "raw_TRAIN_label_source_sha256": "69aa5dcd307d7a2e3b64c7bb4995b7f8aff003f07372d75a0235e90611558752",
+      "full_label_cache_sha256": "8847dd6543686c892241f112436168fa5e8b425ea99627ddef0fa08e8725b134",
+      "days": 1,
+      "eligible_full_cells": 57049,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41709,
+      "target_touching_valid_pairs": 14985,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1260
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-24",
+      "parent_day_sha256": "ce995ba85a787b9a59a085492b3d71ce6a2782f00cb88ff718d4a3b2b88abc4a",
+      "raw_TRAIN_label_source_sha256": "085daf403db6f68afb3ae1b2b9202978f1b3eb7b61b9009b54002c9a5f4b2532",
+      "full_label_cache_sha256": "761c9bc4feb1c16d3b8c9f8e753eb235e373b071d1f0605bab9f4d0b598ffdd2",
+      "days": 1,
+      "eligible_full_cells": 56718,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41166,
+      "target_touching_valid_pairs": 14763,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1281
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-25",
+      "parent_day_sha256": "05e863ca80c9783bddb127a2e1a55cc032d1dea4752d87d641c96ce65c87f241",
+      "raw_TRAIN_label_source_sha256": "7d7cef741e743d3ec79031e8078a05c185cad8b235db7dd9965682e584d5e42d",
+      "full_label_cache_sha256": "528414171bece71e5ca5a6060639cde5b52078d4373682cbfbe4d76559b76336",
+      "days": 1,
+      "eligible_full_cells": 56682,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41169,
+      "target_touching_valid_pairs": 31097,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2591
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-26",
+      "parent_day_sha256": "e3695ff572a0a6afd0794451ad1626de32790b829fe8f04f87196850ec847fa5",
+      "raw_TRAIN_label_source_sha256": "92d10c561da0036bf22fcab79fa62449cba288824bef6fea299bffae1522accb",
+      "full_label_cache_sha256": "e76ce755870022b4edf8a6b05108216eb037937f8a736125d65074da71ebcba1",
+      "days": 1,
+      "eligible_full_cells": 56938,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41456,
+      "target_touching_valid_pairs": 31218,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2643
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-27",
+      "parent_day_sha256": "c9f937ed8c968998449242159d91b7917eece66bc20ab7ca5963741cef309ab1",
+      "raw_TRAIN_label_source_sha256": "7eacc8a03e207e8729772d1c702a2d9d89ec3bfccb7e64fc7772d4b606493729",
+      "full_label_cache_sha256": "3d550dc0d02c97e9c56f3c56146f00e6f58a0a48203a79e67acc51e9d7a67b00",
+      "days": 1,
+      "eligible_full_cells": 56627,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41012,
+      "target_touching_valid_pairs": 30605,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2556
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-28",
+      "parent_day_sha256": "8423286edafefcf441c481db2d107491921d332336ab3d3721c3aa04f76d235f",
+      "raw_TRAIN_label_source_sha256": "82b2634bac26b777101d038e7e3b70d453f29d09baf3f08d083e208f30597090",
+      "full_label_cache_sha256": "753e28ca30d87d7955acb367f303250846f4a93ca841b8689728d8efa705180e",
+      "days": 1,
+      "eligible_full_cells": 57012,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41450,
+      "target_touching_valid_pairs": 31020,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2698
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-29",
+      "parent_day_sha256": "1c138b52037eb020e3262b7560f78fd7fc63d3bbf73d9c36e03cb5a0687b50a3",
+      "raw_TRAIN_label_source_sha256": "b03f69a6d2acb159cc837130918b2386760e88e98990bf8cb2486b42081cbe51",
+      "full_label_cache_sha256": "504e81199033fc68cc0b9901dfa316663509ee0735167902ebf951abafb460db",
+      "days": 1,
+      "eligible_full_cells": 56788,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41294,
+      "target_touching_valid_pairs": 14830,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1303
+    },
+    {
+      "part": "fit",
+      "date": "2030-09-30",
+      "parent_day_sha256": "5174a2a817fc069d13d65938163df0d78f9d66b3e35db68f6d375a77fb318ea8",
+      "raw_TRAIN_label_source_sha256": "071e8cbeed2f123f603fb749dfc36846d840f5cfcd35019882daa3d71947bde7",
+      "full_label_cache_sha256": "114adb399c769e884d568c942a314571b6bad984de69451f00ef9dd289688987",
+      "days": 1,
+      "eligible_full_cells": 57006,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41593,
+      "target_touching_valid_pairs": 14997,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1191
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-01",
+      "parent_day_sha256": "559c09cfde173eeffd4ec41195785c22ef96165ed0f45fa24dd0685e2fa943a0",
+      "raw_TRAIN_label_source_sha256": "eff51a01c0c452545be995ff16ceb219a6e9ef927c35e3ddbbf8c43fff935a66",
+      "full_label_cache_sha256": "b852232f0e6cae5f571355dc4322608eeb65784562128c39453429ada18b0dea",
+      "days": 1,
+      "eligible_full_cells": 56940,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41250,
+      "target_touching_valid_pairs": 14691,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1292
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-02",
+      "parent_day_sha256": "09cb0e55ca9cf84fe277869202f463fa8794be3f8bbf3a5d5991052d2a576a3e",
+      "raw_TRAIN_label_source_sha256": "6e8d69a39b0cf2033a232a489f55805cbad6e9a4bedd9a3ad97259a3a2d90f59",
+      "full_label_cache_sha256": "5ac2a755383c0f069da046f68c57c895297d7b31bbd95875b80e780c97aaa1f3",
+      "days": 1,
+      "eligible_full_cells": 56544,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41079,
+      "target_touching_valid_pairs": 21038,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1766
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-03",
+      "parent_day_sha256": "1093bf322a674d6f2bddeb572c0324760ae813a609073bc6b86be943148552f0",
+      "raw_TRAIN_label_source_sha256": "05547b5dadd3d56b708b4f5e46b664b1c5ffb95daf7e5abee05a6e873c0b0748",
+      "full_label_cache_sha256": "d42907aaee14b987f4031dee6f1b814ec801e360b92345d7ef9b9fe057a3c651",
+      "days": 1,
+      "eligible_full_cells": 56553,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41058,
+      "target_touching_valid_pairs": 14903,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1252
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-04",
+      "parent_day_sha256": "c77fe662d7ca6664f2cd6988ed197b1f92e478aad545fd39491b8966fc4f49a1",
+      "raw_TRAIN_label_source_sha256": "a33f11759daa17e65511254a534dd7a1f2d5f78cc2ee481dc23e8e8bef80e0fe",
+      "full_label_cache_sha256": "c94575f59c5ef12a10ec7d210885887822ef4a04b8efd6a151138d783f8b010c",
+      "days": 1,
+      "eligible_full_cells": 56705,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41314,
+      "target_touching_valid_pairs": 31036,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2661
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-05",
+      "parent_day_sha256": "a00d73a9ff946952a06f1e61e1751f873bbebc2361a8d520e3e4001affef8f5f",
+      "raw_TRAIN_label_source_sha256": "a4265094a600ef130df667c72f684f0f89306eb5ffcbdf8cc41de3e82c7becdf",
+      "full_label_cache_sha256": "c2717f637b6efc603e9589faf30c565318dabf64ef9c67aaa83d25f48d5c75e2",
+      "days": 1,
+      "eligible_full_cells": 56883,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41371,
+      "target_touching_valid_pairs": 21027,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1829
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-06",
+      "parent_day_sha256": "4001dc45f9bd09a29b06f6d2c5fae5d58b0a32c7c60e8d728566484ae86d4a7b",
+      "raw_TRAIN_label_source_sha256": "1870d6cb9f11e6bda5bc4d26187921fc1b181c0353748f5a3f02b7507262a46a",
+      "full_label_cache_sha256": "1977eb0ddc7ed638c385d3e03954345e0f1621deff4ca882da057cfcddc35eb1",
+      "days": 1,
+      "eligible_full_cells": 56749,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41125,
+      "target_touching_valid_pairs": 20963,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1823
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-07",
+      "parent_day_sha256": "9b1a809760e472a9762f1727b941d73ffd373750126b04615a2498166fd3f384",
+      "raw_TRAIN_label_source_sha256": "da55cdca21000283f511f6d500434160e2c10371b8443de314a8466032fa9c50",
+      "full_label_cache_sha256": "eec4515e72a426f3121147dfc781e5c9b44cd1f59b1f032066541fb9336c276e",
+      "days": 1,
+      "eligible_full_cells": 56513,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 40861,
+      "target_touching_valid_pairs": 20868,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1772
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-08",
+      "parent_day_sha256": "ff3dc56a3283619a25375c71c9d36968f98469461dc89a02e56c3b92980d4b6d",
+      "raw_TRAIN_label_source_sha256": "c76e1fe33080d1ec4529f486f8eaea0cdbbfb6b1b830ec98dd4f4d54968db016",
+      "full_label_cache_sha256": "4384f39593744855e01d77b6f8d4f850732984f9ab58e843bd1ad2e259699177",
+      "days": 1,
+      "eligible_full_cells": 56793,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41272,
+      "target_touching_valid_pairs": 21258,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1826
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-09",
+      "parent_day_sha256": "16e6366a1642b821fb2458a028e02057a78e9d7bb94eae588a6a19a9fdedee2a",
+      "raw_TRAIN_label_source_sha256": "ab9c1c2ca504f8c1749d6ba5835975fd14130badfec786a2070b6f3c7a07ac59",
+      "full_label_cache_sha256": "b966f397ab9f794c3416e03042fa729d920860d64e206b061aea30f4fe0ec63b",
+      "days": 1,
+      "eligible_full_cells": 56771,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41215,
+      "target_touching_valid_pairs": 30887,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2734
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-10",
+      "parent_day_sha256": "b7c5d29b8fde258950113e543cc71892779a847246187580b4afd44cb3e08090",
+      "raw_TRAIN_label_source_sha256": "96128454730dd940a54a4d26f77eba7eb9b49a0fc00ea82006eea892fa03386a",
+      "full_label_cache_sha256": "667528b0682232dcfc23351cd5396b6c878542658efc38f5376e7e17f002e650",
+      "days": 1,
+      "eligible_full_cells": 56784,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41427,
+      "target_touching_valid_pairs": 14838,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1237
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-11",
+      "parent_day_sha256": "587e39ae8b46bff8e2c95f48fd581b06a2d3a978124675c17be9059f32a40446",
+      "raw_TRAIN_label_source_sha256": "8db285640cef563abbbf3ed3afc2d954058744783a8482e7a899039bf2f538f3",
+      "full_label_cache_sha256": "ea0b81d86e6a63789ec04c1be4028aa73ac9c4c484ab15f070739b5489989295",
+      "days": 1,
+      "eligible_full_cells": 56775,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41347,
+      "target_touching_valid_pairs": 15196,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1272
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-12",
+      "parent_day_sha256": "dcd8da39bcd22806d73126e54b82af0827855e2633f24bc2f53c4be7756e212b",
+      "raw_TRAIN_label_source_sha256": "4622f20f188fabc952961e09e4f3f38e21e63b0d35af29076e09d0c3d57ffaf9",
+      "full_label_cache_sha256": "b9d78f439c66964587f3713d070aac3ac97cf3e2c49a09715c6eadbda64f72ca",
+      "days": 1,
+      "eligible_full_cells": 56859,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41300,
+      "target_touching_valid_pairs": 21261,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1812
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-13",
+      "parent_day_sha256": "b626a95f9634d00bef13d7144673b78430fe3975bbb63a102908b5f60b3e3f52",
+      "raw_TRAIN_label_source_sha256": "4a10ff15e4c7b005b23bf17eddab44b7c2b9f7c78b19168d0cc85803dfb85421",
+      "full_label_cache_sha256": "a175bedd4f801c17167052ab30c0bfd84535b55939a6a82510d9313cb54fcdde",
+      "days": 1,
+      "eligible_full_cells": 56626,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41202,
+      "target_touching_valid_pairs": 21146,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1842
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-14",
+      "parent_day_sha256": "547470ee313030ac267c057f9fa7ff8c63bafa3f0788641b8b988d7ea2d9b335",
+      "raw_TRAIN_label_source_sha256": "6d678a16b9838fdc3ceff4845fe495deba09dd80c690652649c253af057d2f35",
+      "full_label_cache_sha256": "aa21c98d620420c702a8be3d5f91abafa673d33dc94c1c98549f7c86c7849152",
+      "days": 1,
+      "eligible_full_cells": 56840,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41362,
+      "target_touching_valid_pairs": 15063,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1233
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-15",
+      "parent_day_sha256": "95e7530ca871f1871479c793a7a5c55cd70c22008dcc1f7cada432d200a39f66",
+      "raw_TRAIN_label_source_sha256": "422cdb863166f7721c948c279ad76093ae2b243e15e1242d268ebbfbafa4b56d",
+      "full_label_cache_sha256": "5468b922529ba3468d7eee88eaea911273052f82d49e19c4f4ff5d9b85c7dd91",
+      "days": 1,
+      "eligible_full_cells": 56644,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41255,
+      "target_touching_valid_pairs": 14643,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1184
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-16",
+      "parent_day_sha256": "dfc823a8a63204dd1eef7950ec9642fb9402ff7fce77b8f9cc0e07ef3bf9ab2f",
+      "raw_TRAIN_label_source_sha256": "9e85a5269f0e76f05f3f4199ddc0bdf30f0c91a7c3ffa1a8b5d4667885b019de",
+      "full_label_cache_sha256": "9d7040b703a15d56c74c1d50395752d18bbffc7e9cd22ee23e21c7209f66a1b5",
+      "days": 1,
+      "eligible_full_cells": 56635,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41221,
+      "target_touching_valid_pairs": 14663,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1216
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-17",
+      "parent_day_sha256": "a779091a7a9aabdd303c9dab0edcf4b237e9a3e3b69a91ceee5e4a3fd2b569ab",
+      "raw_TRAIN_label_source_sha256": "7ae9a8a077b626802215513d28792f3ea30953a87c11b4ead4c7d3ca73a123a4",
+      "full_label_cache_sha256": "5a53ab0d66d30dd15415f91a2082dcf58fd9f57c33645b79b79082fced191a59",
+      "days": 1,
+      "eligible_full_cells": 56926,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41447,
+      "target_touching_valid_pairs": 14907,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1157
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-18",
+      "parent_day_sha256": "d0371f2f1bfa592cdb2b1e197877f55bdbd9935b6c7a619ce66b33ee9f3d0f61",
+      "raw_TRAIN_label_source_sha256": "af2f898fb0615d70c809bbbdda909751aee8f8c9126e65488943bd06d420844a",
+      "full_label_cache_sha256": "a93ee2d009da9435436b72ebfc872e2c72720ae1f7aa62d206d6f8abdf231f8e",
+      "days": 1,
+      "eligible_full_cells": 56774,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41254,
+      "target_touching_valid_pairs": 30877,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2653
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-19",
+      "parent_day_sha256": "969acc0283d4f6e624ece5cdc6cc4bfc43d2be6a1b65d2b7d8e3090d14160c5a",
+      "raw_TRAIN_label_source_sha256": "1f4efb875ae3ff7836dfdaea3c255a20eec0560aef35baad4d7dfcd05fc38ced",
+      "full_label_cache_sha256": "3463848785383e1780eeea27e9781c5bf434580f1570e76811dd9d76736678d4",
+      "days": 1,
+      "eligible_full_cells": 56661,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 40990,
+      "target_touching_valid_pairs": 30757,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2649
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-20",
+      "parent_day_sha256": "f396fbd80bff1d56392eada2e711ca50d33803c9462130bb013407d41768471c",
+      "raw_TRAIN_label_source_sha256": "5b9892764fc7a637c027c3b3be11273e00dbc65d62feb937ab7bc21d1b644a47",
+      "full_label_cache_sha256": "6807a873ebffebe8bd8a4d701c729c3c06f525d94a4cabe7f34490403797b0cd",
+      "days": 1,
+      "eligible_full_cells": 56671,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41183,
+      "target_touching_valid_pairs": 31010,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2576
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-21",
+      "parent_day_sha256": "cd7d986b39b05d048a3779a7b9e63e8d3a13eecbd318145c6fe12d110eeacb58",
+      "raw_TRAIN_label_source_sha256": "a8fa3d1bf5c6c782662e0d8f24b26e870a1e3db8978551a0562764d2727e7971",
+      "full_label_cache_sha256": "0158287e9c215fd8bb47655a076cc0667c562284dabbedae220b814e971a4cf7",
+      "days": 1,
+      "eligible_full_cells": 57046,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41477,
+      "target_touching_valid_pairs": 30996,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2658
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-22",
+      "parent_day_sha256": "42cadc639c8a5242f9aca372d47e535f16a16664f56d1263fb897f8a813e7f5e",
+      "raw_TRAIN_label_source_sha256": "3bf321da3735ad4dccaeef415948a80a57733ac42137c4bc44ac946e60edc86e",
+      "full_label_cache_sha256": "c208a5f66ffec3a6f9eea30992c69ce7778cf21cd6535a84f51c295a2f7e8208",
+      "days": 1,
+      "eligible_full_cells": 56686,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41126,
+      "target_touching_valid_pairs": 20939,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1862
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-23",
+      "parent_day_sha256": "a971f8dc67cd86fc87fc44c021a12fb7ebc4716527cf0e12d886acb4d22c6cd0",
+      "raw_TRAIN_label_source_sha256": "b484c05cfe9adb3920ae03a88898bdba231a4428f368ea4672a43b7567c1abbc",
+      "full_label_cache_sha256": "136e08ccffc8f0cbd963b507b0662e9c7a42b0ab105498a29cb2d5a23f07acea",
+      "days": 1,
+      "eligible_full_cells": 56812,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41315,
+      "target_touching_valid_pairs": 30939,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2765
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-24",
+      "parent_day_sha256": "809289ddc4ba80c8c1d28eba3aecd58d1aa42be386f82833e2da3c199a170ac2",
+      "raw_TRAIN_label_source_sha256": "d57376f94bd5a45d956b7d25905d1850f519e2a56361048cba69a54c94936173",
+      "full_label_cache_sha256": "6295a779c6aeb3ba36599a2c3d1bba07bf4216bbe2d5093c4b821dc1e222296d",
+      "days": 1,
+      "eligible_full_cells": 56821,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41354,
+      "target_touching_valid_pairs": 31134,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2582
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-25",
+      "parent_day_sha256": "aaa5aa63b64d3ccbf7a016a8c799cbc239140978e3233ad8acdb6e919956bb22",
+      "raw_TRAIN_label_source_sha256": "75ab3a2f04fc8662c27ec3cf0ed9d61b07be4196591b3b4ebc6d577e7f988ca9",
+      "full_label_cache_sha256": "4ee1d0911fc710b3a22622c2c6f8bf640e50d29193d10dcb9f1cf6b90bdbecb9",
+      "days": 1,
+      "eligible_full_cells": 57111,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41639,
+      "target_touching_valid_pairs": 21161,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1805
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-26",
+      "parent_day_sha256": "24f10815a9e56ea67cbbae4809c0d7ccebae29c72c7cb2c63f50049d2e14bd5f",
+      "raw_TRAIN_label_source_sha256": "cfebe256f47dc136dc650c65c308baa2ab060e7f6adeb2099b95d7c6df08f937",
+      "full_label_cache_sha256": "72292c58d9ba84cd6812b3d09fa27c8cba08f78bff19cfe80abd8b86907d5484",
+      "days": 1,
+      "eligible_full_cells": 56562,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41153,
+      "target_touching_valid_pairs": 30812,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2522
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-27",
+      "parent_day_sha256": "ff94b00d6dc984c88532a123744b357d29859ddb64dc02954c3aaadbaf27c276",
+      "raw_TRAIN_label_source_sha256": "faba3f773e2b9c5bc401be41dcb731207ecd72c862ce77cc3ff7675037263f4e",
+      "full_label_cache_sha256": "6b1850ed08df94373655db26795c6f6decd4a7364e3e6f5bedd61a364fdf4432",
+      "days": 1,
+      "eligible_full_cells": 56866,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41330,
+      "target_touching_valid_pairs": 14663,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1337
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-28",
+      "parent_day_sha256": "3f6b8b410f07222e0c313545500094d43ad6a587be096f72b2e271eba18e19c4",
+      "raw_TRAIN_label_source_sha256": "01e6eb6d2e135da6c76f1f73d522ed867282a10a11a208b8cd991c7585c726cd",
+      "full_label_cache_sha256": "6aba6b5b0f85ef57776cbe69ebe4d43f5f366de706be3d95ec70f50e5c150cc8",
+      "days": 1,
+      "eligible_full_cells": 56680,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41094,
+      "target_touching_valid_pairs": 20947,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1831
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-29",
+      "parent_day_sha256": "118da0568b568bf4255b2e2e0542bed32a5db6142b7ba680095a6fabd264be57",
+      "raw_TRAIN_label_source_sha256": "b1632b88d855e80f19ba498b729f4dde9cbf44b2cc9dcab6c3deb878da2ce55d",
+      "full_label_cache_sha256": "322b98767a91afd08827747e1fb83ee4e8a8c6c4983f3c40241e30029a003f90",
+      "days": 1,
+      "eligible_full_cells": 56749,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41178,
+      "target_touching_valid_pairs": 30895,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2645
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-30",
+      "parent_day_sha256": "97a32efb242ed923efb965ff70ad5191eb7d2b9147f6dd72de18300c7467342b",
+      "raw_TRAIN_label_source_sha256": "2df5898135c148490a3537da68880d64b5eaf91a38c9cc9a4a410b0164be277a",
+      "full_label_cache_sha256": "985c98631eab7b48aec834a76a82ae94e91c910ceb1af12d3d52b63c23e19f8a",
+      "days": 1,
+      "eligible_full_cells": 56858,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41253,
+      "target_touching_valid_pairs": 30962,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2656
+    },
+    {
+      "part": "fit",
+      "date": "2030-10-31",
+      "parent_day_sha256": "3dc1558ce7f08561242a5a857b07799d4533cd71dd50b9782d7fa71d09fac60d",
+      "raw_TRAIN_label_source_sha256": "6b842139282c96dd6aa863662028e193107ff94a7b164d8d520e507810001021",
+      "full_label_cache_sha256": "40c35eed465f15fdb1ca62a909a1bdc9fb37fae3a41e8966aa3af7a9276f48f9",
+      "days": 1,
+      "eligible_full_cells": 56890,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41437,
+      "target_touching_valid_pairs": 21273,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1767
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-01",
+      "parent_day_sha256": "c569f93bd73463c5f62b7f83876629a9d0b014c8daa968262895e1099a135a56",
+      "raw_TRAIN_label_source_sha256": "41a3f38d78fa48d4da71ab89aab5b8cbfc529a30a0cc4a8c81ac1ffd973dce7e",
+      "full_label_cache_sha256": "6e8ce444b788185e7ec00f16e98a7b4a0440f65cb1d16ae8fb2b517b46dc1055",
+      "days": 1,
+      "eligible_full_cells": 56726,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41024,
+      "target_touching_valid_pairs": 21369,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1780
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-02",
+      "parent_day_sha256": "8f963a5d9e1e8f58be395bcc51b79c019fa16f2d517238ba6b0ae4e54836e862",
+      "raw_TRAIN_label_source_sha256": "9bdf80ab0c6d6a721d50d93ee60778f77b41472683608850597e9a76d16d65fd",
+      "full_label_cache_sha256": "ec891106e6c81496bb5d7e99eb499361883faf83b0b6039dd133c0416ca2ccbb",
+      "days": 1,
+      "eligible_full_cells": 56921,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41296,
+      "target_touching_valid_pairs": 30875,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2684
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-03",
+      "parent_day_sha256": "31cf6b3b17fc5b99e2fb2de8592208676f8c4b103150aa3e0baffe3cbf53b45b",
+      "raw_TRAIN_label_source_sha256": "985e703ce56797be68af7aa452cb1a2231ab0cdc89b3f6e2e45c39539dea0e1b",
+      "full_label_cache_sha256": "2fffec623d971eb600af5953001725b41bbc6717206a39325e56eca07b9033f0",
+      "days": 1,
+      "eligible_full_cells": 57066,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41440,
+      "target_touching_valid_pairs": 21080,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1886
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-04",
+      "parent_day_sha256": "50d9a29d3704b6ce5fe50906052b97bfac493a3f2b75d1b92da6460d23bbbfe7",
+      "raw_TRAIN_label_source_sha256": "2dca0f86c40daffc63c2e0290c79df88aa4939e9e5c312a2b8936b782b84c0b0",
+      "full_label_cache_sha256": "77b02b43b0c0daa0abf24a44706ed50ef2598a6f6b314f24c8b90d611d6eee33",
+      "days": 1,
+      "eligible_full_cells": 56880,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41521,
+      "target_touching_valid_pairs": 21087,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1856
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-05",
+      "parent_day_sha256": "c8b446a1f17d421d8836163564659913cb25128de77646cff2aefc97d50c3e59",
+      "raw_TRAIN_label_source_sha256": "9b18f73ecd4348101eac4114c981a50f6c42345ecc86880dcdac4da47f21a4bf",
+      "full_label_cache_sha256": "c3880496511421f12b8b82550c6e4c227010b1ee3ccc24c8701789e34243ebe3",
+      "days": 1,
+      "eligible_full_cells": 56824,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41313,
+      "target_touching_valid_pairs": 21023,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1770
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-06",
+      "parent_day_sha256": "14e23fd5bb3b88c7e5c9aa2c77cd20bf3196238e1582c110e5d6df43d3658a23",
+      "raw_TRAIN_label_source_sha256": "ba3b908134344698c5cbe9cfe3cda21dda0295e5a8205dceca17a9ef47575b0b",
+      "full_label_cache_sha256": "39461b9590e03b7c1a206d1945355d6afe0bc60b541e02e5e18b8f451e1fe18d",
+      "days": 1,
+      "eligible_full_cells": 56884,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41532,
+      "target_touching_valid_pairs": 21216,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1790
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-07",
+      "parent_day_sha256": "a2bb1c034ed95de0ccacde454550efcee36588ea57bb9697ed1c5471de42c655",
+      "raw_TRAIN_label_source_sha256": "a5f228823cadfd4615a048351b448e1c1d822e4a402379869555b062318f9361",
+      "full_label_cache_sha256": "b3a54901761aceab3ffd760db4d0080d8cdb3c956dcdc4a0e1376ea45ccff651",
+      "days": 1,
+      "eligible_full_cells": 56830,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41228,
+      "target_touching_valid_pairs": 30946,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2685
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-08",
+      "parent_day_sha256": "ba997c62cbc198d18c7244811ea9e753fd893147bad3fe9e42bdb9a30919da0e",
+      "raw_TRAIN_label_source_sha256": "b0cb7e8db1bfe8053702a261b1cc1044df49b388370728612d774fb48ccaa17c",
+      "full_label_cache_sha256": "0960305ca7e4d9c1833a907555b8cb3928ff6ba802b95d47065e5021f2cd61c4",
+      "days": 1,
+      "eligible_full_cells": 56798,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41168,
+      "target_touching_valid_pairs": 14989,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1233
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-09",
+      "parent_day_sha256": "7dbdc4eb789d98c0e8a7711617e52616123d1838266a5b7afbd0f0078129f382",
+      "raw_TRAIN_label_source_sha256": "3c366ff4479a168e333b13be3fdca1f050837bb864ca1b621739b83e6b8f438b",
+      "full_label_cache_sha256": "3da8ec298d8d652583852eb91db7f4806b7a2efc6b8d0bb8a18f9a5bd3a1498e",
+      "days": 1,
+      "eligible_full_cells": 56807,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41325,
+      "target_touching_valid_pairs": 30850,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2573
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-10",
+      "parent_day_sha256": "7427afa2f20ab92b906fae748e4a170b2c455acc0557be0896cb4b863ebef5b2",
+      "raw_TRAIN_label_source_sha256": "f8b6ab0364207d6ff365168f2dbe2ca69318c4ec55bba237dc0bf855081e234e",
+      "full_label_cache_sha256": "2a279aa7d382685ebd48b5494fe44c22266b91845c523311eb9353c868d0b952",
+      "days": 1,
+      "eligible_full_cells": 56550,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41015,
+      "target_touching_valid_pairs": 14858,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1311
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-11",
+      "parent_day_sha256": "b421b80bc2773e2c8312ccf363ac558a0d328787191900ce4e62aa82ff523298",
+      "raw_TRAIN_label_source_sha256": "9b37987eaacdd45473fdd523b25c29508ef05efaf123f5646ccb8478c285a98e",
+      "full_label_cache_sha256": "d653a14a1105537aab2217e99271262c849d09ffa7a605df7471cc70e2a722a4",
+      "days": 1,
+      "eligible_full_cells": 56592,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41051,
+      "target_touching_valid_pairs": 30718,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2629
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-12",
+      "parent_day_sha256": "be3496f453374950b6b8f6b7b22f75994b104f3ca419e6e040310bdce444ba6f",
+      "raw_TRAIN_label_source_sha256": "cb6699ce734fb38051ace5b843342d0c92004164f9e2e6d7f3f5b75b386356d0",
+      "full_label_cache_sha256": "827ca18b03021a51e832c3b2edf647f2f4347c9bce86e565ec1d6a7379f11ca1",
+      "days": 1,
+      "eligible_full_cells": 56785,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41384,
+      "target_touching_valid_pairs": 21071,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1723
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-13",
+      "parent_day_sha256": "47043d5bd1043504581ffbefa1ae88f2c768eeeb667e2c2ae58eeb494f042d2b",
+      "raw_TRAIN_label_source_sha256": "d2339e69bc1081187cd27e3517e2b3ea939e0ada6cc80e480913d0154f8838cf",
+      "full_label_cache_sha256": "2ace63566979f51cb66c3986ae10320b2a523fcadbbab05696c6df12a9a372b1",
+      "days": 1,
+      "eligible_full_cells": 56710,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41345,
+      "target_touching_valid_pairs": 20868,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1687
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-14",
+      "parent_day_sha256": "1e831d4714abbb6ba02b5877ac8ae685df0a3bba36e8c7204520c48c31c626a7",
+      "raw_TRAIN_label_source_sha256": "300cf3df09e2b84aa3d24cce5b04c95dc6186658dd11f2be8c85e3555784a739",
+      "full_label_cache_sha256": "b61eb5c6f57dc37df728c53cc54e2613669a3021dcfab59a6b0249404335a836",
+      "days": 1,
+      "eligible_full_cells": 56878,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41271,
+      "target_touching_valid_pairs": 14826,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1303
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-15",
+      "parent_day_sha256": "647a8a2d0867692a50767af276e57974e95d1ada0d725c5351f5856e77654fce",
+      "raw_TRAIN_label_source_sha256": "06f5416d4d160a7e9b8b6473ab3f2118896eb130ba135f7e57c13798c132f5c1",
+      "full_label_cache_sha256": "a4259cc72bb82e381360386d03a93807ca5dbafe650aee04ddf08248a0ddfcf7",
+      "days": 1,
+      "eligible_full_cells": 56777,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41161,
+      "target_touching_valid_pairs": 30925,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2714
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-16",
+      "parent_day_sha256": "b61111ad480b3f17891e4b8f2a2fee085f3001f0439f00a03ae5250f1c25a8ce",
+      "raw_TRAIN_label_source_sha256": "11be536285f7eb87a74b0a9671a757b65c04e58b7a581fc844091c908ac7858b",
+      "full_label_cache_sha256": "031516a0cadb2ba09c617880b0c50720584228027109fd72ca0b5413bb689f20",
+      "days": 1,
+      "eligible_full_cells": 56570,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 40973,
+      "target_touching_valid_pairs": 14768,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1309
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-17",
+      "parent_day_sha256": "937eb24bb8aec81d36a69a15251484dfed70437628da786331ce6e9322bc63d2",
+      "raw_TRAIN_label_source_sha256": "e65ed666b717dbc31fe8c666c384dc0d4ac6184d3a3b0d5e7d81c81a9d514952",
+      "full_label_cache_sha256": "5f968b6ee85aef3d6a916e3b8366443f2861bc69c21968af3cd67b523e801ec6",
+      "days": 1,
+      "eligible_full_cells": 57037,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41587,
+      "target_touching_valid_pairs": 31356,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2610
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-18",
+      "parent_day_sha256": "5307c5028d54cdb4104e8e84de933b4d38e435a4ba166891f24c3bb5a83dcb11",
+      "raw_TRAIN_label_source_sha256": "ffcfd1b14becfa9122ce8c7df9c38defe509ab965f22c07cad3e5becddc4b8d5",
+      "full_label_cache_sha256": "26a81c434c59b877c52d5d64b1e894f8a423617e8fe0c8f71662b14619ca1d1c",
+      "days": 1,
+      "eligible_full_cells": 56955,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41533,
+      "target_touching_valid_pairs": 31148,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2670
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-19",
+      "parent_day_sha256": "2b27f924fce14ee61af39fd5af738f6f3b8b9f532915a4540f1eded538b150bf",
+      "raw_TRAIN_label_source_sha256": "8fc1eab10c1532e9b59fd80f4c376f97c3e701231867b1c0ee19b94b627220d8",
+      "full_label_cache_sha256": "dc1dcc26e6dacbcb4dd9c8bd78572420a49ab08725a885ffeb1f522e1ad3925c",
+      "days": 1,
+      "eligible_full_cells": 56817,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41228,
+      "target_touching_valid_pairs": 30716,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2717
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-20",
+      "parent_day_sha256": "c07d881d560975e7ea07b577fff60fe84729b406fab9dcacd5b816bbde67cc4c",
+      "raw_TRAIN_label_source_sha256": "cf644e70709e6af027aafeb06507ac90163329d35f67b02e4eb77ec0e34cac3e",
+      "full_label_cache_sha256": "b93099fce5cb128fdf1252ea18bea2944a2de21db1bfe3fdcdc34bf26033140b",
+      "days": 1,
+      "eligible_full_cells": 56848,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41380,
+      "target_touching_valid_pairs": 31042,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2689
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-21",
+      "parent_day_sha256": "0ece45123e443f295a498035702044fd0507d191a7435d424f0846fb85ab0723",
+      "raw_TRAIN_label_source_sha256": "2598f5d934fb6cccc42632c0a424798bec7210873843c9ad1bc2107d0a37cdb8",
+      "full_label_cache_sha256": "d37cef66c27bb7a144c49718a203689d364fe69fbe2ae6f2c5c7fec18757c075",
+      "days": 1,
+      "eligible_full_cells": 56904,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41408,
+      "target_touching_valid_pairs": 31046,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2614
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-22",
+      "parent_day_sha256": "a01b2c6110d410e7019c1561542261a349b44d07c4714401ea801599f756bfe3",
+      "raw_TRAIN_label_source_sha256": "349fd735615657ae7d9358b1902fa8f6c1e2c47147c108fe4dd177e571b1293c",
+      "full_label_cache_sha256": "4bd8dace057c6035b56c85e036115cc38ddfd62a835e8926430fe71c246e7fe2",
+      "days": 1,
+      "eligible_full_cells": 56604,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41093,
+      "target_touching_valid_pairs": 30850,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2655
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-23",
+      "parent_day_sha256": "f598e3df711e489b250d9fbe41a60792565feca7de2966626f13aa49f01ff73a",
+      "raw_TRAIN_label_source_sha256": "14d2dda50054065676038ea2e03b6b164e060e3994c4d05a9806f26c2b6264dc",
+      "full_label_cache_sha256": "29bfd94a11ffcf058bc2a78f30ec9d6df3653332010c0b8cfc2fed2950626f3b",
+      "days": 1,
+      "eligible_full_cells": 56646,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41088,
+      "target_touching_valid_pairs": 14938,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1281
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-24",
+      "parent_day_sha256": "d17b4ea4de48af894f807f1362bd9d58811804e988125df01809eaa57636f125",
+      "raw_TRAIN_label_source_sha256": "b1d51e59c1d5daf660ccc3ae0b6ee0fb8ccf0308ee515882ca5ae8bbcff329f8",
+      "full_label_cache_sha256": "f7f4e608ef535e5db603e0b2d5dbf576733f13bb1ca50a31d6e485083a6c0e7f",
+      "days": 1,
+      "eligible_full_cells": 56742,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41317,
+      "target_touching_valid_pairs": 14852,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1264
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-25",
+      "parent_day_sha256": "f95da479d33c5dc70910cd9716edeb7c5c3d0e41c7a9a2e4959eff71a4aa2853",
+      "raw_TRAIN_label_source_sha256": "3cae129f2d01981fcb97babc37a4292b7433a6517594d9087530293168df78e3",
+      "full_label_cache_sha256": "875bea9e3fae774d140a829afda06cbc663e0ed5e3f04a00bec99a8ead3f2918",
+      "days": 1,
+      "eligible_full_cells": 56922,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41450,
+      "target_touching_valid_pairs": 21023,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1799
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-26",
+      "parent_day_sha256": "ed92a65c1f9d5cbb315ff9bffedd481d19a1b865fec4230f777e38272ff0356b",
+      "raw_TRAIN_label_source_sha256": "680e9790d237788d00d9ae0101bd8db8c4b3545869198d6ee3767e74834b6df4",
+      "full_label_cache_sha256": "cb6111559d88e0fe1ee03fd74951ab57f45365369b8f8d3292ace67ae0117555",
+      "days": 1,
+      "eligible_full_cells": 56310,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 40907,
+      "target_touching_valid_pairs": 14772,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1257
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-27",
+      "parent_day_sha256": "494dcdc135f5466977c3db8470d735e04ebd7438e5e085f2a3cf9e5f786d0a2e",
+      "raw_TRAIN_label_source_sha256": "c58c1653eb76d555f2c13f96abd996d28f254ffc48ab4f3aa2b8db9b9620cd30",
+      "full_label_cache_sha256": "2b65dfcaa143268e03398c69b3ce79de85137e8a5349dce8147cef16a00894fe",
+      "days": 1,
+      "eligible_full_cells": 57124,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41715,
+      "target_touching_valid_pairs": 21177,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1894
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-28",
+      "parent_day_sha256": "ffb605e79c16314799f3717fda4748a7c247bdee4a11179b1b695b39bf0dbc77",
+      "raw_TRAIN_label_source_sha256": "24b9e1dbd6e0c45f847495790c5746e0ccda723e98eb4f0ac367569aa7b31c85",
+      "full_label_cache_sha256": "8d8445b3f63a1a771a658447872e8c6c8b6d1c5485cfc80389d003a7cbe63d3a",
+      "days": 1,
+      "eligible_full_cells": 56955,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41389,
+      "target_touching_valid_pairs": 20866,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1763
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-29",
+      "parent_day_sha256": "bd423c6c72c58276cca8401685a4cf74f91e0855186688d556880ae1bc87fd34",
+      "raw_TRAIN_label_source_sha256": "1e8c2127082bf1cb4fd91678e435b4042d1bc4903e005b62bd99ccf9bf9872ff",
+      "full_label_cache_sha256": "a5585309a585b3043bebcfaf8eecdfb4b6417b983e77ff69e8a1ac9af4099cfd",
+      "days": 1,
+      "eligible_full_cells": 56823,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41385,
+      "target_touching_valid_pairs": 20876,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1763
+    },
+    {
+      "part": "fit",
+      "date": "2030-11-30",
+      "parent_day_sha256": "deba940497ee3156614f42d27c69b3c41711e47e98136e501733f11951f19cfa",
+      "raw_TRAIN_label_source_sha256": "1767546e5aba8196e3c16dd55be7e54047e58e08c3c45fabdbe7b90a6aaffd4a",
+      "full_label_cache_sha256": "723b7df9391cde22f054999e0e0e89537a4139edcfecd1fde16ab46aa99977d1",
+      "days": 1,
+      "eligible_full_cells": 56807,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41395,
+      "target_touching_valid_pairs": 14792,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1253
+    },
+    {
+      "part": "fit",
+      "date": "2030-12-01",
+      "parent_day_sha256": "2e73ed526f9cf72e108ab6d21414c4e75570c37e30443b7921732ca35b57f75b",
+      "raw_TRAIN_label_source_sha256": "00b6e8081a2a24c54168ebb7e933123717221b007a78f8e3d4a987e1434a52ab",
+      "full_label_cache_sha256": "6e8687286559e785d45d071419e29e92129c707d10a7e6662b281517742a75bf",
+      "days": 1,
+      "eligible_full_cells": 56766,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41269,
+      "target_touching_valid_pairs": 14992,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1301
+    },
+    {
+      "part": "fit",
+      "date": "2030-12-02",
+      "parent_day_sha256": "5d06dcb3c2f6dddf0ed0bb8d3e3393a132d8cecf057253f3a0738ef4c0814f52",
+      "raw_TRAIN_label_source_sha256": "e34bdd12c1cad6c5aac6e5b313fbfeec87861bdcb56f4f56ebab705940729c3b",
+      "full_label_cache_sha256": "74b5ff0a5f906dc04099b2f84b60c9203919e87e7e655dc771f3f9afaac03563",
+      "days": 1,
+      "eligible_full_cells": 56698,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41053,
+      "target_touching_valid_pairs": 30570,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2631
+    },
+    {
+      "part": "fit",
+      "date": "2030-12-03",
+      "parent_day_sha256": "d004c4d01991fa6a1d35b2c0b9c15726ee6f95b706f10e78b568505f42b4d35c",
+      "raw_TRAIN_label_source_sha256": "5ae868be4bfcd766b2afa8774e2047a32d4016a0c8155eb06c3b7c815dc73349",
+      "full_label_cache_sha256": "d778c1c20bf639b361d999b4e5b71301ca1565cac234c52a8fa5b4d726fef15d",
+      "days": 1,
+      "eligible_full_cells": 57069,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41498,
+      "target_touching_valid_pairs": 21053,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1817
+    },
+    {
+      "part": "fit",
+      "date": "2030-12-04",
+      "parent_day_sha256": "9e598bd33e43a1d88dd5e71b78b96b7920408f1a268d734c17618b89e8115a86",
+      "raw_TRAIN_label_source_sha256": "9d041b5a1727f7e934a3875cdc049d7e34b6f0110723337864bf3577ab4bb322",
+      "full_label_cache_sha256": "2822be067f667ae868b32732419e07adfa93c98291243085cb9534a68a1df30a",
+      "days": 1,
+      "eligible_full_cells": 56618,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41036,
+      "target_touching_valid_pairs": 20991,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1855
+    },
+    {
+      "part": "fit",
+      "date": "2030-12-05",
+      "parent_day_sha256": "29adab76f1c3c503f65a3e526ed65440cb67c70c3fb7a7310a836c90eeef4782",
+      "raw_TRAIN_label_source_sha256": "5acba703527f88dff21e683653c35e6d46f945743b53a9437a27e10c1c2a554f",
+      "full_label_cache_sha256": "029f25c2f3f5af66c5b161b75a2b2028d0550e3f9c12fbecc2fad218be159aa0",
+      "days": 1,
+      "eligible_full_cells": 56717,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41245,
+      "target_touching_valid_pairs": 30802,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2606
+    },
+    {
+      "part": "fit",
+      "date": "2030-12-06",
+      "parent_day_sha256": "682bb9153dbb35ccd72cf837d306407251c30814e73dca7d02f5fc2fa797fd1d",
+      "raw_TRAIN_label_source_sha256": "52807e82a2a6001049a867188d5671e6dc7fb3d88b67159b914c66950e4cc9a9",
+      "full_label_cache_sha256": "8c53790263451f7793017f4dfc006a4332ede72f8cb6c4462b34300002a9b598",
+      "days": 1,
+      "eligible_full_cells": 56618,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41080,
+      "target_touching_valid_pairs": 14979,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1308
+    },
+    {
+      "part": "fit",
+      "date": "2030-12-07",
+      "parent_day_sha256": "4610eaded722adad18b33cf4cca2677849522346fa2d5f7d3d64a73d6c1eedd8",
+      "raw_TRAIN_label_source_sha256": "8a7d1c42feb4f5a8bc5000eaa4b8c37a2e2f44f0144bd4b6aec0a797c13b6317",
+      "full_label_cache_sha256": "b08cadcaae07b81ffa59a1f6cd551ffda3af578e8d93457ad5117e37512b7356",
+      "days": 1,
+      "eligible_full_cells": 56703,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41052,
+      "target_touching_valid_pairs": 30820,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2771
+    },
+    {
+      "part": "fit",
+      "date": "2030-12-08",
+      "parent_day_sha256": "85aab46092d575903ba629f68f3ecfabcdca1748151ccf3373ec8d60d755132f",
+      "raw_TRAIN_label_source_sha256": "561a59eecad6248e05f4efb59ef6030a3ef4732533898e0193a69b549e123051",
+      "full_label_cache_sha256": "c3bd9290b9cb4b0aa4838ce496ecc958c4738a0c6e465cc3f5f86692b8cb6936",
+      "days": 1,
+      "eligible_full_cells": 56832,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41406,
+      "target_touching_valid_pairs": 20989,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1794
+    },
+    {
+      "part": "fit",
+      "date": "2030-12-09",
+      "parent_day_sha256": "b0f1bf7022990e4df7a46c0194c3e699f9f5e90a33ddb9804f0f00adef69f32c",
+      "raw_TRAIN_label_source_sha256": "47798fa4d2ee961e630b09b22a99f5091b79ba163cbbcb097e245dfa35ef8b28",
+      "full_label_cache_sha256": "5f05c52d87ca5434b13c60a9434720260de90f63bd0254e3f8075c6303ca78ee",
+      "days": 1,
+      "eligible_full_cells": 56752,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41096,
+      "target_touching_valid_pairs": 14632,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1289
+    },
+    {
+      "part": "fit",
+      "date": "2030-12-10",
+      "parent_day_sha256": "3fff5b180f413dc75b2179c5a8c0834a3715a066f563fe2ca5b4f195e2034fdb",
+      "raw_TRAIN_label_source_sha256": "fffb54f6c495482d59c8d3e1572261de4f7e3858ba086ab10a95d062c3f0a445",
+      "full_label_cache_sha256": "3b76bfe9e382f92d4f016f1f35f10852a2a6e66123443c134a1d3365b5e4a2ec",
+      "days": 1,
+      "eligible_full_cells": 57084,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41603,
+      "target_touching_valid_pairs": 15001,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1279
+    },
+    {
+      "part": "fit",
+      "date": "2030-12-11",
+      "parent_day_sha256": "7bb5931065494c6009e9f9a174ef61de0269c6de1abf9633a7d2f0fb0cf42f83",
+      "raw_TRAIN_label_source_sha256": "a355d674e6ea891745d6662d7b3815d1ef1b046b53df1e08692dda7e16b419cc",
+      "full_label_cache_sha256": "db4085e8bcac409be76eccd300f8252db55ad72353c13f9dd3721840887957c4",
+      "days": 1,
+      "eligible_full_cells": 56935,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41307,
+      "target_touching_valid_pairs": 21050,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1856
+    },
+    {
+      "part": "fit",
+      "date": "2030-12-12",
+      "parent_day_sha256": "91382fe139a4a9f93b13a51a4e09fbd1e8bdd3a94c4068d40ac19ec43ad935fb",
+      "raw_TRAIN_label_source_sha256": "9e2fae013b1f8252d71e74ec36dc3e23593e6dbd7c6b29fdf6baf124b48de2db",
+      "full_label_cache_sha256": "af22d9a08970c0e147396916d2ced4207733b905d3063eb29f42c4b52d4916c3",
+      "days": 1,
+      "eligible_full_cells": 57044,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41568,
+      "target_touching_valid_pairs": 21089,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1798
+    },
+    {
+      "part": "fit",
+      "date": "2030-12-13",
+      "parent_day_sha256": "2803021a70a4e9ea294ead8099c4d1268b0de3ebcbc819237837c78455aa23d3",
+      "raw_TRAIN_label_source_sha256": "cfce1ceaf2ec26dbe89d4c9782fb8a54ea310567bef7aa4f0469c0be8d27e967",
+      "full_label_cache_sha256": "3143184fad25c7eb90241dc8110263c59198d8de98cac852d9552d2e0adfa951",
+      "days": 1,
+      "eligible_full_cells": 56627,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41085,
+      "target_touching_valid_pairs": 21015,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1764
+    },
+    {
+      "part": "fit",
+      "date": "2030-12-14",
+      "parent_day_sha256": "b1b98ce7e132ed92fd0896ed105ce2230196327fb19dfe3cc163067870839a8a",
+      "raw_TRAIN_label_source_sha256": "eb471479821129b2dffe59841d4cfd1f8b7eef588b32c797927aec7e0a61169e",
+      "full_label_cache_sha256": "1a1e1ec3d3024c5e342f4f3ff4e62618b79026aff3bdebe70d17318e6387a25f",
+      "days": 1,
+      "eligible_full_cells": 56792,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41287,
+      "target_touching_valid_pairs": 31148,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2666
+    },
+    {
+      "part": "fit",
+      "date": "2030-12-15",
+      "parent_day_sha256": "a59c1c1cde1d37d6b40b3379eba08880bb7bf066ba76146481f5c5d21e6f7b18",
+      "raw_TRAIN_label_source_sha256": "75d8334f7011b5c94a027f682e8eedc44ce9a72ab261dd57339be11f4c5ff987",
+      "full_label_cache_sha256": "155f732fae93b7b575036c7165c192b88d3e95247ee007e1340f6f15b697c691",
+      "days": 1,
+      "eligible_full_cells": 56792,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41254,
+      "target_touching_valid_pairs": 30766,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2665
+    },
+    {
+      "part": "selection",
+      "date": "2030-12-16",
+      "parent_day_sha256": "48c092bd5098126d0442bb45b35961641b3add08ad85dc8612449da7d06d0618",
+      "raw_TRAIN_label_source_sha256": "73b7718064da09d975502369e781640ca43129e70ef388acef79223bb7286206",
+      "full_label_cache_sha256": "21c4292d5d1217ca318e0074357c981e72c17e7945212952afb2940a1925245e",
+      "days": 1,
+      "eligible_full_cells": 56995,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41660,
+      "target_touching_valid_pairs": 15206,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1319
+    },
+    {
+      "part": "selection",
+      "date": "2030-12-17",
+      "parent_day_sha256": "aa408eaebeb44e924c28804117becd919b30dfeb2fe14e990ce8a01eef6d3e9e",
+      "raw_TRAIN_label_source_sha256": "6ceecbaebc6672a842779c4b2f53edc5dfff50e5fd629c81542a69fe74dbee4b",
+      "full_label_cache_sha256": "80b39c485a5f51b5820b22704c4a6088dd7a267d804352c712c25399ed76eebf",
+      "days": 1,
+      "eligible_full_cells": 56748,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41311,
+      "target_touching_valid_pairs": 31035,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2581
+    },
+    {
+      "part": "selection",
+      "date": "2030-12-18",
+      "parent_day_sha256": "e60e08becc8da030b1f49320229523199cb0b843b811d1b368d9aee827db3f3a",
+      "raw_TRAIN_label_source_sha256": "2d84811ddc4d1fc23a1e45e32bbee575c1cf7817848549ed894078ed2c4728ac",
+      "full_label_cache_sha256": "d4de214258998342a10cc9584b4be6dffc5d46def97850333e00cdbc51904792",
+      "days": 1,
+      "eligible_full_cells": 56782,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41293,
+      "target_touching_valid_pairs": 14967,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1308
+    },
+    {
+      "part": "selection",
+      "date": "2030-12-19",
+      "parent_day_sha256": "f11ea20b900165f5dc78e8504b9f7e62d2e29960a3b75f107a26e79eb3a19b4d",
+      "raw_TRAIN_label_source_sha256": "926ae80139b3c6bb3efe4439921e8b638765dd454584894c298de623f4756272",
+      "full_label_cache_sha256": "da3236ba957daec01774ca3d147ec8eb3b01a7491e0e4feddfeff0ad8afa8db0",
+      "days": 1,
+      "eligible_full_cells": 56578,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 40997,
+      "target_touching_valid_pairs": 14499,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1260
+    },
+    {
+      "part": "selection",
+      "date": "2030-12-20",
+      "parent_day_sha256": "04e99ea7a2959c620143f9a31754d0cc4a8338295f44ec48b24c1b3fb9dbc177",
+      "raw_TRAIN_label_source_sha256": "12619090e5f7a9c3a6aafc08cce427ed4a39cfc5bdf02a52b8bc38a10a74a842",
+      "full_label_cache_sha256": "214df3acfbb8e18e8e1f5a72099867ff188a486f7177c94d30eaab57fdd42268",
+      "days": 1,
+      "eligible_full_cells": 56930,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41371,
+      "target_touching_valid_pairs": 21136,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1750
+    },
+    {
+      "part": "selection",
+      "date": "2030-12-21",
+      "parent_day_sha256": "e5e2dfcdbbfdd38ba89b975135aea04f2f919d838364774fe99041e679c67a46",
+      "raw_TRAIN_label_source_sha256": "842c08cfb98bcaf436082351cad4d4b260d0ca1ee91a0123815937fba3201a00",
+      "full_label_cache_sha256": "aaa194f345ba8137247540a55784c0aa7c3386496779476101dfe902b95f1d0f",
+      "days": 1,
+      "eligible_full_cells": 56508,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 40802,
+      "target_touching_valid_pairs": 30568,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2710
+    },
+    {
+      "part": "selection",
+      "date": "2030-12-22",
+      "parent_day_sha256": "fe7ccd861cb31b02dbe187c440e9eeb0337b419c066e40545e9720dad29f32a8",
+      "raw_TRAIN_label_source_sha256": "8c7663028b980b66274aa1be007f3720125c6e6f133cd3f5cd3c258fbcad96ba",
+      "full_label_cache_sha256": "8735d439d42cab79ab4d1893d4d75cafa24d4c690dc716bdd98f8e9131398f0f",
+      "days": 1,
+      "eligible_full_cells": 56664,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41109,
+      "target_touching_valid_pairs": 21009,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1808
+    },
+    {
+      "part": "selection",
+      "date": "2030-12-23",
+      "parent_day_sha256": "d46d6f54c9c53572aa29b13b1a94746ce4d235e7d27882fd1573c0b5d5fb78e6",
+      "raw_TRAIN_label_source_sha256": "6ee496390a3c2c56aca465d44d25be3d7dd6354825d1545e2078aeab3f8bd394",
+      "full_label_cache_sha256": "0ccd30361aeeda9832c105e2928d74583d8987525925f03a679d6408e99acd3e",
+      "days": 1,
+      "eligible_full_cells": 56762,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41210,
+      "target_touching_valid_pairs": 14878,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1211
+    },
+    {
+      "part": "selection",
+      "date": "2030-12-24",
+      "parent_day_sha256": "51c1147981a6e85833b716e52e6b9956058457dce5d38c9249da266c40cdd5e2",
+      "raw_TRAIN_label_source_sha256": "3086834b047c621e8f35c59e60571b07dc81000de252ff054f0a27062133cd02",
+      "full_label_cache_sha256": "9ca240a940cc9d55597f9cdde6b8f0feb7ed437de7d304956ebfd7e1ec35543c",
+      "days": 1,
+      "eligible_full_cells": 56651,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41160,
+      "target_touching_valid_pairs": 30747,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2620
+    },
+    {
+      "part": "selection",
+      "date": "2030-12-25",
+      "parent_day_sha256": "b64342542f7d35a3700f079d8f353e018665cf6d6c9b00597f38d2471509d21c",
+      "raw_TRAIN_label_source_sha256": "002b3c82426622de1ef3e86a87b4ea3dc1385e9e70a07abb38137cb4a80e13f6",
+      "full_label_cache_sha256": "964fba3c7182a2bea6f121fdfa3dcd4a1169766c1adcd282816cda33f908042a",
+      "days": 1,
+      "eligible_full_cells": 57111,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41640,
+      "target_touching_valid_pairs": 21308,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1775
+    },
+    {
+      "part": "selection",
+      "date": "2030-12-26",
+      "parent_day_sha256": "40c3e68bcc3a1e0fba22752b920681c5e4c0596fe49ef7f40e8eda610a3d9207",
+      "raw_TRAIN_label_source_sha256": "d8b7abea8e01bb946bbef5521d7a7a29c3295263ce0789973e2ec05172a15f8d",
+      "full_label_cache_sha256": "707c309b92a16e9019cbde63e292f1e2bfdf530f957907af99ae5ccd432221ed",
+      "days": 1,
+      "eligible_full_cells": 56587,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41068,
+      "target_touching_valid_pairs": 30910,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2693
+    },
+    {
+      "part": "selection",
+      "date": "2030-12-27",
+      "parent_day_sha256": "afff692dbb5d0940791ebc25b2e4649bb24b4a0d87f4fc95541a9f38c53b67bb",
+      "raw_TRAIN_label_source_sha256": "9168d5d45bc794733dc54ee9276117fc9a81a81b0dfedacaa25ed2395731b084",
+      "full_label_cache_sha256": "cbfd86576c20439881be4501ddb0a0980c6ad4b381db7486554e71a1e013d634",
+      "days": 1,
+      "eligible_full_cells": 56656,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41193,
+      "target_touching_valid_pairs": 30806,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2626
+    },
+    {
+      "part": "selection",
+      "date": "2030-12-28",
+      "parent_day_sha256": "69750dda6027621f9802ad8060ee7f4594f4027c21bc4d7234ed3556a2010710",
+      "raw_TRAIN_label_source_sha256": "a2a2f9f01034eeef6bc2ab11795fb6f805f4b17ff42b55553ba51f7d9bc9f405",
+      "full_label_cache_sha256": "fd9ea6bfc7d7d7e4f4d5ac75d8e5e66146a1f925d806bb3c2b11bf77fb63106d",
+      "days": 1,
+      "eligible_full_cells": 56931,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41461,
+      "target_touching_valid_pairs": 21268,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1829
+    },
+    {
+      "part": "selection",
+      "date": "2030-12-29",
+      "parent_day_sha256": "66e4e8eab9ac77c7279d4bf2b4e29fef0506f90a04d0de67394b1fdd68769af8",
+      "raw_TRAIN_label_source_sha256": "129f6f6e0be2e5e77a94aa041d27ab3f8603561ee307d704247fd408cae7777e",
+      "full_label_cache_sha256": "a56de64a0577a5910d04822557383db20efc46959a8912512992f864192dd7d8",
+      "days": 1,
+      "eligible_full_cells": 56825,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41297,
+      "target_touching_valid_pairs": 20888,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1758
+    },
+    {
+      "part": "assessment",
+      "date": "2030-12-30",
+      "parent_day_sha256": "1e0b03f161838c4d6c2131ac9d02311e828470843d8ff4eda958bedde3650d08",
+      "raw_TRAIN_label_source_sha256": "ae20a56c367b6e06830e4a40ce91cc3624db84e432585bcea77fef884fd3c151",
+      "full_label_cache_sha256": "3bbcf9514ef6ce5ed428a1cf85c7a5163f6abfdf4e16b51a5605f1bee5f4d636",
+      "days": 1,
+      "eligible_full_cells": 56863,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41518,
+      "target_touching_valid_pairs": 21217,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1778
+    },
+    {
+      "part": "assessment",
+      "date": "2030-12-31",
+      "parent_day_sha256": "45d485cb3cdf883611b599c2195c6f62cce820a0c0d4730a95c9f6a189d9b123",
+      "raw_TRAIN_label_source_sha256": "57bdd4ca6c771e6c3c0f4537b2c663f0eba8dc5b29360e3c53a9d2b0e858b5da",
+      "full_label_cache_sha256": "7b82b60cb3d498a1070b4bbf2780466ddfe469561d19fe99a2ebc3fc3fe00731",
+      "days": 1,
+      "eligible_full_cells": 57032,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41452,
+      "target_touching_valid_pairs": 14867,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1353
+    },
+    {
+      "part": "assessment",
+      "date": "2031-01-01",
+      "parent_day_sha256": "60d448be690f61c234a004a54a30911b3facdad374e45b2370535e8860169409",
+      "raw_TRAIN_label_source_sha256": "88d33d3d6723de7a40e319c214557c00260d610470d3a1196568755bb0576188",
+      "full_label_cache_sha256": "2c5f4d6bb023683db55f7dc325587c0a81aa1b2689a9469f04fac67aa3ff6809",
+      "days": 1,
+      "eligible_full_cells": 56889,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41445,
+      "target_touching_valid_pairs": 14874,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1339
+    },
+    {
+      "part": "assessment",
+      "date": "2031-01-02",
+      "parent_day_sha256": "7464218594c97baddc55f4fe5d8f2f9b04bd5dd72ab03dcb26da1aaf828e47e0",
+      "raw_TRAIN_label_source_sha256": "570a294ab402bd8d57f6895bf64737b01e22d8ac55d367acfc43baf529975035",
+      "full_label_cache_sha256": "6d48798fead08a05f3bbc379a2c217bea2351dec02facb5ee15390ce6a6c2adc",
+      "days": 1,
+      "eligible_full_cells": 56992,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41383,
+      "target_touching_valid_pairs": 21118,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1923
+    },
+    {
+      "part": "assessment",
+      "date": "2031-01-03",
+      "parent_day_sha256": "63a4221f69e6e7da9cd432d2fd1d778e7253b487732f76aac108db6cb7e67555",
+      "raw_TRAIN_label_source_sha256": "85058403ed9aa6ed1dfbc5fc498397e4b12aaaf0d99194c1e5c40cdf42b757d3",
+      "full_label_cache_sha256": "2e9e4036aea1bceb5920975e38dabde187755d37aa2b88a76a9374227dc9db17",
+      "days": 1,
+      "eligible_full_cells": 56683,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41204,
+      "target_touching_valid_pairs": 20811,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1825
+    },
+    {
+      "part": "assessment",
+      "date": "2031-01-04",
+      "parent_day_sha256": "4862f5fc65131f29afbb5412030e27fbea0c843af470e32aeca76d7f87c688f2",
+      "raw_TRAIN_label_source_sha256": "03c9fc04783903f783a53d28c9398448de0693e47d6a0f4206b36c120c0f13db",
+      "full_label_cache_sha256": "107a252e011bfefc3b9d09ac62a6655cb143988afe898c1b615246be63e22771",
+      "days": 1,
+      "eligible_full_cells": 56688,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 40998,
+      "target_touching_valid_pairs": 20708,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1866
+    },
+    {
+      "part": "assessment",
+      "date": "2031-01-05",
+      "parent_day_sha256": "c78f33208edf231666f36cdf72529c7e6d57858941d60740bda610677a623d61",
+      "raw_TRAIN_label_source_sha256": "6728c4c17946879eb63b538414d8d006170902aae15a180e01b95d994460eca9",
+      "full_label_cache_sha256": "e73dab9405122bf535720ca516255b514b913d13d41ff96fc81c7d1570e8f0bd",
+      "days": 1,
+      "eligible_full_cells": 56727,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41109,
+      "target_touching_valid_pairs": 14719,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1325
+    },
+    {
+      "part": "assessment",
+      "date": "2031-01-06",
+      "parent_day_sha256": "2397193c9872169ea29a7712b903fe11cd2621c6f3bb5c89d14184126bf6db5d",
+      "raw_TRAIN_label_source_sha256": "c1386dd6e732857542be4c7ff96f29d488d36cd3b4c7302330e277b4be1a63cd",
+      "full_label_cache_sha256": "bc9854ceaabdc1fa6180752fc0efd8dabfc119db3aa983c3596f9453d40395cc",
+      "days": 1,
+      "eligible_full_cells": 56646,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41115,
+      "target_touching_valid_pairs": 14879,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1255
+    },
+    {
+      "part": "assessment",
+      "date": "2031-01-07",
+      "parent_day_sha256": "6097d29cf9805d38a3b070c3bdbfdc721dcb9362688a8220dcfe78824d7050da",
+      "raw_TRAIN_label_source_sha256": "84e6a7072ce263883f4d5539c2fe48bb82267365d25607c5376c2e71dd40f156",
+      "full_label_cache_sha256": "856becbf230d0f7348a708bb3b891f6a960d5438120930a931ae0b87805baa36",
+      "days": 1,
+      "eligible_full_cells": 56815,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41304,
+      "target_touching_valid_pairs": 30836,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2623
+    },
+    {
+      "part": "assessment",
+      "date": "2031-01-08",
+      "parent_day_sha256": "e1bf345427b1a8884dcfff3992a3ddd54ee9eb9e9e1200151a27cf086c5644cb",
+      "raw_TRAIN_label_source_sha256": "033203b051114d5ded965173964c1b961538b64d27d6b0b886b722ef2f36e21c",
+      "full_label_cache_sha256": "7050be7b2dd39e7720cb5ff8cebfbb95e2e2ef6d1a68f03f9c2d56c057fe4388",
+      "days": 1,
+      "eligible_full_cells": 56894,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41436,
+      "target_touching_valid_pairs": 21273,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1737
+    },
+    {
+      "part": "assessment",
+      "date": "2031-01-09",
+      "parent_day_sha256": "6cea2a0edbf1b2393b94e301339b010cb4a9e27cb4d87a9584855109fc759658",
+      "raw_TRAIN_label_source_sha256": "8472730e50aa3130da7542ffd21c14dcea640fb7e2cc5adca3f5515897aa0694",
+      "full_label_cache_sha256": "1e4ae0d387d5de86c9a574d0be5b885fe10e81952a262763b66dfc6d1e659d93",
+      "days": 1,
+      "eligible_full_cells": 56613,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41226,
+      "target_touching_valid_pairs": 30831,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2639
+    },
+    {
+      "part": "assessment",
+      "date": "2031-01-10",
+      "parent_day_sha256": "6b243c809958a13d976eb49dae83cae3aa0f86c53548d1b6ec1d611b87a7600b",
+      "raw_TRAIN_label_source_sha256": "1d0fed65dfe24f75f24794f738c9659eef4530d63bffb023cd8785b8b6eae9b2",
+      "full_label_cache_sha256": "a3b9de375a9ae70eaf703c7663d240b05cbbdeb29f4f322d5dedf60867f64aa9",
+      "days": 1,
+      "eligible_full_cells": 56643,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41098,
+      "target_touching_valid_pairs": 14646,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 1226
+    },
+    {
+      "part": "assessment",
+      "date": "2031-01-11",
+      "parent_day_sha256": "54f7a1c7b6000e57c032134ea68c248763c0489b8e88e64ccba8c1943609856b",
+      "raw_TRAIN_label_source_sha256": "cc7a8ae9c6ad1eeb265701a2422b39918ba1a5fb5301631f5a4f0fbe0a868ad4",
+      "full_label_cache_sha256": "d88e84e5538d49ba43daf2893e0107258156694bf2a7aa9050e734b389326661",
+      "days": 1,
+      "eligible_full_cells": 56722,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41268,
+      "target_touching_valid_pairs": 30974,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2644
+    },
+    {
+      "part": "assessment",
+      "date": "2031-01-12",
+      "parent_day_sha256": "e24e8a0011f149b21aeb1513c199a6757c4b5180d754ddbb02642037d3a8704e",
+      "raw_TRAIN_label_source_sha256": "53166f42625d2218569dc94f5fe6642d98b103d83707edc641889fd9c0cb8f4a",
+      "full_label_cache_sha256": "94050f67f69c270259d85eb0dae7fd5184634f66611b3de78caae284798c3157",
+      "days": 1,
+      "eligible_full_cells": 56885,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 41289,
+      "target_touching_valid_pairs": 30754,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 2659
+    }
+  ],
+  "coverage_summary": {
+    "fit": {
+      "days": 153,
+      "eligible_full_cells": 8687518,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 6314151,
+      "target_touching_valid_pairs": 3545426,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 304034
+    },
+    "selection": {
+      "days": 14,
+      "eligible_full_cells": 794728,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 577572,
+      "target_touching_valid_pairs": 319225,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 27248
+    },
+    "assessment": {
+      "days": 14,
+      "eligible_full_cells": 795092,
+      "non_target_eligible_input_blanks": 0,
+      "all_valid_pairs": 577845,
+      "target_touching_valid_pairs": 302507,
+      "valid_target_pairs_excluded_by_old_visibility": 0,
+      "old_visible_target_pairs_excluded_by_public_coverage": 26192
+    }
+  },
+  "graph_sha256": "52ddd75ed7f6d3bf291607acfeaca107bd114ba2151a4e6cddb868c9fa1c1fc5",
+  "parent_prepared_sha256": "d428938ec42b4eaa766a76b021e0fe7de1db6f6e5abc91cd6a4f6b44c76db4bb",
+  "seconds": 117.12588479999977,
+  "source": {
+    "python": "3.13.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus": 16,
+    "process_peak_working_set_MiB": 1370.6640625,
+    "peak_scope": "current process lifetime, not isolated per model",
+    "source_sha256": "a5f8a5762e5a557d742272bbafbf9dc9b47423ba68a99c54c6426ce559d1cf9d",
+    "model_threads": 4,
+    "gpu_used": false,
+    "source_fingerprint_scope": "On-disk source at evidence() call; a captured start archive is primary when present",
+    "versions": {
+      "numpy": "2.2.5",
+      "pandas": "3.0.5",
+      "scipy": "1.16.1",
+      "pyarrow": "25.0.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10",
+      "scikit-learn": "1.7.2"
+    }
+  },
+  "boundary_flux_accessed": false,
+  "formal_State": null,
+  "formal_Physics": null,
+  "formal_Total": null,
+  "limitations": "Training/scoring label cache only, not a trained model or measured gain. New full labels must not enter inference channels; raw train unavailable outside train split. Mode A public coverage still does not expose actual organizer flux."
+}

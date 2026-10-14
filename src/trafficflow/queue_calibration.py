@@ -20,9 +20,10 @@ def decisions(probability,window,condition,thresholds,require_nonempty=False):
     threshold=np.array([thresholds.get(str(c),thresholds['global']) for c in condition])
     pred=p>=threshold
     if require_nonempty:
-        # Public contract guarantees at least one true queue cell per horizon.
-        # If a predicted set is empty, use its largest estimated probability.
-        # No hidden location, labels or external source enters this decision.
+        # This is an optional latent-nonempty modeling assumption, not a safe
+        # guarantee after score-time eligibility removes cells. The caller must
+        # supply the full PUBLIC forecast template: future-eligible subsets
+        # change this set decision and leak evaluator information in validation.
         order=pd.DataFrame({'w':window,'p':p,'pred':pred}).groupby('w',sort=False)
         for indices in order.indices.values():
             if not pred[indices].any():pred[indices[np.argmax(p[indices])]]=True

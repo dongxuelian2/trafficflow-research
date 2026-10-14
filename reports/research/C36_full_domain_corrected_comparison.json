@@ -1,0 +1,427 @@
+{
+  "source_audit_sha256": "1ffa33faf41223920027f1557f0aa081d30a1c2df3a825d98c8aa0e1e8487eca",
+  "studies": [
+    {
+      "study": "C27_D12_I5_N_onset_specialist",
+      "source_report_sha256": "03b22b0c37c2eca3eba33d2bb66d4e3ec0004bf7df9f3e145118c0cb327d1067",
+      "old_cal_selected_model_retained": "experts_threshold",
+      "old_selected_model_predictions_unchanged": true,
+      "cal_candidate_model_ranking_reselected": false,
+      "old_selected_comparison": {
+        "baseline": "shared_threshold",
+        "candidate": "experts_threshold",
+        "origin_deduplicated_condition_macro_IoU": {
+          "baseline": 0.8974222759119475,
+          "candidate": 0.8895718824960754
+        },
+        "paired_macro_gain": -0.007850393415872015,
+        "ci95": [
+          -0.0454675259940225,
+          0.018747130249868446
+        ],
+        "bootstrap_probability_gain_positive": 0.3645,
+        "n_sampled_events": 116,
+        "n_unique_origins": 109,
+        "unique_condition_counts": {
+          "queue_ongoing": 89,
+          "queue_onset": 20
+        },
+        "n_assessment_days": 30,
+        "n_days_with_events": 30,
+        "block_days": 7,
+        "resamples": 4000,
+        "valid_resamples": 4000,
+        "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+      },
+      "corrected_selected_comparison": {
+        "baseline": "shared_threshold",
+        "candidate": "experts_threshold",
+        "origin_deduplicated_condition_macro_IoU": {
+          "baseline": 0.8724222759119473,
+          "candidate": 0.8895718824960754
+        },
+        "paired_macro_gain": 0.01714960658412812,
+        "ci95": [
+          -0.04443966106334981,
+          0.08000454479949758
+        ],
+        "bootstrap_probability_gain_positive": 0.68775,
+        "n_sampled_events": 116,
+        "n_unique_origins": 109,
+        "unique_condition_counts": {
+          "queue_ongoing": 89,
+          "queue_onset": 20
+        },
+        "n_assessment_days": 30,
+        "n_days_with_events": 30,
+        "block_days": 7,
+        "resamples": 4000,
+        "valid_resamples": 4000,
+        "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+      },
+      "corrected_all_candidate_comparisons": {
+        "experts_threshold": {
+          "baseline": "shared_threshold",
+          "candidate": "experts_threshold",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.8724222759119473,
+            "candidate": 0.8895718824960754
+          },
+          "paired_macro_gain": 0.01714960658412812,
+          "ci95": [
+            -0.04443966106334981,
+            0.08000454479949758
+          ],
+          "bootstrap_probability_gain_positive": 0.68775,
+          "n_sampled_events": 116,
+          "n_unique_origins": 109,
+          "unique_condition_counts": {
+            "queue_ongoing": 89,
+            "queue_onset": 20
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 30,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 4000,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        },
+        "shared_expected_IoU": {
+          "baseline": "shared_threshold",
+          "candidate": "shared_expected_IoU",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.8724222759119473,
+            "candidate": 0.8840723769393197
+          },
+          "paired_macro_gain": 0.011650101027372406,
+          "ci95": [
+            -0.035363344901580475,
+            0.06116665321476675
+          ],
+          "bootstrap_probability_gain_positive": 0.63925,
+          "n_sampled_events": 116,
+          "n_unique_origins": 109,
+          "unique_condition_counts": {
+            "queue_ongoing": 89,
+            "queue_onset": 20
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 30,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 4000,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        },
+        "experts_expected_IoU": {
+          "baseline": "shared_threshold",
+          "candidate": "experts_expected_IoU",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.8724222759119473,
+            "candidate": 0.8844860433875394
+          },
+          "paired_macro_gain": 0.012063767475592124,
+          "ci95": [
+            -0.04856351072419471,
+            0.07618287018666718
+          ],
+          "bootstrap_probability_gain_positive": 0.63325,
+          "n_sampled_events": 116,
+          "n_unique_origins": 109,
+          "unique_condition_counts": {
+            "queue_ongoing": 89,
+            "queue_onset": 20
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 30,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 4000,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        }
+      }
+    },
+    {
+      "study": "C28_D7_I10_W_onset_specialist",
+      "source_report_sha256": "bd8b4f8671d8daad8caa9265e3238f9e620af53d031813480b037c0a459a6bce",
+      "old_cal_selected_model_retained": "experts_threshold",
+      "old_selected_model_predictions_unchanged": true,
+      "cal_candidate_model_ranking_reselected": false,
+      "old_selected_comparison": {
+        "baseline": "shared_threshold",
+        "candidate": "experts_threshold",
+        "origin_deduplicated_condition_macro_IoU": {
+          "baseline": 0.6271149519888273,
+          "candidate": 0.6613006870747845
+        },
+        "paired_macro_gain": 0.034185735085957236,
+        "ci95": [
+          -0.0036982682050380367,
+          0.10519351508403768
+        ],
+        "bootstrap_probability_gain_positive": 0.8235735735735735,
+        "n_sampled_events": 27,
+        "n_unique_origins": 26,
+        "unique_condition_counts": {
+          "queue_ongoing": 21,
+          "queue_onset": 5
+        },
+        "n_assessment_days": 30,
+        "n_days_with_events": 9,
+        "block_days": 7,
+        "resamples": 4000,
+        "valid_resamples": 3996,
+        "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+      },
+      "corrected_selected_comparison": {
+        "baseline": "shared_threshold",
+        "candidate": "experts_threshold",
+        "origin_deduplicated_condition_macro_IoU": {
+          "baseline": 0.6271149519888273,
+          "candidate": 0.6613006870747845
+        },
+        "paired_macro_gain": 0.034185735085957236,
+        "ci95": [
+          -0.0036982682050380367,
+          0.10519351508403768
+        ],
+        "bootstrap_probability_gain_positive": 0.8235735735735735,
+        "n_sampled_events": 27,
+        "n_unique_origins": 26,
+        "unique_condition_counts": {
+          "queue_ongoing": 21,
+          "queue_onset": 5
+        },
+        "n_assessment_days": 30,
+        "n_days_with_events": 9,
+        "block_days": 7,
+        "resamples": 4000,
+        "valid_resamples": 3996,
+        "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+      },
+      "corrected_all_candidate_comparisons": {
+        "experts_threshold": {
+          "baseline": "shared_threshold",
+          "candidate": "experts_threshold",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.6271149519888273,
+            "candidate": 0.6613006870747845
+          },
+          "paired_macro_gain": 0.034185735085957236,
+          "ci95": [
+            -0.0036982682050380367,
+            0.10519351508403768
+          ],
+          "bootstrap_probability_gain_positive": 0.8235735735735735,
+          "n_sampled_events": 27,
+          "n_unique_origins": 26,
+          "unique_condition_counts": {
+            "queue_ongoing": 21,
+            "queue_onset": 5
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 9,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 3996,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        },
+        "shared_expected_IoU": {
+          "baseline": "shared_threshold",
+          "candidate": "shared_expected_IoU",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.6271149519888273,
+            "candidate": 0.6284929201270446
+          },
+          "paired_macro_gain": 0.0013779681382173337,
+          "ci95": [
+            -0.02031159091594236,
+            0.0154810702690167
+          ],
+          "bootstrap_probability_gain_positive": 0.5635635635635635,
+          "n_sampled_events": 27,
+          "n_unique_origins": 26,
+          "unique_condition_counts": {
+            "queue_ongoing": 21,
+            "queue_onset": 5
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 9,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 3996,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        },
+        "experts_expected_IoU": {
+          "baseline": "shared_threshold",
+          "candidate": "experts_expected_IoU",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.6271149519888273,
+            "candidate": 0.6739004420439305
+          },
+          "paired_macro_gain": 0.04678549005510324,
+          "ci95": [
+            0.011451515574073803,
+            0.09667516435431878
+          ],
+          "bootstrap_probability_gain_positive": 0.994994994994995,
+          "n_sampled_events": 27,
+          "n_unique_origins": 26,
+          "unique_condition_counts": {
+            "queue_ongoing": 21,
+            "queue_onset": 5
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 9,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 3996,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        }
+      }
+    },
+    {
+      "study": "C29_D12_I5_N_winter_onset_specialist",
+      "source_report_sha256": "de3afecde7db182c1b536aa5a34ae41813e988786cd674ac3b3f272cc35b268e",
+      "old_cal_selected_model_retained": "experts_threshold",
+      "old_selected_model_predictions_unchanged": true,
+      "cal_candidate_model_ranking_reselected": false,
+      "old_selected_comparison": {
+        "baseline": "shared_threshold",
+        "candidate": "experts_threshold",
+        "origin_deduplicated_condition_macro_IoU": {
+          "baseline": 0.8682403003787033,
+          "candidate": 0.8817917536212561
+        },
+        "paired_macro_gain": 0.013551453242552802,
+        "ci95": [
+          -0.0012536042337425353,
+          0.03240786829533745
+        ],
+        "bootstrap_probability_gain_positive": 0.95125,
+        "n_sampled_events": 109,
+        "n_unique_origins": 103,
+        "unique_condition_counts": {
+          "queue_ongoing": 89,
+          "queue_onset": 14
+        },
+        "n_assessment_days": 30,
+        "n_days_with_events": 27,
+        "block_days": 7,
+        "resamples": 4000,
+        "valid_resamples": 4000,
+        "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+      },
+      "corrected_selected_comparison": {
+        "baseline": "shared_threshold",
+        "candidate": "experts_threshold",
+        "origin_deduplicated_condition_macro_IoU": {
+          "baseline": 0.8682403003787033,
+          "candidate": 0.8817917536212561
+        },
+        "paired_macro_gain": 0.013551453242552802,
+        "ci95": [
+          -0.0012536042337425353,
+          0.03240786829533745
+        ],
+        "bootstrap_probability_gain_positive": 0.95125,
+        "n_sampled_events": 109,
+        "n_unique_origins": 103,
+        "unique_condition_counts": {
+          "queue_ongoing": 89,
+          "queue_onset": 14
+        },
+        "n_assessment_days": 30,
+        "n_days_with_events": 27,
+        "block_days": 7,
+        "resamples": 4000,
+        "valid_resamples": 4000,
+        "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+      },
+      "corrected_all_candidate_comparisons": {
+        "experts_threshold": {
+          "baseline": "shared_threshold",
+          "candidate": "experts_threshold",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.8682403003787033,
+            "candidate": 0.8817917536212561
+          },
+          "paired_macro_gain": 0.013551453242552802,
+          "ci95": [
+            -0.0012536042337425353,
+            0.03240786829533745
+          ],
+          "bootstrap_probability_gain_positive": 0.95125,
+          "n_sampled_events": 109,
+          "n_unique_origins": 103,
+          "unique_condition_counts": {
+            "queue_ongoing": 89,
+            "queue_onset": 14
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 27,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 4000,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        },
+        "shared_expected_IoU": {
+          "baseline": "shared_threshold",
+          "candidate": "shared_expected_IoU",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.8682403003787033,
+            "candidate": 0.8413600617270165
+          },
+          "paired_macro_gain": -0.02688023865168676,
+          "ci95": [
+            -0.0809489306250561,
+            0.018676750687048115
+          ],
+          "bootstrap_probability_gain_positive": 0.15,
+          "n_sampled_events": 109,
+          "n_unique_origins": 103,
+          "unique_condition_counts": {
+            "queue_ongoing": 89,
+            "queue_onset": 14
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 27,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 4000,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        },
+        "experts_expected_IoU": {
+          "baseline": "shared_threshold",
+          "candidate": "experts_expected_IoU",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.8682403003787033,
+            "candidate": 0.8693762062404892
+          },
+          "paired_macro_gain": 0.001135905861785913,
+          "ci95": [
+            -0.034242866919055724,
+            0.0367001484911094
+          ],
+          "bootstrap_probability_gain_positive": 0.541,
+          "n_sampled_events": 109,
+          "n_unique_origins": 103,
+          "unique_condition_counts": {
+            "queue_ongoing": 89,
+            "queue_onset": 14
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 27,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 4000,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        }
+      }
+    }
+  ],
+  "changed_scored_predictions_across_replayed_model_phase_calls": 41,
+  "legacy_proxy_scores_independently_replayed_exact": true,
+  "formal_Queue": null,
+  "formal_Total": null,
+  "limitations": "Fixed old models/thresholds and origin sets; corrected decision domain only. No cal reselection, refit, fresh split or actual latent Queue truth. Future experiments must predict full public template before score eligibility."
+}

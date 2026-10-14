@@ -3,6 +3,17 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+最新同初始化/采样的density-loss对照（每个checkpoint/α由原cal封存）：
+
+| panel / fold | State-only | legacy density | coverage-target density | full-denominator density | primary选择 |
+|---|---:|---:|---:|---:|---|
+| I210_W / 秋 | .933577 | .932989 | .931394 | .932287 | coverage，未因assessment退化反选 |
+| I5_N / 冬 | .954329 | .953338 | .954403 | .954407 | State-only，保留 |
+
+公开coverage proxy L1对应秋.404858/.397383/.396416/.399691、冬.373316/.364022/.365023/.365453；不同于旧target-touching proxy，不是正式Physics。秋追加30日cal-choice State再退化.000480，CI全负；冬State小改善区间跨零。λ=.01在完整分母下有效强度约减半，因此不是等梯度幅度对照。
+
+Queue未来评分域修正：C27原expert输出未变，但相对force=true基准的gain从−.007850改为+.017150、CI仍跨零；C28/C29的expert/baseline都是pointwise force=false，主比较不变。C32秋corrected baseline/wave30为.872422/.879028，原绝对.897422/.904028只保留为filtered-domain历史数；gain.006606与CI不变。C34冬force=false主比较不变。所有旧报告SHA保留，新旧模型权重不变；下一轮集合规则只在完整公共forecast域校准。
+
 最新冻结先验同化对照（全部cal封存，旧14日公开train assessment）：
 
 | panel / fold | 原神经/LGB组合 | 普通残差同化 | 遮观测中心同化 | State决策 |

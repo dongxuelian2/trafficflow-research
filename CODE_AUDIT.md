@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+A66/A68四个strict12/vq组的初始化、采样与预算完全相同。新增raw TRAIN y_full及public Mode A pair masks仅进入loss/evaluator；cal/assessment推断从masked帧重建，导出的AdaptiveStateModel只存已有baseline、CPU weights与public topology，不含full labels。两组State-only/legacy参数分别与A52/A34逐张量一致；不算新fit seed。public coverage metric用完整有效对分母与R1/R2/R3等权，单独字段避免与legacy proxy混淆。手算单元测试核验12/42及6/18分母、regime mean非pooled比率。完整分母等价batch强度重缩放，不能宣称新增物理信息。
+
+C35发现sample_events在构造ProxyData时按未来available筛行；pointwise threshold本身不依赖集合，expected prefix与force-nonempty却会利用这个未知未来域。C35/C37固定旧策略重放分别48/32组旧指标精确一致；新的预测函数不接受score mask，完整预测完成后才调用score_full_forecast。未来全不可评分window按官方规则为0，不返回empty-empty满分。反例p=[.9,.4]、future mask=[False,True]说明旧域可将合法full预测的IoU0变成1。没有隐藏label读取；这是公共train代理评测接口的泄漏，不改变已正式提交的全template预测文件。
+
+旧Queue校准runner含future-eligible集合规则，仅保留历史复现；新晋级必须使用完整forecast域并重新校准。公开latent nonempty不保证score-eligible nonempty；old force之后onset清零次序也可能清掉刚强制的早期cell，下一轮单独检验。当前审计保留原cal choices，没有按更正后assessment反选。63 research /55 CPU tests、3 optional-Torch skips；无正式Physics/Queue新成绩。
+
 A58–A65新增纯NumPy/SciPy二次残差同化，冻结State先验，不读raw标签当measurement。严格finite观测优先，extra观测需已知pct；未知质量和缺失值权重0。正prior precision令全grid Hessian SPD；手工dense normal equations及实际24-slot SuperLU reference核验。3836次实验channel CG都满足真实相对线性残差<=约1e−8；这不构成物理动力学正确性证据。
 
 CF按照固定public panel/date/grid/seed分组，仅临时遮四个measurement字段，全部visible cells各遮一次；原frame不改，原target prior不改。测试直接读取假prior的输入帧验证自身四字段不可见。仍可用State公开前后观测，禁止将结果作Queue未来输入。三个paired案例28日prior/strict/quality/edges逐值相同。旧A58/A59 pickle缺少anchor属性时default0的独立cal复跑通过；保存嵌套prior前清除GPU网络cache。

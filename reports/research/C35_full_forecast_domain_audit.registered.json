@@ -1,0 +1,17 @@
+{
+  "protocol_sha256": "a9f5c803eccef2ef82cbf4d4d48c2a0447c9b61ebb4013ba334f3d68de9bf83f",
+  "protocol": {
+    "id": "Queue_fixed_model_full_forecast_domain_audit",
+    "studies": [
+      "C27_D12_I5_N_onset_specialist",
+      "C28_D7_I10_W_onset_specialist",
+      "C29_D12_I5_N_winter_onset_specialist"
+    ],
+    "scope": "Old selected origins, frozen probability/threshold models; no fitting or model reselection",
+    "prediction": "Complete six-step public link domain, inputs timestamp<=T only",
+    "scoring": "Read eligible public TRAIN future observations only after full prediction; apply scoring mask after set decision",
+    "legacy_comparison": "Deliberately reproduce old availability-filtered set decisions to quantify bias",
+    "formal_Queue": null,
+    "formal_Total": null
+  }
+}

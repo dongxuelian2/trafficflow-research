@@ -40,6 +40,12 @@ def expected_iou_prefix(probability, require_nonempty=True):
 
 
 def event_prefix_decisions(probability, window, condition, lead_minutes):
+    """Rank the full public forecast domain before evaluator-only masking.
+
+    Calling this on a future-eligible subset is invalid validation: unknown
+    availability changes the ranked set. Future labels/eligibility belong only
+    to the scorer, after this decision has been made.
+    """
     p = np.asarray(probability, float)
     window, condition, lead = map(np.asarray, (window, condition, lead_minutes))
     if p.ndim != 1 or any(a.shape != p.shape for a in (window, condition, lead)):
