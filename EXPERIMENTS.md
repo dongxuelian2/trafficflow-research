@@ -87,6 +87,8 @@ A33–A36 已完成，四个 standalone 各 14 日重建/预测验证通过。I5
 
 当前完整模型/配置快照 `model_artifacts_checkpoint_adaptive_v2.json` 保存 **334 项**已完成 artifact SHA。`K03_K04_local_state_controls.json` 保存完整候选 SHA、大小、覆盖及全行 diff；`adaptive_verification_record.json` 记录实际测试与独立复跑的范围。所有文件仅在本地，重要代码与报告通过本地 Git 提交归档。
 
+下一阶段已启动，尚无成绩：A40 为 I405_N 冬季图缓存准备；A41 为 I5_N 第三 NN/LGB fit seed 20261107 的同协议架构对照；A42 为 I405_N 冬季 500k/full 强基线。运行入口、完成标记与续接动作记录于 `research_checkpoint_adaptive_phase.json`。缓存准备拒绝已存在目录，修改 NumPy 数组时显式 copy，开始前保存源码快照。
+
 专家/密度阶段 31 tests passed。expected-IoU 与小规模独立枚举全部标签、全部预测集合一致；独立 Bernoulli 假设不代表交通单元真实独立。density 投影网格严格核对完整 key，并保留缓存预测不变；测试发现 Pandas 可返回只读 NumPy 视图，已显式 copy 并验证与直接预测一致。新实验在开始前保存源代码与依赖锁。
 
 A01 的 CI 是按天配对的诊断，不是非线性 pooled State 或 Kaggle Total 的置信区间。A14 已证实标签预算混杂：全标签 LGB 超过原神经网络组合；A15 的独立增益低于登记门槛。后续必须继续比较强基线和多个 fit seed。

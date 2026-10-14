@@ -1,0 +1,48 @@
+{
+  "objective_status": "active; formal 0.95000+ target not achieved",
+  "formal_best_Total": 0.82940,
+  "formal_best_ref": 57138874,
+  "latest_completed_local_commit": "cbca785",
+  "platform_policy": "User requested models first. Local commits continue; defer forum/Notebook publication, GitHub push and new formal uploads.",
+  "completed": [
+    "A33/A34/A35: I5_N strong-LGB neural comparisons across two seasons and two NN/LGB fit seeds",
+    "A36: supervised I405_N autumn strong-LGB comparison",
+    "All four standalone calibration replays and original-winner architecture ablations passed",
+    "A37 zero-shot I10_W transfer failed; do not deploy a shared all-corridor model",
+    "A38/A39 scenario diagnostics and corrected first-delivery scenario replay",
+    "C27-C29 onset specialists did not pass uncertainty gates",
+    "C30 causal temporal/graph Queue did not beat the tree on calibration; both mixtures chose alpha 0",
+    "P01/P02 full-public-train I5_N production preparation and two fixed neural candidates",
+    "K03/K04 complete local submissions: 6980503 rows each; task/field/panel/master-key full diff passed",
+    "35 research-env tests; 30 CPU-env tests plus three optional-Torch module skips; compileall passed"
+  ],
+  "active_jobs_at_checkpoint": [
+    {
+      "id": "A40",
+      "session_id": 40944,
+      "command": ".venv-research/Scripts/python.exe scripts/prepare_graph_experiment.py --panel D7_I405_N --fold rolling_winter --output artifacts/research/A40_D7_I405_N_winter_cache",
+      "completion_file": "artifacts/research/A40_D7_I405_N_winter_cache/prepared.json"
+    },
+    {
+      "id": "A41",
+      "session_id": 92584,
+      "command": ".venv-research/Scripts/python.exe scripts/adaptive_graph_experiment.py --cache artifacts/research/A01_D12_I5_N_autumn_seed20261013 --baseline-file artifacts/research/A27_autumn_full_LGB_seed20261107/lightgbm_large_budget.pkl --seed 20261107 --output artifacts/research/A41_adaptive_attention_autumn_seed20261107",
+      "completion_file": "artifacts/research/A41_adaptive_attention_autumn_seed20261107/experiment.json"
+    },
+    {
+      "id": "A42",
+      "session_id": 11070,
+      "command": ".venv-research/Scripts/python.exe scripts/state_budget_suite.py --panels D7_I405_N --fold rolling_winter --output artifacts/research/A42_I405_N_winter_strong_control",
+      "completion_file": "artifacts/research/A42_I405_N_winter_strong_control/D7_I405_N/experiment.json"
+    }
+  ],
+  "next_actions": [
+    "Check completion files before polling these transient sessions; do not restart completed studies or overwrite outputs.",
+    "After A41 completion, export/replay its standalone model and assess original-calibrated architecture ablations; compare three seeds on shared dates without treating seeds as independent days.",
+    "After A40 and A42 complete, run the fixed adaptive graph protocol using cache A40 and baseline artifacts/research/A42_I405_N_winter_strong_control/D7_I405_N/full.pkl in a fresh A43 output directory.",
+    "Diagnose Queue positive-weight BCE probability shift on fixed C30 checkpoints and matched events before adding more neural architectures.",
+    "Preserve independent simulator final seeds until architecture/parameter freeze; do not call public-train development assessments untouched tests."
+  ],
+  "formal_candidate_scores": null,
+  "limitations": "Local State gains are not Kaggle Total or official Physics gains. Production has no holdout score. I405_N evidence currently covers one season and one fit seed. No global ten-direction neural promotion gate has passed."
+}
