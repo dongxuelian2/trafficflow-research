@@ -2,6 +2,12 @@
 
 目标为可复现的正式 Kaggle **0.95000+**；当前正式 **0.82940**。不将阶段性较低分数作为终点。
 
+本轮 A49 在 D7_I210_W 强基线下有 .006476 pooled gain、日均区间为正，但只有秋季/单 fit seed；继续补相反方向与跨季。A50 显示 graph 的质量过滤会形成长输入不可用段，R3 p99 60min，而 target p99 25min。下一项结构实验应将合法低质量数值与可靠度显式提供给网络，与现有12-channel/full-LGB在相同划分比较，不能用不可用时段数直接推断官方 mask generator。
+
+D12 的保守规则虽然模拟为正，30 份公开 weak prior 完全不触发。D13 改为 entropy fallback，在三个新 research seed 上九类均值都有收益；完整 K05 已生成并核验，只改 OD，当前20份待测输入实际全部 entropy。保留为可评估的本地控制，原正式最佳不变；下一步扩大 count-noise/prior 分布变化、分析非空负例与路径质量，不能因新模拟 CI 正就宣称正式收益。Final seeds 仍封存，平台继续暂缓。
+
+B09 证明部分 CTM 结论受 temporal-first 弱适配器影响；用现有 StateFeatures 权重后基线更强。事故120min缺失仍极差，history-only对固定时钟过拟合；下一步优先已知 latent/noisy 区分、边界/匝道潜变量及与 State 对照的联合密度增量目标，使用完整 target–observed 锚定诊断，正式 Physics 仍未知。不要继续堆积与现有输入不匹配的零样本测试。
+
 最新证据改变下一步顺序：A47 第四走廊族 D12_I405_S 的 pooled gain 仅 .000371、日均 CI 跨零，不能把前三族的收益推广为全网保证。继续补 D7_I210 和相反方向；在同一 cal 上封存可退回 LGB 的选择规则，按原门槛检查实际退化，而非强制每方向使用 NN。未由 cal 选中的 attention assessment 略高也不反选。
 
 D11 前提审查优先于路径选择架构：公开 path set 的每个 OD 对只有一条 path，D10 的 route-choice preference 会抵消，实际是既有独立 demand 分布。今后统一选择要覆盖九种实质分布（十个历史标签）；若构造替代路径，只能明确标为自主网络实验，不能当现有 Task 4 可识别的 route-choice 参数。先审查特征、变量和生成机制的实际自由度，再增加模型。

@@ -7,6 +7,11 @@
 
 | 模型 | 证据集 | State / OD 指标 | Queue 指标 | Physics 证据 | 状态 |
 |---|---|---:|---:|---|---|
+| D7_I210_W 图注意力 | A49 秋，同 full-LGB，cal α=.5 | .933577 vs .927102；日均 CI [.004342,.006415] | 不适用 | increment proxy .716127 vs .740967 | 第五 family 监督复核；独立 14 日 cal 重建；全网未晋级 |
+| prior 浓度条件 Gaussian | D12 九模拟分布 | .666372 vs Ridge .662287；CI [.000466,.007706] | 不适用 | 不适用 | 全部 30 份赛事输入 inactive；无当前算法收益 |
+| entropy / 非负 MAP 专家 | D13 新 research seeds，九分布 | .732618 vs .663559；CI [.052272,.086461] | 不适用 | 不适用 | 非 final；540 method cases 0 failures；正式未知 |
+| K05 完整 LOCAL 控制 | 当前 validation/private 输入，20 split-panel | S_link-only .986901–.998681；真实 ODME 未知 | 原预测逐行相同 | 原 State 逐行相同 | 当前实际为 entropy OD-only；仅 70,708 OD 值改变，未上传 |
+| CTM 加权基线 / history 消融 | B09 144 独立配置，原72 control复现 | 120min 插值 .118663→.227091；45min prior-only +1h严重退化 | 未评估 | 两种模拟 flux，不是正式指标 | 基线适配器修正；不算生产算法新收益 |
 | D12_I405_S 监督图模型 | A47 秋，同 full-LGB，cal 选 density α=.75 | .941872 vs .941500；gain .000371，日均 CI [−.000654,.004659] | 不适用 | increment proxy .741879 vs .758759 | 第四走廊族小收益未过 gate；14 日 standalone 核验通过 |
 | 固定半数图 State 混合 | B07 自主 CTM，三 seed/六条件/三缺失率 | half-density .864132 vs interpolation .853404；mild −.010945 | 未评估 | CTM-flux .332950 vs .358359 | 全 54 条件独立进程数值相同；不晋级生产 |
 | 固定纯图 State | 同 B07；geometry-only profile、无 occupancy | attention .848350；density .855957；插值 .853404 | 未评估 | density CTM-flux .327728 | 急降速改善、恢复速度恶化；不视为正式 Physics |

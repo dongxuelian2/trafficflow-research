@@ -1,0 +1,120 @@
+{
+  "created_UTC": "2026-10-14T07:16:12.326337+00:00",
+  "git_base_before_phase_commit": "fba0d99a7f53d8d92270e96da91c8b9d356291f7",
+  "objective_status": "active; formal 0.95000+ target remains unachieved",
+  "previous_goal_turn_classification": "progress",
+  "current_goal_turn_classification": "progress",
+  "formal_best_ref": 57138874,
+  "formal_best_Total": 0.8294,
+  "platform_policy": "Latest user direction: local models only; no publish, GitHub push or formal uploads",
+  "completed_this_phase": [
+    "A48 cache/A49 fifth-family supervised State control, matched ablation and 14-day deployment replay",
+    "A50 public train availability/target run audit, no reconstruction truth used",
+    "B08 72 contiguous-missing configurations exact independent replay; B09 144-case 2x2 adapter/history/clock factors with retained controls",
+    "D12 zero-preserving nonnegative Gaussian/exponential MAP and Huber objective certificates; 540 old score replays exact; complete nine-regime selection",
+    "D13 development-only expert selection with three fresh research seeds, expanded seeds disjoint final seeds, both solver branches SHA replayed; 14 negative cases retained",
+    "K05 complete local OD-only control: 6980503 rows, only 70708 OD values changed, no upload",
+    "50 research tests; 45 CPU tests with three optional Torch module skips; compileall and independent numeric references"
+  ],
+  "terminal_jobs": [
+    {
+      "session_id": 29573,
+      "task": "A48",
+      "exit_code": 0
+    },
+    {
+      "session_id": 20856,
+      "task": "A49",
+      "exit_code": 0
+    },
+    {
+      "session_id": 80483,
+      "task": "A49 deployment",
+      "exit_code": 0
+    },
+    {
+      "session_id": 30219,
+      "task": "A49 ablation",
+      "exit_code": 0
+    },
+    {
+      "session_id": 16972,
+      "task": "D12",
+      "exit_code": 0
+    },
+    {
+      "session_id": 21294,
+      "task": "B08",
+      "exit_code": 0
+    },
+    {
+      "session_id": 93262,
+      "task": "B08 repeat",
+      "exit_code": 0
+    },
+    {
+      "session_id": 24293,
+      "task": "B09",
+      "exit_code": 0
+    },
+    {
+      "session_id": 32472,
+      "task": "D13",
+      "exit_code": 0
+    },
+    {
+      "session_id": 20406,
+      "task": "K05 build",
+      "exit_code": 0
+    },
+    {
+      "session_id": 98135,
+      "task": "K05 full row diff",
+      "exit_code": 0
+    },
+    {
+      "session_id": 32515,
+      "task": "final research pytest",
+      "exit_code": 0
+    }
+  ],
+  "active_jobs_at_checkpoint": [],
+  "best_formal_preserved": true,
+  "K05_local_candidate": {
+    "candidate_directory": "artifacts/research/K05_OD_expert_LOCAL",
+    "submission_sha256": "eef9ec04375aa33a21d0824419f4f92a84be324fe4869e1911ac574534a1825e",
+    "submission_bytes": 409647936,
+    "rows": 6980503,
+    "changed_rows": {
+      "odme": 70708
+    },
+    "full_row_diff_passed": true,
+    "retained_component_sha256": {
+      "state": "49c48651db680a46a05f952ae4a89001374ea5912d73627d9a2ad8117e53a294",
+      "queue": "420080d4582ff74f96a33bc5ca726aedb541ca3f576ced416be307d6c22d3fa4"
+    },
+    "actual_public_input_solver": "entropy_D08 on all 20 validation/private split-panels; alternative never triggered",
+    "formal_Total": null,
+    "formal_ODME": null,
+    "uploaded": false,
+    "baseline_retained": true,
+    "source_verification_sha256": "d41e6e6f31540304c87960d32033344252fe646d07db62b244acd12e8d1a2904",
+    "row_diff_sha256": "ebe147a7e45d153b67711168bac332deaa5c33ccbc33ec3c90e9b2ceaf32f452"
+  },
+  "formal_candidate_scores": null,
+  "final_simulator_seeds": {
+    "seeds": [
+      7907,
+      8017,
+      9109
+    ],
+    "generated": false
+  },
+  "next_research_priorities": [
+    "Quality-aware State inputs from legally visible low-quality observations, same full-LGB splits/budgets, no future Queue inputs",
+    "Joint State/density increment losses with target-observed anchors and calibrated noise; formal Physics remains unknown",
+    "OD visible count inconsistency and robust likelihood on development, wider noise/prior shifts; preserve worst-case evidence",
+    "More State opposite-direction/season/fit-seed controls and causal Queue cross-direction/seed replication"
+  ],
+  "limitations": "Synthetic OD gains do not prove formal improvement. Current K05 inputs all entropy. State global gate unproven. B09 reveals baseline-adapter and fixed-clock artifacts. No target completion claim."
+}

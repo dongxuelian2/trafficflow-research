@@ -9,7 +9,8 @@ from .state import temporal
 
 
 def synthetic_state_input(masked_speed, masked_flow, quality_eligible, *, lanes,
-                          free_speed, capacity, jam_density, start_minute=0):
+                          free_speed, capacity, jam_density, start_minute=0,
+                          historical_prior=None, base_policy='temporal_first'):
     speed, flow = np.asarray(masked_speed, float), np.asarray(masked_flow, float)
     eligible = np.asarray(quality_eligible, bool)
     if speed.ndim != 2 or speed.shape != flow.shape or speed.shape != eligible.shape or min(speed.shape) < 1:
@@ -22,18 +23,30 @@ def synthetic_state_input(masked_speed, masked_flow, quality_eligible, *, lanes,
                     np.where(eligible, flow/lanes, np.nan)], axis=-1)
     available = np.isfinite(raw)
     defaults = np.array([free_speed, .4*capacity/lanes])
+    prior = np.broadcast_to(defaults, raw.shape) if historical_prior is None else np.asarray(historical_prior, float)
+    if prior.shape != raw.shape or not np.isfinite(prior).all() or (prior < 0).any():
+        raise ValueError('Historical prior must be a finite nonnegative matching speed/lane-flow grid')
+    if base_policy not in {'temporal_first', 'deployed_weighted'}:
+        raise ValueError('Unknown synthetic interpolation policy')
     base = np.empty_like(raw)
     position = np.arange(speed.shape[1])
     for channel in range(2):
         series = raw[..., channel]
-        interpolated, _ = temporal(series)
-        spatial = np.empty_like(series)
+        interpolated, age = temporal(series)
+        spatial = np.full_like(series, np.nan)
         for time, row in enumerate(series):
             good = np.isfinite(row)
-            spatial[time] = np.interp(position, position[good], row[good]) if good.any() else defaults[channel]
-        base[..., channel] = np.where(np.isfinite(interpolated), interpolated, spatial)
+            if good.any():
+                spatial[time] = np.interp(position, position[good], row[good])
+        if base_policy == 'temporal_first':
+            fallback = np.where(np.isfinite(spatial), spatial, prior[..., channel])
+            base[..., channel] = np.where(np.isfinite(interpolated), interpolated, fallback)
+        else:
+            time_weight = np.where(np.isfinite(interpolated), 1/(1+age/10), 0.)
+            space_weight = np.where(np.isfinite(spatial), .35, 0.)
+            weighted = (np.nan_to_num(interpolated)*time_weight+np.nan_to_num(spatial)*space_weight)/np.maximum(time_weight+space_weight, 1e-9)
+            base[..., channel] = np.where(time_weight+space_weight > 0, weighted, prior[..., channel])
     scale = np.array([25., 600.])
-    prior = np.broadcast_to(defaults, raw.shape)
     shape = (*speed.shape, 1)
     angle = 2*np.pi*(start_minute+5*np.arange(len(speed)))/1440
     sin = np.broadcast_to(np.sin(angle)[:, None, None], shape)

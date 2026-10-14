@@ -2,6 +2,20 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**本轮新增可运行的完整本地 OD 控制候选 K05，并完成第五走廊族 State 复核。** A49 D7_I210_W 秋季仅按 cal 选纯 attention、α=.5：相对 full-label LGB，公开 train assessment State **.927102 → .933577**，pooled gain **.006476**；14 日配对日均 gain .005391、CI **[.004342,.006415]**。increment 代理 L1 **.740967 → .716127**；14 日独立 cal 输入/预测重建通过。Geometry 的原 cal 混合为零，density .932989，未按 assessment 反选架构。全网与真实 Physics 增益仍未知。
+
+D13 的正向均值不代表所有案例改善：270 个配对案例中 **14 个退化**，最差为 D7_I405_N / seed7001 / count_outliers，模拟 ODME **.555405 → .527118**、下降 **.028287**，实际走 entropy 分支。最差十例与分布内负例数量保留在 `D13_OD_expert_error_analysis.json`，未按这批新 seed 重新选择模型。
+
+**D12 的保守 OD 规则只在模拟有增益，当前赛事输入完全不触发。** 九种自生成分布的 Gaussian/exponential MAP 与 Huber 对照均完成；最佳规则为 prior top15% mass≥.75 时用相对 Gaussian MAP，其他情况保留 Ridge。旧 research seed 的模拟 ODME **.662287 → .666372**、gain CI **[.000466,.007706]**；30 个公开 train/validation/private 弱先验全部低于触发阈值，因此不产生当前赛事的算法增益。独立 903-path augmented TRF/LSMR 与选定 MAP 的最大差 **1.23e−8**；旧 540 个 Ridge/entropy case 数值完全复现，1,350 个 assessment method/case、0 solver failures。
+
+**D13 的积极专家组合在三个新研究种子上获正向模拟证据。** 只用 D12 development 选择：通常使用 τ=.05/floor20 entropy；prior top15% mass≥.75 时用 absolute Gaussian/exponential MAP（cv=.75、shrinkage=1）。开发九类最差均值 gain .023582；新 seeds **5003/6203/7001** 的九类平均模拟 ODME **.663559 → .732618**，gain **.069060**，family/seed CI **[.052272,.086461]**，九类平均均有增益，540 个方法/场景、0 failures。它们是新的研究 seed，不是 final test 或真实 Kaggle 标签；7907/8017/9109 及其生成偏移仍未启用。
+
+K05 完整文件为 `artifacts/research/K05_OD_expert_LOCAL/submission.csv`，SHA-256 **`eef9ec04375aa33a21d0824419f4f92a84be324fe4869e1911ac574534a1825e`**。完整覆盖 **6,980,503** 行；独立全行比对仅 **70,708 OD path_flow** 改变，State、Queue 和其他字段逐行相同，Physics 输入不变。当前 20 个 validation/private split-panel 都使用 entropy 分支，故这次本地候选实际检验 entropy OD-only，不将未触发的 Gaussian 分支包装成实际组合收益。S_link-only .986901–.998681；真实 ODME/Total 均未知，**没有上传**，不替换正式最佳。原最佳及模型保持冻结。
+
+B08 连续缺失的 72 组配置与独立进程复跑完全相同。B09 用独立 development 观测历史与两种插值方式作 2×2 因素对照，另加事故时钟 +1h，共 144 组配置；72 组原适配器控制逐项复现。两小时事故缺失的 interpolation **.118663 → .227091** 来自改用实际 StateFeatures 的 age/space 权重，不能当新的生产算法收益；此前 CTM 使用 temporal-first 的较弱基线。历史 prior-only 在全网 45min 缺失条件下，时钟偏移后 **.229790 → .011636**，暴露固定生成时钟的脆弱性。冻结网络仍未解决长块缺失；这些条件不是官方 R3。
+
+A50 仅审查三个秋季 public-train cache 的 availability/mask，未读取重建真值：R3 输入不可用连续段 p99 **60min**、最大 **150–185min**；scored-target 连续段 p99 **25min**、最大 **70–75min**。质量过滤造成的不可用段与目标缺失不同，CTM 块不能替代真实缺失诊断。下一步优先合法低质量观测的置信度建模与 State/密度增量联合目标，再完成全方向、跨季与多 seed 复核。本轮平台操作继续暂缓。
+
 **D11 语义审计更正：十方向每个公开 OD 对均只有一条 path。** D10 历史标签 `route_choice_shift` 中的 preference 归一化会完全抵消，实际只生成 lognormal .25 的 OD 需求扰动，与既有 independent_paths 同类；不构成路径选择证据。原报告、数值和源快照保留，下面“三个登记条件”的区间含一个同类复核。只汇总真正新增的 sparse-active / count-outliers 两类，模拟 macro gain **.016966**、family/seed CI **[−.016780,.051299]**，仍跨零。`reports/research/D11_public_OD_path_choice_audit.json` 记录十份公开 path-set SHA 和所有 OD 分组数量；没有访问隐藏资源。
 
 **本轮完成独立 CTM、OD 不确定性及第四走廊族 State 复核，均保留局限和失败。** A47 D12_I405_S 秋季仅按 cal 选 density-attention α=.75；相对 full-label LGB，assessment State **.941500 → .941872**，pooled gain **.000371**。14 日的日均 gain .002002，CI **[−.000654,.004659]**；日均与 pooled 指标不同，不能换用前者通过 .002 的晋级门槛。目标对密度增量代理 .758759 → .741879，真实 Physics 未知；14 日 standalone cal 重建及原三架构消融完成，暂不晋级该方向。

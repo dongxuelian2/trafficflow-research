@@ -32,3 +32,16 @@ def test_fully_missing_grid_uses_geometry_without_synthetic_truth():
     assert np.isfinite(x).all()
     with pytest.raises(ValueError, match='grids'):
         adapted(np.ones((2, 3)), np.ones((3, 2)), np.ones((2, 3), bool))
+
+
+def test_deployed_weighted_interpolation_matches_hand_computed_age_weights():
+    v = np.array([[50., 100.], [np.nan, 30.], [100., np.nan]])
+    q = np.full_like(v, 2400.)
+    prior = np.broadcast_to([85., 200.], (*v.shape, 2)).copy()
+    kwargs = dict(lanes=4., free_speed=100., capacity=6000., jam_density=400.,
+                  historical_prior=prior, base_policy='deployed_weighted')
+    x, base, *_ = synthetic_state_input(v, q, np.ones_like(v, bool), **kwargs)
+    assert base[1, 0, 0] == pytest.approx((75.*(2/3)+30.*.35)/(2/3+.35))
+    np.testing.assert_allclose(x[..., 4:6], prior/[25., 600.], rtol=1e-7)
+    _, missing, *_ = synthetic_state_input(np.full_like(v, np.nan), np.full_like(q, np.nan), np.ones_like(v, bool), **kwargs)
+    np.testing.assert_allclose(missing, prior)

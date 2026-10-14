@@ -1,0 +1,111 @@
+{
+  "protocol_sha256": "0fc9918843dc06483e4cf88ba17b2a192741041966d507f243f4622ee6690447",
+  "protocol": {
+    "id": "Independent_CTM_history_and_input_policy_factorial",
+    "source_model_sha256": {
+      "adaptive_attention": "b8f70fa0d0c2b411d7779a9de6fa1269b56d715b7374ce9a34bdd0824077b5e7",
+      "adaptive_attention_density": "2ce4a2f9a2671710b502764f93728268d9934823e5fbacecc563d9f2a3f825c0"
+    },
+    "base_study_sha256": "05f74f3df22608f54a351bc0b87171719f0d820df4316c7b9ebb5266b195a4e6",
+    "base": {
+      "seed": 0,
+      "cells": 32,
+      "days": 2,
+      "length_km": 0.75,
+      "lanes": 5.0,
+      "free_speed": 117.5,
+      "capacity": 10523.999999999998,
+      "jam_density": 500.0,
+      "demand_multiplier": 1.0,
+      "incident_cell": 20,
+      "incident_start_hour": 8.0,
+      "incident_hours": 1.5,
+      "capacity_retained": 0.45,
+      "speed_noise": 1.0,
+      "relative_flow_noise": 0.015,
+      "failure_fraction": 0.1,
+      "failure_steps": 18,
+      "mask_rate": 0.0
+    },
+    "profile_seeds": [
+      411,
+      829,
+      1201
+    ],
+    "assessment_seeds": [
+      2909,
+      3253,
+      4001
+    ],
+    "cases": {
+      "mild": {
+        "capacity_retained": 0.85,
+        "demand_multiplier": 0.9,
+        "incident_cell": 8,
+        "failure_fraction": 0.0
+      },
+      "onset": {
+        "capacity_retained": 0.5,
+        "demand_multiplier": 1.1,
+        "incident_cell": 20
+      },
+      "severe_upstream": {
+        "capacity_retained": 0.3,
+        "demand_multiplier": 1.25,
+        "incident_cell": 8
+      },
+      "severe_downstream": {
+        "capacity_retained": 0.3,
+        "demand_multiplier": 1.25,
+        "incident_cell": 27
+      },
+      "failures": {
+        "capacity_retained": 0.5,
+        "failure_fraction": 0.4,
+        "failure_steps": 36
+      },
+      "noisy": {
+        "capacity_retained": 0.5,
+        "speed_noise": 3.0,
+        "relative_flow_noise": 0.05
+      }
+    },
+    "patterns": [
+      "uniform_half",
+      "central_half_corridor",
+      "incident_rectangle_120min",
+      "network_missing_45min"
+    ],
+    "adapter_modes": [
+      [
+        "geometry",
+        "temporal_first"
+      ],
+      [
+        "geometry",
+        "deployed_weighted"
+      ],
+      [
+        "development_history",
+        "temporal_first"
+      ],
+      [
+        "development_history",
+        "deployed_weighted"
+      ]
+    ],
+    "incident_hour_shifts": [
+      0.0,
+      1.0
+    ],
+    "history": "One global 288-slot/cell noisy-observation mean across all six development cases and both days; eligible visible observations only; no case-specific profile",
+    "weighted_base": "Matches StateFeatures temporal age weight 1/(1+age/10), spatial weight .35, prior fallback",
+    "source_weight_training": "Original public-train A33 only; no synthetic fine-tuning",
+    "profile_limit": "Same fixed generator clock in dev histories can be overly informative; +1h incident assessment shift reported separately",
+    "selection": "No model/mode/shift selection; all preregistered factors retained",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null,
+    "final_seeds_generated": false
+  }
+}

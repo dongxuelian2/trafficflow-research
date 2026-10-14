@@ -1,0 +1,156 @@
+{
+  "source_sha256": "fb498d45cd429198ead43aae29fbcccee0cd3c7962aa30154dd2729dbf3f741d",
+  "n_paired_cases": 270,
+  "n_negative_cases": 14,
+  "n_zero_cases": 0,
+  "worst_case": {
+    "panel": "D7_I405_N",
+    "seed": 7001,
+    "regime": "count_outliers",
+    "gain": -0.028286642363601677,
+    "baseline": 0.5554051276571299,
+    "candidate": 0.5271184852935282,
+    "actual_solver": "entropy_D08"
+  },
+  "worst_ten_cases": [
+    {
+      "panel": "D7_I405_N",
+      "seed": 7001,
+      "regime": "count_outliers",
+      "gain": -0.028286642363601677,
+      "baseline": 0.5554051276571299,
+      "candidate": 0.5271184852935282,
+      "actual_solver": "entropy_D08"
+    },
+    {
+      "panel": "D7_I405_N",
+      "seed": 6203,
+      "regime": "absolute_additive_prior_noise",
+      "gain": -0.02683988004553539,
+      "baseline": 0.6894785305629736,
+      "candidate": 0.6626386505174382,
+      "actual_solver": "entropy_D08"
+    },
+    {
+      "panel": "D7_I405_N",
+      "seed": 6203,
+      "regime": "hierarchical_demand",
+      "gain": -0.021752864720567255,
+      "baseline": 0.8655499448685193,
+      "candidate": 0.8437970801479521,
+      "actual_solver": "entropy_D08"
+    },
+    {
+      "panel": "D7_I405_N",
+      "seed": 5003,
+      "regime": "absolute_additive_prior_noise",
+      "gain": -0.01892869890266191,
+      "baseline": 0.7035750562022085,
+      "candidate": 0.6846463572995466,
+      "actual_solver": "entropy_D08"
+    },
+    {
+      "panel": "D7_I405_N",
+      "seed": 5003,
+      "regime": "prior_total_bias",
+      "gain": -0.013199993937137111,
+      "baseline": 0.8504040052666908,
+      "candidate": 0.8372040113295537,
+      "actual_solver": "entropy_D08"
+    },
+    {
+      "panel": "D7_I405_S",
+      "seed": 7001,
+      "regime": "prior_total_bias",
+      "gain": -0.013002430711635982,
+      "baseline": 0.8614051545586275,
+      "candidate": 0.8484027238469916,
+      "actual_solver": "entropy_D08"
+    },
+    {
+      "panel": "D7_I405_N",
+      "seed": 7001,
+      "regime": "absolute_additive_prior_noise",
+      "gain": -0.012594167060885009,
+      "baseline": 0.6880952100631136,
+      "candidate": 0.6755010430022286,
+      "actual_solver": "entropy_D08"
+    },
+    {
+      "panel": "D7_I405_N",
+      "seed": 5003,
+      "regime": "hierarchical_demand",
+      "gain": -0.012107769851227856,
+      "baseline": 0.851013959573168,
+      "candidate": 0.8389061897219402,
+      "actual_solver": "entropy_D08"
+    },
+    {
+      "panel": "D7_I210_W",
+      "seed": 7001,
+      "regime": "prior_total_bias",
+      "gain": -0.010993978062142085,
+      "baseline": 0.8713325039766531,
+      "candidate": 0.860338525914511,
+      "actual_solver": "entropy_D08"
+    },
+    {
+      "panel": "D12_I405_S",
+      "seed": 7001,
+      "regime": "group_biased_prior",
+      "gain": -0.01010662040304633,
+      "baseline": 0.47759059456118846,
+      "candidate": 0.46748397415814213,
+      "actual_solver": "zero_aware_MAP"
+    }
+  ],
+  "by_regime": {
+    "absolute_additive_prior_noise": {
+      "n": 30,
+      "negative_cases": 3,
+      "minimum_case_gain": -0.02683988004553539
+    },
+    "count_outliers": {
+      "n": 30,
+      "negative_cases": 2,
+      "minimum_case_gain": -0.028286642363601677
+    },
+    "group_biased_prior": {
+      "n": 30,
+      "negative_cases": 1,
+      "minimum_case_gain": -0.01010662040304633
+    },
+    "hierarchical_demand": {
+      "n": 30,
+      "negative_cases": 4,
+      "minimum_case_gain": -0.021752864720567255
+    },
+    "independent_paths": {
+      "n": 30,
+      "negative_cases": 0,
+      "minimum_case_gain": 0.0020112706822786874
+    },
+    "lognormal_prior_noise": {
+      "n": 30,
+      "negative_cases": 0,
+      "minimum_case_gain": 0.026943195896904193
+    },
+    "missing_prior_paths": {
+      "n": 30,
+      "negative_cases": 0,
+      "minimum_case_gain": 0.0021872547491356142
+    },
+    "prior_total_bias": {
+      "n": 30,
+      "negative_cases": 4,
+      "minimum_case_gain": -0.013199993937137111
+    },
+    "sparse_active_paths": {
+      "n": 30,
+      "negative_cases": 0,
+      "minimum_case_gain": 0.02554238647355911
+    }
+  },
+  "formal_Total": null,
+  "scope": "Retrospective error audit only; no parameter/model reselection and no hidden labels"
+}

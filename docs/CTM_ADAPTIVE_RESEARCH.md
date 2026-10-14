@@ -28,3 +28,20 @@ B07 用 A33 已封存的 attention / attention-density 两个 checkpoint，未�
 ```
 
 下一步应把 public-observation 与 latent/noise 目标分开，评估 learned-profile 缺失导致的偏差，并在公共 train 的强 LGB 对照下验证新的同化/动力学结构。B07 的固定混合不替换生产模型。
+
+## B08/B09：连续缺失和适配器因素
+
+B08 另设 uniform half、中央半走廊整段缺测、事故附近120min矩形缺测、全网45min缺测，共72个配置。几何 profile / temporal-first interpolation 的模拟 State 为 .832553 / .711935 / .118663 / .576647。独立进程全部 protocol、input SHA 和候选数值一致。这些是自主压力模式，不复刻官方 R3。
+
+B09 将 geometry vs development-history prior 与 temporal-first vs deployed-weighted interpolation 作2×2对照，并增加事故时钟+1h；144种配置，每种4个adapter。history从独立 dev seeds 的 eligible noisy masked-observation 字段按288 slot/cell聚合，不能使用评估真值或造 occupancy。原72个geometry/temporal-first control精确复现。六个history元素没有输入，按几何回退；同seed不同场景共用随机噪声，36合成日不是36独立样本。
+
+改用 StateFeatures 本来就有的 age weight `1/(1+age/10)`、space weight .35 后，120min矩形缺失的 interpolation .118663→.227091。此前 B07/B08 的 temporal-first 比较基线较弱；修复评测适配器不是生产算法新收益。加权基线下，history-conditioned density network 为 .229198，仍未解决长缺失。
+
+history-only 在 network45min缺失下 .229790，经+1h事件时钟变为 .011636；冻结 density network with history 在同加权输入下 .657787→.624722。不同 clock/pattern 的目标人口不同，只能报告压力场景表现，不能把绝对差解释为同标签算法增益。无模式重新选择或正式 Physics 声称。
+
+A50 对三个公开train缓存的availability/target masks审计，R3 input连续段p99=60min、最大150–185min，target段p99=25min、最大70–75min。质量不合格输入与人工 target 缺失不同；这些日内 run 在午夜截断，不推断private mask或组织方生成器。
+
+```powershell
+.\.venv-research\Scripts\python.exe scripts/ctm_contiguous_stress.py --source artifacts/research/A33_adaptive_attention_strong_autumn --base-study reports/research/B07_frozen_adaptive_CTM_stress.json --output reports/research/B08_new_repeat.json
+.\.venv-research\Scripts\python.exe scripts/ctm_profile_ablation.py --source artifacts/research/A33_adaptive_attention_strong_autumn --base-study reports/research/B07_frozen_adaptive_CTM_stress.json --output reports/research/B09_new_repeat.json
+```

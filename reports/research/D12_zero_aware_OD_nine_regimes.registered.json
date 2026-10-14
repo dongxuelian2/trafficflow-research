@@ -1,0 +1,88 @@
+{
+  "protocol_sha256": "27e2ccee865d1b40ece2a84c9105008499508952449f8cb0d6a47c35aabed30f",
+  "protocol": {
+    "id": "Zero_preserving_MAP_and_visible_prior_selector_nine_regimes",
+    "grid": [
+      {
+        "path_cv": 0.25,
+        "scale_mode": "absolute",
+        "shrinkage": 0.0,
+        "noise_cv": 0.02,
+        "huber_delta": null
+      },
+      {
+        "path_cv": 0.75,
+        "scale_mode": "absolute",
+        "shrinkage": 0.0,
+        "noise_cv": 0.02,
+        "huber_delta": null
+      },
+      {
+        "path_cv": 0.75,
+        "scale_mode": "absolute",
+        "shrinkage": 0.5,
+        "noise_cv": 0.02,
+        "huber_delta": null
+      },
+      {
+        "path_cv": 0.75,
+        "scale_mode": "absolute",
+        "shrinkage": 1.0,
+        "noise_cv": 0.02,
+        "huber_delta": null
+      },
+      {
+        "path_cv": 0.25,
+        "scale_mode": "relative",
+        "shrinkage": 0.0,
+        "noise_cv": 0.02,
+        "huber_delta": null
+      },
+      {
+        "path_cv": 0.75,
+        "scale_mode": "absolute",
+        "shrinkage": 0.5,
+        "noise_cv": 0.02,
+        "huber_delta": 2.5
+      }
+    ],
+    "generating_regimes_and_seed_offsets": {
+      "independent_paths": 0,
+      "hierarchical_demand": 1,
+      "prior_total_bias": 2,
+      "absolute_additive_prior_noise": 3,
+      "lognormal_prior_noise": 4,
+      "missing_prior_paths": 5,
+      "group_biased_prior": 6,
+      "sparse_active_paths": 8,
+      "count_outliers": 9
+    },
+    "historical_demand_replica_excluded": "D11 proved route_choice_shift was another independent_paths case",
+    "development_seeds": [
+      411,
+      829,
+      1201
+    ],
+    "assessment_seeds": [
+      2909,
+      3253,
+      4001
+    ],
+    "final_seeds_generated": false,
+    "selector_thresholds": [
+      null,
+      0.6,
+      0.75,
+      0.85,
+      0.95
+    ],
+    "selector_input": "Sum of largest ceil(.15*n_paths) weak-prior values / total prior; no truth or hidden labels",
+    "selection": "Maximum worst-regime dev gain then mean; tie-break less application and grid index",
+    "development_gate": "Mean gain >=.005, every regime mean >=-.002, full optimizer success; else deploy Ridge .05",
+    "solver": "Scaled nonnegative MAP; Gaussian or original-objective-certified Huber IRLS. Continuous prior, not discrete hurdle probability.",
+    "assessment_scope": "Previously viewed seeds and data distributions; development research, not an unopened final test",
+    "formal_ODME": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

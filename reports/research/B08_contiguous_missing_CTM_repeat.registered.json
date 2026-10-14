@@ -1,0 +1,83 @@
+{
+  "protocol_sha256": "2ea69cb236cc82c3d635035eea71a16fb28907d6b689ffacb4540c012738bb24",
+  "protocol": {
+    "id": "Independent_CTM_contiguous_missing_State_control",
+    "source_model_sha256": {
+      "adaptive_attention": "b8f70fa0d0c2b411d7779a9de6fa1269b56d715b7374ce9a34bdd0824077b5e7",
+      "adaptive_attention_density": "2ce4a2f9a2671710b502764f93728268d9934823e5fbacecc563d9f2a3f825c0"
+    },
+    "base_study_sha256": "05f74f3df22608f54a351bc0b87171719f0d820df4316c7b9ebb5266b195a4e6",
+    "base": {
+      "seed": 0,
+      "cells": 32,
+      "days": 2,
+      "length_km": 0.75,
+      "lanes": 5.0,
+      "free_speed": 117.5,
+      "capacity": 10523.999999999998,
+      "jam_density": 500.0,
+      "demand_multiplier": 1.0,
+      "incident_cell": 20,
+      "incident_start_hour": 8.0,
+      "incident_hours": 1.5,
+      "capacity_retained": 0.45,
+      "speed_noise": 1.0,
+      "relative_flow_noise": 0.015,
+      "failure_fraction": 0.1,
+      "failure_steps": 18,
+      "mask_rate": 0.0
+    },
+    "cases": {
+      "mild": {
+        "capacity_retained": 0.85,
+        "demand_multiplier": 0.9,
+        "incident_cell": 8,
+        "failure_fraction": 0.0
+      },
+      "onset": {
+        "capacity_retained": 0.5,
+        "demand_multiplier": 1.1,
+        "incident_cell": 20
+      },
+      "severe_upstream": {
+        "capacity_retained": 0.3,
+        "demand_multiplier": 1.25,
+        "incident_cell": 8
+      },
+      "severe_downstream": {
+        "capacity_retained": 0.3,
+        "demand_multiplier": 1.25,
+        "incident_cell": 27
+      },
+      "failures": {
+        "capacity_retained": 0.5,
+        "failure_fraction": 0.4,
+        "failure_steps": 36
+      },
+      "noisy": {
+        "capacity_retained": 0.5,
+        "speed_noise": 3.0,
+        "relative_flow_noise": 0.05
+      }
+    },
+    "assessment_seeds": [
+      2909,
+      3253,
+      4001
+    ],
+    "patterns": [
+      "uniform_half",
+      "central_half_corridor",
+      "incident_rectangle_120min",
+      "network_missing_45min"
+    ],
+    "pattern_scope": "Own fixed clock/geometry masks only; not official R3 or hidden-instance reconstruction",
+    "target": "Eligible cells inside pattern; all pattern numeric observations withheld before input construction",
+    "selection": "None. Same A33 source-cal checkpoints and fixed .5 interpolation blends as B07.",
+    "quality_profile_occupancy": "Same filtered inputs, geometry-only profile and unavailable occupancy as B07",
+    "final_seeds_generated": false,
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null
+  }
+}

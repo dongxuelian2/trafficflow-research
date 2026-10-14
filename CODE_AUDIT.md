@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+本轮 A49 的14日cal独立输入重建及部署预测通过；B08独立进程72组完全相同，B09扩展参数的72组原默认对照也精确相同。适配器默认保留既有temporal-first语义，新 weighted 选项按StateFeatures的权重构造，手工 age/space 案例及缺失prior回退测试通过。CTM历史profile只使用独立 dev eligible observations，未向网络输入latent density/flux，未作occupancy合成。
+
+Zero-aware MAP 与独立 SLSQP/903-path augmented TRF-LSMR 对照通过；Huber核验原目标KKT而非代理二次目标。D12旧540评分逐项相同，1,350个assessment method/case完整。其保守规则在30份实际输入不触发，明确不视为实用增益。D13选择仅从development-only cache重算，三个新research seed与final seed及偏移不重叠，两种当前代码分支的预测SHA复跑相同；不提供未经验证的离散hurdle概率。
+
+完整K05只改70,708个OD path_flow；所有State/Queue和其他字段逐行相同，6,980,503行全覆盖。20个真实输入split-panel实际都是entropy，稀疏专家分支没有触发；正式分数未知，未上传。新raw JSON继续保留字节级SHA，旧已验证最佳文件未改。
+
 D11 读取十方向公开 path_set.csv 并逐 OD 分组，全部 max group size=1。D10 历史 route_choice_shift 标签的归一化 preference 完全抵消，是 lognormal .25 OD demand 扰动而非路径选择证据；原 JSON/生成器未改，仅由独立审计明确更正。两种真正新增失配的配对区间另算并仍跨零；报告不再把十个标签当十种独立生成分布。
 
 本轮参与 SHA 引用链的 JSON 采用局部 `.gitattributes -text` 保护，避免 Git 自动 CRLF/LF 转换改变报告校验值。旧 D08 和 replication-v4 manifest 仅把现有工作区原始字节保存进 Git，其 JSON 内容与旧 HEAD 相同；原模型与数字未改。新旧报告的 staged blob / 工作区字节对照另存 `ctm_od_report_bytes_v1.json`。该修复保障回放时的来源校验，不表示模型改进。
@@ -12,7 +18,7 @@ OD curvature 使用 measurement-space Woodbury，独立 path-space dense Hessian
 
 Entropy 双空间 Newton 与独立 path-space 优化器及大数消减 scalar oracle 通过对照。D06 的 69 个失败来自目标值浮点分辨率附近线搜索停滞；D07 出现一个新失败，D08 改用与误差预算匹配的 Newton decrement 后全部闭合。tol 2e−6 未放宽；生成器/种子/全局选择 gate 不变，Ridge 原分数完全相同，既有成功 entropy 分数漂移最多 2.32e−9。数值回归不等于独立泛化或正式 OD 成绩；约 99% 解变化在计数零空间。
 
-当前研究环境 **47 passed（12.36 秒）**，CPU **42 passed / 3 optional-Torch module skips（7.07 秒）**。A47 的独立 14 日 calibration 重建/预测也通过。Causal Queue 的 class-weight 修正是显式 flag，默认保留 C30 原行为。旧源代码和所有失败实验均在各自 start snapshot/报告中保留；后续源文件修复不改旧模型或提交。
+当前研究环境 **50 passed（10.25 秒）**，CPU **45 passed / 3 optional-Torch module skips（5.78 秒）**。A49 的独立 14 日 calibration 重建/预测也通过。Causal Queue 的 class-weight 修正是显式 flag，默认保留 C30 原行为。旧源代码和所有失败实验均在各自 start snapshot/报告中保留；后续源文件修复不改旧模型或提交。
 
 基准源码固定在 `15036c8`；正式提交 ref 57138874 回下载 SHA 与本地文件一致。官方代码为 `c88cddf533bbf0afa4ff1fc6c031d760a08e7a31`，2026-10-13 再次 ls-remote 核查仍为此版本。完整公开 Rules、Evaluation、Foundational Rules 与 Timeline 已读取并保存于 `data/published_competition_pages.json`。
 

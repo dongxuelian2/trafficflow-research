@@ -1,0 +1,29 @@
+{
+  "protocol_sha256": "805cba0168cb21caa4b9e8e353cc9ed9cbcdf8272113c15b1d085813ea0c50db",
+  "protocol": {
+    "id": "Local_OD_expert_control",
+    "baseline_ref": 57138874,
+    "baseline_formal_Total": 0.8294,
+    "baseline_sha256": "43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1",
+    "source_study_sha256": "fb498d45cd429198ead43aae29fbcccee0cd3c7962aa30154dd2729dbf3f741d",
+    "configuration": {
+      "fallback": "entropy",
+      "alternative": {
+        "path_cv": 0.75,
+        "scale_mode": "absolute",
+        "shrinkage": 1.0,
+        "noise_cv": 0.02,
+        "huber_delta": null
+      },
+      "threshold": 0.75
+    },
+    "changed_task": "ODME only",
+    "retained_components": "Original State and Queue; Physics derived from unchanged State",
+    "hypothesis": "Entropy resolves broad weak-prior mismatch; concentration-gated MAP handles sparse demand. Report actual branch selection on public inputs.",
+    "offline_evidence": "Nine known-truth distributions, five public corridor families, three new research seeds; still synthetic assumptions",
+    "formal_gain": null,
+    "formal_ODME": null,
+    "uploaded": false,
+    "platform_policy": "Local modeling only per latest user direction; this build has no upload/publish/push step"
+  }
+}

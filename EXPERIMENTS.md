@@ -2,6 +2,25 @@
 
 所有模拟指标、观测代理与正式 Kaggle 指标分别记录。失败实验不删除，既有模型与提交不覆盖。
 
+本轮完成 A48–A50、B08/B09、D12/D13，以及完整 LOCAL K05。正式 Total 仍 .82940，没有上传或替换正式最佳。
+
+| 编号 | 假设 / 对照 | 实测结果 | 资源 / 决策 |
+|---|---|---|---|
+| A48 | D7_I210_W 同秋季图缓存 | 92 fit / 14 cal / 14 assessment、81 nodes | 75.55 秒 CPU，输入与强基线 profile 匹配 |
+| A49 | 三架构与 full-label LGB 匹配 | cal 选 attention α=.5；State .927102→.933577；日均 CI [.004342,.006415] | 311.71 秒 GPU、288.65 MiB；14 日 cal standalone 重建通过 |
+| A50 | 公开 train 缺失段长度 | 三 cache R3 input p99=60min、target p99=25min | 仅 availability/mask；跨 panel 共 360 个文件不是独立 360 日 |
+| B08 | 四种自主连续缺失 × 六条件 × 三 seed | 插值 State：uniform .832553、半走廊 .711935、事故 120min .118663、全网45min .576647 | 4.86 秒；独立复跑 5.99 秒，全 72 case 精确相同 |
+| B09 | prior × interpolation 2×2，并检验 +1h 时钟 | 加权插值使 120min 缺失 .118663→.227091；prior-only 时钟偏移严重退化 | 26.59 秒 GPU；144 case、576 adapter 配置；无模型选择 |
+| D12 | 六 MAP/Huber 配置与可见 prior 规则 | 选相对 Gaussian cv=.25、η=0、threshold .75；旧 seed gain .004085，CI 为正 | 749.94 秒 CPU；额外 sparse penalty/Huber 未选；30 个赛事输入全部退回 Ridge |
+| D13 | entropy fallback + MAP 专家，开发缓存选定后开三个新 research seed | 九类模拟 .663559→.732618；gain CI [.052272,.086461]；最差类均值也正 | 89.52 秒 CPU；540 method cases 无失败；非 final / 正式测量 |
+| K05 | 完整 OD-only 本地控制 | 6,980,503 行；仅 70,708 OD 值改变；所有 State/Queue 字段不变 | 146.60 秒构建；全行独立 diff 通过；未上传，真实成绩未知 |
+
+D12 的 standalone 相对 Gaussian 还会在 missing-prior 与 group-biased 场景退化，不能按平均分直接替换所有方向。D13 只用开发案例选择了 absolute cv=.75/η=1 的稀疏分支；新 seed 平均 sparse ODME .653270→.765436，但当前 validation/private prior 浓度都不触发，K05 实际全为 entropy。旧 K01 正式失败仍是反证，新的模拟并不消除该风险。
+
+D13 新种子中14/270案例为负，最差 count_outliers .555405→.527118（−.028287），属于D7_I405_N、seed7001、entropy分支。误差审计另存，模型不根据已看案例改选；下一步应从开发端检验可见计数不一致特征及稳健 likelihood，而不是只优化均值。
+
+B08/B09 比较严格分离 target population：不同 missing pattern/时钟有不同 targets，不把它们的绝对分数差当同标签算法增益。B09 同场景 weighted vs temporal-first 是配对适配器对照；该加权方式本来就在生产 StateFeatures 中。历史 profile 仅使用 dev seeds 411/829/1201 的 eligible masked-observation 字段，全局按 288 slots/cell 聚合；六个 profile 元素没有观测而回退几何。场景共享噪声 RNG，不能把 36 个合成日当 36 个独立样本。
+
 本轮完成 A46/A47、B07 与独立进程复跑、D09 失败记录/D10 全量修复与覆盖率复核。没有模型晋级或新增正式成绩。开发和 assessment 的身份保留，最后独立模拟 seeds 仍未开启。
 
 | 编号 | 假设 / 对照 | 实测结果 | 资源 / 决策 |
