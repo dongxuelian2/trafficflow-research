@@ -7,6 +7,11 @@
 
 | 模型 | 证据集 | State / OD 指标 | Queue 指标 | Physics 证据 | 状态 |
 |---|---|---:|---:|---|---|
+| D12_I405_S 监督图模型 | A47 秋，同 full-LGB，cal 选 density α=.75 | .941872 vs .941500；gain .000371，日均 CI [−.000654,.004659] | 不适用 | increment proxy .741879 vs .758759 | 第四走廊族小收益未过 gate；14 日 standalone 核验通过 |
+| 固定半数图 State 混合 | B07 自主 CTM，三 seed/六条件/三缺失率 | half-density .864132 vs interpolation .853404；mild −.010945 | 未评估 | CTM-flux .332950 vs .358359 | 全 54 条件独立进程数值相同；不晋级生产 |
+| 固定纯图 State | 同 B07；geometry-only profile、无 occupancy | attention .848350；density .855957；插值 .853404 | 未评估 | density CTM-flux .327728 | 急降速改善、恢复速度恶化；不视为正式 Physics |
+| 熵点估计新失配 | D10/D11 两种真实新增失配，设置不变 | sparse-active .572888 vs Ridge .648198；两类 macro CI [−.016780,.051299] | 不适用 | 不适用 | 原 route-choice 标签实际为 demand 同类复核；稀疏失败，不晋级 |
+| 熵 Hessian/经验区间 | D10 210 开发案例校准、300 assessment 案例 | sparse raw coverage .03994，扩张 6.4025 后 .97659，宽度/平均真流量 3.051 | 不适用 | 不适用 | 仅边际经验覆盖；无 simultaneous/shift/posterior 保证 |
 | 三种子固定 State 组合 | A44 I5_N 秋；同三 seed full-LGB 组合对照 | **.951168 vs .942742**，日均 CI [.007304,.008681] | 不适用 | increment proxy .671424 vs .756319 | 14 个共享日；一个完整日 wrapper/load 核验；未扩展生产 |
 | 第三 seed 图注意力 | A41 I5_N 秋，seed 20261107 | **.950416 vs .942330**；日均 CI [.006530,.008567] | 不适用 | 观测增量代理，非正式 Physics | 14 日 cal standalone 复跑通过 |
 | 冬季图注意力 | A43 I405_N 冬，seed 20261013 | **.933986 vs .925958**；日均 CI [.007056,.009472] | 不适用 | increment proxy .726403 vs .765975 | 第二方向两季复核；尚无全网 gate |

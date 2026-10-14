@@ -4,3 +4,14 @@
 *.pdf binary
 *.zip binary
 vendor/official/** -text whitespace=cr-at-eol
+# These reports participate in immutable SHA chains. Preserve their exact bytes.
+reports/research/D08_entropy_OD_decrement_repair.json -text whitespace=cr-at-eol
+reports/research/model_artifacts_checkpoint_replication_v4.json -text whitespace=cr-at-eol
+reports/research/A4[67]_*.json -text whitespace=cr-at-eol
+reports/research/B07_*.json -text whitespace=cr-at-eol
+reports/research/D09_entropy_OD_uncertainty_mismatch*.json -text whitespace=cr-at-eol
+reports/research/D10_*.json -text whitespace=cr-at-eol
+reports/research/D11_*.json -text whitespace=cr-at-eol
+reports/research/ctm_od_*.json -text whitespace=cr-at-eol
+reports/research/model_artifacts_checkpoint_ctm_od_v*.json -text whitespace=cr-at-eol
+reports/research/research_checkpoint_ctm_od_v*.json -text whitespace=cr-at-eol

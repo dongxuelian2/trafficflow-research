@@ -2,6 +2,24 @@
 
 所有模拟指标、观测代理与正式 Kaggle 指标分别记录。失败实验不删除，既有模型与提交不覆盖。
 
+本轮完成 A46/A47、B07 与独立进程复跑、D09 失败记录/D10 全量修复与覆盖率复核。没有模型晋级或新增正式成绩。开发和 assessment 的身份保留，最后独立模拟 seeds 仍未开启。
+
+| 编号 | 假设 / 对照 | 实测结果 | 资源 / 决策 |
+|---|---|---|---|
+| A46 | D12_I405_S 同 autumn fold 的 masked graph cache | 92 fit / 14 cal / 14 assessment，44 nodes；full-LGB profile 和输入重建匹配 | 57.63 秒 CPU；缓存及 start snapshot 保留 |
+| A47 | 同强 LGB 的 geometry/attention/density 控制 | cal 选 density α=.75；State .941500 → .941872，gain .000371；日均 CI [−.000654,.004659] | 203.31 秒 GPU，179.63 MiB；未过 .002 gate，14 日 cal standalone 核验通过 |
+| B07 | A33 固定 checkpoint 在独立 CTM 的 54 条件 | interpolation .853404，pure attention .848350，density .855957，half-density .864132 | 7.79 秒 GPU、46.59 MiB；mild 退化、CTM-flux 诊断下降，不晋级 |
+| B07 repeat | 相同全部条件的独立进程复跑 | 所有 registered/input SHA/候选值/summary 完全一致 | 9.04 秒；3 seeds 而非 54 独立样本 |
+| D09 | 冻结点估计 + Hessian 区间/新失配 | 校准倍数 6.402476；汇总时 metadata 覆盖模型身份，assessment aggregate 未保存 | 失败源快照、seal、210 校准数组保留；不接受缺失/NaN 成绩 |
+| D10 | 仅修复 D09 元数据隔离/阶段保存 | 同 210 数组和倍数；旧 420 point scores 完全相同；600 assessment method cases、0 failures | 167.91 秒 CPU；模拟 sparse-active −.075310，原三登记条件 CI 跨零，不晋级 |
+| D11 | 先核对路径选择是否存在于公开 path set | 十方向全部 OD 对单路径；D10 route-choice 标签实际为既有 demand 扰动 | 2.24 秒 CPU；两类真正新分布 macro CI [−.016780,.051299]，不晋级 |
+
+D11 更正 D09/D10 生成标签的含义：`route_choice_shift` 是历史名称，singleton OD 下 preference 归一化抵消，因此不能称为新的路径选择分布。上表原“三个新分布”指三个登记条件；实际为两类新失配与一次既有 demand 分布复核。原指标未修改，九种实质生成分布对应十个历史标签。以后路径选择候选必须先证明公开资产有相同 OD 的可替代路径，或明示自主生成的替代路径实验范围。
+
+A47 消融保留原 cal 权重：geometry .940372、attention .941929、density .941872；未因 assessment 中 attention 略高而改选。B07 density 的急剧降速 target latent speed RMSE 28.969 → 18.243，但恢复 speed RMSE 22.827 → 25.351；795 / 788 是共享缺失率下的重复 target 计数，不是独立事件数。事故片段收益不能抵消 mild 或恢复失误。
+
+D10 empirical interval 的 raw coverage 在七个旧分布为 .3048–.7801，校准后 .9498–.9996；新区间宽度约真实平均路径流量的 2.54–3.45 倍。校准只改变诊断区间，不改变预测点。Sparse-active 的 .9766 边际覆盖率没有转成准确路径恢复或任何全路径覆盖保证。精确范围、所有 case 与失败原因见原 JSON；独立 dense Hessian inverse、equal-case calibration tests 核验数值。
+
 本轮完成 A40–A44、C31–C34、D06–D08。I5_N 三 seed 与 I405_N 两季的注意力收益均相对 full-label LGB 复核；三种子等权组合保留为开发模型。Queue 两季 cal-selected 波速图 CI 均跨零，不晋级。熵反演在同一生成分布的数值修复后通过模拟门槛，真实 OD 仍未知；原正式最佳不改变。
 
 | 编号 | 固定操作 / 对照 | 测量 | 资源 / 决策 |

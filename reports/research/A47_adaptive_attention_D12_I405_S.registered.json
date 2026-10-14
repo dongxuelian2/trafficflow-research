@@ -1,0 +1,45 @@
+{
+  "protocol_sha256": "f9f872fc0912b0763cf39534adb377ace911bff55615dadad59844fea85911fb",
+  "protocol": {
+    "id": "Adaptive_attention_strong_State_control",
+    "panel": "D12_I405_S",
+    "fold": "rolling_autumn",
+    "cache": "artifacts/research/A46_D12_I405_S_autumn_cache",
+    "baseline_file": "artifacts/research/A31_State_budget_remaining_directions/D12_I405_S/full.pkl",
+    "baseline_sha256": "ec146db7e1698908ae7aefe8b664aa99b87cea935c2336ed33daa68a013f24aa",
+    "seed": 20261013,
+    "architectures": [
+      "graph_geometry",
+      "adaptive_attention",
+      "adaptive_attention_density"
+    ],
+    "hidden": 48,
+    "heads": 2,
+    "epochs": 24,
+    "steps_per_epoch": 120,
+    "batch_size": 4,
+    "patch_steps": 64,
+    "optimizer": "AdamW lr=.001 weight_decay=.0001 clip_norm=1",
+    "loss": "Equal-patch channel-scaled RMSE; fit regimes sampled uniformly",
+    "density_weight": 0.01,
+    "selection": "Calibration State every four epochs; architecture/blend chosen on calibration only",
+    "blend_grid": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "labels": "All fit dates of public train available to both neural methods and full-label LGB; sampled patches repeat targets.",
+    "matched_ablation": "Same patch RNG, width, optimizer and training budget; geometry graph control lacks adaptive attention",
+    "public_references": [
+      "https://arxiv.org/abs/2308.10425",
+      "https://docs.pytorch.org/docs/2.8/generated/torch.nn.MultiheadAttention.html"
+    ],
+    "independent_implementation": "FD geometry conditioning and topology relation biases; no third-party source, weights or predictions",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null,
+    "assessment_status": "Previously inspected public-train development dates; not an untouched final test"
+  }
+}

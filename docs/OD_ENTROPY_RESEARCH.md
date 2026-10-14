@@ -18,3 +18,28 @@ D06 的 69 个失败已保留。精度附近线搜索停滞的真实案例 trace
 ```
 
 该脚本只生成本地研究报告，不产生正式参赛记录。下一步应扩大新的先验/路径选择失配分布，验证不确定性和未计数负载稳定性，再考虑完整独立候选。
+
+## D09/D10：区间与新失配证据
+
+**D11 更正：下面的 route-choice 历史标签实际是 OD demand 扰动。** 十方向全部公开 OD 对只有一条 path，preference 归一化必然抵消；该条件与 D08 independent_paths 是同类生成分布，不能当替代路径选择证据。全部 path-set SHA/分组计数见 D11 审计。原数字和源快照保留，两种真正新失配的 macro gain .016966、CI [−.016780,.051299]，仍不晋级。
+
+固定 D08 τ=.05/floor20，不按新区间或新真值重调点预测。局部 Hessian 为 `diag(1/f)+A.T diag(1/variance) A`。令 `D=diag(f)`，其逆为 `D-D A.T (diag(variance)+A D A.T)^-1 A D`；按路径 block 求对角避免 paths-square 内存。数值测试与独立完整 Hessian 求逆匹配；这只是优化曲率，KL 权重和 count variance 不保证反映真实生成分布。
+
+七种旧分布、三个 development seed、十方向的 210 个案例，校准一个 >=1 倍数，使每种开发分布的 equal-case 平均 path coverage 达到 .95。倍数为 **6.402476365**，在生成 assessment 之前封存；不是 conformal coverage 或正式置信区间。最终 simulation seeds 尚未使用。
+
+| 新失配 | 模拟 Ridge ODME | 模拟 entropy ODME | raw interval coverage | calibrated coverage | width / mean true flow |
+|---|---:|---:|---:|---:|---:|
+| 历史 route_choice_shift（OD demand） | .831746 | .861299 | .747646 | .999109 | 2.542238 |
+| 15% active sparse paths + spurious prior | .648198 | .572888 | .039943 | .976592 | 3.051320 |
+| 5% count outliers | .474949 | .584191 | .324027 | .966035 | 3.446678 |
+
+原三个登记条件的 macro gain .021162，family/seed CI [−.003262,.045799]；D11 只汇总两种真实新增失配的 macro gain .016966、CI [−.016780,.051299]。稀疏场景显著退化。覆盖率提升依赖很宽的区间，后两种分布没有任何全部路径同时覆盖的案例；不能视为 OD 可识别或准确恢复的证据。真实隐藏路径和 attraction truth 仍未知。
+
+D09 的 flat metadata `method` 覆盖模型身份导致汇总失败、assessment 数值未写出，失败快照/封存区间/数组保留。D10 只修复记录隔离和阶段保存。两个运行 210 个 calibration arrays 完全相同、同一倍数；旧 D08 的 420 个 Ridge/entropy point scores 逐项相同。全部 600 个 method/case 0 solver failures，验证报告另存。
+
+```powershell
+.\.venv-research\Scripts\python.exe scripts/entropy_od_uncertainty.py --frozen-study reports/research/D08_entropy_OD_decrement_repair.json --output reports/research/D10_new_repeat.json
+.\.venv-research\Scripts\python.exe scripts/verify_entropy_uncertainty.py --source reports/research/D10_new_repeat.json --previous-study reports/research/D08_entropy_OD_decrement_repair.json --failed-directory artifacts/research/D09_entropy_OD_uncertainty_mismatch --output reports/research/D10_new_verification.json
+```
+
+下一步由 development 数据选择能保留稀疏路径的先验与计数噪声模型，再作完整十种生成分布对照；不可针对已查看的某个 assessment 单独调 floor。原正式 Ridge 提交保持不变。

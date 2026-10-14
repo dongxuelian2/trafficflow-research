@@ -1,0 +1,49 @@
+{
+  "protocol_sha256": "008d99d7abd38851a174ea4929ab6e65d144cd352560c339f2f0f45c30303eef",
+  "protocol": {
+    "id": "Frozen_entropy_OD_curvature_and_new_mismatch",
+    "frozen_study_sha256": "e27bd8f952d4c702abf9f2531d4896a71d1fe8d95d741ef10db7ab10720686ea",
+    "fixed_point_settings": {
+      "regularization": 0.05,
+      "prior_floor": 20.0
+    },
+    "development_regimes": [
+      "independent_paths",
+      "hierarchical_demand",
+      "prior_total_bias",
+      "absolute_additive_prior_noise",
+      "lognormal_prior_noise",
+      "missing_prior_paths",
+      "group_biased_prior"
+    ],
+    "new_assessment_regimes": [
+      "route_choice_shift",
+      "sparse_active_paths",
+      "count_outliers"
+    ],
+    "development_seeds": [
+      411,
+      829,
+      1201
+    ],
+    "assessment_seeds": [
+      2909,
+      3253,
+      4001
+    ],
+    "final_seeds_generated": false,
+    "point_model_selection": "None: retain D08 development-sealed parameters; no adjustment to new regimes",
+    "interval_calibration": "One global multiplier >=1, smallest with >=.95 mean path coverage in every development regime; equal generated-case weights",
+    "curvature": "Exact local KL Hessian inverse diagonal via Woodbury; no posterior or conformal guarantee",
+    "new_regime_generator": {
+      "route_choice_shift": "OD-group demand lognormal .25; path-preference lognormal 1.5",
+      "sparse_active_paths": "Gamma .7 truth with 15% active paths; diffuse positive spurious prior",
+      "count_outliers": "Gamma .7 truth/additive prior; 5% count outliers multiplied uniformly .5..1.5"
+    },
+    "truth_scope": "Own generated truth and public train incidence/prior only; no public_reference",
+    "assessment_scope": "Old seeds used for other research; new generating regimes, not an untouched final test",
+    "formal_ODME": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "status": "failed_after_all_panel_assessment_loops_before_result_write",
+  "terminal_session_id": 93303,
+  "terminal_exit_code": 1,
+  "error": "ValueError: Incomplete family/seed paired evidence",
+  "cause": "Flat curvature metadata key method overwrote selected_entropy identity in assessment rows; empty candidate summaries emitted NaN warnings. No aggregate scores are accepted.",
+  "preserved_interval_calibration": {
+    "multiplier": 6.402476365230151,
+    "target_case_mean_path_coverage": 0.95,
+    "development_coverage_by_regime": {
+      "independent_paths": 0.9991971761280369,
+      "hierarchical_demand": 0.9997156194988973,
+      "prior_total_bias": 0.9986001652285369,
+      "absolute_additive_prior_noise": 0.9955819687720004,
+      "lognormal_prior_noise": 0.9500077593387153,
+      "missing_prior_paths": 0.9596260558750149,
+      "group_biased_prior": 0.9666976024982525
+    },
+    "n_calibration_cases": 210,
+    "scope": "Empirical equal-case development calibration, not exchangeable conformal coverage or a Kaggle confidence interval"
+  },
+  "seal_sha256": "31eb1a5144a396467aea571735b3ca18c80535ddf8dd3a945001fff6e73c3a5f",
+  "source_snapshot_sha256": "069bc5ea9df42feca90d2070fdcd5456c61bddbb55daa62a9277b86065cbfd2a",
+  "assessment_values_retained": false,
+  "limitation": "All panel loops printed complete but in-memory assessment rows were not saved before the aggregation failure. Runtime and original assessment scores unknown.",
+  "repair": "Curvature metadata nested and renamed; fixed identity keys placed last; per-stage progress written. Re-run same frozen settings/seeds/generators under D10.",
+  "formal_ODME": null,
+  "formal_Total": null,
+  "uploaded": false
+}

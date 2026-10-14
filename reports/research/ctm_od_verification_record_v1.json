@@ -1,0 +1,25 @@
+{
+  "created_UTC": "2026-10-14T05:56:57.046616+00:00",
+  "tests": {
+    "research": {
+      "passed": 47,
+      "seconds": 12.36,
+      "command": ".venv-research/Scripts/python.exe -m pytest -q --basetemp E:/ieee/.cache/pytest_ctm_uncertainty_phase_research"
+    },
+    "CPU": {
+      "passed": 42,
+      "skipped_optional_torch_modules": 3,
+      "seconds": 7.07,
+      "command": ".venv-repro/Scripts/python.exe -m pytest -q --basetemp E:/ieee/.cache/pytest_ctm_uncertainty_phase_cpu"
+    },
+    "scope": "Observed terminal test results; meaningful adapter contamination, independent Hessian inverse and equal-case calibration checks added."
+  },
+  "compileall": "src/scripts/tests completed; checkpoint writer compiled separately after creation",
+  "ctm_independent_verification_sha256": "b6d79fec0e21e96532db0a79f60a7b7d6065bdbd2acd504dc6416e6844efc20a",
+  "OD_independent_verification_sha256": "065c2d4f92412c147bceac2090f3a707d02fc185cb47927d2a4f11371ba4bd3f",
+  "A47_deployment_verification_sha256": "2e68d85d84ceec418de9089f19bb442aade86de2dc7e8c3a54a235d3074b2301",
+  "A47_deployable_model_sha256": "a2793579775ab79b1614de6ba533d138d206484e3a4d5c91cebfb83e194d04a5",
+  "formal_best_submission_rehashed": true,
+  "formal_Kaggle_queried_or_uploaded_this_phase": false,
+  "limitations": "Automated tests and numerical replays do not prove hidden competition performance."
+}

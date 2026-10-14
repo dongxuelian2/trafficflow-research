@@ -1,0 +1,374 @@
+{
+  "source_sha256": "05f74f3df22608f54a351bc0b87171719f0d820df4316c7b9ebb5266b195a4e6",
+  "repeat_sha256": "0a31cd06dddbbee6000470bb5faa3f9c668103ae7dc2ee2d9af05551f610d5c7",
+  "independent_process_registered_rows_summary_exact": true,
+  "n_scenarios": 54,
+  "max_conservation_error_vehicles": 6.501466032204917e-13,
+  "comparison": {
+    "interpolation": {
+      "seed_macro_gain": 0.0,
+      "individual_seed_macro_gains": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "nominal_seed_bootstrap_ci95": [
+        0.0,
+        0.0
+      ],
+      "n_seed_clusters": 3,
+      "scope": "Only three seeds and fixed six scenarios; masks share truth. Limited synthetic evidence, not 54 independent samples or a Kaggle CI."
+    },
+    "adaptive_attention": {
+      "seed_macro_gain": -0.005054616051288452,
+      "individual_seed_macro_gains": [
+        -0.00187832593638103,
+        -0.005078566988499487,
+        -0.00820695522898484
+      ],
+      "nominal_seed_bootstrap_ci95": [
+        -0.00820695522898484,
+        -0.00187832593638103
+      ],
+      "n_seed_clusters": 3,
+      "scope": "Only three seeds and fixed six scenarios; masks share truth. Limited synthetic evidence, not 54 independent samples or a Kaggle CI."
+    },
+    "adaptive_attention_density": {
+      "seed_macro_gain": 0.0025526361005646296,
+      "individual_seed_macro_gains": [
+        0.004938777074517151,
+        0.0037559860641010034,
+        -0.0010368548369242652
+      ],
+      "nominal_seed_bootstrap_ci95": [
+        -0.0010368548369242652,
+        0.004938777074517151
+      ],
+      "n_seed_clusters": 3,
+      "scope": "Only three seeds and fixed six scenarios; masks share truth. Limited synthetic evidence, not 54 independent samples or a Kaggle CI."
+    },
+    "half_interpolation_adaptive_attention": {
+      "seed_macro_gain": 0.009722067002790302,
+      "individual_seed_macro_gains": [
+        0.011795641510663028,
+        0.009847410809023658,
+        0.0075231486886842185
+      ],
+      "nominal_seed_bootstrap_ci95": [
+        0.0075231486886842185,
+        0.011795641510663028
+      ],
+      "n_seed_clusters": 3,
+      "scope": "Only three seeds and fixed six scenarios; masks share truth. Limited synthetic evidence, not 54 independent samples or a Kaggle CI."
+    },
+    "half_interpolation_adaptive_attention_density": {
+      "seed_macro_gain": 0.010727644312322225,
+      "individual_seed_macro_gains": [
+        0.01214213644196018,
+        0.011398255047293328,
+        0.008642541447713167
+      ],
+      "nominal_seed_bootstrap_ci95": [
+        0.008642541447713167,
+        0.01214213644196018
+      ],
+      "n_seed_clusters": 3,
+      "scope": "Only three seeds and fixed six scenarios; masks share truth. Limited synthetic evidence, not 54 independent samples or a Kaggle CI."
+    },
+    "observation_oracle": {
+      "seed_macro_gain": 0.1465958212082027,
+      "individual_seed_macro_gains": [
+        0.150937597906866,
+        0.14199975764222958,
+        0.1468501080755125
+      ],
+      "nominal_seed_bootstrap_ci95": [
+        0.14199975764222958,
+        0.150937597906866
+      ],
+      "n_seed_clusters": 3,
+      "scope": "Only three seeds and fixed six scenarios; masks share truth. Limited synthetic evidence, not 54 independent samples or a Kaggle CI."
+    },
+    "latent_oracle": {
+      "seed_macro_gain": 0.09891942927333085,
+      "individual_seed_macro_gains": [
+        0.10323058448390886,
+        0.09423818610286408,
+        0.0992895172332196
+      ],
+      "nominal_seed_bootstrap_ci95": [
+        0.0942381861028641,
+        0.10323058448390886
+      ],
+      "n_seed_clusters": 3,
+      "scope": "Only three seeds and fixed six scenarios; masks share truth. Limited synthetic evidence, not 54 independent samples or a Kaggle CI."
+    }
+  },
+  "slices": {
+    "scenario": {
+      "failures": {
+        "interpolation": 0.8443438154044398,
+        "adaptive_attention": 0.8473048556073906,
+        "adaptive_attention_density": 0.8507676471548812,
+        "half_interpolation_adaptive_attention": 0.8586636584748146,
+        "half_interpolation_adaptive_attention_density": 0.8575636830461255,
+        "observation_oracle": 1.0,
+        "latent_oracle": 0.9653666563744263
+      },
+      "mild": {
+        "interpolation": 0.952470635435336,
+        "adaptive_attention": 0.8989297463349882,
+        "adaptive_attention_density": 0.9132757260208432,
+        "half_interpolation_adaptive_attention": 0.9361141540970126,
+        "half_interpolation_adaptive_attention_density": 0.9415255313982576,
+        "observation_oracle": 1.0,
+        "latent_oracle": 0.9664386434044074
+      },
+      "noisy": {
+        "interpolation": 0.7959762528391946,
+        "adaptive_attention": 0.812248072635069,
+        "adaptive_attention_density": 0.8131644505968103,
+        "half_interpolation_adaptive_attention": 0.816100155703882,
+        "half_interpolation_adaptive_attention_density": 0.8146050365344534,
+        "observation_oracle": 1.0,
+        "latent_oracle": 0.8917476960236623
+      },
+      "onset": {
+        "interpolation": 0.8453753986163334,
+        "adaptive_attention": 0.8514366105771152,
+        "adaptive_attention_density": 0.8587281933829166,
+        "half_interpolation_adaptive_attention": 0.8617432497178461,
+        "half_interpolation_adaptive_attention_density": 0.862046447132244,
+        "observation_oracle": 1.0,
+        "latent_oracle": 0.964306352081783
+      },
+      "severe_downstream": {
+        "interpolation": 0.8364778797849046,
+        "adaptive_attention": 0.8447975449891089,
+        "adaptive_attention_density": 0.8525339220729014,
+        "half_interpolation_adaptive_attention": 0.8531241904675074,
+        "half_interpolation_adaptive_attention_density": 0.8536640115683165,
+        "observation_oracle": 1.0,
+        "latent_oracle": 0.9629113607430129
+      },
+      "severe_upstream": {
+        "interpolation": 0.8457810906705753,
+        "adaptive_attention": 0.8353805462993814,
+        "adaptive_attention_density": 0.847270950125819,
+        "half_interpolation_adaptive_attention": 0.8530120663064628,
+        "half_interpolation_adaptive_attention_density": 0.8553862289453203,
+        "observation_oracle": 1.0,
+        "latent_oracle": 0.9631709397634771
+      }
+    },
+    "mask_rate": {
+      "0.2": {
+        "interpolation": 0.8684375083610674,
+        "adaptive_attention": 0.8522728381200202,
+        "adaptive_attention_density": 0.8635925753517019,
+        "half_interpolation_adaptive_attention": 0.8738277059898644,
+        "half_interpolation_adaptive_attention_density": 0.8761362488171479,
+        "observation_oracle": 1.0,
+        "latent_oracle": 0.9522523399080556
+      },
+      "0.3": {
+        "interpolation": 0.8611625935309501,
+        "adaptive_attention": 0.8525864038088629,
+        "adaptive_attention_density": 0.8615213694237939,
+        "half_interpolation_adaptive_attention": 0.8697245580836671,
+        "half_interpolation_adaptive_attention_density": 0.8711262603305622,
+        "observation_oracle": 1.0,
+        "latent_oracle": 0.9523536317503241
+      },
+      "0.5": {
+        "interpolation": 0.8306124344833745,
+        "adaptive_attention": 0.8401894462926437,
+        "adaptive_attention_density": 0.8427564999015902,
+        "half_interpolation_adaptive_attention": 0.8458264733102314,
+        "half_interpolation_adaptive_attention_density": 0.8451329601646486,
+        "observation_oracle": 1.0,
+        "latent_oracle": 0.9523648525370049
+      }
+    }
+  },
+  "latent_diagnostics": {
+    "target": {
+      "interpolation": {
+        "sum_target_counts_over_shared_masks": 250641,
+        "speed_rmse": 4.215475748692661,
+        "lane_flow_rmse": 81.35227044998055,
+        "density_rmse": 14.012492310228192
+      },
+      "adaptive_attention": {
+        "sum_target_counts_over_shared_masks": 250641,
+        "speed_rmse": 4.360000773918844,
+        "lane_flow_rmse": 70.2764816793061,
+        "density_rmse": 63.434554412638825
+      },
+      "adaptive_attention_density": {
+        "sum_target_counts_over_shared_masks": 250641,
+        "speed_rmse": 4.162670821500177,
+        "lane_flow_rmse": 68.71440577464895,
+        "density_rmse": 15.073650011216246
+      },
+      "half_interpolation_adaptive_attention": {
+        "sum_target_counts_over_shared_masks": 250641,
+        "speed_rmse": 3.7642879883450275,
+        "lane_flow_rmse": 73.92031969160712,
+        "density_rmse": 15.152538594477418
+      },
+      "half_interpolation_adaptive_attention_density": {
+        "sum_target_counts_over_shared_masks": 250641,
+        "speed_rmse": 3.7767433009030427,
+        "lane_flow_rmse": 73.86448003188984,
+        "density_rmse": 12.226602450004084
+      },
+      "observation_oracle": {
+        "sum_target_counts_over_shared_masks": 250641,
+        "speed_rmse": 1.5346970602670846,
+        "lane_flow_rmse": 28.359684298472146,
+        "density_rmse": 6.5077261490252365
+      },
+      "latent_oracle": {
+        "sum_target_counts_over_shared_masks": 250641,
+        "speed_rmse": 0.0,
+        "lane_flow_rmse": 0.0,
+        "density_rmse": 2.762717496553042e-15
+      }
+    },
+    "detector_failure": {
+      "interpolation": {
+        "sum_target_counts_over_shared_masks": 6804,
+        "speed_rmse": 14.217825266189587,
+        "lane_flow_rmse": 210.8578632890202,
+        "density_rmse": 41.48883635209913
+      },
+      "adaptive_attention": {
+        "sum_target_counts_over_shared_masks": 6804,
+        "speed_rmse": 12.694620527712013,
+        "lane_flow_rmse": 178.1444692547295,
+        "density_rmse": 35.276583809936156
+      },
+      "adaptive_attention_density": {
+        "sum_target_counts_over_shared_masks": 6804,
+        "speed_rmse": 12.09812329025757,
+        "lane_flow_rmse": 176.5273624641101,
+        "density_rmse": 31.65608632642911
+      },
+      "half_interpolation_adaptive_attention": {
+        "sum_target_counts_over_shared_masks": 6804,
+        "speed_rmse": 13.076452068310944,
+        "lane_flow_rmse": 192.42707422473575,
+        "density_rmse": 37.455344391770886
+      },
+      "half_interpolation_adaptive_attention_density": {
+        "sum_target_counts_over_shared_masks": 6804,
+        "speed_rmse": 12.799900933705002,
+        "lane_flow_rmse": 192.25256701603362,
+        "density_rmse": 37.42300048644011
+      },
+      "observation_oracle": {
+        "sum_target_counts_over_shared_masks": 6804,
+        "speed_rmse": 1.3600288458053609,
+        "lane_flow_rmse": 25.823088631909453,
+        "density_rmse": 4.763864662004142
+      },
+      "latent_oracle": {
+        "sum_target_counts_over_shared_masks": 6804,
+        "speed_rmse": 0.0,
+        "lane_flow_rmse": 0.0,
+        "density_rmse": 3.808984440570635e-15
+      }
+    },
+    "five_minute_drop_target": {
+      "interpolation": {
+        "sum_target_counts_over_shared_masks": 795,
+        "speed_rmse": 28.96903163004852,
+        "lane_flow_rmse": 269.8238699560042,
+        "density_rmse": 94.11135803239462
+      },
+      "adaptive_attention": {
+        "sum_target_counts_over_shared_masks": 795,
+        "speed_rmse": 22.93058451923002,
+        "lane_flow_rmse": 271.0971208608682,
+        "density_rmse": 66.80969383725713
+      },
+      "adaptive_attention_density": {
+        "sum_target_counts_over_shared_masks": 795,
+        "speed_rmse": 18.242691431371096,
+        "lane_flow_rmse": 232.96111983161765,
+        "density_rmse": 57.895449433369684
+      },
+      "half_interpolation_adaptive_attention": {
+        "sum_target_counts_over_shared_masks": 795,
+        "speed_rmse": 25.20817036127943,
+        "lane_flow_rmse": 266.0138155758744,
+        "density_rmse": 81.6939629933929
+      },
+      "half_interpolation_adaptive_attention_density": {
+        "sum_target_counts_over_shared_masks": 795,
+        "speed_rmse": 22.766665633743106,
+        "lane_flow_rmse": 249.06917707871776,
+        "density_rmse": 78.73880216145963
+      },
+      "observation_oracle": {
+        "sum_target_counts_over_shared_masks": 795,
+        "speed_rmse": 1.583595599090272,
+        "lane_flow_rmse": 34.26401517731741,
+        "density_rmse": 15.364676554098795
+      },
+      "latent_oracle": {
+        "sum_target_counts_over_shared_masks": 795,
+        "speed_rmse": 0.0,
+        "lane_flow_rmse": 0.0,
+        "density_rmse": 8.281681366133263e-15
+      }
+    },
+    "recovery_target": {
+      "interpolation": {
+        "sum_target_counts_over_shared_masks": 788,
+        "speed_rmse": 22.826924253473866,
+        "lane_flow_rmse": 387.3608421889732,
+        "density_rmse": 36.40456272497699
+      },
+      "adaptive_attention": {
+        "sum_target_counts_over_shared_masks": 788,
+        "speed_rmse": 22.035768176007842,
+        "lane_flow_rmse": 230.60010067497223,
+        "density_rmse": 38.29575464561591
+      },
+      "adaptive_attention_density": {
+        "sum_target_counts_over_shared_masks": 788,
+        "speed_rmse": 25.35071608528923,
+        "lane_flow_rmse": 272.19283736330027,
+        "density_rmse": 38.96041935501812
+      },
+      "half_interpolation_adaptive_attention": {
+        "sum_target_counts_over_shared_masks": 788,
+        "speed_rmse": 21.477802768509186,
+        "lane_flow_rmse": 295.45767210722505,
+        "density_rmse": 31.429255073254364
+      },
+      "half_interpolation_adaptive_attention_density": {
+        "sum_target_counts_over_shared_masks": 788,
+        "speed_rmse": 23.11585658515142,
+        "lane_flow_rmse": 325.0699087564237,
+        "density_rmse": 32.35116314208993
+      },
+      "observation_oracle": {
+        "sum_target_counts_over_shared_masks": 788,
+        "speed_rmse": 1.4682861114911008,
+        "lane_flow_rmse": 43.70768103898589,
+        "density_rmse": 4.154345334110269
+      },
+      "latent_oracle": {
+        "sum_target_counts_over_shared_masks": 788,
+        "speed_rmse": 0.0,
+        "lane_flow_rmse": 0.0,
+        "density_rmse": 5.137782357138575e-15
+      }
+    }
+  },
+  "formal_Total": null,
+  "decision": "No synthetic-assessment model selection. Positive average mixes lose mild-case State and true CTM-flux diagnostic; require real-train and latent/noise controls before any production change."
+}

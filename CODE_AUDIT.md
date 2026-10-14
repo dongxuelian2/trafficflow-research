@@ -1,10 +1,18 @@
 # 当前实现与评分接口审计
 
+D11 读取十方向公开 path_set.csv 并逐 OD 分组，全部 max group size=1。D10 历史 route_choice_shift 标签的归一化 preference 完全抵消，是 lognormal .25 OD demand 扰动而非路径选择证据；原 JSON/生成器未改，仅由独立审计明确更正。两种真正新增失配的配对区间另算并仍跨零；报告不再把十个标签当十种独立生成分布。
+
+本轮参与 SHA 引用链的 JSON 采用局部 `.gitattributes -text` 保护，避免 Git 自动 CRLF/LF 转换改变报告校验值。旧 D08 和 replication-v4 manifest 仅把现有工作区原始字节保存进 Git，其 JSON 内容与旧 HEAD 相同；原模型与数字未改。新旧报告的 staged blob / 工作区字节对照另存 `ctm_od_report_bytes_v1.json`。该修复保障回放时的来源校验，不表示模型改进。
+
+本轮新增 adapter 以明确参数接口排除 CTM latent truth/目标标签，质量不合格值扰动不能进入输入；occupancy 缺失不从 density 合成。B07 两个独立进程的全部 54 case 数值相同。三缺失率共享真值，bootstrap 仅以三个 seed 为单位。两种自主 flux contract 和 target-only anchoring 保留，不冒充官方边界。
+
+OD curvature 使用 measurement-space Woodbury，独立 path-space dense Hessian inverse 对照通过；经验区间只校准统一尺度，未改点预测。D09 曲率 metadata 的 method 覆盖模型身份导致汇总失败，源快照及 seal 保留；D10 已将诊断嵌套、固定身份字段放在最终记录层、增加阶段保存和完整唯一键检查。210 calibration arrays 精确复现，旧 420 point scores 漂移为零，600 assessment method cases 全覆盖、0 optimizer failures。区间宽、稀疏预测差的负面结果公开保留；不宣称后验可靠性。
+
 本轮新增核验：六个 adaptive State 的独立 14 日 calibration 重建/预测均通过；A44 各成员在所有 cal/assessment 日复现，组合 wrapper/save/reload 只额外核验一个完整 assessment 日，不能把它写成组合的完整独立训练。Queue 原树在 C31–C34 的相同事件上逐窗复现；所有 NN 输入均来自 T 及此前一小时，波速图只用公开几何。
 
 Entropy 双空间 Newton 与独立 path-space 优化器及大数消减 scalar oracle 通过对照。D06 的 69 个失败来自目标值浮点分辨率附近线搜索停滞；D07 出现一个新失败，D08 改用与误差预算匹配的 Newton decrement 后全部闭合。tol 2e−6 未放宽；生成器/种子/全局选择 gate 不变，Ridge 原分数完全相同，既有成功 entropy 分数漂移最多 2.32e−9。数值回归不等于独立泛化或正式 OD 成绩；约 99% 解变化在计数零空间。
 
-当前研究环境 **43 passed（11.07 秒）**，CPU **38 passed / 3 optional-Torch module skips（6.51 秒）**。Causal Queue 的 class-weight 修正是显式 flag，默认保留 C30 原行为。旧源代码和所有失败实验均在各自 start snapshot/报告中保留；后续源文件修复不改旧模型或提交。
+当前研究环境 **47 passed（12.36 秒）**，CPU **42 passed / 3 optional-Torch module skips（7.07 秒）**。A47 的独立 14 日 calibration 重建/预测也通过。Causal Queue 的 class-weight 修正是显式 flag，默认保留 C30 原行为。旧源代码和所有失败实验均在各自 start snapshot/报告中保留；后续源文件修复不改旧模型或提交。
 
 基准源码固定在 `15036c8`；正式提交 ref 57138874 回下载 SHA 与本地文件一致。官方代码为 `c88cddf533bbf0afa4ff1fc6c031d760a08e7a31`，2026-10-13 再次 ls-remote 核查仍为此版本。完整公开 Rules、Evaluation、Foundational Rules 与 Timeline 已读取并保存于 `data/published_competition_pages.json`。
 

@@ -2,6 +2,16 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**D11 语义审计更正：十方向每个公开 OD 对均只有一条 path。** D10 历史标签 `route_choice_shift` 中的 preference 归一化会完全抵消，实际只生成 lognormal .25 的 OD 需求扰动，与既有 independent_paths 同类；不构成路径选择证据。原报告、数值和源快照保留，下面“三个登记条件”的区间含一个同类复核。只汇总真正新增的 sparse-active / count-outliers 两类，模拟 macro gain **.016966**、family/seed CI **[−.016780,.051299]**，仍跨零。`reports/research/D11_public_OD_path_choice_audit.json` 记录十份公开 path-set SHA 和所有 OD 分组数量；没有访问隐藏资源。
+
+**本轮完成独立 CTM、OD 不确定性及第四走廊族 State 复核，均保留局限和失败。** A47 D12_I405_S 秋季仅按 cal 选 density-attention α=.75；相对 full-label LGB，assessment State **.941500 → .941872**，pooled gain **.000371**。14 日的日均 gain .002002，CI **[−.000654,.004659]**；日均与 pooled 指标不同，不能换用前者通过 .002 的晋级门槛。目标对密度增量代理 .758759 → .741879，真实 Physics 未知；14 日 standalone cal 重建及原三架构消融完成，暂不晋级该方向。
+
+B07 在独立 CTM 的 54 组条件中，统一屏蔽质量不合格观测；固定 interpolation / attention / density-attention 的 observation State 均值为 **.853404 / .848350 / .855957**。固定半数 density 混合为 **.864132**，但 mild 场景 **.952471 → .941526**、CTM-flux 诊断 **.358359 → .332950**，因此平均 State 改善不是守恒收益。独立进程复跑全部 protocol、input SHA、候选数值和汇总逐项相同。只有三个 seed，缺失率共享真值；不把 54 组视为独立样本，不与 B01 的不同质量过滤直接比较。详见 `docs/CTM_ADAPTIVE_RESEARCH.md`。
+
+D10 固定 D08 τ=.05/floor20，采用七种旧分布的 210 个开发案例，只校准一个区间倍数 **6.402476**。原始曲率 coverage 在 sparse-active 新分布仅 **.039943**；校准后 .976592，却以约 **3.051 倍真实平均路径流量**的平均区间宽度为代价，并无全路径同时覆盖。新稀疏场景的模拟 ODME **Ridge .648198 vs entropy .572888**，退化 **.075310**；历史名 route_choice_shift 的 OD 需求扰动 .831746 → .861299，count outliers .474949 → .584191。三个原登记条件综合 gain CI **[−.003262,.045799]**，其中只有两类是真正新增分布；不能推广为稳定独立增益。全部 600 个方法/场景完成、0 optimizer failures；旧 420 个点估计评分逐项相同，校准数组与 D09 原失败运行的 210 份逐元素相同。D09 的模型身份字段覆盖导致汇总失败已单独保留；D10 修复记录隔离，未重调生成器、参数或校准规则。
+
+曲率 Hessian 逆矩阵只提供优化几何，不是已验证 posterior；经验边际覆盖率也不保证新的分布或每条路径同时覆盖。B07、D10 均为自主模拟，不是组织方生成器或正式 Kaggle 测量。当前环境 **47 tests passed / CPU 42 passed、3 optional-Torch module skips**；final simulator seeds 7907/8017/9109 尚未生成。按用户指示，本轮只有本地模型、报告和 Git 归档，不处理发布、推送或正式上传；最佳完整提交保持原版本。
+
 本人提交 ref `57138874`，2026-10-13 09:53:40 UTC，状态 COMPLETE。回下载文件与本地 `artifacts/submission_best/submission.csv` SHA-256 完全相同：`43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。四个正式分项仍未知，不能从 Total 唯一反推。
 
 基准提交、模型、配置和代码 `15036c8` 已独立冻结，共 106 文件、712,127,414 bytes。详见 `reports/research/baseline_57138874_frozen.json`。本地最佳候选仍保留原文件；任何新候选另存目录。

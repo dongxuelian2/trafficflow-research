@@ -1,0 +1,94 @@
+{
+  "protocol_sha256": "7f9b1a3ce2966018b7ecb8d9aa302432d4445dc635c7b87ad9d7f0fe6cc4b066",
+  "protocol": {
+    "id": "Frozen_adaptive_State_independent_CTM_stress",
+    "source_panel": "D12_I5_N",
+    "source_report_sha256": "71e9a11c516026738d9df49bf6e3eed884a71743ced8df6cc8e64143f08c6737",
+    "checkpoint_sha256": {
+      "adaptive_attention": "b8f70fa0d0c2b411d7779a9de6fa1269b56d715b7374ce9a34bdd0824077b5e7",
+      "adaptive_attention_density": "2ce4a2f9a2671710b502764f93728268d9934823e5fbacecc563d9f2a3f825c0"
+    },
+    "seeds": [
+      2909,
+      3253,
+      4001
+    ],
+    "final_seeds_generated": false,
+    "cases": {
+      "mild": {
+        "capacity_retained": 0.85,
+        "demand_multiplier": 0.9,
+        "incident_cell": 8,
+        "failure_fraction": 0.0
+      },
+      "onset": {
+        "capacity_retained": 0.5,
+        "demand_multiplier": 1.1,
+        "incident_cell": 20
+      },
+      "severe_upstream": {
+        "capacity_retained": 0.3,
+        "demand_multiplier": 1.25,
+        "incident_cell": 8
+      },
+      "severe_downstream": {
+        "capacity_retained": 0.3,
+        "demand_multiplier": 1.25,
+        "incident_cell": 27
+      },
+      "failures": {
+        "capacity_retained": 0.5,
+        "failure_fraction": 0.4,
+        "failure_steps": 36
+      },
+      "noisy": {
+        "capacity_retained": 0.5,
+        "speed_noise": 3.0,
+        "relative_flow_noise": 0.05
+      }
+    },
+    "base": {
+      "seed": 0,
+      "cells": 32,
+      "days": 2,
+      "length_km": 0.75,
+      "lanes": 5.0,
+      "free_speed": 117.5,
+      "capacity": 10523.999999999998,
+      "jam_density": 500.0,
+      "demand_multiplier": 1.0,
+      "incident_cell": 20,
+      "incident_start_hour": 8.0,
+      "incident_hours": 1.5,
+      "capacity_retained": 0.45,
+      "speed_noise": 1.0,
+      "relative_flow_noise": 0.015,
+      "failure_fraction": 0.1,
+      "failure_steps": 18,
+      "mask_rate": 0.5
+    },
+    "mask_rates": [
+      0.2,
+      0.3,
+      0.5
+    ],
+    "quality_policy": "All candidate numeric inputs filter quality-ineligible values; differs from B01",
+    "profile": "Geometry only vf and .4 lane capacity; no simulator-truth profile",
+    "occupancy": "Unavailable, zero value and availability. Never constructed from latent density.",
+    "methods": [
+      "interpolation",
+      "adaptive_attention",
+      "adaptive_attention_density",
+      "half_interpolation_adaptive_attention",
+      "half_interpolation_adaptive_attention_density",
+      "observation_oracle",
+      "latent_oracle"
+    ],
+    "inference": "First 288 and remaining 289 snapshots in separate daily grids, constant public FD and directed cell chain",
+    "selection": "None; all fixed source-cal-selected checkpoints and equal .5 blends evaluated without simulator retuning",
+    "scope": "Own Godunov simulator, not organizer generator; FD snapshot flow differs from interval CTM flux",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null
+  }
+}
