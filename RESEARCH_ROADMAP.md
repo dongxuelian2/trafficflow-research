@@ -2,6 +2,10 @@
 
 目标为可复现的正式 Kaggle **0.95000+**；当前正式 **0.82940**。不将阶段性较低分数作为终点。
 
+C42–C48 的 12 个配对模型否定了“直接加 λ=.25 窗口 IoU surrogate 即可稳定改善”的当前设计：两季两 optimizer seed 的 primary 均无可靠新收益，部分有明确代价。暂不扩张这一固定 loss/旧 Brier-checkpoint 网格。C46 的原 seed Lovász α.25 次要正例不能按 assessment 晋级；另一个 seed 没有复现。下一步可封存跨种子平均概率和校准选择的不确定性规则，先与同数据的多 seed BCE 组合比较，再做跨方向；不将多模型或单个正 CI 作为成功标准。
+
+C44/C45 在实际公开 TRAIN 窗口发现 1/40 onset 没有有限速度阈值正例，质量过滤不是原因。故观测正例 sampler 的缺口已有公开实例，仍不能识别潜在 queue_true。优先用独立 CTM 的已知 latent/带噪观测作事件采样、标签阈值和未来可用率联合诊断；显式分离观察标签、latent 标签和 scorer mask。允许历史估计未知未来可用率，禁止把实际 future mask 放入预测。最终模拟 seeds 仍不生成；原 .82940/K06 冻结，平台按用户指示暂缓。
+
 C38–C41已完成正确全域calibration、时间约束before/after的独立对照、可部署模型及完整LOCAL K06。两季选择均force=false，时序修正gain为0；不要继续扫同一threshold网格。模型与tree的proxy gain仍CI跨零，保持一个fit seed的研究候选，不推广生产、不上传K06。
 
 下一轮优先检验已发布TRAIN窗口及rolling历史对当前观测正例采样的偏差，并增加跨方向/新fit seed。C40的已知真值模拟表明条件化scored-positive会改变nonempty评价，但不能推断实际组织方附加采样规则。可比较事件发生/传播范围和联合概率模型，明确未知未来质量仅可用历史估计，真实future eligibility不得进入推断。所有新概率方法必须先在已知真值模拟与同一完整域tree对照，再进行合法观测proxy验证。

@@ -74,3 +74,10 @@ A33–A36：可变节点的 FD 几何条件与拓扑偏置图注意力通过形�
 K03/K04 各 6,980,503 行严格自然 key 覆盖通过，独立 streaming diff 同时验证 task、数值字段、方向与 master-key 身份。只有 I5_N 的 1,131,560 State rows 改变；原 Queue/OD 文件 SHA 相同，其他 State 方向字段逐行相同。不是全量独立训练复現或正式成绩验证。A38 初版 runtime 的 `gpu_used=false` 是调用 evidence() 时漏传参数，不能用它判断设备或 GPU 峰值；数值与部署验证不受影响。脚本现在记录实际 CUDA availability，A39/生产候选记录为 true；A38 原记录与训练源码快照保留。
 
 `public_onset_timing()` 只约束标记为 onset 的 T+5…T+25，保留 ongoing 与 T+30。模型默认不开启，新公告对齐实验显式设置标记，旧冻结模型行为不变；针对条件/lead 的测试通过。K02 使用本队冻结预测与公开 metadata，未读任何隐藏标签或 val/private 未来数值；完整 6,980,503 行独立 diff 仅 5 个 Queue 值。计分 eligibility 未公开，因此更紧的 .001369 Total 界必须注明条件，安全界为 .0075。
+# 窗口损失及独立复核 C42–C48
+
+`queue_overlap_loss.py` 的 availability 只用于 TRAIN 监督损失，推断仍沿用不接收 future mask/label 的完整域模型。onset 前五步排除分类 overlap，未来 speed 标签仅用于训练辅助回归。独立实现 Lovász 的排序/前缀 Jaccard 增量，64 个二值顶点与枚举集合损失一致；soft-IoU 空 foreground 使用显式 mean-p 扩展，不能声称该分支是 exact IoU。
+
+四组初始化与 batch digest 内部相同；全部选择封存后读取 assessment。相同 optimizer seed 的两个 BCE 参数控制与 C32/C34 全张量完全相同。独立从 `<T` RAW TRAIN 及仅 `T` masked 公共帧重建全部 cal histories，raw probability/导出全模板 binary 各660次精确。C46 固定 alpha 只引用已封存设置，后验诊断不反写 primary。首次 verifier numpy.str_ 错误保留失败源快照并在新目录修复复跑。
+
+C44/C45 明确限定 TRAIN，将 future reads 标为 evaluator-only；future_coverage、future qc 和 raw future speeds 从未进入预测。80 窗口仅为公开观测审计，不能将 thresholded speed 或低质量 finite speed 冒充官方 queue_true。新增 Lovász/soft loss 的 sigmoid(logit-log4) 仅作可校准 score；加 overlap 后不保证 proper posterior。

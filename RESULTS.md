@@ -2,6 +2,14 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**C42–C48：两季、两训练 seed 的 12 个窗口 IoU 损失对照完成，未晋级。** 固定原事件、30min graph、初始化/每个 batch 和 20×80 预算，比较原 BCE、BCE+.25 soft-IoU、BCE+.25 Lovász hinge；统一按 cal Brier 选 checkpoint、完整预测域校准决策。秋 seed1/seed2 主选择为 BCE/tree，proxy IoU **.879028/.872422**；冬 seed1/seed2 主选择为 BCE/Lovász，**.879943/.878723**。冬 seed2 的获选 Lovász 相对同 seed BCE **−.002783**、CI **[−.006516,.001192]**，相对原 seed1 混合 **−.001220**、CI **[−.004399,.001768]**。soft-IoU 在冬 seed2 为 **−.002763**、CI **[−.004825,−.000714]**。原 seed1 冬 Lovász 为 **−.022573**、CI **[−.045600,−.005924]**。没有按 assessment 反选较好的 BCE。
+
+C46 等 alpha 补充诊断保留正面结果：冬 seed1 Lovász α=.25 有 **+.003753**、名义 CI **[.000310,.007953]**，但 cal 原选 α=.5，且 seed2 同 alpha 没有复现；不替换原选择。两种纯网络 IoU 损失也改善了较弱的纯 BCE 对照，最高仍只有 **.830712**，低于该 fold 的 tree **.868240**。这些是 16 个次要对照，区间未做多重比较校正；不能声称强基线增益。loss、cal checkpoint/threshold 策略一起变化，结果不是固定 epoch 的单一梯度因果结论。
+
+**C44/C45 发现真实公开 TRAIN 窗口与观测正例代理的差异。** 八个 scored panel 的 80 个窗口中，40 个 ongoing 首个观测正例均在 T+5，39/40 个 onset 在 T+30；I5_S 的另一个 onset 在全部有限速度及 eligible 速度上均无阈值正例，当前代理会排除它。质量过滤并未解释该例，真实 queue_true 不公开，原因未知。index 的 future_coverage=1 不等于可评分观测覆盖（本审计 .721713–.798354）；该字段没有进入模型输入。不从这一例推断隐藏标签或 selector 实现。
+
+全部 **660 次 model/cal-window** 的原始概率和导出完整预测域决策独立重建精确复现；两个原 seed BCE checkpoint 与 C32/C34 的参数张量完全一致。训练四组 wall time **199.11/216.23/203.29/216.44 秒**、GPU allocated 峰值约 **110.33 MiB**；末组与部署复核部分并行，不能把 wall time 相加当整体 elapsed。研究 **71 tests passed**，CPU **59 passed/4 optional-Torch skips**。部署脚本首次因 numpy.str_ 时间类型失败，源快照/失败记录保留，修正后在新目录复跑通过。原正式基准及 K06 完整候选不变，未上传。详见 `docs/QUEUE_OVERLAP_RESEARCH.md`。
+
 **最新 C38–C41：完整预测域的Queue重新校准与可部署模型已完成，时序规则没有取得独立收益。** 固定原三个graph checkpoint及tree，在完整公共六步模板上校准alpha/threshold/nonempty，未来eligible mask只进入scorer。对照“先force再清零onset”和“先限制onset候选再force”，两季cal均选择 **30min graph / α=.25 / force=false**。秋去重proxy IoU **.879028 vs同样全域校准tree .872422**，gain **.006606**、CI **[−.004692,.018938]**；冬 **.879943 vs .868240**，gain **.011703**、CI **[−.001776,.032738]**。before/after时序策略在两季输出相同，gain 0；不把接口修正声称新的模型增益。仍只有一个fit seed、已查看的公开train观测代理，未晋级。
 
 四个导出模型从≤T Parquet历史独立重建并精确复现 **220次model/cal-window调用**；不接受未来mask/label作为推断参数，要求完整模板。新模型对当前I5_N validation/private各覆盖 **15,480** 行。C40自主模拟135,000个事件、27case、81条规则case结果，仅说明选择偏差：单格queue、r=.75条件下，合法非空规则在latent-positive总体的模拟IoU **.095533**，空预测 **.252533**；若只筛scored-positive事件，二者变为 **.032356 / 0**。这不是赛事实际采样、交通预测成绩或正式Queue；oracle未来mask规则仅用于诊断。

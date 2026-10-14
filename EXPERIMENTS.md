@@ -221,3 +221,19 @@ C09/C10/C11 的去重、按 condition 等权、日期 block bootstrap 增益分�
 本轮新增模型与配置 116 项 SHA 已记录于 `reports/research/model_artifacts_checkpoint_20261013_a.json`。正在运行的后续模型不在此快照中。CUDA 环境 21 tests passed；测试临时目录使用工作区 `.cache`，系统沙箱 TEMP 不可写。
 
 公告对齐阶段归档：`model_artifacts_checkpoint_20261013_e.json` 保存 235 项已完成模型/配置 SHA；当前 CUDA 环境 25 tests passed，CPU 24 passed / 1 optional-Torch skipped。K02 完整候选与全行 diff 保存在 `artifacts/research/K02_Queue_only_public_timing`，正式成绩仍未知。安全/条件收益界和不上传的决定由 `scripts/record_onset_control_bounds.py` 生成，证据为 `reports/research/K02_public_timing_decision.json`。
+# C42–C48：窗口 IoU 损失与公开 TRAIN 事件审计
+
+三种 loss 使用相同九通道历史、30min graph、初始张量、batch 序列及 20×80/batch4 预算；checkpoint 统一为每五 epoch 的最低 cal Brier。seed1=20261013，seed2=20261029；事件 sampler 仍固定 seed1，不把重新训练 seed 误称独立事件。所有 alpha/threshold 选择在 assessment 文件加载前封存。
+
+| 实验 | cal 主选择 | 去重 assessment 观测 proxy IoU | 结论 |
+|---|---|---:|---|
+| C42 秋 seed2 | tree / α0 | .872422 | 三 loss 均退回 tree；相对旧 seed1 混合 −.006606，CI 跨零 |
+| C43 冬 seed2 | Lovász / α.25 | .878723 | 同 seed BCE .881507；差 −.002783，CI 跨零，保留原选择 |
+| C47 秋 seed1 | BCE / α.25 | .879028 | soft .842850，Lovász fallback .872422；原 BCE 权重完全复现 |
+| C48 冬 seed1 | BCE / α.25 | .879943 | soft .878782，Lovász α.5 .857370；原 BCE 权重完全复现 |
+| C44 公开 TRAIN 80 窗口 | 不选模型 | 非成绩 | 1 个 onset 无观测正例；history condition 全部一致 |
+| C45 质量投影 | 不选模型 | 非成绩 | 有限速度正例 7100→eligible6457；异常例在质量过滤前仍无正例 |
+| C46 等 alpha 次要对照 | 原 cal 设置不改 | 16 个对照 | 冬 seed1 Lovász α.25 +.003753，未由 cal 选中且 seed2 不复现；不反选 |
+| 独立部署 | 四组全部 cal windows | 非性能实验 | 原始概率/完整预测各 660 次精确复现；两个原 BCE 参数控制精确 |
+
+四组 GPU wall time 199.11/216.23/203.29/216.44 秒；约 110.33 MiB allocated 峰值。末组与部署复核并行。首次部署 job7692 退出1：pandas 拒绝 numpy.str_，未产生成绩；原失败 zip 和记录保留，str 转换后新目录复跑。部署两份成功记录 73.53/29.37 秒。71 research passed，CPU59 passed/4 Torch skips。损失数学测试枚举 64 个离散真值/误差顶点，并检验 onset/unavailable 零梯度与窗口等权。正式 Total 仍 .82940，无模型晋级、无新完整候选替换、无平台动作。

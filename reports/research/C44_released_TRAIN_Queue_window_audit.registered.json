@@ -1,0 +1,18 @@
+{
+  "protocol_sha256": "6f13ce5ae1e4d8bdab41f744ba6560a3f699ec5e46cee740b1d361866872487e",
+  "protocol": {
+    "id": "Released_TRAIN_Queue_window_observation_audit",
+    "scope": "All eight scored TRAIN panels only. No validation/private labels.",
+    "labels": "Threshold eligible released speed by public v_cut; observation proxy, not queue_true",
+    "diagnostics": [
+      "history condition agreement",
+      "first observed queue horizon",
+      "future eligibility/near-cutoff shares",
+      "noisy persistence guard",
+      "observed-positive selection versus full-domain metadata"
+    ],
+    "no_new_model_selection": true,
+    "formal_Queue": null,
+    "formal_Total": null
+  }
+}

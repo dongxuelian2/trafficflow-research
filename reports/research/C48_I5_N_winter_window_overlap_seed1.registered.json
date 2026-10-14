@@ -1,0 +1,30 @@
+{
+  "protocol_sha256": "7b71a853281710ad72e6aa5695ba66aef874fa66189fbd5a6cfe4d173568d6da",
+  "protocol": {
+    "id": "Matched_Queue_window_overlap_new_training_seed",
+    "panel": "D12_I5_N",
+    "source_study": "C34_D12_I5_N_winter_wave_Queue",
+    "source_probability_report_sha256": "469f4411fe35c1539842f9e8ff3c3a5733e257f64f00adf192c937cba366ebf8",
+    "source_sequence_report_sha256": "9b4c46114e7f584c1fedeb025e45f710c978897835941bf9fed6ed501bf33b17",
+    "source_full_calibration_report_sha256": "206b80ca8afabc3869af72f5ae2c999538b8dcdcf6caa0405badef269f3d777a",
+    "training_seed": 20261013,
+    "fixed_event_sampler_seed": 20261013,
+    "variants": [
+      "bce",
+      "soft_iou",
+      "lovasz"
+    ],
+    "overlap_strength": 0.25,
+    "model": "Same 30-minute public-geometry CausalGraphQueue,hidden32,identical inputs/init/batches/budget",
+    "training": "20 epochs x80 steps,batch4,AdamW .001,wd1e-4,clip1; equal condition sampling",
+    "loss": "Existing pos_weight4 equal-window BCE+.1 speed MAE; overlap arms add .25 window surrogate on logit-log4",
+    "checkpoint": "Minimum cal condition-macro event Brier every5 epochs, unchanged across arms",
+    "decision": "Full public forecast domain, onset timing before optional force; cal-only mixture alpha0/.25/.5/.75/1 and threshold selection",
+    "known_loss_limit": "Sigmoid(logit-log4) is exact weighted-BCE correction only at its unconstrained optimum; auxiliary IoU breaks this interpretation. Treat as a calibrated score, not posterior.",
+    "Lovasz_reference": "https://arxiv.org/html/1705.08790; independent implementation of set-extension equations",
+    "assessment": "Old public TRAIN proxy dates; load after all model/decision choices sealed. Not final.",
+    "formal_Queue": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

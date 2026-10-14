@@ -105,3 +105,15 @@ proxy 改善不是正式 Physics；A55 用 raw train 的非目标 evaluator anch
 模型晋级需要相同划分、多个拟合种子、按天或事件配对不确定性分析和分方向退化检查。行级随机拆分不可作为依据。跨走廊 transfer 必须整组排除一个 family 的训练标签；当前逐走廊训练不冒充 transfer。
 
 图网络与树模型的日期相同不意味着标签预算相同。后续 State 架构结论必须以可用全部 fit 标签或明确的大预算 LGB 为比较组。Queue 抽样 seed 可能重复同一事件；按唯一 origin 和日期分析，不能把重复 seed 当独立试验。
+# C42–C48 配对窗口 IoU 损失：尚无稳定增益
+
+| period / optimizer seed | BCE cal-selected | soft-IoU cal-selected | Lovász cal-selected | 按 cal 保留 |
+|---|---:|---:|---:|---|
+| 秋 / 20261013 | .879028 | .842850 | .872422 (α0) | BCE |
+| 秋 / 20261029 | .872422 (α0) | .872422 (α0) | .872422 (α0) | tree |
+| 冬 / 20261013 | .879943 | .878782 | .857370 | BCE |
+| 冬 / 20261029 | .881507 | .878744 | .878723 | Lovász |
+
+均为同一公开 TRAIN 观测事件的去重 condition-macro proxy，不是正式 Queue。冬新 seed 的 BCE 虽在 assessment 更高，cal 选择已封存，不能反选。原 seed 的 BCE 参数与旧 wave30 完全相同；新 seed 检验初始化/优化与 batch 变化，事件集合仍相同。12 个导出模型及 raw probability 660 次 cal-window 独立复现通过。
+
+等 alpha 的 C46 保留次要正例：冬原 seed Lovász α.25 .883696 vs BCE .879943，gain+.003753，名义 CI 正；cal 原选 α.5，另一 seed α.25 的 gain−.002783、CI 跨零。纯网络最高 .830712 仍弱于强 tree .868240。16 个次要比较未校正多重性，不以某一正区间替换 primary。真实分项与综合分未知，K06 及正式最佳保持冻结。
