@@ -1,0 +1,114 @@
+{
+  "created_UTC": "2026-10-15T11:59:42.389000+00:00",
+  "new_unit_tests": {
+    "passed": 3,
+    "seconds": 1.61,
+    "scope": "Scalar weighted prefix sets/evidence/permutations;latent-nonempty versus scored-empty;fit-bank seeded replay/missing-label poison"
+  },
+  "research_pytest": {
+    "passed": 144,
+    "seconds": 12.53,
+    "session_id": 22370,
+    "basetemp": ".cache/pytest_joint_scenario_research_v1"
+  },
+  "CPU_pytest": {
+    "passed": 123,
+    "optional_Torch_modules_skipped": 7,
+    "seconds": 7.94,
+    "basetemp": ".cache/pytest_joint_scenario_CPU_v1"
+  },
+  "compileall_passed": true,
+  "new_independent_audit": {
+    "fit_banks_verified": 4,
+    "fit_onset_window_occurrences": 289,
+    "scenario_curve_checks": 3076,
+    "decision_onset_Booster_calls": 8,
+    "decision_reference_probability_calls": 4,
+    "portable_history_windows": 109,
+    "portable_role_calls": 981,
+    "additional_shuffled_calls": 504,
+    "future_history_rejections": 36,
+    "new_raw_window_rebuilds": 0
+  },
+  "reused_full_raw_window_proof": 2196,
+  "reused_separate_probability_calibration_proof": "C75_probabilistic_onset_verification",
+  "maximum_matrix_cumsum_curve_difference": 0.0,
+  "independent_full_MonteCarlo_curve_error_vs_exact_IID": {
+    "n_window_occurrences": 291,
+    "maximum": 0.01288401177561338,
+    "mean": 0.0033528389060204166
+  },
+  "joint_intervals": {
+    "contrasts": 13,
+    "resamples_each": 4000,
+    "maximum_independent_difference": 6.245004513516506e-17
+  },
+  "known_nonempty_laws_independently_replayed": 9,
+  "posthoc_disagreement_locations": {
+    "cases": [
+      {
+        "case": "I5S_September",
+        "copula_versus_matched_independent": {
+          "full": {
+            "onset_window_disagreements": 3,
+            "scoreable_changed_cells": 0,
+            "unscoreable_changed_cells": 3
+          },
+          "empirical": {
+            "onset_window_disagreements": 4,
+            "scoreable_changed_cells": 2,
+            "unscoreable_changed_cells": 2
+          }
+        }
+      },
+      {
+        "case": "I5S_October",
+        "copula_versus_matched_independent": {
+          "full": {
+            "onset_window_disagreements": 0,
+            "scoreable_changed_cells": 0,
+            "unscoreable_changed_cells": 0
+          },
+          "empirical": {
+            "onset_window_disagreements": 1,
+            "scoreable_changed_cells": 1,
+            "unscoreable_changed_cells": 0
+          }
+        }
+      },
+      {
+        "case": "I10W_September",
+        "copula_versus_matched_independent": {
+          "full": {
+            "onset_window_disagreements": 1,
+            "scoreable_changed_cells": 0,
+            "unscoreable_changed_cells": 1
+          },
+          "empirical": {
+            "onset_window_disagreements": 2,
+            "scoreable_changed_cells": 0,
+            "unscoreable_changed_cells": 2
+          }
+        }
+      },
+      {
+        "case": "I10W_October",
+        "copula_versus_matched_independent": {
+          "full": {
+            "onset_window_disagreements": 0,
+            "scoreable_changed_cells": 0,
+            "unscoreable_changed_cells": 0
+          },
+          "empirical": {
+            "onset_window_disagreements": 0,
+            "scoreable_changed_cells": 0,
+            "unscoreable_changed_cells": 0
+          }
+        }
+      }
+    ],
+    "scope": "Evaluator masks used for posthoc error-location diagnostics ONLY;not any prediction/parameter/selection input."
+  },
+  "failed_audit_preserved": "reports/research/C80_joint_scenario_verification.failed.json",
+  "scope": "Current production suites pass. First auditfloat32mean assumption repaired to integer ratio with bit-exact requirement unchanged;original failed source retained. Four banks/2MCmembers each,not new tree/calibration fits;old raw proofs reused,not rebuilt. Timing may include concurrent work."
+}

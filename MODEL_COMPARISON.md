@@ -3,6 +3,17 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+C79在同C74冻结calibrated p上拟合fit-only经验二值关联与eligibility场景。对照完整匹配、没有新树/校准器，ongoing逐格不变：
+
+| 公开代理case | incumbent / primary | independent/full | independent/mask | dependence/full | dependence/mask |
+|---|---:|---:|---:|---:|---:|
+| I5_S September | .785466 | .810466 | .801057 | .810466 | .810466 |
+| I5_S October | .779788 | .784098 | .784098 | .784098 | .784098 |
+| I10_W September | .789289 | .789289 | .789289 | .789289 | .789289 |
+| I10_W October | .672051 | .691281 | .691281 | .691281 | .691281 |
+
+full关联−匹配独立的同步gain0；mask关联−匹配独立+.002352、CI[0,.006250]。联合mask相对raw threshold−.003710、CI跨零，相对原cal非空IoU−.014174、CI[−.031656,−.002083]。单独超过incumbent点值不构成新增结构收益，所有primary仍原策略。full关联改4单元均在评估不可评分域；模型没有使用这些未来mask。C78精确总体/条件子集law与C81前缀反例用于揭示限制，非正式成绩。[核验与对照](docs/JOINT_SCENARIO_ONSET_RESEARCH.md)。
+
 C74–C77共享C71全部分类器，使用独立buffer拟合8个window-equal单调校准器；raw/calibrated期望IoU均为完整域Bernoulli假设，future mask不进决策，ongoing不变。
 
 | 公开代理 | incumbent / primary | raw threshold | cal threshold | raw IoU | cal IoU | cal非空IoU |

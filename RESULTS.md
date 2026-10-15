@@ -2,6 +2,19 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**C78–C81：经验联合标签/eligibility场景模型完成，未取得匹配对照增益。** 冻结树与概率校准，仅由289个fit onset拟合4个场景库，每库两个MC seed共4096场景；全覆盖/经验mask、独立/经验关联四臂，future实际mask不进预测。
+
+| 公开观测代理 | 原强参照 / primary | independent/full | independent/mask | dependence/full | dependence/mask |
+|---|---:|---:|---:|---:|---:|
+| I5_S September | .785466 | .810466 | .801057 | .810466 | .810466 |
+| I5_S October | .779788 | .784098 | .784098 | .784098 | .784098 |
+| I10_W September | .789289 | .789289 | .789289 | .789289 | .789289 |
+| I10_W October | .672051 | .691281 | .691281 | .691281 | .691281 |
+
+full匹配关联gain0；mask匹配gain+.002352、同步CI[0,.006250]；相对已有非空IoU为−.014174、CI[−.031656,−.002083]。所有primary仍incumbent，不能把新模型超过弱参照的点值当新增收益。full关联仅改4个当地不可评分单元；24份旧概率证明复用。13事后比较未多重校正，非正式Queue/Total。
+
+9个自主latent始终非空精确分布确认scored-positive选择偏差：单节点coverage.25时，子集所选策略回到总体regret.360156；不是实际交通损失。4场景库/3076曲线/981便携+504乱序+36future拒绝独立核验通过，初次float32均值核验错误已保留并修复。144research/123CPU通过、7Torch skips。累计6835artifact、原5完整CSV不变。见[联合场景研究](docs/JOINT_SCENARIO_ONSET_RESEARCH.md)。
+
 **C74–C77：分期校准与精确期望IoU完成，primary仍保留四组incumbent。** 冻结C71全部树，用此前未用15日buffer的27个onset拟合8个双参数校准器；独立卷积选择集合大小，对照raw/calibrated阈值与非空约束，没有新树训练。
 
 | 公开观测代理 | 原强参照 / primary | calibrated IoU | calibrated非空IoU（次要） |

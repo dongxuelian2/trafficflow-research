@@ -4,6 +4,16 @@
 
 | 编号 | 假设 / 核验 | 实测结果 / 资源 |
 |---|---|---|
+| C78 | 9个latent始终非空的精确联合标签/masklaw，比较scored-positive子集选择后回总体风险 | 单节点coverage.25的population regret.360156；明确前五步evidence；自主小分布非交通成绩 |
+| C79 | 289fit onset拟合4个经验二值关联/mask库；同calibrated p的4scenario臂 | 2MC seed×2048/库，无新树或calibrator；CPU103.51秒/peak462.54MiB；full关联相对matched independent gain0，primary均incumbent |
+| C80 | 首次独立bank审计 | exit1：float32标签mean与生产整数ratio差2.62e−8；源码zip/注册/错误保留；另发现并重命名核验器局部变量覆盖 |
+| C80b | 保持bit-exact标准，整数rate独立重建及prefix指示矩阵核验 | 4库/289fit引用、3076曲线差0，109新历史/981便携+504乱序+36poison；207.44秒；旧raw/probability证明显式复用 |
+| C81 | 13事后同步日历比较、MC成员敏感性、9law标量重算 | mask关联gain+.002352、CI[0,.006250]，无稳定增益；另五节点prefix gap.0065说明限制；6.55秒 |
+
+3新单测通过；全144research/12.53秒、123CPU/7.94秒+7Torch skips，compileall通过。full关联改动4单元均不可评分，MC成员仅模拟噪声；无新完整submission/正式分数。假设场景mask来自fit模板，实际future mask只进评分/事后诊断。[完整配置、负面结果与复现](docs/JOINT_SCENARIO_ONSET_RESEARCH.md)。
+
+| 编号 | 假设 / 核验 | 实测结果 / 资源 |
+|---|---|---|
 | C74 | 冻结rolling树，独立15日校准，精确Bernoulli期望IoU对照raw/cal阈值及非空 | 新62窗口/27onset、8校准状态，无新树；CPU33.99秒/peak438.89MiB；四组primary仍incumbent，非空次要联合信号正 |
 | C75 | 新校准raw/两feature臂、SLSQP/KKT、Gauss–Legendre积分曲线与导出核验 | 62raw/124臂/8拟合、582曲线差1.90e−14；100Booster、872便携+448乱序+32poison；109.85秒。旧2196raw审核复用 |
 | C76 | 自主已知5节点联合分布，全32预测集合精确枚举 | 3IID场景regret0；相关共同冲击/非空簇regret.4/.12，覆盖率/标签相关失效.029272/.075318。数学假设反例，非交通分数 |

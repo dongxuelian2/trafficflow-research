@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+C79场景库只由C71 fit onset的eligible观测标签/六步mask构造，missing标签不进rate分母；记录289窗口引用、2seed×2048模板与同base-jitter独立/二值关联变换。没有使用拟合内分类器残差、实际评估future mask或重新拟合概率校准。ScenarioOnsetQueueModel只接收合法history/target，ongoing不变，prefix优化不声称全局最优；前五步零标签evidence与末步mask分开。
+
+C80失败是核验器float32 mean取代生产整数ratio，最大rate差2.62e−8；C80b修正独立整数计算并消除局部变量遮蔽，bit-exact标准与模型/选择不变，失败源码zip保留。4场景库逐位一致，3076条ensemble/member曲线用指示矩阵直接交并集复核差0。8decision onset Booster+4参照probability调用，24概率文件沿用C75；109新便携历史支持981角色+504乱序+36future拒绝。旧2196raw及C75概率审核显式复用，本次新全量raw重建0。
+
+C81逐truth/mask集合枚举重核9个已知非空law最大差9.99e−16，13事后同步日历区间逐次复算差6.25e−17，无多重校正/重新选择。checkpoint另存未来评分mask仅用于误差定位的证明：full关联4个改变单元均不可评分。新增3测试、当前全144research/123CPU通过、7Torch skips；manifest旧6745artifact不变、累计6835，5完整CSV/锁不变。详见[联合场景审计](docs/JOINT_SCENARIO_ONSET_RESEARCH.md)。
+
 C74新增自主Bernoulli suffix卷积IoU内核，k0为空/空=1，k>0完整域期望；link-ID打破平分，最小k容差1e−12，future eligibility不进API。非空arm只禁k0，不声称过滤后仍非空。新概率模型复用冻结._onset因果入口、ongoing和保存时Booster cache清除。单调Platt仅用独立15日checkpoint观测标签，两arm先fit/seal，固定window-equal权重/identity正则与边界；未使用分类器拟合日期上的同窗概率来校准，也未按assessment调参。
 
 C75明确复用旧2196raw审核并重hash输入/未变构造；新增62raw校准窗口/124特征臂重建，8个状态另用SLSQP与KKT验证（参数差2.68e−7，投影梯度7.38e−10）。582条曲线用独立Gauss–Legendre积分复核suffix DP，最大差1.90e−14。全部新网格/门控/评分、100冻结Booster、872便携角色+448乱序+32future拒绝通过；含策略别名/重复origin，不当独立事件数，也未重训树。

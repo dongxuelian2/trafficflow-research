@@ -1,0 +1,88 @@
+{
+  "protocol_sha256": "f7ac2e3cbca1c7904ec1ca1f3cba11fea86a64f1d0096d6851d936e449fac8ca",
+  "protocol": {
+    "id": "Exact_latent_nonempty_joint_masks_and_proxy_selection",
+    "scenes": [
+      [
+        "single_r95",
+        "single",
+        0.95,
+        0.95,
+        true
+      ],
+      [
+        "single_r75",
+        "single",
+        0.75,
+        0.75,
+        true
+      ],
+      [
+        "single_r25",
+        "single",
+        0.25,
+        0.25,
+        true
+      ],
+      [
+        "cluster_full",
+        "cluster",
+        1.0,
+        1.0,
+        true
+      ],
+      [
+        "cluster_r75",
+        "cluster",
+        0.75,
+        0.75,
+        true
+      ],
+      [
+        "cluster_r25",
+        "cluster",
+        0.25,
+        0.25,
+        true
+      ],
+      [
+        "cluster_label_dependent",
+        "cluster",
+        0.15,
+        0.95,
+        true
+      ],
+      [
+        "cluster_label_dependent_last_evidence",
+        "cluster",
+        0.15,
+        0.95,
+        false
+      ],
+      [
+        "cluster_node_missing",
+        "cluster",
+        [
+          0.1,
+          0.1,
+          1.0,
+          1.0,
+          1.0
+        ],
+        [
+          0.1,
+          0.1,
+          1.0,
+          1.0,
+          1.0
+        ],
+        true
+      ]
+    ],
+    "scope": "Own5node laws,latent truth always nonempty;future eligibility random,earlier five steps known zero labels with/without evidence. All decisions depend only on known generating law,marginal p,never realized future label/mask. Not a traffic simulator/official truth.",
+    "new_question": "Extend C40/C76 to exact joint expected masked-IoU optimization,explicit six-step evidence,and transfer of observed-positive-subset-selected policy back to latent-positive population.",
+    "previous_goal_turn": "progress:dfd24e7 completed probability calibration/IoU and known-joint audits",
+    "formal_Queue": null,
+    "formal_Total": null
+  }
+}

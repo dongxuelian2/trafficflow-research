@@ -1,0 +1,12 @@
+{
+  "created_UTC": "2026-10-15T11:52:21.491661+00:00",
+  "exit_code": 1,
+  "source_study_sha256": "887c470acf094bfecd15fca02ea1f51c3cd67e142aa6d4535f6f4c74746b1b50",
+  "error": "ValueError: Independent fit-only bank replay differs",
+  "diagnosis": "Audit took mean of float32 label array;producer uses integer eligible/positive counts divided in float64. Maximum rate discrepancy2.622604367008563e-08;bank uniform discrepancy2.622434536192486e-08. Example1/54:float32 .018518518656492233 versus recorded integer ratio .018518518518518517.",
+  "repair": "Independent audit computes integer positive/eligible ratio in float64;bit-exact bank requirement unchanged. Code review also renamed bank-reference local to avoid later shadowing by forecast array. No model/bank/prediction/selection or tolerance changes.",
+  "original_executed_source_archive": "artifacts/research/C80_joint_scenario_verification/source_snapshot.zip",
+  "retry_output": "C80b_joint_scenario_verification",
+  "formal_Queue": null,
+  "formal_Total": null
+}
