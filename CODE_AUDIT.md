@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+A116仅新增两个各含400棵树的流量模型，原速度booster和NN显式复用。原153fit日及4point视图逐块写入磁盘映射；float64 scalar teacher/base/weight、int32 row keys与全部60维float32特征保存。训练不调用NN推断，cal/旧后留NN预测来自A107已核验的冻结输出。A118在拟合并行时独立实现随机坐标、history/guard及所有测量删除，765组完整重建、8次完整60维poison通过；raw流量teacher误差1.19e−7归一化单位、weight差0。
+
+A117只对四个基本角色和固定transfer逐日直接推断，共70次；其余ensemble角色由固定数组组合。A119全部14日teacher/diagnostics和126保存指标独立重算，另18次直接导出调用最大差4.55e−13。不把126指标写成126次新推断。A121优化器只用14日cal数组，源报告JSON含已查看后留摘要，cal增益.00001953不作独立验证；未导出新模型。新阶段生产src未变，原单元测试记录不重复计作新证据。
+
+A120仅hash绑定并复用A118，字段明确本次重建0组、既有验证765组。全部训练文件及raw源重新hash不变，28日×9导出252次predict最大差4.55e−13，238指标最大score差2.22e−16。原速度booster与基线逐字相同、每个新流量booster400树、cal gate和selection seal/read order均核验。source注册/数据manifest/审计报告SHA链完整，模型没有按新forward改变。
+
 ChannelStateEnsemble使用固定model×2channel非负权重，不读取teacher、regime或误差决定专家；检查profile/features一致与键顺序，输出保持总流量单位。递归清除临时网络缓存，保存后恢复当前进程缓存。A112原28日、A113新4role×14日实际部署与固定通道公式差0。
 
 A115b独立raw TRAIN重建28日teacher/lanes、112指标与全部50cal候选/eligibility，核对cal-only winner、封存顺序及序列化权重，最大score差1.11e−16；没有独立重训。A114重建新14日teacher/诊断mask、56保存指标，另8次predict差0。A115最初缺Torch导致嵌套pickle读入失败，注册/源码/错误记录保留，未修改数值断言。全套118 research/102 CPU通过，5可选Torch模块跳过；初次temp setup错误及工作区basetemp修复均记录。

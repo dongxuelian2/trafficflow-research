@@ -1,0 +1,14 @@
+{
+  "protocol_sha256": "eb3ffc841d138331555b56c3ee14c02206e864c9f5b83be19c8ac4e8289b47c4",
+  "protocol": {
+    "id": "Cal_only_flow_error_covariance_after_fixed_transfer_rejection",
+    "source_study_sha256": "8e1b70203e0195a6f573784510c413d57b096328384cb634251f97c6c9ce0f63",
+    "data_scope": "Only selection NPZ and original selection teacher,never assessment/forward",
+    "fit": "One bounded scalar alpha in[0,1],minimizing exact equal-regime cal flow RMSE;NN speed fixed",
+    "gate": "Require cal State gain>=.0005 and no regime loss>.001 before considering another frozen forward policy",
+    "interpretation": "In-sample development diagnosis,not predictive validation or independent gain",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null
+  }
+}
