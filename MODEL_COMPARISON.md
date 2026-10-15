@@ -3,6 +3,20 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+C91三臂同初态/同dense及event批次，direct_flow仅增加显式future/current流量监督；latent_flow再增加6步graph-GRU残差。当前masked State分析头全部共享，权重均按checkpoint Queue Brier选。
+
+| 公开后段 Queue代理 | incumbent / primary | no_flow | direct_flow | latent_flow |
+|---|---:|---:|---:|---:|
+| I5S | .785466 | .787215 | .751338 | .763234 |
+| I10W | .789289 | .738131 | .802072 | .734693 |
+
+| 30日因果 State子集公式 | 历史外推 | 强树 | no_flow | direct_flow | latent_flow |
+|---|---:|---:|---:|---:|---:|
+| I5S | .830759 | .873903 | .831437 | .831914 | .830411 |
+| I10W | .904693 | .933223 | .901654 | .902971 | .904331 |
+
+后表只用全masked历史、两字段缺测且eligible的当前单元，首小时排除；强树独特标签更多，不作纯架构结论。direct_flow−no_flow+.000897，direct_flow−强树−.036121；这些事后未校正区间不含optimizerseed不确定性，也非正式State。两primary未改，禁止用I10W后段direct_flow正值反选。[完整对照](docs/JOINT_FLOW_LATENT_DYNAMICS_RESEARCH.md)。
+
 C87三臂使用同C71强树的固定.75tree+.25双seedNN混合；event/dense各400步同目标，再全臂800步同批次微调。
 
 | 已查看后段 / 代理IoU | incumbent / primary | scratch | event warm | dense warm |

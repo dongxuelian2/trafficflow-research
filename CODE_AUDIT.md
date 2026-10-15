@@ -1,5 +1,13 @@
 # 当前实现与评分接口审计
 
+C91明确拆开Queue合法rawpast12+maskedT与State全masked13槽，两次共享编码，State条件也只看masked历史。未来flow/current raw teacher只进loss或评分；current State GRU未展开，GRU仅未来残差，不作物理守恒主张。C92独立34224 State/33480 Queue上下文、742fit/CP事件及744 rawpast/future poison通过。
+
+C93在成功的原sampled replay之后另加67.86阈值边界回归，定位portable State乘回25比较造成float32条件差异；仅修入口为训练同一scaled比较，C93b重放同12NN/4树、48快照、60 State日/16560上下文/99360 State member forward。原权重/选择/预测文件未改，所有probe日志和原成功审计保留。原CPU probe未装Torch仅暴露测试放置问题，已移到optionalTorch测试模块。
+
+强树917650 fit行canonical特征/teacher/坐标hash重算，并独立double空间平均核查语义，最大6.32e−7；不冒充独立重新优化树/NN。1128网格评分、336 Queue/168 State接口、168乱序及18future拒绝通过。全158research/132CPU+9Torch skips；State子集和Queue代理不可加成正式Total。[证据和限制](docs/JOINT_FLOW_LATENT_DYNAMICS_RESEARCH.md)。
+
+当前manifest复核旧7247artifact不变，累计7679；原5完整CSV/依赖锁不变，544源文件再核SHA，最终模拟seeds未开启。修正入口源码与C93b训练后source snapshot绑定，原模型字节未变。
+
 C87新增纯NumPy/Pandas dense causal输入及可选Torch全六步warm loss。raw只取历史12槽，T仅masked；未来teacher/quality只进监督。C88独立124fit日/33480原点/742事件teacher/372poison核验，补足此前treefeature证明不等于旧神经x证明的范围。
 
 C89初次portable核验漏released_origin_rows导入，保留源码ZIP/partial；原traceback不可得未伪造。C89b仅修import后新目录核验12网络初态/批次/曝光、48权重与Adam状态、792checkpoint+1896eval forward、1128网格/gates/seals，最大差0；316新eval raw窗口、336便携/168乱序/12future拒绝。旧强树feature证明明确复用，没有重新优化12网络。

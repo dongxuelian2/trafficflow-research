@@ -1,0 +1,45 @@
+{
+  "status": "corrected;allmodelsreplayedagain",
+  "original_wrapper_source": {
+    "path": "src/trafficflow/joint_queue_model.py",
+    "sha256": "946936cd1a6c2a98ef824fb5de7c2a028ec75c93dbaa8b119a4e631160dca1ca"
+  },
+  "corrected_wrapper_source": {
+    "path": "src/trafficflow/joint_queue_model.py",
+    "sha256": "2832be5659148e868a9fccc6a3633d0a61f25ef31553e344e162474a3a0a4cb5"
+  },
+  "issue": "Scaledfloat32speed multipliedbackby25 then comparedwithfloat64cut can flip causalStatecondition atthreshold. Training uses normalizedfloat32cut. Boundary67.86 reproduced queue_onset versus expectedqueue_ongoing.",
+  "before_fix_actual_regression": {
+    "failed": 1,
+    "seconds": 3.62,
+    "environment": ".venv-research"
+  },
+  "initial_probe": {
+    "cut": 67.62,
+    "passed": 1,
+    "seconds": 3.71
+  },
+  "initial_test_placement": "CPUenvironment lacks optionalTorch and didnot exerciseboundary;failure retained,testmovedtoTorchoptionalmodule. ProductionCPUdependencycontractunchanged.",
+  "correction": "PortableState condition uses same x_speed<=float32(v_cut)/25 as maskedState training. No weights,losses,batches,thresholdselection or savedarray changes.",
+  "prior_C93": "Original sampledalldata/modelaudit passed beforeadditionalboundarytest;doesnot prove untestedthresholdedges. Preserve priorverification/source.",
+  "accepted_replay": {
+    "path": "reports/research/C93b_joint_dynamics_model_verification.json",
+    "sha256": "79445f866ff7a0f26184ae8b46296d42476d5da375e586578d823b7f0dfeaa3d"
+  },
+  "regression_file_sha256": "daedac36648b53fbf5e0c7e4f2f154c45ffd20379562777994614ebab09730db",
+  "logs": [
+    {
+      "path": "artifacts/research/C93_state_condition_edge/C93_state_condition_edge.CPU_dependency_failure.log",
+      "sha256": "240cf757bd8f60a8f09e87978f87bb44daa3c08991b4b00d9a0956b649844fff"
+    },
+    {
+      "path": "artifacts/research/C93_state_condition_edge/C93_state_condition_edge.failed.log",
+      "sha256": "47c8bd5fd684611071f8d0e8c63605ae3c60c061669b8bb7bf214e9eab6067a0"
+    },
+    {
+      "path": "artifacts/research/C93_state_condition_edge/C93_state_condition_edge.initial_probe_passed.log",
+      "sha256": "499aa2469854f8b7fd87daec6a9a7115952270a5ec450a96094c74df0c359ef1"
+    }
+  ],
+  "formal_Total": null
+}

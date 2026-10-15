@@ -1,0 +1,29 @@
+F                                                                        [100%]
+================================== FAILURES ===================================
+____ test_portable_state_condition_uses_same_scaled_threshold_at_boundary _____
+
+    def test_portable_state_condition_uses_same_scaled_threshold_at_boundary():
+        from trafficflow.joint_queue_model import JointDynamicsQueueModel
+        model=JointDynamicsQueueModel.__new__(JointDynamicsQueueModel);model.links=['a'];conditions=[]
+        def predict(history,net,origin,condition):conditions.append(condition);return {'analysis':np.zeros((2,1))}
+        model.predict_dynamics=predict;origin=pd.Timestamp('2030-08-01T01:00:00Z');history=pd.DataFrame({'timestamp':pd.date_range(origin-pd.Timedelta(minutes=60),origin,freq='5min'),'link_id':'a','speed_kmh':67.62,'flow_vph':600.,'occupancy':.1,'pct_observed':100.});net=pd.DataFrame({'lanes':[2],'v_cut':[67.62]},index=['a'])
+>       model.reconstruct_current(history,net,origin)
+
+tests\test_joint_queue_data.py:34: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src\trafficflow\joint_queue_model.py:31: in reconstruct_current
+    from .graph_queue import queue_history_input
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    """Causal history-only temporal/graph Queue forecasting research models."""
+    import os
+    os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG', ':4096:8')
+    import numpy as np
+    import pandas as pd
+>   import torch
+E   ModuleNotFoundError: No module named 'torch'
+
+src\trafficflow\graph_queue.py:6: ModuleNotFoundError
+=========================== short test summary info ===========================
+FAILED tests/test_joint_queue_data.py::test_portable_state_condition_uses_same_scaled_threshold_at_boundary
+1 failed in 1.64s

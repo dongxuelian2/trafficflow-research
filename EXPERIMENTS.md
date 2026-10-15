@@ -4,6 +4,15 @@
 
 | 编号 | 假设 / 核验 | 实测结果 / 资源 |
 |---|---|---|
+| C91 | direct_no_flow/direct_flow/latent_flow，同初态/400warm+800event批次，独立masked State编码 | 12 NN+4强因果树；两个primary仍incumbent；615.44s/进程2716.49MiB/GPU allocated146.61MiB |
+| C92 | 独立新flow/current teacher、全masked State历史及rawpast隔离 | 124日/34224 State上下文/33480 Queue原点/742fit+CP事件/744poison通过；37.27s |
+| C93 / C93b | 48快照、全部State日期、917650树fit行SHA、决定门控及portable重放 | 原C93通过后另发现阈值边界入口问题，仅修比较并C93b再全量核验；权重/原选择不变；181.84/187.95s，失败probe日志保留 |
+| C94 | 7 Queue及7 State同步日历比较、稀有速度变化分层、实际独特current监督清点 | State direct_flow−control+.000897，对强树−.036121；Queue流量效应+.014032区间跨零；NN每seed约85k current标签、树430/488k；3.89s |
+
+新增7测试，全158research/14.92s、132CPU/11.41s+9Torch skips通过。State只能看masked历史，Queue另按发布契约用raw过去；未来/当前teacher仅loss/evaluator。NN更多损失未带来稳定Queue收益，强树的更多current标签也是比较混杂，均保留。[配置与复现](docs/JOINT_FLOW_LATENT_DYNAMICS_RESEARCH.md)。
+
+| 编号 | 假设 / 核验 | 实测结果 / 资源 |
+|---|---|---|
 | C87 | 2走廊×2seed×scratch/event_warm/dense_warm；同初态、800步同事件批次，两warm同400步 | 12新网络，dense对event联合+.009148，对强参照−.023199；两primary仍incumbent；worker188.04s/进程1875.50MiB/GPU allocated102.80MiB |
 | C88 | 独立quality/通道/窗口重建、实际future/rawT扰动 | 124fit日包/33480原点/742fit及CP事件/372poison通过；14.53s |
 | C89 / C89b | 初态/批次/曝光、checkpoint/optimizer、决策及导出独立重放 | 首次漏import失败源及partial保留；C89b完成48快照/2688神经窗口forward/1128网格/336便携+168乱序+12future拒绝，差0；95.85s |

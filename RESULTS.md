@@ -2,6 +2,12 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**C91–C94：完成连续流量/当前重建监督和 graph-GRU 传播的 12 网络对照，未晋级。** 两走廊 Queue 已选策略均为原强参照。I5S/I10W 的 direct_flow 后段代理 IoU 为 .751338/.802072，方向不一致；latent_flow 为 .763234/.734693。I10W 决策期赢家在 selection gain−.048572、区间全负，不按后段反选。
+
+在严格只用 masked 历史的 30 日因果 State 子集，强树 .873903/.933223，联合 NN .831914/.902971；该子集非正式 State，且树使用更多独特标签。流量监督对匹配 NN 的小增益+.000897未弥补对树的差距。全部60日/16560上下文及权重/评分独立重放，158research/132CPU通过、9Torch skips。无新正式成绩或完整提交。[输入契约、消融与负面证据](docs/JOINT_FLOW_LATENT_DYNAMICS_RESEARCH.md)。
+
+当前清单累计7679产物，旧7247、5份完整CSV及依赖锁SHA不变；544个公开源文件复核通过。急降速/恢复仍有大误差，NN独特current标签约85k而强树430/488k，后续先解开这些混杂，不能只扩大联合模型。
+
 **C87–C90：完成 12 个匹配神经网络训练，全时段预训练未超过强参照。** scratch、事件 warm、dense warm 共享初态与微调批次，两 warm 臂等步数/同目标。两走廊均保留 incumbent，无新正式成绩或完整 submission。
 
 | 公开后段代理 IoU | 强参照 | scratch blend | event_warm blend | dense_warm blend |

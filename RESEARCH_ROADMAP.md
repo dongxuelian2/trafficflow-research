@@ -2,9 +2,15 @@
 
 目标为可复现的正式 Kaggle **0.95000+**；当前正式 **0.82940**。不将阶段性较低分数作为终点。
 
+C91–C94已完成显式future/current flow监督、masked State当前分析头和6步graph-GRU。12网络/4强树实测后，两个Queue primary仍原参照；State joint NN仍明显低于更多独特标签训练的强树，GRU未提供独立稳定增益。当前因果State与Queue输入已严格分开，不再把raw Queue历史当作State合法观测。[已完成证据](docs/JOINT_FLOW_LATENT_DYNAMICS_RESEARCH.md)。
+
+下一步先做**监督人口及选择目标匹配的 State 专项控制**，核查当前teacher覆盖与共享梯度冲突：同实际曝光标签的强树/State-only学习，与全fit标签强树分开；State权重按独立State checkpoint选，保持Queue参照冻结。用预登记的新滚动时间/走廊检查推断，不能在这些已看后段追加loss/GRU阈值网格。此次只实现学习的未来潜变量，没有CTM守恒或隐藏边界流验证，正式Physics/Total仍未知。
+
+当前每seed独特current标签只有85k左右，强树430/488k；C94已导出精确曝光集合的构造，不能只按原点数量称数据匹配。I5S急降速/恢复的速度RMSE仍约59/68km/h，平均loss改善没有解决这些少数相关事件；后续保留该失败分层，另检查观测teacher噪声与真正动力学误差，禁止用隐藏label诊断。
+
 C87–C90已完成全时段动态预训练及等计算事件预训练控制：12个网络、同初态/同微调批次。dense对event事后代理gain+.009148，但两个primary仍强参照，对强参照联合−.023199。I5S效应未在I10W复现，更低Brier不保证更高IoU，不追加相同阈值/混合网格。[已完成证据](docs/DENSE_DYNAMICS_PRETRAINING_RESEARCH.md)。
 
-下一步用已审计dense数据研究**连续speed/flow联合预测与缺失感知潜状态传播**，显式新增flow head，与同数据/同计算的原网络比较；C87当前仅speed/queue输出。以合法State重建、事件forecast及预定义急降速/恢复分层共同检验，独立选模型后再扩滚动时间/走廊。forecast误差、Brier和缺边界物理诊断均不是正式State/Physics；原最佳与未开启最终模拟seeds保留，继续只做本地模型。
+该阶段提出的连续speed/flow及缺失感知传播现由C91–C94完成首轮匹配更新数实验；GRU实际计算更多、所有State输入改为masked历史，结果及下一步以上文为准。forecast误差、Brier和缺边界诊断均不是正式State/Physics；原最佳和未开启最终模拟seeds保留，继续只做本地模型。
 
 C82–C84已完成受控非前缀筛查：已知反例gap闭合，但52个decision onset/5284邻居中0提议、0shortlist，按预登记停止，没有新后段数组读取。停止扩展当前集合解码分支，不增加相同MC规模、搜索步数或同一场景库的组合。[筛查与数据证据](docs/BOUNDED_SEARCH_AND_DENSE_FORECAST.md)。
 
