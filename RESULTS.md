@@ -2,6 +2,18 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**D14–D20：新增正值 origin/destination 需求因子 OD 模型，模拟优于原 Ridge，但尚未证明超过强 entropy。** 独立实现乘性 log-demand MAP，与原 additive Gaussian 协方差模型不同；四配置仅按 development 最差条件 gain 选择，之后封存。十方向、九种自主需求/先验条件、三开发 seed 共1620记录；三个新研究 seed 的270个唯一问题再作配对评估。最终模拟 seeds 未生成，没有使用 reference 或隐藏路径真值。
+
+同一评估问题的 macro **模拟 S_ODME**：Ridge **.664500**、固定 entropy **.707992**、新模型 **.724308**。新模型相对 Ridge gain **+.059808**、五族/三seed配对 CI **[.038371,.076213]**；相对 entropy gain **+.016316**、CI **[−.001239,.037405]**，不作为新最佳。新模型比 entropy 在九条件中的五种更差，缺失 prior 路径差 **−.046655**；平均收益主要来自稀疏活跃需求与离群计数，不能概括为普遍优势。当前公开 K05 全部使用 entropy 分支，但本轮没有声称比较了它所有可能的模拟专家政策。
+
+首次 D14 有4个唯一 solver case 未过数值证书，含部署 alias 共7条失败，整体区间为空。D17增加 exact-Hessian/浮点预算 polish，**没有改变目标、参数、seed或2e−4门槛**；重放2700记录后零 case failure，原sealed choice保留且开发重算也选同参数。1080条 Ridge/entropy参考预测与分数逐值一致；原成功记录的最大分数漂移 **4.48e−7**。修复重用已查看研究评估，**不是新盲测**；原失败及全部源快照保留。
+
+独立有限差分 trust-region oracle：选定参数 **6/6**一致，全部配置 **16/18**一致。弱正则 I5_N 离群案例的两个局部解，路径L1差 **15.52%**、检测器计数L1差仅 **.06366%**；低计数误差不能证明路径识别。局部需求 Jacobian rank 为 I5_N **92/184**、I210_W **81/162**；正则只选择解，不增加信息。模型是局部MAP点估计，没有校准后验，也无法表示真零路径。
+
+D14/D17完整实验 **456.71/498.35秒** CPU；D18独立复核 **57.17秒**，与测试等存在并行，不是隔离测速。修复后全套 **88 research passed；CPU76 passed/4 optional-Torch skips**。新完整OD-only控制 K07 单独保存，正式分数未知，不替换原.82940。详见 [研究记录](docs/LOG_DEMAND_OD_RESEARCH.md)、[配对对照](reports/research/D20_log_demand_matched_model_comparison.json)。本轮只有本地模型、验证与归档。
+
+K07文件 `artifacts/research/K07_log_demand_OD_LOCAL/submission.csv`：**6,980,503行**，SHA-256 **e797746aac25398f62d6b1a62392f59ecfdd763f9b2bc34628bca2c8f1e36c9d**。全行diff通过，**仅70,708个OD值变化**，State/Queue/其他字段全部不变。30个公开OD子问题全部成功，但相对prior的L1改变量 **41.11%–62.17%**，路径精度未知。完整构建174.85秒CPU、峰值335.38MiB；该候选未上传，只供受控比较，不作为新最佳。
+
 **C55–C61：两个新方向×两个时间 fit 的五阶段 Queue 验证完成，未晋级。** fit之后，15天仅选checkpoint，30天仅选决策阈值/参考tree，后15天用于challenger gate，最后30天assessment；三次选择均先封存才读后段标签。四组新权重从各自fit重新训练，没有把旧selected checkpoint的cal切片冒充独立验证。原第一轮I5_S秋完成、冬在checkpoint失败；其记录与模型保留。修订四组全部运行同一预注册worker/sampler，三optimizer seed/组，mean α=.25固定。
 
 **采样器确有可修复的条件不平衡。** 原I5_S冬checkpoint存在15个onset/944个ongoing候选；旧按全部候选随机排列，加6小时spacing后选0/22。新的按条件均衡候选策略同日同seed选9/13；秋checkpoint从1个onset变为10个。原selector默认行为保留，两个旧cache的8组sampler metadata与eligible labels精确复现。新策略只是合法观测代理，不能声称组织方selector或latent bias已解决。

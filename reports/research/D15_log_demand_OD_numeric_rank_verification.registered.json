@@ -1,0 +1,24 @@
+{
+  "protocol_sha256": "4c1668271abd7393ca55503389f787ce563269552bb7deb542ae5746c5788572",
+  "protocol": {
+    "id": "Log_demand_OD_independent_trust_region_and_group_rank_audit",
+    "panels": [
+      "D12_I5_N",
+      "D7_I210_W"
+    ],
+    "regimes": [
+      "hierarchical_demand",
+      "group_biased_prior",
+      "count_outliers"
+    ],
+    "seed": 1201,
+    "settings_indices": [
+      1,
+      3
+    ],
+    "oracle": "Bounded scipy least_squares,jac3-point,Gaussian group penalties retained under count Huber",
+    "scope": "Development numeric and structural diagnostic only;no model selection/hidden path truth",
+    "formal_ODME": null,
+    "formal_Total": null
+  }
+}

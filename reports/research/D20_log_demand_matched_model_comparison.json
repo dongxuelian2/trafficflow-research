@@ -1,0 +1,146 @@
+{
+  "study_sha256": "2945ccc2a301e6fcd8ad26b0b56cdd5d1d8e8dc974332488b5e2e5c62bb7edf9",
+  "numeric_sha256": "b5fb095dece7a521ffb8d71f2e1252e10ac8ed375fee5a58771c4c789f4de982",
+  "n_matched_unique_simulated_cases": 270,
+  "macro_simulated_S_ODME": {
+    "ridge_0.05": 0.6644999701494244,
+    "fixed_entropy_D08": 0.7079917001868997,
+    "development_hypothesis": 0.7243079166529377
+  },
+  "paired_comparisons": {
+    "ridge_0.05": {
+      "paired_family_seed_macro_gain": 0.05980794650351338,
+      "ci95": [
+        0.038370565417664856,
+        0.0762132753740565
+      ],
+      "n_families": 5,
+      "n_independent_assessment_seeds": 3,
+      "resamples": 4000,
+      "scope": "Synthetic generating distributions and a small number of seeds; no Kaggle confidence interval"
+    },
+    "fixed_entropy_D08": {
+      "paired_family_seed_macro_gain": 0.016316216466038026,
+      "ci95": [
+        -0.0012390229037064784,
+        0.03740481455126456
+      ],
+      "n_families": 5,
+      "n_independent_assessment_seeds": 3,
+      "resamples": 4000,
+      "scope": "Synthetic generating distributions and a small number of seeds; no Kaggle confidence interval"
+    }
+  },
+  "regime_comparisons": [
+    {
+      "regime": "independent_paths",
+      "ridge_0.05": 0.8299910736418346,
+      "fixed_entropy_D08": 0.8603385018080913,
+      "development_hypothesis": 0.8452971699064644,
+      "gain_vs_ridge": 0.015306096264629865,
+      "gain_vs_entropy": -0.015041331901626931
+    },
+    {
+      "regime": "hierarchical_demand",
+      "ridge_0.05": 0.8461420245885488,
+      "fixed_entropy_D08": 0.8686341753131874,
+      "development_hypothesis": 0.8810060502830955,
+      "gain_vs_ridge": 0.03486402569454672,
+      "gain_vs_entropy": 0.012371874969908103
+    },
+    {
+      "regime": "prior_total_bias",
+      "ridge_0.05": 0.8379536740558923,
+      "fixed_entropy_D08": 0.8645290667617406,
+      "development_hypothesis": 0.8804298242373416,
+      "gain_vs_ridge": 0.042476150181449346,
+      "gain_vs_entropy": 0.015900757475601046
+    },
+    {
+      "regime": "absolute_additive_prior_noise",
+      "ridge_0.05": 0.6672625024285432,
+      "fixed_entropy_D08": 0.7232071050378716,
+      "development_hypothesis": 0.7132386456772245,
+      "gain_vs_ridge": 0.04597614324868127,
+      "gain_vs_entropy": -0.009968459360647053
+    },
+    {
+      "regime": "lognormal_prior_noise",
+      "ridge_0.05": 0.5205695434696367,
+      "fixed_entropy_D08": 0.5947534783239915,
+      "development_hypothesis": 0.5711511472627933,
+      "gain_vs_ridge": 0.05058160379315657,
+      "gain_vs_entropy": -0.023602331061198245
+    },
+    {
+      "regime": "missing_prior_paths",
+      "ridge_0.05": 0.6119864826859827,
+      "fixed_entropy_D08": 0.6824776172884757,
+      "development_hypothesis": 0.6358230007068305,
+      "gain_vs_ridge": 0.023836518020847852,
+      "gain_vs_entropy": -0.04665461658164516
+    },
+    {
+      "regime": "group_biased_prior",
+      "ridge_0.05": 0.5458111319516469,
+      "fixed_entropy_D08": 0.627386270079793,
+      "development_hypothesis": 0.6037543808782564,
+      "gain_vs_ridge": 0.057943248926609514,
+      "gain_vs_entropy": -0.023631889201536582
+    },
+    {
+      "regime": "sparse_active_paths",
+      "ridge_0.05": 0.6495387865397457,
+      "fixed_entropy_D08": 0.5770060616398452,
+      "development_hypothesis": 0.711236385589987,
+      "gain_vs_ridge": 0.0616975990502413,
+      "gain_vs_entropy": 0.13423032395014178
+    },
+    {
+      "regime": "count_outliers",
+      "ridge_0.05": 0.4712445119829888,
+      "fixed_entropy_D08": 0.5735930254291015,
+      "development_hypothesis": 0.6768346453344463,
+      "gain_vs_ridge": 0.20559013335145748,
+      "gain_vs_entropy": 0.10324161990534475
+    }
+  ],
+  "local_solver_disagreements": [
+    {
+      "panel": "D12_I5_N",
+      "regime": "count_outliers",
+      "setting_index": 1,
+      "solver_local_objective": 939.237822355158,
+      "oracle_local_objective": 939.2528625571961,
+      "oracle_reported_success": true,
+      "objective_difference": -0.015040202038107964,
+      "max_relative_flow_difference": 12.089215700334409,
+      "independent_solutions_agree": false,
+      "scope": "Two local optimizers agreeing is numerical evidence,not global optimum/hidden recovery",
+      "NPZ_sha256": "00df6cb1780cc3f15fef5fd8c2c86fadf64f8b62be56cc9865ba7140a20ac8de",
+      "relative_path_L1_between_solutions": 0.15521735837730696,
+      "relative_count_L1_between_solutions": 0.0006365529390793763,
+      "maximum_absolute_path_flow_difference": 2155.5082162606527
+    },
+    {
+      "panel": "D12_I5_N",
+      "regime": "count_outliers",
+      "setting_index": 3,
+      "solver_local_objective": 478.30400712059776,
+      "oracle_local_objective": 478.30400715077906,
+      "oracle_reported_success": true,
+      "objective_difference": -3.018129746124032e-08,
+      "max_relative_flow_difference": 0.00043835243220139987,
+      "independent_solutions_agree": false,
+      "scope": "Two local optimizers agreeing is numerical evidence,not global optimum/hidden recovery",
+      "NPZ_sha256": "47894b1f994378c393860605eecf1230197244a0ad6381ddac3cc2ec3b7cc5ee",
+      "relative_path_L1_between_solutions": 3.4767032362942215e-05,
+      "relative_count_L1_between_solutions": 3.326696070671622e-07,
+      "maximum_absolute_path_flow_difference": 0.2329008461599642
+    }
+  ],
+  "model_selection_changed": false,
+  "formal_ODME": null,
+  "formal_Total": null,
+  "limitations": "Secondary matched diagnostic after numerical repair on previously viewed research seeds. Intervals resample five fixed public families and three seeds under nine chosen synthetic laws; not independent formal/private accuracy,not calibrated posterior uncertainty. Fixed entropy is the current public-input K05 branch,not all possible synthetic OD expert policies."
+}

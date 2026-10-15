@@ -1,0 +1,63 @@
+{
+  "protocol_sha256": "5765b3c36805a226cf33c75f26b537425f12f5a436ea416f4e6b03f82b9a406b",
+  "protocol": {
+    "id": "Positive_origin_destination_log_demand_broad_prior_control",
+    "grid": [
+      {
+        "group_sd": 0.2,
+        "noise_cv": 0.02,
+        "prior_floor": 2.0,
+        "huber_delta": null
+      },
+      {
+        "group_sd": 0.6,
+        "noise_cv": 0.02,
+        "prior_floor": 2.0,
+        "huber_delta": null
+      },
+      {
+        "group_sd": 0.6,
+        "noise_cv": 0.1,
+        "prior_floor": 2.0,
+        "huber_delta": null
+      },
+      {
+        "group_sd": 0.6,
+        "noise_cv": 0.02,
+        "prior_floor": 2.0,
+        "huber_delta": 2.5
+      }
+    ],
+    "development_seeds": [
+      411,
+      829,
+      1201
+    ],
+    "fresh_assessment_seeds": [
+      931003,
+      931013,
+      931031
+    ],
+    "generating_regimes": [
+      "independent_paths",
+      "hierarchical_demand",
+      "prior_total_bias",
+      "absolute_additive_prior_noise",
+      "lognormal_prior_noise",
+      "missing_prior_paths",
+      "group_biased_prior",
+      "sparse_active_paths",
+      "count_outliers"
+    ],
+    "final_seeds_generated": false,
+    "model": "f=max(b,2)*exp(origin effect+destination effect),Gaussian log-effect prior;countGaussian or Huber",
+    "scope": "Low-dimensional positive demand-factor MAP,not old additive Gaussian covariance or alternative path choice",
+    "optimization": "Two deterministic starts,bounds+-3,L-BFGS-B;projected-gradient<=2e-4 required,local certificate only",
+    "selection": "One setting max worst-regime dev gain then mean;accept only mean>=.005 and worst>=-.002 and all successful",
+    "assessment": "Generate only after choice seal;evaluate ridge,entropy,selected deployment policy and fixed dev hypothesis",
+    "truth": "Own forward/reverse known-truth generators,public network/weakprior only;no reference or hidden path truth",
+    "formal_ODME": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+新增 `log_demand_od.py` 仅接受公开incidence/counts/weakprior和origin/destination元数据，输出非负流量与局部数值诊断；不读reference或组织方隐藏path truth。四配置development选择封存后才首次生成三个research seed。D17修复后仍保留D14原选择，recomputed_dev_choice只是回归字段；其assessment明确属于已查看seed的数值回放，不是final。270个唯一评估问题与deployment alias分开，失败不删除。D19验证全覆盖、7条失败恢复及1080参考预测/分数逐值不变。
+
+Polish解析Hessian包括count Jacobian项、指数模型二阶项和Gaussian prior；使用Cholesky阻尼/步长回溯，在浮点预算内允许gradient减半，最终projected-gradient仍2e−4。两起点至少一份证书有效才返回，证书只说明局部stationarity。独立trust-region使用3-point数值Jacobian；选中6/6通过，全grid16/18，两不一致病例及NPZ保留。固定prior乘性模型不能表示真零、没有path-level residual或校准posterior，不声称global/identifiable。五项kernel测试及全部88 research/76 CPU测试通过，4个Torch模块在CPU环境跳过。
+
+K07构建入口检查formal baseline/component SHA、完整study与原selection seal、选中参数独立oracle，再对公开split的OD模板逐path/zone核对。State/Queue使用原组件，真实Physics输入因此保持不变。完整主key合并之后另做全行OD-only diff；候选不上传、不替代已测正式最佳。所有模拟/公共count诊断的formal_ODME和formal_Total字段均为空。
+
 C38完整保存tree与三个graph的全模板概率，future labels/score mask独立存为evaluator数据。C39推断函数full_queue_decisions不接受score mask；只有FullForecastScorer校准utility使用label/mask。两套时间规则先在cal封存，之后才读assessment；不重训、没有新fit seed。fast scorer与逐窗scorer含无eligible evidence=0的手算一致。before模式nonempty只能在公开允许的onset T+30候选中选择，避免旧清零顺序删掉强制点；实际selected force=false，所以两季结果相同。
 
 FullDomainQueueModel只接受history、完整template、public net/topology、origin与condition；UTC标准化、拒绝>T测量及缺失template。导出CPU weights，保存前清除GPU cache；实际220次cal-window由Parquet≤T谓词和公开T行重建，binary predictions精确复现。validation/private推断各15480行，完整master-key diff证明K06只改I5_N415个Queue值，State/OD/其他字段逐行不变。67 research /59 CPU tests、3可选Torch跳过；新测试含time-before-force反例、scorer一致性、完整预测域及因果/完整模板拒绝。

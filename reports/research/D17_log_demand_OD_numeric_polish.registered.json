@@ -1,0 +1,68 @@
+{
+  "protocol_sha256": "264560cab60fc8c52792dc893ffb8e50f840ada81109d65fbb4e2aac4a856eb1",
+  "protocol": {
+    "id": "Positive_origin_destination_log_demand_broad_prior_control",
+    "grid": [
+      {
+        "group_sd": 0.2,
+        "noise_cv": 0.02,
+        "prior_floor": 2.0,
+        "huber_delta": null
+      },
+      {
+        "group_sd": 0.6,
+        "noise_cv": 0.02,
+        "prior_floor": 2.0,
+        "huber_delta": null
+      },
+      {
+        "group_sd": 0.6,
+        "noise_cv": 0.1,
+        "prior_floor": 2.0,
+        "huber_delta": null
+      },
+      {
+        "group_sd": 0.6,
+        "noise_cv": 0.02,
+        "prior_floor": 2.0,
+        "huber_delta": 2.5
+      }
+    ],
+    "development_seeds": [
+      411,
+      829,
+      1201
+    ],
+    "fresh_assessment_seeds": [
+      931003,
+      931013,
+      931031
+    ],
+    "generating_regimes": [
+      "independent_paths",
+      "hierarchical_demand",
+      "prior_total_bias",
+      "absolute_additive_prior_noise",
+      "lognormal_prior_noise",
+      "missing_prior_paths",
+      "group_biased_prior",
+      "sparse_active_paths",
+      "count_outliers"
+    ],
+    "final_seeds_generated": false,
+    "model": "f=max(b,2)*exp(origin effect+destination effect),Gaussian log-effect prior;countGaussian or Huber",
+    "scope": "Low-dimensional positive demand-factor MAP,not old additive Gaussian covariance or alternative path choice",
+    "optimization": "Two starts,bounds+-3,L-BFGS-B plus exact-Hessian/roundoff-budget polish;unchanged projected-gradient<=2e-4,local only",
+    "numerical_repair_reference": {
+      "path": "reports/research/D14_log_demand_OD_broad_control.json",
+      "sha256": "9cbc623078bcb3dd68523562eddceb2f3f5dfc07e256efd40573013d203ee0f8",
+      "policy": "Same grid/data/seeds/objective/tolerance;retain original sealed selection;assessment is numerical regression"
+    },
+    "selection": "One setting max worst-regime dev gain then mean;accept only mean>=.005 and worst>=-.002 and all successful",
+    "assessment": "Generate only after choice seal;evaluate ridge,entropy,selected deployment policy and fixed dev hypothesis",
+    "truth": "Own forward/reverse known-truth generators,public network/weakprior only;no reference or hidden path truth",
+    "formal_ODME": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

@@ -2,6 +2,21 @@
 
 所有模拟指标、观测代理与正式 Kaggle 指标分别记录。失败实验不删除，既有模型与提交不覆盖。
 
+最新D14–D20完成独立正值需求因子模型与数值修复；正式Total仍.82940，无新正式最佳。
+
+| 编号 | 假设 / 对照 | 实测结果 | 资源 / 决策 |
+|---|---|---|---|
+| D14 | 乘性origin/destination log-demand MAP，4配置、9条件、10方向、3开发seed | development选sd=.2/noise=.02/floor2；初评3个选中case未过证书；含alias共7failure记录 | 456.71秒CPU；原失败、源快照、空整体CI保留 |
+| D15 | 两方向×3条件×2配置，独立有限差分trust-region oracle及rank | 10/12一致；弱正则离群案例存在显著不同流量解 | 47.16秒CPU；不放宽门槛、不声称global MAP |
+| D16 | 原sealed选中参数的独立数值复核 | 6/6一致 | 11.23秒CPU；仅development数值证据 |
+| D17 | same-case exact-Hessian polish，保持目标/2e−4/选择 | 2700记录全部case成功；研究macro .724308 vs Ridge .664500 | 498.35秒CPU；已查看种子回归，不是新盲测 |
+| D18 | polish后3配置独立oracle | 16/18一致，选中6/6；两旧差异仍记录 | 57.17秒CPU；局部多解风险保留 |
+| D19 | 完整数值修复回归比较 | 7记录恢复、无新失败；1080参考记录exact；旧成功分数最大漂移4.48e−7 | 全部coverage与原选择一致；不删失败案例 |
+| D20 | 同270个问题直接比较强entropy | 新模型对entropy+.016316，CI[−.001239,.037405]；5/9条件更差 | 不晋级；稀疏/离群条件收益不能冒充普适收益 |
+| K07 LOCAL | log-demand OD-only完整控制，State/Queue原组件 | 6980503行；30个公开子问题全成功；prior L1变化41.11%–62.17% | 174.85秒CPU、335.38MiB；真实路径效果未知、未上传 |
+
+新kernel测试覆盖Gaussian/Huber解析梯度、独立trust-region小系统、gauge方向及无效输入。最终88 research passed，纯CPU76 passed/4 optional-Torch skips。计数Jacobian rank I5_N92/184、I210_W81/162；局部KKT与高计数拟合不能证明路径真值。正值因子只作MAP点估计，尚无校准后验或真零support。最终模拟7907/8017/9109未生成，原正式.82940及已有完整候选不变；平台任务继续暂缓。
+
 最新C38–C41与完整LOCAL K06完成，正式Total仍.82940；新时序规则gain为0，没有新模型晋级。
 
 | 编号 | 假设 / 对照 | 实测结果 | 资源 / 决策 |

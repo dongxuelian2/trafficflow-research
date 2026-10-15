@@ -3,6 +3,16 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+最新 OD 配对比较为九种自主已知真值条件、十方向、三研究 seed；同一270个问题，模型选择先由 development 封存。D17为保持原选择的数值修复重跑，评估 seed 已查看，不能当新的盲测。
+
+| OD 模型 | macro 模拟 S_ODME | 对 Ridge gain / CI | 对 entropy gain / CI |
+|---|---:|---|---|
+| 原 Ridge λ=.05 | .664500 | 参考 | — |
+| 固定 entropy τ=.05/floor20 | .707992 | +.043492 / [.028484,.058255] | 参考 |
+| 正值需求因子 sd=.2/noise=.02/floor2 | .724308 | +.059808 / [.038371,.076213] | +.016316 / [−.001239,.037405] |
+
+新模型仍输给entropy五种条件，missing-prior-paths差−.046655，不能依据平均分替换强参考；K07仅为完整本地OD-only控制。数值修复使7条失败记录恢复（4个唯一solver问题），原参考1080记录预测/分数不变，成功分数最大漂移4.48e−7。选中参数独立oracle6/6一致，全部配置16/18；局部多解和低rank未解决。统计区间只针对五个固定公共族/三个seed及选定模拟法律，**不是正式OD/Total或后验区间**。详见D19/D20与 `docs/LOG_DEMAND_OD_RESEARCH.md`。
+
 最新完整域校准（冻结fit权重，参数只由cal选择）：
 
 | fold / 模型 | tree proxy IoU | selected mixture proxy IoU | 去重gain CI | before/after timing差异 |
