@@ -1,0 +1,155 @@
+{
+  "source_study_sha256": "30692e04a2c50c892155533186c698985948061bb9b9d1a5644597816f2e2e9b",
+  "failed_verifier_exit_code": 1,
+  "failure": "Selected-checkpoint alpha grid differs at tolerance1e-12",
+  "failed_attempt_source_snapshot_sha256": "b2a4d70d6140f037a8ed5c9fc1773a08e7237580626147858323340a5f4059d3",
+  "n_pure_cal_predictor_calls": 56,
+  "selected_prediction_maximum_lane_unit_errors": {
+    "float64_mix": 6.103515625e-05,
+    "native_float32_mix": 0.0
+  },
+  "grid_score_differences": [
+    {
+      "role": "control_seed20261013",
+      "alpha": 0.0,
+      "saved_score": 0.9380172251682947,
+      "float64_mix": 0.0,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "control_seed20261013",
+      "alpha": 0.25,
+      "saved_score": 0.9413466809829386,
+      "float64_mix": 0.0,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "control_seed20261013",
+      "alpha": 0.5,
+      "saved_score": 0.9435570075773901,
+      "float64_mix": 0.0,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "control_seed20261013",
+      "alpha": 0.75,
+      "saved_score": 0.9444329341732512,
+      "float64_mix": 3.1204083761338097e-10,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "control_seed20261013",
+      "alpha": 1.0,
+      "saved_score": 0.9438539502677856,
+      "float64_mix": 0.0,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "geo_seed20261013",
+      "alpha": 0.0,
+      "saved_score": 0.9380172251682947,
+      "float64_mix": 0.0,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "geo_seed20261013",
+      "alpha": 0.25,
+      "saved_score": 0.9419637083970182,
+      "float64_mix": 0.0,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "geo_seed20261013",
+      "alpha": 0.5,
+      "saved_score": 0.9447791836099689,
+      "float64_mix": 0.0,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "geo_seed20261013",
+      "alpha": 0.75,
+      "saved_score": 0.94617890258152,
+      "float64_mix": -5.685731885307632e-10,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "geo_seed20261013",
+      "alpha": 1.0,
+      "saved_score": 0.9459628913682169,
+      "float64_mix": 0.0,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "control_seed20261029",
+      "alpha": 0.0,
+      "saved_score": 0.9380172251682947,
+      "float64_mix": 0.0,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "control_seed20261029",
+      "alpha": 0.25,
+      "saved_score": 0.9416695346069464,
+      "float64_mix": 0.0,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "control_seed20261029",
+      "alpha": 0.5,
+      "saved_score": 0.9441120663408222,
+      "float64_mix": 0.0,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "control_seed20261029",
+      "alpha": 0.75,
+      "saved_score": 0.9450931247279803,
+      "float64_mix": 3.5268665765642027e-10,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "control_seed20261029",
+      "alpha": 1.0,
+      "saved_score": 0.9444731888850021,
+      "float64_mix": 0.0,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "geo_seed20261029",
+      "alpha": 0.0,
+      "saved_score": 0.9380172251682947,
+      "float64_mix": 0.0,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "geo_seed20261029",
+      "alpha": 0.25,
+      "saved_score": 0.9415466712636613,
+      "float64_mix": 0.0,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "geo_seed20261029",
+      "alpha": 0.5,
+      "saved_score": 0.9439882070155633,
+      "float64_mix": 0.0,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "geo_seed20261029",
+      "alpha": 0.75,
+      "saved_score": 0.9451240948535586,
+      "float64_mix": -2.6750568427047483e-10,
+      "native_float32_mix": 0.0
+    },
+    {
+      "role": "geo_seed20261029",
+      "alpha": 1.0,
+      "saved_score": 0.9448218066250597,
+      "float64_mix": 0.0,
+      "native_float32_mix": 0.0
+    }
+  ],
+  "seconds": 8.4513850000003,
+  "diagnosis": "Saved training mixes multiply float32 neural outputs before adding float64 baseline;first verifier multiplied recovered float64 neural values. Cast recovered neural outputs back to native float32 before reproducing alpha multiplication. Preserve tolerance and model bytes."
+}

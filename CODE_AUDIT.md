@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+A138新增研究runner，生产src不变。D12_I405_S使用原始公开fit targets，四个新fit分成两个seed的普通/位置配对，共同初始state、独立存储patch计划、实际逐格曝光完全匹配。强性能参照为既有全标签LGB/A47 cal最高者，普通新GRU亦作为候选；全部alpha/checkpoint/reference/primary整体seal后才读旧后留。
+
+A140首轮核验的alpha-grid触发1e−12断言。独立56纯cal调用证明核验器float64乘法改变float32中间舍入；恢复native float32后20网格评分和选中预测差均0。未改训练/模型/选择/预测/容差，失败源码/注册/诊断保留。A140b重建92fit raw输入/teacher/mask、公开图/距离、独立RNG计划/四份曝光，308predict最大lane-unit差2.27e−13，另56纯cal调用及280保存指标、20所选checkpoint网格评分通过。未重放训练优化器或未选择的epoch。
+
+A139实际154导出接口调用；A141全部14日teacher/diagnostics/154指标独立复算，另22predict差0。11导出含参照、组合和别名，只有四个新拟合模型。历史125research/104CPU、7Torch skips不重复计新测试，脚本compileall通过；二月R3及恢复/长缺失速度退步不隐藏。
+
 A134以`--winter`复用同一位置结构，动态reference=`nn_primary`、固定候选=`geo_seed_mean`/`geo_speed_reference_flow`；没有树流量或额外通道网格。A136独立重建258节点几何、两共同初始化与完整实际格点曝光45,754,069/45,844,015次，选中pt/alpha/gamma/导出一致；224次predict最大lane-unit差4.55e−13，196指标score差2.22e−16。cal重新评分仍拒绝两候选，primary为原NN。
 
 A135全部8角色×14日直接调用112次；A137重建14日raw teacher/lanes/diagnostic masks和112保存指标，另首末16predict差0，score差1.11e−16。纯新NN二月分数较高不改变cal-only选择。生产src未变，前阶段125research/104CPU+7Torch skips为历史内核证据；本轮脚本compileall及上述实测复核完成。跨方向汇总仅按共同14日同步bootstrap的等方向日均诊断，不算正式权重或28独立日期。

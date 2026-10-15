@@ -1,0 +1,3722 @@
+{
+  "registered": {
+    "protocol_sha256": "ba1ddd936abef1f5be0dcd66dea57f113025c18ea1aaf1854484b8ded2682b72",
+    "protocol": {
+      "id": "Third_family_raw_fit_paired_exposure_and_selected_deployment_verification",
+      "source_study_sha256": "30692e04a2c50c892155533186c698985948061bb9b9d1a5644597816f2e2e9b",
+      "scope": "All92fit raw inputs/teachers,independent metadata/graph/plans/four actual exposure archives,common initialization/selected pt,28days all exports and full selected-checkpoint cal alpha grid. Does not rerun training or unselected epochs.",
+      "formal_State": null,
+      "formal_Physics": null,
+      "formal_Total": null
+    }
+  },
+  "source_snapshot": {
+    "archive": "artifacts/research/A140b_I405_S_matched_relative_verification/source_snapshot.zip",
+    "archive_sha256": "e69392c673ae932d8ca82072d017585bd15c8461f7b7346b24369ee2cebff206",
+    "captured_files": [
+      {
+        "path": "config/research_protocol_v2.json",
+        "sha256": "dd7318f99e56b826d42eac58ab9c3213803db8f6c740ed843d95879835703121"
+      },
+      {
+        "path": "config/research_targets.json",
+        "sha256": "9a524c7c728cf6ed7ab4920592541e38fe720b36a0879c6f488a77b833e3452f"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "8cd1033d7ceeaa616319d900e5a9990445f3881665420cf4cd9715941b0e52f5"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "db90c0f17353c586ec2b51f9f42748c254e2e6563e7aebff81b7dbf9a3e82ccd"
+      },
+      {
+        "path": "requirements.lock.txt",
+        "sha256": "f4c8602ed3a0c29541e42d23547672864aa487fe2fcf24f8cf2d140f53c16fde"
+      },
+      {
+        "path": "requirements.research.lock.txt",
+        "sha256": "12f5a3bd24e186a0c71512b18eea44548159ec37088546efd7cc3c14c95fae8c"
+      },
+      {
+        "path": "scripts/adaptive_graph_experiment.py",
+        "sha256": "20f067bb639496004300446f8ba8705824cae80b2e91225e5fe6abcb609a3570"
+      },
+      {
+        "path": "scripts/adaptive_graph_transfer.py",
+        "sha256": "b50f19a6427d6c3d7e8facddb071dbc22dc5cf3641b10f889dc2b4bfb2d40ec8"
+      },
+      {
+        "path": "scripts/adaptive_seed_ensemble_experiment.py",
+        "sha256": "3cf00abec0e697a7631c9b16d259ff4c966c88dfad5d23550834edf14999a1c3"
+      },
+      {
+        "path": "scripts/assemble_campaign.py",
+        "sha256": "e5b103ba8501775e049e14c89e3854e5e2a56b93942505330b5317d8023d6a5d"
+      },
+      {
+        "path": "scripts/assess_adaptive_ablation.py",
+        "sha256": "1ae73d734afe77a227629254cb67e002045a2894f094ed6bcc3e094d9297f442"
+      },
+      {
+        "path": "scripts/assess_joint_density.py",
+        "sha256": "92258a57238facc5153cc8c98c422ed71e92f69b0ae4ecada5a4edf77f00c2e6"
+      },
+      {
+        "path": "scripts/audit_density_normalization.py",
+        "sha256": "8cf6a77a0a1d39d21b69f01e95037947a5be14177d92264bf2ce17e2c5529f3f"
+      },
+      {
+        "path": "scripts/audit_fit_transition_population.py",
+        "sha256": "570e90dbdfb71323614c428ff30eeefc49e7fd2a40041062a7d759934f5694dc"
+      },
+      {
+        "path": "scripts/audit_kaggle_baseline.py",
+        "sha256": "3a8f78d8cb154fb1d4b25ed902d81e44b9665f4628162f3342641071b679193a"
+      },
+      {
+        "path": "scripts/audit_od_identifiability.py",
+        "sha256": "bce792650d2dfc0a5268a9e012aeaa846c87715620ee3e3e3a6e0659d4885c36"
+      },
+      {
+        "path": "scripts/audit_od_path_choice.py",
+        "sha256": "a4f66b3c5f96ad5639567dbd66ca0dfe3185e355b660b5a6c43282e4ea075bdc"
+      },
+      {
+        "path": "scripts/audit_physics_topology.py",
+        "sha256": "5afabe6d2e6920fdda75988c936d44adcabbb3f57110552d4c269ea7949d308a"
+      },
+      {
+        "path": "scripts/audit_public_graph_coverage.py",
+        "sha256": "449928bb66290a7c0c3201fc6e7912e0d2039f97503765a797f174e610d1ded0"
+      },
+      {
+        "path": "scripts/audit_public_missing_runs.py",
+        "sha256": "a75e7de2f4314f42214d17c63f213a85cd943f7074bc6f0c82094df06aa825ae"
+      },
+      {
+        "path": "scripts/audit_quality_state_context.py",
+        "sha256": "eab5635ee306051b7a391dc0f205f6bbcd7be009caf7ea22842c14bba75f1cb3"
+      },
+      {
+        "path": "scripts/audit_queue_decision_domain.py",
+        "sha256": "7e7eabc8b93a42c6496ad405ef479f7db28308480973ec0e30594847c04010c8"
+      },
+      {
+        "path": "scripts/audit_queue_geometry_artifacts.py",
+        "sha256": "d59859310f9224d586637995b717ab007de2036fae357b9258ebf494f1035876"
+      },
+      {
+        "path": "scripts/audit_queue_origin.py",
+        "sha256": "dba7d16f51c6df6c6506a9e418d5aa3e3d7bdbe1693253772266bd170e36c242"
+      },
+      {
+        "path": "scripts/audit_recurrent_supervision.py",
+        "sha256": "fcb9fd882f31a2e1db3c73766c2f1b4e5eceeb4cb99d3bfcbca107b1fbe63915"
+      },
+      {
+        "path": "scripts/audit_released_onset_timing.py",
+        "sha256": "2cebf3e33c09f3a0f5e0f8e199ef58c84f0d39a93cfd303bf0f9e4b1e7647f68"
+      },
+      {
+        "path": "scripts/audit_released_train_queue_windows.py",
+        "sha256": "1f442072465be77d961c327db254578c45002d91db837bc1ec6f3351cec1ab52"
+      },
+      {
+        "path": "scripts/audit_state_increment_coverage.py",
+        "sha256": "aed74a5d49250e3c7c92bfbb203eb1c731d86387d5f5bdcceffd3015182fdd94"
+      },
+      {
+        "path": "scripts/audit_train_queue_quality_projection.py",
+        "sha256": "65c1561a038dd16c2360b54443740d7aee4102cf12a491b2e9b51dd9ae1747dc"
+      },
+      {
+        "path": "scripts/audit_wave_queue_domain.py",
+        "sha256": "ea46bbe3a494c3d39720c69ac8ad3c4217222626014cc2a1d0c46963eb392b5e"
+      },
+      {
+        "path": "scripts/build_adaptive_state_candidate.py",
+        "sha256": "c2cb1fd567c1b8fd9ae22871407610d2393ea33ac9693f9cee655e3e9a50a337"
+      },
+      {
+        "path": "scripts/build_bayesian_od_candidate.py",
+        "sha256": "5cc8d8b513e668e269510447c508facd640f97b85335da77d69f3e289bb9a8be"
+      },
+      {
+        "path": "scripts/build_full_domain_queue_candidate.py",
+        "sha256": "d7253e06534a72751df97db89b560109c69c43ade1fb6c5c5376f24cca0f5489"
+      },
+      {
+        "path": "scripts/build_log_demand_od_candidate.py",
+        "sha256": "7856416c5d4b73f940739d808a3f8785d0b82ff2b07468edec2a6702adfde074"
+      },
+      {
+        "path": "scripts/build_native_remask_cache.py",
+        "sha256": "b1bfbe632fcaff3ee45063cfb40ffdfa94477752e0d8e2a078ad7f76be5e5600"
+      },
+      {
+        "path": "scripts/build_od_expert_candidate.py",
+        "sha256": "85cd7dd8827d5375b42799091c67f6495c00ec16d68af6d425bb30db9d0dac1b"
+      },
+      {
+        "path": "scripts/build_onset_timing_candidate.py",
+        "sha256": "8a5486d7e8b7c9dba17e2c163fd76f122f2e38becae95abd769eefca7851b86d"
+      },
+      {
+        "path": "scripts/build_state_augmentation_cache.py",
+        "sha256": "15d57e8dc278a37a9c7317d120492699ed9e97b94c65cd9d86234885eacb6608"
+      },
+      {
+        "path": "scripts/campaign.py",
+        "sha256": "06cea939655896f9cef2ad404491d9418313c5cf1f0e525b20288a855a774418"
+      },
+      {
+        "path": "scripts/capture_environment.py",
+        "sha256": "5be825c14d82da31a2ca57459f8c6eead4f13ba2030f5488c465388a8e82d4f8"
+      },
+      {
+        "path": "scripts/causal_graph_queue_experiment.py",
+        "sha256": "5cb9e9a4c8d4482a53f7ebdefad43b6db4ef50a53bb1297bbfdc4598b5cdcace"
+      },
+      {
+        "path": "scripts/channel_state_experiment.py",
+        "sha256": "b9ff31ab4aa50c7e9a0aa1c2c28e0cb455eda9f09bc3e8f2e36abc72a0a7776a"
+      },
+      {
+        "path": "scripts/check_public_competition.py",
+        "sha256": "5c69ba4b041bc668b6cfad397fe2c9c584003910757e68908137e320d92c0a64"
+      },
+      {
+        "path": "scripts/check_report_bytes.py",
+        "sha256": "98701cbcb40ea3c191224bced993995c5e4b586e399a6d838d2249abff4ba2cc"
+      },
+      {
+        "path": "scripts/checkpoint_assimilation_phase.py",
+        "sha256": "b70d53c3e065da9e0ba9a48db04960afc433998686e463f9ece4f0d9dd29d778"
+      },
+      {
+        "path": "scripts/checkpoint_augmentation_phase1.py",
+        "sha256": "e7467c1d96ffe98e84e3c3e1c820c77ff04b12d5165ed6b9fe908e58098fc454"
+      },
+      {
+        "path": "scripts/checkpoint_cross_remask_phase1.py",
+        "sha256": "46eb62e2ed7f0f3ca5586dfcbdc7fd498809d98ad6d5320b19843f2bfdf3d1a3"
+      },
+      {
+        "path": "scripts/checkpoint_cross_remask_phase2.py",
+        "sha256": "6ee9ce09ed403feff69884be86967db315bf86adcd56e769d6c0f37720f9e1bb"
+      },
+      {
+        "path": "scripts/checkpoint_ctm_od_phase.py",
+        "sha256": "63295f1e9926c1a8c5e15f31ab6a3e21ead79d75be9f1201cbd763ab948bb383"
+      },
+      {
+        "path": "scripts/checkpoint_demand_residual_phase.py",
+        "sha256": "a3736029c307400efe75801d81ab0d00aaec0b06cad385436f07cdb0678e711f"
+      },
+      {
+        "path": "scripts/checkpoint_five_phase_queue.py",
+        "sha256": "bd0fbbfac40844b5976cdafc14ea95b206ed1c2f6f8c4885f042147103f9f11d"
+      },
+      {
+        "path": "scripts/checkpoint_flow_transfer.py",
+        "sha256": "554cf8f88742f9a74af968f5680363b62da1b95a633409450915ec484e719d17"
+      },
+      {
+        "path": "scripts/checkpoint_full_density_phase.py",
+        "sha256": "85b8c2e8f9b784cf98ee1c5c2f4945aeefc8e78d441c19874b74007684293883"
+      },
+      {
+        "path": "scripts/checkpoint_full_queue_phase.py",
+        "sha256": "70a0e8bb361e42725e69b117762f28ffdb29b6c44b1b3ad263ec727c89fcfe82"
+      },
+      {
+        "path": "scripts/checkpoint_gap_expert.py",
+        "sha256": "9082e43c1e0a06c137c5e1b7ae43527174a611c09b2a23ec2b5bb8618e172ecd"
+      },
+      {
+        "path": "scripts/checkpoint_log_demand_phase.py",
+        "sha256": "a9b23dd27a10869058d8cada5efea7c94678e097af2075bc33f88f1f822b80d7"
+      },
+      {
+        "path": "scripts/checkpoint_native_remask.py",
+        "sha256": "f8dc3c7462c530e6405f20ef46fa94ba6a31c0d195131c2f96fd2cb3361d5f76"
+      },
+      {
+        "path": "scripts/checkpoint_quality_density_phase.py",
+        "sha256": "de2ab9295c0519c6e189a2f0f3b65b4e02027a7bd67997df1746aa11e219bbe2"
+      },
+      {
+        "path": "scripts/checkpoint_queue_ensemble_phase.py",
+        "sha256": "234027970e3b402f1ecbeb9a4fdf0bcb24612dae8eb5ce553c2f47d8d38a19d0"
+      },
+      {
+        "path": "scripts/checkpoint_queue_overlap_phase.py",
+        "sha256": "4000b570efb2ef37bd6e62ebddcc3983bb79a31e831aea59480fde443fbde23a"
+      },
+      {
+        "path": "scripts/checkpoint_recurrent_phase1.py",
+        "sha256": "6a069d9ac161abc5ef4bd2e4201479f4656cd0f96caeda0d0b115238dc4240cf"
+      },
+      {
+        "path": "scripts/checkpoint_recurrent_phase2.py",
+        "sha256": "bcc8515a8d7ed325be6663f9537a95530a54b45bcd367a17b0e54b4e73ad7342"
+      },
+      {
+        "path": "scripts/checkpoint_relative_position.py",
+        "sha256": "817477a8b3842b963f136b193ffc8fb2246dbf9aa757bf58275cc85b794378b9"
+      },
+      {
+        "path": "scripts/checkpoint_third_family_relative.py",
+        "sha256": "9793cc9a4aeedde20858f6f74b7aa34dedb90f188d16510c601ab0843e57a7cd"
+      },
+      {
+        "path": "scripts/checkpoint_transition_phase1.py",
+        "sha256": "37a890f0b4e8554ccedf491a6123fea2e50a44b44d99ebbcd39fcbb47f4fa6d3"
+      },
+      {
+        "path": "scripts/checkpoint_transition_phase2.py",
+        "sha256": "088e5afe2ea064a5fbbe3bc8bd1f4478f8b0837d6e7a020176ee4831c6aa67ef"
+      },
+      {
+        "path": "scripts/combine_recurrent_calendar.py",
+        "sha256": "b956a9d764d452c08c83a9fc45661a95b98f4206d3f8b9e61c15c48d2d1deb92"
+      },
+      {
+        "path": "scripts/compare_entropy_numeric_repair.py",
+        "sha256": "a38f9204e0078fc443e9a3e48ac8e772159ae645cb3ae222d0ffb049cdb5811c"
+      },
+      {
+        "path": "scripts/compare_five_phase_sampling_controls.py",
+        "sha256": "d92cb34dcc82f6919d39ee593c0fb67d2a1a9210620e2bd298081056d6b43121"
+      },
+      {
+        "path": "scripts/compare_full_density.py",
+        "sha256": "b20d48cacd5d884536478dcd7205bbb7cfa8179219f6dab21684247a629617af"
+      },
+      {
+        "path": "scripts/compare_full_queue_calibration.py",
+        "sha256": "93b98698bb5e9f3e6ea855dc03532aa04daadecbb860d69c79794d6d4636eaf5"
+      },
+      {
+        "path": "scripts/compare_log_demand_models.py",
+        "sha256": "280dd9312a4e620166ed9a68a7c7a3cd243aad79d62e7240b6ad80d668e3ac1f"
+      },
+      {
+        "path": "scripts/compare_log_demand_repair.py",
+        "sha256": "f8d6a1e39de2aafa334944f92c30b1cb6ce75e7fc350faa461bc8249332dbbb3"
+      },
+      {
+        "path": "scripts/compare_queue_events.py",
+        "sha256": "d9d2e9e47eb2f21b1738d4e2d1ba762a776fc849bbfc4bde4c1fc8785b068194"
+      },
+      {
+        "path": "scripts/compare_queue_overlap_losses.py",
+        "sha256": "28d7b51fbef994cd07f78f994335cf84206a504cc1a2f9e9e2fae6a91199d5b7"
+      },
+      {
+        "path": "scripts/compare_recurrent_state.py",
+        "sha256": "f490a126a8406c14b23420b472cefa3cedb4506fa58417252f490686476ecfb3"
+      },
+      {
+        "path": "scripts/compare_state_assimilation.py",
+        "sha256": "d89b87a83ecb5a05bae4be3cf4f137d2625d639bca4dac723d94b92d31415a1c"
+      },
+      {
+        "path": "scripts/compare_state_direction_budgets.py",
+        "sha256": "47ff0bb82e2500aace15a72ca80b76719b657dd06492b8b60b09b31fce2803e4"
+      },
+      {
+        "path": "scripts/compare_state_label_budgets.py",
+        "sha256": "b7c27482c11904cbc0aa06fc86cfd692037e057985acdb93f00ff4e38da81b40"
+      },
+      {
+        "path": "scripts/cross_corridor_transfer.py",
+        "sha256": "e3ef2d288bfc617ea7985712be7c714de9e36ed947b59bc2bd81e3e5113b7c6a"
+      },
+      {
+        "path": "scripts/ctm_adaptive_stress.py",
+        "sha256": "cb3f7631fb91007e4479b20975b25e2c17dbc6cfbba1f9c926a7002159665f2a"
+      },
+      {
+        "path": "scripts/ctm_contiguous_stress.py",
+        "sha256": "24fcb6625ee2f64e1b5267c6c3fab292dc78ddb2d3b6d02241c1ec6f815b95ae"
+      },
+      {
+        "path": "scripts/ctm_profile_ablation.py",
+        "sha256": "5a65e47430782893da7bae8792995d7b63ae9cf45fe38f895715ac011ddbb5d6"
+      },
+      {
+        "path": "scripts/ctm_queue_observation_diagnostics.py",
+        "sha256": "86db2a91e77c88634c9fc301a0e47c9a865ee19d92b616971d649edd3ce7681c"
+      },
+      {
+        "path": "scripts/demand_residual_floor_followup.py",
+        "sha256": "bb4e7db3ca547245855d74bce024da3c101dd9c13d8ce3d3e578a6a81e0c47f6"
+      },
+      {
+        "path": "scripts/demand_residual_od_experiment.py",
+        "sha256": "81c50b6fc9b663d921ea3393a2c0e0df3bd0098e9aaf29ceccf9e7e02d6334e6"
+      },
+      {
+        "path": "scripts/density_increment_experiment.py",
+        "sha256": "7c76be4eb9f893ff71a70f62ae47ac4f7b8cba8a8add1da1a9ebdbba074552fa"
+      },
+      {
+        "path": "scripts/density_interpolation_experiment.py",
+        "sha256": "98b586eed1bf49beea00db0b5b0473b6159d2e6e198bad4f7b9902a9847d6903"
+      },
+      {
+        "path": "scripts/diagnose_adaptive_scenarios.py",
+        "sha256": "fd73578210b6ab6a51984019f86d16f9c9fdd088ebc72261da20295ed692b0fe"
+      },
+      {
+        "path": "scripts/diagnose_entropy_failure.py",
+        "sha256": "1c8e0b00933b2132eedb92cd0ddc3fb1aab8125b6f3a6994913818b6ff0c3ff4"
+      },
+      {
+        "path": "scripts/diagnose_failed_od_control.py",
+        "sha256": "bed0ecbfa0b21880ad852919b0285280fa2659f95c9a6513840baf3e22ab7b58"
+      },
+      {
+        "path": "scripts/diagnose_flow_cal_covariance.py",
+        "sha256": "1ef01652a88ca85c39e0611bedea490a01ebace509ad8598ae0766c1ef5c7464"
+      },
+      {
+        "path": "scripts/diagnose_graph_density.py",
+        "sha256": "f6e48f203331ed2dddbd6917d2932fc8682cf4daa9da8d6e9a5c7ee52e75116f"
+      },
+      {
+        "path": "scripts/download_data.py",
+        "sha256": "c746052ff8192acd1679976da70faf2f54ae94d2370e2dda4e105bca08fee4b9"
+      },
+      {
+        "path": "scripts/entropy_od_experiment.py",
+        "sha256": "639c6fde371c078759d557025dd60943ac7c6d170fef046c9866d0a7efa9689b"
+      },
+      {
+        "path": "scripts/entropy_od_uncertainty.py",
+        "sha256": "dcc088faa752d137a3f73c993cf272280879185ad9e38ea6b127e82d6b1bfd9f"
+      },
+      {
+        "path": "scripts/equal_blend_augmentation_diagnostic.py",
+        "sha256": "e56f55730bb3fb5f752689484931b01eb9c7a37f67b51026e32376c014d56c10"
+      },
+      {
+        "path": "scripts/evaluate_channel_forward.py",
+        "sha256": "eba5ee321c643f957a674f29e99a2de5712fa01afdcac738341ad5becc5fa134"
+      },
+      {
+        "path": "scripts/evaluate_exported_state_forward.py",
+        "sha256": "d49b2790ad80efda4afbcd5a727fbeeb23e9f03bd44dc5ea2ef9d666af01eaf2"
+      },
+      {
+        "path": "scripts/evaluate_flow_transfer_forward.py",
+        "sha256": "09e0827d3e67f4e949dc15b58335ed2e6cf48a5c0ac8a9d36aea77ea6b30a0d6"
+      },
+      {
+        "path": "scripts/evaluate_gap_expert_shift.py",
+        "sha256": "ed0e6ae5a913a8c2d4227f9ead9255abffbef12c5a0ef2a4c585387c68fec1a6"
+      },
+      {
+        "path": "scripts/evaluate_native_remask_forward.py",
+        "sha256": "4a0b2fde0304066ece00ddcb015648639a25521cd9dbe59302456f97d00c37d7"
+      },
+      {
+        "path": "scripts/evaluate_outage_augmentation.py",
+        "sha256": "652e7c19f7f870b47f91087786c1323a5ccd686aa932443bc377e7b7806c14a5"
+      },
+      {
+        "path": "scripts/evaluate_remask_tree_forward.py",
+        "sha256": "75f4a1595477db903ae594aa8432d02e8aa0f69c6fd2e25b752e2f6554409453"
+      },
+      {
+        "path": "scripts/export_adaptive_state_model.py",
+        "sha256": "631e109610a04aa4a5b0cef3b6b0a22e3acca28ea1f08659669bf55c2e7ca089"
+      },
+      {
+        "path": "scripts/flow_transfer_common.py",
+        "sha256": "7797548238fff9abccbead64aa0da5034ff87665619d18c7968e742f12d01a0b"
+      },
+      {
+        "path": "scripts/freeze_first_submission.py",
+        "sha256": "17eb0cf856c43a0199c0bf73fcc4d100c76d818b2d1130f00b16f466bc4cc6cb"
+      },
+      {
+        "path": "scripts/freeze_gap_gated_state.py",
+        "sha256": "d41e27528397601328ef3d9eb7c9abc877b9613c566889d87b2e0cee17141629"
+      },
+      {
+        "path": "scripts/freeze_research_models.py",
+        "sha256": "fd75a0e4f22f648e7daf55c8374aa9d174d11f0659b74d12665b800d09e4202c"
+      },
+      {
+        "path": "scripts/full_density_experiment.py",
+        "sha256": "d53835b13f5ba488708b8397eb8b805a9a4dbba268dd7a1ac221e2555209cc4f"
+      },
+      {
+        "path": "scripts/full_queue_calibration_experiment.py",
+        "sha256": "aba440df1d64f133edccb951c68c7ffcff39699ef5cb9cc08330703a2aced84c"
+      },
+      {
+        "path": "scripts/inspect_official_release.py",
+        "sha256": "17bc64125a2843f2af1eefc01ef22e930c22201df997eec99bedd021d1e32c7f"
+      },
+      {
+        "path": "scripts/large_baseline_graph_comparison.py",
+        "sha256": "ab3f399a46ca8366418ccca2a748124cd706a176706a20d7b491242c810ed75b"
+      },
+      {
+        "path": "scripts/log_demand_od_experiment.py",
+        "sha256": "437c5c0c578298487d40b7bddf2fe226078e5e59e19e8778077cca5b60945968"
+      },
+      {
+        "path": "scripts/matched_queue_cache.py",
+        "sha256": "bbd42d02b645514d38faf062917e19e08ebe551096e547ca93fe92266061df19"
+      },
+      {
+        "path": "scripts/native_remask_reference.py",
+        "sha256": "6416a8a86a35f156c51e45ccd09c5325c9be45509a17d87a38f6be9dbd3795fa"
+      },
+      {
+        "path": "scripts/native_remask_roles.py",
+        "sha256": "300d0cbcdc0c673ca88ae90b224ddbb9b13388d836540bf3b21d2ec9be9cfe34"
+      },
+      {
+        "path": "scripts/native_remask_state_experiment.py",
+        "sha256": "762ae456998a2b5ed3d15b3568fdfb5525b1e112094cbadb2917275597680779"
+      },
+      {
+        "path": "scripts/od_error_subspaces.py",
+        "sha256": "0e60e334f92a70dc420d33edc216e5540ecec5159cc9262d4c5a78b89dbd220a"
+      },
+      {
+        "path": "scripts/od_expert_experiment.py",
+        "sha256": "b26a6457c0390bedbe85e9a5a29f2a4c403bff499ff539cd230f71f7cfc0fbb2"
+      },
+      {
+        "path": "scripts/od_metric_component_audit.py",
+        "sha256": "dd3cd804df6d895ccf2e5254f8b316b57febf2f1f33d9f09d9364bd0d6be8bb1"
+      },
+      {
+        "path": "scripts/od_prior_misspecification.py",
+        "sha256": "053dc64b2e9b8fb04ac1514d9991d8ddcbae9ab677e69a8dbc7fbd77045a7917"
+      },
+      {
+        "path": "scripts/od_probability_experiment.py",
+        "sha256": "fbb8ade089cec3fdd03b6f40687b4f8ef022c7766dc7c1c4011e6b7df3326c00"
+      },
+      {
+        "path": "scripts/od_shift_generators.py",
+        "sha256": "eba0a0dc9a1608fd04a8517fd5959315b3a183c851fe1931be942f7542c3cca9"
+      },
+      {
+        "path": "scripts/outage_augmented_state_experiment.py",
+        "sha256": "e8c4d0125a0356841d3016ae971dfdf9766a55a7bfd0fa6404a1ce483c458fa8"
+      },
+      {
+        "path": "scripts/physics_tradeoff.py",
+        "sha256": "b653cf6254196850113cbdb61a1afb5bf184900e6a5ad5d07a24151436e6c9f9"
+      },
+      {
+        "path": "scripts/plot_matched_research_comparisons.py",
+        "sha256": "bb2cdab5325243359d6a53f27c1814851b38d6ab85b3f0167d561c2995f19bef"
+      },
+      {
+        "path": "scripts/plot_recurrent_evidence.py",
+        "sha256": "f5f947216d96f357221add45acbbf064dbe5ba4b2e8a2b8030bbd2d26bb711d7"
+      },
+      {
+        "path": "scripts/plot_strong_baseline_comparison.py",
+        "sha256": "060b1292bc663f0ba5d1fd352afd30fb0edc5badc83c1a42b3e4b4b23435c10b"
+      },
+      {
+        "path": "scripts/predict_full_domain_queue.py",
+        "sha256": "017f9dacad7fa9cec529840c26b4ff084a2de9c79184a698e99cb567db34c55f"
+      },
+      {
+        "path": "scripts/prepare_full_density_labels.py",
+        "sha256": "aaeae325549a2f3e885c75cb584037b6669902c1ab4fedb50a1c7655de116979"
+      },
+      {
+        "path": "scripts/prepare_graph_experiment.py",
+        "sha256": "86a2d2bcc60c9cd408839d8883834aa75c089c176257bed551ff1d028ee320ac"
+      },
+      {
+        "path": "scripts/prepare_production_graph_state.py",
+        "sha256": "af640a34bf6f44a42e08fd50c06d9585acc1adadd160db867e4551ea16a71525"
+      },
+      {
+        "path": "scripts/prepare_quality_state.py",
+        "sha256": "b6e2bcde753916c9e73ced210900438ba217b35118e51044e8d22ea98638de90"
+      },
+      {
+        "path": "scripts/probe_global_attention.py",
+        "sha256": "39fd88acb8506a8eb64e812b64ff44d394e955dfe073efe4d7472964d065d28d"
+      },
+      {
+        "path": "scripts/promote_models.py",
+        "sha256": "b41f8af5fb9f5394595a1c1ded9b534ed89d2c41b85b7a3e3788b2d275c71339"
+      },
+      {
+        "path": "scripts/public_outage_stress.py",
+        "sha256": "b9cc72408a9b5b7a3653bfde5ff767968acb5ddb6590a6446d988e8ec70d2b07"
+      },
+      {
+        "path": "scripts/quality_state_experiment.py",
+        "sha256": "0a5bd90efe8b95427f811cee6577cdad8323f631ba5bb6d6eaa6823fa1b3fa10"
+      },
+      {
+        "path": "scripts/queue_event_experiment.py",
+        "sha256": "520d24e1f1e5fcde8166f3df16f437276b7185665a8e9394c6ac59a4823b0242"
+      },
+      {
+        "path": "scripts/queue_five_phase_experiment.py",
+        "sha256": "8831d3787b7da380992263d011f441e50caa19212a0da968c263b7d9faf97b54"
+      },
+      {
+        "path": "scripts/queue_origin_experiment.py",
+        "sha256": "7cd00e8b0134ed1282353e9162ce6af7da20d1a3d0739ab2ec12b43f79891954"
+      },
+      {
+        "path": "scripts/queue_overlap_experiment.py",
+        "sha256": "9fb7d8d32bd32cb6896ace55458629a38256ae415cbb5bf865a3876294f5a25e"
+      },
+      {
+        "path": "scripts/queue_refinement.py",
+        "sha256": "4747af3e5e09d4e23b7d28856ed66732e54ad1d3586b7df067eb49aeffcc1dd1"
+      },
+      {
+        "path": "scripts/queue_research.py",
+        "sha256": "34e3fe815c5130431a512df258cfbfd0cb39c7b64b769950d76f20a9983fff5a"
+      },
+      {
+        "path": "scripts/queue_seed_ensemble_experiment.py",
+        "sha256": "48880150d79d67e07200d3278742d6ab3460a50842a720093757082943b74b0a"
+      },
+      {
+        "path": "scripts/queue_specialist_experiment.py",
+        "sha256": "b7f8ab609aa392a1308117e827919692dbe60137185fb6ec68a2334cbddaedc4"
+      },
+      {
+        "path": "scripts/queue_wave_graph_experiment.py",
+        "sha256": "ebc0ba895a29d5887cdee52b0dab665a8cf9f2370e3a110b2b6930e746ccb245"
+      },
+      {
+        "path": "scripts/queue_weight_calibration_experiment.py",
+        "sha256": "f2545c56581b388e724327a4c623d89ae18ea07efcc80d63e3e66fc94c6ce48d"
+      },
+      {
+        "path": "scripts/read_public_pages.py",
+        "sha256": "2056d46920d3b9f73b1268b86d122ac4daf318e72c298527b4b66376ac26e165"
+      },
+      {
+        "path": "scripts/record_formal_scores.py",
+        "sha256": "ee78da8b99edc9928c781c341f05af33dd28098ae313113879e8b3e3aad5fa0f"
+      },
+      {
+        "path": "scripts/record_local_state_controls.py",
+        "sha256": "55c6c8b9218207fbd51d0c1d3238c653272c0ed319064928065125eb98dbad9b"
+      },
+      {
+        "path": "scripts/record_onset_control_bounds.py",
+        "sha256": "0f18f8290e22a3a9b15f4287416bc9cbcf071a106d46909ee1962a5f1cc7f728"
+      },
+      {
+        "path": "scripts/recurrent_forward_extension.py",
+        "sha256": "af54a1945d74566e10e1998c05923a74de72ea81a6793b64b482a1481f6b4c61"
+      },
+      {
+        "path": "scripts/recurrent_state_experiment.py",
+        "sha256": "93a37812007e4388b6327cf93dfe2f477d98cf60f77e8e5e33ae9be4935a2d0c"
+      },
+      {
+        "path": "scripts/refine_queues.py",
+        "sha256": "4af45c3a458feec60d6f7786166ef2cf0fb747fce492955ec4112312352f665d"
+      },
+      {
+        "path": "scripts/register_research_protocol.py",
+        "sha256": "2367504189c87f2103e10dfd99147ffcc9beba2f9d82409c38e92d4c5e2c3077"
+      },
+      {
+        "path": "scripts/remask_lightgbm_experiment.py",
+        "sha256": "c4bd34f3d87ee7869fccc760bd8b48386ce924667dccfaa6f37bf2166393ac49"
+      },
+      {
+        "path": "scripts/remask_tree_roles.py",
+        "sha256": "addc3daf9796ec45c120457307c10337c60a19a149a2813fbec3dc35375a352f"
+      },
+      {
+        "path": "scripts/run_official_diagnostics.py",
+        "sha256": "73221ca5f6014f8d7a011698fe0845d9448581c3896855b7dc19e1f47873a7e8"
+      },
+      {
+        "path": "scripts/run_official_state_baselines.py",
+        "sha256": "3ddd7eea81f350d50973813c50e4c0d90a184624d271aa64859c1c74c33a9e70"
+      },
+      {
+        "path": "scripts/run_queue_five_phase_campaign.py",
+        "sha256": "5f922fe854bafa9e7aee04a1f1c0230f589152d4f4dd6b994087d3fb5da523c5"
+      },
+      {
+        "path": "scripts/scenario_audit.py",
+        "sha256": "3e2d7151d7587199aa672b78eee9dfbbfb8ac82e038afb22eb09f3488e1c7a19"
+      },
+      {
+        "path": "scripts/simulate_queue_selection_bias.py",
+        "sha256": "545413176bf9696a5e8b8bf1046dba00e98cf604035587842224d207f8aaa4b6"
+      },
+      {
+        "path": "scripts/simulate_stress.py",
+        "sha256": "d0c4697c44f1c65848d83c1e396b9562d4151ad294f560b1576bcc6c49012140"
+      },
+      {
+        "path": "scripts/stage_zip_panel.py",
+        "sha256": "4ec5b59e058c52012bda91ff140fbc9620209bbf114aa5eb5ffbc259b4c69c15"
+      },
+      {
+        "path": "scripts/state_assimilation_experiment.py",
+        "sha256": "26a1ecf243bb30a10259b100df6d4f2dd317939e4707c6f4a1b3542d9a97c2ba"
+      },
+      {
+        "path": "scripts/state_budget_suite.py",
+        "sha256": "d6fd23b3aacd79a6cdad38bbf0f3d845e0307dc4b4b7471ef279980035652477"
+      },
+      {
+        "path": "scripts/state_label_budget_control.py",
+        "sha256": "7cb05ba6e67f39106ea009468ce9215aebab9aec0c9a90295fe8641d3c7e4dbd"
+      },
+      {
+        "path": "scripts/state_research.py",
+        "sha256": "7f9043c7d753a5a6540ef81291ae7e3e00879ca330aea94f833b7017f29a759e"
+      },
+      {
+        "path": "scripts/state_temporal_extension.py",
+        "sha256": "0ef7550a56904fc953a6deaa814f7ebad67e9aa7f91817f087fe5fb58db26b9b"
+      },
+      {
+        "path": "scripts/strong_density_state_experiment.py",
+        "sha256": "faa4e2a0cb63a2e053ecf20a6a77a8c9c4f74960c3d39e145c9c0e41f138a7de"
+      },
+      {
+        "path": "scripts/submit_controlled_candidate.py",
+        "sha256": "72c67e384f488fd5e7afa454526e42aab56b43aef7d3671d91acf04a42997876"
+      },
+      {
+        "path": "scripts/summarize_adaptive_research.py",
+        "sha256": "82c2832a34ee9cd39f20ead401994c2dcf7f15d0cebe19cb67fd4476000c720a"
+      },
+      {
+        "path": "scripts/summarize_campaign.py",
+        "sha256": "e09f36b6188d6a23698f0a27873fece09ba6fd3db1e2cd5ae767e4865d7c101f"
+      },
+      {
+        "path": "scripts/summarize_ctm_adaptive.py",
+        "sha256": "fe548c56eef38fe78b378056f8def6a4213a8c526336808faa880947c68547bf"
+      },
+      {
+        "path": "scripts/summarize_ctm_queue_observation.py",
+        "sha256": "19c5ae04a9b48429faea7b96af27cb2b212bdaa4ef37e9daaee9ae11c309547c"
+      },
+      {
+        "path": "scripts/summarize_queue_domain_audit.py",
+        "sha256": "c07b79de6e1b3c744720d2189a14bc88b7daf3634d8d284ab5063c66c929fcf4"
+      },
+      {
+        "path": "scripts/summarize_queue_five_phase_campaign.py",
+        "sha256": "223aee023bc474134fb5dd70cf4d5918bc738249a5612161bb0a7d8ad95f7beb"
+      },
+      {
+        "path": "scripts/summarize_research_v2.py",
+        "sha256": "4f2239fb78d2d88de9117d289099874b41dc6f017b6c104e557cad168b0a8f17"
+      },
+      {
+        "path": "scripts/summarize_results.py",
+        "sha256": "3ede418e5a835ad3956b0332c335a54a4157654be9db16d4cde6411b5b12880c"
+      },
+      {
+        "path": "scripts/third_family_relative_state.py",
+        "sha256": "6c27b96f79e8d8eb89b175c225dda510802a66568e9a0eed26a792d9c2244b17"
+      },
+      {
+        "path": "scripts/train_graph_experiment.py",
+        "sha256": "7036d5b3f14d5dd39de22b1aa94284285010359114deb3f38ead5461b6e5e04e"
+      },
+      {
+        "path": "scripts/train_production_adaptive_state.py",
+        "sha256": "6982e036ade77a7d8c5a950572619c5a9655d47c142fbce3cb125404955fed9d"
+      },
+      {
+        "path": "scripts/train_relative_position_ablation.py",
+        "sha256": "60c499c4d1dd10e0958ab2159f52df931ea9c8263fcb71e711affee3a08d8a02"
+      },
+      {
+        "path": "scripts/train_speed_jump_ablation.py",
+        "sha256": "2e32c02b238a0105d0023c2c95ab3da5cf5fef389ea842fddffb238288a89bce"
+      },
+      {
+        "path": "scripts/verify_augmentation_future.py",
+        "sha256": "171d18821d0e77a91778249dee8ed544db1300184fff94095304edb4b8dde97e"
+      },
+      {
+        "path": "scripts/verify_channel_state.py",
+        "sha256": "8b535209a9bb9550be2fc0ccbc06de28fc91fbc2731fe19d9a30947ad2d01ad8"
+      },
+      {
+        "path": "scripts/verify_controlled_candidate.py",
+        "sha256": "bc2c4155403cd3af602dbbed3328590b5dd86bbf446183ec394744684f752df9"
+      },
+      {
+        "path": "scripts/verify_demand_residual_study.py",
+        "sha256": "a3d389bc9bbf7c2c6033557f08aad7b20e9cab60db0586bda8d341c28060a923"
+      },
+      {
+        "path": "scripts/verify_entropy_uncertainty.py",
+        "sha256": "747adfc0ca342b6148f730935394afef929aa7a56850b8cf82291987523c728e"
+      },
+      {
+        "path": "scripts/verify_fit_transition_audit.py",
+        "sha256": "0ff64d22da192f4af586bfdfb1614f2e7c48f36e563b84ae87ecf5c53a3e7d52"
+      },
+      {
+        "path": "scripts/verify_flow_transfer.py",
+        "sha256": "c5e1b8f253c2848feb3eb50c2cc5f1b50b3aa22d863e250584dbccea2bc61670"
+      },
+      {
+        "path": "scripts/verify_full_density.py",
+        "sha256": "7886e5ceb29434a4ecc79a53d7957eaba609f181dfc73d4a7ee4c70f5bb4ac24"
+      },
+      {
+        "path": "scripts/verify_full_domain_queue.py",
+        "sha256": "a8ee0d17b8c785cc2d8f7f0ee491d40c7ca06d4712622e0ac58755fb6fe3cae5"
+      },
+      {
+        "path": "scripts/verify_gap_expert_shift.py",
+        "sha256": "547705e778443324fc13dd267511ff82569d52b43696e5612efba0150a5edd14"
+      },
+      {
+        "path": "scripts/verify_graph_repeat.py",
+        "sha256": "2ec216b7fe481f52199b92b28baa40efbe3bde74ae19a17a86904d6f7d1189e9"
+      },
+      {
+        "path": "scripts/verify_log_demand_od.py",
+        "sha256": "be24593fb488f6872d791c9004200fe4077f2d8a7595d011cc0496aaa3399923"
+      },
+      {
+        "path": "scripts/verify_native_remask_cache.py",
+        "sha256": "fb3820d13fba2c7b3717fec6a075d37c4b836f3c49c5c04d32c0f65d2c012b13"
+      },
+      {
+        "path": "scripts/verify_native_remask_forward.py",
+        "sha256": "30b070283e4231bf932a02e261f1bd58b72073c095bde082cf24d7f459fcd84b"
+      },
+      {
+        "path": "scripts/verify_native_remask_training.py",
+        "sha256": "3f25619df274f9efd76f137292d8764da70382988e98d63c2cc52b322903577f"
+      },
+      {
+        "path": "scripts/verify_outage_training.py",
+        "sha256": "274081ceb804c3368228719be792d70be267890cc47c55af2baf1d9e2ddf9336"
+      },
+      {
+        "path": "scripts/verify_public_graph_audit.py",
+        "sha256": "e15cdab3fbd032f7e88061abe3076b45a8e6ce8e20e8239c486e9788aaa11636"
+      },
+      {
+        "path": "scripts/verify_public_outage.py",
+        "sha256": "c0450dc70eee71538aaabbec918aa6d7742a3b9b3e8184d38f18a3ff6ef9499e"
+      },
+      {
+        "path": "scripts/verify_quality_state.py",
+        "sha256": "6cf7c7780cf77d6f203aebb3f517d12ce11655c26fbb433a1ee2add0e710b764"
+      },
+      {
+        "path": "scripts/verify_queue_five_phase.py",
+        "sha256": "dc24481778c57763f42fb38c42a7c3db5b9c4e23b2d9d8f4cee776981b58acb4"
+      },
+      {
+        "path": "scripts/verify_queue_overlap_deployment.py",
+        "sha256": "d4830a28109737296792e625c9de890792873de9f21224354c798c33c91a2ff4"
+      },
+      {
+        "path": "scripts/verify_queue_seed_ensemble.py",
+        "sha256": "394e9b84c48445466f87909c89c2c2f359331a17541f1a738379d6420b56e8fa"
+      },
+      {
+        "path": "scripts/verify_queue_shared_repeat.py",
+        "sha256": "dd14df8d431667ffba2b6b9eb82a8e5169b6a57d4ee7e8e96dba40d2c25296d2"
+      },
+      {
+        "path": "scripts/verify_recurrent_forward.py",
+        "sha256": "c5d22524c3bab87700b684a3c4632b9f37be89e1ffe9b437676a1d3e22a0d1f5"
+      },
+      {
+        "path": "scripts/verify_recurrent_state.py",
+        "sha256": "897bd3c375e6b0916892c24147c075b25798276a2496499ae0dc0c472f0bbb37"
+      },
+      {
+        "path": "scripts/verify_relative_position_training.py",
+        "sha256": "29edc6c9a2d338b7cdb2d0322f21498d0f2dffc43d859cb98dbe779addfedf54"
+      },
+      {
+        "path": "scripts/verify_remask_tree_study.py",
+        "sha256": "428595c4967c0ad9364bfbdfc573bca120c04edab2b01117b8b3fdeb5b3b4632"
+      },
+      {
+        "path": "scripts/verify_sparse_profile_phase.py",
+        "sha256": "2561cd5fef5041afe9baa71d27086d3d9bb0fd86d0901783d9079f0cabdc1261"
+      },
+      {
+        "path": "scripts/verify_speed_jump_training.py",
+        "sha256": "f240eb354f20ebab1917000275f4c562e785054f8fa9eccc4c74d47e8fbbc650"
+      },
+      {
+        "path": "scripts/verify_state_assimilation.py",
+        "sha256": "f5d98ebe50be14b01f4172ae2befadd49df3dfcbfdb95e30e3eadf3d52ab8024"
+      },
+      {
+        "path": "scripts/verify_state_augmentation_cache.py",
+        "sha256": "7aca9e765575c469a1e589529ea46b34d35bacf16ae0bd7f4aaa3d6256aac37f"
+      },
+      {
+        "path": "scripts/verify_third_family_relative.py",
+        "sha256": "865903d1286c970ff7f6b5ad778491ce0e897c7ce529d96a3e2ef7fe5605910b"
+      },
+      {
+        "path": "scripts/verify_vendor.py",
+        "sha256": "232658ffcb66d34aea7c686d64e20bad86f7c172b0f900114dd683c5fd90bb85"
+      },
+      {
+        "path": "scripts/winter_flow_transfer.py",
+        "sha256": "055fe30b62dd510830b68c664bda86c4e5c2addbd9123d177811b384c9bca49e"
+      },
+      {
+        "path": "scripts/write_results.py",
+        "sha256": "efb8a4e80afdfaca2096ea7d2f65743e863b38c18dc41bac52fcdce07a70c83d"
+      },
+      {
+        "path": "scripts/zero_aware_od_experiment.py",
+        "sha256": "1b422f735023c0b6e82038f55d1c17906871546affe642c10b60d45d214e4068"
+      },
+      {
+        "path": "src/trafficflow/__init__.py",
+        "sha256": "6432d23e18693162d87e81e22ac8f25158369302b9dc209d21154dba1351e7a8"
+      },
+      {
+        "path": "src/trafficflow/__main__.py",
+        "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+      },
+      {
+        "path": "src/trafficflow/adaptive_graph_state.py",
+        "sha256": "52e7bbe95a36000f14a4a9d00e9629a0dd05eff023854b730b27c0ec6289e785"
+      },
+      {
+        "path": "src/trafficflow/bayesian_od.py",
+        "sha256": "5c5c76ab2848437af546a5fc3985f568b61c7a39dd3dbdf2a5551e266f1a1139"
+      },
+      {
+        "path": "src/trafficflow/bounded_state.py",
+        "sha256": "abb1f4d4418775801703940e34dd150b0d21debfd80f8f62a7c36decdf668e26"
+      },
+      {
+        "path": "src/trafficflow/causal_queue.py",
+        "sha256": "b12f3098ce79dc465545106b6d429fce2818499edd518f1909047b3ccbcda1b2"
+      },
+      {
+        "path": "src/trafficflow/channel_state.py",
+        "sha256": "5eeb00f96835f328cfa334f63ef0aae955f2af63185aa1d03e47b5ed38a26a1b"
+      },
+      {
+        "path": "src/trafficflow/cli.py",
+        "sha256": "8bb044f21541e3d0f639f01e20fc47a358152ec0c918ae4d644e73c96d7e73d3"
+      },
+      {
+        "path": "src/trafficflow/ctm_queue_diagnostics.py",
+        "sha256": "2215f940016022dbbbd575e40ac9a029c9307b84bc1ca5f5d01246d8cc65c940"
+      },
+      {
+        "path": "src/trafficflow/ctm_scenarios.py",
+        "sha256": "716adba052a0aab4ebf11261d2000e78dc5f908924443cd82d3cc1102b0647c4"
+      },
+      {
+        "path": "src/trafficflow/ctm_state_adapter.py",
+        "sha256": "3afe56f0c577d5d3ae05ee0583ddb180842980a874876f99e046e275b7d5194c"
+      },
+      {
+        "path": "src/trafficflow/data.py",
+        "sha256": "f29fe070b21ac692b2cf9bd6d5b5fd018e94129b9626588325dd48edbd941ccd"
+      },
+      {
+        "path": "src/trafficflow/demand_residual_od.py",
+        "sha256": "c4d92f8ba3af5f7ebd26dc516906090a7600077a396c32451600eb0adb55fa9c"
+      },
+      {
+        "path": "src/trafficflow/density_assimilation.py",
+        "sha256": "bbf771ae2d6ca93030aca029f3428fbb3f214cf4a5e39dca79925f08f7a30b46"
+      },
+      {
+        "path": "src/trafficflow/density_label_metrics.py",
+        "sha256": "5fcb4714fa7be5e1fd953da4707be274a7ff37af051cb9bc74083cd2666cf87b"
+      },
+      {
+        "path": "src/trafficflow/density_state.py",
+        "sha256": "ae91308f12b0c13d43f149d936a7c11704f712390f2fb593fbea5f053ff6a4b2"
+      },
+      {
+        "path": "src/trafficflow/digital_twin.py",
+        "sha256": "cfacb280f971faedceb2e404b35889891eef536a24a070804757ab6d92c49655"
+      },
+      {
+        "path": "src/trafficflow/ensemble_queue.py",
+        "sha256": "65c2c6d05b4444bc017c54fb875c091e01570de482cf257b6b20906b2af063e5"
+      },
+      {
+        "path": "src/trafficflow/entropy_od.py",
+        "sha256": "521a66563ff099aee9e3e50d180367ad25d7e90acdef174a1ed8d80b16337727"
+      },
+      {
+        "path": "src/trafficflow/experiments.py",
+        "sha256": "854abf59d2c560f84c704090741d6f8fce4ce6725d8a39139412194cc362a6ec"
+      },
+      {
+        "path": "src/trafficflow/fixture.py",
+        "sha256": "0709326abd7206a7ca1c3414dbb95c2d8c08749484802e2523d49c1ee7a2ef24"
+      },
+      {
+        "path": "src/trafficflow/full_domain_queue.py",
+        "sha256": "50b0dd7245eb3146e236d16c5abc6166f8506a5304971383617147d718be3737"
+      },
+      {
+        "path": "src/trafficflow/full_queue_calibration.py",
+        "sha256": "c30ea129f196796d2a6c34bc71da18b7941eaed4ab652207f4d5144737403dd7"
+      },
+      {
+        "path": "src/trafficflow/gap_gated_state.py",
+        "sha256": "ec8a2d4e95dc6f4f74197406555bd33ec467dabfd314f27cb09e8b896bf92d53"
+      },
+      {
+        "path": "src/trafficflow/graph_queue.py",
+        "sha256": "eaf91b8825c5f3e6491fb09413d9c5b8cdee04ecfd9c05feb6be5e8b00f65c46"
+      },
+      {
+        "path": "src/trafficflow/graph_state.py",
+        "sha256": "806defac6f40c13f3ba51e74b09252a9b9d29bdd4779cb988a3d503a66364fa9"
+      },
+      {
+        "path": "src/trafficflow/increment_state.py",
+        "sha256": "52c6eb6a5cf959ac050f237a84cc8c487fae086fcec61a5aeac2fa5997185ea3"
+      },
+      {
+        "path": "src/trafficflow/log_demand_od.py",
+        "sha256": "e53d9edd45e7a3b041831bdca9084a4e206ea6b60454381a2c6de8ae66644139"
+      },
+      {
+        "path": "src/trafficflow/metrics.py",
+        "sha256": "5f42eaa372894edfa1363135b61818e7ec4bf56110257a03aadf07de770aa346"
+      },
+      {
+        "path": "src/trafficflow/native_remask.py",
+        "sha256": "0dfcb1a2b8da3c00b8cd29b57e2b3a636e52ea737e315e315fe0b8bdfb130c0c"
+      },
+      {
+        "path": "src/trafficflow/od_expert.py",
+        "sha256": "1dff245ae5d347e32d2b3b1473a129964cf28e5b259e93478cfad6cb4d5688bd"
+      },
+      {
+        "path": "src/trafficflow/od_uncertainty.py",
+        "sha256": "0df9a337b1b302952489a32517512a77ebc2c9420bee5d291dc92ad337bc85c3"
+      },
+      {
+        "path": "src/trafficflow/odme.py",
+        "sha256": "e61df62cbf3ff4af03069d6e028b2024ddee25578cc00558b2b04148370850ee"
+      },
+      {
+        "path": "src/trafficflow/outage_shift.py",
+        "sha256": "dccf193ed7bced7881577204bb1385a7b8f9a97cf993fc53e64b67603cd89f35"
+      },
+      {
+        "path": "src/trafficflow/outage_stress.py",
+        "sha256": "eb76fb04628ea381cab5ebf725502f4bc21f1fa9555b1fa1c4c70229f98c81c7"
+      },
+      {
+        "path": "src/trafficflow/physics.py",
+        "sha256": "3f559ca30157ebee155bb17ebdd42f0dc43a169ef6b45634ad875569beb03e30"
+      },
+      {
+        "path": "src/trafficflow/probability_calibration.py",
+        "sha256": "57f7c5487983a2572851331b20591ac21db15591d1dc85745706147ce3a657c7"
+      },
+      {
+        "path": "src/trafficflow/quality_state.py",
+        "sha256": "243757e80c651dfcf32c846b54e548afdd2f04215c612f725855497bb802a7d8"
+      },
+      {
+        "path": "src/trafficflow/queue.py",
+        "sha256": "62c35a4ed8e1e882d386461aba41cf8f5f3ed809451e51008e34f23e211240c5"
+      },
+      {
+        "path": "src/trafficflow/queue_calibration.py",
+        "sha256": "3c9bf39bf1d8bf847dcf29554bcc5abd50a8c610d64b9f2d5c99629ff36b75a8"
+      },
+      {
+        "path": "src/trafficflow/queue_domain.py",
+        "sha256": "c8d03e5ba696b20c3537c0a764cb1df734496fc3a740d0642168f0eba7cc15b8"
+      },
+      {
+        "path": "src/trafficflow/queue_event_loss.py",
+        "sha256": "5b155f8255080e0ee8823ab366ce8f7dfb1f2d067c196109834e0338395b631c"
+      },
+      {
+        "path": "src/trafficflow/queue_events.py",
+        "sha256": "4fbe6e178ee1601de995572bd354cc856f4da6b743601587b299e9d9b233c97f"
+      },
+      {
+        "path": "src/trafficflow/queue_graph_geometry.py",
+        "sha256": "bc1596ed66dbf9c02960f6b5f3c759385fcdef65f7b1e83e9481c1b9800c9cad"
+      },
+      {
+        "path": "src/trafficflow/queue_overlap_loss.py",
+        "sha256": "8dd4beca0a9434ec9d3cd75751551df41bda5fe4b581b51a3bc2ae5ec3eeab27"
+      },
+      {
+        "path": "src/trafficflow/queue_phase_split.py",
+        "sha256": "9a0d96eface9c78241b23ffd1d54d7b8c598c0a628f5e3562b1a138b4d98b569"
+      },
+      {
+        "path": "src/trafficflow/queue_selection_uncertainty.py",
+        "sha256": "5996d6480c04406ec1e40c561a2ebee83438c910b0c9cb7518ea3a464885634b"
+      },
+      {
+        "path": "src/trafficflow/queue_specialist.py",
+        "sha256": "ca3c850ab271905dd294e1019f48552cc8e2e1946ebb8484b38cfd613a9d5373"
+      },
+      {
+        "path": "src/trafficflow/recurrent_state.py",
+        "sha256": "19ba9c972c9422de58683e9e5cae35c0a6dd9c1e18d6e49954c57c49c2ea79ba"
+      },
+      {
+        "path": "src/trafficflow/relative_position_state.py",
+        "sha256": "5754c090bd765f68904ef8d6735e89c9fe8d7b726a9ff0cbddeb3ffaa5a46f99"
+      },
+      {
+        "path": "src/trafficflow/research_eval.py",
+        "sha256": "197aa2c4d6091dbd551ca6d11f8a664e9feaa44c1fcaf568ec873185315ab3c9"
+      },
+      {
+        "path": "src/trafficflow/runtime.py",
+        "sha256": "c181d87a89ff8fa7ee92c00759e2674d77cd60a3ed0d407f1e52f0d2b95d197f"
+      },
+      {
+        "path": "src/trafficflow/speed_jump_loss.py",
+        "sha256": "e48820274e69fb260f10aeca981431a4f7bf0933ee308f0c734b9c054840cfc0"
+      },
+      {
+        "path": "src/trafficflow/state.py",
+        "sha256": "f7a8341d968ac55a6f87e01a439ce8dc8c014750afa61129c7175e733de23c17"
+      },
+      {
+        "path": "src/trafficflow/state_assimilation.py",
+        "sha256": "96291a9c9977924c6abff3e611ecf58125a586a9dfbdf9c70e090aa97ec4b85d"
+      },
+      {
+        "path": "src/trafficflow/state_augmentation.py",
+        "sha256": "220fccab97067dab2744cafddbedb954f85cb3deef2a88a062023217eeebb9a4"
+      },
+      {
+        "path": "src/trafficflow/state_ensemble.py",
+        "sha256": "2bbfa587a79401c90a43502faa5410e5323b11cafe36a02b9ce244e8fae8d749"
+      },
+      {
+        "path": "src/trafficflow/submission.py",
+        "sha256": "87607c555e86f020e83f1ed9ac4054e49f88dc35eedd36cd8bf8ba442f85f2dc"
+      },
+      {
+        "path": "src/trafficflow/transition_diagnostics.py",
+        "sha256": "d130264f6d6c2fd9354dbd5639d27b601d5f09f636ca92a5ba729ce8e5297b74"
+      },
+      {
+        "path": "src/trafficflow/zero_aware_od.py",
+        "sha256": "42192b9d19dcaa2fc7d7801cb4ef7782c3cb6d71a3c73736936b5a064a072f6d"
+      },
+      {
+        "path": "vendor/official/src/merge_submissions.py",
+        "sha256": "a8cd6c4c9f2cea777fde8f6b163c00835a4fb45672998b9fc71368810e792ee1"
+      },
+      {
+        "path": "vendor/official/src/release/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/release/score_overall.py",
+        "sha256": "b9b73e174eeb1ed742dd9cbd558f6b280a0bd14e7ec7001feb549f1b5fb9b4ee"
+      },
+      {
+        "path": "vendor/official/src/score_overall.py",
+        "sha256": "4a28d57a23950554a065f6254bf674f4a1b58b5d039f26bc5154dd28d28651fb"
+      },
+      {
+        "path": "vendor/official/src/task1/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_historical_mean.py",
+        "sha256": "66569dd55340d5e4509712e66172ea669893d7341a0ef2dd8c920c24f07209a1"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_structural_kf.py",
+        "sha256": "f3a63ba48bf867d993dd1b3cbc0da6ca4567da7aa519ed2b2e3fd93a61c06132"
+      },
+      {
+        "path": "vendor/official/src/task1/build_task1_baseline_submission.py",
+        "sha256": "cb91e19e20a5a546430917a884197c1ad6a7068c6a47d7fbec7fb8311b7237d7"
+      },
+      {
+        "path": "vendor/official/src/task1/score_task1.py",
+        "sha256": "bcd42e88fbc42cd499e93e3b50ddf367009b26b216df5ab3f710ee1d1d863163"
+      },
+      {
+        "path": "vendor/official/src/task2/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task2/build_task2_persistence_submission.py",
+        "sha256": "d3cb4ab23206c4c20058a074b24c23ba79b43dd4219f41e158329a39f5a3edd2"
+      },
+      {
+        "path": "vendor/official/src/task2/queue_utils.py",
+        "sha256": "cea193935e7af7ab1399b9955c3f26fcb65664a099344d35b9c3b91802b3135f"
+      },
+      {
+        "path": "vendor/official/src/task2/score_task2.py",
+        "sha256": "b5605ebae9b32b3ca974881be47b5f2e796728b94763a724314580fc93be28bb"
+      },
+      {
+        "path": "vendor/official/src/task3/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task3/build_task3_baseline_submission.py",
+        "sha256": "945ce4b28f264be6be35a1b8d0f67311bf666d5e6b516a5b79bb2617075e8bcf"
+      },
+      {
+        "path": "vendor/official/src/task3/score_task3.py",
+        "sha256": "98d88b6e7f6b7bb0e2bbb4b42e486d6690b6f14a5d3625649e85ddf828550409"
+      },
+      {
+        "path": "vendor/official/src/task4/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task4/build_task4_odme_artifacts.py",
+        "sha256": "5da75aea3004555bae080ee4d18f1baee01dbb9ed1caf7a6abadd2387e6ade58"
+      },
+      {
+        "path": "vendor/official/src/task4/score_task4.py",
+        "sha256": "be15d732438d305e3d35cb41d3105fc03e3fb9459e5c050af39fe192cede30e3"
+      }
+    ],
+    "n_files": 300,
+    "scope": "Own source, vendored official Python and dependency locks; no data, credentials or model weights"
+  },
+  "public_geometry_and_graph_exact": true,
+  "n_raw_fit_days_rebuilt": 92,
+  "fit_checks": [
+    {
+      "date": "2030-07-16",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-07-17",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-07-18",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-07-19",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-07-20",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-07-21",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-07-22",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-07-23",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-07-24",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-07-25",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-07-26",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-07-27",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-07-28",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-07-29",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-07-30",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-07-31",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-01",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-02",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-03",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-04",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-05",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-06",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-07",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-08",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-09",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-10",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-11",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-12",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-13",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-14",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-15",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-16",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-17",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-18",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-19",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-20",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-21",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-22",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-23",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-24",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-25",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-26",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-27",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-28",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-29",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-30",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-08-31",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-01",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-02",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-03",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-04",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-05",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-06",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-07",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-08",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-09",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-10",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-11",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-12",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-13",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-14",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-15",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-16",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-17",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-18",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-19",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-20",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-21",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-22",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-23",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-24",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-25",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-26",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-27",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-28",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-29",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-09-30",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-10-01",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-10-02",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-10-03",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-10-04",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-10-05",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-10-06",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-10-07",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-10-08",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-10-09",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-10-10",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-10-11",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-10-12",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-10-13",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-10-14",
+      "raw_inputs_teacher_mask_exact": true
+    },
+    {
+      "date": "2030-10-15",
+      "raw_inputs_teacher_mask_exact": true
+    }
+  ],
+  "exposure_checks": [
+    {
+      "role": "control_seed20261013",
+      "shared_initialization_and_full_cell_exposure_exact": true,
+      "parameters": 97307,
+      "total_label_exposures": 8254636
+    },
+    {
+      "role": "geo_seed20261013",
+      "shared_initialization_and_full_cell_exposure_exact": true,
+      "parameters": 97309,
+      "total_label_exposures": 8254636
+    },
+    {
+      "role": "control_seed20261029",
+      "shared_initialization_and_full_cell_exposure_exact": true,
+      "parameters": 97307,
+      "total_label_exposures": 8270435
+    },
+    {
+      "role": "geo_seed20261029",
+      "shared_initialization_and_full_cell_exposure_exact": true,
+      "parameters": 97309,
+      "total_label_exposures": 8270435
+    }
+  ],
+  "n_direct_predictor_calls": 308,
+  "n_additional_pure_cal_predictor_calls": 56,
+  "n_saved_role_day_metrics_recalculated": 280,
+  "n_selected_checkpoint_alpha_metrics_recalculated": 20,
+  "maximum_prediction_error_lane_units": 2.2737367544323206e-13,
+  "maximum_score_error": 2.220446049250313e-16,
+  "prediction_checks": [
+    {
+      "part": "selection",
+      "date": "2030-10-16",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-16",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-16",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-16",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-16",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-16",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-16",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-16",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-16",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-16",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-16",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-17",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-17",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-17",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-17",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-17",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-17",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-17",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-17",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-17",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-17",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-17",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-18",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-18",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-18",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-18",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-18",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-18",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-18",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-18",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-18",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-18",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-18",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-19",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-19",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-19",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-19",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-19",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-19",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-19",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-19",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-19",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-19",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-19",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-20",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-20",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-20",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-20",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-20",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-20",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-20",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-20",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-20",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-20",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-20",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-21",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-21",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-21",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-21",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-21",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-21",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-21",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-21",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-21",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-21",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-21",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-22",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-22",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-22",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-22",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-22",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-22",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-22",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-22",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-22",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-22",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-22",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-23",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-23",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-23",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-23",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-23",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-23",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-23",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-23",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-23",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-23",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-23",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-24",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-24",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-24",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-24",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-24",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-24",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-24",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-24",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-24",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-24",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-24",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-25",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-25",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-25",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-25",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-25",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-25",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-25",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-25",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-25",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-25",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-25",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-26",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-26",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-26",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-26",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-26",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-26",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-26",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-26",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-26",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-26",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-26",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-27",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-27",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-27",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-27",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-27",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-27",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-27",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-27",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-27",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-27",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-27",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-28",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-28",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-28",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-28",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-28",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-28",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-28",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-28",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-28",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-28",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-28",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-29",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-29",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-29",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-29",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-29",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-29",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-29",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-29",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-29",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-29",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "selection",
+      "date": "2030-10-29",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-30",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-30",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-30",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-30",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-30",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-30",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-30",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-30",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-30",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-30",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-30",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-31",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-31",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-31",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-31",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-31",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-31",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-31",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-31",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-31",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-31",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-10-31",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-01",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-01",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-01",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-01",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-01",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-01",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-01",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-01",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-01",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-01",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-01",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-02",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-02",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-02",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-02",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-02",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-02",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-02",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-02",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-02",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-02",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-02",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-03",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-03",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-03",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-03",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-03",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-03",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-03",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-03",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-03",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-03",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-03",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-04",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-04",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-04",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-04",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-04",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-04",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-04",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-04",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-04",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-04",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-04",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-05",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-05",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-05",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-05",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-05",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-05",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-05",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 5.684341886080802e-14
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-05",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-05",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-05",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-05",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-06",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-06",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-06",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-06",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-06",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-06",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-06",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-06",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-06",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-06",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-06",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-07",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-07",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-07",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-07",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-07",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-07",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-07",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-07",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-07",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-07",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-07",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-08",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-08",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-08",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-08",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-08",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-08",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-08",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-08",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.842170943040401e-14
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-08",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-08",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-08",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.842170943040401e-14
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-09",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-09",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-09",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-09",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-09",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-09",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-09",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-09",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-09",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-09",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-09",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-10",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-10",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-10",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-10",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-10",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-10",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-10",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-10",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-10",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-10",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-10",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-11",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-11",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-11",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-11",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-11",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-11",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-11",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-11",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 5.684341886080802e-14
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-11",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-11",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-11",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 5.684341886080802e-14
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-12",
+      "role": "lgb",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-12",
+      "role": "incumbent",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-12",
+      "role": "control_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-12",
+      "role": "geo_seed20261013",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-12",
+      "role": "control_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-12",
+      "role": "geo_seed20261029",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-12",
+      "role": "nn_primary",
+      "maximum_lane_unit_error": 1.1368683772161603e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-12",
+      "role": "geo_seed_mean",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-12",
+      "role": "strong_reference",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-12",
+      "role": "geo_speed_reference_flow",
+      "maximum_lane_unit_error": 0.0
+    },
+    {
+      "part": "assessment",
+      "date": "2030-11-12",
+      "role": "primary_export",
+      "maximum_lane_unit_error": 2.2737367544323206e-13
+    }
+  ],
+  "source_files_sha256": {
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_07_16.parquet": "ae9ea83be301730761c65a96935b88af77db1a047b1075b0f9c8a6e9ac5077ee",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-07/synthetic_mainline_2030_07_16.parquet": "9efab48779c2e40e0ed1d52abd97844d02b4cf8b878ff37ea3b127f900619446",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_17.parquet": "c6f6f98d1ad58e7050851d0d22d6e1c41dd6f8dcba0f79351cd4d73bb476ea6a",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-07/synthetic_mainline_2030_07_17.parquet": "be2d3cefe9c4af313c1ea5d8c7b5a3d09f7f4a0f95412ea8955578654686a2d6",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_07_18.parquet": "d5c3540012b7bd7224724b4e90e98d1fe409d15bf43d2e332c5ad7a5b32c943d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-07/synthetic_mainline_2030_07_18.parquet": "4fecb915b6da7c5d18dc09036c53dfaa44a673fccd5009d5843caf29ea334bb5",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_07_19.parquet": "20143c53b11b4404603b95bf4603abf7805c4300f98d7bf33c8f21f46a33633b",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-07/synthetic_mainline_2030_07_19.parquet": "50b8658bdd49f5082415f91b02308119ae967eda170530dabda650429a1f2e61",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_07_20.parquet": "ca0a19827efa801ac2be0775ae5a7c3bd4fdcc66df8886e68674c6b703320b47",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-07/synthetic_mainline_2030_07_20.parquet": "0dd48311152474a36321a4d3b50ae9c16040b8dfeff699d7a4320f3c8d64944c",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_21.parquet": "a43bbed4ae56dc2cad35de098c89c1ac9a47c3159e0c0461283ad581ea1f0213",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-07/synthetic_mainline_2030_07_21.parquet": "a3d8a4780f64e39e332f305f361181bfdb77e8e576e3fff443110fa38cfc959d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_22.parquet": "462e4e29eea77232d7ce8e2187dc60ba5d5f2b6de7efb8d751058e442e4f756c",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-07/synthetic_mainline_2030_07_22.parquet": "c823ab875935d141be580627c9dd26fd0438808408eed35f0ea2aeb60dbe0b61",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_23.parquet": "f1a4e5b0804c1a6d7b772cc29f3c3fc7c77fdf81f04a2c9dc9124c14b7a1ec79",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-07/synthetic_mainline_2030_07_23.parquet": "09d8ef1c80c2b776506aa70bd1f046822495f393c15c3fd85805c8e4abb4da75",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_24.parquet": "6fab71db45b7b9cccd71280c838627acd4f9ae24c52cb22b56d4232874403a40",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-07/synthetic_mainline_2030_07_24.parquet": "57c975118464803b75a6b988669ea572994117746e3cb59d794f252ad4bd04fe",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_25.parquet": "a820c183a32e9d6e3c7b42760bb8bc20a906391460ae54f2e10a1758e017e411",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-07/synthetic_mainline_2030_07_25.parquet": "51c77e96ea18e08b83e63d8ec5f84966ce7efaff1e4576d555e1167ef67d692a",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_07_26.parquet": "09b19081292675b04a344ead9bfc97bbc0d46bc39c2774af81e7e3d11f0114a8",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-07/synthetic_mainline_2030_07_26.parquet": "3e0d85ec2ec4ca583a5f23409be501424ed3214dc963556b7495446a50ce91e8",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_27.parquet": "96adf22c53e8f6374d598ad5f5c13b154a7e29bf370787546dfeb712f09d1c63",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-07/synthetic_mainline_2030_07_27.parquet": "d1d06c61e3a130427dfd449428da4bc2c8ae76bf457fe30a0076b3392780e64b",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_28.parquet": "6f388b08d85eb858db18e7992f5f1a2db30c232fa13a5bbbe993af7542b6a0f2",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-07/synthetic_mainline_2030_07_28.parquet": "9ab8363165a286a73fce93a5ac02352a692ed266139e1f62a18733d0acf4145e",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_29.parquet": "c48c291e2dc84d3fb8296f2326920c8d6f6ba897e4f136aaf5b036f860a0a4a8",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-07/synthetic_mainline_2030_07_29.parquet": "9f9ce1b34bdebdd393b101f1b0cd973791507189a637c471e99e9c298017fb1b",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_07_30.parquet": "bdca1ab30dbf8e9dc81275f57e0f467c6426885c8360b71f9eed882a6fe74d48",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-07/synthetic_mainline_2030_07_30.parquet": "569fd90d0b9a1101ba6be07ed82966adff5fd4c10b1162eb55f7272b3875fef1",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_07_31.parquet": "6d70b626e0e68be493437072e8e6fc5505b2c47486dd04d3b5e4cd68e6b387df",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-07/synthetic_mainline_2030_07_31.parquet": "8a37d923974013ff537f983bc97c2d709c214e0f0945f3917bf39186c2ea366b",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_01.parquet": "f89eb4fcceaecff678290d0d985fd38040205f069728a944b2c8338f2029b0c5",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_01.parquet": "b8fe3d2e48e861a240f650e6666cecde793715899961d636cb32b983c679f491",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_02.parquet": "aefc0efc0b2d3bb7a67a6d00ce524002162ace3cafd4c2b52bbf71fd25632970",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_02.parquet": "c9fd45f1d3a82ff1ec092c0903254dfbeb0c98a8761d0db7dec28c3ed1962ada",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_03.parquet": "42bce7186ade31c6bab8613db2391375ae5e3c29fcc79bfca4c4151ca54c6b7d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_03.parquet": "57db7d6ffb4e787baae18f7eef5d042312bf4160cb505a0024f9f4b716c4fef3",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_04.parquet": "02c00e51ffb34f819bda56da8c07b7e030f8e31249741af492da95fb98a8d0c3",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_04.parquet": "3bb8da2a533970f0707c6f9b0b6e55ec18d824ca3e86dbaa65b26785875aa2c7",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_05.parquet": "9c3524c71ef10b308085506dbe5f1aa3f7f34a8b3e25a605986e983fe668c0e0",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_05.parquet": "e76d75bd40d422d09e69b6b9b992737d3897b771604e9e70de80fb047cf512fc",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_06.parquet": "342c55709a67deb5a5a050fc549294d6bcd11e55f47afb42e07b716d3eac0530",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_06.parquet": "541416086a17bd789b88a9450c25ef3966673cd1186864ad87356665464fb913",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_07.parquet": "34f173016701ec71a27399770831fd82744793f3e51dd60f590c58ed078042b7",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_07.parquet": "07b00689b496cf085b7ce8bb1954c6a34d644a6746d05a72628e471dff6f0e9e",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_08.parquet": "6ade9a275aedab2739358c70a4f6c6d457fab91656172f0fd38a75f445691582",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_08.parquet": "6c2a1f4268b42077e1598c5065d9d4af668c3e143489d5a2b72b6c1618e61fa1",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_09.parquet": "cd4b8f0563467b4589bb6fd1f18cc77a2cea299814d0985c03ae47101248957a",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_09.parquet": "62acbf56124ca381f651f480efb4f5d3b70713587b2c214bb826b023af2ff16b",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_10.parquet": "6fd534ae46c86b67b7709c1a33fa56c5d460449f0f5664c2a84c4ae68711893c",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_10.parquet": "9575814f544b5ced2ca0299a6a0d837b5d2d403e96a509340eaffd00b1306582",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_11.parquet": "921de0e3a0ed72946ed210c1593f6e02c315af327b3d8f160f9be0cc9a34c412",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_11.parquet": "460b80aeee0adbe505c599cd6860f19326c7805a97fa8cb35cb8e6cc2838e589",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_12.parquet": "81e7c2622e001c7146ab9a5c29bb182cb4dcf061568ff416ed39d0b84e9da955",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_12.parquet": "c134379837304a5fe2ac1c67ca7e808ebd5dab9dd528903e8ffdcbdab5da9e8e",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_13.parquet": "cf881c62e448855091a943b805140bab8354f05858873d39e746da897b9ddfe3",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_13.parquet": "811eb0ace700c5f689ec6e5bd43e3dba23120a25f9ac68cd6a4a4a1e9792a7fb",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_14.parquet": "81317135a325f5089bd6a140d31eee8a2f6d09ac7f9bb80f719c799ab9bc8b07",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_14.parquet": "e71d6036c161ed72fd1212f4d9919a1df80bf9bcf60c5b7685d14c70ee184b9e",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_15.parquet": "df3b46ed01a8dc087fe4f6c45e2e0b155ec30c0ad816166af0d37508f526197d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_15.parquet": "1bae10585923b43811fe5af64c4b4eb0f55ef876bbaeb5f6f5a1e49fff4d423e",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_16.parquet": "a79731173cc4d3c64bf03032019b0d2388b9a4ea9ec970e026c034fc4f5dc36f",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_16.parquet": "b07a3edd26dd8afafc2770da9fb8b2eeb1cd0e839b93ce8dee1edf8f62771f36",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_17.parquet": "6d33c00f00ccc4988e5fbe7be10650a3b1ad6b0aa1fc74af683f3c70a33fd006",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_17.parquet": "ed536d0a22bf78e3ca150e38087513eff596b0dfc49aa6076593e0e8113413d5",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_18.parquet": "b5dbab98552d3d1e6a8677aa295c622b4f4ef1670d17b239659084237e7158d7",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_18.parquet": "34c89475b21b93c10feb8ecdf9e84ebb6834c620c1967f036c50a2f050970b12",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_19.parquet": "76cd0d206d1bbf3911245eeec5cd485962aabaf82aeedeee5c58b3109ede8409",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_19.parquet": "aba4f22b3e4cbf6af576e49205531c983e60175e9e2b1998e50daa96e7367ea1",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_20.parquet": "4da8769538e4ce54c307f88d2ec474ed195a201201050ceb6c8940d7ea92564c",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_20.parquet": "eb202a858590127d3d98eac1ae22e715c8f36053703fc10ace54a2fefd7ba4e1",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_21.parquet": "1688498bd52db679b783ba8bbf12078cf7f9283e58f580c6bd1343daea7da248",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_21.parquet": "44ebf8c533b43a0e3eb0eee456515c26990cfd456970e766ee18416bfc8ae140",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_22.parquet": "c6fa21a4070c30ab15e1c988a9ec68ac7fbca73fa2bde9c4985ce6d41946b74c",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_22.parquet": "412b2af2d28c303b2c53e5c0a89d224fdc5d811b2d57dbc022afc10538cd971f",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_23.parquet": "73fe308b003f5fd3779ba5a3a91c088f9842da3f75d30721125a242230605c2d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_23.parquet": "00cce43e13c0bf1abbf472f66d7c5a6e01be4f3c0a8513c21eec8382955761c3",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_24.parquet": "4c2554d31eb9e7d66f6ee9591d13cf2f4220b7420b3fdf1f79ae21c79a10fed1",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_24.parquet": "4cfed8597064a184ff8cf820a205d3bd47df6ac302ef55d393dddf569a724f4b",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_25.parquet": "f5d5963eafae503ef75a184a6e7ededd2a1cb9f56c53a985edc1031c2a4dbd73",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_25.parquet": "668b43548867f6450bd93c43358409aa7e263436beb8754c49f2e0f975191f97",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_26.parquet": "a99c9b258dd99c0547eacd140ecba61f02c22cb34803e74bca9b3bfed623a9ac",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_26.parquet": "71cd6109d664eb4b31242e64bd5ee9777096fbf7cac7453a013a03baf8b6d0ac",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_08_27.parquet": "5679be9b252c4f1d4e3691f61897c491249861deeeba22de3a76fe80161e22c2",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_27.parquet": "865a3fd741ef788e0cdcd82a53a8d9532fb4c9b4f397173abea8b7bb4b30623c",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_28.parquet": "6c663d7df1826dbd7fa0613769acdf594a8bfbb807c6f66ee2bb7d579f1617a6",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_28.parquet": "163b200d2c09de854741737980c87861ceb98f0fcdd9f5983e91d2458b3d989d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_29.parquet": "f5d5d889957dd4a4388ff730d36031bb7495e1d38598b37ca82467468567ca7c",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_29.parquet": "65c735b385514ef2ad9ab7260f3c8bd69eb616a5af01e19fce88900520ec21e3",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_08_30.parquet": "682288a934b1109f76ab5f42f621463a337829b1cd90f266509f0bd20c99ce2d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_30.parquet": "78ac0a7729434cfa758375eb5bc1484c2bd22c753377cac2e4e8484d67a9b501",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_08_31.parquet": "c325116d0c4f31d4ac6e49675ab9caa4d324f75538e3c977145548a749cc6d57",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-08/synthetic_mainline_2030_08_31.parquet": "d917b8fff885c4e82e600e7b41586dcba54729846d1ab87ad963fb7c12f467a8",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_09_01.parquet": "f4e124390b6aa5ae659e7e2af46ce8fe925094c0a4756d7b09473a567a286092",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_01.parquet": "5e25a09be109ac7e6893467bddae5c11bf3e9ebe98feeaed61ab8776147f7620",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_02.parquet": "4553da67d02369b552dac24e8bffc6b82465ca8886dd1dadbb7c1f7c4518cc75",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_02.parquet": "5f25b2756a618131a3d796774ee16b5206aff31d9d0a849105b4e621c4dcd08d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_03.parquet": "9d99fc55d4585b00b065217aaa2197221592d0639a7205a7509f27b49bdb75df",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_03.parquet": "6ff66f817eae7526357caa445bf2533e1d1e8672cbb19f93ad33109dde498e04",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_04.parquet": "7dede8a414650e1058b23cade4f8161afffe9d9b27d7c55133279305b2f66f2c",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_04.parquet": "abb57fdbc64a5bc4a87d87178c61c10ea5d70a661d81ab73da581851eb789c36",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_09_05.parquet": "51f3c38b2970e1915ed3abc3cb6fb1c4087dec90ad5c3e173a8b6ddcd43b7705",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_05.parquet": "3459b03526e2a10cdf0a121ca4f8bdd40c4eef6e1b378b0de11fe9a5cd80deb5",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_06.parquet": "7a32cbebee19b29fca46e5e45a6a218f3827933a09f46f00ad80ba5ca0f83a60",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_06.parquet": "165d52776ce68a38fb2ce56c99adeb0e6f2ba1afbfd8f421b8f31bcf458d572e",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_09_07.parquet": "9093a5cb6a450afdd8967845f4e0cb925274865876695169ec616469e249456e",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_07.parquet": "573dc0f97687bb07e16b9f430bf463f737d81aa213088db7e4a7e5205d1f0eca",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_08.parquet": "61ba3e79a839eedff62abdbc0d5bcae9d60b057cfa9664f286dbff649d7323b8",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_08.parquet": "a1cbca77efe3c798fb4b7f89af26406b463840d03afbe57906a59af4dacbf90a",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_09.parquet": "ae6edee96c209295d6109e94f03e6c5f1e362cb676757a066a7ea6b1de288d01",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_09.parquet": "9d77d6961d9b5cd8da51604aa4d187b66f3e8feff2cdac5e4c6c3871d381607b",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_10.parquet": "4b5cd667d4bcd6fbd32b11a1eda497cf3f94d40d96ee06af0560a8f4549245d5",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_10.parquet": "6b98b7322504678f329d9dc9d999481f7b263a735acc4016aa820e42d9bffc38",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_09_11.parquet": "a4a729c4f1dc6db32a9b0c7e22c016c648c7f3338949443534587879ca93a4f6",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_11.parquet": "a0f855b6613d102d3bd8e451e068986d8dab1cca229de220052e37662d3488db",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_12.parquet": "cfeafa7184dafa1e2c89803b2ae334f15f6f4895f6eb08923bfb7b030c36e315",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_12.parquet": "2223619d839a73e8685d24502ef449a925d4d24dbac45d4c22dd7a6e693e54e0",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_13.parquet": "272d2b68910f739afadbcee456be97a0e35daab7763a7e9760ef267c431d6d93",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_13.parquet": "6616c891aaf69f248417ad4cbeecb446947d4f0438a22424c41dadaa0f26cbef",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_14.parquet": "8cbc32e6359740bfe1d52108ea7c6bbed2f604c64f798c1f31b748598c0df76a",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_14.parquet": "7b305b63e00571c28fe818ea2b0b68bcbdc66b6943bb5bf4316a0666c2f19a54",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_09_15.parquet": "b322f5bdb1f546cb7b0e1cb0747df5278528b2b52c8f218c82bcbde82151418e",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_15.parquet": "ab737f9377caa2d3ada15d5e48674d3e4a00ef52455b0017c946fd431c373565",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_09_16.parquet": "7104bc1f146433a3980693eba770435dc1b46f667f4022514bd185d99400c89c",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_16.parquet": "2e2582d7952c963103a541fc1b64be13188841d4a79caee4e6e9a7c76c2c0a79",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_17.parquet": "ee3d08d3ae16593542f6955a347e6ffd261a2599a1a8b52f860fa3a3ce1b4889",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_17.parquet": "46afeb35c733c5943985cb0f779af62fe4285a5f1a3a3174294f3ca0af9918f3",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_09_18.parquet": "606b4ef7ff0eb827d734230ce6300ee3913f6d2c378b7477ab850a8c347afd96",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_18.parquet": "4597a07428570ac08a1dabb471a28b0883f3be9a9902f2c74f3a9124d8ea485f",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_19.parquet": "358aff6863b2a74733d195df512638699cb25787a3ef7719d7010919dad5dbc8",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_19.parquet": "97f8aca6f1a8dff190989962a0a144e443e0cc845329c5349f7db6139986a255",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_20.parquet": "ece4307aec3c5608fd1d2850f7872d8ac4c8aec1f2ad154f5543cb1139ce283a",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_20.parquet": "c44847403f4c2e0124bf5f4ef6a232bab26736f0702bd0cbbe3225d9a63d3276",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_21.parquet": "4083192616d2ce173befd897fd8aaf60a5c40d3a6cf374bed82327e419bc0fab",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_21.parquet": "75774f30ca1bfd450a6b1c192d35a660abdb10f61e210e650526f874165e80dd",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_22.parquet": "196fef4dc35b45ccdf0ba72bbe4797bb15f6040d6f2fd6774f9ee3be3e7b2429",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_22.parquet": "96ecdec6dff2f2e0c16f81ae616c09b6a28029a85daf1f95540cb00a4a50b43d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_09_23.parquet": "389ebfc81b71e2c87a5b7ceb87eda16eaed97cfc39e8603a4f271290e47182cb",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_23.parquet": "078ba81dcd32df81481c6e04b19ee1540600b57d8041361f63f3b3d7bf2b76ba",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_24.parquet": "28bedf1d9d5eb18d320c064a197747f7c37c223f9ae4c7a73a00b52f9caba929",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_24.parquet": "6f62196fee9315679956efb9ab89424b349f770203ef1b0064f6056296e78118",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_25.parquet": "013b347435e22f8eecea2c436c911b20055f29b3c70c7600cb097ef7739e55d9",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_25.parquet": "eeb25685a028c97d9da7bbfd71f557f688131cb3692f160de93da97b8f5654cc",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_26.parquet": "73d0df54c6831169ba47d2118c962c833bc9b4d883929eeeaee8149c5a0bafd1",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_26.parquet": "b8ee34132fe26bc78eaeae429c953f6a3640ffdc28686a9679d96106ebeb4369",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_27.parquet": "6f7768bf79f05b2df25e2861521f823e56573e5bfd8bf7d8f8950e0167e72a4d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_27.parquet": "ffa232baa399732866e97b40e9f7fbe43d26fb7ea94b825d6c7a9ddbf1fabc1b",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_09_28.parquet": "9e1aa3f9fad951d788b8f404397c7681d476cc5df60ceb298bb6e5ef15ac7ac5",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_28.parquet": "a025938de0b6a35efc9bed13778a40864ab8b80bc40e4d66cd1bcaad81d01909",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_09_29.parquet": "976b558ab9cf33b4bd1b926a8c90b2a0672e4317fad129e7ebc4f04c173472f9",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_29.parquet": "9678c7a282431c4da8af955dd01d5900ce1072be9da76a4e80aa8e537e7e9740",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_09_30.parquet": "2d7993424cb61f5cdb2c2224039ca2785a69b003fe2a4625bd7ced5b56f288ce",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-09/synthetic_mainline_2030_09_30.parquet": "3a15c2af3a7813a474dd96cbb6bed3f58d57360e879b9aa6fec97c3bb78b0282",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_01.parquet": "c049c916100442f34d39d3f516797b994c9222cd1cc2bd84c4c1a60484731089",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_01.parquet": "9bb70a7d241b146f8b6ca3355bd72c01a753327deca5a3b7c98fa8e25cc33bae",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_02.parquet": "8f6b77bde068b691c79d3d8320484575497a1144bf0a039fc78900c3b47deabf",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_02.parquet": "3524aaeeb5fb603e8b7e20502f28a0adaa348f5882fb00a9ada6bb3add0bb62d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_03.parquet": "777c8c515de2d7982a367d842ed9db4675a6f56dcd97c3e7ad52066e2c7fc91c",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_03.parquet": "51c8a825fe673a816ea89f23ac2156e00957f46536bc06ef2e1b7c089c1fdaef",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_04.parquet": "ef94205860f913dc6d6d8b9560e3f984438480862f2b34f97752f4e1ede75ad7",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_04.parquet": "4b376d534758518c811e90f77c60f0ce450953c743a12cd829849616036cdc39",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_05.parquet": "d81b898bf38ab264b796989d1523c6f2ef8b9d5cdcd2c7cd805c3c7b40ef8cad",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_05.parquet": "81fc8efefe65a270b2589112c679a7f7976a5447e6ae55ef435d63b46f320daa",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_06.parquet": "421f97b41516ff4d7c460e2cb0049563617527b141901e12de0beb0fc0d59957",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_06.parquet": "c01e04152191759b7c08006611f0c8d5e4d09c37dcc6ea5030b811821f48470f",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_07.parquet": "047ba891d81c7e5459dbcf5bfdd7cd1cdeeebd7bf17221776fb92a8ce73c06c7",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_07.parquet": "3e73cbb590b74e17c10f305621f1420750615a28773444b5d4e09b8f5ec21f48",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_08.parquet": "bc58a3b4168c0e03c21dfa04280dea43683a3bf7cb96c7acf298d7f9715e200f",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_08.parquet": "9fdaeb4e749072cf5124b851d3bce28c62779386f2fbc91710c447ebdae6efb8",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_09.parquet": "3a0af9704c77766557db9678bb950c5711d5c3f2902dd576e7a2a5c981b25e05",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_09.parquet": "61fb0856c509c2fea905a60106be788cfa622e6b2679c0cde2ad526f26dd1df4",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_10.parquet": "04dee9f31945319d8a6ced9cbb7002ae0d5d212553aac9715e512787e5067a6c",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_10.parquet": "36ee9bd4346fbf257464c59ff8db9326bd85c95a1a2ca195293d927f260a2acf",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_11.parquet": "4a4f1ab600d986ce275323ed6a66174e6402ffaf6b89b0a3b768c3c21070b61d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_11.parquet": "a54f8d22dd6d88937f9272fad4a149767365f246bafff0aee34f01053b0b72ee",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_12.parquet": "1b842c48d078cd245e82c4bb6f20b578b4a0ffe1725cdeac3bac59141401e118",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_12.parquet": "325414a8834266a08b3df14e9d54bdc86ab4e1ad1f01e20478ccab217c5c4d6b",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_13.parquet": "427a44e3e5a2305a0b2f630859aff28c2690e9d222a27ac3654f5524842e7099",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_13.parquet": "93592195e02644176b29d4320a57d1bec6898e39da71103740c012c52edd319b",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_14.parquet": "8df11005fcbd461fc73beae54578b373ac3a79d2199878ae14a9bc26545ca6a7",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_14.parquet": "951375745d98ebe3c50dbb8b4d27156ab6f067d89a1db995e78aea59e54a4ecc",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_15.parquet": "8abc917c7151574a6a287eba7459dec7c9c55a80e02d835414801e1dc227535d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_15.parquet": "270854b85fd44d5305d4fd209f7be596aa1290ec188050cce59b9d8823554eb1",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_16.parquet": "f6aeede2a47a831e3ff905d2584c15514b80fca6fb738505ae85d637366a5737",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_16.parquet": "78b3f06c51165ba486aaf86923990d88579e9f81313a027605b91e336b92949d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_17.parquet": "598ac940f6513df07d1f274aa968eab3f4522b976dd76b833324ed54fcb68e2a",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_17.parquet": "f5bfbce360e2230ae8d835bf36d671a1201ed8b0dde41ed11b40f87d29deec09",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_18.parquet": "d8cdbc916c11c95e244924d7d8ff6cc66a3fb86c9fd13b29863c80dad9bc4b41",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_18.parquet": "c97198db07b5fea4d662792ed595b42e121a9297bded18b917ca536aaa17d78d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_19.parquet": "2ee6314a49ca0d469e814d55b229800d82dfc3a718ef94774c03d60526de8d8c",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_19.parquet": "90eddbc3a88b41dd9e947978d01a9a6dca27de7f829906bb2e02e44c9c452630",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_20.parquet": "b3ff46bceed6cb4c75205e3b8b82b57f67be41f03c158ea17bcdeb21303bfb3e",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_20.parquet": "5f7b079623304a4de2f5e8c4ff7ce6f59ed83bd403cddda4e55a70beff37cc69",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_21.parquet": "765c38ee3eeed5cac500010d5f6be4c7a54dcee41f2d3ccc36c43f65843369ed",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_21.parquet": "f2e894e26331c0120f7c78f5a3707d530fd75296c3955ab18f9932d1d0c5603f",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_22.parquet": "eba72d20b29ed87781327444e9e7538f51e18fd890301b9db7558255dac41b65",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_22.parquet": "3a58720343cae2766ab34d5c1fbc35a17bff140f94a3066f788554cdd73b94a5",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_23.parquet": "a8a45ff50ff2f1a786d3434043a7bed2378bc1ae1b1d568fa4943ee5879c7b00",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_23.parquet": "1c07a9a6f4e943395389c05945411996158905b0ab79d2d796f3876633cefc2c",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_24.parquet": "40a0becf5f3f1b9e6e2c68491d1dfdd2b7862bc458b5018c409e86e6736b82ff",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_24.parquet": "65f8812f45aa3d8131dfa46b0c4daa3dac244f4f883c63a7abbf6ea00f324ea7",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_25.parquet": "e0a5090a965f658f783e012b8fc1bcb9b1cd1d6044213d83378d00de8ae6392e",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_25.parquet": "7db56fc81e6ab3af0be033e0e4a4d90b902b9f3f320081d34b50af5158ef7996",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_26.parquet": "4fa14d505317b86754e5fe0547914e90a84c0be40329c80b814b9a1d67eacfd4",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_26.parquet": "666350bf990cdd03dfc51fb0755ad6faa96ef68fb7691ea67d410e0f7fd56ada",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_10_27.parquet": "8709a0aaa52f8a8ee4afdf16cbc18b547f30e2c5fd969d5da9146c6b033efebf",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_27.parquet": "e07b867fb48d601f36ed22b90fae1d8bfa53716054f7b68dd0256a16318af722",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_10_28.parquet": "ee4bfe0bc82db82c7d361e50e44ed6f4d3f1c4e19ca3f980d0792a205590516d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_28.parquet": "d6879c932051d9376f4687a884dcfe0c9580b62f0a56142db9111736e58f8efc",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_29.parquet": "6b0c3726cc12b98876a59ba4dc5bcbada6325e522838a8134fe0d310558db2a1",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_29.parquet": "0508e44eb2d3c7b5f04d4c5461e9a4f7fab9af8f281d2080026565dcde5d2e44",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_30.parquet": "f3fbc4d783133eb1f68bc90d0e2fc8c73e1dee38b4c2394655cd22e83c2affef",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_30.parquet": "e40f121287dd61afeb6c393dc70e77cc04563e8f3d86398b590afb90e3d050e9",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_10_31.parquet": "cd2418cc30fc8ddbe0c2a6adc65a096291b43390d9aae06f92aa679ee093d489",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-10/synthetic_mainline_2030_10_31.parquet": "de0bc1fd52702db81f9a2630f02dd24408aaade87f08f6507215c1a41fb03af9",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_01.parquet": "6c9fbc9a533db43c9ca604395c208e031da78880cb67f81486f319a441f504cf",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-11/synthetic_mainline_2030_11_01.parquet": "aabac9e6ccc95d2b632b26be9c9722fc77b8a3fe89b371d5c2d3eb5aae6f764a",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_11_02.parquet": "710cc8969b4d9587d68f5204648e71e55099ce2d13eb0c799ec1039016fc1221",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-11/synthetic_mainline_2030_11_02.parquet": "447c719cc873025064e6dbe4f6115855a3e1784a1724ff6afe4be22ccb295d75",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_11_03.parquet": "2e6853f2ff2b9e333f96d30a69ef52cc025ba3a49fc36335b512578d2749a773",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-11/synthetic_mainline_2030_11_03.parquet": "3019f39eaaa4bffaf282f2a2422963cca6ea4ebd7411c483ecd563b9ec502bc5",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_04.parquet": "c393ff4b499177a54064fc757afc14071de2fd8a7a1a1d38dd176b6c5f18a6b8",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-11/synthetic_mainline_2030_11_04.parquet": "29550bcf8683e3246a7b4cc4ecd18456ba9ecacb4a439195d2d88c6437ea9055",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_11_05.parquet": "e51c112b44b24173ef3ae17d2a9227ec55c07bc665d0f4546cef5b41a420503d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-11/synthetic_mainline_2030_11_05.parquet": "4ffaa3decdc399c8a5e5a0a8eda21e3e8be1ffa56622f0f2654b1247e2f6d97f",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_06.parquet": "444e8bcaf6461388871bf9c5b65700811d740392033b06c8d0fa7bcace1d11a0",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-11/synthetic_mainline_2030_11_06.parquet": "ae0b680e3173c07a4d8c5138824f2b9beaf2dd95f539edcdc79a4129f7a0b7ae",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_07.parquet": "e46eebe11daf56a256c44a0de65d1821fc7c583b27e9a23b0f679ba5cdeedeac",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-11/synthetic_mainline_2030_11_07.parquet": "1960dce60dec870cded0325e1c7fcae593c06f0bcaadbfbc9048f2c78521919d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_11_08.parquet": "a0243dfcf3a2eceb81baf0c17f54d2e6cc6d2e0fe9230fdfef8eec197c999915",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-11/synthetic_mainline_2030_11_08.parquet": "77b646301ea6ef131e8eb3170773ada010f647a319a7dd8044dd17bf2e13c528",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2030_11_09.parquet": "d43b4f7065ba865a1ba4dd458c615ee998cca2d01cf9736840ad246cff36a44c",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-11/synthetic_mainline_2030_11_09.parquet": "d0b65f438cc62ba8883f469814a45f78b8f3a6f39c5dd67cc18823528bf3659d",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_10.parquet": "ee1cd1e5afb6d791732c128d90d3609abea982daa5f5b0867cc2572a1aa73788",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-11/synthetic_mainline_2030_11_10.parquet": "aea7535d2a81e07c4a66067492a3eaf0023c5672b2a06bf42a57e0d22a409334",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2030_11_11.parquet": "da0e45fafdc717693e2e37b77b8a100e1b91abcbca4bdf58ed548156c39988df",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-11/synthetic_mainline_2030_11_11.parquet": "476afc53b4aef9b7582a7ded2cd4954daeba1f16f920ef9627385f43f6dd67f1",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2030_11_12.parquet": "38f5a520a4bfcfb33ee7f68a30a45850393b421670514aa0854ff4f15584b25b",
+    "E:/ieee/data/kaggle_public/corridors/D12_I405_S/train/mainline_states/year_month=2030-11/synthetic_mainline_2030_11_12.parquet": "f5d656de98b2f95fbc44eaa536d371ce08c77bc50b5dc8020a9ba8218776273a"
+  },
+  "seconds": 83.38130939999974,
+  "formal_State": null,
+  "formal_Physics": null,
+  "formal_Total": null,
+  "scope": "Four fits with matched two-seed comparisons. Rebuilt all fit inputs/teachers/plans/cell exposure and selected deployment/grid;does not replay optimizer updates or unselected checkpoints."
+}

@@ -1,0 +1,138 @@
+{
+  "created_UTC": "2026-10-15T09:34:22.263387+00:00",
+  "production_src_unchanged": true,
+  "unit_test_evidence": "Prior I210 phase125 research/104CPU plus7optional Torch-module skips;not rerun or counted as new tests",
+  "compileall_passed": true,
+  "preflight": {
+    "first_attempt": "Wrong .venv-repro interpreter lacked Torch;no output artifacts or training affected",
+    "corrected_research_interpreter": "2030-07-16 raw inputs/teacher/mask exact,1899target cells"
+  },
+  "failed_full_grid_audit": {
+    "diagnosis_report_sha256": "46092021202870388d5f73c3ed061360fb33b7767fd360b0cad6d958b9b86e56",
+    "failed_exit_code": 1,
+    "original_float64_mix_max_score_error": 5.685731885307632e-10,
+    "native_float32_mix_max_score_error": 0.0,
+    "resolution": "Correct verifier neural arithmetic back to training float32 semantics;no tolerance,model,selection or prediction changed. First source archive/registration preserved;full replay uses new A140b output."
+  },
+  "n_raw_fit_days_rebuilt": 92,
+  "n_exposure_archives_verified": 4,
+  "n_direct_cal_ass_calls": 308,
+  "n_additional_pure_neural_cal_calls": 56,
+  "n_cal_ass_saved_metrics": 280,
+  "n_selected_checkpoint_alpha_grid_metrics": 20,
+  "n_direct_forward_calls": 154,
+  "n_additional_forward_audit_calls": 22,
+  "maximum_cal_ass_prediction_error_lane_units": 2.2737367544323206e-13,
+  "maximum_score_error": 2.220446049250313e-16,
+  "paired_geometry_vs_plain_GRU": [
+    {
+      "phase": "old_assessment",
+      "control": "nn_primary",
+      "candidate": "geo_seed_mean",
+      "pooled_State_gain": -3.841724192099605e-05,
+      "day_mean_diagnostic": {
+        "paired_day_mean_gain": 0.000620624266035652,
+        "ci95": [
+          -0.0001925209038100403,
+          0.0014889333238539376
+        ],
+        "bootstrap_probability_gain_positive": 0.839,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    {
+      "phase": "old_assessment",
+      "control": "control_seed20261013",
+      "candidate": "geo_seed20261013",
+      "pooled_State_gain": -0.0011153159448178407,
+      "day_mean_diagnostic": {
+        "paired_day_mean_gain": -5.8137460616970926e-05,
+        "ci95": [
+          -0.0016110742070084957,
+          0.0014947992857745538
+        ],
+        "bootstrap_probability_gain_positive": 0.404,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    {
+      "phase": "old_assessment",
+      "control": "control_seed20261029",
+      "candidate": "geo_seed20261029",
+      "pooled_State_gain": 0.0010788558217402766,
+      "day_mean_diagnostic": {
+        "paired_day_mean_gain": 0.0012489563364755532,
+        "ci95": [
+          0.0007762731082892446,
+          0.001726649922672907
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    {
+      "phase": "future_calendar",
+      "control": "nn_primary",
+      "candidate": "geo_seed_mean",
+      "pooled_State_gain": 0.0015704190452457967,
+      "day_mean_diagnostic": {
+        "paired_day_mean_gain": 0.00019111205501437523,
+        "ci95": [
+          -0.0008796950793480656,
+          0.0012494917786049656
+        ],
+        "bootstrap_probability_gain_positive": 0.61175,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    {
+      "phase": "future_calendar",
+      "control": "control_seed20261013",
+      "candidate": "geo_seed20261013",
+      "pooled_State_gain": 0.0009605479757563984,
+      "day_mean_diagnostic": {
+        "paired_day_mean_gain": -0.0001438316975143786,
+        "ci95": [
+          -0.0015610147435839836,
+          0.0012733513485552264
+        ],
+        "bootstrap_probability_gain_positive": 0.411,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    {
+      "phase": "future_calendar",
+      "control": "control_seed20261029",
+      "candidate": "geo_seed20261029",
+      "pooled_State_gain": 0.00244818884911735,
+      "day_mean_diagnostic": {
+        "paired_day_mean_gain": 0.0007855739897988061,
+        "ci95": [
+          -0.00010371516143614645,
+          0.0016536208521337112
+        ],
+        "bootstrap_probability_gain_positive": 0.94325,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    }
+  ],
+  "scope": "Original fit targets here,previous two directions used augmented remask targets;no pooled three-direction causal comparison. Public research dates,two seeds,not final/private."
+}
