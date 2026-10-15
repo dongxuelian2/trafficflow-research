@@ -1,0 +1,37 @@
+{
+  "protocol_sha256": "0cddccd29f1f368bff46e67004535b1a2409ef39b7f754699b732c0679da39cb",
+  "protocol": {
+    "id": "Fit_only_transient_population_and_input_base_audit",
+    "sources": [
+      {
+        "views": "artifacts/research/A96_I210_W_native_remask_fit_views/cache.json",
+        "views_sha256": "17592bf01d2db98338fa4aa130cd605db97b283cb81e8729ef0df3718ca3896e",
+        "NN_study": "reports/research/A97_I210_W_native_remask_ablation.json",
+        "NN_study_sha256": "1de78bac70f027d18317fa8ae1cfae29722fecc7eb4e893626242832297656c5"
+      },
+      {
+        "views": "artifacts/research/A102_I5_N_native_remask_fit_views/cache.json",
+        "views_sha256": "f2bf9ccbc8e53bd684cf59f573fed784e292ea19d68c34e5ba3415feebf8bd2b",
+        "NN_study": "reports/research/A104_I5_N_native_remask_ablation.json",
+        "NN_study_sha256": "e34c626b1504da12e3d8efd42e8d416a03b9063df1e620586fdb3aac5729d29c"
+      }
+    ],
+    "data_scope": "Only registered fit raw/cache/exposure files;no cal/assessment/forward teacher or prediction arrays",
+    "thresholds": {
+      "speed_change_kmh": 20,
+      "speed_return_to_previous_kmh": 5,
+      "speed_persistence_2future_steps_kmh": 10,
+      "flow_change_per_lane_vph": 150,
+      "flow_return_per_lane_vph": 50,
+      "flow_persistence_per_lane_vph": 75,
+      "neighbor_change_kmh": 10,
+      "neighbor_window_steps": 2
+    },
+    "semantics": "Returns/persistence/neighbors are raw-fit observational diagnostics,not latent noise or physical-event truth;no midnight wrapping",
+    "base_errors": "Cached input base channels6/7 against fit raw grid means;not neural errors or official State",
+    "exposure": "Actual new-NN per-cell counts,not inferred adjacent-pair joint exposure;four remask views not independent events",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null
+  }
+}

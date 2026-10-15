@@ -1,0 +1,45 @@
+{
+  "created_UTC": "2026-10-15T07:54:28.843731+00:00",
+  "git_base_before_phase_commit": "325e4f195bb279f52e876e86a4ed272afcba5337",
+  "previous_goal_turn_classification": "progress:completed negative winter flow transfer,commit325e4f1",
+  "current_goal_turn_classification": "progress",
+  "objective_status": "active;formal0.95000+unachieved",
+  "formal_best_Total": 0.8294,
+  "new_formal_score": null,
+  "formal_model_promoted": false,
+  "completed": [
+    "Fit-only transient population/base-error/exposure audit on245days",
+    "Independent all-array and3430record verification",
+    "One fixed .05 speed-pair objective with gradient/missing-mask tests",
+    "Two-seed matched control study preregistered and running"
+  ],
+  "new_model_primary": null,
+  "new_model_assessment": null,
+  "new_model_forward": null,
+  "active_jobs": [
+    {
+      "session_id": 90131,
+      "task": "A124_I5_N_speed_jump_pair_loss",
+      "last_tool_poll_confirmed_live_UTC": "2026-10-15T07:53:45Z",
+      "policy": "Poll this exact handle first. Do not restart due observation timeout. Both seeds/selection seal required before assessment."
+    }
+  ],
+  "resume_steps": [
+    "Poll A124 unified-exec handle and inspect actual terminal state,do not duplicate fitting",
+    "After terminal0 and final A124 JSON,evaluate_exported_state_forward.py -> A125_I5_N_speed_jump_forward_calendar.json",
+    "verify_speed_jump_training.py -> A126_I5_N_speed_jump_training_verification.json",
+    "verify_native_remask_forward.py on A125 -> A127_I5_N_speed_jump_forward_independent_verification.json",
+    "Use actual whole-study results for comparison;do not infer accuracy from fit audit or partialcal"
+  ],
+  "final_simulator_seeds": {
+    "seeds": [
+      7907,
+      8017,
+      9109
+    ],
+    "generated": false
+  },
+  "platform_policy": "Local models and Git only",
+  "all_previous_complete_submissions_preserved": true,
+  "limits": "Raw observed fit diagnostics do not identify latent noise/events. Input-base SSE is not neural error/official State. Ongoing model results unknown."
+}
