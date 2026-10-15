@@ -2,11 +2,15 @@
 
 目标为可复现的正式 Kaggle **0.95000+**；当前正式 **0.82940**。不将阶段性较低分数作为终点。
 
+C87–C90已完成全时段动态预训练及等计算事件预训练控制：12个网络、同初态/同微调批次。dense对event事后代理gain+.009148，但两个primary仍强参照，对强参照联合−.023199。I5S效应未在I10W复现，更低Brier不保证更高IoU，不追加相同阈值/混合网格。[已完成证据](docs/DENSE_DYNAMICS_PRETRAINING_RESEARCH.md)。
+
+下一步用已审计dense数据研究**连续speed/flow联合预测与缺失感知潜状态传播**，显式新增flow head，与同数据/同计算的原网络比较；C87当前仅speed/queue输出。以合法State重建、事件forecast及预定义急降速/恢复分层共同检验，独立选模型后再扩滚动时间/走廊。forecast误差、Brier和缺边界物理诊断均不是正式State/Physics；原最佳与未开启最终模拟seeds保留，继续只做本地模型。
+
 C82–C84已完成受控非前缀筛查：已知反例gap闭合，但52个decision onset/5284邻居中0提议、0shortlist，按预登记停止，没有新后段数组读取。停止扩展当前集合解码分支，不增加相同MC规模、搜索步数或同一场景库的组合。[筛查与数据证据](docs/BOUNDED_SEARCH_AND_DENSE_FORECAST.md)。
 
 C85–C86及checkpoint的raw原点集合复核说明：全时段5分钟监督unique单元可增4.97–22.18倍，但既有72/122/37/58个同准则观测onset已全部覆盖，扩相同selector配额不会添加此类事件。固定30分钟原点只保留6/9/0/1，不能用固定粗相位替代五分钟上下文。数据人口扩张不是性能证据，重复teacher均值5.89次；拟合日/走廊及滚动fold也不独立。
 
-下一轮优先做通用交通动态预训练→同预算事件微调，与同结构scratch、冻结强树匹配比较。仅用各fit截止之前的公开观测，future速度/流量/quality只进loss；输入为合法一小时history加masked T，采样覆盖全部五分钟相位。checkpoint/概率校准与decision/selection仍分期，两个optimizer seed，预先固定小预算；显式记录额外样本/更新量，不能把数据增加全部算作架构贡献。优先验证新表征是否改善onset/ongoing和急降速/恢复，再考虑与State–Physics共享，而不是按旧后段挑配置。正式Physics/Total仍未知，原完整最佳、final模拟seeds、平台暂缓不变。
+该阶段提出的通用交通动态预训练→事件微调匹配对照现由C87–C90完成，结果和下一步以上文为准。其未来流量仅曾作为输入及quality条件，并无flow损失；不追溯声称完成连续联合流量建模或急降速/恢复专项检验。正式Physics/Total仍未知，原完整最佳、final模拟seeds不变。
 
 C78–C81已完成非空总体/可评分子集的精确扩展，以及4个公开fit-only经验关联/eligibility场景库。关联full相对matched independent gain0，mask关联+.002352、区间[0,.006250]，没有新增稳定收益；full关联只改变当地4个不可评分单元。全部3076曲线与便携接口独立核验，primary仍incumbent。停止扩大相同MC规模/经验copula参数，不把4096场景当4096训练事件。[当前证据](docs/JOINT_SCENARIO_ONSET_RESEARCH.md)。
 

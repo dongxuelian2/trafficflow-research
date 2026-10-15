@@ -3,6 +3,15 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+C87三臂使用同C71强树的固定.75tree+.25双seedNN混合；event/dense各400步同目标，再全臂800步同批次微调。
+
+| 已查看后段 / 代理IoU | incumbent / primary | scratch | event warm | dense warm |
+|---|---:|---:|---:|---:|
+| I5S | .785466 | .775668 | .770797 | .792565 |
+| I10W | .789289 | .735999 | .739262 | .735791 |
+
+相同后段日历同步日期抽样：dense−event+.009148[.000189,.018831]，dense−强参照−.023199[−.070007,.027711]。区间事后未校正、不含optimizerseed不确定性；单seed并非均显著。I5S速度forecast小降，I10W相对event退步，不称State或多任务突破。原选择未改，12模型/48快照/全新神经输入及门控核验通过。[可复现对照](docs/DENSE_DYNAMICS_PRETRAINING_RESEARCH.md)。
+
 C82–C84固定现有joint scenario/probability，仅改变非前缀搜索；最多8个单翻转并用另一MC库筛改进。先登记decision-only screen，未shortlist就不追加后段。
 
 | decision观测代理 | incumbent | 原joint prefix | 新local proposal / validated | onset提议数 |

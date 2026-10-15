@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+C87新增纯NumPy/Pandas dense causal输入及可选Torch全六步warm loss。raw只取历史12槽，T仅masked；未来teacher/quality只进监督。C88独立124fit日/33480原点/742事件teacher/372poison核验，补足此前treefeature证明不等于旧神经x证明的范围。
+
+C89初次portable核验漏released_origin_rows导入，保留源码ZIP/partial；原traceback不可得未伪造。C89b仅修import后新目录核验12网络初态/批次/曝光、48权重与Adam状态、792checkpoint+1896eval forward、1128网格/gates/seals，最大差0；316新eval raw窗口、336便携/168乱序/12future拒绝。旧强树feature证明明确复用，没有重新优化12网络。
+
+C90的7联合/4成员统计仅事后描述，同日历同步抽样；成员用冻结均值阈值，无新选择。速度forecast不是State，低Brier不保证Queue，当前没有flow输出或物理联合优化。新增4测试，全151research/129CPU+8Torch skips通过，旧6877artifact/5完整CSV/锁不变，累计7247。[方法和限制](docs/DENSE_DYNAMICS_PRETRAINING_RESEARCH.md)。
+
 C83的local_search只用原假设场景，8步单翻转与独立模拟bank的条件数值筛查；实际future teacher/mask只进decision evaluator。四组held-simulation bank由fit窗口生成并seal后才读decision，源JSON旧结果不称盲测。0提议/0shortlist触发预登记停止，worker未读新selection/assessment数组；不声称真实非零提议验证了数值接受gate。
 
 C84独立候选集合矩阵复核10小law/320全局集合、52onset/5284邻居、MC区间/停止规则与导出；8onset Booster+4参照probability，16新history/48角色+24乱序+12future拒绝通过。新3测试及当前全147research/126CPU通过、7Torch skips。旧raw/概率/场景bank证明明确复用，无新完整submission或正式成绩。

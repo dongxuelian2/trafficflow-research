@@ -2,6 +2,15 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**C87–C90：完成 12 个匹配神经网络训练，全时段预训练未超过强参照。** scratch、事件 warm、dense warm 共享初态与微调批次，两 warm 臂等步数/同目标。两走廊均保留 incumbent，无新正式成绩或完整 submission。
+
+| 公开后段代理 IoU | 强参照 | scratch blend | event_warm blend | dense_warm blend |
+|---|---:|---:|---:|---:|
+| I5S | .785466 | .775668 | .770797 | .792565 |
+| I10W | .789289 | .735999 | .739262 | .735791 |
+
+dense−event 同步日历 gain+.009148、95% CI[.000189,.018831]，但 dense−强参照−.023199、CI跨零；均为事后未多重校正的观测代理描述，未用于晋级。I10W Brier 改善未转化为 IoU 改善。33480原点全输入审核、全部48神经快照及决定门控重放通过，预测最大差0。151research/129CPU通过、8Torch skips；累计7247artifact，原完整提交冻结。[配置、负面结果与证据](docs/DENSE_DYNAMICS_PRETRAINING_RESEARCH.md)。
+
 **C82–C86：受控非前缀搜索在决策期被否决，转向动态预训练数据。** 十个自主小分布的320集合穷举通过，搜索将已知反例.436→.4425；但52个公开decision onset上检查5284邻居后，提出改动0、shortlist0。按预登记门槛停止此解码扩展，未新读selection/assessment数组，**新后段成绩未评估**。
 
 | fit-only公开数据 | 原event-fit监督单元 | dense5独特teacher单元 | 新增倍数 | 已选/全部同准则onset原点 |

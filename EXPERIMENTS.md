@@ -4,6 +4,15 @@
 
 | 编号 | 假设 / 核验 | 实测结果 / 资源 |
 |---|---|---|
+| C87 | 2走廊×2seed×scratch/event_warm/dense_warm；同初态、800步同事件批次，两warm同400步 | 12新网络，dense对event联合+.009148，对强参照−.023199；两primary仍incumbent；worker188.04s/进程1875.50MiB/GPU allocated102.80MiB |
+| C88 | 独立quality/通道/窗口重建、实际future/rawT扰动 | 124fit日包/33480原点/742fit及CP事件/372poison通过；14.53s |
+| C89 / C89b | 初态/批次/曝光、checkpoint/optimizer、决策及导出独立重放 | 首次漏import失败源及partial保留；C89b完成48快照/2688神经窗口forward/1128网格/336便携+168乱序+12future拒绝，差0；95.85s |
+| C90 | 事后matched总结，同日期联合bootstrap，单seed用冻结均值阈值 | 7联合/4成员诊断；I5S dense−event+.021768而I10W−.003472；Brier/速度预测不当State/Physics；7.68s |
+
+新增4测试，全151research/13.39s、129CPU/10.31s+8Torch skips、compileall通过。实际dense曝光仅完整人口的一部分，I10W正例明显减少。6877旧artifact不变，累计7247，5完整CSV及锁冻结。无新正式分数。[完整配置及失败记录](docs/DENSE_DYNAMICS_PRETRAINING_RESEARCH.md)。
+
+| 编号 | 假设 / 核验 | 实测结果 / 资源 |
+|---|---|---|
 | C82 | 固定8步单翻转搜索，10个已知联合小law与320集合穷举 | 已知非前缀gap.0065闭合；不保证一般全局最优，不作交通分数 |
 | C83 | 新独立MC库检查提议，decision需同时超过incumbent/prefix .005 | 52onset、5284邻居，0提议/0shortlist；预定停止，未读新selection/assessment；8.05秒/peak442.32MiB |
 | C84 | 独立候选集合矩阵、模拟接受区间、所有screen controls与导出 | 4bank/320全局小集合/5284邻居，16新历史48便携+24乱序+12poison通过；10.46秒 |
