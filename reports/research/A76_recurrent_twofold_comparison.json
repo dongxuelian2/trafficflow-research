@@ -1,0 +1,298 @@
+{
+  "studies": [
+    {
+      "study": "A72b_recurrent_I210_W_autumn_full_day",
+      "source_report_sha256": "8bde3ffc89105f76d31e4d96d586d558e6c21620be24cc85cea8fbba34f32c8f",
+      "panel": "D7_I210_W",
+      "fold": "rolling_autumn",
+      "primary": "tcn_gru_seed_mean",
+      "incumbent_State": 0.933577296143603,
+      "primary_State": 0.9354913506553723,
+      "primary_gain": 0.001914054511769292,
+      "seed_pairs": [
+        {
+          "seed": 20261013,
+          "cal_alpha_TCN": 0.5,
+          "cal_alpha_GRU": 0.5,
+          "selected_epoch_TCN": 20,
+          "selected_epoch_GRU": 20,
+          "TCN_State": 0.9318136012548952,
+          "GRU_State": 0.9331347498646737,
+          "GRU_minus_TCN_gain": 0.0013211486097784997,
+          "paired_day_diagnostic": {
+            "paired_day_mean_gain": 0.0007587918868651099,
+            "ci95": [
+              0.00040730590473238493,
+              0.0011102778689978349
+            ],
+            "bootstrap_probability_gain_positive": 1.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          },
+          "regime_gains": {
+            "R1": 0.0006231790975612661,
+            "R2": 0.0008495339628922238,
+            "R3": 0.002490732768881676
+          },
+          "stratum_RMSE_differences": {
+            "drop20": {
+              "n": 54,
+              "GRU_minus_TCN_RMSE_speed": -2.1743146340641424,
+              "GRU_minus_TCN_RMSE_lane_flow": -1.9877816850999466
+            },
+            "recover20": {
+              "n": 62,
+              "GRU_minus_TCN_RMSE_speed": 0.22012707338843285,
+              "GRU_minus_TCN_RMSE_lane_flow": -4.747277507989153
+            },
+            "missing60min": {
+              "n": 758,
+              "GRU_minus_TCN_RMSE_speed": -0.17638047494708964,
+              "GRU_minus_TCN_RMSE_lane_flow": -0.8233949243383947
+            },
+            "missing180min": {
+              "n": 0,
+              "GRU_minus_TCN_RMSE_speed": null,
+              "GRU_minus_TCN_RMSE_lane_flow": null
+            },
+            "congested50": {
+              "n": 4245,
+              "GRU_minus_TCN_RMSE_speed": -0.3086122538890912,
+              "GRU_minus_TCN_RMSE_lane_flow": -0.7748193362386644
+            }
+          },
+          "parameters_TCN": 75994,
+          "parameters_GRU": 97307,
+          "seconds_TCN": 171.92010449999998,
+          "seconds_GRU": 192.96944379999968,
+          "target_grid_cells_supervised": 517171,
+          "target_grid_cells_available": 517171,
+          "actual_exposures_exactly_matched": true
+        },
+        {
+          "seed": 20261029,
+          "cal_alpha_TCN": 0.5,
+          "cal_alpha_GRU": 0.75,
+          "selected_epoch_TCN": 24,
+          "selected_epoch_GRU": 24,
+          "TCN_State": 0.9334209642204786,
+          "GRU_State": 0.9358734635468532,
+          "GRU_minus_TCN_gain": 0.002452499326374591,
+          "paired_day_diagnostic": {
+            "paired_day_mean_gain": 0.0007810000439318422,
+            "ci95": [
+              7.839515322647214e-05,
+              0.0014788611753430555
+            ],
+            "bootstrap_probability_gain_positive": 1.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          },
+          "regime_gains": {
+            "R1": 0.0003734824212884291,
+            "R2": 0.0001519477205008668,
+            "R3": 0.006832067837334255
+          },
+          "stratum_RMSE_differences": {
+            "drop20": {
+              "n": 54,
+              "GRU_minus_TCN_RMSE_speed": -3.9983316692902484,
+              "GRU_minus_TCN_RMSE_lane_flow": 4.664980212607944
+            },
+            "recover20": {
+              "n": 62,
+              "GRU_minus_TCN_RMSE_speed": -1.1905942107227165,
+              "GRU_minus_TCN_RMSE_lane_flow": -5.975134261897054
+            },
+            "missing60min": {
+              "n": 758,
+              "GRU_minus_TCN_RMSE_speed": -0.5211295870235366,
+              "GRU_minus_TCN_RMSE_lane_flow": 1.3905335383532886
+            },
+            "missing180min": {
+              "n": 0,
+              "GRU_minus_TCN_RMSE_speed": null,
+              "GRU_minus_TCN_RMSE_lane_flow": null
+            },
+            "congested50": {
+              "n": 4245,
+              "GRU_minus_TCN_RMSE_speed": -0.4149040845888776,
+              "GRU_minus_TCN_RMSE_lane_flow": 1.8605231857722657
+            }
+          },
+          "parameters_TCN": 75994,
+          "parameters_GRU": 97307,
+          "seconds_TCN": 171.83337680000022,
+          "seconds_GRU": 193.5521048999999,
+          "target_grid_cells_supervised": 517171,
+          "target_grid_cells_available": 517171,
+          "actual_exposures_exactly_matched": true
+        }
+      ],
+      "architecture_seed_means": {
+        "tcn": 0.9332788930187532,
+        "tcn_gru": 0.9354913506553723
+      },
+      "incumbent_context_only_effect": {
+        "cal": 6.726865790240844e-05,
+        "assessment": -1.4877590068795854e-05
+      },
+      "seconds": 755.4557465999997,
+      "GPU_peak_allocated_MiB": 725.3310546875
+    },
+    {
+      "study": "A73_recurrent_I5_N_winter",
+      "source_report_sha256": "aabad344e932aaf8b5785ff8a0504c0b8cbb14f53632870f94f8c5fe320bd97e",
+      "panel": "D12_I5_N",
+      "fold": "rolling_winter",
+      "primary": "tcn_gru_seed_mean",
+      "incumbent_State": 0.9543292887427693,
+      "primary_State": 0.9568177705798199,
+      "primary_gain": 0.002488481837050527,
+      "seed_pairs": [
+        {
+          "seed": 20261013,
+          "cal_alpha_TCN": 0.75,
+          "cal_alpha_GRU": 0.75,
+          "selected_epoch_TCN": 20,
+          "selected_epoch_GRU": 20,
+          "TCN_State": 0.9543080936095819,
+          "GRU_State": 0.955370407080701,
+          "GRU_minus_TCN_gain": 0.0010623134711190696,
+          "paired_day_diagnostic": {
+            "paired_day_mean_gain": 0.0011207883963318557,
+            "ci95": [
+              0.000777603297992543,
+              0.0014639734946711685
+            ],
+            "bootstrap_probability_gain_positive": 1.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          },
+          "regime_gains": {
+            "R1": 0.0014465062429160902,
+            "R2": 0.001497516979382052,
+            "R3": 0.00024291719105917764
+          },
+          "stratum_RMSE_differences": {
+            "drop20": {
+              "n": 220,
+              "GRU_minus_TCN_RMSE_speed": 1.5725101476072076,
+              "GRU_minus_TCN_RMSE_lane_flow": 0.9464973224674651
+            },
+            "recover20": {
+              "n": 272,
+              "GRU_minus_TCN_RMSE_speed": -0.9391143950142258,
+              "GRU_minus_TCN_RMSE_lane_flow": -0.8876596695788805
+            },
+            "missing60min": {
+              "n": 5133,
+              "GRU_minus_TCN_RMSE_speed": -0.07161441096457444,
+              "GRU_minus_TCN_RMSE_lane_flow": -0.022799022354238474
+            },
+            "missing180min": {
+              "n": 0,
+              "GRU_minus_TCN_RMSE_speed": null,
+              "GRU_minus_TCN_RMSE_lane_flow": null
+            },
+            "congested50": {
+              "n": 13492,
+              "GRU_minus_TCN_RMSE_speed": 0.1418195102675055,
+              "GRU_minus_TCN_RMSE_lane_flow": -0.4578471449973023
+            }
+          },
+          "parameters_TCN": 75994,
+          "parameters_GRU": 97307,
+          "seconds_TCN": 426.17023730000074,
+          "seconds_GRU": 509.14028979999966,
+          "target_grid_cells_supervised": 3042465,
+          "target_grid_cells_available": 3042465,
+          "actual_exposures_exactly_matched": true
+        },
+        {
+          "seed": 20261029,
+          "cal_alpha_TCN": 0.75,
+          "cal_alpha_GRU": 0.75,
+          "selected_epoch_TCN": 24,
+          "selected_epoch_GRU": 24,
+          "TCN_State": 0.9557825216675347,
+          "GRU_State": 0.9565922014945648,
+          "GRU_minus_TCN_gain": 0.0008096798270300631,
+          "paired_day_diagnostic": {
+            "paired_day_mean_gain": 0.0008637086444830173,
+            "ci95": [
+              0.00036867631860505935,
+              0.0013592326181928512
+            ],
+            "bootstrap_probability_gain_positive": 1.0,
+            "n_days": 14,
+            "block_days": 7,
+            "resamples": 4000,
+            "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+          },
+          "regime_gains": {
+            "R1": 0.00029616581355262905,
+            "R2": 0.001408383632283683,
+            "R3": 0.0007244900352536554
+          },
+          "stratum_RMSE_differences": {
+            "drop20": {
+              "n": 220,
+              "GRU_minus_TCN_RMSE_speed": -0.546784266420806,
+              "GRU_minus_TCN_RMSE_lane_flow": -1.2456358231504367
+            },
+            "recover20": {
+              "n": 272,
+              "GRU_minus_TCN_RMSE_speed": 0.9130450804854053,
+              "GRU_minus_TCN_RMSE_lane_flow": 0.21699549747467017
+            },
+            "missing60min": {
+              "n": 5133,
+              "GRU_minus_TCN_RMSE_speed": 5.670190780149298e-05,
+              "GRU_minus_TCN_RMSE_lane_flow": -0.6409596678484775
+            },
+            "missing180min": {
+              "n": 0,
+              "GRU_minus_TCN_RMSE_speed": null,
+              "GRU_minus_TCN_RMSE_lane_flow": null
+            },
+            "congested50": {
+              "n": 13492,
+              "GRU_minus_TCN_RMSE_speed": -0.2235896368000736,
+              "GRU_minus_TCN_RMSE_lane_flow": -0.4182516108046599
+            }
+          },
+          "parameters_TCN": 75994,
+          "parameters_GRU": 97307,
+          "seconds_TCN": 432.44084699999985,
+          "seconds_GRU": 527.3037611999998,
+          "target_grid_cells_supervised": 3042465,
+          "target_grid_cells_available": 3042465,
+          "actual_exposures_exactly_matched": true
+        }
+      ],
+      "architecture_seed_means": {
+        "tcn": 0.9558859780480783,
+        "tcn_gru": 0.9568177705798199
+      },
+      "incumbent_context_only_effect": {
+        "cal": -4.104794662285194e-05,
+        "assessment": 2.94215696301503e-05
+      },
+      "seconds": 1970.1809119999998,
+      "GPU_peak_allocated_MiB": 2100.55419921875
+    }
+  ],
+  "all_original_selections_preserved": true,
+  "new_formal_model_promoted": false,
+  "formal_State": null,
+  "formal_Physics": null,
+  "formal_Total": null,
+  "limits": "Two seeds share days. Cal checkpoints/alphas are individually selected policies;not a fixed-checkpoint gradient experiment. GRU adds21313parameters. Fixed context versus full-day incumbent is separately diagnosed. Intervals are day-mean conditional diagnostics,not formal-score or model-selection uncertainty."
+}

@@ -2,9 +2,11 @@
 
 A72b的GRU位于原graph/attention编码后，原参数同seed逐项匹配；增加容量21313，不冒充等参数因果证明。固定窗口只接收strict12输入、图与FD；无label/score-mask参数。batch独立性、core先选边界全覆盖、每格点一次输出、zero-head/zero-gain与梯度均有测试。原A72 center-only源快照/partial权重保留，主动停止时未产生selection seal或读assessment。
 
-四个完成模型仅在fit监督；所有checkpoint/alpha/seed均值/primary由cal选择并写整体seal后才读assessment。每个模型保存真实按日逐格点曝光数组，两个架构同seed数组精确一致、517171目标均实际覆盖；原neural标签按link×time均值，不把它和full-LGB的station行数混为完全相同更新预算。Cal/ass输入从masked帧独立重建，raw teacher只用于loss/evaluator/transition诊断。
+两fold八个完成模型仅在fit监督；所有checkpoint/alpha/seed均值/primary由cal选择并写整体seal后才读assessment。每个模型保存真实按日逐格点曝光数组，四对架构同seed数组精确一致，两组517171/3042465目标均实际覆盖；原neural标签按link×time均值，不把它和full-LGB的station行数混为完全相同更新预算。Cal/ass输入从masked帧独立重建，raw teacher只用于loss/evaluator/transition诊断。
 
-A74因JSON str路径类型首次导出失败，原源快照保留；新A74b转换Path后导出10种冻结策略，28日280次model/day预测重放。输入、公开图/FD数组exact，最大lane-unit预测差2.28e−13，绝对容差1e−8；均值在total/lane单位换算可有roundoff，不声称位级相同。原primary是GRU均值，不因ass单seed29更高而改选。A73仍运行；A77c前向月份尚未读。97 research/81 CPU测试通过，5可选Torch跳过；旧模型与正式0.82940保持冻结。
+A74因JSON str路径类型首次导出失败，原源快照保留；新A74b和A75各导出10种冻结策略、28日280次model/day预测重放，合计560次。输入、公开图/FD数组exact，最大lane-unit预测差4.55e−13，绝对容差1e−8；均值单位换算可有roundoff。原primary不因assessment单seed更高而改选。A77c两方向二月各28日固定策略完成，日期与各自profile/fit/cal/assessment不重叠；A84重建56日teacher、560份保存指标，并另作8次固定日期直接推断，最大score差1.11e−16、预测差0。不是560次新推断或未查看过的final测试。
+
+A81额外失效geometry仅依赖公开timestamp/link/milepost及RNG；每次从modified masked frame重新构建全部features，不复用含移除测量的base。speed/flow/occupancy/derived density/pct-observed均移除，flags按原bool/int dtype一致写入。首次dtype错误在首个stress case前退出，旧注册/源码保留，新A81b目录复跑。168嵌套case共享42个中心，672分数不当独立样本；A82重建全部mask/teacher、分数差0，另16次stress直接推断及全部control。六小时退步保留，没有按其结果改选模型。101 research/85 CPU测试通过，5可选Torch模块跳过；所有正式完整提交保持冻结。
 
 D21/D24新增两阶段OD模型：log-demand中心与KL路径修正共享同一公开计数，明确为顺序点估计，未声称joint posterior。alpha0精确调用固定entropy参考并跳过group；prior-center floor不是flow下界，独立primal finite-difference optimizer及低计数反例通过。可选floor参数默认2；D21运行结束后才加入，旧源快照与所有原流量预测保留。
 

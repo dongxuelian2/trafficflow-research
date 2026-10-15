@@ -1,0 +1,194 @@
+{
+  "original_sha256": "8bde3ffc89105f76d31e4d96d586d558e6c21620be24cc85cea8fbba34f32c8f",
+  "additional_control_report_sha256": "cb855ec3eb646bb5f6133e6ca57bdecd4a31a67b9333ff21da3b956927d4b00f",
+  "dates": [
+    "2030-10-30",
+    "2030-10-31",
+    "2030-11-01",
+    "2030-11-02",
+    "2030-11-03",
+    "2030-11-04",
+    "2030-11-05",
+    "2030-11-06",
+    "2030-11-07",
+    "2030-11-08",
+    "2030-11-09",
+    "2030-11-10",
+    "2030-11-11",
+    "2030-11-12",
+    "2030-11-13",
+    "2030-11-14",
+    "2030-11-15",
+    "2030-11-16",
+    "2030-11-17",
+    "2030-11-18",
+    "2030-11-19",
+    "2030-11-20",
+    "2030-11-21",
+    "2030-11-22",
+    "2030-11-23",
+    "2030-11-24",
+    "2030-11-25",
+    "2030-11-26"
+  ],
+  "source_primary": "tcn_gru_seed_mean",
+  "same_weights_and_blends": true,
+  "metrics": {
+    "lgb": {
+      "S_state": 0.9286208868028538,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 46232,
+          "rmse_speed": 1.9886202308432015,
+          "rmse_lane_flow": 30.70785979460148,
+          "S_state": 0.9335031105045923
+        },
+        {
+          "regime": "R2",
+          "n": 59188,
+          "rmse_speed": 2.1337706119243114,
+          "rmse_lane_flow": 30.56069817501739,
+          "S_state": 0.9304806861815882
+        },
+        {
+          "regime": "R3",
+          "n": 35808,
+          "rmse_speed": 2.530829930821991,
+          "rmse_lane_flow": 30.593751876344815,
+          "S_state": 0.9218788637223807
+        }
+      ]
+    },
+    "incumbent": {
+      "S_state": 0.9339154647571667,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 46232,
+          "rmse_speed": 1.7246422125887817,
+          "rmse_lane_flow": 32.01015210278679,
+          "S_state": 0.9382066115959458
+        },
+        {
+          "regime": "R2",
+          "n": 59188,
+          "rmse_speed": 1.797455171871405,
+          "rmse_lane_flow": 31.842832800353538,
+          "S_state": 0.9367621298073067
+        },
+        {
+          "regime": "R3",
+          "n": 35808,
+          "rmse_speed": 2.2573254385612276,
+          "rmse_lane_flow": 31.909718685430505,
+          "S_state": 0.9267776528682474
+        }
+      ]
+    },
+    "tcn_seed_mean": {
+      "S_state": 0.9346808066436668,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 46232,
+          "rmse_speed": 1.6525579380036899,
+          "rmse_lane_flow": 31.592599699028614,
+          "S_state": 0.9400837554365318
+        },
+        {
+          "regime": "R2",
+          "n": 59188,
+          "rmse_speed": 1.7768782014798763,
+          "rmse_lane_flow": 31.331031353857483,
+          "S_state": 0.937598973476744
+        },
+        {
+          "regime": "R3",
+          "n": 35808,
+          "rmse_speed": 2.29230815540923,
+          "rmse_lane_flow": 31.46928629404688,
+          "S_state": 0.9263596910177248
+        }
+      ]
+    },
+    "tcn_gru_seed_mean": {
+      "S_state": 0.9359486980291664,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 46232,
+          "rmse_speed": 1.617592859568324,
+          "rmse_lane_flow": 31.842015335688128,
+          "S_state": 0.9406477824759634
+        },
+        {
+          "regime": "R2",
+          "n": 59188,
+          "rmse_speed": 1.704048237977835,
+          "rmse_lane_flow": 31.518343084517497,
+          "S_state": 0.9390284950282154
+        },
+        {
+          "regime": "R3",
+          "n": 35808,
+          "rmse_speed": 2.2005442585251047,
+          "rmse_lane_flow": 31.69360099896185,
+          "S_state": 0.9281698165833203
+        }
+      ]
+    }
+  },
+  "comparisons": {
+    "lgb": {
+      "pooled_State_gain_vs_incumbent": -0.0052945779543128735,
+      "paired_day_mean_interval": {
+        "paired_day_mean_gain": -0.005193947460773634,
+        "ci95": [
+          -0.005924781063432027,
+          -0.004369406111987025
+        ],
+        "bootstrap_probability_gain_positive": 0.0,
+        "n_days": 28,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    "tcn_seed_mean": {
+      "pooled_State_gain_vs_incumbent": 0.000765341886500126,
+      "paired_day_mean_interval": {
+        "paired_day_mean_gain": 0.0010575504263304416,
+        "ci95": [
+          0.00040150295368284036,
+          0.0017006629678016987
+        ],
+        "bootstrap_probability_gain_positive": 0.99975,
+        "n_days": 28,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    "tcn_gru_seed_mean": {
+      "pooled_State_gain_vs_incumbent": 0.002033233271999668,
+      "paired_day_mean_interval": {
+        "paired_day_mean_gain": 0.0021481730873531162,
+        "ci95": [
+          0.0012918173905163844,
+          0.0029681056619258574
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 28,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    }
+  },
+  "formal_State": null,
+  "formal_Physics": null,
+  "formal_Total": null,
+  "selection_changed": false,
+  "scope": "Secondary28day pooled summary of original14day assessment plus14new-date public-template controls. Additional synthetic-outage target populations are excluded. Already studied public calendars,not a final/private test. No aggregation result overrides the original model choice or project multi-direction requirements."
+}

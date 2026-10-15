@@ -1,0 +1,78 @@
+{
+  "protocol_sha256": "7e1d9ca161abfd8d8fe4311aa27a4a23d1d3b14d9cfb79ad8f8a81e503968c00",
+  "protocol": {
+    "id": "Metadata_selected_long_public_train_sensor_outages",
+    "source_study_sha256": "8bde3ffc89105f76d31e4d96d586d558e6c21620be24cc85cea8fbba34f32c8f",
+    "source_replay_sha256": "abf424b4e1b4cb73eccfae085ebe63fc1360d6c4c0db002e0f4c20dbe77f810d",
+    "dates": [
+      "2030-11-13",
+      "2030-11-14",
+      "2030-11-15",
+      "2030-11-16",
+      "2030-11-17",
+      "2030-11-18",
+      "2030-11-19",
+      "2030-11-20",
+      "2030-11-21",
+      "2030-11-22",
+      "2030-11-23",
+      "2030-11-24",
+      "2030-11-25",
+      "2030-11-26"
+    ],
+    "mask_seeds": [
+      20261031,
+      20261103,
+      20261107
+    ],
+    "roles": [
+      "lgb",
+      "incumbent",
+      "tcn_seed_mean",
+      "tcn_gru_seed_mean"
+    ],
+    "cases": [
+      {
+        "duration_steps": 36,
+        "spatial_fraction": 0.3
+      },
+      {
+        "duration_steps": 36,
+        "spatial_fraction": 0.7
+      },
+      {
+        "duration_steps": 72,
+        "spatial_fraction": 0.3
+      },
+      {
+        "duration_steps": 72,
+        "spatial_fraction": 0.7
+      }
+    ],
+    "geometry": "Timestamp center09-15UTC,random center in public milepost order;clip contiguous30/70pct sensor segment;3/6h nested cases",
+    "masked_fields": [
+      "speed_kmh",
+      "flow_vph",
+      "occupancy",
+      "density_occ_linear_vehpkm",
+      "pct_observed"
+    ],
+    "mask_flags": {
+      "is_observed": false,
+      "is_imputed": false,
+      "is_score_eligible": false,
+      "is_missing": true
+    },
+    "model_policy": "All original weights/alphas fixed;no choice from this stress test",
+    "target_population": "All raw-public-train eligible station rows inside outage;separate from released Task1 control targets",
+    "zero_target_policy": "Retain zero-support cases as unknown;never resample by observed labels",
+    "scores": "Conditional channel-scaled reconstruction diagnostic,not official R1/R2/R3 State or Kaggle Total",
+    "data_scope": "Dates not used by these weights,previously studied public calendars possible;no hidden split/reference access",
+    "geometry_source_sha256": "f290b57dab3f273c32d258fff0bf2e310e3ae0163fed666b1312ff9d11825181",
+    "independent_scenarios": "42nested center-date-seed draws,168correlated outage cases;not168independent events",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}
