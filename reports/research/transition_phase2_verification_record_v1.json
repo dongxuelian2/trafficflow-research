@@ -1,0 +1,90 @@
+{
+  "created_UTC": "2026-10-15T08:11:08.763858+00:00",
+  "compileall_passed": true,
+  "unit_suite_reference": "transition_phase1_test_record_v1.json:122research,104CPU/6Torch skips,unchanged production src since phase1",
+  "n_independent_cell_and_pair_counter_archives": 4,
+  "n_direct_cal_ass_predictor_calls": 196,
+  "n_cal_ass_metrics_recalculated": 168,
+  "n_direct_forward_predictor_calls": 98,
+  "n_forward_metrics_recalculated": 98,
+  "n_additional_forward_audit_predictor_calls": 14,
+  "maximum_cal_ass_prediction_error_lane_units": 4.547473508864641e-13,
+  "maximum_forward_score_error": 1.1102230246251565e-16,
+  "graph_panels_independently_verified": 10,
+  "attention_scope_probe_replayed_exactly": true,
+  "attention_probe_gradient_L1": 0.6854989528656006,
+  "paired_seed_policy_diagnostics": [
+    {
+      "phase": "old_assessment",
+      "seed": 20261013,
+      "pooled_State_gain_vs_same_seed_control": -0.004929683101263627,
+      "day_mean_diagnostic": {
+        "paired_day_mean_gain": -0.004589208768020603,
+        "ci95": [
+          -0.005500356397840166,
+          -0.003641052929787114
+        ],
+        "bootstrap_probability_gain_positive": 0.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "scope": "Existing frozen perseed policy contrast;checkpoint/alpha may differ,seeds share dates. No additional model/event."
+    },
+    {
+      "phase": "old_assessment",
+      "seed": 20261029,
+      "pooled_State_gain_vs_same_seed_control": -0.004862402789829301,
+      "day_mean_diagnostic": {
+        "paired_day_mean_gain": -0.004514995036985302,
+        "ci95": [
+          -0.004914200884143405,
+          -0.004115789189827198
+        ],
+        "bootstrap_probability_gain_positive": 0.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "scope": "Existing frozen perseed policy contrast;checkpoint/alpha may differ,seeds share dates. No additional model/event."
+    },
+    {
+      "phase": "new_calendar",
+      "seed": 20261013,
+      "pooled_State_gain_vs_same_seed_control": -0.0026433120796859333,
+      "day_mean_diagnostic": {
+        "paired_day_mean_gain": -0.0031022662409604623,
+        "ci95": [
+          -0.003896153540940282,
+          -0.0023083789409806426
+        ],
+        "bootstrap_probability_gain_positive": 0.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "scope": "Existing frozen perseed policy contrast;checkpoint/alpha may differ,seeds share dates. No additional model/event."
+    },
+    {
+      "phase": "new_calendar",
+      "seed": 20261029,
+      "pooled_State_gain_vs_same_seed_control": -0.0033281413999646237,
+      "day_mean_diagnostic": {
+        "paired_day_mean_gain": -0.003387565761928422,
+        "ci95": [
+          -0.0037550633689473994,
+          -0.003020068154909445
+        ],
+        "bootstrap_probability_gain_positive": 0.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      },
+      "scope": "Existing frozen perseed policy contrast;checkpoint/alpha may differ,seeds share dates. No additional model/event."
+    }
+  ]
+}

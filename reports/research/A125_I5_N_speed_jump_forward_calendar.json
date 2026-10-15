@@ -1,0 +1,5656 @@
+{
+  "registered": {
+    "protocol_sha256": "b9da8047261fe9a55c917ba35c27350fbf89d136dd2f0a8a97170cb2a5647b51",
+    "protocol": {
+      "id": "All_exported_State_models_frozen_calendar",
+      "source_study": "reports/research/A124_I5_N_speed_jump_pair_loss.json",
+      "source_study_sha256": "efb7c3907294f9fd000c3c31266326e7ce0708a5fdeb12661b7249e3887db2fa",
+      "dates": [
+        "2031-02-15",
+        "2031-02-16",
+        "2031-02-17",
+        "2031-02-18",
+        "2031-02-19",
+        "2031-02-20",
+        "2031-02-21",
+        "2031-02-22",
+        "2031-02-23",
+        "2031-02-24",
+        "2031-02-25",
+        "2031-02-26",
+        "2031-02-27",
+        "2031-02-28"
+      ],
+      "scope": "All exports directly called every date;no checkpoint,alpha,primary or calendar reselection. Public research,not final/private.",
+      "formal_State": null,
+      "formal_Physics": null,
+      "formal_Total": null
+    }
+  },
+  "source_snapshot": {
+    "archive": "artifacts/research/A125_I5_N_speed_jump_forward_calendar/source_snapshot.zip",
+    "archive_sha256": "5d68c31af0b25616836ca7e6ddcc8c72ee6fdd8aefa7e02f55e3baa5554435c6",
+    "captured_files": [
+      {
+        "path": "config/research_protocol_v2.json",
+        "sha256": "dd7318f99e56b826d42eac58ab9c3213803db8f6c740ed843d95879835703121"
+      },
+      {
+        "path": "config/research_targets.json",
+        "sha256": "9a524c7c728cf6ed7ab4920592541e38fe720b36a0879c6f488a77b833e3452f"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "8cd1033d7ceeaa616319d900e5a9990445f3881665420cf4cd9715941b0e52f5"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "db90c0f17353c586ec2b51f9f42748c254e2e6563e7aebff81b7dbf9a3e82ccd"
+      },
+      {
+        "path": "requirements.lock.txt",
+        "sha256": "f4c8602ed3a0c29541e42d23547672864aa487fe2fcf24f8cf2d140f53c16fde"
+      },
+      {
+        "path": "requirements.research.lock.txt",
+        "sha256": "12f5a3bd24e186a0c71512b18eea44548159ec37088546efd7cc3c14c95fae8c"
+      },
+      {
+        "path": "scripts/adaptive_graph_experiment.py",
+        "sha256": "20f067bb639496004300446f8ba8705824cae80b2e91225e5fe6abcb609a3570"
+      },
+      {
+        "path": "scripts/adaptive_graph_transfer.py",
+        "sha256": "b50f19a6427d6c3d7e8facddb071dbc22dc5cf3641b10f889dc2b4bfb2d40ec8"
+      },
+      {
+        "path": "scripts/adaptive_seed_ensemble_experiment.py",
+        "sha256": "3cf00abec0e697a7631c9b16d259ff4c966c88dfad5d23550834edf14999a1c3"
+      },
+      {
+        "path": "scripts/assemble_campaign.py",
+        "sha256": "e5b103ba8501775e049e14c89e3854e5e2a56b93942505330b5317d8023d6a5d"
+      },
+      {
+        "path": "scripts/assess_adaptive_ablation.py",
+        "sha256": "1ae73d734afe77a227629254cb67e002045a2894f094ed6bcc3e094d9297f442"
+      },
+      {
+        "path": "scripts/assess_joint_density.py",
+        "sha256": "92258a57238facc5153cc8c98c422ed71e92f69b0ae4ecada5a4edf77f00c2e6"
+      },
+      {
+        "path": "scripts/audit_density_normalization.py",
+        "sha256": "8cf6a77a0a1d39d21b69f01e95037947a5be14177d92264bf2ce17e2c5529f3f"
+      },
+      {
+        "path": "scripts/audit_fit_transition_population.py",
+        "sha256": "570e90dbdfb71323614c428ff30eeefc49e7fd2a40041062a7d759934f5694dc"
+      },
+      {
+        "path": "scripts/audit_kaggle_baseline.py",
+        "sha256": "3a8f78d8cb154fb1d4b25ed902d81e44b9665f4628162f3342641071b679193a"
+      },
+      {
+        "path": "scripts/audit_od_identifiability.py",
+        "sha256": "bce792650d2dfc0a5268a9e012aeaa846c87715620ee3e3e3a6e0659d4885c36"
+      },
+      {
+        "path": "scripts/audit_od_path_choice.py",
+        "sha256": "a4f66b3c5f96ad5639567dbd66ca0dfe3185e355b660b5a6c43282e4ea075bdc"
+      },
+      {
+        "path": "scripts/audit_physics_topology.py",
+        "sha256": "5afabe6d2e6920fdda75988c936d44adcabbb3f57110552d4c269ea7949d308a"
+      },
+      {
+        "path": "scripts/audit_public_graph_coverage.py",
+        "sha256": "449928bb66290a7c0c3201fc6e7912e0d2039f97503765a797f174e610d1ded0"
+      },
+      {
+        "path": "scripts/audit_public_missing_runs.py",
+        "sha256": "a75e7de2f4314f42214d17c63f213a85cd943f7074bc6f0c82094df06aa825ae"
+      },
+      {
+        "path": "scripts/audit_quality_state_context.py",
+        "sha256": "eab5635ee306051b7a391dc0f205f6bbcd7be009caf7ea22842c14bba75f1cb3"
+      },
+      {
+        "path": "scripts/audit_queue_decision_domain.py",
+        "sha256": "7e7eabc8b93a42c6496ad405ef479f7db28308480973ec0e30594847c04010c8"
+      },
+      {
+        "path": "scripts/audit_queue_geometry_artifacts.py",
+        "sha256": "d59859310f9224d586637995b717ab007de2036fae357b9258ebf494f1035876"
+      },
+      {
+        "path": "scripts/audit_queue_origin.py",
+        "sha256": "dba7d16f51c6df6c6506a9e418d5aa3e3d7bdbe1693253772266bd170e36c242"
+      },
+      {
+        "path": "scripts/audit_recurrent_supervision.py",
+        "sha256": "fcb9fd882f31a2e1db3c73766c2f1b4e5eceeb4cb99d3bfcbca107b1fbe63915"
+      },
+      {
+        "path": "scripts/audit_released_onset_timing.py",
+        "sha256": "2cebf3e33c09f3a0f5e0f8e199ef58c84f0d39a93cfd303bf0f9e4b1e7647f68"
+      },
+      {
+        "path": "scripts/audit_released_train_queue_windows.py",
+        "sha256": "1f442072465be77d961c327db254578c45002d91db837bc1ec6f3351cec1ab52"
+      },
+      {
+        "path": "scripts/audit_state_increment_coverage.py",
+        "sha256": "aed74a5d49250e3c7c92bfbb203eb1c731d86387d5f5bdcceffd3015182fdd94"
+      },
+      {
+        "path": "scripts/audit_train_queue_quality_projection.py",
+        "sha256": "65c1561a038dd16c2360b54443740d7aee4102cf12a491b2e9b51dd9ae1747dc"
+      },
+      {
+        "path": "scripts/audit_wave_queue_domain.py",
+        "sha256": "ea46bbe3a494c3d39720c69ac8ad3c4217222626014cc2a1d0c46963eb392b5e"
+      },
+      {
+        "path": "scripts/build_adaptive_state_candidate.py",
+        "sha256": "c2cb1fd567c1b8fd9ae22871407610d2393ea33ac9693f9cee655e3e9a50a337"
+      },
+      {
+        "path": "scripts/build_bayesian_od_candidate.py",
+        "sha256": "5cc8d8b513e668e269510447c508facd640f97b85335da77d69f3e289bb9a8be"
+      },
+      {
+        "path": "scripts/build_full_domain_queue_candidate.py",
+        "sha256": "d7253e06534a72751df97db89b560109c69c43ade1fb6c5c5376f24cca0f5489"
+      },
+      {
+        "path": "scripts/build_log_demand_od_candidate.py",
+        "sha256": "7856416c5d4b73f940739d808a3f8785d0b82ff2b07468edec2a6702adfde074"
+      },
+      {
+        "path": "scripts/build_native_remask_cache.py",
+        "sha256": "b1bfbe632fcaff3ee45063cfb40ffdfa94477752e0d8e2a078ad7f76be5e5600"
+      },
+      {
+        "path": "scripts/build_od_expert_candidate.py",
+        "sha256": "85cd7dd8827d5375b42799091c67f6495c00ec16d68af6d425bb30db9d0dac1b"
+      },
+      {
+        "path": "scripts/build_onset_timing_candidate.py",
+        "sha256": "8a5486d7e8b7c9dba17e2c163fd76f122f2e38becae95abd769eefca7851b86d"
+      },
+      {
+        "path": "scripts/build_state_augmentation_cache.py",
+        "sha256": "15d57e8dc278a37a9c7317d120492699ed9e97b94c65cd9d86234885eacb6608"
+      },
+      {
+        "path": "scripts/campaign.py",
+        "sha256": "06cea939655896f9cef2ad404491d9418313c5cf1f0e525b20288a855a774418"
+      },
+      {
+        "path": "scripts/capture_environment.py",
+        "sha256": "5be825c14d82da31a2ca57459f8c6eead4f13ba2030f5488c465388a8e82d4f8"
+      },
+      {
+        "path": "scripts/causal_graph_queue_experiment.py",
+        "sha256": "5cb9e9a4c8d4482a53f7ebdefad43b6db4ef50a53bb1297bbfdc4598b5cdcace"
+      },
+      {
+        "path": "scripts/channel_state_experiment.py",
+        "sha256": "b9ff31ab4aa50c7e9a0aa1c2c28e0cb455eda9f09bc3e8f2e36abc72a0a7776a"
+      },
+      {
+        "path": "scripts/check_public_competition.py",
+        "sha256": "5c69ba4b041bc668b6cfad397fe2c9c584003910757e68908137e320d92c0a64"
+      },
+      {
+        "path": "scripts/check_report_bytes.py",
+        "sha256": "98701cbcb40ea3c191224bced993995c5e4b586e399a6d838d2249abff4ba2cc"
+      },
+      {
+        "path": "scripts/checkpoint_assimilation_phase.py",
+        "sha256": "b70d53c3e065da9e0ba9a48db04960afc433998686e463f9ece4f0d9dd29d778"
+      },
+      {
+        "path": "scripts/checkpoint_augmentation_phase1.py",
+        "sha256": "e7467c1d96ffe98e84e3c3e1c820c77ff04b12d5165ed6b9fe908e58098fc454"
+      },
+      {
+        "path": "scripts/checkpoint_cross_remask_phase1.py",
+        "sha256": "46eb62e2ed7f0f3ca5586dfcbdc7fd498809d98ad6d5320b19843f2bfdf3d1a3"
+      },
+      {
+        "path": "scripts/checkpoint_cross_remask_phase2.py",
+        "sha256": "6ee9ce09ed403feff69884be86967db315bf86adcd56e769d6c0f37720f9e1bb"
+      },
+      {
+        "path": "scripts/checkpoint_ctm_od_phase.py",
+        "sha256": "63295f1e9926c1a8c5e15f31ab6a3e21ead79d75be9f1201cbd763ab948bb383"
+      },
+      {
+        "path": "scripts/checkpoint_demand_residual_phase.py",
+        "sha256": "a3736029c307400efe75801d81ab0d00aaec0b06cad385436f07cdb0678e711f"
+      },
+      {
+        "path": "scripts/checkpoint_five_phase_queue.py",
+        "sha256": "bd0fbbfac40844b5976cdafc14ea95b206ed1c2f6f8c4885f042147103f9f11d"
+      },
+      {
+        "path": "scripts/checkpoint_flow_transfer.py",
+        "sha256": "554cf8f88742f9a74af968f5680363b62da1b95a633409450915ec484e719d17"
+      },
+      {
+        "path": "scripts/checkpoint_full_density_phase.py",
+        "sha256": "85b8c2e8f9b784cf98ee1c5c2f4945aeefc8e78d441c19874b74007684293883"
+      },
+      {
+        "path": "scripts/checkpoint_full_queue_phase.py",
+        "sha256": "70a0e8bb361e42725e69b117762f28ffdb29b6c44b1b3ad263ec727c89fcfe82"
+      },
+      {
+        "path": "scripts/checkpoint_gap_expert.py",
+        "sha256": "9082e43c1e0a06c137c5e1b7ae43527174a611c09b2a23ec2b5bb8618e172ecd"
+      },
+      {
+        "path": "scripts/checkpoint_log_demand_phase.py",
+        "sha256": "a9b23dd27a10869058d8cada5efea7c94678e097af2075bc33f88f1f822b80d7"
+      },
+      {
+        "path": "scripts/checkpoint_native_remask.py",
+        "sha256": "f8dc3c7462c530e6405f20ef46fa94ba6a31c0d195131c2f96fd2cb3361d5f76"
+      },
+      {
+        "path": "scripts/checkpoint_quality_density_phase.py",
+        "sha256": "de2ab9295c0519c6e189a2f0f3b65b4e02027a7bd67997df1746aa11e219bbe2"
+      },
+      {
+        "path": "scripts/checkpoint_queue_ensemble_phase.py",
+        "sha256": "234027970e3b402f1ecbeb9a4fdf0bcb24612dae8eb5ce553c2f47d8d38a19d0"
+      },
+      {
+        "path": "scripts/checkpoint_queue_overlap_phase.py",
+        "sha256": "4000b570efb2ef37bd6e62ebddcc3983bb79a31e831aea59480fde443fbde23a"
+      },
+      {
+        "path": "scripts/checkpoint_recurrent_phase1.py",
+        "sha256": "6a069d9ac161abc5ef4bd2e4201479f4656cd0f96caeda0d0b115238dc4240cf"
+      },
+      {
+        "path": "scripts/checkpoint_recurrent_phase2.py",
+        "sha256": "bcc8515a8d7ed325be6663f9537a95530a54b45bcd367a17b0e54b4e73ad7342"
+      },
+      {
+        "path": "scripts/checkpoint_transition_phase1.py",
+        "sha256": "37a890f0b4e8554ccedf491a6123fea2e50a44b44d99ebbcd39fcbb47f4fa6d3"
+      },
+      {
+        "path": "scripts/combine_recurrent_calendar.py",
+        "sha256": "b956a9d764d452c08c83a9fc45661a95b98f4206d3f8b9e61c15c48d2d1deb92"
+      },
+      {
+        "path": "scripts/compare_entropy_numeric_repair.py",
+        "sha256": "a38f9204e0078fc443e9a3e48ac8e772159ae645cb3ae222d0ffb049cdb5811c"
+      },
+      {
+        "path": "scripts/compare_five_phase_sampling_controls.py",
+        "sha256": "d92cb34dcc82f6919d39ee593c0fb67d2a1a9210620e2bd298081056d6b43121"
+      },
+      {
+        "path": "scripts/compare_full_density.py",
+        "sha256": "b20d48cacd5d884536478dcd7205bbb7cfa8179219f6dab21684247a629617af"
+      },
+      {
+        "path": "scripts/compare_full_queue_calibration.py",
+        "sha256": "93b98698bb5e9f3e6ea855dc03532aa04daadecbb860d69c79794d6d4636eaf5"
+      },
+      {
+        "path": "scripts/compare_log_demand_models.py",
+        "sha256": "280dd9312a4e620166ed9a68a7c7a3cd243aad79d62e7240b6ad80d668e3ac1f"
+      },
+      {
+        "path": "scripts/compare_log_demand_repair.py",
+        "sha256": "f8d6a1e39de2aafa334944f92c30b1cb6ce75e7fc350faa461bc8249332dbbb3"
+      },
+      {
+        "path": "scripts/compare_queue_events.py",
+        "sha256": "d9d2e9e47eb2f21b1738d4e2d1ba762a776fc849bbfc4bde4c1fc8785b068194"
+      },
+      {
+        "path": "scripts/compare_queue_overlap_losses.py",
+        "sha256": "28d7b51fbef994cd07f78f994335cf84206a504cc1a2f9e9e2fae6a91199d5b7"
+      },
+      {
+        "path": "scripts/compare_recurrent_state.py",
+        "sha256": "f490a126a8406c14b23420b472cefa3cedb4506fa58417252f490686476ecfb3"
+      },
+      {
+        "path": "scripts/compare_state_assimilation.py",
+        "sha256": "d89b87a83ecb5a05bae4be3cf4f137d2625d639bca4dac723d94b92d31415a1c"
+      },
+      {
+        "path": "scripts/compare_state_direction_budgets.py",
+        "sha256": "47ff0bb82e2500aace15a72ca80b76719b657dd06492b8b60b09b31fce2803e4"
+      },
+      {
+        "path": "scripts/compare_state_label_budgets.py",
+        "sha256": "b7c27482c11904cbc0aa06fc86cfd692037e057985acdb93f00ff4e38da81b40"
+      },
+      {
+        "path": "scripts/cross_corridor_transfer.py",
+        "sha256": "e3ef2d288bfc617ea7985712be7c714de9e36ed947b59bc2bd81e3e5113b7c6a"
+      },
+      {
+        "path": "scripts/ctm_adaptive_stress.py",
+        "sha256": "cb3f7631fb91007e4479b20975b25e2c17dbc6cfbba1f9c926a7002159665f2a"
+      },
+      {
+        "path": "scripts/ctm_contiguous_stress.py",
+        "sha256": "24fcb6625ee2f64e1b5267c6c3fab292dc78ddb2d3b6d02241c1ec6f815b95ae"
+      },
+      {
+        "path": "scripts/ctm_profile_ablation.py",
+        "sha256": "5a65e47430782893da7bae8792995d7b63ae9cf45fe38f895715ac011ddbb5d6"
+      },
+      {
+        "path": "scripts/ctm_queue_observation_diagnostics.py",
+        "sha256": "86db2a91e77c88634c9fc301a0e47c9a865ee19d92b616971d649edd3ce7681c"
+      },
+      {
+        "path": "scripts/demand_residual_floor_followup.py",
+        "sha256": "bb4e7db3ca547245855d74bce024da3c101dd9c13d8ce3d3e578a6a81e0c47f6"
+      },
+      {
+        "path": "scripts/demand_residual_od_experiment.py",
+        "sha256": "81c50b6fc9b663d921ea3393a2c0e0df3bd0098e9aaf29ceccf9e7e02d6334e6"
+      },
+      {
+        "path": "scripts/density_increment_experiment.py",
+        "sha256": "7c76be4eb9f893ff71a70f62ae47ac4f7b8cba8a8add1da1a9ebdbba074552fa"
+      },
+      {
+        "path": "scripts/density_interpolation_experiment.py",
+        "sha256": "98b586eed1bf49beea00db0b5b0473b6159d2e6e198bad4f7b9902a9847d6903"
+      },
+      {
+        "path": "scripts/diagnose_adaptive_scenarios.py",
+        "sha256": "fd73578210b6ab6a51984019f86d16f9c9fdd088ebc72261da20295ed692b0fe"
+      },
+      {
+        "path": "scripts/diagnose_entropy_failure.py",
+        "sha256": "1c8e0b00933b2132eedb92cd0ddc3fb1aab8125b6f3a6994913818b6ff0c3ff4"
+      },
+      {
+        "path": "scripts/diagnose_failed_od_control.py",
+        "sha256": "bed0ecbfa0b21880ad852919b0285280fa2659f95c9a6513840baf3e22ab7b58"
+      },
+      {
+        "path": "scripts/diagnose_flow_cal_covariance.py",
+        "sha256": "1ef01652a88ca85c39e0611bedea490a01ebace509ad8598ae0766c1ef5c7464"
+      },
+      {
+        "path": "scripts/diagnose_graph_density.py",
+        "sha256": "f6e48f203331ed2dddbd6917d2932fc8682cf4daa9da8d6e9a5c7ee52e75116f"
+      },
+      {
+        "path": "scripts/download_data.py",
+        "sha256": "c746052ff8192acd1679976da70faf2f54ae94d2370e2dda4e105bca08fee4b9"
+      },
+      {
+        "path": "scripts/entropy_od_experiment.py",
+        "sha256": "639c6fde371c078759d557025dd60943ac7c6d170fef046c9866d0a7efa9689b"
+      },
+      {
+        "path": "scripts/entropy_od_uncertainty.py",
+        "sha256": "dcc088faa752d137a3f73c993cf272280879185ad9e38ea6b127e82d6b1bfd9f"
+      },
+      {
+        "path": "scripts/equal_blend_augmentation_diagnostic.py",
+        "sha256": "e56f55730bb3fb5f752689484931b01eb9c7a37f67b51026e32376c014d56c10"
+      },
+      {
+        "path": "scripts/evaluate_channel_forward.py",
+        "sha256": "eba5ee321c643f957a674f29e99a2de5712fa01afdcac738341ad5becc5fa134"
+      },
+      {
+        "path": "scripts/evaluate_exported_state_forward.py",
+        "sha256": "dfe8d51b810f5e36996625ac71f58449202d890c79a3beea01a474b74f1949c4"
+      },
+      {
+        "path": "scripts/evaluate_flow_transfer_forward.py",
+        "sha256": "09e0827d3e67f4e949dc15b58335ed2e6cf48a5c0ac8a9d36aea77ea6b30a0d6"
+      },
+      {
+        "path": "scripts/evaluate_gap_expert_shift.py",
+        "sha256": "ed0e6ae5a913a8c2d4227f9ead9255abffbef12c5a0ef2a4c585387c68fec1a6"
+      },
+      {
+        "path": "scripts/evaluate_native_remask_forward.py",
+        "sha256": "4a0b2fde0304066ece00ddcb015648639a25521cd9dbe59302456f97d00c37d7"
+      },
+      {
+        "path": "scripts/evaluate_outage_augmentation.py",
+        "sha256": "652e7c19f7f870b47f91087786c1323a5ccd686aa932443bc377e7b7806c14a5"
+      },
+      {
+        "path": "scripts/evaluate_remask_tree_forward.py",
+        "sha256": "75f4a1595477db903ae594aa8432d02e8aa0f69c6fd2e25b752e2f6554409453"
+      },
+      {
+        "path": "scripts/export_adaptive_state_model.py",
+        "sha256": "631e109610a04aa4a5b0cef3b6b0a22e3acca28ea1f08659669bf55c2e7ca089"
+      },
+      {
+        "path": "scripts/flow_transfer_common.py",
+        "sha256": "7797548238fff9abccbead64aa0da5034ff87665619d18c7968e742f12d01a0b"
+      },
+      {
+        "path": "scripts/freeze_first_submission.py",
+        "sha256": "17eb0cf856c43a0199c0bf73fcc4d100c76d818b2d1130f00b16f466bc4cc6cb"
+      },
+      {
+        "path": "scripts/freeze_gap_gated_state.py",
+        "sha256": "d41e27528397601328ef3d9eb7c9abc877b9613c566889d87b2e0cee17141629"
+      },
+      {
+        "path": "scripts/freeze_research_models.py",
+        "sha256": "fd75a0e4f22f648e7daf55c8374aa9d174d11f0659b74d12665b800d09e4202c"
+      },
+      {
+        "path": "scripts/full_density_experiment.py",
+        "sha256": "d53835b13f5ba488708b8397eb8b805a9a4dbba268dd7a1ac221e2555209cc4f"
+      },
+      {
+        "path": "scripts/full_queue_calibration_experiment.py",
+        "sha256": "aba440df1d64f133edccb951c68c7ffcff39699ef5cb9cc08330703a2aced84c"
+      },
+      {
+        "path": "scripts/inspect_official_release.py",
+        "sha256": "17bc64125a2843f2af1eefc01ef22e930c22201df997eec99bedd021d1e32c7f"
+      },
+      {
+        "path": "scripts/large_baseline_graph_comparison.py",
+        "sha256": "ab3f399a46ca8366418ccca2a748124cd706a176706a20d7b491242c810ed75b"
+      },
+      {
+        "path": "scripts/log_demand_od_experiment.py",
+        "sha256": "437c5c0c578298487d40b7bddf2fe226078e5e59e19e8778077cca5b60945968"
+      },
+      {
+        "path": "scripts/matched_queue_cache.py",
+        "sha256": "bbd42d02b645514d38faf062917e19e08ebe551096e547ca93fe92266061df19"
+      },
+      {
+        "path": "scripts/native_remask_reference.py",
+        "sha256": "6416a8a86a35f156c51e45ccd09c5325c9be45509a17d87a38f6be9dbd3795fa"
+      },
+      {
+        "path": "scripts/native_remask_roles.py",
+        "sha256": "300d0cbcdc0c673ca88ae90b224ddbb9b13388d836540bf3b21d2ec9be9cfe34"
+      },
+      {
+        "path": "scripts/native_remask_state_experiment.py",
+        "sha256": "762ae456998a2b5ed3d15b3568fdfb5525b1e112094cbadb2917275597680779"
+      },
+      {
+        "path": "scripts/od_error_subspaces.py",
+        "sha256": "0e60e334f92a70dc420d33edc216e5540ecec5159cc9262d4c5a78b89dbd220a"
+      },
+      {
+        "path": "scripts/od_expert_experiment.py",
+        "sha256": "b26a6457c0390bedbe85e9a5a29f2a4c403bff499ff539cd230f71f7cfc0fbb2"
+      },
+      {
+        "path": "scripts/od_metric_component_audit.py",
+        "sha256": "dd3cd804df6d895ccf2e5254f8b316b57febf2f1f33d9f09d9364bd0d6be8bb1"
+      },
+      {
+        "path": "scripts/od_prior_misspecification.py",
+        "sha256": "053dc64b2e9b8fb04ac1514d9991d8ddcbae9ab677e69a8dbc7fbd77045a7917"
+      },
+      {
+        "path": "scripts/od_probability_experiment.py",
+        "sha256": "fbb8ade089cec3fdd03b6f40687b4f8ef022c7766dc7c1c4011e6b7df3326c00"
+      },
+      {
+        "path": "scripts/od_shift_generators.py",
+        "sha256": "eba0a0dc9a1608fd04a8517fd5959315b3a183c851fe1931be942f7542c3cca9"
+      },
+      {
+        "path": "scripts/outage_augmented_state_experiment.py",
+        "sha256": "e8c4d0125a0356841d3016ae971dfdf9766a55a7bfd0fa6404a1ce483c458fa8"
+      },
+      {
+        "path": "scripts/physics_tradeoff.py",
+        "sha256": "b653cf6254196850113cbdb61a1afb5bf184900e6a5ad5d07a24151436e6c9f9"
+      },
+      {
+        "path": "scripts/plot_matched_research_comparisons.py",
+        "sha256": "bb2cdab5325243359d6a53f27c1814851b38d6ab85b3f0167d561c2995f19bef"
+      },
+      {
+        "path": "scripts/plot_recurrent_evidence.py",
+        "sha256": "f5f947216d96f357221add45acbbf064dbe5ba4b2e8a2b8030bbd2d26bb711d7"
+      },
+      {
+        "path": "scripts/plot_strong_baseline_comparison.py",
+        "sha256": "060b1292bc663f0ba5d1fd352afd30fb0edc5badc83c1a42b3e4b4b23435c10b"
+      },
+      {
+        "path": "scripts/predict_full_domain_queue.py",
+        "sha256": "017f9dacad7fa9cec529840c26b4ff084a2de9c79184a698e99cb567db34c55f"
+      },
+      {
+        "path": "scripts/prepare_full_density_labels.py",
+        "sha256": "aaeae325549a2f3e885c75cb584037b6669902c1ab4fedb50a1c7655de116979"
+      },
+      {
+        "path": "scripts/prepare_graph_experiment.py",
+        "sha256": "86a2d2bcc60c9cd408839d8883834aa75c089c176257bed551ff1d028ee320ac"
+      },
+      {
+        "path": "scripts/prepare_production_graph_state.py",
+        "sha256": "af640a34bf6f44a42e08fd50c06d9585acc1adadd160db867e4551ea16a71525"
+      },
+      {
+        "path": "scripts/prepare_quality_state.py",
+        "sha256": "b6e2bcde753916c9e73ced210900438ba217b35118e51044e8d22ea98638de90"
+      },
+      {
+        "path": "scripts/promote_models.py",
+        "sha256": "b41f8af5fb9f5394595a1c1ded9b534ed89d2c41b85b7a3e3788b2d275c71339"
+      },
+      {
+        "path": "scripts/public_outage_stress.py",
+        "sha256": "b9cc72408a9b5b7a3653bfde5ff767968acb5ddb6590a6446d988e8ec70d2b07"
+      },
+      {
+        "path": "scripts/quality_state_experiment.py",
+        "sha256": "0a5bd90efe8b95427f811cee6577cdad8323f631ba5bb6d6eaa6823fa1b3fa10"
+      },
+      {
+        "path": "scripts/queue_event_experiment.py",
+        "sha256": "520d24e1f1e5fcde8166f3df16f437276b7185665a8e9394c6ac59a4823b0242"
+      },
+      {
+        "path": "scripts/queue_five_phase_experiment.py",
+        "sha256": "8831d3787b7da380992263d011f441e50caa19212a0da968c263b7d9faf97b54"
+      },
+      {
+        "path": "scripts/queue_origin_experiment.py",
+        "sha256": "7cd00e8b0134ed1282353e9162ce6af7da20d1a3d0739ab2ec12b43f79891954"
+      },
+      {
+        "path": "scripts/queue_overlap_experiment.py",
+        "sha256": "9fb7d8d32bd32cb6896ace55458629a38256ae415cbb5bf865a3876294f5a25e"
+      },
+      {
+        "path": "scripts/queue_refinement.py",
+        "sha256": "4747af3e5e09d4e23b7d28856ed66732e54ad1d3586b7df067eb49aeffcc1dd1"
+      },
+      {
+        "path": "scripts/queue_research.py",
+        "sha256": "34e3fe815c5130431a512df258cfbfd0cb39c7b64b769950d76f20a9983fff5a"
+      },
+      {
+        "path": "scripts/queue_seed_ensemble_experiment.py",
+        "sha256": "48880150d79d67e07200d3278742d6ab3460a50842a720093757082943b74b0a"
+      },
+      {
+        "path": "scripts/queue_specialist_experiment.py",
+        "sha256": "b7f8ab609aa392a1308117e827919692dbe60137185fb6ec68a2334cbddaedc4"
+      },
+      {
+        "path": "scripts/queue_wave_graph_experiment.py",
+        "sha256": "ebc0ba895a29d5887cdee52b0dab665a8cf9f2370e3a110b2b6930e746ccb245"
+      },
+      {
+        "path": "scripts/queue_weight_calibration_experiment.py",
+        "sha256": "f2545c56581b388e724327a4c623d89ae18ea07efcc80d63e3e66fc94c6ce48d"
+      },
+      {
+        "path": "scripts/read_public_pages.py",
+        "sha256": "2056d46920d3b9f73b1268b86d122ac4daf318e72c298527b4b66376ac26e165"
+      },
+      {
+        "path": "scripts/record_formal_scores.py",
+        "sha256": "ee78da8b99edc9928c781c341f05af33dd28098ae313113879e8b3e3aad5fa0f"
+      },
+      {
+        "path": "scripts/record_local_state_controls.py",
+        "sha256": "55c6c8b9218207fbd51d0c1d3238c653272c0ed319064928065125eb98dbad9b"
+      },
+      {
+        "path": "scripts/record_onset_control_bounds.py",
+        "sha256": "0f18f8290e22a3a9b15f4287416bc9cbcf071a106d46909ee1962a5f1cc7f728"
+      },
+      {
+        "path": "scripts/recurrent_forward_extension.py",
+        "sha256": "af54a1945d74566e10e1998c05923a74de72ea81a6793b64b482a1481f6b4c61"
+      },
+      {
+        "path": "scripts/recurrent_state_experiment.py",
+        "sha256": "93a37812007e4388b6327cf93dfe2f477d98cf60f77e8e5e33ae9be4935a2d0c"
+      },
+      {
+        "path": "scripts/refine_queues.py",
+        "sha256": "4af45c3a458feec60d6f7786166ef2cf0fb747fce492955ec4112312352f665d"
+      },
+      {
+        "path": "scripts/register_research_protocol.py",
+        "sha256": "2367504189c87f2103e10dfd99147ffcc9beba2f9d82409c38e92d4c5e2c3077"
+      },
+      {
+        "path": "scripts/remask_lightgbm_experiment.py",
+        "sha256": "c4bd34f3d87ee7869fccc760bd8b48386ce924667dccfaa6f37bf2166393ac49"
+      },
+      {
+        "path": "scripts/remask_tree_roles.py",
+        "sha256": "addc3daf9796ec45c120457307c10337c60a19a149a2813fbec3dc35375a352f"
+      },
+      {
+        "path": "scripts/run_official_diagnostics.py",
+        "sha256": "73221ca5f6014f8d7a011698fe0845d9448581c3896855b7dc19e1f47873a7e8"
+      },
+      {
+        "path": "scripts/run_official_state_baselines.py",
+        "sha256": "3ddd7eea81f350d50973813c50e4c0d90a184624d271aa64859c1c74c33a9e70"
+      },
+      {
+        "path": "scripts/run_queue_five_phase_campaign.py",
+        "sha256": "5f922fe854bafa9e7aee04a1f1c0230f589152d4f4dd6b994087d3fb5da523c5"
+      },
+      {
+        "path": "scripts/scenario_audit.py",
+        "sha256": "3e2d7151d7587199aa672b78eee9dfbbfb8ac82e038afb22eb09f3488e1c7a19"
+      },
+      {
+        "path": "scripts/simulate_queue_selection_bias.py",
+        "sha256": "545413176bf9696a5e8b8bf1046dba00e98cf604035587842224d207f8aaa4b6"
+      },
+      {
+        "path": "scripts/simulate_stress.py",
+        "sha256": "d0c4697c44f1c65848d83c1e396b9562d4151ad294f560b1576bcc6c49012140"
+      },
+      {
+        "path": "scripts/stage_zip_panel.py",
+        "sha256": "4ec5b59e058c52012bda91ff140fbc9620209bbf114aa5eb5ffbc259b4c69c15"
+      },
+      {
+        "path": "scripts/state_assimilation_experiment.py",
+        "sha256": "26a1ecf243bb30a10259b100df6d4f2dd317939e4707c6f4a1b3542d9a97c2ba"
+      },
+      {
+        "path": "scripts/state_budget_suite.py",
+        "sha256": "d6fd23b3aacd79a6cdad38bbf0f3d845e0307dc4b4b7471ef279980035652477"
+      },
+      {
+        "path": "scripts/state_label_budget_control.py",
+        "sha256": "7cb05ba6e67f39106ea009468ce9215aebab9aec0c9a90295fe8641d3c7e4dbd"
+      },
+      {
+        "path": "scripts/state_research.py",
+        "sha256": "7f9043c7d753a5a6540ef81291ae7e3e00879ca330aea94f833b7017f29a759e"
+      },
+      {
+        "path": "scripts/state_temporal_extension.py",
+        "sha256": "0ef7550a56904fc953a6deaa814f7ebad67e9aa7f91817f087fe5fb58db26b9b"
+      },
+      {
+        "path": "scripts/strong_density_state_experiment.py",
+        "sha256": "faa4e2a0cb63a2e053ecf20a6a77a8c9c4f74960c3d39e145c9c0e41f138a7de"
+      },
+      {
+        "path": "scripts/submit_controlled_candidate.py",
+        "sha256": "72c67e384f488fd5e7afa454526e42aab56b43aef7d3671d91acf04a42997876"
+      },
+      {
+        "path": "scripts/summarize_adaptive_research.py",
+        "sha256": "82c2832a34ee9cd39f20ead401994c2dcf7f15d0cebe19cb67fd4476000c720a"
+      },
+      {
+        "path": "scripts/summarize_campaign.py",
+        "sha256": "e09f36b6188d6a23698f0a27873fece09ba6fd3db1e2cd5ae767e4865d7c101f"
+      },
+      {
+        "path": "scripts/summarize_ctm_adaptive.py",
+        "sha256": "fe548c56eef38fe78b378056f8def6a4213a8c526336808faa880947c68547bf"
+      },
+      {
+        "path": "scripts/summarize_ctm_queue_observation.py",
+        "sha256": "19c5ae04a9b48429faea7b96af27cb2b212bdaa4ef37e9daaee9ae11c309547c"
+      },
+      {
+        "path": "scripts/summarize_queue_domain_audit.py",
+        "sha256": "c07b79de6e1b3c744720d2189a14bc88b7daf3634d8d284ab5063c66c929fcf4"
+      },
+      {
+        "path": "scripts/summarize_queue_five_phase_campaign.py",
+        "sha256": "223aee023bc474134fb5dd70cf4d5918bc738249a5612161bb0a7d8ad95f7beb"
+      },
+      {
+        "path": "scripts/summarize_research_v2.py",
+        "sha256": "4f2239fb78d2d88de9117d289099874b41dc6f017b6c104e557cad168b0a8f17"
+      },
+      {
+        "path": "scripts/summarize_results.py",
+        "sha256": "3ede418e5a835ad3956b0332c335a54a4157654be9db16d4cde6411b5b12880c"
+      },
+      {
+        "path": "scripts/train_graph_experiment.py",
+        "sha256": "7036d5b3f14d5dd39de22b1aa94284285010359114deb3f38ead5461b6e5e04e"
+      },
+      {
+        "path": "scripts/train_production_adaptive_state.py",
+        "sha256": "6982e036ade77a7d8c5a950572619c5a9655d47c142fbce3cb125404955fed9d"
+      },
+      {
+        "path": "scripts/train_speed_jump_ablation.py",
+        "sha256": "2e32c02b238a0105d0023c2c95ab3da5cf5fef389ea842fddffb238288a89bce"
+      },
+      {
+        "path": "scripts/verify_augmentation_future.py",
+        "sha256": "171d18821d0e77a91778249dee8ed544db1300184fff94095304edb4b8dde97e"
+      },
+      {
+        "path": "scripts/verify_channel_state.py",
+        "sha256": "8b535209a9bb9550be2fc0ccbc06de28fc91fbc2731fe19d9a30947ad2d01ad8"
+      },
+      {
+        "path": "scripts/verify_controlled_candidate.py",
+        "sha256": "bc2c4155403cd3af602dbbed3328590b5dd86bbf446183ec394744684f752df9"
+      },
+      {
+        "path": "scripts/verify_demand_residual_study.py",
+        "sha256": "a3d389bc9bbf7c2c6033557f08aad7b20e9cab60db0586bda8d341c28060a923"
+      },
+      {
+        "path": "scripts/verify_entropy_uncertainty.py",
+        "sha256": "747adfc0ca342b6148f730935394afef929aa7a56850b8cf82291987523c728e"
+      },
+      {
+        "path": "scripts/verify_fit_transition_audit.py",
+        "sha256": "0ff64d22da192f4af586bfdfb1614f2e7c48f36e563b84ae87ecf5c53a3e7d52"
+      },
+      {
+        "path": "scripts/verify_flow_transfer.py",
+        "sha256": "c5e1b8f253c2848feb3eb50c2cc5f1b50b3aa22d863e250584dbccea2bc61670"
+      },
+      {
+        "path": "scripts/verify_full_density.py",
+        "sha256": "7886e5ceb29434a4ecc79a53d7957eaba609f181dfc73d4a7ee4c70f5bb4ac24"
+      },
+      {
+        "path": "scripts/verify_full_domain_queue.py",
+        "sha256": "a8ee0d17b8c785cc2d8f7f0ee491d40c7ca06d4712622e0ac58755fb6fe3cae5"
+      },
+      {
+        "path": "scripts/verify_gap_expert_shift.py",
+        "sha256": "547705e778443324fc13dd267511ff82569d52b43696e5612efba0150a5edd14"
+      },
+      {
+        "path": "scripts/verify_graph_repeat.py",
+        "sha256": "2ec216b7fe481f52199b92b28baa40efbe3bde74ae19a17a86904d6f7d1189e9"
+      },
+      {
+        "path": "scripts/verify_log_demand_od.py",
+        "sha256": "be24593fb488f6872d791c9004200fe4077f2d8a7595d011cc0496aaa3399923"
+      },
+      {
+        "path": "scripts/verify_native_remask_cache.py",
+        "sha256": "fb3820d13fba2c7b3717fec6a075d37c4b836f3c49c5c04d32c0f65d2c012b13"
+      },
+      {
+        "path": "scripts/verify_native_remask_forward.py",
+        "sha256": "30b070283e4231bf932a02e261f1bd58b72073c095bde082cf24d7f459fcd84b"
+      },
+      {
+        "path": "scripts/verify_native_remask_training.py",
+        "sha256": "3f25619df274f9efd76f137292d8764da70382988e98d63c2cc52b322903577f"
+      },
+      {
+        "path": "scripts/verify_outage_training.py",
+        "sha256": "274081ceb804c3368228719be792d70be267890cc47c55af2baf1d9e2ddf9336"
+      },
+      {
+        "path": "scripts/verify_public_graph_audit.py",
+        "sha256": "e15cdab3fbd032f7e88061abe3076b45a8e6ce8e20e8239c486e9788aaa11636"
+      },
+      {
+        "path": "scripts/verify_public_outage.py",
+        "sha256": "c0450dc70eee71538aaabbec918aa6d7742a3b9b3e8184d38f18a3ff6ef9499e"
+      },
+      {
+        "path": "scripts/verify_quality_state.py",
+        "sha256": "6cf7c7780cf77d6f203aebb3f517d12ce11655c26fbb433a1ee2add0e710b764"
+      },
+      {
+        "path": "scripts/verify_queue_five_phase.py",
+        "sha256": "dc24481778c57763f42fb38c42a7c3db5b9c4e23b2d9d8f4cee776981b58acb4"
+      },
+      {
+        "path": "scripts/verify_queue_overlap_deployment.py",
+        "sha256": "d4830a28109737296792e625c9de890792873de9f21224354c798c33c91a2ff4"
+      },
+      {
+        "path": "scripts/verify_queue_seed_ensemble.py",
+        "sha256": "394e9b84c48445466f87909c89c2c2f359331a17541f1a738379d6420b56e8fa"
+      },
+      {
+        "path": "scripts/verify_queue_shared_repeat.py",
+        "sha256": "dd14df8d431667ffba2b6b9eb82a8e5169b6a57d4ee7e8e96dba40d2c25296d2"
+      },
+      {
+        "path": "scripts/verify_recurrent_forward.py",
+        "sha256": "c5d22524c3bab87700b684a3c4632b9f37be89e1ffe9b437676a1d3e22a0d1f5"
+      },
+      {
+        "path": "scripts/verify_recurrent_state.py",
+        "sha256": "897bd3c375e6b0916892c24147c075b25798276a2496499ae0dc0c472f0bbb37"
+      },
+      {
+        "path": "scripts/verify_remask_tree_study.py",
+        "sha256": "428595c4967c0ad9364bfbdfc573bca120c04edab2b01117b8b3fdeb5b3b4632"
+      },
+      {
+        "path": "scripts/verify_sparse_profile_phase.py",
+        "sha256": "2561cd5fef5041afe9baa71d27086d3d9bb0fd86d0901783d9079f0cabdc1261"
+      },
+      {
+        "path": "scripts/verify_speed_jump_training.py",
+        "sha256": "f240eb354f20ebab1917000275f4c562e785054f8fa9eccc4c74d47e8fbbc650"
+      },
+      {
+        "path": "scripts/verify_state_assimilation.py",
+        "sha256": "f5d98ebe50be14b01f4172ae2befadd49df3dfcbfdb95e30e3eadf3d52ab8024"
+      },
+      {
+        "path": "scripts/verify_state_augmentation_cache.py",
+        "sha256": "7aca9e765575c469a1e589529ea46b34d35bacf16ae0bd7f4aaa3d6256aac37f"
+      },
+      {
+        "path": "scripts/verify_vendor.py",
+        "sha256": "232658ffcb66d34aea7c686d64e20bad86f7c172b0f900114dd683c5fd90bb85"
+      },
+      {
+        "path": "scripts/winter_flow_transfer.py",
+        "sha256": "055fe30b62dd510830b68c664bda86c4e5c2addbd9123d177811b384c9bca49e"
+      },
+      {
+        "path": "scripts/write_results.py",
+        "sha256": "efb8a4e80afdfaca2096ea7d2f65743e863b38c18dc41bac52fcdce07a70c83d"
+      },
+      {
+        "path": "scripts/zero_aware_od_experiment.py",
+        "sha256": "1b422f735023c0b6e82038f55d1c17906871546affe642c10b60d45d214e4068"
+      },
+      {
+        "path": "src/trafficflow/__init__.py",
+        "sha256": "6432d23e18693162d87e81e22ac8f25158369302b9dc209d21154dba1351e7a8"
+      },
+      {
+        "path": "src/trafficflow/__main__.py",
+        "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+      },
+      {
+        "path": "src/trafficflow/adaptive_graph_state.py",
+        "sha256": "52e7bbe95a36000f14a4a9d00e9629a0dd05eff023854b730b27c0ec6289e785"
+      },
+      {
+        "path": "src/trafficflow/bayesian_od.py",
+        "sha256": "5c5c76ab2848437af546a5fc3985f568b61c7a39dd3dbdf2a5551e266f1a1139"
+      },
+      {
+        "path": "src/trafficflow/bounded_state.py",
+        "sha256": "abb1f4d4418775801703940e34dd150b0d21debfd80f8f62a7c36decdf668e26"
+      },
+      {
+        "path": "src/trafficflow/causal_queue.py",
+        "sha256": "b12f3098ce79dc465545106b6d429fce2818499edd518f1909047b3ccbcda1b2"
+      },
+      {
+        "path": "src/trafficflow/channel_state.py",
+        "sha256": "5eeb00f96835f328cfa334f63ef0aae955f2af63185aa1d03e47b5ed38a26a1b"
+      },
+      {
+        "path": "src/trafficflow/cli.py",
+        "sha256": "8bb044f21541e3d0f639f01e20fc47a358152ec0c918ae4d644e73c96d7e73d3"
+      },
+      {
+        "path": "src/trafficflow/ctm_queue_diagnostics.py",
+        "sha256": "2215f940016022dbbbd575e40ac9a029c9307b84bc1ca5f5d01246d8cc65c940"
+      },
+      {
+        "path": "src/trafficflow/ctm_scenarios.py",
+        "sha256": "716adba052a0aab4ebf11261d2000e78dc5f908924443cd82d3cc1102b0647c4"
+      },
+      {
+        "path": "src/trafficflow/ctm_state_adapter.py",
+        "sha256": "3afe56f0c577d5d3ae05ee0583ddb180842980a874876f99e046e275b7d5194c"
+      },
+      {
+        "path": "src/trafficflow/data.py",
+        "sha256": "f29fe070b21ac692b2cf9bd6d5b5fd018e94129b9626588325dd48edbd941ccd"
+      },
+      {
+        "path": "src/trafficflow/demand_residual_od.py",
+        "sha256": "c4d92f8ba3af5f7ebd26dc516906090a7600077a396c32451600eb0adb55fa9c"
+      },
+      {
+        "path": "src/trafficflow/density_assimilation.py",
+        "sha256": "bbf771ae2d6ca93030aca029f3428fbb3f214cf4a5e39dca79925f08f7a30b46"
+      },
+      {
+        "path": "src/trafficflow/density_label_metrics.py",
+        "sha256": "5fcb4714fa7be5e1fd953da4707be274a7ff37af051cb9bc74083cd2666cf87b"
+      },
+      {
+        "path": "src/trafficflow/density_state.py",
+        "sha256": "ae91308f12b0c13d43f149d936a7c11704f712390f2fb593fbea5f053ff6a4b2"
+      },
+      {
+        "path": "src/trafficflow/digital_twin.py",
+        "sha256": "cfacb280f971faedceb2e404b35889891eef536a24a070804757ab6d92c49655"
+      },
+      {
+        "path": "src/trafficflow/ensemble_queue.py",
+        "sha256": "65c2c6d05b4444bc017c54fb875c091e01570de482cf257b6b20906b2af063e5"
+      },
+      {
+        "path": "src/trafficflow/entropy_od.py",
+        "sha256": "521a66563ff099aee9e3e50d180367ad25d7e90acdef174a1ed8d80b16337727"
+      },
+      {
+        "path": "src/trafficflow/experiments.py",
+        "sha256": "854abf59d2c560f84c704090741d6f8fce4ce6725d8a39139412194cc362a6ec"
+      },
+      {
+        "path": "src/trafficflow/fixture.py",
+        "sha256": "0709326abd7206a7ca1c3414dbb95c2d8c08749484802e2523d49c1ee7a2ef24"
+      },
+      {
+        "path": "src/trafficflow/full_domain_queue.py",
+        "sha256": "50b0dd7245eb3146e236d16c5abc6166f8506a5304971383617147d718be3737"
+      },
+      {
+        "path": "src/trafficflow/full_queue_calibration.py",
+        "sha256": "c30ea129f196796d2a6c34bc71da18b7941eaed4ab652207f4d5144737403dd7"
+      },
+      {
+        "path": "src/trafficflow/gap_gated_state.py",
+        "sha256": "ec8a2d4e95dc6f4f74197406555bd33ec467dabfd314f27cb09e8b896bf92d53"
+      },
+      {
+        "path": "src/trafficflow/graph_queue.py",
+        "sha256": "eaf91b8825c5f3e6491fb09413d9c5b8cdee04ecfd9c05feb6be5e8b00f65c46"
+      },
+      {
+        "path": "src/trafficflow/graph_state.py",
+        "sha256": "806defac6f40c13f3ba51e74b09252a9b9d29bdd4779cb988a3d503a66364fa9"
+      },
+      {
+        "path": "src/trafficflow/increment_state.py",
+        "sha256": "52c6eb6a5cf959ac050f237a84cc8c487fae086fcec61a5aeac2fa5997185ea3"
+      },
+      {
+        "path": "src/trafficflow/log_demand_od.py",
+        "sha256": "e53d9edd45e7a3b041831bdca9084a4e206ea6b60454381a2c6de8ae66644139"
+      },
+      {
+        "path": "src/trafficflow/metrics.py",
+        "sha256": "5f42eaa372894edfa1363135b61818e7ec4bf56110257a03aadf07de770aa346"
+      },
+      {
+        "path": "src/trafficflow/native_remask.py",
+        "sha256": "0dfcb1a2b8da3c00b8cd29b57e2b3a636e52ea737e315e315fe0b8bdfb130c0c"
+      },
+      {
+        "path": "src/trafficflow/od_expert.py",
+        "sha256": "1dff245ae5d347e32d2b3b1473a129964cf28e5b259e93478cfad6cb4d5688bd"
+      },
+      {
+        "path": "src/trafficflow/od_uncertainty.py",
+        "sha256": "0df9a337b1b302952489a32517512a77ebc2c9420bee5d291dc92ad337bc85c3"
+      },
+      {
+        "path": "src/trafficflow/odme.py",
+        "sha256": "e61df62cbf3ff4af03069d6e028b2024ddee25578cc00558b2b04148370850ee"
+      },
+      {
+        "path": "src/trafficflow/outage_shift.py",
+        "sha256": "dccf193ed7bced7881577204bb1385a7b8f9a97cf993fc53e64b67603cd89f35"
+      },
+      {
+        "path": "src/trafficflow/outage_stress.py",
+        "sha256": "eb76fb04628ea381cab5ebf725502f4bc21f1fa9555b1fa1c4c70229f98c81c7"
+      },
+      {
+        "path": "src/trafficflow/physics.py",
+        "sha256": "3f559ca30157ebee155bb17ebdd42f0dc43a169ef6b45634ad875569beb03e30"
+      },
+      {
+        "path": "src/trafficflow/probability_calibration.py",
+        "sha256": "57f7c5487983a2572851331b20591ac21db15591d1dc85745706147ce3a657c7"
+      },
+      {
+        "path": "src/trafficflow/quality_state.py",
+        "sha256": "243757e80c651dfcf32c846b54e548afdd2f04215c612f725855497bb802a7d8"
+      },
+      {
+        "path": "src/trafficflow/queue.py",
+        "sha256": "62c35a4ed8e1e882d386461aba41cf8f5f3ed809451e51008e34f23e211240c5"
+      },
+      {
+        "path": "src/trafficflow/queue_calibration.py",
+        "sha256": "3c9bf39bf1d8bf847dcf29554bcc5abd50a8c610d64b9f2d5c99629ff36b75a8"
+      },
+      {
+        "path": "src/trafficflow/queue_domain.py",
+        "sha256": "c8d03e5ba696b20c3537c0a764cb1df734496fc3a740d0642168f0eba7cc15b8"
+      },
+      {
+        "path": "src/trafficflow/queue_event_loss.py",
+        "sha256": "5b155f8255080e0ee8823ab366ce8f7dfb1f2d067c196109834e0338395b631c"
+      },
+      {
+        "path": "src/trafficflow/queue_events.py",
+        "sha256": "4fbe6e178ee1601de995572bd354cc856f4da6b743601587b299e9d9b233c97f"
+      },
+      {
+        "path": "src/trafficflow/queue_graph_geometry.py",
+        "sha256": "bc1596ed66dbf9c02960f6b5f3c759385fcdef65f7b1e83e9481c1b9800c9cad"
+      },
+      {
+        "path": "src/trafficflow/queue_overlap_loss.py",
+        "sha256": "8dd4beca0a9434ec9d3cd75751551df41bda5fe4b581b51a3bc2ae5ec3eeab27"
+      },
+      {
+        "path": "src/trafficflow/queue_phase_split.py",
+        "sha256": "9a0d96eface9c78241b23ffd1d54d7b8c598c0a628f5e3562b1a138b4d98b569"
+      },
+      {
+        "path": "src/trafficflow/queue_selection_uncertainty.py",
+        "sha256": "5996d6480c04406ec1e40c561a2ebee83438c910b0c9cb7518ea3a464885634b"
+      },
+      {
+        "path": "src/trafficflow/queue_specialist.py",
+        "sha256": "ca3c850ab271905dd294e1019f48552cc8e2e1946ebb8484b38cfd613a9d5373"
+      },
+      {
+        "path": "src/trafficflow/recurrent_state.py",
+        "sha256": "19ba9c972c9422de58683e9e5cae35c0a6dd9c1e18d6e49954c57c49c2ea79ba"
+      },
+      {
+        "path": "src/trafficflow/research_eval.py",
+        "sha256": "197aa2c4d6091dbd551ca6d11f8a664e9feaa44c1fcaf568ec873185315ab3c9"
+      },
+      {
+        "path": "src/trafficflow/runtime.py",
+        "sha256": "c181d87a89ff8fa7ee92c00759e2674d77cd60a3ed0d407f1e52f0d2b95d197f"
+      },
+      {
+        "path": "src/trafficflow/speed_jump_loss.py",
+        "sha256": "e48820274e69fb260f10aeca981431a4f7bf0933ee308f0c734b9c054840cfc0"
+      },
+      {
+        "path": "src/trafficflow/state.py",
+        "sha256": "f7a8341d968ac55a6f87e01a439ce8dc8c014750afa61129c7175e733de23c17"
+      },
+      {
+        "path": "src/trafficflow/state_assimilation.py",
+        "sha256": "96291a9c9977924c6abff3e611ecf58125a586a9dfbdf9c70e090aa97ec4b85d"
+      },
+      {
+        "path": "src/trafficflow/state_augmentation.py",
+        "sha256": "220fccab97067dab2744cafddbedb954f85cb3deef2a88a062023217eeebb9a4"
+      },
+      {
+        "path": "src/trafficflow/state_ensemble.py",
+        "sha256": "2bbfa587a79401c90a43502faa5410e5323b11cafe36a02b9ce244e8fae8d749"
+      },
+      {
+        "path": "src/trafficflow/submission.py",
+        "sha256": "87607c555e86f020e83f1ed9ac4054e49f88dc35eedd36cd8bf8ba442f85f2dc"
+      },
+      {
+        "path": "src/trafficflow/transition_diagnostics.py",
+        "sha256": "d130264f6d6c2fd9354dbd5639d27b601d5f09f636ca92a5ba729ce8e5297b74"
+      },
+      {
+        "path": "src/trafficflow/zero_aware_od.py",
+        "sha256": "42192b9d19dcaa2fc7d7801cb4ef7782c3cb6d71a3c73736936b5a064a072f6d"
+      },
+      {
+        "path": "vendor/official/src/merge_submissions.py",
+        "sha256": "a8cd6c4c9f2cea777fde8f6b163c00835a4fb45672998b9fc71368810e792ee1"
+      },
+      {
+        "path": "vendor/official/src/release/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/release/score_overall.py",
+        "sha256": "b9b73e174eeb1ed742dd9cbd558f6b280a0bd14e7ec7001feb549f1b5fb9b4ee"
+      },
+      {
+        "path": "vendor/official/src/score_overall.py",
+        "sha256": "4a28d57a23950554a065f6254bf674f4a1b58b5d039f26bc5154dd28d28651fb"
+      },
+      {
+        "path": "vendor/official/src/task1/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_historical_mean.py",
+        "sha256": "66569dd55340d5e4509712e66172ea669893d7341a0ef2dd8c920c24f07209a1"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_structural_kf.py",
+        "sha256": "f3a63ba48bf867d993dd1b3cbc0da6ca4567da7aa519ed2b2e3fd93a61c06132"
+      },
+      {
+        "path": "vendor/official/src/task1/build_task1_baseline_submission.py",
+        "sha256": "cb91e19e20a5a546430917a884197c1ad6a7068c6a47d7fbec7fb8311b7237d7"
+      },
+      {
+        "path": "vendor/official/src/task1/score_task1.py",
+        "sha256": "bcd42e88fbc42cd499e93e3b50ddf367009b26b216df5ab3f710ee1d1d863163"
+      },
+      {
+        "path": "vendor/official/src/task2/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task2/build_task2_persistence_submission.py",
+        "sha256": "d3cb4ab23206c4c20058a074b24c23ba79b43dd4219f41e158329a39f5a3edd2"
+      },
+      {
+        "path": "vendor/official/src/task2/queue_utils.py",
+        "sha256": "cea193935e7af7ab1399b9955c3f26fcb65664a099344d35b9c3b91802b3135f"
+      },
+      {
+        "path": "vendor/official/src/task2/score_task2.py",
+        "sha256": "b5605ebae9b32b3ca974881be47b5f2e796728b94763a724314580fc93be28bb"
+      },
+      {
+        "path": "vendor/official/src/task3/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task3/build_task3_baseline_submission.py",
+        "sha256": "945ce4b28f264be6be35a1b8d0f67311bf666d5e6b516a5b79bb2617075e8bcf"
+      },
+      {
+        "path": "vendor/official/src/task3/score_task3.py",
+        "sha256": "98d88b6e7f6b7bb0e2bbb4b42e486d6690b6f14a5d3625649e85ddf828550409"
+      },
+      {
+        "path": "vendor/official/src/task4/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task4/build_task4_odme_artifacts.py",
+        "sha256": "5da75aea3004555bae080ee4d18f1baee01dbb9ed1caf7a6abadd2387e6ade58"
+      },
+      {
+        "path": "vendor/official/src/task4/score_task4.py",
+        "sha256": "be15d732438d305e3d35cb41d3105fc03e3fb9459e5c050af39fe192cede30e3"
+      }
+    ],
+    "n_files": 291,
+    "scope": "Own source, vendored official Python and dependency locks; no data, credentials or model weights"
+  },
+  "metrics": {
+    "jump_seed20261013": {
+      "S_state": 0.9564649162556768,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 79538,
+          "rmse_speed": 1.0620372193528982,
+          "rmse_lane_flow": 26.52925196209383,
+          "S_state": 0.9567209028910388
+        },
+        {
+          "regime": "R2",
+          "n": 17066,
+          "rmse_speed": 0.806325778530612,
+          "rmse_lane_flow": 23.004456222431987,
+          "S_state": 0.9649466134132076
+        },
+        {
+          "regime": "R3",
+          "n": 170085,
+          "rmse_speed": 1.4201416136104479,
+          "rmse_lane_flow": 28.170924369431013,
+          "S_state": 0.9477272324627839
+        }
+      ],
+      "days": [
+        {
+          "regime": "R3",
+          "n": 28234,
+          "speed_sse": 67589.38015934869,
+          "lane_flow_sse": 24578626.58298882,
+          "daily_State": 0.9439596316481542,
+          "date": "2031-02-15"
+        },
+        {
+          "regime": "R1",
+          "n": 11352,
+          "speed_sse": 19204.14768366747,
+          "lane_flow_sse": 8908776.94219822,
+          "daily_State": 0.9504286153449403,
+          "date": "2031-02-16"
+        },
+        {
+          "regime": "R3",
+          "n": 28112,
+          "speed_sse": 109728.70572865925,
+          "lane_flow_sse": 34542807.12383455,
+          "daily_State": 0.9304510964728201,
+          "date": "2031-02-17"
+        },
+        {
+          "regime": "R1",
+          "n": 11323,
+          "speed_sse": 7079.184497203196,
+          "lane_flow_sse": 6099728.598344806,
+          "daily_State": 0.9651266073003522,
+          "date": "2031-02-18"
+        },
+        {
+          "regime": "R3",
+          "n": 28323,
+          "speed_sse": 67834.88436551609,
+          "lane_flow_sse": 23231290.962550934,
+          "daily_State": 0.9446149471405878,
+          "date": "2031-02-19"
+        },
+        {
+          "regime": "R3",
+          "n": 28352,
+          "speed_sse": 24796.649018081767,
+          "lane_flow_sse": 14985508.824406892,
+          "daily_State": 0.9621738064935034,
+          "date": "2031-02-20"
+        },
+        {
+          "regime": "R3",
+          "n": 28413,
+          "speed_sse": 56315.20556751246,
+          "lane_flow_sse": 23962345.997605763,
+          "daily_State": 0.9473260991031951,
+          "date": "2031-02-21"
+        },
+        {
+          "regime": "R1",
+          "n": 11490,
+          "speed_sse": 22545.542917303752,
+          "lane_flow_sse": 12330587.337050058,
+          "daily_State": 0.9446278194262987,
+          "date": "2031-02-22"
+        },
+        {
+          "regime": "R1",
+          "n": 11274,
+          "speed_sse": 12231.580155096097,
+          "lane_flow_sse": 7632137.774211466,
+          "daily_State": 0.9575537721110079,
+          "date": "2031-02-23"
+        },
+        {
+          "regime": "R3",
+          "n": 28651,
+          "speed_sse": 16762.97780848669,
+          "lane_flow_sse": 13679043.162692802,
+          "daily_State": 0.9667262023449218,
+          "date": "2031-02-24"
+        },
+        {
+          "regime": "R2",
+          "n": 17066,
+          "speed_sse": 11095.652082325078,
+          "lane_flow_sse": 9031412.633928353,
+          "daily_State": 0.9649466134132076,
+          "date": "2031-02-25"
+        },
+        {
+          "regime": "R1",
+          "n": 11335,
+          "speed_sse": 7662.683538400611,
+          "lane_flow_sse": 6439424.128353851,
+          "daily_State": 0.9639669907322084,
+          "date": "2031-02-26"
+        },
+        {
+          "regime": "R1",
+          "n": 11474,
+          "speed_sse": 14325.099232241339,
+          "lane_flow_sse": 8936923.557622327,
+          "daily_State": 0.9544685979938103,
+          "date": "2031-02-27"
+        },
+        {
+          "regime": "R1",
+          "n": 11290,
+          "speed_sse": 6664.505947810062,
+          "lane_flow_sse": 5631362.276813278,
+          "daily_State": 0.966282016768066,
+          "date": "2031-02-28"
+        }
+      ],
+      "diagnostic_strata": {
+        "drop20": {
+          "n": 221,
+          "rmse_speed": 18.630633389774548,
+          "rmse_lane_flow": 113.47751801837757,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 16,
+              "speed_sse": 4520.704261072056,
+              "lane_flow_sse": 65296.691967046354
+            },
+            {
+              "date": "2031-02-16",
+              "n": 14,
+              "speed_sse": 4423.319261142602,
+              "lane_flow_sse": 111536.60910484492
+            },
+            {
+              "date": "2031-02-17",
+              "n": 60,
+              "speed_sse": 17678.934100234528,
+              "lane_flow_sse": 1961017.1642505012
+            },
+            {
+              "date": "2031-02-18",
+              "n": 1,
+              "speed_sse": 10.73726706326054,
+              "lane_flow_sse": 22.2340871332808
+            },
+            {
+              "date": "2031-02-19",
+              "n": 20,
+              "speed_sse": 24821.636106860733,
+              "lane_flow_sse": 114121.06965274272
+            },
+            {
+              "date": "2031-02-20",
+              "n": 3,
+              "speed_sse": 6493.909501506218,
+              "lane_flow_sse": 14606.206235894118
+            },
+            {
+              "date": "2031-02-21",
+              "n": 30,
+              "speed_sse": 4850.749671230321,
+              "lane_flow_sse": 133485.29258875322
+            },
+            {
+              "date": "2031-02-22",
+              "n": 39,
+              "speed_sse": 4527.208857908687,
+              "lane_flow_sse": 209898.15071506734
+            },
+            {
+              "date": "2031-02-23",
+              "n": 12,
+              "speed_sse": 4680.113217815096,
+              "lane_flow_sse": 56407.007962367454
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 2,
+              "speed_sse": 718.3430966502402,
+              "lane_flow_sse": 8729.490273922966
+            },
+            {
+              "date": "2031-02-26",
+              "n": 4,
+              "speed_sse": 142.2493684935853,
+              "lane_flow_sse": 73107.59671363558
+            },
+            {
+              "date": "2031-02-27",
+              "n": 20,
+              "speed_sse": 3841.305901446953,
+              "lane_flow_sse": 97621.99457816724
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "recover20": {
+          "n": 236,
+          "rmse_speed": 14.368889597175638,
+          "rmse_lane_flow": 155.37851377623434,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 40,
+              "speed_sse": 17617.499942666433,
+              "lane_flow_sse": 1791522.0159795913
+            },
+            {
+              "date": "2031-02-16",
+              "n": 13,
+              "speed_sse": 179.09122891418224,
+              "lane_flow_sse": 140156.3288827886
+            },
+            {
+              "date": "2031-02-17",
+              "n": 59,
+              "speed_sse": 20244.069739148996,
+              "lane_flow_sse": 1743626.1807032241
+            },
+            {
+              "date": "2031-02-18",
+              "n": 2,
+              "speed_sse": 12.796225769469302,
+              "lane_flow_sse": 35925.79206286429
+            },
+            {
+              "date": "2031-02-19",
+              "n": 24,
+              "speed_sse": 1500.1223016488748,
+              "lane_flow_sse": 415097.6556281457
+            },
+            {
+              "date": "2031-02-20",
+              "n": 1,
+              "speed_sse": 12.007815459099296,
+              "lane_flow_sse": 8.558187821224267
+            },
+            {
+              "date": "2031-02-21",
+              "n": 25,
+              "speed_sse": 5487.256570621446,
+              "lane_flow_sse": 651495.4180564869
+            },
+            {
+              "date": "2031-02-22",
+              "n": 42,
+              "speed_sse": 2832.9771305287827,
+              "lane_flow_sse": 594821.6763753418
+            },
+            {
+              "date": "2031-02-23",
+              "n": 9,
+              "speed_sse": 59.41818083093573,
+              "lane_flow_sse": 63020.141694319514
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 2,
+              "speed_sse": 3.6441062242579267,
+              "lane_flow_sse": 40033.12074486428
+            },
+            {
+              "date": "2031-02-26",
+              "n": 3,
+              "speed_sse": 137.75080317050188,
+              "lane_flow_sse": 23299.037629378334
+            },
+            {
+              "date": "2031-02-27",
+              "n": 16,
+              "speed_sse": 639.1031833910713,
+              "lane_flow_sse": 198619.95427667466
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "missing60min": {
+          "n": 6473,
+          "rmse_speed": 1.2717209361866126,
+          "rmse_lane_flow": 30.16392602460617,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 889,
+              "speed_sse": 3259.4090094627004,
+              "lane_flow_sse": 1264794.689509357
+            },
+            {
+              "date": "2031-02-16",
+              "n": 66,
+              "speed_sse": 42.870807761295886,
+              "lane_flow_sse": 37746.28975197802
+            },
+            {
+              "date": "2031-02-17",
+              "n": 994,
+              "speed_sse": 2817.4393472762317,
+              "lane_flow_sse": 1314471.2072994928
+            },
+            {
+              "date": "2031-02-18",
+              "n": 67,
+              "speed_sse": 35.80966205358387,
+              "lane_flow_sse": 49223.37682770546
+            },
+            {
+              "date": "2031-02-19",
+              "n": 878,
+              "speed_sse": 974.7632082593575,
+              "lane_flow_sse": 880652.8757500439
+            },
+            {
+              "date": "2031-02-20",
+              "n": 1058,
+              "speed_sse": 1481.4381870468223,
+              "lane_flow_sse": 651907.2055023623
+            },
+            {
+              "date": "2031-02-21",
+              "n": 867,
+              "speed_sse": 767.4769370490783,
+              "lane_flow_sse": 850349.1263543421
+            },
+            {
+              "date": "2031-02-22",
+              "n": 79,
+              "speed_sse": 70.93313503833286,
+              "lane_flow_sse": 75095.00991830956
+            },
+            {
+              "date": "2031-02-23",
+              "n": 85,
+              "speed_sse": 61.13434985191008,
+              "lane_flow_sse": 54982.24658942825
+            },
+            {
+              "date": "2031-02-24",
+              "n": 1145,
+              "speed_sse": 733.1050609533979,
+              "lane_flow_sse": 503731.4372536398
+            },
+            {
+              "date": "2031-02-25",
+              "n": 146,
+              "speed_sse": 111.82130977566727,
+              "lane_flow_sse": 77874.5337684836
+            },
+            {
+              "date": "2031-02-26",
+              "n": 92,
+              "speed_sse": 58.06606022303451,
+              "lane_flow_sse": 67215.08281281346
+            },
+            {
+              "date": "2031-02-27",
+              "n": 48,
+              "speed_sse": 18.81192865466923,
+              "lane_flow_sse": 34613.53813684425
+            },
+            {
+              "date": "2031-02-28",
+              "n": 59,
+              "speed_sse": 35.53650180626606,
+              "lane_flow_sse": 26882.91074475255
+            }
+          ]
+        },
+        "missing180min": {
+          "n": 0,
+          "rmse_speed": null,
+          "rmse_lane_flow": null,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-16",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-17",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-18",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-19",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-20",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-21",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-22",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-23",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-26",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-27",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "congested50": {
+          "n": 9303,
+          "rmse_speed": 3.862210502180498,
+          "rmse_lane_flow": 46.77507613260912,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 1540,
+              "speed_sse": 22978.499836973024,
+              "lane_flow_sse": 2665323.4529777365
+            },
+            {
+              "date": "2031-02-16",
+              "n": 981,
+              "speed_sse": 7307.120944612856,
+              "lane_flow_sse": 1451616.1713037812
+            },
+            {
+              "date": "2031-02-17",
+              "n": 810,
+              "speed_sse": 36346.45596748936,
+              "lane_flow_sse": 6215529.698044034
+            },
+            {
+              "date": "2031-02-18",
+              "n": 40,
+              "speed_sse": 153.12028781456024,
+              "lane_flow_sse": 56773.97385418136
+            },
+            {
+              "date": "2031-02-19",
+              "n": 1452,
+              "speed_sse": 37562.26898167154,
+              "lane_flow_sse": 2561570.5385861974
+            },
+            {
+              "date": "2031-02-20",
+              "n": 19,
+              "speed_sse": 2757.743637816416,
+              "lane_flow_sse": 53044.28557500318
+            },
+            {
+              "date": "2031-02-21",
+              "n": 1660,
+              "speed_sse": 22526.01773192615,
+              "lane_flow_sse": 3066115.9991528466
+            },
+            {
+              "date": "2031-02-22",
+              "n": 1448,
+              "speed_sse": 3143.028334753604,
+              "lane_flow_sse": 2405816.9604793815
+            },
+            {
+              "date": "2031-02-23",
+              "n": 498,
+              "speed_sse": 558.1566872922194,
+              "lane_flow_sse": 658056.5800065659
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 19,
+              "speed_sse": 50.061815997926544,
+              "lane_flow_sse": 74120.08380170283
+            },
+            {
+              "date": "2031-02-26",
+              "n": 68,
+              "speed_sse": 141.17224555063046,
+              "lane_flow_sse": 94470.98341351091
+            },
+            {
+              "date": "2031-02-27",
+              "n": 768,
+              "speed_sse": 5246.134195317221,
+              "lane_flow_sse": 1051667.0451125214
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        }
+      },
+      "legacy_target_pair_increment_L1": 0.7236730492009298
+    },
+    "jump_seed20261029": {
+      "S_state": 0.9559835932018362,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 79538,
+          "rmse_speed": 1.0962937106921578,
+          "rmse_lane_flow": 26.047049979206808,
+          "S_state": 0.9563506508649908
+        },
+        {
+          "regime": "R2",
+          "n": 17066,
+          "rmse_speed": 0.8984704749433923,
+          "rmse_lane_flow": 22.784806812480053,
+          "S_state": 0.9631246858516547
+        },
+        {
+          "regime": "R3",
+          "n": 170085,
+          "rmse_speed": 1.4068446359181754,
+          "rmse_lane_flow": 27.569625619961904,
+          "S_state": 0.9484754428888633
+        }
+      ],
+      "days": [
+        {
+          "regime": "R3",
+          "n": 28234,
+          "speed_sse": 69520.84533350494,
+          "lane_flow_sse": 24082177.698010746,
+          "daily_State": 0.9437150948769575,
+          "date": "2031-02-15"
+        },
+        {
+          "regime": "R1",
+          "n": 11352,
+          "speed_sse": 21839.71774718514,
+          "lane_flow_sse": 8370527.2057919735,
+          "daily_State": 0.9492216774265219,
+          "date": "2031-02-16"
+        },
+        {
+          "regime": "R3",
+          "n": 28112,
+          "speed_sse": 107875.35593358196,
+          "lane_flow_sse": 31490938.45754739,
+          "daily_State": 0.9320276550153164,
+          "date": "2031-02-17"
+        },
+        {
+          "regime": "R1",
+          "n": 11323,
+          "speed_sse": 8039.555164244444,
+          "lane_flow_sse": 6026398.62991381,
+          "daily_State": 0.9641122380062429,
+          "date": "2031-02-18"
+        },
+        {
+          "regime": "R3",
+          "n": 28323,
+          "speed_sse": 59684.872229833265,
+          "lane_flow_sse": 22304003.063278563,
+          "daily_State": 0.9471299608101054,
+          "date": "2031-02-19"
+        },
+        {
+          "regime": "R3",
+          "n": 28352,
+          "speed_sse": 24390.571403317605,
+          "lane_flow_sse": 14745238.129366698,
+          "daily_State": 0.9624817661438043,
+          "date": "2031-02-20"
+        },
+        {
+          "regime": "R3",
+          "n": 28413,
+          "speed_sse": 56911.70245562241,
+          "lane_flow_sse": 23084191.030790344,
+          "daily_State": 0.9475772477339421,
+          "date": "2031-02-21"
+        },
+        {
+          "regime": "R1",
+          "n": 11490,
+          "speed_sse": 24022.357315983252,
+          "lane_flow_sse": 11643757.087545594,
+          "daily_State": 0.9443620690974015,
+          "date": "2031-02-22"
+        },
+        {
+          "regime": "R1",
+          "n": 11274,
+          "speed_sse": 10369.087431814032,
+          "lane_flow_sse": 7288165.508439732,
+          "daily_State": 0.9597920867515517,
+          "date": "2031-02-23"
+        },
+        {
+          "regime": "R3",
+          "n": 28651,
+          "speed_sse": 18250.89668365323,
+          "lane_flow_sse": 13572382.443062529,
+          "daily_State": 0.9660739684990685,
+          "date": "2031-02-24"
+        },
+        {
+          "regime": "R2",
+          "n": 17066,
+          "speed_sse": 13776.514750691855,
+          "lane_flow_sse": 8859769.895012451,
+          "daily_State": 0.9631246858516547,
+          "date": "2031-02-25"
+        },
+        {
+          "regime": "R1",
+          "n": 11335,
+          "speed_sse": 8335.893784007223,
+          "lane_flow_sse": 6390656.140751695,
+          "daily_State": 0.9632725975400646,
+          "date": "2031-02-26"
+        },
+        {
+          "regime": "R1",
+          "n": 11474,
+          "speed_sse": 15794.686924037253,
+          "lane_flow_sse": 8661881.09730719,
+          "daily_State": 0.9535926614052832,
+          "date": "2031-02-27"
+        },
+        {
+          "regime": "R1",
+          "n": 11290,
+          "speed_sse": 7192.234367135453,
+          "lane_flow_sse": 5581075.988363685,
+          "daily_State": 0.9657140963758877,
+          "date": "2031-02-28"
+        }
+      ],
+      "diagnostic_strata": {
+        "drop20": {
+          "n": 221,
+          "rmse_speed": 18.549107417412507,
+          "rmse_lane_flow": 114.40854438306664,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 16,
+              "speed_sse": 7693.7562244684705,
+              "lane_flow_sse": 37657.02587289692
+            },
+            {
+              "date": "2031-02-16",
+              "n": 14,
+              "speed_sse": 3945.7134762239634,
+              "lane_flow_sse": 103052.68641369297
+            },
+            {
+              "date": "2031-02-17",
+              "n": 60,
+              "speed_sse": 17836.236620320797,
+              "lane_flow_sse": 2191294.636874699
+            },
+            {
+              "date": "2031-02-18",
+              "n": 1,
+              "speed_sse": 1.9171878478405486,
+              "lane_flow_sse": 306.7987799316852
+            },
+            {
+              "date": "2031-02-19",
+              "n": 20,
+              "speed_sse": 21353.928533212627,
+              "lane_flow_sse": 90872.6404864724
+            },
+            {
+              "date": "2031-02-20",
+              "n": 3,
+              "speed_sse": 4707.84944785183,
+              "lane_flow_sse": 11462.69042743236
+            },
+            {
+              "date": "2031-02-21",
+              "n": 30,
+              "speed_sse": 5376.710851858308,
+              "lane_flow_sse": 100228.30440094238
+            },
+            {
+              "date": "2031-02-22",
+              "n": 39,
+              "speed_sse": 5308.9734573969745,
+              "lane_flow_sse": 169697.04997995018
+            },
+            {
+              "date": "2031-02-23",
+              "n": 12,
+              "speed_sse": 2493.4062071451117,
+              "lane_flow_sse": 44796.41231491786
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 2,
+              "speed_sse": 2340.3168232114276,
+              "lane_flow_sse": 4046.467109746387
+            },
+            {
+              "date": "2031-02-26",
+              "n": 4,
+              "speed_sse": 631.972889304416,
+              "lane_flow_sse": 72060.82717263396
+            },
+            {
+              "date": "2031-02-27",
+              "n": 20,
+              "speed_sse": 4348.55258333664,
+              "lane_flow_sse": 67263.08132200396
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "recover20": {
+          "n": 236,
+          "rmse_speed": 14.05236872764947,
+          "rmse_lane_flow": 157.0699742290674,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 40,
+              "speed_sse": 15273.42399810596,
+              "lane_flow_sse": 2128833.0240002386
+            },
+            {
+              "date": "2031-02-16",
+              "n": 13,
+              "speed_sse": 189.97786052813464,
+              "lane_flow_sse": 139531.35350048824
+            },
+            {
+              "date": "2031-02-17",
+              "n": 59,
+              "speed_sse": 20808.31944327043,
+              "lane_flow_sse": 1867557.779926895
+            },
+            {
+              "date": "2031-02-18",
+              "n": 2,
+              "speed_sse": 12.851035025896774,
+              "lane_flow_sse": 43054.14701238342
+            },
+            {
+              "date": "2031-02-19",
+              "n": 24,
+              "speed_sse": 1347.6930945712138,
+              "lane_flow_sse": 287755.40367147676
+            },
+            {
+              "date": "2031-02-20",
+              "n": 1,
+              "speed_sse": 6.679735792081908,
+              "lane_flow_sse": 4406.949715158361
+            },
+            {
+              "date": "2031-02-21",
+              "n": 25,
+              "speed_sse": 4687.143838354818,
+              "lane_flow_sse": 518297.05165281653
+            },
+            {
+              "date": "2031-02-22",
+              "n": 42,
+              "speed_sse": 3432.043358104756,
+              "lane_flow_sse": 590166.7547433767
+            },
+            {
+              "date": "2031-02-23",
+              "n": 9,
+              "speed_sse": 81.91422677404552,
+              "lane_flow_sse": 61892.78501153314
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 2,
+              "speed_sse": 8.103054055672587,
+              "lane_flow_sse": 20208.341065446686
+            },
+            {
+              "date": "2031-02-26",
+              "n": 3,
+              "speed_sse": 42.75902264052782,
+              "lane_flow_sse": 21557.508225916215
+            },
+            {
+              "date": "2031-02-27",
+              "n": 16,
+              "speed_sse": 711.7911112221673,
+              "lane_flow_sse": 139089.42729376786
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "missing60min": {
+          "n": 6473,
+          "rmse_speed": 1.4395111525100899,
+          "rmse_lane_flow": 29.347278394175653,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 889,
+              "speed_sse": 4168.935160703389,
+              "lane_flow_sse": 1107214.9692211477
+            },
+            {
+              "date": "2031-02-16",
+              "n": 66,
+              "speed_sse": 66.3746814208441,
+              "lane_flow_sse": 33418.808335717564
+            },
+            {
+              "date": "2031-02-17",
+              "n": 994,
+              "speed_sse": 3536.026529530679,
+              "lane_flow_sse": 1225617.8791615027
+            },
+            {
+              "date": "2031-02-18",
+              "n": 67,
+              "speed_sse": 43.663310196918005,
+              "lane_flow_sse": 49725.530079541924
+            },
+            {
+              "date": "2031-02-19",
+              "n": 878,
+              "speed_sse": 2230.18626370185,
+              "lane_flow_sse": 889899.0112753971
+            },
+            {
+              "date": "2031-02-20",
+              "n": 1058,
+              "speed_sse": 1395.4621213816824,
+              "lane_flow_sse": 646279.5380008046
+            },
+            {
+              "date": "2031-02-21",
+              "n": 867,
+              "speed_sse": 814.9257594343883,
+              "lane_flow_sse": 801362.3265305597
+            },
+            {
+              "date": "2031-02-22",
+              "n": 79,
+              "speed_sse": 57.41776254261296,
+              "lane_flow_sse": 64087.50474119803
+            },
+            {
+              "date": "2031-02-23",
+              "n": 85,
+              "speed_sse": 69.61790635085988,
+              "lane_flow_sse": 48185.80305763375
+            },
+            {
+              "date": "2031-02-24",
+              "n": 1145,
+              "speed_sse": 783.0522732629388,
+              "lane_flow_sse": 507042.7811888342
+            },
+            {
+              "date": "2031-02-25",
+              "n": 146,
+              "speed_sse": 125.63693782097658,
+              "lane_flow_sse": 76853.14753690203
+            },
+            {
+              "date": "2031-02-26",
+              "n": 92,
+              "speed_sse": 62.11238464980424,
+              "lane_flow_sse": 65029.852802330126
+            },
+            {
+              "date": "2031-02-27",
+              "n": 48,
+              "speed_sse": 20.522359820503628,
+              "lane_flow_sse": 33531.29326862716
+            },
+            {
+              "date": "2031-02-28",
+              "n": 59,
+              "speed_sse": 39.36768381715318,
+              "lane_flow_sse": 26705.33001700081
+            }
+          ]
+        },
+        "missing180min": {
+          "n": 0,
+          "rmse_speed": null,
+          "rmse_lane_flow": null,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-16",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-17",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-18",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-19",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-20",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-21",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-22",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-23",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-26",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-27",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "congested50": {
+          "n": 9303,
+          "rmse_speed": 3.654940185353689,
+          "rmse_lane_flow": 44.96613087708115,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 1540,
+              "speed_sse": 22589.052991238656,
+              "lane_flow_sse": 2520483.9338908894
+            },
+            {
+              "date": "2031-02-16",
+              "n": 981,
+              "speed_sse": 6532.719934550404,
+              "lane_flow_sse": 1275698.8266123384
+            },
+            {
+              "date": "2031-02-17",
+              "n": 810,
+              "speed_sse": 32724.74236508573,
+              "lane_flow_sse": 5916193.8158118855
+            },
+            {
+              "date": "2031-02-18",
+              "n": 40,
+              "speed_sse": 219.96188603461133,
+              "lane_flow_sse": 54598.98078595457
+            },
+            {
+              "date": "2031-02-19",
+              "n": 1452,
+              "speed_sse": 27053.192724923214,
+              "lane_flow_sse": 2245095.8497640896
+            },
+            {
+              "date": "2031-02-20",
+              "n": 19,
+              "speed_sse": 1838.349271946159,
+              "lane_flow_sse": 30360.2183532252
+            },
+            {
+              "date": "2031-02-21",
+              "n": 1660,
+              "speed_sse": 24065.949267113807,
+              "lane_flow_sse": 2794354.7691475386
+            },
+            {
+              "date": "2031-02-22",
+              "n": 1448,
+              "speed_sse": 2809.175012612547,
+              "lane_flow_sse": 2194798.55892086
+            },
+            {
+              "date": "2031-02-23",
+              "n": 498,
+              "speed_sse": 566.1242482705595,
+              "lane_flow_sse": 641229.919857207
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 19,
+              "speed_sse": 144.6453362688493,
+              "lane_flow_sse": 74137.15248076072
+            },
+            {
+              "date": "2031-02-26",
+              "n": 68,
+              "speed_sse": 205.89484135251112,
+              "lane_flow_sse": 79546.60715816439
+            },
+            {
+              "date": "2031-02-27",
+              "n": 768,
+              "speed_sse": 5525.134038051803,
+              "lane_flow_sse": 983729.4383048001
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        }
+      },
+      "legacy_target_pair_increment_L1": 0.7109229959818018
+    },
+    "jump_seed_mean": {
+      "S_state": 0.9568314326320744,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 79538,
+          "rmse_speed": 1.0534241038075032,
+          "rmse_lane_flow": 26.103194678161536,
+          "S_state": 0.9572335901045008
+        },
+        {
+          "regime": "R2",
+          "n": 17066,
+          "rmse_speed": 0.8365783047148193,
+          "rmse_lane_flow": 22.780630859265248,
+          "S_state": 0.9644647582927233
+        },
+        {
+          "regime": "R3",
+          "n": 170085,
+          "rmse_speed": 1.3884014605502217,
+          "rmse_lane_flow": 27.671189938847117,
+          "S_state": 0.9487959494989991
+        }
+      ],
+      "days": [
+        {
+          "regime": "R3",
+          "n": 28234,
+          "speed_sse": 65949.66071365254,
+          "lane_flow_sse": 23958710.50618418,
+          "daily_State": 0.9446545898860748,
+          "date": "2031-02-15"
+        },
+        {
+          "regime": "R1",
+          "n": 11352,
+          "speed_sse": 19751.747240858316,
+          "lane_flow_sse": 8484162.024498597,
+          "daily_State": 0.9505489636592765,
+          "date": "2031-02-16"
+        },
+        {
+          "regime": "R3",
+          "n": 28112,
+          "speed_sse": 104976.88597148308,
+          "lane_flow_sse": 32535370.754958954,
+          "daily_State": 0.9321779193440451,
+          "date": "2031-02-17"
+        },
+        {
+          "regime": "R1",
+          "n": 11323,
+          "speed_sse": 7332.907052826408,
+          "lane_flow_sse": 6006189.128251387,
+          "daily_State": 0.9649602040232308,
+          "date": "2031-02-18"
+        },
+        {
+          "regime": "R3",
+          "n": 28323,
+          "speed_sse": 61283.98531399878,
+          "lane_flow_sse": 22392613.369047944,
+          "daily_State": 0.9466699929011666,
+          "date": "2031-02-19"
+        },
+        {
+          "regime": "R3",
+          "n": 28352,
+          "speed_sse": 24055.001029299405,
+          "lane_flow_sse": 14712895.437870407,
+          "daily_State": 0.9626392465247213,
+          "date": "2031-02-20"
+        },
+        {
+          "regime": "R3",
+          "n": 28413,
+          "speed_sse": 54493.31973545018,
+          "lane_flow_sse": 23130138.448044617,
+          "daily_State": 0.948212076498062,
+          "date": "2031-02-21"
+        },
+        {
+          "regime": "R1",
+          "n": 11490,
+          "speed_sse": 21872.912027392413,
+          "lane_flow_sse": 11759691.61779779,
+          "daily_State": 0.9456708823934713,
+          "date": "2031-02-22"
+        },
+        {
+          "regime": "R1",
+          "n": 11274,
+          "speed_sse": 10790.8241309785,
+          "lane_flow_sse": 7356817.867572985,
+          "daily_State": 0.9592834262733054,
+          "date": "2031-02-23"
+        },
+        {
+          "regime": "R3",
+          "n": 28651,
+          "speed_sse": 17106.962880305,
+          "lane_flow_sse": 13503463.485265762,
+          "daily_State": 0.9666654026571562,
+          "date": "2031-02-24"
+        },
+        {
+          "regime": "R2",
+          "n": 17066,
+          "speed_sse": 11943.866393786546,
+          "lane_flow_sse": 8856522.59127868,
+          "daily_State": 0.9644647582927233,
+          "date": "2031-02-25"
+        },
+        {
+          "regime": "R1",
+          "n": 11335,
+          "speed_sse": 7679.837995292448,
+          "lane_flow_sse": 6355311.743422948,
+          "daily_State": 0.9640668593635685,
+          "date": "2031-02-26"
+        },
+        {
+          "regime": "R1",
+          "n": 11474,
+          "speed_sse": 14057.919964385192,
+          "lane_flow_sse": 8666537.16440053,
+          "daily_State": 0.9550208902912865,
+          "date": "2031-02-27"
+        },
+        {
+          "regime": "R1",
+          "n": 11290,
+          "speed_sse": 6777.3565046510275,
+          "lane_flow_sse": 5566636.177684252,
+          "daily_State": 0.9662407860813449,
+          "date": "2031-02-28"
+        }
+      ],
+      "diagnostic_strata": {
+        "drop20": {
+          "n": 221,
+          "rmse_speed": 18.316481557054633,
+          "rmse_lane_flow": 112.31566241088085,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 16,
+              "speed_sse": 5942.26751033517,
+              "lane_flow_sse": 44716.92604828163
+            },
+            {
+              "date": "2031-02-16",
+              "n": 14,
+              "speed_sse": 4118.450499845727,
+              "lane_flow_sse": 102806.36503410955
+            },
+            {
+              "date": "2031-02-17",
+              "n": 60,
+              "speed_sse": 17053.951300644963,
+              "lane_flow_sse": 2053275.4769875153
+            },
+            {
+              "date": "2031-02-18",
+              "n": 1,
+              "speed_sse": 0.8950592357748218,
+              "lane_flow_sse": 40.96236102566564
+            },
+            {
+              "date": "2031-02-19",
+              "n": 20,
+              "speed_sse": 22942.517784061558,
+              "lane_flow_sse": 90578.06503356338
+            },
+            {
+              "date": "2031-02-20",
+              "n": 3,
+              "speed_sse": 5559.540504563866,
+              "lane_flow_sse": 12466.268544461209
+            },
+            {
+              "date": "2031-02-21",
+              "n": 30,
+              "speed_sse": 5003.105106370811,
+              "lane_flow_sse": 108396.00228180124
+            },
+            {
+              "date": "2031-02-22",
+              "n": 39,
+              "speed_sse": 4640.062998841219,
+              "lane_flow_sse": 177217.95170440615
+            },
+            {
+              "date": "2031-02-23",
+              "n": 12,
+              "speed_sse": 3446.009841630446,
+              "lane_flow_sse": 47741.83905773365
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 2,
+              "speed_sse": 1373.452684525534,
+              "lane_flow_sse": 2928.7822240854584
+            },
+            {
+              "date": "2031-02-26",
+              "n": 4,
+              "speed_sse": 303.23444569477556,
+              "lane_flow_sse": 72116.82708091915
+            },
+            {
+              "date": "2031-02-27",
+              "n": 20,
+              "speed_sse": 3760.5750194630473,
+              "lane_flow_sse": 75587.1066797825
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "recover20": {
+          "n": 236,
+          "rmse_speed": 14.051474419224212,
+          "rmse_lane_flow": 154.95410139795212,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 40,
+              "speed_sse": 16078.923176648079,
+              "lane_flow_sse": 1936426.715583926
+            },
+            {
+              "date": "2031-02-16",
+              "n": 13,
+              "speed_sse": 142.39954829717013,
+              "lane_flow_sse": 135052.15597524188
+            },
+            {
+              "date": "2031-02-17",
+              "n": 59,
+              "speed_sse": 20198.97806597252,
+              "lane_flow_sse": 1781667.1177304825
+            },
+            {
+              "date": "2031-02-18",
+              "n": 2,
+              "speed_sse": 10.93490407283365,
+              "lane_flow_sse": 38742.217376434426
+            },
+            {
+              "date": "2031-02-19",
+              "n": 24,
+              "speed_sse": 1374.3540225289776,
+              "lane_flow_sse": 341143.4895637204
+            },
+            {
+              "date": "2031-02-20",
+              "n": 1,
+              "speed_sse": 9.149862653804906,
+              "lane_flow_sse": 1200.9793745064742
+            },
+            {
+              "date": "2031-02-21",
+              "n": 25,
+              "speed_sse": 4962.439745450295,
+              "lane_flow_sse": 573685.6506237988
+            },
+            {
+              "date": "2031-02-22",
+              "n": 42,
+              "speed_sse": 3031.8402635227217,
+              "lane_flow_sse": 583310.3828677762
+            },
+            {
+              "date": "2031-02-23",
+              "n": 9,
+              "speed_sse": 61.23362922502795,
+              "lane_flow_sse": 61840.635939224885
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 2,
+              "speed_sse": 5.093093738989874,
+              "lane_flow_sse": 29092.3395346375
+            },
+            {
+              "date": "2031-02-26",
+              "n": 3,
+              "speed_sse": 73.0014885030807,
+              "lane_flow_sse": 19592.84977419219
+            },
+            {
+              "date": "2031-02-27",
+              "n": 16,
+              "speed_sse": 648.4204709570232,
+              "lane_flow_sse": 164788.0211071091
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "missing60min": {
+          "n": 6473,
+          "rmse_speed": 1.3269248858019134,
+          "rmse_lane_flow": 29.539514723056044,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 889,
+              "speed_sse": 3646.902070594425,
+              "lane_flow_sse": 1168327.7802339084
+            },
+            {
+              "date": "2031-02-16",
+              "n": 66,
+              "speed_sse": 51.774601557030174,
+              "lane_flow_sse": 34635.764472407114
+            },
+            {
+              "date": "2031-02-17",
+              "n": 994,
+              "speed_sse": 2977.842201348962,
+              "lane_flow_sse": 1245445.640237019
+            },
+            {
+              "date": "2031-02-18",
+              "n": 67,
+              "speed_sse": 38.81241203343692,
+              "lane_flow_sse": 49098.87624714832
+            },
+            {
+              "date": "2031-02-19",
+              "n": 878,
+              "speed_sse": 1439.5939461382945,
+              "lane_flow_sse": 874177.0349961574
+            },
+            {
+              "date": "2031-02-20",
+              "n": 1058,
+              "speed_sse": 1387.1772369177013,
+              "lane_flow_sse": 641684.7075079664
+            },
+            {
+              "date": "2031-02-21",
+              "n": 867,
+              "speed_sse": 759.4831308074325,
+              "lane_flow_sse": 812293.3855724458
+            },
+            {
+              "date": "2031-02-22",
+              "n": 79,
+              "speed_sse": 61.084375739694934,
+              "lane_flow_sse": 68706.92171343189
+            },
+            {
+              "date": "2031-02-23",
+              "n": 85,
+              "speed_sse": 63.30395137231464,
+              "lane_flow_sse": 50607.284175188564
+            },
+            {
+              "date": "2031-02-24",
+              "n": 1145,
+              "speed_sse": 740.9485698540943,
+              "lane_flow_sse": 500720.6586198097
+            },
+            {
+              "date": "2031-02-25",
+              "n": 146,
+              "speed_sse": 116.24591639943867,
+              "lane_flow_sse": 76672.2796677404
+            },
+            {
+              "date": "2031-02-26",
+              "n": 92,
+              "speed_sse": 58.71476000666777,
+              "lane_flow_sse": 65653.83675217757
+            },
+            {
+              "date": "2031-02-27",
+              "n": 48,
+              "speed_sse": 18.76301695862616,
+              "lane_flow_sse": 33591.495995295714
+            },
+            {
+              "date": "2031-02-28",
+              "n": 59,
+              "speed_sse": 36.55685129548291,
+              "lane_flow_sse": 26613.640176007586
+            }
+          ]
+        },
+        "missing180min": {
+          "n": 0,
+          "rmse_speed": null,
+          "rmse_lane_flow": null,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-16",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-17",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-18",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-19",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-20",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-21",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-22",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-23",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-26",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-27",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "congested50": {
+          "n": 9303,
+          "rmse_speed": 3.6749457633144695,
+          "rmse_lane_flow": 45.010517498498935,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 1540,
+              "speed_sse": 21624.808743656075,
+              "lane_flow_sse": 2465749.0357130477
+            },
+            {
+              "date": "2031-02-16",
+              "n": 981,
+              "speed_sse": 6704.300544885904,
+              "lane_flow_sse": 1303716.905198624
+            },
+            {
+              "date": "2031-02-17",
+              "n": 810,
+              "speed_sse": 32830.40746733794,
+              "lane_flow_sse": 5952857.475224335
+            },
+            {
+              "date": "2031-02-18",
+              "n": 40,
+              "speed_sse": 167.97420091429402,
+              "lane_flow_sse": 53507.14955816738
+            },
+            {
+              "date": "2031-02-19",
+              "n": 1452,
+              "speed_sse": 31220.71125576671,
+              "lane_flow_sse": 2288405.9653722076
+            },
+            {
+              "date": "2031-02-20",
+              "n": 19,
+              "speed_sse": 2249.4929226337204,
+              "lane_flow_sse": 38787.9789807657
+            },
+            {
+              "date": "2031-02-21",
+              "n": 1660,
+              "speed_sse": 22586.882466406245,
+              "lane_flow_sse": 2783971.5793549167
+            },
+            {
+              "date": "2031-02-22",
+              "n": 1448,
+              "speed_sse": 2612.425628126862,
+              "lane_flow_sse": 2217269.392234373
+            },
+            {
+              "date": "2031-02-23",
+              "n": 498,
+              "speed_sse": 458.4365298419336,
+              "lane_flow_sse": 619386.2599675679
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 19,
+              "speed_sse": 79.7530594712432,
+              "lane_flow_sse": 72780.09755950875
+            },
+            {
+              "date": "2031-02-26",
+              "n": 68,
+              "speed_sse": 144.52629930198455,
+              "lane_flow_sse": 82645.16673323578
+            },
+            {
+              "date": "2031-02-27",
+              "n": 768,
+              "speed_sse": 4959.401739464629,
+              "lane_flow_sse": 968305.00914861
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        }
+      },
+      "legacy_target_pair_increment_L1": 0.6998761893581626
+    },
+    "nn_primary": {
+      "S_state": 0.959781808136266,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 79538,
+          "rmse_speed": 0.951610007953239,
+          "rmse_lane_flow": 24.822833504882777,
+          "S_state": 0.9604143848078
+        },
+        {
+          "regime": "R2",
+          "n": 17066,
+          "rmse_speed": 0.7872849925682411,
+          "rmse_lane_flow": 21.79479253584494,
+          "S_state": 0.9662853032163783
+        },
+        {
+          "regime": "R3",
+          "n": 170085,
+          "rmse_speed": 1.2647203254835568,
+          "rmse_lane_flow": 26.134310328176525,
+          "S_state": 0.9526457363846199
+        }
+      ],
+      "days": [
+        {
+          "regime": "R3",
+          "n": 28234,
+          "speed_sse": 52689.50665802343,
+          "lane_flow_sse": 22188209.17930135,
+          "daily_State": 0.9490004593893311,
+          "date": "2031-02-15"
+        },
+        {
+          "regime": "R1",
+          "n": 11352,
+          "speed_sse": 16498.04978921702,
+          "lane_flow_sse": 7607718.75432388,
+          "daily_State": 0.9541133011672247,
+          "date": "2031-02-16"
+        },
+        {
+          "regime": "R3",
+          "n": 28112,
+          "speed_sse": 87882.94072226895,
+          "lane_flow_sse": 27237716.06235595,
+          "daily_State": 0.9379449211160942,
+          "date": "2031-02-17"
+        },
+        {
+          "regime": "R1",
+          "n": 11323,
+          "speed_sse": 6744.724767332347,
+          "lane_flow_sse": 5496380.551814437,
+          "daily_State": 0.9664379062616341,
+          "date": "2031-02-18"
+        },
+        {
+          "regime": "R3",
+          "n": 28323,
+          "speed_sse": 57052.15174504368,
+          "lane_flow_sse": 20115010.649356384,
+          "daily_State": 0.9489123204542039,
+          "date": "2031-02-19"
+        },
+        {
+          "regime": "R3",
+          "n": 28352,
+          "speed_sse": 18335.61204848281,
+          "lane_flow_sse": 13500098.825147988,
+          "daily_State": 0.9659000991124835,
+          "date": "2031-02-20"
+        },
+        {
+          "regime": "R3",
+          "n": 28413,
+          "speed_sse": 39571.78363941939,
+          "lane_flow_sse": 20688659.66936314,
+          "daily_State": 0.9538211373225173,
+          "date": "2031-02-21"
+        },
+        {
+          "regime": "R1",
+          "n": 11490,
+          "speed_sse": 17818.5686583828,
+          "lane_flow_sse": 10463034.341441743,
+          "daily_State": 0.9499660573617589,
+          "date": "2031-02-22"
+        },
+        {
+          "regime": "R1",
+          "n": 11274,
+          "speed_sse": 7281.728908339728,
+          "lane_flow_sse": 6679366.881378762,
+          "daily_State": 0.9639796957683315,
+          "date": "2031-02-23"
+        },
+        {
+          "regime": "R3",
+          "n": 28651,
+          "speed_sse": 16521.93946191527,
+          "lane_flow_sse": 12438730.775466992,
+          "daily_State": 0.9676229304481077,
+          "date": "2031-02-24"
+        },
+        {
+          "regime": "R2",
+          "n": 17066,
+          "speed_sse": 10577.808177422514,
+          "lane_flow_sse": 8106571.545359794,
+          "daily_State": 0.9662853032163783,
+          "date": "2031-02-25"
+        },
+        {
+          "regime": "R1",
+          "n": 11335,
+          "speed_sse": 7371.380195511185,
+          "lane_flow_sse": 5818664.769266441,
+          "daily_State": 0.965210926877274,
+          "date": "2031-02-26"
+        },
+        {
+          "regime": "R1",
+          "n": 11474,
+          "speed_sse": 9742.25720333874,
+          "lane_flow_sse": 7820883.587446613,
+          "daily_State": 0.9600806628560057,
+          "date": "2031-02-27"
+        },
+        {
+          "regime": "R1",
+          "n": 11290,
+          "speed_sse": 6569.849594275893,
+          "lane_flow_sse": 5123124.216015057,
+          "daily_State": 0.9671912222208134,
+          "date": "2031-02-28"
+        }
+      ],
+      "diagnostic_strata": {
+        "drop20": {
+          "n": 221,
+          "rmse_speed": 15.084244588651563,
+          "rmse_lane_flow": 95.74254198544438,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 16,
+              "speed_sse": 4694.724919949837,
+              "lane_flow_sse": 42919.486439491855
+            },
+            {
+              "date": "2031-02-16",
+              "n": 14,
+              "speed_sse": 3125.9112661752483,
+              "lane_flow_sse": 76866.59063900859
+            },
+            {
+              "date": "2031-02-17",
+              "n": 60,
+              "speed_sse": 11789.75535976784,
+              "lane_flow_sse": 1479933.834519167
+            },
+            {
+              "date": "2031-02-18",
+              "n": 1,
+              "speed_sse": 0.1358944594587502,
+              "lane_flow_sse": 613.5915656150901
+            },
+            {
+              "date": "2031-02-19",
+              "n": 20,
+              "speed_sse": 21892.43295751264,
+              "lane_flow_sse": 61145.395951249
+            },
+            {
+              "date": "2031-02-20",
+              "n": 3,
+              "speed_sse": 1000.5905366637155,
+              "lane_flow_sse": 9959.63576527823
+            },
+            {
+              "date": "2031-02-21",
+              "n": 30,
+              "speed_sse": 2945.178069095463,
+              "lane_flow_sse": 91719.52079309392
+            },
+            {
+              "date": "2031-02-22",
+              "n": 39,
+              "speed_sse": 2000.363870715744,
+              "lane_flow_sse": 136058.1584111481
+            },
+            {
+              "date": "2031-02-23",
+              "n": 12,
+              "speed_sse": 417.17106509359553,
+              "lane_flow_sse": 48419.8502331511
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 2,
+              "speed_sse": 478.6748672956621,
+              "lane_flow_sse": 5883.71054835774
+            },
+            {
+              "date": "2031-02-26",
+              "n": 4,
+              "speed_sse": 141.20716028407628,
+              "lane_flow_sse": 31732.028733826475
+            },
+            {
+              "date": "2031-02-27",
+              "n": 20,
+              "speed_sse": 1798.964126055059,
+              "lane_flow_sse": 40574.386830055264
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "recover20": {
+          "n": 236,
+          "rmse_speed": 11.530520430475411,
+          "rmse_lane_flow": 137.28516622240673,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 40,
+              "speed_sse": 9202.401546021556,
+              "lane_flow_sse": 2298863.871710458
+            },
+            {
+              "date": "2031-02-16",
+              "n": 13,
+              "speed_sse": 77.97885771298272,
+              "lane_flow_sse": 115029.81780246667
+            },
+            {
+              "date": "2031-02-17",
+              "n": 59,
+              "speed_sse": 15354.351622926639,
+              "lane_flow_sse": 944564.9861871552
+            },
+            {
+              "date": "2031-02-18",
+              "n": 2,
+              "speed_sse": 16.321764448207034,
+              "lane_flow_sse": 11284.256861955357
+            },
+            {
+              "date": "2031-02-19",
+              "n": 24,
+              "speed_sse": 508.1858827944071,
+              "lane_flow_sse": 152392.28133923892
+            },
+            {
+              "date": "2031-02-20",
+              "n": 1,
+              "speed_sse": 5.066846041722818,
+              "lane_flow_sse": 1765.98918824846
+            },
+            {
+              "date": "2031-02-21",
+              "n": 25,
+              "speed_sse": 2618.495815476979,
+              "lane_flow_sse": 287342.6189151338
+            },
+            {
+              "date": "2031-02-22",
+              "n": 42,
+              "speed_sse": 3095.84047754889,
+              "lane_flow_sse": 503187.63992828486
+            },
+            {
+              "date": "2031-02-23",
+              "n": 9,
+              "speed_sse": 91.9164890557112,
+              "lane_flow_sse": 18599.887094383346
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 2,
+              "speed_sse": 0.16967750911539548,
+              "lane_flow_sse": 20199.738569413727
+            },
+            {
+              "date": "2031-02-26",
+              "n": 3,
+              "speed_sse": 0.40008236034104017,
+              "lane_flow_sse": 18383.275801351916
+            },
+            {
+              "date": "2031-02-27",
+              "n": 16,
+              "speed_sse": 405.75566793960786,
+              "lane_flow_sse": 76328.81667437803
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "missing60min": {
+          "n": 6473,
+          "rmse_speed": 1.3684940277654882,
+          "rmse_lane_flow": 27.679890223810556,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 889,
+              "speed_sse": 3144.3756188117113,
+              "lane_flow_sse": 991978.7897255718
+            },
+            {
+              "date": "2031-02-16",
+              "n": 66,
+              "speed_sse": 37.23449920621638,
+              "lane_flow_sse": 34101.96210205214
+            },
+            {
+              "date": "2031-02-17",
+              "n": 994,
+              "speed_sse": 5032.4198162326,
+              "lane_flow_sse": 1072433.1203129645
+            },
+            {
+              "date": "2031-02-18",
+              "n": 67,
+              "speed_sse": 36.040158831857156,
+              "lane_flow_sse": 41700.2754926036
+            },
+            {
+              "date": "2031-02-19",
+              "n": 878,
+              "speed_sse": 1140.3820571930844,
+              "lane_flow_sse": 773399.9882909782
+            },
+            {
+              "date": "2031-02-20",
+              "n": 1058,
+              "speed_sse": 990.3745439468396,
+              "lane_flow_sse": 579239.7305126911
+            },
+            {
+              "date": "2031-02-21",
+              "n": 867,
+              "speed_sse": 707.3519665446313,
+              "lane_flow_sse": 720938.5170558109
+            },
+            {
+              "date": "2031-02-22",
+              "n": 79,
+              "speed_sse": 41.29318707460606,
+              "lane_flow_sse": 63788.571246413645
+            },
+            {
+              "date": "2031-02-23",
+              "n": 85,
+              "speed_sse": 61.00878496535882,
+              "lane_flow_sse": 48597.52906807112
+            },
+            {
+              "date": "2031-02-24",
+              "n": 1145,
+              "speed_sse": 713.5926963020963,
+              "lane_flow_sse": 454638.8809309546
+            },
+            {
+              "date": "2031-02-25",
+              "n": 146,
+              "speed_sse": 108.69531118380671,
+              "lane_flow_sse": 68022.836122938
+            },
+            {
+              "date": "2031-02-26",
+              "n": 92,
+              "speed_sse": 54.49998762824643,
+              "lane_flow_sse": 54059.17549931565
+            },
+            {
+              "date": "2031-02-27",
+              "n": 48,
+              "speed_sse": 20.720611617365737,
+              "lane_flow_sse": 31880.312286507287
+            },
+            {
+              "date": "2031-02-28",
+              "n": 59,
+              "speed_sse": 34.48918724653141,
+              "lane_flow_sse": 24679.648851788195
+            }
+          ]
+        },
+        "missing180min": {
+          "n": 0,
+          "rmse_speed": null,
+          "rmse_lane_flow": null,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-16",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-17",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-18",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-19",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-20",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-21",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-22",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-23",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-26",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-27",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "congested50": {
+          "n": 9303,
+          "rmse_speed": 3.383720465413669,
+          "rmse_lane_flow": 42.99686284109736,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 1540,
+              "speed_sse": 20253.82719396065,
+              "lane_flow_sse": 2237855.116059527
+            },
+            {
+              "date": "2031-02-16",
+              "n": 981,
+              "speed_sse": 5460.470233901979,
+              "lane_flow_sse": 1183434.0321081395
+            },
+            {
+              "date": "2031-02-17",
+              "n": 810,
+              "speed_sse": 25986.74369079612,
+              "lane_flow_sse": 5385333.072888015
+            },
+            {
+              "date": "2031-02-18",
+              "n": 40,
+              "speed_sse": 82.11511649822138,
+              "lane_flow_sse": 58716.230233244816
+            },
+            {
+              "date": "2031-02-19",
+              "n": 1452,
+              "speed_sse": 33818.45601781082,
+              "lane_flow_sse": 2123246.61293545
+            },
+            {
+              "date": "2031-02-20",
+              "n": 19,
+              "speed_sse": 583.9637729494281,
+              "lane_flow_sse": 36873.23135351499
+            },
+            {
+              "date": "2031-02-21",
+              "n": 1660,
+              "speed_sse": 15114.360769056606,
+              "lane_flow_sse": 2508968.6483854507
+            },
+            {
+              "date": "2031-02-22",
+              "n": 1448,
+              "speed_sse": 2255.8717039234043,
+              "lane_flow_sse": 2022561.0027408646
+            },
+            {
+              "date": "2031-02-23",
+              "n": 498,
+              "speed_sse": 296.71050089843703,
+              "lane_flow_sse": 585543.0923183415
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 19,
+              "speed_sse": 37.13519495408734,
+              "lane_flow_sse": 54327.44557589074
+            },
+            {
+              "date": "2031-02-26",
+              "n": 68,
+              "speed_sse": 206.24402248915948,
+              "lane_flow_sse": 66941.57844267337
+            },
+            {
+              "date": "2031-02-27",
+              "n": 768,
+              "speed_sse": 2419.3974242767317,
+              "lane_flow_sse": 934937.1194395055
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        }
+      },
+      "legacy_target_pair_increment_L1": 0.6624765036146147
+    },
+    "control_seed20261013": {
+      "S_state": 0.9591082283353627,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 79538,
+          "rmse_speed": 0.9600490935513011,
+          "rmse_lane_flow": 24.968846955457703,
+          "S_state": 0.960120156913441
+        },
+        {
+          "regime": "R2",
+          "n": 17066,
+          "rmse_speed": 0.7966912937485852,
+          "rmse_lane_flow": 21.826324658462905,
+          "S_state": 0.9660579524835424
+        },
+        {
+          "regime": "R3",
+          "n": 170085,
+          "rmse_speed": 1.3291976709532436,
+          "rmse_lane_flow": 26.273158302137343,
+          "S_state": 0.9511465756091046
+        }
+      ],
+      "days": [
+        {
+          "regime": "R3",
+          "n": 28234,
+          "speed_sse": 64453.895328676845,
+          "lane_flow_sse": 22273602.37630221,
+          "daily_State": 0.9458308115127747,
+          "date": "2031-02-15"
+        },
+        {
+          "regime": "R1",
+          "n": 11352,
+          "speed_sse": 15961.806786719757,
+          "lane_flow_sse": 7758383.365800508,
+          "daily_State": 0.9543444200452342,
+          "date": "2031-02-16"
+        },
+        {
+          "regime": "R3",
+          "n": 28112,
+          "speed_sse": 96714.22940329698,
+          "lane_flow_sse": 27445146.728882506,
+          "daily_State": 0.9359812626476234,
+          "date": "2031-02-17"
+        },
+        {
+          "regime": "R1",
+          "n": 11323,
+          "speed_sse": 6881.012057751424,
+          "lane_flow_sse": 5543004.723344121,
+          "daily_State": 0.9661988290013304,
+          "date": "2031-02-18"
+        },
+        {
+          "regime": "R3",
+          "n": 28323,
+          "speed_sse": 63247.49987862123,
+          "lane_flow_sse": 20512571.309618868,
+          "daily_State": 0.9470897905218432,
+          "date": "2031-02-19"
+        },
+        {
+          "regime": "R3",
+          "n": 28352,
+          "speed_sse": 18387.81867846819,
+          "lane_flow_sse": 13611456.62795675,
+          "daily_State": 0.9658065311381219,
+          "date": "2031-02-20"
+        },
+        {
+          "regime": "R3",
+          "n": 28413,
+          "speed_sse": 41141.073948794685,
+          "lane_flow_sse": 21067183.147499863,
+          "daily_State": 0.9531322083755026,
+          "date": "2031-02-21"
+        },
+        {
+          "regime": "R1",
+          "n": 11490,
+          "speed_sse": 17791.396705650746,
+          "lane_flow_sse": 10508992.521542445,
+          "daily_State": 0.9499358198732806,
+          "date": "2031-02-22"
+        },
+        {
+          "regime": "R1",
+          "n": 11274,
+          "speed_sse": 7733.926396051385,
+          "lane_flow_sse": 6767003.655391688,
+          "daily_State": 0.9633267830629514,
+          "date": "2031-02-23"
+        },
+        {
+          "regime": "R3",
+          "n": 28651,
+          "speed_sse": 16555.954149741454,
+          "lane_flow_sse": 12496117.530507788,
+          "daily_State": 0.967569247577756,
+          "date": "2031-02-24"
+        },
+        {
+          "regime": "R2",
+          "n": 17066,
+          "speed_sse": 10832.080621248802,
+          "lane_flow_sse": 8130045.255217017,
+          "daily_State": 0.9660579524835424,
+          "date": "2031-02-25"
+        },
+        {
+          "regime": "R1",
+          "n": 11335,
+          "speed_sse": 7779.854712727189,
+          "lane_flow_sse": 5856263.041491554,
+          "daily_State": 0.9646787854626255,
+          "date": "2031-02-26"
+        },
+        {
+          "regime": "R1",
+          "n": 11474,
+          "speed_sse": 10552.44748235697,
+          "lane_flow_sse": 7991860.211075954,
+          "daily_State": 0.9590519757207521,
+          "date": "2031-02-27"
+        },
+        {
+          "regime": "R1",
+          "n": 11290,
+          "speed_sse": 6609.274071979272,
+          "lane_flow_sse": 5161927.131111583,
+          "daily_State": 0.967080126243182,
+          "date": "2031-02-28"
+        }
+      ],
+      "diagnostic_strata": {
+        "drop20": {
+          "n": 221,
+          "rmse_speed": 16.208869813433726,
+          "rmse_lane_flow": 92.61870454869855,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 16,
+              "speed_sse": 8043.897635513949,
+              "lane_flow_sse": 49289.60659358377
+            },
+            {
+              "date": "2031-02-16",
+              "n": 14,
+              "speed_sse": 3575.1980174358673,
+              "lane_flow_sse": 83756.59751178279
+            },
+            {
+              "date": "2031-02-17",
+              "n": 60,
+              "speed_sse": 13134.926024426124,
+              "lane_flow_sse": 1275004.4614945296
+            },
+            {
+              "date": "2031-02-18",
+              "n": 1,
+              "speed_sse": 0.608025697275339,
+              "lane_flow_sse": 865.0953982179642
+            },
+            {
+              "date": "2031-02-19",
+              "n": 20,
+              "speed_sse": 23358.62194283457,
+              "lane_flow_sse": 73332.8580103839
+            },
+            {
+              "date": "2031-02-20",
+              "n": 3,
+              "speed_sse": 1148.1503872729181,
+              "lane_flow_sse": 14009.99673724795
+            },
+            {
+              "date": "2031-02-21",
+              "n": 30,
+              "speed_sse": 3089.5628162173,
+              "lane_flow_sse": 103116.82003913459
+            },
+            {
+              "date": "2031-02-22",
+              "n": 39,
+              "speed_sse": 1947.4178840326192,
+              "lane_flow_sse": 143550.6787039862
+            },
+            {
+              "date": "2031-02-23",
+              "n": 12,
+              "speed_sse": 662.0555886058818,
+              "lane_flow_sse": 56554.98924309295
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 2,
+              "speed_sse": 674.4282028558675,
+              "lane_flow_sse": 16721.23910741383
+            },
+            {
+              "date": "2031-02-26",
+              "n": 4,
+              "speed_sse": 84.95220529507884,
+              "lane_flow_sse": 38358.503104370386
+            },
+            {
+              "date": "2031-02-27",
+              "n": 20,
+              "speed_sse": 2342.95006878688,
+              "lane_flow_sse": 41226.75358993986
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "recover20": {
+          "n": 236,
+          "rmse_speed": 11.571679555234807,
+          "rmse_lane_flow": 135.93175343372013,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 40,
+              "speed_sse": 10751.711670645189,
+              "lane_flow_sse": 2159317.1104306933
+            },
+            {
+              "date": "2031-02-16",
+              "n": 13,
+              "speed_sse": 96.53870046706102,
+              "lane_flow_sse": 161073.42719621398
+            },
+            {
+              "date": "2031-02-17",
+              "n": 59,
+              "speed_sse": 14278.681991995962,
+              "lane_flow_sse": 916727.4465272456
+            },
+            {
+              "date": "2031-02-18",
+              "n": 2,
+              "speed_sse": 20.604713693256933,
+              "lane_flow_sse": 14188.908986000932
+            },
+            {
+              "date": "2031-02-19",
+              "n": 24,
+              "speed_sse": 713.4474831428357,
+              "lane_flow_sse": 167717.52499923867
+            },
+            {
+              "date": "2031-02-20",
+              "n": 1,
+              "speed_sse": 1.382346018914882,
+              "lane_flow_sse": 3351.6946078620963
+            },
+            {
+              "date": "2031-02-21",
+              "n": 25,
+              "speed_sse": 2474.5558465295453,
+              "lane_flow_sse": 261454.10070308158
+            },
+            {
+              "date": "2031-02-22",
+              "n": 42,
+              "speed_sse": 2689.559718896447,
+              "lane_flow_sse": 530961.963470038
+            },
+            {
+              "date": "2031-02-23",
+              "n": 9,
+              "speed_sse": 154.0732312046454,
+              "lane_flow_sse": 21380.72527181315
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 2,
+              "speed_sse": 8.04752865034037,
+              "lane_flow_sse": 14011.099114177243
+            },
+            {
+              "date": "2031-02-26",
+              "n": 3,
+              "speed_sse": 15.573568497954659,
+              "lane_flow_sse": 19519.772197418322
+            },
+            {
+              "date": "2031-02-27",
+              "n": 16,
+              "speed_sse": 397.1123843111109,
+              "lane_flow_sse": 90972.44210571934
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "missing60min": {
+          "n": 6473,
+          "rmse_speed": 1.3891289973873238,
+          "rmse_lane_flow": 27.83067302997367,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 889,
+              "speed_sse": 3622.025314913143,
+              "lane_flow_sse": 1021402.0194798589
+            },
+            {
+              "date": "2031-02-16",
+              "n": 66,
+              "speed_sse": 31.137669919361336,
+              "lane_flow_sse": 35480.91397056015
+            },
+            {
+              "date": "2031-02-17",
+              "n": 994,
+              "speed_sse": 4914.140304621262,
+              "lane_flow_sse": 1098221.4244676628
+            },
+            {
+              "date": "2031-02-18",
+              "n": 67,
+              "speed_sse": 36.48726154085411,
+              "lane_flow_sse": 41038.13455371226
+            },
+            {
+              "date": "2031-02-19",
+              "n": 878,
+              "speed_sse": 1274.6735034006579,
+              "lane_flow_sse": 765436.3651660853
+            },
+            {
+              "date": "2031-02-20",
+              "n": 1058,
+              "speed_sse": 825.0115936005994,
+              "lane_flow_sse": 576895.9475933413
+            },
+            {
+              "date": "2031-02-21",
+              "n": 867,
+              "speed_sse": 751.5036010359411,
+              "lane_flow_sse": 733601.0121893743
+            },
+            {
+              "date": "2031-02-22",
+              "n": 79,
+              "speed_sse": 43.56023797053994,
+              "lane_flow_sse": 61936.33191253648
+            },
+            {
+              "date": "2031-02-23",
+              "n": 85,
+              "speed_sse": 63.12864301569296,
+              "lane_flow_sse": 46372.04607113187
+            },
+            {
+              "date": "2031-02-24",
+              "n": 1145,
+              "speed_sse": 712.6288087443893,
+              "lane_flow_sse": 454934.6207059998
+            },
+            {
+              "date": "2031-02-25",
+              "n": 146,
+              "speed_sse": 107.58522555033446,
+              "lane_flow_sse": 68898.14711408457
+            },
+            {
+              "date": "2031-02-26",
+              "n": 92,
+              "speed_sse": 53.22913404749706,
+              "lane_flow_sse": 53282.77686598074
+            },
+            {
+              "date": "2031-02-27",
+              "n": 48,
+              "speed_sse": 20.502588442828312,
+              "lane_flow_sse": 31277.019719840304
+            },
+            {
+              "date": "2031-02-28",
+              "n": 59,
+              "speed_sse": 35.200684154600644,
+              "lane_flow_sse": 24861.836893170443
+            }
+          ]
+        },
+        "missing180min": {
+          "n": 0,
+          "rmse_speed": null,
+          "rmse_lane_flow": null,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-16",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-17",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-18",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-19",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-20",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-21",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-22",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-23",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-26",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-27",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "congested50": {
+          "n": 9303,
+          "rmse_speed": 3.748265189190143,
+          "rmse_lane_flow": 43.506212271199495,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 1540,
+              "speed_sse": 29512.945370673344,
+              "lane_flow_sse": 2275850.627522776
+            },
+            {
+              "date": "2031-02-16",
+              "n": 981,
+              "speed_sse": 5788.291904194144,
+              "lane_flow_sse": 1182818.3140428143
+            },
+            {
+              "date": "2031-02-17",
+              "n": 810,
+              "speed_sse": 31646.685203951092,
+              "lane_flow_sse": 5562425.85469504
+            },
+            {
+              "date": "2031-02-18",
+              "n": 40,
+              "speed_sse": 126.63699031446147,
+              "lane_flow_sse": 57334.87567122712
+            },
+            {
+              "date": "2031-02-19",
+              "n": 1452,
+              "speed_sse": 40467.09412013106,
+              "lane_flow_sse": 2171910.0197550873
+            },
+            {
+              "date": "2031-02-20",
+              "n": 19,
+              "speed_sse": 647.7031843846995,
+              "lane_flow_sse": 36031.4780049645
+            },
+            {
+              "date": "2031-02-21",
+              "n": 1660,
+              "speed_sse": 15981.489630802036,
+              "lane_flow_sse": 2613772.790675194
+            },
+            {
+              "date": "2031-02-22",
+              "n": 1448,
+              "speed_sse": 2877.1538891123364,
+              "lane_flow_sse": 2007767.9279031556
+            },
+            {
+              "date": "2031-02-23",
+              "n": 498,
+              "speed_sse": 374.82291393124956,
+              "lane_flow_sse": 588323.0838650414
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 19,
+              "speed_sse": 55.46527752721512,
+              "lane_flow_sse": 46499.00106538692
+            },
+            {
+              "date": "2031-02-26",
+              "n": 68,
+              "speed_sse": 182.06738985700315,
+              "lane_flow_sse": 69072.6309703975
+            },
+            {
+              "date": "2031-02-27",
+              "n": 768,
+              "speed_sse": 3042.0675359068027,
+              "lane_flow_sse": 996823.474883503
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        }
+      },
+      "legacy_target_pair_increment_L1": 0.6810208672796696
+    },
+    "control_seed20261029": {
+      "S_state": 0.9593117346018009,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 79538,
+          "rmse_speed": 0.9859622909257376,
+          "rmse_lane_flow": 25.074381248266576,
+          "S_state": 0.9594795222256665
+        },
+        {
+          "regime": "R2",
+          "n": 17066,
+          "rmse_speed": 0.7927794519294403,
+          "rmse_lane_flow": 22.004692349661184,
+          "S_state": 0.966005699703584
+        },
+        {
+          "regime": "R3",
+          "n": 170085,
+          "rmse_speed": 1.2637799408837729,
+          "rmse_lane_flow": 26.416136609685125,
+          "S_state": 0.952449981876152
+        }
+      ],
+      "days": [
+        {
+          "regime": "R3",
+          "n": 28234,
+          "speed_sse": 47263.68165594813,
+          "lane_flow_sse": 22816358.25468652,
+          "daily_State": 0.9502589184719512,
+          "date": "2031-02-15"
+        },
+        {
+          "regime": "R1",
+          "n": 11352,
+          "speed_sse": 18757.27273817398,
+          "lane_flow_sse": 7734060.571237135,
+          "daily_State": 0.9522234496661699,
+          "date": "2031-02-16"
+        },
+        {
+          "regime": "R3",
+          "n": 28112,
+          "speed_sse": 90514.29860172211,
+          "lane_flow_sse": 28201028.629422083,
+          "daily_State": 0.9369590553718072,
+          "date": "2031-02-17"
+        },
+        {
+          "regime": "R1",
+          "n": 11323,
+          "speed_sse": 6852.523706058502,
+          "lane_flow_sse": 5568407.758502339,
+          "daily_State": 0.966194896629323,
+          "date": "2031-02-18"
+        },
+        {
+          "regime": "R3",
+          "n": 28323,
+          "speed_sse": 56295.51240519469,
+          "lane_flow_sse": 20385610.517573483,
+          "daily_State": 0.9489793161299935,
+          "date": "2031-02-19"
+        },
+        {
+          "regime": "R3",
+          "n": 28352,
+          "speed_sse": 18757.587653291637,
+          "lane_flow_sse": 13665882.758742375,
+          "daily_State": 0.9655989476311848,
+          "date": "2031-02-20"
+        },
+        {
+          "regime": "R3",
+          "n": 28413,
+          "speed_sse": 42064.302467116904,
+          "lane_flow_sse": 21025888.984163813,
+          "daily_State": 0.9528626633451134,
+          "date": "2031-02-21"
+        },
+        {
+          "regime": "R1",
+          "n": 11490,
+          "speed_sse": 20263.62828376003,
+          "lane_flow_sse": 10938453.604529347,
+          "daily_State": 0.9476600799278168,
+          "date": "2031-02-22"
+        },
+        {
+          "regime": "R1",
+          "n": 11274,
+          "speed_sse": 7382.121089661556,
+          "lane_flow_sse": 6779933.60598054,
+          "daily_State": 0.963720482036238,
+          "date": "2031-02-23"
+        },
+        {
+          "regime": "R3",
+          "n": 28651,
+          "speed_sse": 16754.129721172627,
+          "lane_flow_sse": 12592631.373512093,
+          "daily_State": 0.9674095561462972,
+          "date": "2031-02-24"
+        },
+        {
+          "regime": "R2",
+          "n": 17066,
+          "speed_sse": 10725.968360946745,
+          "lane_flow_sse": 8263467.879891651,
+          "daily_State": 0.966005699703584,
+          "date": "2031-02-25"
+        },
+        {
+          "regime": "R1",
+          "n": 11335,
+          "speed_sse": 7376.512201967686,
+          "lane_flow_sse": 5893423.054786295,
+          "daily_State": 0.9650936335616402,
+          "date": "2031-02-26"
+        },
+        {
+          "regime": "R1",
+          "n": 11474,
+          "speed_sse": 10000.032918103298,
+          "lane_flow_sse": 7923090.378082397,
+          "daily_State": 0.9596887008138366,
+          "date": "2031-02-27"
+        },
+        {
+          "regime": "R1",
+          "n": 11290,
+          "speed_sse": 6688.519995200346,
+          "lane_flow_sse": 5170127.862673407,
+          "daily_State": 0.9669683267658443,
+          "date": "2031-02-28"
+        }
+      ],
+      "diagnostic_strata": {
+        "drop20": {
+          "n": 221,
+          "rmse_speed": 14.492397329186455,
+          "rmse_lane_flow": 103.90518927120651,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 16,
+              "speed_sse": 2343.0060201445453,
+              "lane_flow_sse": 46100.59366957974
+            },
+            {
+              "date": "2031-02-16",
+              "n": 14,
+              "speed_sse": 2974.288869638049,
+              "lane_flow_sse": 73676.87791681783
+            },
+            {
+              "date": "2031-02-17",
+              "n": 60,
+              "speed_sse": 11555.516282758546,
+              "lane_flow_sse": 1806774.2214276467
+            },
+            {
+              "date": "2031-02-18",
+              "n": 1,
+              "speed_sse": 0.0018047807658284106,
+              "lane_flow_sse": 405.1789295790361
+            },
+            {
+              "date": "2031-02-19",
+              "n": 20,
+              "speed_sse": 20820.299440851788,
+              "lane_flow_sse": 63088.14802776274
+            },
+            {
+              "date": "2031-02-20",
+              "n": 3,
+              "speed_sse": 864.2473687664348,
+              "lane_flow_sse": 7483.166777093246
+            },
+            {
+              "date": "2031-02-21",
+              "n": 30,
+              "speed_sse": 3140.7901223016443,
+              "lane_flow_sse": 97665.97791622119
+            },
+            {
+              "date": "2031-02-22",
+              "n": 39,
+              "speed_sse": 2279.0988631147675,
+              "lane_flow_sse": 159922.3989147302
+            },
+            {
+              "date": "2031-02-23",
+              "n": 12,
+              "speed_sse": 264.03055349655625,
+              "lane_flow_sse": 45456.15409791842
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 2,
+              "speed_sse": 319.1962756183159,
+              "lane_flow_sse": 1088.1575352593356
+            },
+            {
+              "date": "2031-02-26",
+              "n": 4,
+              "speed_sse": 242.70231117684068,
+              "lane_flow_sse": 26178.204559575934
+            },
+            {
+              "date": "2031-02-27",
+              "n": 20,
+              "speed_sse": 1613.3593440411057,
+              "lane_flow_sse": 58140.647232055344
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "recover20": {
+          "n": 236,
+          "rmse_speed": 12.496730144103804,
+          "rmse_lane_flow": 144.3451857256461,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 40,
+              "speed_sse": 9016.295946574628,
+              "lane_flow_sse": 2541938.244878228
+            },
+            {
+              "date": "2031-02-16",
+              "n": 13,
+              "speed_sse": 95.81482738198928,
+              "lane_flow_sse": 89659.72936290725
+            },
+            {
+              "date": "2031-02-17",
+              "n": 59,
+              "speed_sse": 18762.215128020933,
+              "lane_flow_sse": 1088965.2401175285
+            },
+            {
+              "date": "2031-02-18",
+              "n": 2,
+              "speed_sse": 15.478242607123097,
+              "lane_flow_sse": 12454.37131875967
+            },
+            {
+              "date": "2031-02-19",
+              "n": 24,
+              "speed_sse": 605.6134243459368,
+              "lane_flow_sse": 162431.53836452315
+            },
+            {
+              "date": "2031-02-20",
+              "n": 1,
+              "speed_sse": 11.063600049269828,
+              "lane_flow_sse": 684.0069449968171
+            },
+            {
+              "date": "2031-02-21",
+              "n": 25,
+              "speed_sse": 3620.509585918506,
+              "lane_flow_sse": 350002.01423331816
+            },
+            {
+              "date": "2031-02-22",
+              "n": 42,
+              "speed_sse": 4214.181856416124,
+              "lane_flow_sse": 529686.3647777397
+            },
+            {
+              "date": "2031-02-23",
+              "n": 9,
+              "speed_sse": 63.09586159535697,
+              "lane_flow_sse": 23885.137726467925
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 2,
+              "speed_sse": 5.098605557449587,
+              "lane_flow_sse": 27529.798343149418
+            },
+            {
+              "date": "2031-02-26",
+              "n": 3,
+              "speed_sse": 20.878325481698006,
+              "lane_flow_sse": 18013.02209514091
+            },
+            {
+              "date": "2031-02-27",
+              "n": 16,
+              "speed_sse": 425.46496956541773,
+              "lane_flow_sse": 71936.2353896602
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "missing60min": {
+          "n": 6473,
+          "rmse_speed": 1.4568680007747374,
+          "rmse_lane_flow": 27.956851254411323,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 889,
+              "speed_sse": 2777.1036554183934,
+              "lane_flow_sse": 984756.2060624989
+            },
+            {
+              "date": "2031-02-16",
+              "n": 66,
+              "speed_sse": 50.12673986300614,
+              "lane_flow_sse": 33788.259024071784
+            },
+            {
+              "date": "2031-02-17",
+              "n": 994,
+              "speed_sse": 6790.512068494911,
+              "lane_flow_sse": 1116585.7826023519
+            },
+            {
+              "date": "2031-02-18",
+              "n": 67,
+              "speed_sse": 36.2424352078238,
+              "lane_flow_sse": 42767.93249330214
+            },
+            {
+              "date": "2031-02-19",
+              "n": 878,
+              "speed_sse": 1102.8209254887963,
+              "lane_flow_sse": 801131.0342321412
+            },
+            {
+              "date": "2031-02-20",
+              "n": 1058,
+              "speed_sse": 1231.4673716604625,
+              "lane_flow_sse": 591010.8927694438
+            },
+            {
+              "date": "2031-02-21",
+              "n": 867,
+              "speed_sse": 696.6318694982306,
+              "lane_flow_sse": 724783.3981853379
+            },
+            {
+              "date": "2031-02-22",
+              "n": 79,
+              "speed_sse": 43.36705741575881,
+              "lane_flow_sse": 66565.76121623228
+            },
+            {
+              "date": "2031-02-23",
+              "n": 85,
+              "speed_sse": 60.47333101521025,
+              "lane_flow_sse": 52251.43698666803
+            },
+            {
+              "date": "2031-02-24",
+              "n": 1145,
+              "speed_sse": 724.608231019598,
+              "lane_flow_sse": 462604.5232898556
+            },
+            {
+              "date": "2031-02-25",
+              "n": 146,
+              "speed_sse": 112.01710930586336,
+              "lane_flow_sse": 68719.53828820758
+            },
+            {
+              "date": "2031-02-26",
+              "n": 92,
+              "speed_sse": 56.92183853713122,
+              "lane_flow_sse": 55807.97877318977
+            },
+            {
+              "date": "2031-02-27",
+              "n": 48,
+              "speed_sse": 21.962247232239527,
+              "lane_flow_sse": 33328.35696958599
+            },
+            {
+              "date": "2031-02-28",
+              "n": 59,
+              "speed_sse": 34.45699773615,
+              "lane_flow_sse": 25102.048139777715
+            }
+          ]
+        },
+        "missing180min": {
+          "n": 0,
+          "rmse_speed": null,
+          "rmse_lane_flow": null,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-16",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-17",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-18",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-19",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-20",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-21",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-22",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-23",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-26",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-27",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "congested50": {
+          "n": 9303,
+          "rmse_speed": 3.220234908369951,
+          "rmse_lane_flow": 43.89616463041244,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 1540,
+              "speed_sse": 14465.370800967068,
+              "lane_flow_sse": 2341158.4195800466
+            },
+            {
+              "date": "2031-02-16",
+              "n": 981,
+              "speed_sse": 5676.510786621797,
+              "lane_flow_sse": 1241367.1660973486
+            },
+            {
+              "date": "2031-02-17",
+              "n": 810,
+              "speed_sse": 24836.246176047804,
+              "lane_flow_sse": 5606236.117336833
+            },
+            {
+              "date": "2031-02-18",
+              "n": 40,
+              "speed_sse": 65.26301169029418,
+              "lane_flow_sse": 64596.21918191745
+            },
+            {
+              "date": "2031-02-19",
+              "n": 1452,
+              "speed_sse": 30421.654072057965,
+              "lane_flow_sse": 2195339.630232908
+            },
+            {
+              "date": "2031-02-20",
+              "n": 19,
+              "speed_sse": 543.4032360107215,
+              "lane_flow_sse": 42776.273568229626
+            },
+            {
+              "date": "2031-02-21",
+              "n": 1660,
+              "speed_sse": 15269.917821494695,
+              "lane_flow_sse": 2575079.312199755
+            },
+            {
+              "date": "2031-02-22",
+              "n": 1448,
+              "speed_sse": 2273.5345011858935,
+              "lane_flow_sse": 2151874.9455426703
+            },
+            {
+              "date": "2031-02-23",
+              "n": 498,
+              "speed_sse": 356.2016477291398,
+              "lane_flow_sse": 622510.342849251
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 19,
+              "speed_sse": 45.3838163132254,
+              "lane_flow_sse": 66170.53471664227
+            },
+            {
+              "date": "2031-02-26",
+              "n": 68,
+              "speed_sse": 264.6930178678856,
+              "lane_flow_sse": 75962.96782958404
+            },
+            {
+              "date": "2031-02-27",
+              "n": 768,
+              "speed_sse": 2253.1204958939293,
+              "lane_flow_sse": 942630.09479313
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        }
+      },
+      "legacy_target_pair_increment_L1": 0.6721021530926921
+    },
+    "primary_export": {
+      "S_state": 0.959781808136266,
+      "details": [
+        {
+          "regime": "R1",
+          "n": 79538,
+          "rmse_speed": 0.951610007953239,
+          "rmse_lane_flow": 24.822833504882777,
+          "S_state": 0.9604143848078
+        },
+        {
+          "regime": "R2",
+          "n": 17066,
+          "rmse_speed": 0.7872849925682411,
+          "rmse_lane_flow": 21.79479253584494,
+          "S_state": 0.9662853032163783
+        },
+        {
+          "regime": "R3",
+          "n": 170085,
+          "rmse_speed": 1.2647203254835568,
+          "rmse_lane_flow": 26.134310328176525,
+          "S_state": 0.9526457363846199
+        }
+      ],
+      "days": [
+        {
+          "regime": "R3",
+          "n": 28234,
+          "speed_sse": 52689.50665802343,
+          "lane_flow_sse": 22188209.17930135,
+          "daily_State": 0.9490004593893311,
+          "date": "2031-02-15"
+        },
+        {
+          "regime": "R1",
+          "n": 11352,
+          "speed_sse": 16498.04978921702,
+          "lane_flow_sse": 7607718.75432388,
+          "daily_State": 0.9541133011672247,
+          "date": "2031-02-16"
+        },
+        {
+          "regime": "R3",
+          "n": 28112,
+          "speed_sse": 87882.94072226895,
+          "lane_flow_sse": 27237716.06235595,
+          "daily_State": 0.9379449211160942,
+          "date": "2031-02-17"
+        },
+        {
+          "regime": "R1",
+          "n": 11323,
+          "speed_sse": 6744.724767332347,
+          "lane_flow_sse": 5496380.551814437,
+          "daily_State": 0.9664379062616341,
+          "date": "2031-02-18"
+        },
+        {
+          "regime": "R3",
+          "n": 28323,
+          "speed_sse": 57052.15174504368,
+          "lane_flow_sse": 20115010.649356384,
+          "daily_State": 0.9489123204542039,
+          "date": "2031-02-19"
+        },
+        {
+          "regime": "R3",
+          "n": 28352,
+          "speed_sse": 18335.61204848281,
+          "lane_flow_sse": 13500098.825147988,
+          "daily_State": 0.9659000991124835,
+          "date": "2031-02-20"
+        },
+        {
+          "regime": "R3",
+          "n": 28413,
+          "speed_sse": 39571.78363941939,
+          "lane_flow_sse": 20688659.66936314,
+          "daily_State": 0.9538211373225173,
+          "date": "2031-02-21"
+        },
+        {
+          "regime": "R1",
+          "n": 11490,
+          "speed_sse": 17818.5686583828,
+          "lane_flow_sse": 10463034.341441743,
+          "daily_State": 0.9499660573617589,
+          "date": "2031-02-22"
+        },
+        {
+          "regime": "R1",
+          "n": 11274,
+          "speed_sse": 7281.728908339728,
+          "lane_flow_sse": 6679366.881378762,
+          "daily_State": 0.9639796957683315,
+          "date": "2031-02-23"
+        },
+        {
+          "regime": "R3",
+          "n": 28651,
+          "speed_sse": 16521.93946191527,
+          "lane_flow_sse": 12438730.775466992,
+          "daily_State": 0.9676229304481077,
+          "date": "2031-02-24"
+        },
+        {
+          "regime": "R2",
+          "n": 17066,
+          "speed_sse": 10577.808177422514,
+          "lane_flow_sse": 8106571.545359794,
+          "daily_State": 0.9662853032163783,
+          "date": "2031-02-25"
+        },
+        {
+          "regime": "R1",
+          "n": 11335,
+          "speed_sse": 7371.380195511185,
+          "lane_flow_sse": 5818664.769266441,
+          "daily_State": 0.965210926877274,
+          "date": "2031-02-26"
+        },
+        {
+          "regime": "R1",
+          "n": 11474,
+          "speed_sse": 9742.25720333874,
+          "lane_flow_sse": 7820883.587446613,
+          "daily_State": 0.9600806628560057,
+          "date": "2031-02-27"
+        },
+        {
+          "regime": "R1",
+          "n": 11290,
+          "speed_sse": 6569.849594275893,
+          "lane_flow_sse": 5123124.216015057,
+          "daily_State": 0.9671912222208134,
+          "date": "2031-02-28"
+        }
+      ],
+      "diagnostic_strata": {
+        "drop20": {
+          "n": 221,
+          "rmse_speed": 15.084244588651563,
+          "rmse_lane_flow": 95.74254198544438,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 16,
+              "speed_sse": 4694.724919949837,
+              "lane_flow_sse": 42919.486439491855
+            },
+            {
+              "date": "2031-02-16",
+              "n": 14,
+              "speed_sse": 3125.9112661752483,
+              "lane_flow_sse": 76866.59063900859
+            },
+            {
+              "date": "2031-02-17",
+              "n": 60,
+              "speed_sse": 11789.75535976784,
+              "lane_flow_sse": 1479933.834519167
+            },
+            {
+              "date": "2031-02-18",
+              "n": 1,
+              "speed_sse": 0.1358944594587502,
+              "lane_flow_sse": 613.5915656150901
+            },
+            {
+              "date": "2031-02-19",
+              "n": 20,
+              "speed_sse": 21892.43295751264,
+              "lane_flow_sse": 61145.395951249
+            },
+            {
+              "date": "2031-02-20",
+              "n": 3,
+              "speed_sse": 1000.5905366637155,
+              "lane_flow_sse": 9959.63576527823
+            },
+            {
+              "date": "2031-02-21",
+              "n": 30,
+              "speed_sse": 2945.178069095463,
+              "lane_flow_sse": 91719.52079309392
+            },
+            {
+              "date": "2031-02-22",
+              "n": 39,
+              "speed_sse": 2000.363870715744,
+              "lane_flow_sse": 136058.1584111481
+            },
+            {
+              "date": "2031-02-23",
+              "n": 12,
+              "speed_sse": 417.17106509359553,
+              "lane_flow_sse": 48419.8502331511
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 2,
+              "speed_sse": 478.6748672956621,
+              "lane_flow_sse": 5883.71054835774
+            },
+            {
+              "date": "2031-02-26",
+              "n": 4,
+              "speed_sse": 141.20716028407628,
+              "lane_flow_sse": 31732.028733826475
+            },
+            {
+              "date": "2031-02-27",
+              "n": 20,
+              "speed_sse": 1798.964126055059,
+              "lane_flow_sse": 40574.386830055264
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "recover20": {
+          "n": 236,
+          "rmse_speed": 11.530520430475411,
+          "rmse_lane_flow": 137.28516622240673,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 40,
+              "speed_sse": 9202.401546021556,
+              "lane_flow_sse": 2298863.871710458
+            },
+            {
+              "date": "2031-02-16",
+              "n": 13,
+              "speed_sse": 77.97885771298272,
+              "lane_flow_sse": 115029.81780246667
+            },
+            {
+              "date": "2031-02-17",
+              "n": 59,
+              "speed_sse": 15354.351622926639,
+              "lane_flow_sse": 944564.9861871552
+            },
+            {
+              "date": "2031-02-18",
+              "n": 2,
+              "speed_sse": 16.321764448207034,
+              "lane_flow_sse": 11284.256861955357
+            },
+            {
+              "date": "2031-02-19",
+              "n": 24,
+              "speed_sse": 508.1858827944071,
+              "lane_flow_sse": 152392.28133923892
+            },
+            {
+              "date": "2031-02-20",
+              "n": 1,
+              "speed_sse": 5.066846041722818,
+              "lane_flow_sse": 1765.98918824846
+            },
+            {
+              "date": "2031-02-21",
+              "n": 25,
+              "speed_sse": 2618.495815476979,
+              "lane_flow_sse": 287342.6189151338
+            },
+            {
+              "date": "2031-02-22",
+              "n": 42,
+              "speed_sse": 3095.84047754889,
+              "lane_flow_sse": 503187.63992828486
+            },
+            {
+              "date": "2031-02-23",
+              "n": 9,
+              "speed_sse": 91.9164890557112,
+              "lane_flow_sse": 18599.887094383346
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 2,
+              "speed_sse": 0.16967750911539548,
+              "lane_flow_sse": 20199.738569413727
+            },
+            {
+              "date": "2031-02-26",
+              "n": 3,
+              "speed_sse": 0.40008236034104017,
+              "lane_flow_sse": 18383.275801351916
+            },
+            {
+              "date": "2031-02-27",
+              "n": 16,
+              "speed_sse": 405.75566793960786,
+              "lane_flow_sse": 76328.81667437803
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "missing60min": {
+          "n": 6473,
+          "rmse_speed": 1.3684940277654882,
+          "rmse_lane_flow": 27.679890223810556,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 889,
+              "speed_sse": 3144.3756188117113,
+              "lane_flow_sse": 991978.7897255718
+            },
+            {
+              "date": "2031-02-16",
+              "n": 66,
+              "speed_sse": 37.23449920621638,
+              "lane_flow_sse": 34101.96210205214
+            },
+            {
+              "date": "2031-02-17",
+              "n": 994,
+              "speed_sse": 5032.4198162326,
+              "lane_flow_sse": 1072433.1203129645
+            },
+            {
+              "date": "2031-02-18",
+              "n": 67,
+              "speed_sse": 36.040158831857156,
+              "lane_flow_sse": 41700.2754926036
+            },
+            {
+              "date": "2031-02-19",
+              "n": 878,
+              "speed_sse": 1140.3820571930844,
+              "lane_flow_sse": 773399.9882909782
+            },
+            {
+              "date": "2031-02-20",
+              "n": 1058,
+              "speed_sse": 990.3745439468396,
+              "lane_flow_sse": 579239.7305126911
+            },
+            {
+              "date": "2031-02-21",
+              "n": 867,
+              "speed_sse": 707.3519665446313,
+              "lane_flow_sse": 720938.5170558109
+            },
+            {
+              "date": "2031-02-22",
+              "n": 79,
+              "speed_sse": 41.29318707460606,
+              "lane_flow_sse": 63788.571246413645
+            },
+            {
+              "date": "2031-02-23",
+              "n": 85,
+              "speed_sse": 61.00878496535882,
+              "lane_flow_sse": 48597.52906807112
+            },
+            {
+              "date": "2031-02-24",
+              "n": 1145,
+              "speed_sse": 713.5926963020963,
+              "lane_flow_sse": 454638.8809309546
+            },
+            {
+              "date": "2031-02-25",
+              "n": 146,
+              "speed_sse": 108.69531118380671,
+              "lane_flow_sse": 68022.836122938
+            },
+            {
+              "date": "2031-02-26",
+              "n": 92,
+              "speed_sse": 54.49998762824643,
+              "lane_flow_sse": 54059.17549931565
+            },
+            {
+              "date": "2031-02-27",
+              "n": 48,
+              "speed_sse": 20.720611617365737,
+              "lane_flow_sse": 31880.312286507287
+            },
+            {
+              "date": "2031-02-28",
+              "n": 59,
+              "speed_sse": 34.48918724653141,
+              "lane_flow_sse": 24679.648851788195
+            }
+          ]
+        },
+        "missing180min": {
+          "n": 0,
+          "rmse_speed": null,
+          "rmse_lane_flow": null,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-16",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-17",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-18",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-19",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-20",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-21",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-22",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-23",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-26",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-27",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        },
+        "congested50": {
+          "n": 9303,
+          "rmse_speed": 3.383720465413669,
+          "rmse_lane_flow": 42.99686284109736,
+          "days": [
+            {
+              "date": "2031-02-15",
+              "n": 1540,
+              "speed_sse": 20253.82719396065,
+              "lane_flow_sse": 2237855.116059527
+            },
+            {
+              "date": "2031-02-16",
+              "n": 981,
+              "speed_sse": 5460.470233901979,
+              "lane_flow_sse": 1183434.0321081395
+            },
+            {
+              "date": "2031-02-17",
+              "n": 810,
+              "speed_sse": 25986.74369079612,
+              "lane_flow_sse": 5385333.072888015
+            },
+            {
+              "date": "2031-02-18",
+              "n": 40,
+              "speed_sse": 82.11511649822138,
+              "lane_flow_sse": 58716.230233244816
+            },
+            {
+              "date": "2031-02-19",
+              "n": 1452,
+              "speed_sse": 33818.45601781082,
+              "lane_flow_sse": 2123246.61293545
+            },
+            {
+              "date": "2031-02-20",
+              "n": 19,
+              "speed_sse": 583.9637729494281,
+              "lane_flow_sse": 36873.23135351499
+            },
+            {
+              "date": "2031-02-21",
+              "n": 1660,
+              "speed_sse": 15114.360769056606,
+              "lane_flow_sse": 2508968.6483854507
+            },
+            {
+              "date": "2031-02-22",
+              "n": 1448,
+              "speed_sse": 2255.8717039234043,
+              "lane_flow_sse": 2022561.0027408646
+            },
+            {
+              "date": "2031-02-23",
+              "n": 498,
+              "speed_sse": 296.71050089843703,
+              "lane_flow_sse": 585543.0923183415
+            },
+            {
+              "date": "2031-02-24",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            },
+            {
+              "date": "2031-02-25",
+              "n": 19,
+              "speed_sse": 37.13519495408734,
+              "lane_flow_sse": 54327.44557589074
+            },
+            {
+              "date": "2031-02-26",
+              "n": 68,
+              "speed_sse": 206.24402248915948,
+              "lane_flow_sse": 66941.57844267337
+            },
+            {
+              "date": "2031-02-27",
+              "n": 768,
+              "speed_sse": 2419.3974242767317,
+              "lane_flow_sse": 934937.1194395055
+            },
+            {
+              "date": "2031-02-28",
+              "n": 0,
+              "speed_sse": 0.0,
+              "lane_flow_sse": 0.0
+            }
+          ]
+        }
+      },
+      "legacy_target_pair_increment_L1": 0.6624765036146147
+    }
+  },
+  "comparisons": {
+    "jump_seed20261013": {
+      "pooled_State_gain": -0.0033168918805892567,
+      "paired_day_diagnostic": {
+        "paired_day_mean_gain": -0.003843866234220315,
+        "ci95": [
+          -0.004620964502031295,
+          -0.0030667679664093356
+        ],
+        "bootstrap_probability_gain_positive": 0.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    "jump_seed20261029": {
+      "pooled_State_gain": -0.0037982149344297778,
+      "paired_day_diagnostic": {
+        "paired_day_mean_gain": -0.003876367002739713,
+        "ci95": [
+          -0.004261588742945799,
+          -0.003491145262533627
+        ],
+        "bootstrap_probability_gain_positive": 0.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    "jump_seed_mean": {
+      "pooled_State_gain": -0.002950375504191638,
+      "paired_day_diagnostic": {
+        "paired_day_mean_gain": -0.003227924670194639,
+        "ci95": [
+          -0.0037524502838445057,
+          -0.002703399056544772
+        ],
+        "bootstrap_probability_gain_positive": 0.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    "nn_primary": {
+      "pooled_State_gain": 0.0,
+      "paired_day_diagnostic": {
+        "paired_day_mean_gain": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_probability_gain_positive": 0.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    "control_seed20261013": {
+      "pooled_State_gain": -0.0006735798009033234,
+      "paired_day_diagnostic": {
+        "paired_day_mean_gain": -0.0007415999932598529,
+        "ci95": [
+          -0.0010908597417316043,
+          -0.00039234024478810144
+        ],
+        "bootstrap_probability_gain_positive": 0.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    "control_seed20261029": {
+      "pooled_State_gain": -0.0004700735344651541,
+      "paired_day_diagnostic": {
+        "paired_day_mean_gain": -0.0004888012408112906,
+        "ci95": [
+          -0.0007959451721682205,
+          -0.0001881437780879569
+        ],
+        "bootstrap_probability_gain_positive": 0.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    "primary_export": {
+      "pooled_State_gain": 0.0,
+      "paired_day_diagnostic": {
+        "paired_day_mean_gain": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_probability_gain_positive": 0.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    }
+  },
+  "exports": {
+    "jump_seed20261013": {
+      "path": "artifacts/research/A124_I5_N_speed_jump_pair_loss/State_jump_seed20261013.pkl",
+      "sha256": "21ed52acdab0bc67bcc2fc28d80659e95a469c0c970f21e85b9f84ccaf88f90f"
+    },
+    "jump_seed20261029": {
+      "path": "artifacts/research/A124_I5_N_speed_jump_pair_loss/State_jump_seed20261029.pkl",
+      "sha256": "be1007581507b3c9a17948cda19cad2bda9359ad23e87dd700850b6f42826a6c"
+    },
+    "jump_seed_mean": {
+      "path": "artifacts/research/A124_I5_N_speed_jump_pair_loss/State_jump_seed_mean.pkl",
+      "sha256": "16edec3e8ba62b346f34daed6235b91065b6b84645bd14e1a14838daa40abdad"
+    },
+    "nn_primary": {
+      "path": "artifacts/research/A124_I5_N_speed_jump_pair_loss/State_nn_primary.pkl",
+      "sha256": "378a1b60ac9e48027b5901963fa0612606ef1d5b520589a9d9e158bf11740965"
+    },
+    "control_seed20261013": {
+      "path": "artifacts/research/A124_I5_N_speed_jump_pair_loss/State_control_seed20261013.pkl",
+      "sha256": "b519c2c6043a08e61025e3aee45b5e4862b7423d3274a201ab9a63dc0957395b"
+    },
+    "control_seed20261029": {
+      "path": "artifacts/research/A124_I5_N_speed_jump_pair_loss/State_control_seed20261029.pkl",
+      "sha256": "25d81438950c9c7829a8abcda57da9a8517064fc6fe8776ba317b3605a6afac3"
+    },
+    "primary_export": {
+      "path": "artifacts/research/A124_I5_N_speed_jump_pair_loss/State_primary_export.pkl",
+      "sha256": "378a1b60ac9e48027b5901963fa0612606ef1d5b520589a9d9e158bf11740965"
+    }
+  },
+  "prediction_files": [
+    {
+      "date": "2031-02-15",
+      "path": "artifacts/research/A125_I5_N_speed_jump_forward_calendar/2031-02-15.npz",
+      "sha256": "f388808d0f7f7ab57f150b76e5a30c32738a06d61dd717b4d653eafac82af3cc"
+    },
+    {
+      "date": "2031-02-16",
+      "path": "artifacts/research/A125_I5_N_speed_jump_forward_calendar/2031-02-16.npz",
+      "sha256": "be88b7e67b60411fdfc1adc06aa57054bdb610ec53211f7e22f7b23697b5d20f"
+    },
+    {
+      "date": "2031-02-17",
+      "path": "artifacts/research/A125_I5_N_speed_jump_forward_calendar/2031-02-17.npz",
+      "sha256": "684df50435dd53471ec887609626cab10757fb440277d6d018f8044af3e7d3a0"
+    },
+    {
+      "date": "2031-02-18",
+      "path": "artifacts/research/A125_I5_N_speed_jump_forward_calendar/2031-02-18.npz",
+      "sha256": "d19f97a5ccf64497fc10f1a11964a8b75a1553d00be0365ec931e5c93ac98a0e"
+    },
+    {
+      "date": "2031-02-19",
+      "path": "artifacts/research/A125_I5_N_speed_jump_forward_calendar/2031-02-19.npz",
+      "sha256": "beb6490147a15ef652aa1116f2a426cf918533464b481954f4376f8f415c5810"
+    },
+    {
+      "date": "2031-02-20",
+      "path": "artifacts/research/A125_I5_N_speed_jump_forward_calendar/2031-02-20.npz",
+      "sha256": "8a27ce87b3fe12ced8fea4b5d7a87977f891db4c79fb8d52b1da8c89da544842"
+    },
+    {
+      "date": "2031-02-21",
+      "path": "artifacts/research/A125_I5_N_speed_jump_forward_calendar/2031-02-21.npz",
+      "sha256": "c8f38c90fb51f33c6f78ed66b19d7f4908e7be3c7b0b2d15650ee6d3daedcf7d"
+    },
+    {
+      "date": "2031-02-22",
+      "path": "artifacts/research/A125_I5_N_speed_jump_forward_calendar/2031-02-22.npz",
+      "sha256": "19892f6bc3c661910b85df64048542266591332ad3ed63478c1a7e470c92f138"
+    },
+    {
+      "date": "2031-02-23",
+      "path": "artifacts/research/A125_I5_N_speed_jump_forward_calendar/2031-02-23.npz",
+      "sha256": "dbba8a1664fd258a84c50be9da937212144843d408008826b184d735c272f0ee"
+    },
+    {
+      "date": "2031-02-24",
+      "path": "artifacts/research/A125_I5_N_speed_jump_forward_calendar/2031-02-24.npz",
+      "sha256": "fb7f99cde242c90200037605841dc60ae7b05ff2002f41a0079133dac48c068d"
+    },
+    {
+      "date": "2031-02-25",
+      "path": "artifacts/research/A125_I5_N_speed_jump_forward_calendar/2031-02-25.npz",
+      "sha256": "d4b41ec1009868ec5814fd8d818398dbfa3e1b797bfae456abe64481f4774d4f"
+    },
+    {
+      "date": "2031-02-26",
+      "path": "artifacts/research/A125_I5_N_speed_jump_forward_calendar/2031-02-26.npz",
+      "sha256": "2259dcfb3bfc1b0c418deb5f1efcf48de4550ba028ac950135f9c4a945cff077"
+    },
+    {
+      "date": "2031-02-27",
+      "path": "artifacts/research/A125_I5_N_speed_jump_forward_calendar/2031-02-27.npz",
+      "sha256": "38ab88267a73cc5d9b37eb307172749d2ce2eef50c550753a981fbf311e961e2"
+    },
+    {
+      "date": "2031-02-28",
+      "path": "artifacts/research/A125_I5_N_speed_jump_forward_calendar/2031-02-28.npz",
+      "sha256": "2e968967cace0612b678e0a6d6ded994b76ffef3407f61a5032ce31b4daf9030"
+    }
+  ],
+  "source_files_sha256": {
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_02_15.parquet": "1523c6aea0c74824e17c0607402240d2756b9fd5aa6f7143dfbb1d68144d39a8",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states/year_month=2031-02/synthetic_mainline_2031_02_15.parquet": "ec18bf9f9eba9d5d66e403455908eace1990403fd1051ed40060aabca3d19f9f",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_16.parquet": "9deee0579c0403c26fb66d0abd54da341034415dc35d0c24a7ade936484e8dd5",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states/year_month=2031-02/synthetic_mainline_2031_02_16.parquet": "f462db758a7b52490b1d0e0338aa8d557a3612bd2275ee4ae0f84fad473480c8",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_02_17.parquet": "43591ad69f293f3817652e21b428b970c5ccb951df8f153c199635dd111af84c",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states/year_month=2031-02/synthetic_mainline_2031_02_17.parquet": "3fce72814143aa195f065d134a73de160a069654652bb0e5b083f02da4edb3aa",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_18.parquet": "c4297526b4edcee3878effee253e4379ef69fbf4eec7dcad548d8fa198b42e93",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states/year_month=2031-02/synthetic_mainline_2031_02_18.parquet": "6594f52f49874420d6f356b514cdccd0f0796dc753567fd1825a9624f564b030",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_02_19.parquet": "162532e987d6a5203a22c37dffc899d0bec6a59af0359f8d8443bb9ea8dc7ca6",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states/year_month=2031-02/synthetic_mainline_2031_02_19.parquet": "0c77e98a1613976ee44a701b64e03946154726cde910dbb001acbca79d5300be",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_02_20.parquet": "d74ea9feae7ec71b20a7fd7e43dfbb955b1a1b9c2f9cc5ac707b39350ed2ddd3",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states/year_month=2031-02/synthetic_mainline_2031_02_20.parquet": "524e92f07414bd00ee81002a2d9e845a5eed15b847d341facb23d44410990e52",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_02_21.parquet": "5f02ff7a9289cf1b3b184e7ce690e3b8a0fd63ab9b5e41a8f868643f5a659598",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states/year_month=2031-02/synthetic_mainline_2031_02_21.parquet": "040176ef8538bf9110e35ea0366d27b5f64315a36c1fc55aa9f2ad67a20fd9ce",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_22.parquet": "76bc67d991b0c21a73e134bebc4e5c024261dfe1f3bf8eb3546b18f3ca93f20a",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states/year_month=2031-02/synthetic_mainline_2031_02_22.parquet": "36ef30a0a86e3428c2fc91b2cf7de29bb53d43ab4a5d0cb47640c3ff3258bd99",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_23.parquet": "901a329c02ce1bfb0cb9d2de83367aea17bd2c0e33989a3bd8c754cbaa39d0fa",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states/year_month=2031-02/synthetic_mainline_2031_02_23.parquet": "e3466adc5ff22408d59f5e36a4d371d25c0925b9655bf3252210b454b275df49",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R3/synthetic_mainline_2031_02_24.parquet": "c776c43f39022a8adf331f547020a2f49c1ca067bcfbdf49233c58652c3a03b2",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states/year_month=2031-02/synthetic_mainline_2031_02_24.parquet": "9e0123178f195e6568f56c1e0c9828301797b8401bbda08172bfdc9d581306b8",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R2/synthetic_mainline_2031_02_25.parquet": "a5456c56c12a57892888e2f24c5671d98841dc3c509b72d9c77e402ab7b63775",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states/year_month=2031-02/synthetic_mainline_2031_02_25.parquet": "fc71c9da26141e0d84a3e26187d5d4925ee54f207308556399fe622bdaace9e9",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_26.parquet": "20897d3fe84eaec22cf33007d6dc4841f50002147b0e28ecc5bcbded25e796b7",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states/year_month=2031-02/synthetic_mainline_2031_02_26.parquet": "6cf8716c4ac83c37bccc46b1ce074b662131776d4a339c85335544e70cee6d10",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_27.parquet": "97095a806e4321bc69eb2382422936b763f311158057750ac8b4e787800c8cf3",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states/year_month=2031-02/synthetic_mainline_2031_02_27.parquet": "03485a956071d33d0b16b66ba97040b374ec5da4374ce0dc7fadca5c0854ce8e",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states_masked/mask_regime=R1/synthetic_mainline_2031_02_28.parquet": "ace3270d6eac2ca86f8a932ae677ab3b13e52f707697e9692402133d8c15214e",
+    "E:/ieee/data/kaggle_public/corridors/D12_I5_N/train/mainline_states/year_month=2031-02/synthetic_mainline_2031_02_28.parquet": "9aacf9bdc69916f9fcce4209f3f30aaa80d89b145154edf6939a342726de376c"
+  },
+  "selection_changed": false,
+  "n_direct_predictor_calls": 98,
+  "seconds": 112.731867100003,
+  "source": {
+    "python": "3.13.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus": 16,
+    "process_peak_working_set_MiB": 2728.11328125,
+    "peak_scope": "current process lifetime, not isolated per model",
+    "source_sha256": "ab0c38a46abc8eafb1d8357c6437a4b4b479127f91d6c7f19fee7f9e2ec47383",
+    "model_threads": 4,
+    "gpu_used": true,
+    "source_fingerprint_scope": "On-disk source at evidence() call; a captured start archive is primary when present",
+    "versions": {
+      "numpy": "2.2.5",
+      "pandas": "3.0.5",
+      "scipy": "1.16.1",
+      "pyarrow": "25.0.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10",
+      "scikit-learn": "1.7.2"
+    }
+  },
+  "formal_State": null,
+  "formal_Physics": null,
+  "formal_Total": null,
+  "limits": "Public observation targets and incomplete legacy dynamics,not latent truth or formal Physics/Total."
+}

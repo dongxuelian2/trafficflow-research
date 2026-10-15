@@ -2,7 +2,9 @@
 
 A122/A123仅使用原fit日期raw/cache/已保存实际曝光数组。诊断模块不进入推断features；未来两步/邻居标签只作fit观察统计，不作Queue可见历史。原输入base通道6/7的SSE明确区别NN/官方State。独立shift/window核验245日3185数组、3430统计记录，包含raw eligibility、日界不循环及条件分母；浮点SSE最大绝对差3.73e−9。
 
-新speed_jump_pair_loss只在core内两个连续target均为True且float32 abs(label delta)>=.8时监督速度差，flow梯度为0；手算endpoint梯度与无pair严格退回原目标均测试通过。A124新训练须初始化/采样/实际cell exposure精确匹配A104 Queue控制，另保存pair endpoint曝光计数；这些训练后核验尚未全部完成，不把kernel通过称模型成功。全套122research、104CPU/6Torch模块跳过。
+新speed_jump_pair_loss只在core内两个连续target均为True且float32 abs(label delta)>=.8时监督速度差，flow输出梯度为0（共享网络参数仍可改变flow）；手算endpoint梯度与无pair退回原目标均通过。A126现已独立重建两seed全部cell/pair计数、初始化/patch序列，核对选中pt与导出权重/alpha、196predict及168指标；最大预测差4.55e−13、score差2.22e−16。A127新14日98指标及14次predict另行通过。原122research/104CPU测试为前阶段记录，此阶段生产src未改；kernel通过不等于模型成功，实际两个日历均退步。
+
+A128只读首个public TRAIN的link_id/milepost列及公开网络CSV；A129用直接CSV ID/union-find独立核验10图。图不连通不证明reader缺陷：AdaptiveSpatialBlock的attn_mask是有限bias，非邻居仍可通信。固定CPU探针3个孤立节点的9个mask值全有限，跨节点梯度L1=.6854989528656006；源码SHA和复现入口保留。不把这个kernel或静态图计数当模型收益/物理连通证据。
 
 A116仅新增两个各含400棵树的流量模型，原速度booster和NN显式复用。原153fit日及4point视图逐块写入磁盘映射；float64 scalar teacher/base/weight、int32 row keys与全部60维float32特征保存。训练不调用NN推断，cal/旧后留NN预测来自A107已核验的冻结输出。A118在拟合并行时独立实现随机坐标、history/guard及所有测量删除，765组完整重建、8次完整60维poison通过；raw流量teacher误差1.19e−7归一化单位、weight差0。
 
