@@ -4,6 +4,14 @@
 
 | 编号 | 假设 / 核验 | 实测结果 / 资源 |
 |---|---|---|
+| C68 | 同冻结 classifier/ongoing，对照 fixed-k、阈值、常数计数、观测/校正条件计数 | 4 case，8 Ridge+4 标量状态，无新树；CPU 25.51 秒、peak 663.30 MiB；仅 I5_S 冬通过研究 selection，后段 gain+.004464、CI 跨零 |
+| C69 | 新因果摘要、计数拟合与解码、选择和导出独立复算 | 665 摘要差0，12状态最大差3.997e−15；56 Booster、112新历史窗口、896便携+448乱序+16poison；135.62秒；旧2345raw证明复用 |
+| C70 | 独立复算16个次要配对消融，不再选模型 | threshold比同分类器fixed-k在两冬季case区间正；相对强incumbent整体gate仍失败，条件计数未一致超过常数控制 |
+
+新3单测通过；全134research/12.31秒、113CPU/7.37秒+7可选Torch模块skip。时间有并行活动，不当隔离基准。观测计数I5_S秋/冬gain−.086420/−.079932、区间全负，失败保留。计数校正依赖未验证MCAR；常数k=3/3/2/2提示常数选择也是混杂因素。已查看日历不称新盲测，无新完整submission或正式分数。[详细配置、结果与复现](docs/ONSET_SET_DECODER_RESEARCH.md)。
+
+| 编号 | 假设 / 核验 | 实测结果 / 资源 |
+|---|---|---|
 | C65 | 同公开onset行/特征/容量，binary vs LambdaRank+固定top-k，ongoing冻结 | 4case/16fit，decision全部原模型；ranker后留gain−.024824/−.043878/+.064815/−.083333；32.33秒CPU/peak726.04MiB |
 | C66 | 全原始输入/teacher/query/网格/评分/去重CI与便携接口复核 | 2345窗口、128Booster调用；560便携+140乱序精确，8future poison拒绝；302.65秒 |
 | C67 | 公开assessment标签下逐窗最优已定k的诊断，禁止用于选择 | k有评分空间，但需未来标签/eligibility；无新模型/选择/候选，不能当可达成绩 |

@@ -2,7 +2,13 @@
 
 目标为可复现的正式 Kaggle **0.95000+**；当前正式 **0.82940**。不将阶段性较低分数作为终点。
 
-C65–C67完成公开事件内onset排名：16个匹配classifier/ranker模型，ongoing冻结，四组decision均保留incumbent。三个ranker后留退步；I10_W秋+.064815但区间跨零且未选。停止扩大同一固定k/truncation网格。逐窗label-oracle只提示集合大小可另行研究，不可部署、不能声称可达；后续若研究cardinality，必须fit-only学习并用独立决策/新rolling验证，同时保留原可变阈值强参照。
+C68–C70已完成固定 classifier 的阈值与 fit-only 计数消融：阈值胜过固定 k 的两冬季匹配对照，但相对强 incumbent 整体证据不足；唯一通过 selection 的 I5_S 冬策略后段 gain缩至+.004464且CI跨零。保留这次非零gate结果，不能把筛选门槛当泛化保证。I10_W秋的次要正值不改变封存选择。
+
+下一步优先预登记新的 rolling 日历，在同一强参照上检验简单阈值/概率决策与事件发生时间、传播范围；需要明确预测起点之前可识别的信息。暂不扩大相同 Ridge alpha、常数 k 或阈值网格。观测计数在I5_S两季明显失败，MCAR校正没有一致超过同目标常数控制；后续需用独立噪声/缺失机制实验判断可识别性，而非把校正值当latent真值。
+
+旧四组日期均已查看，仍作development/回归。最终模拟seeds7907/8017/9109继续未生成，State新rolling/标签池、OD先验失配与真实Physics限制保留。原完整最佳和正式分数不变；按用户要求只做本地模型与Git，不处理平台发布。
+
+C65–C67完成公开事件内onset排名：16个匹配classifier/ranker模型，ongoing冻结，四组decision均保留incumbent。三个ranker后留退步；I10_W秋+.064815但区间跨零且未选。停止扩大同一固定k/truncation网格。逐窗label-oracle不可部署、不能声称可达；其后fit-only cardinality对照已由C68–C70完成，结果以上文为准，新的rolling检验仍待完成。
 
 当前还需区分onset的排序信息、集合大小与观测标签不确定性；本轮并未证明ranker比匹配classifier更好。不能把未触发的selection gate当非零challenger有效验证。State/OD/Physics路线继续，最终模拟seeds、原完整提交及平台暂缓保持不变。
 

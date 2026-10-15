@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+C68新增`OnsetSetDecoderModel`，复用冻结分类器/ongoing，仅改变onset T+30。24维摘要只读合法≤T历史和masked T，标准化及log1p Ridge仅fit；8 Ridge、4常数控制。future eligibility只进fit计数teacher或evaluator，不参与预测域/阈值/排名；预测接口不接受future mask。计数校正有未验证MCAR假设，不能当latent真值。
+
+C69不调用新摘要helper求参考值：665次摘要独立Pandas重建差0，12状态用增广lstsq而非原normal-equation求解，参数最大差3.997e−15；grid、fit-only标准化、计数取整、gate/CI与ongoing精确。56冻结Booster矩阵调用；112新raw历史窗口支撑896便携角色调用（含别名）、448额外乱序、16future poison拒绝。C66旧2345raw输入审核通过SHA/未变源码显式复用，本次不声称重新构造全部raw。
+
+C70独立核对16个配对次要比较，不用于重新选择。C69完成后只删除一行未执行`if False`死代码，实际执行源码zip保留，数值和断言未变。新增3测试通过，全134research/113CPU通过、7可选Torch模块skip；新manifest重hash6374旧artifact不变、累计6453，5完整CSV及锁文件不变。所有新报告保持严格有限JSON和Git原始字节；无新完整submission/正式分数。[详细证据](docs/ONSET_SET_DECODER_RESEARCH.md)。
+
 C65的OnsetTopKQueueModel只改变onset最后T+30，ongoing直接调用冻结FullDomainQueueModel。ranker score不称概率；同分按link ID稳定选择，完整六步各link集合必须一致，禁止把future-eligible子集作为排序域。类保存CPU model strings、不序列化live Booster cache；输入时序复用已有严格queue_features接口。
 
 C66重建32源缓存的2345窗口raw历史/masked T、tree features及future evaluator teacher/eligibility，核对同fit onset行/分组/unit weights；独立解码/网格/评分/去重day-block gate一致。128Booster矩阵调用包括16fit；便携接口测试每evaluation缓存各condition首末共560次、另140乱序，8未来行poison全部拒绝。不是全部窗口都调用所有便携角色，未独立重训16模型。

@@ -3,6 +3,19 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+C68–C70固定同一 C65 classifier 分数，只换 onset 最后一步的解码器，ongoing 与原强参照相同；不把原分类器重算成新增训练。
+
+| 公开观测代理 | incumbent | fixed-k | threshold | count_prior | count_observed | count_adjusted | 研究已选 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| I5_S 秋 | .781151 | .770702 | .786442 | .791028 | .694732 | .796319 | incumbent |
+| I5_S 冬 | .797255 | .754866 | .801720 | .806184 | .717324 | .803208 | threshold |
+| I10_W 秋 | .557659 | .622474 | .631733 | .622474 | .705807 | .659511 | incumbent |
+| I10_W 冬 | .814942 | .714942 | .864942 | .714942 | .764942 | .814942 | incumbent |
+
+已选冬 I5_S 的后段 gain+.004464、CI[−.044312,.052230]；整体生产晋级失败。阈值相对同 classifier fixed-k 的冬 I5_S/I10_W gain+.046854/+.150000、CI 正，但相对强参照证据明显更弱。条件校正计数相对同目标常数控制四组gain+.005291/−.002976/+.037037/+.100000，不一致；常数k3在原网格里缺失，不能把常数改进归给条件特征。观测计数两组 I5_S 显著退步。
+
+以上都是已看公开日历的去重condition宏IoU；C70的16项次要比较未多重校正，不反选。没有 oracle/future mask 输入，MCAR 校正仅是假设。详见 [完整对照](docs/ONSET_SET_DECODER_RESEARCH.md)。
+
 onset排序实验固定ongoing，16模型同case内监督行/特征/600树上限/63叶，两seed均值；分别对binary classifier与LambdaRank选择top-k。四组decision都保留原模型。
 
 | 公开观测代理 | incumbent | classifier top-k | ranker top-k |
