@@ -1,0 +1,25 @@
+{
+  "protocol_sha256": "882651ea5dc745711dfcdb23e59622e238b70f4c491ae6bfb8f205547e361c54",
+  "protocol": {
+    "id": "Frozen_recurrent_State_forward_calendar_extension",
+    "studies": [
+      "A72_recurrent_I210_W_autumn",
+      "A73_recurrent_I5_N_winter"
+    ],
+    "export_reports": [
+      "A74_recurrent_I210_W_independent_replay",
+      "A75_recurrent_I5_N_independent_replay"
+    ],
+    "start_date": "2031-02-01",
+    "end_date": "2031-02-28",
+    "selection_policy": "All original primary/per-seed/seed-mean weights and blends retained;no extension tuning or promotion by extension argmax",
+    "label_read_policy": "Only after both original selection seals and completed independent exports;assert extension disjoint from all original profile/fit/cal/assessment dates",
+    "comparators": "Original full-LGB and incumbent plus all frozen candidate policies",
+    "diagnostics": "Same observed20kmh drop/recover and within-day12/36step missingness subsets as original protocol",
+    "evidence_status": "Public-train forward-calendar development,not an unopened final/private test;other historical studies may have seen these dates",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

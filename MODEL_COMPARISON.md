@@ -3,6 +3,19 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+最新State首方向完成，冬季及前向月份尚无结果。下面全部是I210_W秋季同一14日公开train后留集，全部checkpoint/alpha/primary先由cal封存。
+
+| 模型 | 本地State | 对原incumbent |
+|---|---:|---:|
+| full-LGB | .927102 | −.006476 |
+| 原attention/LGB incumbent | .933577 | 参考 |
+| 新匹配TCN两seed均值 | .933279 | −.000298 |
+| 新TCN+GRU两seed均值，cal primary | .935491 | +.001914 |
+
+两个seed的GRU−TCN为+.001321/+.002452，day-mean CI分别[.000407,.001110]/[.000078,.001479]；不能把day-mean区间当pooled gain的CI。相同seed共享原权重、所有采样位置与实际监督数组，均覆盖517171格点；GRU额外21313参数，优化预算相同而参数预算不同。原incumbent的有限context单独效应−.000015。
+
+GRU相对原模型State略好且旧增量代理.716127→.710947；相对匹配TCN均值的代理.705201却更差，正式Physics未知。观测急降速仅54目标，3h缺失目标0，不声称已解决全部长时缺失。当前单方向增益仍不足.002，冬季跨方向复核和预注册2月评估待完成。独立280role-day推断最大差2.28e−13；没有新正式成绩或最佳完整文件替换。
+
 最新共享需求中心+路径残差，在development与**固定强entropy**比较，两轮都未过gate；旧选择封存不被assessment改变。
 
 | 模型 / 条件 | 相对entropy模拟ODME gain | 区间 / 决策 |

@@ -1,0 +1,79 @@
+{
+  "scope": "Restricted-supervision pilot intentionally stopped,not an optimizer failure or architecture assessment",
+  "session_id": 93669,
+  "terminal_exit_code": 1,
+  "termination": "Ctrl-C via write_stdin after completed TCN and GRU epoch20",
+  "completed_training": {
+    "seed20261013_tcn": {
+      "history": [
+        {
+          "epoch": 4,
+          "mean_training_loss": 0.09028668819616238,
+          "cal_State": 0.9048283267379226
+        },
+        {
+          "epoch": 8,
+          "mean_training_loss": 0.07783211041241885,
+          "cal_State": 0.912648331431776
+        },
+        {
+          "epoch": 12,
+          "mean_training_loss": 0.0696297929311792,
+          "cal_State": 0.9191241942108327
+        },
+        {
+          "epoch": 16,
+          "mean_training_loss": 0.06850369169066349,
+          "cal_State": 0.9212633001160689
+        },
+        {
+          "epoch": 20,
+          "mean_training_loss": 0.06721742168689768,
+          "cal_State": 0.9215582684406076
+        },
+        {
+          "epoch": 24,
+          "mean_training_loss": 0.06354247865577539,
+          "cal_State": 0.9221184558547063
+        }
+      ],
+      "seconds": 171.56124249999993,
+      "parameters": 75994,
+      "shared_initial_sha256": "5d1c532b576e7029e37ba02c0a1431d0feb085ebd777a0af3ad64c4a20d9d02b",
+      "patch_sequence_sha256": "63e3aaadacd08e02cbcad090feeb2dd94bb4bc5cd439ac1b31bef45bfc80cfde",
+      "selected_temporal_gain": null
+    }
+  },
+  "partial_GRU_cal_history_from_tool_output": [
+    [
+      4,
+      0.9097807406458681
+    ],
+    [
+      8,
+      0.9114498112015496
+    ],
+    [
+      12,
+      0.9049382686956909
+    ],
+    [
+      16,
+      0.909243877681709
+    ],
+    [
+      20,
+      0.9021811348510682
+    ]
+  ],
+  "checkpoint_sha256": {
+    "seed20261013_tcn.pt": "c6d0f1077c39b7d9a1b1b462e2f4f9724e07da471e9a9de394da728988ea9566",
+    "seed20261013_tcn_gru.pt": "23302e1801e3b531b79b56eece58cb72b694ab98e029355768d5c606db8adf41"
+  },
+  "assessment_labels_read": false,
+  "selection_seal_exists": false,
+  "reason": "Context-uniform,center-only loss excludes first/last32steps;115049of517171fit target grid cells cannot be supervised",
+  "formal_State": null,
+  "formal_Physics": null,
+  "formal_Total": null
+}

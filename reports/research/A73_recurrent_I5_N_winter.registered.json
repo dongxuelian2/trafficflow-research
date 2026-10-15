@@ -1,0 +1,53 @@
+{
+  "protocol_sha256": "4d55727660c684a56a7acbf935d961a2cb0482b613802ca569f7dea4d15a2c02",
+  "protocol": {
+    "id": "Fixed_context_graph_State_with_latent_bidirectional_GRU_branch",
+    "panel": "D12_I5_N",
+    "fold": "rolling_winter",
+    "cache": "artifacts/research/A02_D12_I5_N_winter_seed20261013",
+    "baseline_file": "artifacts/research/A16_winter_full_label_LGB_control/lightgbm_large_budget.pkl",
+    "baseline_sha256": "6342f040ba86c837b9b657d9f7dd67ad19c12263bcf9a7f4839b850cc409ab17",
+    "incumbent_file": "artifacts/research/A34_adaptive_attention_strong_winter/State_selected.pkl",
+    "incumbent_sha256": "bb052c476ba09717363e4d29efba4fb2fd16a1e4446a475a0cf64535d009534a",
+    "architectures": [
+      "tcn",
+      "tcn_gru"
+    ],
+    "seeds": [
+      20261013,
+      20261029
+    ],
+    "hidden": 48,
+    "context": 128,
+    "core": 64,
+    "epochs": 24,
+    "steps_per_epoch": 120,
+    "batch_size": 4,
+    "optimizer": "AdamW lr=.001 weight_decay=.0001 clip_norm=1;uniform regime/fit day/context start",
+    "matching": "All original TCN/attention parameters identical before training per seed;identical patch sequence and center supervision",
+    "GRU": "Two layers,bidirectional hidden24x2,residual gain init.1;additional parameters,not a capacity-matched causal proof",
+    "sampling_policy": "Uniform supervised center time;clip core then context at day boundaries;all day cells have positive sampling probability",
+    "cache_aux_sha256": {
+      "artifacts/research/A02_D12_I5_N_winter_seed20261013/prepared.json": "d428938ec42b4eaa766a76b021e0fe7de1db6f6e5abc91cd6a4f6b44c76db4bb",
+      "artifacts/research/A02_D12_I5_N_winter_seed20261013/graph.npz": "52ddd75ed7f6d3bf291607acfeaca107bd114ba2151a4e6cddb868c9fa1c1fc5",
+      "artifacts/research/A02_D12_I5_N_winter_seed20261013/lightgbm.pkl": "f5723627ca79baebf5726510be30034f2cfdb1b99f70bc00c8228a1bbb669758"
+    },
+    "checkpoint": "Max pure neural cal State every4epochs,first wins ties",
+    "blend_grid": [
+      0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "selection": "Per-seed architecture blend cal only;fixed equal-seed means;primary max cal over all plus incumbent/full-LGB",
+    "assessment_read": "Only after all seeds/checkpoints/blends/primary sealed",
+    "diagnostics": "Observed5min speed drop/recover>=20kmh;missing-speed input run>=12/36steps;observed speed<50",
+    "truth_scope": "Public train raw labels evaluator/loss only;fixed-context predictor accepts no labels/masks",
+    "assessment_status": "Previously viewed public-train development calendars;not new final/private evidence",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

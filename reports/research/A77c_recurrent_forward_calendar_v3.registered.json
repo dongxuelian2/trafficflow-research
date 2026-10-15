@@ -1,0 +1,25 @@
+{
+  "protocol_sha256": "1660e645da53891b7f7816934cf7e729a9ec540d0f77e56ec86e3ca69d03387a",
+  "protocol": {
+    "id": "Frozen_full_day_recurrent_forward_extension_v3",
+    "supersedes_sha256": "ce8e4716f1b6eca7ebd8a6ede5ce051e7c3ac70ba6286da37596a4a6b7e6aa0b",
+    "revision_reason": "Original A74 exporter stopped on JSON string path;use verified fresh A74b export,without model or date changes",
+    "studies": [
+      "A72b_recurrent_I210_W_autumn_full_day",
+      "A73_recurrent_I5_N_winter"
+    ],
+    "export_reports": [
+      "A74b_recurrent_I210_W_independent_replay",
+      "A75_recurrent_I5_N_independent_replay"
+    ],
+    "start_date": "2031-02-01",
+    "end_date": "2031-02-28",
+    "selection_policy": "All original primary/per-seed/seed-mean weights and blends retained;no extension tuning or argmax promotion",
+    "label_read_policy": "After both original selection seals and independent exports;extension disjoint from original profile/fit/cal/assessment",
+    "evidence_status": "Public-train forward-calendar development,not unopened final/private evidence",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

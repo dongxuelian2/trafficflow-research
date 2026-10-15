@@ -1,0 +1,68 @@
+{
+  "rows": [
+    {
+      "cache": "artifacts/research/A48_D7_I210_W_autumn_cache",
+      "prepared_sha256": "ddfbb2f256ec790e582e1a2e0868bce5db8d4d75eeb3ede1d4f0642ca5046cd3",
+      "n_fit_days": 92,
+      "n_target_grid_cells": 517171,
+      "old_never_supervised": 115049,
+      "old_never_supervised_fraction": 0.2224583358308954,
+      "new_never_supervised": 0,
+      "by_regime": {
+        "R3": {
+          "n_target_grid_cells": 187411,
+          "old_never_supervised": 41747,
+          "new_never_supervised": 0
+        },
+        "R2": {
+          "n_target_grid_cells": 230132,
+          "old_never_supervised": 51017,
+          "new_never_supervised": 0
+        },
+        "R1": {
+          "n_target_grid_cells": 99628,
+          "old_never_supervised": 22285,
+          "new_never_supervised": 0
+        }
+      }
+    },
+    {
+      "cache": "artifacts/research/A02_D12_I5_N_winter_seed20261013",
+      "prepared_sha256": "d428938ec42b4eaa766a76b021e0fe7de1db6f6e5abc91cd6a4f6b44c76db4bb",
+      "n_fit_days": 153,
+      "n_target_grid_cells": 3042465,
+      "old_never_supervised": 674637,
+      "old_never_supervised_fraction": 0.221740266527306,
+      "new_never_supervised": 0,
+      "by_regime": {
+        "R3": {
+          "n_target_grid_cells": 1731091,
+          "old_never_supervised": 383618,
+          "new_never_supervised": 0
+        },
+        "R2": {
+          "n_target_grid_cells": 800752,
+          "old_never_supervised": 177581,
+          "new_never_supervised": 0
+        },
+        "R1": {
+          "n_target_grid_cells": 510622,
+          "old_never_supervised": 113438,
+          "new_never_supervised": 0
+        }
+      }
+    }
+  ],
+  "old_policy": "Uniform context left128,supervise fixed center64;time0:32and256:288excluded",
+  "revised_policy": "Uniform supervised center;clip full core64and containing context128 at day edges",
+  "scope": "Positive theoretical sampling probability,not a claim every target actually drawn. Each model saves actual per-cell exposure counts.",
+  "runtime_shared_environment": {
+    "torch": "2.8.0+cu128",
+    "cuda_runtime": "12.8",
+    "GPU": "NVIDIA GeForce RTX 4060 Laptop GPU"
+  },
+  "original_trial_stop_record_sha256": "0fd7d8c7238a95c82f04d7ad3bbd3a77849616b463498780b08fc96af8dc6702",
+  "formal_State": null,
+  "formal_Physics": null,
+  "formal_Total": null
+}

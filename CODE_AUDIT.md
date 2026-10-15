@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+A72b的GRU位于原graph/attention编码后，原参数同seed逐项匹配；增加容量21313，不冒充等参数因果证明。固定窗口只接收strict12输入、图与FD；无label/score-mask参数。batch独立性、core先选边界全覆盖、每格点一次输出、zero-head/zero-gain与梯度均有测试。原A72 center-only源快照/partial权重保留，主动停止时未产生selection seal或读assessment。
+
+四个完成模型仅在fit监督；所有checkpoint/alpha/seed均值/primary由cal选择并写整体seal后才读assessment。每个模型保存真实按日逐格点曝光数组，两个架构同seed数组精确一致、517171目标均实际覆盖；原neural标签按link×time均值，不把它和full-LGB的station行数混为完全相同更新预算。Cal/ass输入从masked帧独立重建，raw teacher只用于loss/evaluator/transition诊断。
+
+A74因JSON str路径类型首次导出失败，原源快照保留；新A74b转换Path后导出10种冻结策略，28日280次model/day预测重放。输入、公开图/FD数组exact，最大lane-unit预测差2.28e−13，绝对容差1e−8；均值在total/lane单位换算可有roundoff，不声称位级相同。原primary是GRU均值，不因ass单seed29更高而改选。A73仍运行；A77c前向月份尚未读。97 research/81 CPU测试通过，5可选Torch跳过；旧模型与正式0.82940保持冻结。
+
 D21/D24新增两阶段OD模型：log-demand中心与KL路径修正共享同一公开计数，明确为顺序点估计，未声称joint posterior。alpha0精确调用固定entropy参考并跳过group；prior-center floor不是flow下界，独立primal finite-difference optimizer及低计数反例通过。可选floor参数默认2；D21运行结束后才加入，旧源快照与所有原流量预测保留。
 
 D24网格在D21 assessment结果查看前按development失败条件独立登记；worker只读D21 development_progress/seal和development NPZ，不读其assessment。1350原预测明确标记reuse，记录original_method_seconds，不能当新训练/测速。新两个floor20配置仍使用同一270开发问题，后续933xxx数据只在新seal之后生成。两个gate均失败，primary固定entropy，次要hypothesis或六seed汇总不覆盖选择。
