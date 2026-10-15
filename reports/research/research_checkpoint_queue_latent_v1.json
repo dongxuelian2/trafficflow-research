@@ -1,0 +1,163 @@
+{
+  "created_UTC": "2026-10-15T09:53:50.931685+00:00",
+  "git_base_before_phase_commit": "62aec0f29f618f31a69de64c3b32dd98c8a6a768",
+  "previous_goal_turn_classification": "progress:third-family paired State study and precision-aware audit completed,commit62aec0f",
+  "current_goal_turn_classification": "progress",
+  "objective_status": "active;formal0.95000+unachieved",
+  "formal_best_Total": 0.8294,
+  "new_formal_score": null,
+  "formal_model_promoted": false,
+  "completed": [
+    "Six equal-capacity hard/soft/known-latent synthetic-teacher models",
+    "Disjoint simulator seeds and unseen incident/FD/failure/noise stress",
+    "All scenes/causal features/labels/weights,decisions and cluster diagnostics independently replayed"
+  ],
+  "synthetic_cal_primary": "observation_hard",
+  "soft_observed_cal_gain": -0.000664685616819094,
+  "heldout_seed_diagnostics": {
+    "assessment": {
+      "observation_soft": {
+        "observed": {
+          "seed_mean_gain": 0.002010990937054885,
+          "ci95_seed_bootstrap": [
+            -0.005075864513429057,
+            0.010049826015751663
+          ],
+          "seed_gains": {
+            "947161": 0.014777346125339924,
+            "947167": -0.006018994713844996,
+            "947177": 0.0034183466497377272,
+            "947183": -0.004132734313013118
+          },
+          "independent_seed_count": 4,
+          "note": "Only four independently generated seeds,shared cases/noise counterfactuals and overlapping origins;coarse diagnostic,not official Queue confidence."
+        },
+        "latent": {
+          "seed_mean_gain": 0.0013063480807465274,
+          "ci95_seed_bootstrap": [
+            -0.007220968636234568,
+            0.009833664797727622
+          ],
+          "seed_gains": {
+            "947161": 0.0152379415368288,
+            "947167": -0.007132352603122078,
+            "947177": 0.004429388058626446,
+            "947183": -0.007309584669347057
+          },
+          "independent_seed_count": 4,
+          "note": "Only four independently generated seeds,shared cases/noise counterfactuals and overlapping origins;coarse diagnostic,not official Queue confidence."
+        }
+      },
+      "latent_supervised": {
+        "observed": {
+          "seed_mean_gain": 0.00041414487212791456,
+          "ci95_seed_bootstrap": [
+            -0.0040520997589968775,
+            0.005232497112692882
+          ],
+          "seed_gains": {
+            "947161": -0.0040297379597343435,
+            "947167": 0.001440870203003457,
+            "947177": 0.008319908803501957,
+            "947183": -0.004074461558259412
+          },
+          "independent_seed_count": 4,
+          "note": "Only four independently generated seeds,shared cases/noise counterfactuals and overlapping origins;coarse diagnostic,not official Queue confidence."
+        },
+        "latent": {
+          "seed_mean_gain": 3.904996563931112e-05,
+          "ci95_seed_bootstrap": [
+            -0.004970053522058058,
+            0.007054191587833981
+          ],
+          "seed_gains": {
+            "947161": -0.003367280252479387,
+            "947167": -0.0005666960852365928,
+            "947177": 0.010528015534605103,
+            "947183": -0.006437839334331879
+          },
+          "independent_seed_count": 4,
+          "note": "Only four independently generated seeds,shared cases/noise counterfactuals and overlapping origins;coarse diagnostic,not official Queue confidence."
+        }
+      }
+    },
+    "stress": {
+      "observation_soft": {
+        "observed": {
+          "seed_mean_gain": 0.00549970420134703,
+          "ci95_seed_bootstrap": [
+            0.0035191978349739905,
+            0.007508381565011338
+          ],
+          "seed_gains": {
+            "947161": 0.0063775365558085394,
+            "947167": 0.00848933213591412,
+            "947177": 0.004565529852302987,
+            "947183": 0.002566418261362474
+          },
+          "independent_seed_count": 4,
+          "note": "Only four independently generated seeds,shared cases/noise counterfactuals and overlapping origins;coarse diagnostic,not official Queue confidence."
+        },
+        "latent": {
+          "seed_mean_gain": 0.0053045794858841665,
+          "ci95_seed_bootstrap": [
+            0.002963515913718697,
+            0.007553141106597748
+          ],
+          "seed_gains": {
+            "947161": 0.006018108670529366,
+            "947167": 0.008478836740749417,
+            "947177": 0.004776054204142743,
+            "947183": 0.0019453183281151407
+          },
+          "independent_seed_count": 4,
+          "note": "Only four independently generated seeds,shared cases/noise counterfactuals and overlapping origins;coarse diagnostic,not official Queue confidence."
+        }
+      },
+      "latent_supervised": {
+        "observed": {
+          "seed_mean_gain": 0.0028435471360795184,
+          "ci95_seed_bootstrap": [
+            0.0009698904650615693,
+            0.005455000371635102
+          ],
+          "seed_gains": {
+            "947161": 0.00676363511793286,
+            "947167": 0.0015290961327418268,
+            "947177": 0.002670772496262075,
+            "947183": 0.0004106847973813117
+          },
+          "independent_seed_count": 4,
+          "note": "Only four independently generated seeds,shared cases/noise counterfactuals and overlapping origins;coarse diagnostic,not official Queue confidence."
+        },
+        "latent": {
+          "seed_mean_gain": 0.002114911946974836,
+          "ci95_seed_bootstrap": [
+            -0.0005417006176903503,
+            0.005720338585825594
+          ],
+          "seed_gains": {
+            "947161": 0.007443362240277165,
+            "947167": 0.0005512676224708815,
+            "947177": 0.0017809281231076467,
+            "947183": -0.0013159101979563492
+          },
+          "independent_seed_count": 4,
+          "note": "Only four independently generated seeds,shared cases/noise counterfactuals and overlapping origins;coarse diagnostic,not official Queue confidence."
+        }
+      }
+    }
+  },
+  "active_jobs": [],
+  "new_complete_submission": false,
+  "final_simulator_seeds": {
+    "seeds": [
+      7907,
+      8017,
+      9109
+    ],
+    "generated": false
+  },
+  "platform_policy": "Local models and Git only",
+  "limits": "Own CTM law,not organizer latent truth. Known synthetic sigma soft teacher assumes flat prior;not a true posterior or public competition model. Four heldout seeds,overlapping windows and correlated counterfactuals. No public-data transfer or formal Queue/Total evidence."
+}

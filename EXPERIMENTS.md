@@ -4,6 +4,14 @@
 
 | 编号 | 假设 / 核验 | 实测结果 / 资源 |
 |---|---|---|
+| C62 | 同X/曝光/权重，hard/known-sigma-soft/known-latent各2seed | soft observed-cal−.000665拒绝；latent窗口宏同类−.000516/stress+.005618；93.78秒CPU/peak491.11MiB |
+| C63 | 全源重模拟、独立特征/teacher/selector/权重/部署/评分 | 268scene/7090窗口，18booster预测差0、300grid/57680score差0、feature差1.49e−8；79.66秒 |
+| C64 | 独立4seed区间及noise/scene摘要，无新选择 | 8区间精确重现、64摘要行；同类σ3/8及stressσ16退步均保留 |
+
+六fit均272907行/300树，model seeds20261013/20261029；固定两seed均值。模型seal后读cal、选择seal后才生成heldout。10个生成seed中仅4个heldout独立seed，noise/case counterfactual及重叠origins不算新独立样本。3新单测通过，全128research/13.63秒、CPU107/8.79秒+7Torch skips。无public迁移/正式提交。
+
+| 编号 | 假设 / 核验 | 实测结果 / 资源 |
+|---|---|---|
 | A138 | I405_S原始公开targets、2seed各配对普通/位置GRU，共四fit | cal选位置均值；原后留.944199 vs A47 .941872、普通GRU .944237；464.45秒、GPU allocated439.57MiB |
 | A139 | 全11导出在冻结二月日期逐日直接调用 | 位置.949435 vs A47 .946264、普通GRU .947864；154predict、45.25秒 |
 | A140 | 全92fit inputs/teacher/exposure及全部选中checkpoint网格复算 | 首轮在alpha-grid报错；核验器float64混合与训练float32不同，源码ZIP/注册保留 |

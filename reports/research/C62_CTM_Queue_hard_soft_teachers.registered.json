@@ -1,0 +1,120 @@
+{
+  "protocol_sha256": "b9154b602370be5cd3572796803e96ef55cf6df3e7a4f4908e8e3ac40e9153b9",
+  "protocol": {
+    "id": "Paired_known_CTM_Queue_hard_soft_latent_teacher_study",
+    "seeds": {
+      "fit": [
+        947101,
+        947107,
+        947119,
+        947129
+      ],
+      "calibration": [
+        947137,
+        947149
+      ],
+      "assessment": [
+        947161,
+        947167,
+        947177,
+        947183
+      ]
+    },
+    "cases": {
+      "mild": {
+        "capacity_retained": 0.85,
+        "demand_multiplier": 0.9,
+        "incident_cell": 8,
+        "failure_fraction": 0.0
+      },
+      "onset": {
+        "capacity_retained": 0.5,
+        "demand_multiplier": 1.1,
+        "incident_cell": 20
+      },
+      "severe_upstream": {
+        "capacity_retained": 0.3,
+        "demand_multiplier": 1.25,
+        "incident_cell": 8
+      },
+      "severe_downstream": {
+        "capacity_retained": 0.3,
+        "demand_multiplier": 1.25,
+        "incident_cell": 27
+      },
+      "failures": {
+        "capacity_retained": 0.5,
+        "failure_fraction": 0.4,
+        "failure_steps": 36
+      },
+      "noisy": {
+        "capacity_retained": 0.5,
+        "relative_flow_noise": 0.05
+      }
+    },
+    "stress_cases": {
+      "shifted_up": {
+        "incident_cell": 4,
+        "capacity_retained": 0.4,
+        "demand_multiplier": 1.05,
+        "failure_fraction": 0.25,
+        "free_speed": 95.0,
+        "capacity": 6400.0,
+        "length_km": 1.0
+      },
+      "shifted_down": {
+        "incident_cell": 24,
+        "capacity_retained": 0.65,
+        "demand_multiplier": 1.25,
+        "failure_fraction": 0.2
+      },
+      "high_demand": {
+        "incident_cell": 15,
+        "capacity_retained": 0.6,
+        "demand_multiplier": 1.4,
+        "relative_flow_noise": 0.08
+      },
+      "long_failures": {
+        "incident_cell": 12,
+        "capacity_retained": 0.35,
+        "demand_multiplier": 1.15,
+        "failure_fraction": 0.35,
+        "failure_steps": 60
+      }
+    },
+    "fit_cal_noise": [
+      1.0,
+      3.0,
+      8.0
+    ],
+    "assessment_noise": [
+      0.0,
+      3.0,
+      8.0,
+      16.0
+    ],
+    "model_seeds": [
+      20261013,
+      20261029
+    ],
+    "arms": [
+      "observation_hard",
+      "observation_soft",
+      "latent_supervised"
+    ],
+    "features": "58 fixed causal features,exact13past/current slots,normalized speed/flow,validity,local summaries,within5km positional context,public condition/cutoff/lead. No scene/cell/time identity,noise sigma or latent input.",
+    "sampling": "Own latent selected events;history eligible>=.7,ongoing latent>=2 same cell in prior12slots,horizon queue,onset first atT+30,persistenceIoU<=.9. All overlapping origins,not organizer selector.",
+    "history": "Past12slots use eligible raw noisy observations;T uses eligible released-like masking. Future eligible mask only training/scoring.",
+    "teachers": "Hard threshold of noisy observations;Gaussian ndtr((cut-observed)/known synthetic sigma) flat-prior soft teacher;known latent only synthetic upper reference. No claim soft teacher is true posterior.",
+    "model": "All6 LightGBM cross_entropy,300trees/31leaves/lr.035/min_child40/lambda10,feature_fraction.9/bagging.9/freq1/4threads;identical X/rows/weights for each arm and paired optimizer seed.",
+    "weights": "Equal condition/equal window,within-window equal legal supervised cells;early onset steps omitted per public timing. No class-dependent weights.",
+    "decision": "Fixed equal two-seed probabilities;50 condition thresholds/force settings fitted separately on observed cal and latent cal. Latent-cal settings diagnostic only.",
+    "primary": "Observed-cal soft only if gain>=.005 and each condition loss<=.01,else hard. Latent-trained arm not eligible for public pipeline promotion.",
+    "heldout": "Assessment/stress generation only after model and decision seals. Same four assessment seeds across stress/noise;not independent new seeds.",
+    "uncertainty": "Equal scene available-condition macros then seed means;paired bootstrap4independent seeds,4000resamples. Overlapping windows never independent.",
+    "final_simulator_seeds_generated": false,
+    "formal_Queue": null,
+    "formal_Total": null,
+    "public_model_or_submission_changed": false
+  }
+}

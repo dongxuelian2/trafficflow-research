@@ -2,6 +2,16 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**C62–C64：Queue硬/软/已知latent teacher对照完成，soft未晋级。** 六个同容量树模型使用相同的自主CTM因果输入、272907监督行/权重；没有比赛隐藏标签或public模型迁移。observed-cal soft gain−.000665，保留hard。
+
+| 自主模拟、已知latent标签的窗口condition宏IoU | 同类新seed | 未见场景stress |
+|---|---:|---:|
+| 硬观测teacher | .461195 | .393638 |
+| Gaussian软teacher | .460679 | .399256 |
+| 已知latent标签控制 | .461134 | .396266 |
+
+soft窗口宏变化−.000516/+.005618；另一等scene/seed诊断gain+.001306/+.005305，四seed区间[−.007221,.009834]/[.002964,.007553]，两统计权重不同。latent标签控制也未明显领先，不能把噪声当已确认主要瓶颈。hard onset/ongoing同类IoU .090053/.832336；仅自主模型结果，非正式Queue。C63全部268scene/7090窗口、18模型预测、300grid/57680score复算通过；C64另验8区间。128research/107CPU测试通过，7Torch skips。无新完整提交/正式成绩。见 [标签对照记录](docs/LATENT_QUEUE_TEACHER_RESEARCH.md)。
+
 **A138–A141：第三个走廊族D12_I405_S完成，新增策略有收益，位置偏置的独立收益仍不稳定。** 原公开mask、92fit日、两seed各配对普通/位置GRU，共四个新模型；没有增加remask标签位置。cal选位置均值，冻结A47注意力模型为强参照。
 
 | 本地公开TRAIN策略 | cal | 原14日后留 | 固定2/15–2/28 |

@@ -3,6 +3,16 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+自主CTM的hard/known-sigma-soft/known-latent teacher各两seed，同58特征、272907行/权重、300树/31叶。已知σ只构造fit teacher，不进推断；latent标签控制不是理论上界。
+
+| 已知latent标签、窗口condition宏IoU | 同类留出 | 未见场景stress |
+|---|---:|---:|
+| 硬观测teacher | .461195 | .393638 |
+| Gaussian软teacher | .460679 | .399256 |
+| 已知自主latent teacher | .461134 | .396266 |
+
+所有模型cal阈值相同；soft observed-cal−.000665，primary保留hard。同类σ3/8、stressσ16的soft退步保留。等scene/seed统计与窗口宏不同，完整对照见 `docs/LATENT_QUEUE_TEACHER_RESEARCH.md`。尚无真实公开模型迁移或正式Queue增益。
+
 第三走廊族D12_I405_S使用原始fit targets；两seed各配对普通/位置GRU，所有共同初始化/实际曝光精确一致。既有LGB/A47为性能参照，A47不是同预算架构控制。
 
 | I405_S策略 | cal State | 原后留State | 固定2/15–2/28 State |

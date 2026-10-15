@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+C62新增`latent_queue`的严格13slot因果58特征、训练teacher及完整域决策/scorer。模型仅收v/q/valid/static几何/公开condition/lead，sigma/latent/future quality不进features。未来eligible仅用于loss/scoring，onset早五步0，force在完整允许域选位置；新单测覆盖Gaussian解析值、缺测/置换及score mask分离。
+
+C63逐node独立构造特征、selector及erfc teacher，重新生成268scene/7090窗口和272907训练行/权重，feature最大差1.49e−8、teacher差0。六portable booster在cal/同类/stress共18预测差0，300cal配置及57680角色窗口分数差0。C64独立分组核验8个四seed区间。未独立重训树，不宣称真实latent/organizer契约验证。
+
+事件由自主latent选择，不按未来观测正例筛选，包含28/12个零正例heldout窗口。原注册“upper reference”不是性能上界，latent标签控制实测接近hard；不能代替比赛未知真值。全128research/107CPU通过，7可选Torch skips；测试与验证并行计时。
+
 A138新增研究runner，生产src不变。D12_I405_S使用原始公开fit targets，四个新fit分成两个seed的普通/位置配对，共同初始state、独立存储patch计划、实际逐格曝光完全匹配。强性能参照为既有全标签LGB/A47 cal最高者，普通新GRU亦作为候选；全部alpha/checkpoint/reference/primary整体seal后才读旧后留。
 
 A140首轮核验的alpha-grid触发1e−12断言。独立56纯cal调用证明核验器float64乘法改变float32中间舍入；恢复native float32后20网格评分和选中预测差均0。未改训练/模型/选择/预测/容差，失败源码/注册/诊断保留。A140b重建92fit raw输入/teacher/mask、公开图/距离、独立RNG计划/四份曝光，308predict最大lane-unit差2.27e−13，另56纯cal调用及280保存指标、20所选checkpoint网格评分通过。未重放训练优化器或未选择的epoch。
