@@ -1,0 +1,23 @@
+{
+  "protocol_sha256": "96703ab9fe4fc85ede61dbc732c21fea9642e09a589603894d27efec5b1ecef4",
+  "protocol": {
+    "id": "Bounded_local_search_separate_MC_decision_screen",
+    "previous_goal_turn": "progress:1a6a921 completed C78-C81 joint scenario/no-gain evidence",
+    "source_study_sha256": "887c470acf094bfecd15fca02ea1f51c3cd67e142aa6d4535f6f4c74746b1b50",
+    "source_audit_sha256": "aad6c690dcc853f916e187ea3c916f2b8ad8de2785ead5c807c4e96f0d69080f",
+    "source_manifest_sha256": "dafdf853fdbdd8a46c3183eefc36615a69f779b21f482b6e391f44f416e83283",
+    "unchanged_kernel_sha256": {
+      "src/trafficflow/expected_iou_queue.py": "75d27c1674d62658f709b6d0fc5ea5a43f47c3ef6ce0086fa07b73529d4199d3",
+      "src/trafficflow/joint_queue_scenarios.py": "30a3a9c25cec94de3f2162ec8714046c6b89417df02811a2a0ef69bd82c571bd"
+    },
+    "search": "Same C79copula/empirical bank4096scenarios,all ranked prefixes initialization,at most8single-bit improving moves,min_step1e-6,prefer removal/linkID on tie. Not globally optimal.",
+    "conditional_MC_validation": "Separate fit-template banks seeds20261107/20261119,2048each. Accept proposal iff paired simulation mean gain>=.001 and approximate normal95CI lower>0. This is model-law numerical screening,not real label/test confidence.",
+    "source_data": "Only existing fit labels/masks to build independent simulation bank;decision features/labels for screen. Frozen trees,calibrators,incumbent/rawthreshold/nonempty/prefix controls. No selection/assessment arrays read by worker.",
+    "screen_gate": "Shortlist validated_local only if decision proxy>=incumbent+.005 and>=prefix+.005. If no case qualifies,stop this decoder expansion;do not evaluate new selection/assessment. If any qualifies,a separate frozen followup protocol is needed.",
+    "scope": "Previously viewed public noisy observation proxies;not blind/final/private. Actual future labels/masks only score completed decisions. No tuning maxmoves/MCseeds/margins.",
+    "formal_Queue": null,
+    "formal_Total": null,
+    "platform": "Local models/Git only",
+    "final_simulator_seeds_generated": false
+  }
+}

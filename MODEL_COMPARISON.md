@@ -3,6 +3,17 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+C82–C84固定现有joint scenario/probability，仅改变非前缀搜索；最多8个单翻转并用另一MC库筛改进。先登记decision-only screen，未shortlist就不追加后段。
+
+| decision观测代理 | incumbent | 原joint prefix | 新local proposal / validated | onset提议数 |
+|---|---:|---:|---:|---:|
+| I5_S September | .810210 | .785210 | .785210 | 0 / 19 |
+| I5_S October | .797619 | .751985 | .751985 | 0 / 21 |
+| I10_W September | .872614 | .872614 | .872614 | 0 / 6 |
+| I10_W October | .651519 | .651519 | .651519 | 0 / 6 |
+
+十个已知小分布含非前缀反例均达到各自已枚举最优，公开模型law上却均停在单翻转局部点；不外推为所有搜索方法都无效。没有新selection/assessment分数。C85/C86数据人口只作后续通用动态预训练的设计证据，不与模型成绩混表；同准则全部观测onset原点已被现有fit捕获。[完整证据](docs/BOUNDED_SEARCH_AND_DENSE_FORECAST.md)。
+
 C79在同C74冻结calibrated p上拟合fit-only经验二值关联与eligibility场景。对照完整匹配、没有新树/校准器，ongoing逐格不变：
 
 | 公开代理case | incumbent / primary | independent/full | independent/mask | dependence/full | dependence/mask |

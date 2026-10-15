@@ -2,9 +2,15 @@
 
 目标为可复现的正式 Kaggle **0.95000+**；当前正式 **0.82940**。不将阶段性较低分数作为终点。
 
+C82–C84已完成受控非前缀筛查：已知反例gap闭合，但52个decision onset/5284邻居中0提议、0shortlist，按预登记停止，没有新后段数组读取。停止扩展当前集合解码分支，不增加相同MC规模、搜索步数或同一场景库的组合。[筛查与数据证据](docs/BOUNDED_SEARCH_AND_DENSE_FORECAST.md)。
+
+C85–C86及checkpoint的raw原点集合复核说明：全时段5分钟监督unique单元可增4.97–22.18倍，但既有72/122/37/58个同准则观测onset已全部覆盖，扩相同selector配额不会添加此类事件。固定30分钟原点只保留6/9/0/1，不能用固定粗相位替代五分钟上下文。数据人口扩张不是性能证据，重复teacher均值5.89次；拟合日/走廊及滚动fold也不独立。
+
+下一轮优先做通用交通动态预训练→同预算事件微调，与同结构scratch、冻结强树匹配比较。仅用各fit截止之前的公开观测，future速度/流量/quality只进loss；输入为合法一小时history加masked T，采样覆盖全部五分钟相位。checkpoint/概率校准与decision/selection仍分期，两个optimizer seed，预先固定小预算；显式记录额外样本/更新量，不能把数据增加全部算作架构贡献。优先验证新表征是否改善onset/ongoing和急降速/恢复，再考虑与State–Physics共享，而不是按旧后段挑配置。正式Physics/Total仍未知，原完整最佳、final模拟seeds、平台暂缓不变。
+
 C78–C81已完成非空总体/可评分子集的精确扩展，以及4个公开fit-only经验关联/eligibility场景库。关联full相对matched independent gain0，mask关联+.002352、区间[0,.006250]，没有新增稳定收益；full关联只改变当地4个不可评分单元。全部3076曲线与便携接口独立核验，primary仍incumbent。停止扩大相同MC规模/经验copula参数，不把4096场景当4096训练事件。[当前证据](docs/JOINT_SCENARIO_ONSET_RESEARCH.md)。
 
-下一步可先在自主已知联合分布上检验受控非前缀搜索：C81给出prefix最优.436、全局.4425的非空反例，说明仅按边际概率排名可能限制联合模型。必须限制计算预算、与同一场景law的prefix/独立精确IoU及强参照匹配，先穷举小分布，再预登记公开验证；不保证该反例对应真实交通收益。若依然没有新增有效信息，应把预算转回事件动态/latent观测契约及State–Physics结构，而非继续扩大解码器组合。原正式最佳、final模拟seeds与平台暂缓不变。
+该阶段提出的有限非前缀路线现由C82–C84完成并在decision筛查停止；已知.0065数学反例没有带来新增公开预测，后续预算转移如上。保留限定范围的负面证据，不把小分布全局正确性当真实模型提升。
 
 C74–C77已完成上一轮提出的概率集合决策：精确独立Bernoulli IoU内核通过穷举/582积分曲线；独立15日数据校准8个状态。非空策略的事后联合gain+.026310、CI[.003884,.053022]，但相对已有raw threshold区间跨零，所有primary仍incumbent；多重比较未校正。校准本身或无非空IoU均未显示可靠独立收益，不扩大相同Platt正则/阈值/独立标签网格。[当前证据](docs/PROBABILISTIC_ONSET_RESEARCH.md)。
 

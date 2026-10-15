@@ -4,6 +4,16 @@
 
 | 编号 | 假设 / 核验 | 实测结果 / 资源 |
 |---|---|---|
+| C82 | 固定8步单翻转搜索，10个已知联合小law与320集合穷举 | 已知非前缀gap.0065闭合；不保证一般全局最优，不作交通分数 |
+| C83 | 新独立MC库检查提议，decision需同时超过incumbent/prefix .005 | 52onset、5284邻居，0提议/0shortlist；预定停止，未读新selection/assessment；8.05秒/peak442.32MiB |
+| C84 | 独立候选集合矩阵、模拟接受区间、所有screen controls与导出 | 4bank/320全局小集合/5284邻居，16新历史48便携+24乱序+12poison通过；10.46秒 |
+| C85 | 仅fit日期、5/30分钟全时段监督清点，原点只由历史质量筛选 | 340fit-day引用、432源文件；unique teacher扩张4.97–22.18倍，同准则onset无新增；19.79秒/peak450.39MiB |
+| C86 | 独立shifted-window与target时间并集复算所有人口统计 | 680日/stride行、12240整数、汇总与监督并集通过；8.56秒；checkpoint另核exact onset原点集合 |
+
+3新测试、全147research/12.42秒、126CPU/7.97秒+7Torch skips通过。无提议使MC接受gate在本次真实非零提议下未得到检验；没有新后段或正式成绩。dense新增数据主要补充非首次T+30交通动态，重叠监督不能当独立标签；下一步需实测预训练而非仅凭数量声称收益。[配置与复现](docs/BOUNDED_SEARCH_AND_DENSE_FORECAST.md)。
+
+| 编号 | 假设 / 核验 | 实测结果 / 资源 |
+|---|---|---|
 | C78 | 9个latent始终非空的精确联合标签/masklaw，比较scored-positive子集选择后回总体风险 | 单节点coverage.25的population regret.360156；明确前五步evidence；自主小分布非交通成绩 |
 | C79 | 289fit onset拟合4个经验二值关联/mask库；同calibrated p的4scenario臂 | 2MC seed×2048/库，无新树或calibrator；CPU103.51秒/peak462.54MiB；full关联相对matched independent gain0，primary均incumbent |
 | C80 | 首次独立bank审计 | exit1：float32标签mean与生产整数ratio差2.62e−8；源码zip/注册/错误保留；另发现并重命名核验器局部变量覆盖 |

@@ -1,0 +1,16 @@
+{
+  "protocol_sha256": "8210ad99fc25573f7b4b8cbdd45a8c39692c8ba87d5b82d657ea5adece96d4ca",
+  "protocol": {
+    "id": "Fit_only_dense_forecast_population_inventory",
+    "source_study_sha256": "0affe5389974f50c60876a98142181c6d4a108c49aa997b0c1eea05e1c7a5185",
+    "definition": "All C71 FIT days only;origins12..last-6 within UTC day,5/30minute stride,accept using past12slot eligible coverage>=.7 only. No future-positive/noise/label eligibility gate on origin sampling.",
+    "input_contract": "Past12 raw eligible observations plus published maskedT. Inventory records maskedTcoverage;future raw observations are teacher diagnostics only. No model trained or score computed.",
+    "targets": "All six5minute future horizons,both-required-channel eligibility. Repeated/unique target cells separately counted. Observed speed drops<=-20km/h and isolated5min queue are teacher diagnostics,not latent accidents.",
+    "comparison": "Same-case selected C71 fit supervision union versus all-time dense union. Overlapping folds and temporal windows are not independent labels/events.",
+    "scope": "Feasibility evidence for generic traffic-dynamics pretraining after postprocessing screen failure;not official validation/hidden truth. No selection/assessment/private data read.",
+    "formal_Queue": null,
+    "formal_Total": null,
+    "platform": "Local only",
+    "final_simulator_seeds_generated": false
+  }
+}

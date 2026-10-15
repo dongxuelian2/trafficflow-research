@@ -2,6 +2,17 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**C82–C86：受控非前缀搜索在决策期被否决，转向动态预训练数据。** 十个自主小分布的320集合穷举通过，搜索将已知反例.436→.4425；但52个公开decision onset上检查5284邻居后，提出改动0、shortlist0。按预登记门槛停止此解码扩展，未新读selection/assessment数组，**新后段成绩未评估**。
+
+| fit-only公开数据 | 原event-fit监督单元 | dense5独特teacher单元 | 新增倍数 | 已选/全部同准则onset原点 |
+|---|---:|---:|---:|---:|
+| I5_S September | 262518 | 1303404 | 4.965 | 72 / 72 |
+| I5_S October | 285865 | 2270580 | 7.943 | 122 / 122 |
+| I10_W September | 67385 | 1393856 | 20.685 | 37 / 37 |
+| I10_W October | 109498 | 2428487 | 22.178 | 58 / 58 |
+
+onset原点集合从raw逐项核验相等，不能把数据扩张当新增onset事件；上述只指观测代理准则，latent/官方覆盖未知。固定30分钟相位只保留6/9/0/1此类原点；后续动态预训练应覆盖五分钟上下文，并单独验证增益。680日/stride行、12240整数统计、432源文件全复核通过；重复teacher均值5.89次，不当独立标签。147research/126CPU通过、7Torch skips。累计6877artifact、原完整CSV不变，无新正式成绩。见[搜索筛查与数据记录](docs/BOUNDED_SEARCH_AND_DENSE_FORECAST.md)。
+
 **C78–C81：经验联合标签/eligibility场景模型完成，未取得匹配对照增益。** 冻结树与概率校准，仅由289个fit onset拟合4个场景库，每库两个MC seed共4096场景；全覆盖/经验mask、独立/经验关联四臂，future实际mask不进预测。
 
 | 公开观测代理 | 原强参照 / primary | independent/full | independent/mask | dependence/full | dependence/mask |

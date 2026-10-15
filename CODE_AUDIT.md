@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+C83的local_search只用原假设场景，8步单翻转与独立模拟bank的条件数值筛查；实际future teacher/mask只进decision evaluator。四组held-simulation bank由fit窗口生成并seal后才读decision，源JSON旧结果不称盲测。0提议/0shortlist触发预登记停止，worker未读新selection/assessment数组；不声称真实非零提议验证了数值接受gate。
+
+C84独立候选集合矩阵复核10小law/320全局集合、52onset/5284邻居、MC区间/停止规则与导出；8onset Booster+4参照probability，16新history/48角色+24乱序+12future拒绝通过。新3测试及当前全147research/126CPU通过、7Torch skips。旧raw/概率/场景bank证明明确复用，无新完整submission或正式成绩。
+
+C85仅fit raw/masked日，原点采样只看过去12步quality，future进人口统计；重复target与unique target分计，末步onset准则明确限于观测代理。C86用独立quality谓词/groupby/移位数组和覆盖时间集合重算680日/stride行、12240整数及汇总。checkpoint再逐raw原点集合证明selected与dense5 onset完全相同（72/122/37/58），不作latent覆盖保证。旧6835artifact重hash不变、累计6877，5完整CSV及锁保持固定。[证据](docs/BOUNDED_SEARCH_AND_DENSE_FORECAST.md)。
+
 C79场景库只由C71 fit onset的eligible观测标签/六步mask构造，missing标签不进rate分母；记录289窗口引用、2seed×2048模板与同base-jitter独立/二值关联变换。没有使用拟合内分类器残差、实际评估future mask或重新拟合概率校准。ScenarioOnsetQueueModel只接收合法history/target，ongoing不变，prefix优化不声称全局最优；前五步零标签evidence与末步mask分开。
 
 C80失败是核验器float32 mean取代生产整数ratio，最大rate差2.62e−8；C80b修正独立整数计算并消除局部变量遮蔽，bit-exact标准与模型/选择不变，失败源码zip保留。4场景库逐位一致，3076条ensemble/member曲线用指示矩阵直接交并集复核差0。8decision onset Booster+4参照probability调用，24概率文件沿用C75；109新便携历史支持981角色+504乱序+36future拒绝。旧2196raw及C75概率审核显式复用，本次新全量raw重建0。
