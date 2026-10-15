@@ -1,0 +1,55 @@
+{
+  "protocol_sha256": "c2eec233d077a053edfed0f8fc5ae0d7f561d742a77fbd54bb015af8cd0a02c3",
+  "protocol": {
+    "id": "Native_rate_point_remask_and_mock_Queue_buffer_GRU_ablation",
+    "panel": "D7_I210_W",
+    "source_study": "reports/research/A72b_recurrent_I210_W_autumn_full_day.json",
+    "source_study_sha256": "8bde3ffc89105f76d31e4d96d586d558e6c21620be24cc85cea8fbba34f32c8f",
+    "views_report_sha256": "17592bf01d2db98338fa4aa130cd605db97b283cb81e8729ef0df3718ca3896e",
+    "views": "artifacts/research/A96_I210_W_native_remask_fit_views",
+    "frozen_control_study_sha256": "d4c5591fa8ded4790566099bf1ba37f9e65815e6aad3a7b51c5d8cc1140d84a0",
+    "control_verification_sha256": "5d5bf1aed913478f01bf7c1d44c77f23003cb26cdfc7bfccceb75ec0c3df3af6",
+    "variants": [
+      "point",
+      "queue"
+    ],
+    "seeds": [
+      20261013,
+      20261029
+    ],
+    "epochs": 24,
+    "steps_per_epoch": 120,
+    "batch_size": 4,
+    "parameters": 97307,
+    "context": 128,
+    "core": 64,
+    "optimizer": "AdamW lr.001 wd1e-4 clip1",
+    "sampling": "Same original uniform regime/day/core centers and shared augmentation plan perseed;probability.5 selects one of4views",
+    "control_reuse": "A87control checkpoints/cal choices/exposure already tensor-exact with A72b and independently deployed;reuse explicitly,no new control fitting",
+    "labels": "Original target labels on nonaug samples;new public raw-fit target positions on augmented samples. Same update budget,NOT same label population/count",
+    "checkpoint": "Pure ordinary cal State every4epochs,first max;perseed blend0/.25/.5/.75/1 ordinary cal only",
+    "primary": "Max cal of incumbent,LGB,prior_GRU,point_seed_mean,queue_seed_mean;equal seed weights fixed",
+    "assessment": "Old public assessment is regression,read only after all choices sealed;no threshold tuning",
+    "future_dates": [
+      "2031-01-09",
+      "2031-01-10",
+      "2031-01-11",
+      "2031-01-12",
+      "2031-01-13",
+      "2031-01-14",
+      "2031-01-15",
+      "2031-01-16",
+      "2031-01-17",
+      "2031-01-18",
+      "2031-01-19",
+      "2031-01-20",
+      "2031-01-21",
+      "2031-01-22"
+    ],
+    "future_scope": "New calendar for these trained policies,other public historical studies possible;not final/private",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

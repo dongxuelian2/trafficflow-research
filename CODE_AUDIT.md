@@ -1,5 +1,13 @@
 # 当前实现与评分接口审计
 
+A96只用原fit日期公开raw观测生成4个seed的新Bernoulli link/time mask，rate取原当日R1/R2/R3，不复制隐藏/official stable-hash答案。Point和Queue-shaped共享点坐标；历史可见/未来90min空缺只按公开或metadata模拟origin，后者不读取condition/future coverage/拥堵标签。两区间都不作Task1 loss。拟合期公开Queue origin实际为0，模拟并非官方selector。
+
+所有teacher目标的speed/flow/occupancy/derived density/pct-observed先移除、flags更新，再从头重建StateFeatures。Profile固定于原45日。A99不调用remask helper，独立重建736输入/loss/hidden arrays；16个实际loss-target poison输入exact，独立float64 raw求和与float32训练label差2.38e−7归一化单位，固定容差1e−6。Builder补齐相邻日history/guard窗口后，逐日确认92fit原origin列表均不变；原cache源快照/数组未改。
+
+A97初始化及regime/day/core中心匹配旧GRU，原控制权重显式复用A87/A90，不计本轮新训练。新loss mask会监督模板之外的公开fit标签，实际曝光/新增位置单独记录，不能称等标签人口。全4模型/checkpoint/alpha/双seed均值/primary仅按cal选择并整体seal后才读原assessment；一月14日预先固定，未按新结果重选。116 research/100 CPU tests通过，5可选Torch跳过。
+
+A100独立RNG/core/view和标签曝光重建与实际数组精确一致；对全部原cal/assessment的12role共336次predict重放，输入/teacher/目标顺序核验，最大lane-unit差2.27e−13。A101用逐列RLE和raw前5min速度另算全部诊断mask，14日168保存指标独立重算最大差2.22e−16；另24次直接predict差0。没有将168写成168次新推断，也没有将复用control写成新训练。
+
 A92首次线性反推等alpha失败来自保存neural float32乘法的量化丢失；四原selected-alpha输出和baseline重放exact。A92b直接重推全部728model/case，未放宽旧1e−8预测复现容差，原失败注册/源码保留；其已查看日历明确是次要诊断。
 
 `GapGatedState`只读取features.raw中speed/flow的有限性、五分钟timestamp网格及合法target lookup；不读teacher、regime、score-mask或人工失效metadata。36步门限与新日历/seed/8条件在A93读取新标签前冻结。两状态通道共同切换、空闲专家跳过，保存时递归清除临时网络缓存。只用于离线State，同日已发布未来观测不允许传给Queue。

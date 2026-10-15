@@ -3,6 +3,18 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+最新同GRU参数、初始化及更新/采样中心预算的合法重新mask数据增强，明确改变了可用标签人口；冻结旧control不重复训练。
+
+| 固定双seed策略 | 原14日公开assessment State | 一月14日forward State |
+|---|---:|---:|
+| 原GRU reference | .935491 | .931933 |
+| 重新随机mask，point | .938770 | .934516 |
+| 随机mask+模拟Queue90min空缺，cal primary | **.938919** | **.934816** |
+
+primary相对原GRU pooled gain+.003428/+.002883，day-mean名义CI[.000914,.003166]/[.000874,.005771]；每个seed的pooled gain都正，但seed29日均区间跨零。原assessment仅1个R3日，一月6个R3日的primary R3 .927472 vs原.922288。新标签位置约126–131万 vs51.7万，不能把收益完全归因架构；point/Queue-shaped标签预算也不同，二者增益差小、跨日历证据较弱。
+
+一月primary恢复速度RMSE更差（14.664→16.119），急降速和拥堵速度较好；flow/Physics未获得统一证据。仍是单方向公开研究候选，未改正式最佳或完整submission。详见 `docs/NATIVE_REMASK_STATE_RESEARCH.md`。
+
 最新A92b把四个perseed checkpoint均固定alpha.5直接推断：普通control均值.932724、增强.930013（−.002711），而四严重失效仍有+.0990…+.1727合成gain。原混合预测反推有float32量化误差，失败记录保留；没有把舍入误差放宽到旧部署容差。
 
 | 新固定门控评估 | control | gated | 差异 / 证据 |

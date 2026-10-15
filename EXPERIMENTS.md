@@ -2,6 +2,19 @@
 
 所有模拟指标、观测代理与正式 Kaggle 指标分别记录。失败实验不删除，既有模型与提交不覆盖。
 
+最新A96–A101回到官方随机mask目标，记录实际数据增强预算，不以严重断测合成分数代替State。
+
+| 编号 | 假设 / 验证 | 实测 / 资源 |
+|---|---|---|
+| A96 | 原92fit日输入审计+4seed×point/Queue-shaped新mask | 86.81%原目标gap≤25min，≥180min为0；736views、131.93秒CPU；新teacher只来自raw public fit |
+| A97 | 2optimizer seed×2新数据策略，原GRU control显式复用 | Cal选Queue-shaped均值；原assessment .935491→.938919（+.003428）；point .938770；887.62秒、725.01MiB |
+| A98 | 模型/alpha/primary固定后评估预登记一月14日 | primary .931933→.934816（+.002883），6个R3日；第二seed CI仍跨零；51.86秒、234.58MiB |
+| A99 | 独立raw teacher、mask、history/guard、全输入重建 | 736view exact，16次真实loss-target poison通过；归一化float32 teacher差≤2.38e−7/固定1e−6容差；113.30秒 |
+| A100 | 独立实际loss-mask曝光与全保存角色部署 | 4个完整曝光数组/标签计数一致；28日×12role共336次predict最大差2.27e−13 lane units；84.89秒 |
+| A101 | 固定forward全部teacher/诊断/指标与采样直接推断 | 14日、168保存指标差≤2.22e−16；另24次predict差0；11.16秒 |
+
+新数据策略与原控制标签位置/曝光数不同；两个新模型均值跨时间正面，但仅1个方向/同2seed，未生产晋级。原assessment R3仅1日，一月6日；bootstrap重采样日期而非目标cell。Queue-shaped对point差异尚弱，模拟origin不是官方条件事件。恢复速度/拥堵flow负面结果保留，真实Physics/Total未知。116 research tests通过/9.63秒，CPU100通过/5 Torch skips/7.04秒；新增跨午夜guard两kernel测试1.00秒，当前fit数据不变。
+
 最新A92–A95进一步分离alpha影响，并检验输入门控的跨缺失分布泛化，保持负面结果。
 
 | 编号 | 假设 / 核验 | 实测 / 决策 |
