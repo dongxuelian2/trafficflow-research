@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+C95的State-only只调用masked13槽分析头，当前loss与原joint当前分量相同，其他forecast/GRU头的16快照逐tensor未更新。独特current标签/坐标及累计1/(batch*nmasked)风险精确重建343254种子内行，不能当全局独立标签数。24树固定参数三种风险/目标，4旧joint只重选快照。全局decision筛查失败，代码及read receipts均无新的selection/assessment/late raw/arrays读取；旧报告含已看结果，非盲测。
+
+C96首次完整审计在portable TF32单窗/批量1e−5检查失败；保留failed/source/partial。诊断输入相同，repeat48首行差0，关闭TF32后边界差降至5.96e−8。C96b保留原检查阈值，原研究profile重放差0、完整FP32 portable差4.77e−7；所有CP选择和全局拒绝不变。两profile数组分开，State点差界6.7997e−5只覆盖已测上下文，非隐藏数据保证。
+
+独立重训1NN逻辑权重差0、2字段树文本一致；其余3NN/22树仅数据/权重/预测审计。8280完整CP+33事件CP、16560decision上下文重建，32FIT梯度对、108便携/36乱序/36时区/18future拒绝。281520角色-context计数含树和别名，不称独立GPU forward。全164research/136CPU+10Torch skips；旧7679产物/5完整CSV/锁不变，累计7956。[全部证据](docs/STATE_SPECIALIZATION_CONTROLS.md)。
+
 C91明确拆开Queue合法rawpast12+maskedT与State全masked13槽，两次共享编码，State条件也只看masked历史。未来flow/current raw teacher只进loss或评分；current State GRU未展开，GRU仅未来残差，不作物理守恒主张。C92独立34224 State/33480 Queue上下文、742fit/CP事件及744 rawpast/future poison通过。
 
 C93在成功的原sampled replay之后另加67.86阈值边界回归，定位portable State乘回25比较造成float32条件差异；仅修入口为训练同一scaled比较，C93b重放同12NN/4树、48快照、60 State日/16560上下文/99360 State member forward。原权重/选择/预测文件未改，所有probe日志和原成功审计保留。原CPU probe未装Torch仅暴露测试放置问题，已移到optionalTorch测试模块。

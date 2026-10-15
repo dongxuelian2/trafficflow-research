@@ -2,6 +2,10 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**C95–C97：完成 State 选择目标、实际标签与损失权重对照，全部新候选在决策期被否决。** 4 个新 State-only NN、24 个匹配树字段模型，另重选 4 个已有 joint 网络；原全标签因果树均值 .897609，最好新族 matched L2 .893276，gain−.004333。按预登记停止，没有新 selection/assessment/late-transfer 分数；这些都是公开因果子集，非正式 State。
+
+诊断中，State CP 重选仅+.000861，移除辅助任务近乎0；匹配树的 nominal 重加权−.007507，L1相对L2再−.015881。提示优先前瞻测试平方误差和风险校正，不能归结为样本少或直接承诺NN增益。独立复训1个NN和2个字段树与原结果一致；修复便携TF32批量舍入并保留失败，164research/136CPU通过、10Torch skips。累计7956产物，旧7679/5完整CSV/锁不变，无新正式成绩。[完整消融及精度记录](docs/STATE_SPECIALIZATION_CONTROLS.md)。
+
 **C91–C94：完成连续流量/当前重建监督和 graph-GRU 传播的 12 网络对照，未晋级。** 两走廊 Queue 已选策略均为原强参照。I5S/I10W 的 direct_flow 后段代理 IoU 为 .751338/.802072，方向不一致；latent_flow 为 .763234/.734693。I10W 决策期赢家在 selection gain−.048572、区间全负，不按后段反选。
 
 在严格只用 masked 历史的 30 日因果 State 子集，强树 .873903/.933223，联合 NN .831914/.902971；该子集非正式 State，且树使用更多独特标签。流量监督对匹配 NN 的小增益+.000897未弥补对树的差距。全部60日/16560上下文及权重/评分独立重放，158research/132CPU通过、9Torch skips。无新正式成绩或完整提交。[输入契约、消融与负面证据](docs/JOINT_FLOW_LATENT_DYNAMICS_RESEARCH.md)。

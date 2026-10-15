@@ -1,0 +1,29 @@
+{
+  "old_model_source": {
+    "path": "src/trafficflow/state_control_model.py",
+    "sha256": "14fa0040b5260074687916cb957fffe12bcbc9f94c1a2e4b7b59c954c444ce80"
+  },
+  "corrected_model_source": {
+    "path": "src/trafficflow/state_control_model.py",
+    "sha256": "3cee5cc0b564cece76c05a8356425c576f1f2943cf5844619169bee223e7d079"
+  },
+  "original_failed_audit": {
+    "path": "reports/research/C96_state_controls_verification.failed.json",
+    "sha256": "e7b3e3c233776dc4868dea0314279d86aee7e907a3480b2d9e1774ff8f342d90"
+  },
+  "diagnostic_report": {
+    "path": "reports/research/C96_state_precision_diagnostic.json",
+    "sha256": "7ce241a1e67a52fbf2bf5cc16f3b388656c8f801edb74462f43b54fbc6f9a31c"
+  },
+  "issue": "C95GPUcuDNNdefaultTF32 givesbatch-size-dependentFP32rounding with identicalinputs. FirstC96strict1e-5portablecomparisonfailed;notaccepted. Repeat48firstrow equalsactual48firstrow;notcross-exampleleakage.",
+  "correction": "StateControlModel inference locally sets cuDNNallow_tf32=False and restores backend;no trainedweights,originalCPchoices,trees,sourcearrays ordecisionthreshold changed. CoreTF32researcharraysandcorrectedfullFP32runtime auditedseparately with original1e-5checks,not relaxed tolerance.",
+  "research_profile_maximum_replay_error": 0.0,
+  "portable_full_FP32_maximum_error": 4.76837158203125e-07,
+  "all_decision_context_profile_maximum_change_by_field": [
+    4.38690185546875e-05,
+    9.632110595703125e-05
+  ],
+  "measured_State_point_profile_change_bound": 6.799697875976564e-05,
+  "all_CP_choices_and_global_gate_unchanged": true,
+  "full_FP32_day_arrays": "SeparateC96bartifacts;originalC95arraysnotmodified. Bound applies tothesecheckedpublicdecisioncontexts/models,not hidden data or a new formal score. Snapshot captures originalTF32source for exactlegacyreplay;currentportablecodeusescorrectedprofile."
+}

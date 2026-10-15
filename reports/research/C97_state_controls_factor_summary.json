@@ -1,0 +1,3777 @@
+{
+  "source_study_sha256": "23da2b132cda97107cc1b4d0f3eef3047f4d413e045eb105748dbbbd7fa4bfc0",
+  "source_audit_sha256": "efebe4226e97f61308305fee48c633bb1c47dc01a52847fb972938198e9c34c2",
+  "source_snapshot": {
+    "archive": "artifacts/research/C97_state_controls_factor_summary/source_snapshot.zip",
+    "archive_sha256": "44bf53e8fc9c4d762bc1a25899fbbb090035ce5767957ec5b1c39f54d5b444ac",
+    "captured_files": [
+      {
+        "path": "config/research_protocol_v2.json",
+        "sha256": "dd7318f99e56b826d42eac58ab9c3213803db8f6c740ed843d95879835703121"
+      },
+      {
+        "path": "config/research_targets.json",
+        "sha256": "9a524c7c728cf6ed7ab4920592541e38fe720b36a0879c6f488a77b833e3452f"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "8cd1033d7ceeaa616319d900e5a9990445f3881665420cf4cd9715941b0e52f5"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "db90c0f17353c586ec2b51f9f42748c254e2e6563e7aebff81b7dbf9a3e82ccd"
+      },
+      {
+        "path": "requirements.lock.txt",
+        "sha256": "f4c8602ed3a0c29541e42d23547672864aa487fe2fcf24f8cf2d140f53c16fde"
+      },
+      {
+        "path": "requirements.research.lock.txt",
+        "sha256": "12f5a3bd24e186a0c71512b18eea44548159ec37088546efd7cc3c14c95fae8c"
+      },
+      {
+        "path": "scripts/adaptive_graph_experiment.py",
+        "sha256": "20f067bb639496004300446f8ba8705824cae80b2e91225e5fe6abcb609a3570"
+      },
+      {
+        "path": "scripts/adaptive_graph_transfer.py",
+        "sha256": "b50f19a6427d6c3d7e8facddb071dbc22dc5cf3641b10f889dc2b4bfb2d40ec8"
+      },
+      {
+        "path": "scripts/adaptive_seed_ensemble_experiment.py",
+        "sha256": "3cf00abec0e697a7631c9b16d259ff4c966c88dfad5d23550834edf14999a1c3"
+      },
+      {
+        "path": "scripts/assemble_campaign.py",
+        "sha256": "e5b103ba8501775e049e14c89e3854e5e2a56b93942505330b5317d8023d6a5d"
+      },
+      {
+        "path": "scripts/assess_adaptive_ablation.py",
+        "sha256": "1ae73d734afe77a227629254cb67e002045a2894f094ed6bcc3e094d9297f442"
+      },
+      {
+        "path": "scripts/assess_joint_density.py",
+        "sha256": "92258a57238facc5153cc8c98c422ed71e92f69b0ae4ecada5a4edf77f00c2e6"
+      },
+      {
+        "path": "scripts/audit_density_normalization.py",
+        "sha256": "8cf6a77a0a1d39d21b69f01e95037947a5be14177d92264bf2ce17e2c5529f3f"
+      },
+      {
+        "path": "scripts/audit_fit_transition_population.py",
+        "sha256": "570e90dbdfb71323614c428ff30eeefc49e7fd2a40041062a7d759934f5694dc"
+      },
+      {
+        "path": "scripts/audit_kaggle_baseline.py",
+        "sha256": "3a8f78d8cb154fb1d4b25ed902d81e44b9665f4628162f3342641071b679193a"
+      },
+      {
+        "path": "scripts/audit_od_identifiability.py",
+        "sha256": "bce792650d2dfc0a5268a9e012aeaa846c87715620ee3e3e3a6e0659d4885c36"
+      },
+      {
+        "path": "scripts/audit_od_path_choice.py",
+        "sha256": "a4f66b3c5f96ad5639567dbd66ca0dfe3185e355b660b5a6c43282e4ea075bdc"
+      },
+      {
+        "path": "scripts/audit_physics_topology.py",
+        "sha256": "5afabe6d2e6920fdda75988c936d44adcabbb3f57110552d4c269ea7949d308a"
+      },
+      {
+        "path": "scripts/audit_public_graph_coverage.py",
+        "sha256": "449928bb66290a7c0c3201fc6e7912e0d2039f97503765a797f174e610d1ded0"
+      },
+      {
+        "path": "scripts/audit_public_missing_runs.py",
+        "sha256": "a75e7de2f4314f42214d17c63f213a85cd943f7074bc6f0c82094df06aa825ae"
+      },
+      {
+        "path": "scripts/audit_quality_state_context.py",
+        "sha256": "eab5635ee306051b7a391dc0f205f6bbcd7be009caf7ea22842c14bba75f1cb3"
+      },
+      {
+        "path": "scripts/audit_queue_decision_domain.py",
+        "sha256": "7e7eabc8b93a42c6496ad405ef479f7db28308480973ec0e30594847c04010c8"
+      },
+      {
+        "path": "scripts/audit_queue_geometry_artifacts.py",
+        "sha256": "d59859310f9224d586637995b717ab007de2036fae357b9258ebf494f1035876"
+      },
+      {
+        "path": "scripts/audit_queue_origin.py",
+        "sha256": "dba7d16f51c6df6c6506a9e418d5aa3e3d7bdbe1693253772266bd170e36c242"
+      },
+      {
+        "path": "scripts/audit_recurrent_supervision.py",
+        "sha256": "fcb9fd882f31a2e1db3c73766c2f1b4e5eceeb4cb99d3bfcbca107b1fbe63915"
+      },
+      {
+        "path": "scripts/audit_released_onset_timing.py",
+        "sha256": "2cebf3e33c09f3a0f5e0f8e199ef58c84f0d39a93cfd303bf0f9e4b1e7647f68"
+      },
+      {
+        "path": "scripts/audit_released_train_queue_windows.py",
+        "sha256": "1f442072465be77d961c327db254578c45002d91db837bc1ec6f3351cec1ab52"
+      },
+      {
+        "path": "scripts/audit_state_increment_coverage.py",
+        "sha256": "aed74a5d49250e3c7c92bfbb203eb1c731d86387d5f5bdcceffd3015182fdd94"
+      },
+      {
+        "path": "scripts/audit_train_queue_quality_projection.py",
+        "sha256": "65c1561a038dd16c2360b54443740d7aee4102cf12a491b2e9b51dd9ae1747dc"
+      },
+      {
+        "path": "scripts/audit_wave_queue_domain.py",
+        "sha256": "ea46bbe3a494c3d39720c69ac8ad3c4217222626014cc2a1d0c46963eb392b5e"
+      },
+      {
+        "path": "scripts/build_adaptive_state_candidate.py",
+        "sha256": "c2cb1fd567c1b8fd9ae22871407610d2393ea33ac9693f9cee655e3e9a50a337"
+      },
+      {
+        "path": "scripts/build_bayesian_od_candidate.py",
+        "sha256": "5cc8d8b513e668e269510447c508facd640f97b85335da77d69f3e289bb9a8be"
+      },
+      {
+        "path": "scripts/build_full_domain_queue_candidate.py",
+        "sha256": "d7253e06534a72751df97db89b560109c69c43ade1fb6c5c5376f24cca0f5489"
+      },
+      {
+        "path": "scripts/build_log_demand_od_candidate.py",
+        "sha256": "7856416c5d4b73f940739d808a3f8785d0b82ff2b07468edec2a6702adfde074"
+      },
+      {
+        "path": "scripts/build_native_remask_cache.py",
+        "sha256": "b1bfbe632fcaff3ee45063cfb40ffdfa94477752e0d8e2a078ad7f76be5e5600"
+      },
+      {
+        "path": "scripts/build_od_expert_candidate.py",
+        "sha256": "85cd7dd8827d5375b42799091c67f6495c00ec16d68af6d425bb30db9d0dac1b"
+      },
+      {
+        "path": "scripts/build_onset_timing_candidate.py",
+        "sha256": "8a5486d7e8b7c9dba17e2c163fd76f122f2e38becae95abd769eefca7851b86d"
+      },
+      {
+        "path": "scripts/build_state_augmentation_cache.py",
+        "sha256": "15d57e8dc278a37a9c7317d120492699ed9e97b94c65cd9d86234885eacb6608"
+      },
+      {
+        "path": "scripts/campaign.py",
+        "sha256": "06cea939655896f9cef2ad404491d9418313c5cf1f0e525b20288a855a774418"
+      },
+      {
+        "path": "scripts/capture_environment.py",
+        "sha256": "5be825c14d82da31a2ca57459f8c6eead4f13ba2030f5488c465388a8e82d4f8"
+      },
+      {
+        "path": "scripts/causal_graph_queue_experiment.py",
+        "sha256": "5cb9e9a4c8d4482a53f7ebdefad43b6db4ef50a53bb1297bbfdc4598b5cdcace"
+      },
+      {
+        "path": "scripts/channel_state_experiment.py",
+        "sha256": "b9ff31ab4aa50c7e9a0aa1c2c28e0cb455eda9f09bc3e8f2e36abc72a0a7776a"
+      },
+      {
+        "path": "scripts/check_public_competition.py",
+        "sha256": "5c69ba4b041bc668b6cfad397fe2c9c584003910757e68908137e320d92c0a64"
+      },
+      {
+        "path": "scripts/check_report_bytes.py",
+        "sha256": "98701cbcb40ea3c191224bced993995c5e4b586e399a6d838d2249abff4ba2cc"
+      },
+      {
+        "path": "scripts/checkpoint_assimilation_phase.py",
+        "sha256": "b70d53c3e065da9e0ba9a48db04960afc433998686e463f9ece4f0d9dd29d778"
+      },
+      {
+        "path": "scripts/checkpoint_augmentation_phase1.py",
+        "sha256": "e7467c1d96ffe98e84e3c3e1c820c77ff04b12d5165ed6b9fe908e58098fc454"
+      },
+      {
+        "path": "scripts/checkpoint_cross_remask_phase1.py",
+        "sha256": "46eb62e2ed7f0f3ca5586dfcbdc7fd498809d98ad6d5320b19843f2bfdf3d1a3"
+      },
+      {
+        "path": "scripts/checkpoint_cross_remask_phase2.py",
+        "sha256": "6ee9ce09ed403feff69884be86967db315bf86adcd56e769d6c0f37720f9e1bb"
+      },
+      {
+        "path": "scripts/checkpoint_ctm_od_phase.py",
+        "sha256": "63295f1e9926c1a8c5e15f31ab6a3e21ead79d75be9f1201cbd763ab948bb383"
+      },
+      {
+        "path": "scripts/checkpoint_demand_residual_phase.py",
+        "sha256": "a3736029c307400efe75801d81ab0d00aaec0b06cad385436f07cdb0678e711f"
+      },
+      {
+        "path": "scripts/checkpoint_dense_pretraining.py",
+        "sha256": "6e88d8b482f40acbe1573f080a9aa24448e37069191cbed7f171522afdc3c597"
+      },
+      {
+        "path": "scripts/checkpoint_five_phase_queue.py",
+        "sha256": "bd0fbbfac40844b5976cdafc14ea95b206ed1c2f6f8c4885f042147103f9f11d"
+      },
+      {
+        "path": "scripts/checkpoint_flow_transfer.py",
+        "sha256": "554cf8f88742f9a74af968f5680363b62da1b95a633409450915ec484e719d17"
+      },
+      {
+        "path": "scripts/checkpoint_full_density_phase.py",
+        "sha256": "85b8c2e8f9b784cf98ee1c5c2f4945aeefc8e78d441c19874b74007684293883"
+      },
+      {
+        "path": "scripts/checkpoint_full_queue_phase.py",
+        "sha256": "70a0e8bb361e42725e69b117762f28ffdb29b6c44b1b3ad263ec727c89fcfe82"
+      },
+      {
+        "path": "scripts/checkpoint_gap_expert.py",
+        "sha256": "9082e43c1e0a06c137c5e1b7ae43527174a611c09b2a23ec2b5bb8618e172ecd"
+      },
+      {
+        "path": "scripts/checkpoint_joint_dynamics.py",
+        "sha256": "7a4f8bc24984be7a83249af366e79f0313fd94392aa314cdde45bb271ca8ab75"
+      },
+      {
+        "path": "scripts/checkpoint_joint_scenarios.py",
+        "sha256": "5d5589acd93dde00a7996faa2ee806eb1c36d4c86008981d11f10cceeaa0f96d"
+      },
+      {
+        "path": "scripts/checkpoint_latent_queue_noise.py",
+        "sha256": "10fad0c70631bac8aea3b350e29cfc27428aad1204aa0c0718758a889d8a2e20"
+      },
+      {
+        "path": "scripts/checkpoint_local_search_dense.py",
+        "sha256": "9998142e5d9c49e4f011fb2aa1bd480f7bd15b1c9f3d5d81eae9ed18a8dcde3f"
+      },
+      {
+        "path": "scripts/checkpoint_log_demand_phase.py",
+        "sha256": "a9b23dd27a10869058d8cada5efea7c94678e097af2075bc33f88f1f822b80d7"
+      },
+      {
+        "path": "scripts/checkpoint_native_remask.py",
+        "sha256": "f8dc3c7462c530e6405f20ef46fa94ba6a31c0d195131c2f96fd2cb3361d5f76"
+      },
+      {
+        "path": "scripts/checkpoint_onset_rank_queue.py",
+        "sha256": "25080867e95a12fe1d2328d092a9237580c0ae33b1bf060e5e699ef56187503e"
+      },
+      {
+        "path": "scripts/checkpoint_onset_set_decoders.py",
+        "sha256": "ea35b941dbfe8d82964ac70d6c20dc57eb11bd003f17990f0661cd2d5ef50c4f"
+      },
+      {
+        "path": "scripts/checkpoint_probabilistic_onset.py",
+        "sha256": "5657a0ac7a4b659deffac4c857b6703dc69189325851e16c854a2abdaeaa3f77"
+      },
+      {
+        "path": "scripts/checkpoint_quality_density_phase.py",
+        "sha256": "de2ab9295c0519c6e189a2f0f3b65b4e02027a7bd67997df1746aa11e219bbe2"
+      },
+      {
+        "path": "scripts/checkpoint_queue_ensemble_phase.py",
+        "sha256": "234027970e3b402f1ecbeb9a4fdf0bcb24612dae8eb5ce553c2f47d8d38a19d0"
+      },
+      {
+        "path": "scripts/checkpoint_queue_overlap_phase.py",
+        "sha256": "4000b570efb2ef37bd6e62ebddcc3983bb79a31e831aea59480fde443fbde23a"
+      },
+      {
+        "path": "scripts/checkpoint_recurrent_phase1.py",
+        "sha256": "6a069d9ac161abc5ef4bd2e4201479f4656cd0f96caeda0d0b115238dc4240cf"
+      },
+      {
+        "path": "scripts/checkpoint_recurrent_phase2.py",
+        "sha256": "bcc8515a8d7ed325be6663f9537a95530a54b45bcd367a17b0e54b4e73ad7342"
+      },
+      {
+        "path": "scripts/checkpoint_relative_position.py",
+        "sha256": "817477a8b3842b963f136b193ffc8fb2246dbf9aa757bf58275cc85b794378b9"
+      },
+      {
+        "path": "scripts/checkpoint_rolling_onset_decoders.py",
+        "sha256": "85e6a036e1c93d6a09b264afb7993aecd5126b35c580117301b499d483a922d3"
+      },
+      {
+        "path": "scripts/checkpoint_third_family_relative.py",
+        "sha256": "fa52904b297411a5f26a6d90bd58c23818b2541ecb6369ba7e18ec4b71056faf"
+      },
+      {
+        "path": "scripts/checkpoint_transition_phase1.py",
+        "sha256": "37a890f0b4e8554ccedf491a6123fea2e50a44b44d99ebbcd39fcbb47f4fa6d3"
+      },
+      {
+        "path": "scripts/checkpoint_transition_phase2.py",
+        "sha256": "088e5afe2ea064a5fbbe3bc8bd1f4478f8b0837d6e7a020176ee4831c6aa67ef"
+      },
+      {
+        "path": "scripts/combine_recurrent_calendar.py",
+        "sha256": "b956a9d764d452c08c83a9fc45661a95b98f4206d3f8b9e61c15c48d2d1deb92"
+      },
+      {
+        "path": "scripts/compare_entropy_numeric_repair.py",
+        "sha256": "a38f9204e0078fc443e9a3e48ac8e772159ae645cb3ae222d0ffb049cdb5811c"
+      },
+      {
+        "path": "scripts/compare_five_phase_sampling_controls.py",
+        "sha256": "d92cb34dcc82f6919d39ee593c0fb67d2a1a9210620e2bd298081056d6b43121"
+      },
+      {
+        "path": "scripts/compare_full_density.py",
+        "sha256": "b20d48cacd5d884536478dcd7205bbb7cfa8179219f6dab21684247a629617af"
+      },
+      {
+        "path": "scripts/compare_full_queue_calibration.py",
+        "sha256": "93b98698bb5e9f3e6ea855dc03532aa04daadecbb860d69c79794d6d4636eaf5"
+      },
+      {
+        "path": "scripts/compare_log_demand_models.py",
+        "sha256": "280dd9312a4e620166ed9a68a7c7a3cd243aad79d62e7240b6ad80d668e3ac1f"
+      },
+      {
+        "path": "scripts/compare_log_demand_repair.py",
+        "sha256": "f8d6a1e39de2aafa334944f92c30b1cb6ce75e7fc350faa461bc8249332dbbb3"
+      },
+      {
+        "path": "scripts/compare_queue_events.py",
+        "sha256": "d9d2e9e47eb2f21b1738d4e2d1ba762a776fc849bbfc4bde4c1fc8785b068194"
+      },
+      {
+        "path": "scripts/compare_queue_overlap_losses.py",
+        "sha256": "28d7b51fbef994cd07f78f994335cf84206a504cc1a2f9e9e2fae6a91199d5b7"
+      },
+      {
+        "path": "scripts/compare_recurrent_state.py",
+        "sha256": "f490a126a8406c14b23420b472cefa3cedb4506fa58417252f490686476ecfb3"
+      },
+      {
+        "path": "scripts/compare_state_assimilation.py",
+        "sha256": "d89b87a83ecb5a05bae4be3cf4f137d2625d639bca4dac723d94b92d31415a1c"
+      },
+      {
+        "path": "scripts/compare_state_direction_budgets.py",
+        "sha256": "47ff0bb82e2500aace15a72ca80b76719b657dd06492b8b60b09b31fce2803e4"
+      },
+      {
+        "path": "scripts/compare_state_label_budgets.py",
+        "sha256": "b7c27482c11904cbc0aa06fc86cfd692037e057985acdb93f00ff4e38da81b40"
+      },
+      {
+        "path": "scripts/cross_corridor_transfer.py",
+        "sha256": "e3ef2d288bfc617ea7985712be7c714de9e36ed947b59bc2bd81e3e5113b7c6a"
+      },
+      {
+        "path": "scripts/ctm_adaptive_stress.py",
+        "sha256": "cb3f7631fb91007e4479b20975b25e2c17dbc6cfbba1f9c926a7002159665f2a"
+      },
+      {
+        "path": "scripts/ctm_contiguous_stress.py",
+        "sha256": "24fcb6625ee2f64e1b5267c6c3fab292dc78ddb2d3b6d02241c1ec6f815b95ae"
+      },
+      {
+        "path": "scripts/ctm_profile_ablation.py",
+        "sha256": "5a65e47430782893da7bae8792995d7b63ae9cf45fe38f895715ac011ddbb5d6"
+      },
+      {
+        "path": "scripts/ctm_queue_observation_diagnostics.py",
+        "sha256": "86db2a91e77c88634c9fc301a0e47c9a865ee19d92b616971d649edd3ce7681c"
+      },
+      {
+        "path": "scripts/demand_residual_floor_followup.py",
+        "sha256": "bb4e7db3ca547245855d74bce024da3c101dd9c13d8ce3d3e578a6a81e0c47f6"
+      },
+      {
+        "path": "scripts/demand_residual_od_experiment.py",
+        "sha256": "81c50b6fc9b663d921ea3393a2c0e0df3bd0098e9aaf29ceccf9e7e02d6334e6"
+      },
+      {
+        "path": "scripts/dense_forecast_population.py",
+        "sha256": "d9413820d63f07bde3fcd9cd1e3fabd22c42268d527d2420ba235da06c2d428a"
+      },
+      {
+        "path": "scripts/dense_pretrain_queue_experiment.py",
+        "sha256": "3136d08c684a725e08b7c0b90bc4aad9f6037e49969f934c453ca18616889e45"
+      },
+      {
+        "path": "scripts/density_increment_experiment.py",
+        "sha256": "7c76be4eb9f893ff71a70f62ae47ac4f7b8cba8a8add1da1a9ebdbba074552fa"
+      },
+      {
+        "path": "scripts/density_interpolation_experiment.py",
+        "sha256": "98b586eed1bf49beea00db0b5b0473b6159d2e6e198bad4f7b9902a9847d6903"
+      },
+      {
+        "path": "scripts/diagnose_adaptive_scenarios.py",
+        "sha256": "fd73578210b6ab6a51984019f86d16f9c9fdd088ebc72261da20295ed692b0fe"
+      },
+      {
+        "path": "scripts/diagnose_entropy_failure.py",
+        "sha256": "1c8e0b00933b2132eedb92cd0ddc3fb1aab8125b6f3a6994913818b6ff0c3ff4"
+      },
+      {
+        "path": "scripts/diagnose_failed_od_control.py",
+        "sha256": "bed0ecbfa0b21880ad852919b0285280fa2659f95c9a6513840baf3e22ab7b58"
+      },
+      {
+        "path": "scripts/diagnose_flow_cal_covariance.py",
+        "sha256": "1ef01652a88ca85c39e0611bedea490a01ebace509ad8598ae0766c1ef5c7464"
+      },
+      {
+        "path": "scripts/diagnose_graph_density.py",
+        "sha256": "f6e48f203331ed2dddbd6917d2932fc8682cf4daa9da8d6e9a5c7ee52e75116f"
+      },
+      {
+        "path": "scripts/diagnose_state_control_precision.py",
+        "sha256": "b0d1104fe05f41d4c984c1c4890cb34715920cd2361b870619c59eb5f83fa201"
+      },
+      {
+        "path": "scripts/download_data.py",
+        "sha256": "c746052ff8192acd1679976da70faf2f54ae94d2370e2dda4e105bca08fee4b9"
+      },
+      {
+        "path": "scripts/entropy_od_experiment.py",
+        "sha256": "639c6fde371c078759d557025dd60943ac7c6d170fef046c9866d0a7efa9689b"
+      },
+      {
+        "path": "scripts/entropy_od_uncertainty.py",
+        "sha256": "dcc088faa752d137a3f73c993cf272280879185ad9e38ea6b127e82d6b1bfd9f"
+      },
+      {
+        "path": "scripts/equal_blend_augmentation_diagnostic.py",
+        "sha256": "e56f55730bb3fb5f752689484931b01eb9c7a37f67b51026e32376c014d56c10"
+      },
+      {
+        "path": "scripts/evaluate_channel_forward.py",
+        "sha256": "eba5ee321c643f957a674f29e99a2de5712fa01afdcac738341ad5becc5fa134"
+      },
+      {
+        "path": "scripts/evaluate_exported_state_forward.py",
+        "sha256": "d49b2790ad80efda4afbcd5a727fbeeb23e9f03bd44dc5ea2ef9d666af01eaf2"
+      },
+      {
+        "path": "scripts/evaluate_flow_transfer_forward.py",
+        "sha256": "09e0827d3e67f4e949dc15b58335ed2e6cf48a5c0ac8a9d36aea77ea6b30a0d6"
+      },
+      {
+        "path": "scripts/evaluate_gap_expert_shift.py",
+        "sha256": "ed0e6ae5a913a8c2d4227f9ead9255abffbef12c5a0ef2a4c585387c68fec1a6"
+      },
+      {
+        "path": "scripts/evaluate_native_remask_forward.py",
+        "sha256": "4a0b2fde0304066ece00ddcb015648639a25521cd9dbe59302456f97d00c37d7"
+      },
+      {
+        "path": "scripts/evaluate_outage_augmentation.py",
+        "sha256": "652e7c19f7f870b47f91087786c1323a5ccd686aa932443bc377e7b7806c14a5"
+      },
+      {
+        "path": "scripts/evaluate_remask_tree_forward.py",
+        "sha256": "75f4a1595477db903ae594aa8432d02e8aa0f69c6fd2e25b752e2f6554409453"
+      },
+      {
+        "path": "scripts/expected_iou_assumption_stress.py",
+        "sha256": "dce094cb9616a3dbea752606d3832303921b95e08f6bd2e676890b7e74d80e4d"
+      },
+      {
+        "path": "scripts/export_adaptive_state_model.py",
+        "sha256": "631e109610a04aa4a5b0cef3b6b0a22e3acca28ea1f08659669bf55c2e7ca089"
+      },
+      {
+        "path": "scripts/flow_transfer_common.py",
+        "sha256": "7797548238fff9abccbead64aa0da5034ff87665619d18c7968e742f12d01a0b"
+      },
+      {
+        "path": "scripts/freeze_first_submission.py",
+        "sha256": "17eb0cf856c43a0199c0bf73fcc4d100c76d818b2d1130f00b16f466bc4cc6cb"
+      },
+      {
+        "path": "scripts/freeze_gap_gated_state.py",
+        "sha256": "d41e27528397601328ef3d9eb7c9abc877b9613c566889d87b2e0cee17141629"
+      },
+      {
+        "path": "scripts/freeze_research_models.py",
+        "sha256": "fd75a0e4f22f648e7daf55c8374aa9d174d11f0659b74d12665b800d09e4202c"
+      },
+      {
+        "path": "scripts/full_density_experiment.py",
+        "sha256": "d53835b13f5ba488708b8397eb8b805a9a4dbba268dd7a1ac221e2555209cc4f"
+      },
+      {
+        "path": "scripts/full_queue_calibration_experiment.py",
+        "sha256": "aba440df1d64f133edccb951c68c7ffcff39699ef5cb9cc08330703a2aced84c"
+      },
+      {
+        "path": "scripts/inspect_official_release.py",
+        "sha256": "17bc64125a2843f2af1eefc01ef22e930c22201df997eec99bedd021d1e32c7f"
+      },
+      {
+        "path": "scripts/joint_dynamics_queue_experiment.py",
+        "sha256": "a31b59f2c8004cf8b3cdb6d89459257786bb365d9c5e83f380d2f1c8138e1722"
+      },
+      {
+        "path": "scripts/joint_scenario_onset_experiment.py",
+        "sha256": "424cb4baec5e7a816b0e9fed920b072e43ceaa27374986ab31e0b6e72b2ead0e"
+      },
+      {
+        "path": "scripts/large_baseline_graph_comparison.py",
+        "sha256": "ab3f399a46ca8366418ccca2a748124cd706a176706a20d7b491242c810ed75b"
+      },
+      {
+        "path": "scripts/latent_queue_noise_experiment.py",
+        "sha256": "ed10d2f16ae269028faeb1cd52195788e7791d808299a541a6c95e656b66c9e7"
+      },
+      {
+        "path": "scripts/local_search_decision_screen.py",
+        "sha256": "295634d34910cc1ff402cbfcd83b68072aa4365c6cb2273a992f73f6dc516d27"
+      },
+      {
+        "path": "scripts/local_search_known_laws.py",
+        "sha256": "793a82a912eecdcb3dbae70e55d57b826a7f08e3be362944a87e0ce9c52e2c07"
+      },
+      {
+        "path": "scripts/log_demand_od_experiment.py",
+        "sha256": "437c5c0c578298487d40b7bddf2fe226078e5e59e19e8778077cca5b60945968"
+      },
+      {
+        "path": "scripts/matched_queue_cache.py",
+        "sha256": "bbd42d02b645514d38faf062917e19e08ebe551096e547ca93fe92266061df19"
+      },
+      {
+        "path": "scripts/native_remask_reference.py",
+        "sha256": "6416a8a86a35f156c51e45ccd09c5325c9be45509a17d87a38f6be9dbd3795fa"
+      },
+      {
+        "path": "scripts/native_remask_roles.py",
+        "sha256": "300d0cbcdc0c673ca88ae90b224ddbb9b13388d836540bf3b21d2ec9be9cfe34"
+      },
+      {
+        "path": "scripts/native_remask_state_experiment.py",
+        "sha256": "762ae456998a2b5ed3d15b3568fdfb5525b1e112094cbadb2917275597680779"
+      },
+      {
+        "path": "scripts/nonempty_mask_joint_stress.py",
+        "sha256": "1e9acf19f5bd18091cc1a9db8f2a601e2143aa2c7bf1d9acf7fbb3bdb0c88cdd"
+      },
+      {
+        "path": "scripts/od_error_subspaces.py",
+        "sha256": "0e60e334f92a70dc420d33edc216e5540ecec5159cc9262d4c5a78b89dbd220a"
+      },
+      {
+        "path": "scripts/od_expert_experiment.py",
+        "sha256": "b26a6457c0390bedbe85e9a5a29f2a4c403bff499ff539cd230f71f7cfc0fbb2"
+      },
+      {
+        "path": "scripts/od_metric_component_audit.py",
+        "sha256": "dd3cd804df6d895ccf2e5254f8b316b57febf2f1f33d9f09d9364bd0d6be8bb1"
+      },
+      {
+        "path": "scripts/od_prior_misspecification.py",
+        "sha256": "053dc64b2e9b8fb04ac1514d9991d8ddcbae9ab677e69a8dbc7fbd77045a7917"
+      },
+      {
+        "path": "scripts/od_probability_experiment.py",
+        "sha256": "fbb8ade089cec3fdd03b6f40687b4f8ef022c7766dc7c1c4011e6b7df3326c00"
+      },
+      {
+        "path": "scripts/od_shift_generators.py",
+        "sha256": "eba0a0dc9a1608fd04a8517fd5959315b3a183c851fe1931be942f7542c3cca9"
+      },
+      {
+        "path": "scripts/onset_rank_queue_experiment.py",
+        "sha256": "fff0262497bb2a5176e069ff1dbee454b19b7180084a07d7deaf3682d2f6aa93"
+      },
+      {
+        "path": "scripts/onset_set_decoder_experiment.py",
+        "sha256": "0e3331277c2e4d78d67d077d5b67e2f4fdb470cc87d0cccfc453ddf24e71a78a"
+      },
+      {
+        "path": "scripts/outage_augmented_state_experiment.py",
+        "sha256": "e8c4d0125a0356841d3016ae971dfdf9766a55a7bfd0fa6404a1ce483c458fa8"
+      },
+      {
+        "path": "scripts/physics_tradeoff.py",
+        "sha256": "b653cf6254196850113cbdb61a1afb5bf184900e6a5ad5d07a24151436e6c9f9"
+      },
+      {
+        "path": "scripts/plot_matched_research_comparisons.py",
+        "sha256": "bb2cdab5325243359d6a53f27c1814851b38d6ab85b3f0167d561c2995f19bef"
+      },
+      {
+        "path": "scripts/plot_recurrent_evidence.py",
+        "sha256": "f5f947216d96f357221add45acbbf064dbe5ba4b2e8a2b8030bbd2d26bb711d7"
+      },
+      {
+        "path": "scripts/plot_strong_baseline_comparison.py",
+        "sha256": "060b1292bc663f0ba5d1fd352afd30fb0edc5badc83c1a42b3e4b4b23435c10b"
+      },
+      {
+        "path": "scripts/predict_full_domain_queue.py",
+        "sha256": "017f9dacad7fa9cec529840c26b4ff084a2de9c79184a698e99cb567db34c55f"
+      },
+      {
+        "path": "scripts/prepare_full_density_labels.py",
+        "sha256": "aaeae325549a2f3e885c75cb584037b6669902c1ab4fedb50a1c7655de116979"
+      },
+      {
+        "path": "scripts/prepare_graph_experiment.py",
+        "sha256": "86a2d2bcc60c9cd408839d8883834aa75c089c176257bed551ff1d028ee320ac"
+      },
+      {
+        "path": "scripts/prepare_production_graph_state.py",
+        "sha256": "af640a34bf6f44a42e08fd50c06d9585acc1adadd160db867e4551ea16a71525"
+      },
+      {
+        "path": "scripts/prepare_quality_state.py",
+        "sha256": "b6e2bcde753916c9e73ced210900438ba217b35118e51044e8d22ea98638de90"
+      },
+      {
+        "path": "scripts/probabilistic_onset_experiment.py",
+        "sha256": "cfdf1f272ab89423c3962e52723c76d8780a9b858431e9acfcf0ec0845a592d3"
+      },
+      {
+        "path": "scripts/probe_global_attention.py",
+        "sha256": "39fd88acb8506a8eb64e812b64ff44d394e955dfe073efe4d7472964d065d28d"
+      },
+      {
+        "path": "scripts/promote_models.py",
+        "sha256": "b41f8af5fb9f5394595a1c1ded9b534ed89d2c41b85b7a3e3788b2d275c71339"
+      },
+      {
+        "path": "scripts/public_outage_stress.py",
+        "sha256": "b9cc72408a9b5b7a3653bfde5ff767968acb5ddb6590a6446d988e8ec70d2b07"
+      },
+      {
+        "path": "scripts/quality_state_experiment.py",
+        "sha256": "0a5bd90efe8b95427f811cee6577cdad8323f631ba5bb6d6eaa6823fa1b3fa10"
+      },
+      {
+        "path": "scripts/queue_event_experiment.py",
+        "sha256": "520d24e1f1e5fcde8166f3df16f437276b7185665a8e9394c6ac59a4823b0242"
+      },
+      {
+        "path": "scripts/queue_five_phase_experiment.py",
+        "sha256": "8831d3787b7da380992263d011f441e50caa19212a0da968c263b7d9faf97b54"
+      },
+      {
+        "path": "scripts/queue_origin_experiment.py",
+        "sha256": "7cd00e8b0134ed1282353e9162ce6af7da20d1a3d0739ab2ec12b43f79891954"
+      },
+      {
+        "path": "scripts/queue_overlap_experiment.py",
+        "sha256": "9fb7d8d32bd32cb6896ace55458629a38256ae415cbb5bf865a3876294f5a25e"
+      },
+      {
+        "path": "scripts/queue_refinement.py",
+        "sha256": "4747af3e5e09d4e23b7d28856ed66732e54ad1d3586b7df067eb49aeffcc1dd1"
+      },
+      {
+        "path": "scripts/queue_research.py",
+        "sha256": "34e3fe815c5130431a512df258cfbfd0cb39c7b64b769950d76f20a9983fff5a"
+      },
+      {
+        "path": "scripts/queue_seed_ensemble_experiment.py",
+        "sha256": "48880150d79d67e07200d3278742d6ab3460a50842a720093757082943b74b0a"
+      },
+      {
+        "path": "scripts/queue_specialist_experiment.py",
+        "sha256": "b7f8ab609aa392a1308117e827919692dbe60137185fb6ec68a2334cbddaedc4"
+      },
+      {
+        "path": "scripts/queue_wave_graph_experiment.py",
+        "sha256": "ebc0ba895a29d5887cdee52b0dab665a8cf9f2370e3a110b2b6930e746ccb245"
+      },
+      {
+        "path": "scripts/queue_weight_calibration_experiment.py",
+        "sha256": "f2545c56581b388e724327a4c623d89ae18ea07efcc80d63e3e66fc94c6ce48d"
+      },
+      {
+        "path": "scripts/read_public_pages.py",
+        "sha256": "2056d46920d3b9f73b1268b86d122ac4daf318e72c298527b4b66376ac26e165"
+      },
+      {
+        "path": "scripts/record_formal_scores.py",
+        "sha256": "ee78da8b99edc9928c781c341f05af33dd28098ae313113879e8b3e3aad5fa0f"
+      },
+      {
+        "path": "scripts/record_local_state_controls.py",
+        "sha256": "55c6c8b9218207fbd51d0c1d3238c653272c0ed319064928065125eb98dbad9b"
+      },
+      {
+        "path": "scripts/record_onset_control_bounds.py",
+        "sha256": "0f18f8290e22a3a9b15f4287416bc9cbcf071a106d46909ee1962a5f1cc7f728"
+      },
+      {
+        "path": "scripts/recurrent_forward_extension.py",
+        "sha256": "af54a1945d74566e10e1998c05923a74de72ea81a6793b64b482a1481f6b4c61"
+      },
+      {
+        "path": "scripts/recurrent_state_experiment.py",
+        "sha256": "93a37812007e4388b6327cf93dfe2f477d98cf60f77e8e5e33ae9be4935a2d0c"
+      },
+      {
+        "path": "scripts/refine_queues.py",
+        "sha256": "4af45c3a458feec60d6f7786166ef2cf0fb747fce492955ec4112312352f665d"
+      },
+      {
+        "path": "scripts/register_research_protocol.py",
+        "sha256": "2367504189c87f2103e10dfd99147ffcc9beba2f9d82409c38e92d4c5e2c3077"
+      },
+      {
+        "path": "scripts/remask_lightgbm_experiment.py",
+        "sha256": "c4bd34f3d87ee7869fccc760bd8b48386ce924667dccfaa6f37bf2166393ac49"
+      },
+      {
+        "path": "scripts/remask_tree_roles.py",
+        "sha256": "addc3daf9796ec45c120457307c10337c60a19a149a2813fbec3dc35375a352f"
+      },
+      {
+        "path": "scripts/rolling_onset_decoder_experiment.py",
+        "sha256": "893a79bc12f3afb86898b6ba277ba5ea3d225254f52cede234b731878b5f877a"
+      },
+      {
+        "path": "scripts/run_official_diagnostics.py",
+        "sha256": "73221ca5f6014f8d7a011698fe0845d9448581c3896855b7dc19e1f47873a7e8"
+      },
+      {
+        "path": "scripts/run_official_state_baselines.py",
+        "sha256": "3ddd7eea81f350d50973813c50e4c0d90a184624d271aa64859c1c74c33a9e70"
+      },
+      {
+        "path": "scripts/run_queue_five_phase_campaign.py",
+        "sha256": "5f922fe854bafa9e7aee04a1f1c0230f589152d4f4dd6b994087d3fb5da523c5"
+      },
+      {
+        "path": "scripts/scenario_audit.py",
+        "sha256": "3e2d7151d7587199aa672b78eee9dfbbfb8ac82e038afb22eb09f3488e1c7a19"
+      },
+      {
+        "path": "scripts/simulate_queue_selection_bias.py",
+        "sha256": "545413176bf9696a5e8b8bf1046dba00e98cf604035587842224d207f8aaa4b6"
+      },
+      {
+        "path": "scripts/simulate_stress.py",
+        "sha256": "d0c4697c44f1c65848d83c1e396b9562d4151ad294f560b1576bcc6c49012140"
+      },
+      {
+        "path": "scripts/stage_zip_panel.py",
+        "sha256": "4ec5b59e058c52012bda91ff140fbc9620209bbf114aa5eb5ffbc259b4c69c15"
+      },
+      {
+        "path": "scripts/state_assimilation_experiment.py",
+        "sha256": "26a1ecf243bb30a10259b100df6d4f2dd317939e4707c6f4a1b3542d9a97c2ba"
+      },
+      {
+        "path": "scripts/state_budget_suite.py",
+        "sha256": "d6fd23b3aacd79a6cdad38bbf0f3d845e0307dc4b4b7471ef279980035652477"
+      },
+      {
+        "path": "scripts/state_label_budget_control.py",
+        "sha256": "7cb05ba6e67f39106ea009468ce9215aebab9aec0c9a90295fe8641d3c7e4dbd"
+      },
+      {
+        "path": "scripts/state_research.py",
+        "sha256": "7f9043c7d753a5a6540ef81291ae7e3e00879ca330aea94f833b7017f29a759e"
+      },
+      {
+        "path": "scripts/state_specialization_controls.py",
+        "sha256": "0d36ed6b8cadaca6fae4daff79601b2e1e9b6aa87d7301e836e848f1995733f3"
+      },
+      {
+        "path": "scripts/state_temporal_extension.py",
+        "sha256": "0ef7550a56904fc953a6deaa814f7ebad67e9aa7f91817f087fe5fb58db26b9b"
+      },
+      {
+        "path": "scripts/strong_density_state_experiment.py",
+        "sha256": "faa4e2a0cb63a2e053ecf20a6a77a8c9c4f74960c3d39e145c9c0e41f138a7de"
+      },
+      {
+        "path": "scripts/submit_controlled_candidate.py",
+        "sha256": "72c67e384f488fd5e7afa454526e42aab56b43aef7d3671d91acf04a42997876"
+      },
+      {
+        "path": "scripts/summarize_adaptive_research.py",
+        "sha256": "82c2832a34ee9cd39f20ead401994c2dcf7f15d0cebe19cb67fd4476000c720a"
+      },
+      {
+        "path": "scripts/summarize_campaign.py",
+        "sha256": "e09f36b6188d6a23698f0a27873fece09ba6fd3db1e2cd5ae767e4865d7c101f"
+      },
+      {
+        "path": "scripts/summarize_ctm_adaptive.py",
+        "sha256": "fe548c56eef38fe78b378056f8def6a4213a8c526336808faa880947c68547bf"
+      },
+      {
+        "path": "scripts/summarize_ctm_queue_observation.py",
+        "sha256": "19c5ae04a9b48429faea7b96af27cb2b212bdaa4ef37e9daaee9ae11c309547c"
+      },
+      {
+        "path": "scripts/summarize_dense_pretraining.py",
+        "sha256": "a444efd5a4c1338c8a458b43caeeaf516efddaa389cd349d8792ea5e69fc54a0"
+      },
+      {
+        "path": "scripts/summarize_joint_dynamics.py",
+        "sha256": "dbef3e8e16aa92c9014c179f7ebee27ac816f91a41747ba65e1522097b150f0a"
+      },
+      {
+        "path": "scripts/summarize_joint_scenario_onset.py",
+        "sha256": "c2c1de84f136dd9143ba205c5c9e3ba2abd36ee09c5534cc015da07900a199ec"
+      },
+      {
+        "path": "scripts/summarize_latent_queue_noise.py",
+        "sha256": "b310ced840acd5127f3f95fdb3a41861ef5656f7932a6005740e589d05a437da"
+      },
+      {
+        "path": "scripts/summarize_onset_rank_queue.py",
+        "sha256": "a9658008438bc55670fdf33d7973ef3e025095518e4a76a859abac402c3ba147"
+      },
+      {
+        "path": "scripts/summarize_onset_set_decoders.py",
+        "sha256": "827f72b12f79e67c56277c12d829bac2157dc8a8fd15f3061b5a7e3f09ae31a0"
+      },
+      {
+        "path": "scripts/summarize_probabilistic_onset.py",
+        "sha256": "666df5d8872a8befd61ba86512ea567145fa05aa46dddffabdacd79445d1e30c"
+      },
+      {
+        "path": "scripts/summarize_queue_domain_audit.py",
+        "sha256": "c07b79de6e1b3c744720d2189a14bc88b7daf3634d8d284ab5063c66c929fcf4"
+      },
+      {
+        "path": "scripts/summarize_queue_five_phase_campaign.py",
+        "sha256": "223aee023bc474134fb5dd70cf4d5918bc738249a5612161bb0a7d8ad95f7beb"
+      },
+      {
+        "path": "scripts/summarize_research_v2.py",
+        "sha256": "4f2239fb78d2d88de9117d289099874b41dc6f017b6c104e557cad168b0a8f17"
+      },
+      {
+        "path": "scripts/summarize_results.py",
+        "sha256": "3ede418e5a835ad3956b0332c335a54a4157654be9db16d4cde6411b5b12880c"
+      },
+      {
+        "path": "scripts/summarize_rolling_onset_decoders.py",
+        "sha256": "b6b9b5cc2e802eb1b3949587d0826467a93301ddefc2eace7a9887a6e90bbb8a"
+      },
+      {
+        "path": "scripts/summarize_state_specialization.py",
+        "sha256": "cae408d494a89e95dfe823a99287593f594b46b8d8916c40bf4b998e03e864df"
+      },
+      {
+        "path": "scripts/third_family_relative_state.py",
+        "sha256": "6c27b96f79e8d8eb89b175c225dda510802a66568e9a0eed26a792d9c2244b17"
+      },
+      {
+        "path": "scripts/train_graph_experiment.py",
+        "sha256": "7036d5b3f14d5dd39de22b1aa94284285010359114deb3f38ead5461b6e5e04e"
+      },
+      {
+        "path": "scripts/train_production_adaptive_state.py",
+        "sha256": "6982e036ade77a7d8c5a950572619c5a9655d47c142fbce3cb125404955fed9d"
+      },
+      {
+        "path": "scripts/train_relative_position_ablation.py",
+        "sha256": "60c499c4d1dd10e0958ab2159f52df931ea9c8263fcb71e711affee3a08d8a02"
+      },
+      {
+        "path": "scripts/train_speed_jump_ablation.py",
+        "sha256": "2e32c02b238a0105d0023c2c95ab3da5cf5fef389ea842fddffb238288a89bce"
+      },
+      {
+        "path": "scripts/verify_augmentation_future.py",
+        "sha256": "171d18821d0e77a91778249dee8ed544db1300184fff94095304edb4b8dde97e"
+      },
+      {
+        "path": "scripts/verify_channel_state.py",
+        "sha256": "8b535209a9bb9550be2fc0ccbc06de28fc91fbc2731fe19d9a30947ad2d01ad8"
+      },
+      {
+        "path": "scripts/verify_controlled_candidate.py",
+        "sha256": "bc2c4155403cd3af602dbbed3328590b5dd86bbf446183ec394744684f752df9"
+      },
+      {
+        "path": "scripts/verify_demand_residual_study.py",
+        "sha256": "a3d389bc9bbf7c2c6033557f08aad7b20e9cab60db0586bda8d341c28060a923"
+      },
+      {
+        "path": "scripts/verify_dense_forecast_population.py",
+        "sha256": "a1f95b7e114999cd7465cb1f765ed0cc956ce6819af5dd6bc8bca9b3cfca3e9b"
+      },
+      {
+        "path": "scripts/verify_dense_pretrain_data.py",
+        "sha256": "d42cc80c738d1e90fb85c676c78f511c1a40bbab67bd40ad426930b2d0ef3c8f"
+      },
+      {
+        "path": "scripts/verify_dense_pretrain_models.py",
+        "sha256": "a0225b8ae97fe5048885495469ab22c9d8faf4b937c554714d791bcd70d42c96"
+      },
+      {
+        "path": "scripts/verify_entropy_uncertainty.py",
+        "sha256": "747adfc0ca342b6148f730935394afef929aa7a56850b8cf82291987523c728e"
+      },
+      {
+        "path": "scripts/verify_fit_transition_audit.py",
+        "sha256": "0ff64d22da192f4af586bfdfb1614f2e7c48f36e563b84ae87ecf5c53a3e7d52"
+      },
+      {
+        "path": "scripts/verify_flow_transfer.py",
+        "sha256": "c5e1b8f253c2848feb3eb50c2cc5f1b50b3aa22d863e250584dbccea2bc61670"
+      },
+      {
+        "path": "scripts/verify_full_density.py",
+        "sha256": "7886e5ceb29434a4ecc79a53d7957eaba609f181dfc73d4a7ee4c70f5bb4ac24"
+      },
+      {
+        "path": "scripts/verify_full_domain_queue.py",
+        "sha256": "a8ee0d17b8c785cc2d8f7f0ee491d40c7ca06d4712622e0ac58755fb6fe3cae5"
+      },
+      {
+        "path": "scripts/verify_gap_expert_shift.py",
+        "sha256": "547705e778443324fc13dd267511ff82569d52b43696e5612efba0150a5edd14"
+      },
+      {
+        "path": "scripts/verify_graph_repeat.py",
+        "sha256": "2ec216b7fe481f52199b92b28baa40efbe3bde74ae19a17a86904d6f7d1189e9"
+      },
+      {
+        "path": "scripts/verify_joint_dynamics_data.py",
+        "sha256": "53d2fcbda167ff3fcafe7489f5fd4ab4b5fc8375e41c695823abc80b71d634e5"
+      },
+      {
+        "path": "scripts/verify_joint_dynamics_models.py",
+        "sha256": "85afd5def61c40e8a57645343e54718f128ec669860c3602afc665eb87345432"
+      },
+      {
+        "path": "scripts/verify_joint_scenario_onset.py",
+        "sha256": "3ee3d032eb07e798714b2d07d34e104fe77fd65fa3174690a8f65ef4b43268a8"
+      },
+      {
+        "path": "scripts/verify_latent_queue_noise.py",
+        "sha256": "42d0f43e39116855fc6e0e6736d31addbda133efc74a34c88d1ce2ccc310baa6"
+      },
+      {
+        "path": "scripts/verify_local_search_screen.py",
+        "sha256": "0d071068f2ff7c4f052c2338cfe1ea34380a770df6faa0b34ebf950d09bdccf9"
+      },
+      {
+        "path": "scripts/verify_log_demand_od.py",
+        "sha256": "be24593fb488f6872d791c9004200fe4077f2d8a7595d011cc0496aaa3399923"
+      },
+      {
+        "path": "scripts/verify_native_remask_cache.py",
+        "sha256": "fb3820d13fba2c7b3717fec6a075d37c4b836f3c49c5c04d32c0f65d2c012b13"
+      },
+      {
+        "path": "scripts/verify_native_remask_forward.py",
+        "sha256": "30b070283e4231bf932a02e261f1bd58b72073c095bde082cf24d7f459fcd84b"
+      },
+      {
+        "path": "scripts/verify_native_remask_training.py",
+        "sha256": "3f25619df274f9efd76f137292d8764da70382988e98d63c2cc52b322903577f"
+      },
+      {
+        "path": "scripts/verify_onset_rank_queue.py",
+        "sha256": "47321ab39fea34e4e6e41e5fc16027e05918a87d2f46e70e781baa6e77bbb1d0"
+      },
+      {
+        "path": "scripts/verify_onset_set_decoders.py",
+        "sha256": "73f7fc9c0e5aba09daec691bc17fddf71ce4b55dec3d36c7ec2fb459646f0062"
+      },
+      {
+        "path": "scripts/verify_outage_training.py",
+        "sha256": "274081ceb804c3368228719be792d70be267890cc47c55af2baf1d9e2ddf9336"
+      },
+      {
+        "path": "scripts/verify_probabilistic_onset.py",
+        "sha256": "355a28762ff97592dd2967b60bc1b4f82277392b9da721302e3d11cfcaaa2725"
+      },
+      {
+        "path": "scripts/verify_public_graph_audit.py",
+        "sha256": "e15cdab3fbd032f7e88061abe3076b45a8e6ce8e20e8239c486e9788aaa11636"
+      },
+      {
+        "path": "scripts/verify_public_outage.py",
+        "sha256": "c0450dc70eee71538aaabbec918aa6d7742a3b9b3e8184d38f18a3ff6ef9499e"
+      },
+      {
+        "path": "scripts/verify_quality_state.py",
+        "sha256": "6cf7c7780cf77d6f203aebb3f517d12ce11655c26fbb433a1ee2add0e710b764"
+      },
+      {
+        "path": "scripts/verify_queue_five_phase.py",
+        "sha256": "dc24481778c57763f42fb38c42a7c3db5b9c4e23b2d9d8f4cee776981b58acb4"
+      },
+      {
+        "path": "scripts/verify_queue_overlap_deployment.py",
+        "sha256": "d4830a28109737296792e625c9de890792873de9f21224354c798c33c91a2ff4"
+      },
+      {
+        "path": "scripts/verify_queue_seed_ensemble.py",
+        "sha256": "394e9b84c48445466f87909c89c2c2f359331a17541f1a738379d6420b56e8fa"
+      },
+      {
+        "path": "scripts/verify_queue_shared_repeat.py",
+        "sha256": "dd14df8d431667ffba2b6b9eb82a8e5169b6a57d4ee7e8e96dba40d2c25296d2"
+      },
+      {
+        "path": "scripts/verify_recurrent_forward.py",
+        "sha256": "c5d22524c3bab87700b684a3c4632b9f37be89e1ffe9b437676a1d3e22a0d1f5"
+      },
+      {
+        "path": "scripts/verify_recurrent_state.py",
+        "sha256": "897bd3c375e6b0916892c24147c075b25798276a2496499ae0dc0c472f0bbb37"
+      },
+      {
+        "path": "scripts/verify_relative_position_training.py",
+        "sha256": "29edc6c9a2d338b7cdb2d0322f21498d0f2dffc43d859cb98dbe779addfedf54"
+      },
+      {
+        "path": "scripts/verify_remask_tree_study.py",
+        "sha256": "428595c4967c0ad9364bfbdfc573bca120c04edab2b01117b8b3fdeb5b3b4632"
+      },
+      {
+        "path": "scripts/verify_rolling_onset_decoders.py",
+        "sha256": "48233b4fa3ad8671d451525fe1972e93c5f71f7aa552ec7bff111df0b973ff95"
+      },
+      {
+        "path": "scripts/verify_sparse_profile_phase.py",
+        "sha256": "2561cd5fef5041afe9baa71d27086d3d9bb0fd86d0901783d9079f0cabdc1261"
+      },
+      {
+        "path": "scripts/verify_speed_jump_training.py",
+        "sha256": "f240eb354f20ebab1917000275f4c562e785054f8fa9eccc4c74d47e8fbbc650"
+      },
+      {
+        "path": "scripts/verify_state_assimilation.py",
+        "sha256": "f5d98ebe50be14b01f4172ae2befadd49df3dfcbfdb95e30e3eadf3d52ab8024"
+      },
+      {
+        "path": "scripts/verify_state_augmentation_cache.py",
+        "sha256": "7aca9e765575c469a1e589529ea46b34d35bacf16ae0bd7f4aaa3d6256aac37f"
+      },
+      {
+        "path": "scripts/verify_state_specialization_controls.py",
+        "sha256": "0339c2915deacedcb3123f9bdbc7d2a78383848165baf87bc25390a3fe7d0cc3"
+      },
+      {
+        "path": "scripts/verify_third_family_relative.py",
+        "sha256": "865903d1286c970ff7f6b5ad778491ce0e897c7ce529d96a3e2ef7fe5605910b"
+      },
+      {
+        "path": "scripts/verify_vendor.py",
+        "sha256": "232658ffcb66d34aea7c686d64e20bad86f7c172b0f900114dd683c5fd90bb85"
+      },
+      {
+        "path": "scripts/winter_flow_transfer.py",
+        "sha256": "055fe30b62dd510830b68c664bda86c4e5c2addbd9123d177811b384c9bca49e"
+      },
+      {
+        "path": "scripts/write_results.py",
+        "sha256": "efb8a4e80afdfaca2096ea7d2f65743e863b38c18dc41bac52fcdce07a70c83d"
+      },
+      {
+        "path": "scripts/zero_aware_od_experiment.py",
+        "sha256": "1b422f735023c0b6e82038f55d1c17906871546affe642c10b60d45d214e4068"
+      },
+      {
+        "path": "src/trafficflow/__init__.py",
+        "sha256": "6432d23e18693162d87e81e22ac8f25158369302b9dc209d21154dba1351e7a8"
+      },
+      {
+        "path": "src/trafficflow/__main__.py",
+        "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+      },
+      {
+        "path": "src/trafficflow/adaptive_graph_state.py",
+        "sha256": "52e7bbe95a36000f14a4a9d00e9629a0dd05eff023854b730b27c0ec6289e785"
+      },
+      {
+        "path": "src/trafficflow/bayesian_od.py",
+        "sha256": "5c5c76ab2848437af546a5fc3985f568b61c7a39dd3dbdf2a5551e266f1a1139"
+      },
+      {
+        "path": "src/trafficflow/bounded_state.py",
+        "sha256": "abb1f4d4418775801703940e34dd150b0d21debfd80f8f62a7c36decdf668e26"
+      },
+      {
+        "path": "src/trafficflow/causal_queue.py",
+        "sha256": "b12f3098ce79dc465545106b6d429fce2818499edd518f1909047b3ccbcda1b2"
+      },
+      {
+        "path": "src/trafficflow/channel_state.py",
+        "sha256": "5eeb00f96835f328cfa334f63ef0aae955f2af63185aa1d03e47b5ed38a26a1b"
+      },
+      {
+        "path": "src/trafficflow/cli.py",
+        "sha256": "8bb044f21541e3d0f639f01e20fc47a358152ec0c918ae4d644e73c96d7e73d3"
+      },
+      {
+        "path": "src/trafficflow/ctm_queue_diagnostics.py",
+        "sha256": "2215f940016022dbbbd575e40ac9a029c9307b84bc1ca5f5d01246d8cc65c940"
+      },
+      {
+        "path": "src/trafficflow/ctm_scenarios.py",
+        "sha256": "716adba052a0aab4ebf11261d2000e78dc5f908924443cd82d3cc1102b0647c4"
+      },
+      {
+        "path": "src/trafficflow/ctm_state_adapter.py",
+        "sha256": "3afe56f0c577d5d3ae05ee0583ddb180842980a874876f99e046e275b7d5194c"
+      },
+      {
+        "path": "src/trafficflow/data.py",
+        "sha256": "f29fe070b21ac692b2cf9bd6d5b5fd018e94129b9626588325dd48edbd941ccd"
+      },
+      {
+        "path": "src/trafficflow/demand_residual_od.py",
+        "sha256": "c4d92f8ba3af5f7ebd26dc516906090a7600077a396c32451600eb0adb55fa9c"
+      },
+      {
+        "path": "src/trafficflow/dense_queue_data.py",
+        "sha256": "fc19b7b9777fcbdec903209a83291483e28ebd9ca5b15e418fcb0d0695250f98"
+      },
+      {
+        "path": "src/trafficflow/dense_queue_loss.py",
+        "sha256": "c4378472e58eb521611d12763826393b8a465968ed9c2466ef740ba11f7d760a"
+      },
+      {
+        "path": "src/trafficflow/density_assimilation.py",
+        "sha256": "bbf771ae2d6ca93030aca029f3428fbb3f214cf4a5e39dca79925f08f7a30b46"
+      },
+      {
+        "path": "src/trafficflow/density_label_metrics.py",
+        "sha256": "5fcb4714fa7be5e1fd953da4707be274a7ff37af051cb9bc74083cd2666cf87b"
+      },
+      {
+        "path": "src/trafficflow/density_state.py",
+        "sha256": "ae91308f12b0c13d43f149d936a7c11704f712390f2fb593fbea5f053ff6a4b2"
+      },
+      {
+        "path": "src/trafficflow/digital_twin.py",
+        "sha256": "cfacb280f971faedceb2e404b35889891eef536a24a070804757ab6d92c49655"
+      },
+      {
+        "path": "src/trafficflow/ensemble_queue.py",
+        "sha256": "65c2c6d05b4444bc017c54fb875c091e01570de482cf257b6b20906b2af063e5"
+      },
+      {
+        "path": "src/trafficflow/entropy_od.py",
+        "sha256": "521a66563ff099aee9e3e50d180367ad25d7e90acdef174a1ed8d80b16337727"
+      },
+      {
+        "path": "src/trafficflow/expected_iou_queue.py",
+        "sha256": "75d27c1674d62658f709b6d0fc5ea5a43f47c3ef6ce0086fa07b73529d4199d3"
+      },
+      {
+        "path": "src/trafficflow/experiments.py",
+        "sha256": "854abf59d2c560f84c704090741d6f8fce4ce6725d8a39139412194cc362a6ec"
+      },
+      {
+        "path": "src/trafficflow/fixture.py",
+        "sha256": "0709326abd7206a7ca1c3414dbb95c2d8c08749484802e2523d49c1ee7a2ef24"
+      },
+      {
+        "path": "src/trafficflow/full_domain_queue.py",
+        "sha256": "50b0dd7245eb3146e236d16c5abc6166f8506a5304971383617147d718be3737"
+      },
+      {
+        "path": "src/trafficflow/full_queue_calibration.py",
+        "sha256": "c30ea129f196796d2a6c34bc71da18b7941eaed4ab652207f4d5144737403dd7"
+      },
+      {
+        "path": "src/trafficflow/gap_gated_state.py",
+        "sha256": "ec8a2d4e95dc6f4f74197406555bd33ec467dabfd314f27cb09e8b896bf92d53"
+      },
+      {
+        "path": "src/trafficflow/graph_queue.py",
+        "sha256": "eaf91b8825c5f3e6491fb09413d9c5b8cdee04ecfd9c05feb6be5e8b00f65c46"
+      },
+      {
+        "path": "src/trafficflow/graph_state.py",
+        "sha256": "806defac6f40c13f3ba51e74b09252a9b9d29bdd4779cb988a3d503a66364fa9"
+      },
+      {
+        "path": "src/trafficflow/increment_state.py",
+        "sha256": "52c6eb6a5cf959ac050f237a84cc8c487fae086fcec61a5aeac2fa5997185ea3"
+      },
+      {
+        "path": "src/trafficflow/joint_dynamics_eval.py",
+        "sha256": "f95248bbbb6abcea96c5c11b64a81c38a51814ba1324951458204a4488b63b15"
+      },
+      {
+        "path": "src/trafficflow/joint_graph_queue.py",
+        "sha256": "97384939116b76ef489d89e03b6888f76f75d769c11408bbdcbefa100761c604"
+      },
+      {
+        "path": "src/trafficflow/joint_queue_data.py",
+        "sha256": "f5f0c39a00589ce35538b3a8d5552cb5e0ce0282279d054d2f2f2dff564d5740"
+      },
+      {
+        "path": "src/trafficflow/joint_queue_model.py",
+        "sha256": "2832be5659148e868a9fccc6a3633d0a61f25ef31553e344e162474a3a0a4cb5"
+      },
+      {
+        "path": "src/trafficflow/joint_queue_scenarios.py",
+        "sha256": "30a3a9c25cec94de3f2162ec8714046c6b89417df02811a2a0ef69bd82c571bd"
+      },
+      {
+        "path": "src/trafficflow/latent_queue.py",
+        "sha256": "3898cf203c6f726504a184c935d8df2273ecf4043fe092bda3efd8b0cf3f6091"
+      },
+      {
+        "path": "src/trafficflow/log_demand_od.py",
+        "sha256": "e53d9edd45e7a3b041831bdca9084a4e206ea6b60454381a2c6de8ae66644139"
+      },
+      {
+        "path": "src/trafficflow/metrics.py",
+        "sha256": "5f42eaa372894edfa1363135b61818e7ec4bf56110257a03aadf07de770aa346"
+      },
+      {
+        "path": "src/trafficflow/native_remask.py",
+        "sha256": "0dfcb1a2b8da3c00b8cd29b57e2b3a636e52ea737e315e315fe0b8bdfb130c0c"
+      },
+      {
+        "path": "src/trafficflow/od_expert.py",
+        "sha256": "1dff245ae5d347e32d2b3b1473a129964cf28e5b259e93478cfad6cb4d5688bd"
+      },
+      {
+        "path": "src/trafficflow/od_uncertainty.py",
+        "sha256": "0df9a337b1b302952489a32517512a77ebc2c9420bee5d291dc92ad337bc85c3"
+      },
+      {
+        "path": "src/trafficflow/odme.py",
+        "sha256": "e61df62cbf3ff4af03069d6e028b2024ddee25578cc00558b2b04148370850ee"
+      },
+      {
+        "path": "src/trafficflow/onset_cardinality_queue.py",
+        "sha256": "5bbbfe76d5e92d3e96397b2ce833bb6cc35c258100918471737679583f41d37e"
+      },
+      {
+        "path": "src/trafficflow/onset_rank_queue.py",
+        "sha256": "d7842ed336fa9ca190e089bdcddca603b8fa4825dc7505df787224e624447516"
+      },
+      {
+        "path": "src/trafficflow/outage_shift.py",
+        "sha256": "dccf193ed7bced7881577204bb1385a7b8f9a97cf993fc53e64b67603cd89f35"
+      },
+      {
+        "path": "src/trafficflow/outage_stress.py",
+        "sha256": "eb76fb04628ea381cab5ebf725502f4bc21f1fa9555b1fa1c4c70229f98c81c7"
+      },
+      {
+        "path": "src/trafficflow/physics.py",
+        "sha256": "3f559ca30157ebee155bb17ebdd42f0dc43a169ef6b45634ad875569beb03e30"
+      },
+      {
+        "path": "src/trafficflow/probability_calibration.py",
+        "sha256": "57f7c5487983a2572851331b20591ac21db15591d1dc85745706147ce3a657c7"
+      },
+      {
+        "path": "src/trafficflow/quality_state.py",
+        "sha256": "243757e80c651dfcf32c846b54e548afdd2f04215c612f725855497bb802a7d8"
+      },
+      {
+        "path": "src/trafficflow/queue.py",
+        "sha256": "62c35a4ed8e1e882d386461aba41cf8f5f3ed809451e51008e34f23e211240c5"
+      },
+      {
+        "path": "src/trafficflow/queue_calibration.py",
+        "sha256": "3c9bf39bf1d8bf847dcf29554bcc5abd50a8c610d64b9f2d5c99629ff36b75a8"
+      },
+      {
+        "path": "src/trafficflow/queue_domain.py",
+        "sha256": "c8d03e5ba696b20c3537c0a764cb1df734496fc3a740d0642168f0eba7cc15b8"
+      },
+      {
+        "path": "src/trafficflow/queue_event_loss.py",
+        "sha256": "5b155f8255080e0ee8823ab366ce8f7dfb1f2d067c196109834e0338395b631c"
+      },
+      {
+        "path": "src/trafficflow/queue_events.py",
+        "sha256": "4fbe6e178ee1601de995572bd354cc856f4da6b743601587b299e9d9b233c97f"
+      },
+      {
+        "path": "src/trafficflow/queue_graph_geometry.py",
+        "sha256": "bc1596ed66dbf9c02960f6b5f3c759385fcdef65f7b1e83e9481c1b9800c9cad"
+      },
+      {
+        "path": "src/trafficflow/queue_overlap_loss.py",
+        "sha256": "8dd4beca0a9434ec9d3cd75751551df41bda5fe4b581b51a3bc2ae5ec3eeab27"
+      },
+      {
+        "path": "src/trafficflow/queue_phase_split.py",
+        "sha256": "9a0d96eface9c78241b23ffd1d54d7b8c598c0a628f5e3562b1a138b4d98b569"
+      },
+      {
+        "path": "src/trafficflow/queue_selection_uncertainty.py",
+        "sha256": "5996d6480c04406ec1e40c561a2ebee83438c910b0c9cb7518ea3a464885634b"
+      },
+      {
+        "path": "src/trafficflow/queue_specialist.py",
+        "sha256": "ca3c850ab271905dd294e1019f48552cc8e2e1946ebb8484b38cfd613a9d5373"
+      },
+      {
+        "path": "src/trafficflow/recurrent_state.py",
+        "sha256": "19ba9c972c9422de58683e9e5cae35c0a6dd9c1e18d6e49954c57c49c2ea79ba"
+      },
+      {
+        "path": "src/trafficflow/relative_position_state.py",
+        "sha256": "5754c090bd765f68904ef8d6735e89c9fe8d7b726a9ff0cbddeb3ffaa5a46f99"
+      },
+      {
+        "path": "src/trafficflow/research_eval.py",
+        "sha256": "197aa2c4d6091dbd551ca6d11f8a664e9feaa44c1fcaf568ec873185315ab3c9"
+      },
+      {
+        "path": "src/trafficflow/runtime.py",
+        "sha256": "c181d87a89ff8fa7ee92c00759e2674d77cd60a3ed0d407f1e52f0d2b95d197f"
+      },
+      {
+        "path": "src/trafficflow/scenario_local_search.py",
+        "sha256": "1f57b939f12c0ca726e475f0340478667616473edb0ee3cd8cbd3c034a806509"
+      },
+      {
+        "path": "src/trafficflow/speed_jump_loss.py",
+        "sha256": "e48820274e69fb260f10aeca981431a4f7bf0933ee308f0c734b9c054840cfc0"
+      },
+      {
+        "path": "src/trafficflow/state.py",
+        "sha256": "f7a8341d968ac55a6f87e01a439ce8dc8c014750afa61129c7175e733de23c17"
+      },
+      {
+        "path": "src/trafficflow/state_assimilation.py",
+        "sha256": "96291a9c9977924c6abff3e611ecf58125a586a9dfbdf9c70e090aa97ec4b85d"
+      },
+      {
+        "path": "src/trafficflow/state_augmentation.py",
+        "sha256": "220fccab97067dab2744cafddbedb954f85cb3deef2a88a062023217eeebb9a4"
+      },
+      {
+        "path": "src/trafficflow/state_control_data.py",
+        "sha256": "5f57e69831bc9354d9d3dbf521dde9dd237d67845ad744709fb79f91de4ec100"
+      },
+      {
+        "path": "src/trafficflow/state_control_eval.py",
+        "sha256": "b3782d05fba97b21fdd18eda1ae9aecbdb016c3a2733cb395259d46cea3cefcd"
+      },
+      {
+        "path": "src/trafficflow/state_control_model.py",
+        "sha256": "3cee5cc0b564cece76c05a8356425c576f1f2943cf5844619169bee223e7d079"
+      },
+      {
+        "path": "src/trafficflow/state_ensemble.py",
+        "sha256": "2bbfa587a79401c90a43502faa5410e5323b11cafe36a02b9ce244e8fae8d749"
+      },
+      {
+        "path": "src/trafficflow/submission.py",
+        "sha256": "87607c555e86f020e83f1ed9ac4054e49f88dc35eedd36cd8bf8ba442f85f2dc"
+      },
+      {
+        "path": "src/trafficflow/transition_diagnostics.py",
+        "sha256": "d130264f6d6c2fd9354dbd5639d27b601d5f09f636ca92a5ba729ce8e5297b74"
+      },
+      {
+        "path": "src/trafficflow/zero_aware_od.py",
+        "sha256": "42192b9d19dcaa2fc7d7801cb4ef7782c3cb6d71a3c73736936b5a064a072f6d"
+      },
+      {
+        "path": "vendor/official/src/merge_submissions.py",
+        "sha256": "a8cd6c4c9f2cea777fde8f6b163c00835a4fb45672998b9fc71368810e792ee1"
+      },
+      {
+        "path": "vendor/official/src/release/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/release/score_overall.py",
+        "sha256": "b9b73e174eeb1ed742dd9cbd558f6b280a0bd14e7ec7001feb549f1b5fb9b4ee"
+      },
+      {
+        "path": "vendor/official/src/score_overall.py",
+        "sha256": "4a28d57a23950554a065f6254bf674f4a1b58b5d039f26bc5154dd28d28651fb"
+      },
+      {
+        "path": "vendor/official/src/task1/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_historical_mean.py",
+        "sha256": "66569dd55340d5e4509712e66172ea669893d7341a0ef2dd8c920c24f07209a1"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_structural_kf.py",
+        "sha256": "f3a63ba48bf867d993dd1b3cbc0da6ca4567da7aa519ed2b2e3fd93a61c06132"
+      },
+      {
+        "path": "vendor/official/src/task1/build_task1_baseline_submission.py",
+        "sha256": "cb91e19e20a5a546430917a884197c1ad6a7068c6a47d7fbec7fb8311b7237d7"
+      },
+      {
+        "path": "vendor/official/src/task1/score_task1.py",
+        "sha256": "bcd42e88fbc42cd499e93e3b50ddf367009b26b216df5ab3f710ee1d1d863163"
+      },
+      {
+        "path": "vendor/official/src/task2/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task2/build_task2_persistence_submission.py",
+        "sha256": "d3cb4ab23206c4c20058a074b24c23ba79b43dd4219f41e158329a39f5a3edd2"
+      },
+      {
+        "path": "vendor/official/src/task2/queue_utils.py",
+        "sha256": "cea193935e7af7ab1399b9955c3f26fcb65664a099344d35b9c3b91802b3135f"
+      },
+      {
+        "path": "vendor/official/src/task2/score_task2.py",
+        "sha256": "b5605ebae9b32b3ca974881be47b5f2e796728b94763a724314580fc93be28bb"
+      },
+      {
+        "path": "vendor/official/src/task3/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task3/build_task3_baseline_submission.py",
+        "sha256": "945ce4b28f264be6be35a1b8d0f67311bf666d5e6b516a5b79bb2617075e8bcf"
+      },
+      {
+        "path": "vendor/official/src/task3/score_task3.py",
+        "sha256": "98d88b6e7f6b7bb0e2bbb4b42e486d6690b6f14a5d3625649e85ddf828550409"
+      },
+      {
+        "path": "vendor/official/src/task4/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task4/build_task4_odme_artifacts.py",
+        "sha256": "5da75aea3004555bae080ee4d18f1baee01dbb9ed1caf7a6abadd2387e6ade58"
+      },
+      {
+        "path": "vendor/official/src/task4/score_task4.py",
+        "sha256": "be15d732438d305e3d35cb41d3105fc03e3fb9459e5c050af39fe192cede30e3"
+      }
+    ],
+    "n_files": 361,
+    "scope": "Own source, vendored official Python and dependency locks; no data, credentials or model weights"
+  },
+  "decision_factor_comparisons": [
+    {
+      "baseline": "full_tree",
+      "candidate": "joint_queue_cp",
+      "point_macro": {
+        "full_tree": 0.8976087250830087,
+        "joint_queue_cp": 0.8621061942318387
+      },
+      "gain": -0.035502530851170055,
+      "case_gains": [
+        -0.041742658409757105,
+        -0.029262403292582895
+      ],
+      "ci95": [
+        -0.03862173522849904,
+        -0.031640136758728635
+      ],
+      "probability_positive": 0.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "joint_queue_cp",
+      "candidate": "joint_state_event_cp",
+      "point_macro": {
+        "joint_queue_cp": 0.8621061942318387,
+        "joint_state_event_cp": 0.8623423017905005
+      },
+      "gain": 0.00023610755866187993,
+      "case_gains": [
+        0.00047221511732364885,
+        0.0
+      ],
+      "ci95": [
+        8.012122255063314e-05,
+        0.00036706064763852576
+      ],
+      "probability_positive": 0.9975,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "joint_state_event_cp",
+      "candidate": "joint_state_full_cp",
+      "point_macro": {
+        "joint_state_event_cp": 0.8623423017905005,
+        "joint_state_full_cp": 0.8629672890173208
+      },
+      "gain": 0.0006249872268202505,
+      "case_gains": [
+        0.000513240750212085,
+        0.000736733703428416
+      ],
+      "ci95": [
+        0.0005490314336622476,
+        0.0007455175995674162
+      ],
+      "probability_positive": 1.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "joint_queue_cp",
+      "candidate": "joint_state_full_cp",
+      "point_macro": {
+        "joint_queue_cp": 0.8621061942318387,
+        "joint_state_full_cp": 0.8629672890173208
+      },
+      "gain": 0.0008610947854821305,
+      "case_gains": [
+        0.0009854558675357339,
+        0.000736733703428416
+      ],
+      "ci95": [
+        0.0008113014094408288,
+        0.0009306293071081439
+      ],
+      "probability_positive": 1.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "joint_state_full_cp",
+      "candidate": "state_only",
+      "point_macro": {
+        "joint_state_full_cp": 0.8629672890173208,
+        "state_only": 0.8629674173579513
+      },
+      "gain": 1.2834063056743616e-07,
+      "case_gains": [
+        -0.0010123389458837062,
+        0.00101259562714473
+      ],
+      "ci95": [
+        -8.609867079547029e-05,
+        0.00018990284351152743
+      ],
+      "probability_positive": 0.65775,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "full_tree",
+      "candidate": "matched_l2",
+      "point_macro": {
+        "full_tree": 0.8976087250830087,
+        "matched_l2": 0.8932758336345072
+      },
+      "gain": -0.004332891448501464,
+      "case_gains": [
+        -0.006627768226801334,
+        -0.0020380146702014823
+      ],
+      "ci95": [
+        -0.005190712731749925,
+        -0.003362052124459874
+      ],
+      "probability_positive": 0.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "matched_l2",
+      "candidate": "matched_l2_weighted",
+      "point_macro": {
+        "matched_l2": 0.8932758336345072,
+        "matched_l2_weighted": 0.8857689269077107
+      },
+      "gain": -0.007506906726796547,
+      "case_gains": [
+        -0.00566054062578214,
+        -0.009353272827810954
+      ],
+      "ci95": [
+        -0.007874561636185457,
+        -0.007126530474352166
+      ],
+      "probability_positive": 0.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "matched_l2_weighted",
+      "candidate": "matched_l1_weighted",
+      "point_macro": {
+        "matched_l2_weighted": 0.8857689269077107,
+        "matched_l1_weighted": 0.8698877488343508
+      },
+      "gain": -0.01588117807335987,
+      "case_gains": [
+        -0.02168838187220412,
+        -0.010073974274515729
+      ],
+      "ci95": [
+        -0.01742481776868248,
+        -0.013430271172455377
+      ],
+      "probability_positive": 0.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "matched_l1_weighted",
+      "candidate": "state_only",
+      "point_macro": {
+        "matched_l1_weighted": 0.8698877488343508,
+        "state_only": 0.8629674173579513
+      },
+      "gain": -0.006920331476399477,
+      "case_gains": [
+        -0.007792850763317483,
+        -0.006047812189481583
+      ],
+      "ci95": [
+        -0.0076754585915482145,
+        -0.006155995261503616
+      ],
+      "probability_positive": 0.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "full_tree",
+      "candidate": "state_only",
+      "point_macro": {
+        "full_tree": 0.8976087250830087,
+        "state_only": 0.8629674173579513
+      },
+      "gain": -0.03464130772505736,
+      "case_gains": [
+        -0.04176954148810508,
+        -0.02751307396200975
+      ],
+      "ci95": [
+        -0.03763655713663178,
+        -0.0307384187237345
+      ],
+      "probability_positive": 0.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "state_only_event_cp",
+      "candidate": "state_only",
+      "point_macro": {
+        "state_only_event_cp": 0.8628645318019996,
+        "state_only": 0.8629674173579513
+      },
+      "gain": 0.0001028855559517261,
+      "case_gains": [
+        0.00020577111190334119,
+        0.0
+      ],
+      "ci95": [
+        8.935126882302636e-05,
+        0.0001267773253172594
+      ],
+      "probability_positive": 1.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "causal_carry",
+      "candidate": "state_only",
+      "point_macro": {
+        "causal_carry": 0.8623968843008816,
+        "state_only": 0.8629674173579513
+      },
+      "gain": 0.0005705330570697775,
+      "case_gains": [
+        0.0010122007070051398,
+        0.00012886540713430428
+      ],
+      "ci95": [
+        0.0004908406539975818,
+        0.0006630455047012624
+      ],
+      "probability_positive": 1.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    }
+  ],
+  "single_seed_control_comparisons": [
+    {
+      "baseline": "full_tree",
+      "candidate": "matched_l2_20261013",
+      "point_macro": {
+        "full_tree": 0.8976087250830087,
+        "matched_l2_20261013": 0.8915047786681207
+      },
+      "gain": -0.006103946414887984,
+      "case_gains": [
+        -0.008538033863947803,
+        -0.0036698589658280545
+      ],
+      "ci95": [
+        -0.007040630851474258,
+        -0.005084775887660103
+      ],
+      "probability_positive": 0.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "joint_state_full_cp_20261013",
+      "candidate": "state_only_20261013",
+      "point_macro": {
+        "joint_state_full_cp_20261013": 0.8602200400074209,
+        "state_only_20261013": 0.8627741626419942
+      },
+      "gain": 0.0025541226345733303,
+      "case_gains": [
+        0.00048053931905234215,
+        0.0046277059500942075
+      ],
+      "ci95": [
+        0.002368927505819571,
+        0.0029419668164204437
+      ],
+      "probability_positive": 1.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "matched_l2_20261013",
+      "candidate": "matched_l2_weighted_20261013",
+      "point_macro": {
+        "matched_l2_20261013": 0.8915047786681207,
+        "matched_l2_weighted_20261013": 0.8839010378243916
+      },
+      "gain": -0.007603740843729168,
+      "case_gains": [
+        -0.005225823503354654,
+        -0.009981658184103792
+      ],
+      "ci95": [
+        -0.008051912871907842,
+        -0.0072386613255486145
+      ],
+      "probability_positive": 0.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "matched_l2_weighted_20261013",
+      "candidate": "matched_l1_weighted_20261013",
+      "point_macro": {
+        "matched_l2_weighted_20261013": 0.8839010378243916,
+        "matched_l1_weighted_20261013": 0.8692753108980344
+      },
+      "gain": -0.014625726926357108,
+      "case_gains": [
+        -0.02043442148309782,
+        -0.008817032369616395
+      ],
+      "ci95": [
+        -0.016180558015694013,
+        -0.012203097752800528
+      ],
+      "probability_positive": 0.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "full_tree",
+      "candidate": "matched_l2_20261029",
+      "point_macro": {
+        "full_tree": 0.8976087250830087,
+        "matched_l2_20261029": 0.8923885131152138
+      },
+      "gain": -0.005220211967794874,
+      "case_gains": [
+        -0.007918807568462194,
+        -0.002521616367127555
+      ],
+      "ci95": [
+        -0.0061560454055777205,
+        -0.004093212816737052
+      ],
+      "probability_positive": 0.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "joint_state_full_cp_20261029",
+      "candidate": "state_only_20261029",
+      "point_macro": {
+        "joint_state_full_cp_20261029": 0.8632947812582008,
+        "state_only_20261029": 0.8625617947595123
+      },
+      "gain": -0.0007329864986884704,
+      "case_gains": [
+        -0.0012877047319724833,
+        -0.00017826826540445762
+      ],
+      "ci95": [
+        -0.0007995306965099452,
+        -0.0005841138221900215
+      ],
+      "probability_positive": 0.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "matched_l2_20261029",
+      "candidate": "matched_l2_weighted_20261029",
+      "point_macro": {
+        "matched_l2_20261029": 0.8923885131152138,
+        "matched_l2_weighted_20261029": 0.8846487772561586
+      },
+      "gain": -0.007739735859055186,
+      "case_gains": [
+        -0.005700154455417716,
+        -0.009779317262692544
+      ],
+      "ci95": [
+        -0.008163192878431553,
+        -0.007294696708785178
+      ],
+      "probability_positive": 0.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    },
+    {
+      "baseline": "matched_l2_weighted_20261029",
+      "candidate": "matched_l1_weighted_20261029",
+      "point_macro": {
+        "matched_l2_weighted_20261029": 0.8846487772561586,
+        "matched_l1_weighted_20261029": 0.8694630523627404
+      },
+      "gain": -0.015185724893418295,
+      "case_gains": [
+        -0.020957737900373474,
+        -0.009413711886463227
+      ],
+      "ci95": [
+        -0.016634804639270757,
+        -0.01285869615995206
+      ],
+      "probability_positive": 0.0,
+      "block_days": 7,
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "seed": 20261015,
+      "n_cases": 2,
+      "n_days": 30,
+      "scope": "Conditional fitted-model publiccausalState subset,matched targets,calendar draws synchronized across panels,perregimeformula/equalcase mean. Not optimizerseed uncertainty,latent/officialState/Physics/Total or a blind final test.",
+      "independent_all_retained_scalar_replicates_checked": true
+    }
+  ],
+  "diagnostic_chain": {
+    "steps": [
+      {
+        "from": "full_tree",
+        "to": "matched_l2",
+        "difference": -0.004332891448501464
+      },
+      {
+        "from": "matched_l2",
+        "to": "matched_l2_weighted",
+        "difference": -0.007506906726796547
+      },
+      {
+        "from": "matched_l2_weighted",
+        "to": "matched_l1_weighted",
+        "difference": -0.01588117807335987
+      },
+      {
+        "from": "matched_l1_weighted",
+        "to": "state_only",
+        "difference": -0.006920331476399477
+      }
+    ],
+    "sum": -0.03464130772505736,
+    "scope": "Algebraicsequentialcontrolchain,not causalpercentage/Shapley decomposition. Fulltreevs2seedmatchedtree alsoincludesensemble;single-seedcoverage contrastsreportedseparately. RemainingNN/treegap includesfeatureengineering/optimizer,notpurearchitecture."
+  },
+  "gradient_diagnostic_summary": {
+    "n_pairs": 32,
+    "n_defined_cosines": 32,
+    "n_negative": 11,
+    "mean_cosine": 0.14003182674410708,
+    "minmax_cosine": [
+      -0.44539071210843156,
+      0.8977615484168665
+    ],
+    "scope": "32frozenFITbatches,localalignmentonly;removingtasksdidnotshowconsistentStategain. Not proof ofcausalnegative-transfer mechanism."
+  },
+  "full_FP32_point_check": {
+    "full_tree": {
+      "recorded_TF32_point": 0.8976087250830087,
+      "corrected_FP32_point": 0.8976087250830087
+    },
+    "matched_l2": {
+      "recorded_TF32_point": 0.8932758336345072,
+      "corrected_FP32_point": 0.8932758336345072
+    },
+    "matched_l2_weighted": {
+      "recorded_TF32_point": 0.8857689269077107,
+      "corrected_FP32_point": 0.8857689269077107
+    },
+    "matched_l1_weighted": {
+      "recorded_TF32_point": 0.8698877488343508,
+      "corrected_FP32_point": 0.8698877488343508
+    },
+    "state_only": {
+      "recorded_TF32_point": 0.8629674173579513,
+      "corrected_FP32_point": 0.8629674066181057
+    },
+    "joint_state_full_cp": {
+      "recorded_TF32_point": 0.8629672890173208,
+      "corrected_FP32_point": 0.8629672894562825
+    }
+  },
+  "cases": [
+    {
+      "name": "I5S_September",
+      "decision_metrics": {
+        "causal_carry": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 4.214842343181101,
+              "rmse_flow_per_lane": 61.677576659555065,
+              "public_subset_state_formula": 0.8616732632816293
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.476736410211414,
+              "rmse_flow_per_lane": 73.09865880916858,
+              "public_subset_state_formula": 0.8256601884524042
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.849659502796306,
+              "rmse_flow_per_lane": 94.74745133933847,
+              "public_subset_state_formula": 0.779407642046107
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8222470312600468,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "full_tree": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 3.133402919153405,
+              "rmse_flow_per_lane": 43.14907664263937,
+              "public_subset_state_formula": 0.8992375381869295
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 4.347995515776073,
+              "rmse_flow_per_lane": 53.479577268714955,
+              "public_subset_state_formula": 0.8650822876198888
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 5.432190150674114,
+              "rmse_flow_per_lane": 67.69330198276464,
+              "public_subset_state_formula": 0.8307664945586529
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.865028773455157,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_queue_cp_20261013": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 4.220464732590077,
+              "rmse_flow_per_lane": 62.15675463324848,
+              "public_subset_state_formula": 0.8611844498905639
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.452218618637826,
+              "rmse_flow_per_lane": 73.32830749959997,
+              "public_subset_state_formula": 0.8260137087543964
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.82807737803398,
+              "rmse_flow_per_lane": 93.41358215507023,
+              "public_subset_state_formula": 0.7808964489822456
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.822698202542402,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_state_event_cp_20261013": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 4.292797485148662,
+              "rmse_flow_per_lane": 63.33535173995963,
+              "public_subset_state_formula": 0.8587184713201532
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.535928901719965,
+              "rmse_flow_per_lane": 74.05089560651142,
+              "public_subset_state_formula": 0.8236515824245234
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.887726656670344,
+              "rmse_flow_per_lane": 94.70359496409876,
+              "public_subset_state_formula": 0.7786190147434449
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8203296894960405,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_state_full_cp_20261013": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 4.220464732590077,
+              "rmse_flow_per_lane": 62.15675463324848,
+              "public_subset_state_formula": 0.8611844498905639
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.452218618637826,
+              "rmse_flow_per_lane": 73.32830749959997,
+              "public_subset_state_formula": 0.8260137087543964
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.82807737803398,
+              "rmse_flow_per_lane": 93.41358215507023,
+              "public_subset_state_formula": 0.7808964489822456
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.822698202542402,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "state_only_event_cp_20261013": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 4.214831202735991,
+              "rmse_flow_per_lane": 60.74360831715477,
+              "public_subset_state_formula": 0.862389546311084
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.476192708119622,
+              "rmse_flow_per_lane": 72.09549132968195,
+              "public_subset_state_formula": 0.8264410274851934
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.848683519650978,
+              "rmse_flow_per_lane": 93.52967411432557,
+              "public_subset_state_formula": 0.7803623524878893
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8230643087613889,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "state_only_20261013": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 4.2142002566648955,
+              "rmse_flow_per_lane": 60.586734499624676,
+              "public_subset_state_formula": 0.8625234446729928
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.474987764027997,
+              "rmse_flow_per_lane": 72.02446564768287,
+              "public_subset_state_formula": 0.8265215073004384
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.84884535843806,
+              "rmse_flow_per_lane": 93.35695649583417,
+              "public_subset_state_formula": 0.7804912736109317
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8231787418614543,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l2_20261013": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 3.432658764736359,
+              "rmse_flow_per_lane": 45.85893637397117,
+              "public_subset_state_formula": 0.8906960527949834
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 4.616230164885251,
+              "rmse_flow_per_lane": 56.45075547552791,
+              "public_subset_state_formula": 0.8570105159072405
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 5.750899887829348,
+              "rmse_flow_per_lane": 70.45423350193364,
+              "public_subset_state_formula": 0.8217656500714037
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8564907395912092,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l2_weighted_20261013": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 3.5405602069152144,
+              "rmse_flow_per_lane": 48.9028039671271,
+              "public_subset_state_formula": 0.8860317498225007
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 4.737721712760596,
+              "rmse_flow_per_lane": 59.497531043758734,
+              "public_subset_state_formula": 0.8520504372041562
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 5.906535553020907,
+              "rmse_flow_per_lane": 73.9647010667497,
+              "public_subset_state_formula": 0.8157125612369069
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8512649160878546,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l1_weighted_20261013": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 3.955443781937841,
+              "rmse_flow_per_lane": 56.90526831407178,
+              "public_subset_state_formula": 0.870935041936021
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.293457530239572,
+              "rmse_flow_per_lane": 68.02345708509202,
+              "public_subset_state_formula": 0.8335100002482547
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.688899082408694,
+              "rmse_flow_per_lane": 88.00870198692762,
+              "public_subset_state_formula": 0.7880464416299944
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8308304946047568,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_queue_cp_20261029": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 4.211264542030213,
+              "rmse_flow_per_lane": 61.63158075721014,
+              "public_subset_state_formula": 0.8617858073116196
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.478477390613177,
+              "rmse_flow_per_lane": 72.916826766373,
+              "public_subset_state_formula": 0.8257619878418694
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.846220687404679,
+              "rmse_flow_per_lane": 93.09558864378708,
+              "public_subset_state_formula": 0.7807483485251555
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8227653812262149,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_state_event_cp_20261029": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 4.181711093722502,
+              "rmse_flow_per_lane": 60.506456991735405,
+              "public_subset_state_formula": 0.8632867566819302
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.4278257183642475,
+              "rmse_flow_per_lane": 71.93569590027967,
+              "public_subset_state_formula": 0.8276082642931178
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.785516634308385,
+              "rmse_flow_per_lane": 92.32315307046969,
+              "public_subset_state_formula": 0.7826517566782455
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8245155925510979,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_state_full_cp_20261029": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 4.181711093722502,
+              "rmse_flow_per_lane": 60.506456991735405,
+              "public_subset_state_formula": 0.8632867566819302
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.4278257183642475,
+              "rmse_flow_per_lane": 71.93569590027967,
+              "public_subset_state_formula": 0.8276082642931178
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.785516634308385,
+              "rmse_flow_per_lane": 92.32315307046969,
+              "public_subset_state_formula": 0.7826517566782455
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8245155925510979,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "state_only_event_cp_20261029": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 4.214525190526123,
+              "rmse_flow_per_lane": 61.17233607341444,
+              "public_subset_state_formula": 0.8620674648950181
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.47703184586267,
+              "rmse_flow_per_lane": 72.48560869965985,
+              "public_subset_state_formula": 0.8261238121262938
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.849571334990447,
+              "rmse_flow_per_lane": 93.54038297996813,
+              "public_subset_state_formula": 0.7803349655462308
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8228420808558475,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "state_only_20261029": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 4.216942367823084,
+              "rmse_flow_per_lane": 60.60124949670904,
+              "public_subset_state_formula": 0.8624530869075445
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.478753565132143,
+              "rmse_flow_per_lane": 71.96667217322965,
+              "public_subset_state_formula": 0.826484474327003
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.851821409685058,
+              "rmse_flow_per_lane": 92.94072434083577,
+              "public_subset_state_formula": 0.7807461022228287
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8232278878191254,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l2_20261029": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 3.3475851867522026,
+              "rmse_flow_per_lane": 45.80015387075614,
+              "public_subset_state_formula": 0.8925787086652395
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 4.620277398544831,
+              "rmse_flow_per_lane": 56.698205381456546,
+              "public_subset_state_formula": 0.8567333840656484
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 5.734347680443672,
+              "rmse_flow_per_lane": 70.5916763128955,
+              "public_subset_state_formula": 0.8220178049291968
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8571099658866949,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l2_weighted_20261029": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 3.548518068290514,
+              "rmse_flow_per_lane": 48.30765288971213,
+              "public_subset_state_formula": 0.886316142509479
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 4.748804531523466,
+              "rmse_flow_per_lane": 59.10300341263851,
+              "public_subset_state_formula": 0.8521135195027371
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 5.924917214050226,
+              "rmse_flow_per_lane": 73.33306421073915,
+              "public_subset_state_formula": 0.8157997722816152
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8514098114312771,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l1_weighted_20261029": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 3.9849425448984412,
+              "rmse_flow_per_lane": 56.249524414358106,
+              "public_subset_state_formula": 0.8708006056458525
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.349793210735192,
+              "rmse_flow_per_lane": 67.2905045242271,
+              "public_subset_state_formula": 0.8328550798462124
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.7400396782912635,
+              "rmse_flow_per_lane": 87.01905371512481,
+              "public_subset_state_formula": 0.7877005351006463
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8304520735309037,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_queue_cp": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 4.203602354723772,
+              "rmse_flow_per_lane": 61.35682189659479,
+              "public_subset_state_formula": 0.8621619590172438
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.455042761278082,
+              "rmse_flow_per_lane": 72.67987393370198,
+              "public_subset_state_formula": 0.8264498396738886
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.829200989579601,
+              "rmse_flow_per_lane": 92.92527675653872,
+              "public_subset_state_formula": 0.7812465464450676
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8232861150454,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_state_event_cp": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 4.212566757464346,
+              "rmse_flow_per_lane": 60.526973477906594,
+              "public_subset_state_formula": 0.8626045450390417
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.46196713797717,
+              "rmse_flow_per_lane": 71.77745426895706,
+              "public_subset_state_formula": 0.8269921282134928
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.8207725449493255,
+              "rmse_flow_per_lane": 92.59955973059748,
+              "public_subset_state_formula": 0.7816783172356365
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8237583301627236,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_state_full_cp": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 4.181330245523309,
+              "rmse_flow_per_lane": 60.779289992599644,
+              "public_subset_state_formula": 0.8630858110357036
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.425131972055234,
+              "rmse_flow_per_lane": 72.20929184353355,
+              "public_subset_state_formula": 0.8274566923235647
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.794817590211647,
+              "rmse_flow_per_lane": 92.55617044159492,
+              "public_subset_state_formula": 0.7822722093795391
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8242715709129357,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "state_only_event_cp": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 4.2142933380530065,
+              "rmse_flow_per_lane": 60.80270707886015,
+              "public_subset_state_formula": 0.8623558551375956
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.476293662816401,
+              "rmse_flow_per_lane": 72.16595580251621,
+              "public_subset_state_formula": 0.8263848241012367
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.848849475405036,
+              "rmse_flow_per_lane": 93.4501930495273,
+              "public_subset_state_formula": 0.7804197033266136
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8230534608551486,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "state_only": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 4.215399461513807,
+              "rmse_flow_per_lane": 60.51406358164832,
+              "public_subset_state_formula": 0.8625532562187048
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.476730213543327,
+              "rmse_flow_per_lane": 71.92489663871922,
+              "public_subset_state_formula": 0.8265602066311128
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.850191176702015,
+              "rmse_flow_per_lane": 93.09344025899817,
+              "public_subset_state_formula": 0.780664233051338
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.823259231967052,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l2": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 3.3393005190217666,
+              "rmse_flow_per_lane": 45.32204166604919,
+              "public_subset_state_formula": 0.8931242101784922
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 4.5502845658436275,
+              "rmse_flow_per_lane": 56.02086443260372,
+              "public_subset_state_formula": 0.8587645239794481
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 5.69488694379434,
+              "rmse_flow_per_lane": 70.01238324380283,
+              "public_subset_state_formula": 0.8233142815271267
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8584010052283557,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l2_weighted": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 3.500978179851741,
+              "rmse_flow_per_lane": 48.10964617971475,
+              "public_subset_state_formula": 0.8874948092440877
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 4.687317362599455,
+              "rmse_flow_per_lane": 58.785852536182794,
+              "public_subset_state_formula": 0.8536847913567783
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 5.873345336848076,
+              "rmse_flow_per_lane": 73.16601850073083,
+              "public_subset_state_formula": 0.8170417932068545
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8527404646025736,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l1_weighted": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 42245,
+              "rmse_speed_kmh": 3.959388690773073,
+              "rmse_flow_per_lane": 56.335410833029144,
+              "public_subset_state_formula": 0.871286722640646
+            },
+            {
+              "regime": "R2",
+              "n": 57357,
+              "rmse_speed_kmh": 5.306590313605185,
+              "rmse_flow_per_lane": 67.43253135432516,
+              "public_subset_state_formula": 0.833679375187812
+            },
+            {
+              "regime": "R3",
+              "n": 115809,
+              "rmse_speed_kmh": 6.707068263422708,
+              "rmse_flow_per_lane": 87.30935888793783,
+              "public_subset_state_formula": 0.7881901503626505
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8310520827303695,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        }
+      },
+      "actual_exposure": [
+        {
+          "seed": 20261013,
+          "n_unique_contexts": 3368,
+          "n_teacher_rows_by_field": [
+            85838,
+            85838
+          ],
+          "n_context_draws": 6400,
+          "draws_with_current_label_by_field": [
+            6400,
+            6400
+          ],
+          "nominal_weight_sum_by_field": [
+            1200.0000000000468,
+            1200.0000000000468
+          ],
+          "normalized_weight_quantiles_by_field": {
+            "0": [
+              0.1625719696969697,
+              0.37256076388888887,
+              1.7882916666666668,
+              14.673162393162393,
+              58.119479166666665
+            ],
+            "1": [
+              0.1625719696969697,
+              0.37256076388888887,
+              1.7882916666666668,
+              14.673162393162393,
+              58.119479166666665
+            ]
+          },
+          "regime_exposure": {
+            "R1": {
+              "unique_teacher_rows": 14354,
+              "normalized_weight_share_by_field": [
+                0.29625,
+                0.29625
+              ]
+            },
+            "R2": {
+              "unique_teacher_rows": 31716,
+              "normalized_weight_share_by_field": [
+                0.4029166666666667,
+                0.4029166666666667
+              ]
+            },
+            "R3": {
+              "unique_teacher_rows": 39768,
+              "normalized_weight_share_by_field": [
+                0.30083333333333334,
+                0.30083333333333334
+              ]
+            }
+          }
+        },
+        {
+          "seed": 20261029,
+          "n_unique_contexts": 3368,
+          "n_teacher_rows_by_field": [
+            85004,
+            85004
+          ],
+          "n_context_draws": 6400,
+          "draws_with_current_label_by_field": [
+            6400,
+            6400
+          ],
+          "nominal_weight_sum_by_field": [
+            1200.0000000000746,
+            1200.0000000000746
+          ],
+          "normalized_weight_quantiles_by_field": {
+            "0": [
+              0.16706761006289308,
+              0.384981884057971,
+              1.8319827586206898,
+              14.489318181818184,
+              42.502
+            ],
+            "1": [
+              0.16706761006289308,
+              0.384981884057971,
+              1.8319827586206898,
+              14.489318181818184,
+              42.502
+            ]
+          },
+          "regime_exposure": {
+            "R1": {
+              "unique_teacher_rows": 15273,
+              "normalized_weight_share_by_field": [
+                0.29312499999999997,
+                0.29312499999999997
+              ]
+            },
+            "R2": {
+              "unique_teacher_rows": 30763,
+              "normalized_weight_share_by_field": [
+                0.3985416666666666,
+                0.3985416666666666
+              ]
+            },
+            "R3": {
+              "unique_teacher_rows": 38968,
+              "normalized_weight_share_by_field": [
+                0.3083333333333333,
+                0.3083333333333333
+              ]
+            }
+          }
+        }
+      ],
+      "checkpoint_choice_steps": {
+        "20261013": {
+          "joint_queue_cp": 800,
+          "joint_state_event_cp": 200,
+          "joint_state_full_cp": 800,
+          "state_only_event_cp": 200,
+          "state_only": 400
+        },
+        "20261029": {
+          "joint_queue_cp": 400,
+          "joint_state_event_cp": 800,
+          "joint_state_full_cp": 800,
+          "state_only_event_cp": 800,
+          "state_only": 400
+        }
+      }
+    },
+    {
+      "name": "I10W_September",
+      "decision_metrics": {
+        "causal_carry": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.3619404328046634,
+              "rmse_flow_per_lane": 63.85398020787579,
+              "public_subset_state_formula": 0.9000273684920479
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.160595894309676,
+              "rmse_flow_per_lane": 65.9443792478607,
+              "public_subset_state_formula": 0.9027737712595512
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.8244081633264422,
+              "rmse_flow_per_lane": 72.7222322590419,
+              "public_subset_state_formula": 0.9048390722735502
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9025467373417163,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "full_tree": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 1.9699483820273072,
+              "rmse_flow_per_lane": 42.67595394777614,
+              "public_subset_state_formula": 0.9247308835882485
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 1.719397616213602,
+              "rmse_flow_per_lane": 44.59397802061982,
+              "public_subset_state_formula": 0.9286722950073111
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.3080882815015955,
+              "rmse_flow_per_lane": 45.10753249897081,
+              "public_subset_state_formula": 0.9371628515370213
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9301886767108604,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_queue_cp_20261013": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.472178443905514,
+              "rmse_flow_per_lane": 66.78784026339103,
+              "public_subset_state_formula": 0.8953969347430412
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.2708998663784628,
+              "rmse_flow_per_lane": 68.5202853523125,
+              "public_subset_state_formula": 0.898416344116119
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.9584231657817461,
+              "rmse_flow_per_lane": 76.02483399255001,
+              "public_subset_state_formula": 0.8994123535581593
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8977418774724398,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_state_event_cp_20261013": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.472178443905514,
+              "rmse_flow_per_lane": 66.78784026339103,
+              "public_subset_state_formula": 0.8953969347430412
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.2708998663784628,
+              "rmse_flow_per_lane": 68.5202853523125,
+              "public_subset_state_formula": 0.898416344116119
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.9584231657817461,
+              "rmse_flow_per_lane": 76.02483399255001,
+              "public_subset_state_formula": 0.8994123535581593
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8977418774724398,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_state_full_cp_20261013": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.472178443905514,
+              "rmse_flow_per_lane": 66.78784026339103,
+              "public_subset_state_formula": 0.8953969347430412
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.2708998663784628,
+              "rmse_flow_per_lane": 68.5202853523125,
+              "public_subset_state_formula": 0.898416344116119
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.9584231657817461,
+              "rmse_flow_per_lane": 76.02483399255001,
+              "public_subset_state_formula": 0.8994123535581593
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.8977418774724398,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "state_only_event_cp_20261013": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.3699033608345004,
+              "rmse_flow_per_lane": 63.59659443021409,
+              "public_subset_state_formula": 0.9000526983428108
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.1749683025176423,
+              "rmse_flow_per_lane": 65.80276897158915,
+              "public_subset_state_formula": 0.902571895120734
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.865437764768953,
+              "rmse_flow_per_lane": 72.0292010568694,
+              "public_subset_state_formula": 0.9044841568040575
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.902369583422534,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "state_only_20261013": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.3699033608345004,
+              "rmse_flow_per_lane": 63.59659443021409,
+              "public_subset_state_formula": 0.9000526983428108
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.1749683025176423,
+              "rmse_flow_per_lane": 65.80276897158915,
+              "public_subset_state_formula": 0.902571895120734
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.865437764768953,
+              "rmse_flow_per_lane": 72.0292010568694,
+              "public_subset_state_formula": 0.9044841568040575
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.902369583422534,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l2_20261013": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 1.9907166957155813,
+              "rmse_flow_per_lane": 44.62787568005583,
+              "public_subset_state_formula": 0.9227858146845007
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 1.794056597847971,
+              "rmse_flow_per_lane": 47.71299560096289,
+              "public_subset_state_formula": 0.9246684141924124
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.408041866864048,
+              "rmse_flow_per_lane": 48.89226693593825,
+              "public_subset_state_formula": 0.9321022243581839
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9265188177450323,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l2_weighted_20261013": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.198456796317101,
+              "rmse_flow_per_lane": 50.33613842889549,
+              "public_subset_state_formula": 0.9139222937373974
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.0503553636355147,
+              "rmse_flow_per_lane": 52.656187563500666,
+              "public_subset_state_formula": 0.9153425803467892
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.7507739568898755,
+              "rmse_flow_per_lane": 54.569579912060476,
+              "public_subset_state_formula": 0.9203466045985991
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9165371595609285,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l1_weighted_20261013": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.2117309667431333,
+              "rmse_flow_per_lane": 61.55931069673697,
+              "public_subset_state_formula": 0.9050311395841835
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 1.9777665128798347,
+              "rmse_flow_per_lane": 63.953175498915165,
+              "public_subset_state_formula": 0.908249475439294
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.5883760091754653,
+              "rmse_flow_per_lane": 72.79736302350145,
+              "public_subset_state_formula": 0.909879766550459
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9077201271913121,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_queue_cp_20261029": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.411784285116142,
+              "rmse_flow_per_lane": 64.0677860248585,
+              "public_subset_state_formula": 0.8987868234890999
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.2057559517469127,
+              "rmse_flow_per_lane": 66.3197190517952,
+              "public_subset_state_formula": 0.9015105535025572
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.9095667211965655,
+              "rmse_flow_per_lane": 73.23425255580533,
+              "public_subset_state_formula": 0.9026070985293702
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9009681585070091,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_state_event_cp_20261029": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.411784285116142,
+              "rmse_flow_per_lane": 64.0677860248585,
+              "public_subset_state_formula": 0.8987868234890999
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.2057559517469127,
+              "rmse_flow_per_lane": 66.3197190517952,
+              "public_subset_state_formula": 0.9015105535025572
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.9095667211965655,
+              "rmse_flow_per_lane": 73.23425255580533,
+              "public_subset_state_formula": 0.9026070985293702
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9009681585070091,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_state_full_cp_20261029": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.3853121519034906,
+              "rmse_flow_per_lane": 63.39337240647137,
+              "public_subset_state_formula": 0.8998756720072567
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.185344057297209,
+              "rmse_flow_per_lane": 65.51855332557632,
+              "public_subset_state_formula": 0.9025656774794385
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.894523783033502,
+              "rmse_flow_per_lane": 72.12746853555672,
+              "public_subset_state_formula": 0.9037805604092162
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9020739699653038,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "state_only_event_cp_20261029": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.3950271106892713,
+              "rmse_flow_per_lane": 63.81739903799302,
+              "public_subset_state_formula": 0.8993407418133171
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.1956496032660913,
+              "rmse_flow_per_lane": 65.88575312156931,
+              "public_subset_state_formula": 0.9020615578429161
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.8781786346040423,
+              "rmse_flow_per_lane": 71.93026441185363,
+              "public_subset_state_formula": 0.904284805443465
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9018957016998993,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "state_only_20261029": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.3950271106892713,
+              "rmse_flow_per_lane": 63.81739903799302,
+              "public_subset_state_formula": 0.8993407418133171
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.1956496032660913,
+              "rmse_flow_per_lane": 65.88575312156931,
+              "public_subset_state_formula": 0.9020615578429161
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.8781786346040423,
+              "rmse_flow_per_lane": 71.93026441185363,
+              "public_subset_state_formula": 0.904284805443465
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9018957016998993,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l2_20261029": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 1.9633567093399849,
+              "rmse_flow_per_lane": 44.74631652543216,
+              "public_subset_state_formula": 0.9232859857420916
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 1.7429053750802332,
+              "rmse_flow_per_lane": 47.03217916256049,
+              "public_subset_state_formula": 0.9262952398736373
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.3736120927522992,
+              "rmse_flow_per_lane": 48.143508757931826,
+              "public_subset_state_formula": 0.9334199554154694
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9276670603437328,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l2_weighted_20261029": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.1952660994292565,
+              "rmse_flow_per_lane": 49.88670836340285,
+              "public_subset_state_formula": 0.9143357758403858
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.0029139766799577,
+              "rmse_flow_per_lane": 52.43274093582956,
+              "public_subset_state_formula": 0.9165386233862436
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.6944836888434074,
+              "rmse_flow_per_lane": 52.969985614553394,
+              "public_subset_state_formula": 0.9227888300164915
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9178877430810403,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l1_weighted_20261029": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.2604135172603272,
+              "rmse_flow_per_lane": 60.4531538924751,
+              "public_subset_state_formula": 0.9048276500429461
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 1.9625521974625286,
+              "rmse_flow_per_lane": 62.352488077385665,
+              "public_subset_state_formula": 0.9098052983421472
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.6292565677934376,
+              "rmse_flow_per_lane": 70.4594516569875,
+              "public_subset_state_formula": 0.9107891451986381
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.908474031194577,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_queue_cp": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.4096816411201942,
+              "rmse_flow_per_lane": 64.36230912164359,
+              "public_subset_state_formula": 0.8986064395585438
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.1997026431986826,
+              "rmse_flow_per_lane": 66.43572919674945,
+              "public_subset_state_formula": 0.9015523638560672
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.887717161715834,
+              "rmse_flow_per_lane": 73.83299017397815,
+              "public_subset_state_formula": 0.9026200168402214
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9009262734182775,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_state_event_cp": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.4096816411201942,
+              "rmse_flow_per_lane": 64.36230912164359,
+              "public_subset_state_formula": 0.8986064395585438
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.1997026431986826,
+              "rmse_flow_per_lane": 66.43572919674945,
+              "public_subset_state_formula": 0.9015523638560672
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.887717161715834,
+              "rmse_flow_per_lane": 73.83299017397815,
+              "public_subset_state_formula": 0.9026200168402214
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9009262734182775,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "joint_state_full_cp": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.3820215847813766,
+              "rmse_flow_per_lane": 64.33004805264679,
+              "public_subset_state_formula": 0.8992286302616932
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.1746248324575035,
+              "rmse_flow_per_lane": 66.26567782615477,
+              "public_subset_state_formula": 0.9022244172855327
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.8621329036886827,
+              "rmse_flow_per_lane": 73.35907234230393,
+              "public_subset_state_formula": 0.9035359738178915
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9016630071217059,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "state_only_event_cp": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.366807636121499,
+              "rmse_flow_per_lane": 63.492643036619256,
+              "public_subset_state_formula": 0.9001992620650343
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.1677350556268906,
+              "rmse_flow_per_lane": 65.64015223502786,
+              "public_subset_state_formula": 0.9028528060849379
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.8512137104069362,
+              "rmse_flow_per_lane": 71.79005707647457,
+              "public_subset_state_formula": 0.9049747400965797
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9026756027488506,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "state_only": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.366807636121499,
+              "rmse_flow_per_lane": 63.492643036619256,
+              "public_subset_state_formula": 0.9001992620650343
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 2.1677350556268906,
+              "rmse_flow_per_lane": 65.64015223502786,
+              "public_subset_state_formula": 0.9028528060849379
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.8512137104069362,
+              "rmse_flow_per_lane": 71.79005707647457,
+              "public_subset_state_formula": 0.9049747400965797
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9026756027488506,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l2": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 1.946151713750895,
+              "rmse_flow_per_lane": 44.12652951064099,
+              "public_subset_state_formula": 0.9241327836914892
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 1.7354453294094008,
+              "rmse_flow_per_lane": 46.71428802957593,
+              "public_subset_state_formula": 0.9267000933954155
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.3741522005838522,
+              "rmse_flow_per_lane": 47.86852621606515,
+              "public_subset_state_formula": 0.9336191090350722
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9281506620406589,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l2_weighted": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.1470318585964927,
+              "rmse_flow_per_lane": 49.49981807145774,
+              "public_subset_state_formula": 0.9156742513328648
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 1.975138863634415,
+              "rmse_flow_per_lane": 51.90316862891145,
+              "public_subset_state_formula": 0.9175445712633312
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.6756399010220537,
+              "rmse_flow_per_lane": 52.999347515968935,
+              "public_subset_state_formula": 0.9231733450423476
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9187973892128479,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        },
+        "matched_l1_weighted": {
+          "details": [
+            {
+              "regime": "R1",
+              "n": 58729,
+              "rmse_speed_kmh": 2.2158703909528645,
+              "rmse_flow_per_lane": 60.5843883045035,
+              "public_subset_state_formula": 0.9056891685219655
+            },
+            {
+              "regime": "R2",
+              "n": 61175,
+              "rmse_speed_kmh": 1.9518826252303167,
+              "rmse_flow_per_lane": 62.80117250669478,
+              "public_subset_state_formula": 0.9096917697065592
+            },
+            {
+              "regime": "R3",
+              "n": 89802,
+              "rmse_speed_kmh": 1.5997031765485825,
+              "rmse_flow_per_lane": 71.29187582618975,
+              "public_subset_state_formula": 0.9107893065864718
+            }
+          ],
+          "all_regimes_present": true,
+          "public_subset_regime_macro": 0.9087234149383322,
+          "scope": "Eligible both-fields-missing currentT on public causal masked-history subset only;same point score formula,not official State or complete task template."
+        }
+      },
+      "actual_exposure": [
+        {
+          "seed": 20261013,
+          "n_unique_contexts": 3038,
+          "n_teacher_rows_by_field": [
+            85997,
+            85997
+          ],
+          "n_context_draws": 6400,
+          "draws_with_current_label_by_field": [
+            6400,
+            6400
+          ],
+          "nominal_weight_sum_by_field": [
+            1199.9999999997237,
+            1199.9999999997237
+          ],
+          "normalized_weight_quantiles_by_field": {
+            "0": [
+              0.14448420698924735,
+              0.25594345238095245,
+              0.6890785256410259,
+              19.98327724358975,
+              93.56155092592594
+            ],
+            "1": [
+              0.14448420698924735,
+              0.25594345238095245,
+              0.6890785256410259,
+              19.98327724358975,
+              93.56155092592594
+            ]
+          },
+          "regime_exposure": {
+            "R1": {
+              "unique_teacher_rows": 19587,
+              "normalized_weight_share_by_field": [
+                0.3696875,
+                0.3696875
+              ]
+            },
+            "R2": {
+              "unique_teacher_rows": 12711,
+              "normalized_weight_share_by_field": [
+                0.14791666666666667,
+                0.14791666666666667
+              ]
+            },
+            "R3": {
+              "unique_teacher_rows": 53699,
+              "normalized_weight_share_by_field": [
+                0.48239583333333336,
+                0.48239583333333336
+              ]
+            }
+          }
+        },
+        {
+          "seed": 20261029,
+          "n_unique_contexts": 3027,
+          "n_teacher_rows_by_field": [
+            86415,
+            86415
+          ],
+          "n_context_draws": 6400,
+          "draws_with_current_label_by_field": [
+            6400,
+            6400
+          ],
+          "nominal_weight_sum_by_field": [
+            1199.99999999976,
+            1199.99999999976
+          ],
+          "normalized_weight_quantiles_by_field": {
+            "0": [
+              0.15519935344827585,
+              0.2647518382352941,
+              0.6924278846153846,
+              20.253515625,
+              77.55192307692307
+            ],
+            "1": [
+              0.15519935344827585,
+              0.2647518382352941,
+              0.6924278846153846,
+              20.253515625,
+              77.55192307692307
+            ]
+          },
+          "regime_exposure": {
+            "R1": {
+              "unique_teacher_rows": 19077,
+              "normalized_weight_share_by_field": [
+                0.3770833333333334,
+                0.3770833333333334
+              ]
+            },
+            "R2": {
+              "unique_teacher_rows": 13535,
+              "normalized_weight_share_by_field": [
+                0.14302083333333337,
+                0.14302083333333337
+              ]
+            },
+            "R3": {
+              "unique_teacher_rows": 53803,
+              "normalized_weight_share_by_field": [
+                0.4798958333333333,
+                0.4798958333333333
+              ]
+            }
+          }
+        }
+      ],
+      "checkpoint_choice_steps": {
+        "20261013": {
+          "joint_queue_cp": 600,
+          "joint_state_event_cp": 600,
+          "joint_state_full_cp": 600,
+          "state_only_event_cp": 800,
+          "state_only": 800
+        },
+        "20261029": {
+          "joint_queue_cp": 400,
+          "joint_state_event_cp": 400,
+          "joint_state_full_cp": 800,
+          "state_only_event_cp": 400,
+          "state_only": 400
+        }
+      }
+    }
+  ],
+  "seconds": 10.300139099999797,
+  "formal_State": null,
+  "formal_Queue": null,
+  "formal_Physics": null,
+  "formal_Total": null,
+  "scope": "PosthocdecisionperiodpublicnoisycausalState factor diagnostics,not independenttest or officialState. All12mean+8single-seedintervals uncorrected/conditional onfittedmodels. No new rawlabels/laterperiods,modelchoice or formalpromotion. Screen rejectedall;selection/assessment/late_transferunknown fornewcandidates."
+}

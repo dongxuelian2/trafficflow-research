@@ -4,6 +4,15 @@
 
 | 编号 | 假设 / 核验 | 实测结果 / 资源 |
 |---|---|---|
+| C95 | 同初始化/批次的State-only；原joint事件/完整State CP重选；同实际标签的L2等权/L2权重/L1权重树 | 4新NN+24字段树，重选4旧NN不算新增；最好新族gain−.004333，全局筛查拒绝；578.29s/进程2943.68MiB/GPU allocated167.44MiB |
+| C96 | 独立数据/权重/复训/接口检查 | 部分复训通过，便携单窗TF32绝对误差超1e−5，整体失败；源码、partial、失败JSON/日志保留 |
+| C96 diagnostic / C96b | 定位批量大小精度、局部完整FP32接口；原profile和修正profile分开重放 | 原研究数组差0，修正接口差4.77e−7，CP选择/拒绝策略不变；1NN权重差0、2树文本一致；386.42s |
+| C97 | 12均值/8单seed诊断，每个4000次日期块另用标量复算 | 标签覆盖−.004333、nominal权重−.007507、L1/L2−.015881；decision事后未校正，不是新泛化成绩；10.30s |
+
+5个初始kernel、FP32修正后6kernel及全164research/16.45s、136CPU/13.02s+10Torch skips通过；精度阈值未放宽。旧7679artifact/5完整CSV/锁保持，累计7956，442公开源文件复核。新后段未读，真实State/Physics/Total未知。[方法与复现](docs/STATE_SPECIALIZATION_CONTROLS.md)。
+
+| 编号 | 假设 / 核验 | 实测结果 / 资源 |
+|---|---|---|
 | C91 | direct_no_flow/direct_flow/latent_flow，同初态/400warm+800event批次，独立masked State编码 | 12 NN+4强因果树；两个primary仍incumbent；615.44s/进程2716.49MiB/GPU allocated146.61MiB |
 | C92 | 独立新flow/current teacher、全masked State历史及rawpast隔离 | 124日/34224 State上下文/33480 Queue原点/742fit+CP事件/744poison通过；37.27s |
 | C93 / C93b | 48快照、全部State日期、917650树fit行SHA、决定门控及portable重放 | 原C93通过后另发现阈值边界入口问题，仅修比较并C93b再全量核验；权重/原选择不变；181.84/187.95s，失败probe日志保留 |

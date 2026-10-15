@@ -1,0 +1,22 @@
+{
+  "protocol_sha256": "7be42b2de1601509465cea758eaee5f185ed5c92237b0c44204356a87867f722",
+  "protocol": {
+    "id": "State_specialization_selection_and_teacher_exposure_controls",
+    "previous_goal_turn": "progress:28aa20c C91-C94 jointcontrols completed",
+    "source_joint_study_sha256": "b95f2f9ed79c57b24ca9bb8f497b2947ec50c9475382ec28a13b9f22cfa69787",
+    "source_joint_audit_sha256": "79445f866ff7a0f26184ae8b46296d42476d5da375e586578d823b7f0dfeaa3d",
+    "seeds": [
+      20261013,
+      20261029
+    ],
+    "new_fits": "4StateonlyNN,24matchedtreefieldboosters. Existing4direct_flowfits onlyreselected,not newtraining. No newQueue fit/prediction or complete submission.",
+    "State_only": "Sameallparametersinitial/400x8warm+800x4eventcoordinates/AdamW.001wd1e-4clip1/resetasC91direct_flow. Analyze(masked13slots)only,.1currentvL1+.1currentqL1 exactlysourcecurrentcomponent. Future/Queuelossremoved;changesgradientdirection,clippingandcompute,not claimnegativecosinecausalproof.",
+    "selection_controls": "OriginaljointQueueBrierselection;sameoldCPeventStateMSEselection;full15dayCPStateMSEselection. NewStateonly event/fullCPMSE variants;primaryfull. FixednormalizedcurrentMSE=.54speedMSE+.46flowperlaneMSE. Perregimepointformulasdiagnostic only. Coverage/criterionchanges separated.",
+    "matched_trees": "Exactuniquecurrentteacherunion fromoriginalNN6400contextdraws,129features,same400tree/63leaf/min60/lr.03/lambda1params. L2unweighted/L2weighted/L1weighted. Nominalweight=sum1/(batchsize*nmaskedcurrentfield),normalizefieldmean1. Staticlossmeasure not optimizer-sequence equivalence. FullL2causaltreesfrozenfromC91;perseedandmean comparisons separate ensemble effects.",
+    "gradient_diagnostic": "32FIT-onlysharedencodergradientpairs:2cases*2seeds*2fixedstages*first4actualbatches. SharedcurrentState vsQueue+futurev/q,atwarm400/event800. Never heldout gradients,not selectionfeature.",
+    "decision_screen": "Full30dayOct01..30State subset276origins/day. Oneglobalfamilyamongjoint_state_full_cp,state_only,3matchedtreevariants versusfull_tree. Gain>=.002,bothcasegains>=0,R3drop<=.002percase,bothcalendarhalvespositive. Tiesbaseline;failuredoNOTreadnewselection/assessment.",
+    "selection_if_screen_passes": "Original15dayOct31..Nov14,onefrozenfamily,pairedsynchronized7day4000blockCIgain>=.002lower>0. Failure stops laterlabels.",
+    "assessment_only_if_both_pass": "OriginalNov15..Dec14 plus fixedlate_transfer2031Jan15..Feb13 with no retraining. Datespublicdevelopment,not blind final/private. No laterread on rejection.",
+    "scope": "PublicnoisycausalState bothfields-missingeligible subset,firsthour omitted;not fullTask1 or formalState/Physics/Total. Goal.950unmet;finalsimseedsunopened;local models/Git only."
+  }
+}

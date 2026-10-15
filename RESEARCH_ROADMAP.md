@@ -2,9 +2,13 @@
 
 目标为可复现的正式 Kaggle **0.95000+**；当前正式 **0.82940**。不将阶段性较低分数作为终点。
 
+C95–C97已完成监督人口/选择目标/任务共享控制：4新State-only NN、24匹配树字段模型，全部在decision筛查失败，新后段未读。State-only与同State CP的joint整体近乎相同；仅靠更多标签或移除辅助任务不能解释gap。匹配树nominal权重损失.007507、L1相对L2再损失.015881，比覆盖差.004333更大；这些是固定树/开发期证据，不能预报NN增益。[已完成记录](docs/STATE_SPECIALIZATION_CONTROLS.md)。
+
+下一步用**相同初态、原坐标批次、精确标签并集**，预先对照L1/window、L2/window、L2/独特标签风险校正；后者抵消重复context mass与逆每窗缺测数，并保持累计nominal总量，先用解析测试核对，再做NN实测。沿用对应weighted/unweighted L2树，避免再引入数据覆盖混杂或扩大网络。平方损失可能放大公开teacher噪声，必须在独立阶段检验；不得将decision的事后区间作晋级依据。新运行时显式完整FP32，原TF32实验数组保留。
+
 C91–C94已完成显式future/current flow监督、masked State当前分析头和6步graph-GRU。12网络/4强树实测后，两个Queue primary仍原参照；State joint NN仍明显低于更多独特标签训练的强树，GRU未提供独立稳定增益。当前因果State与Queue输入已严格分开，不再把raw Queue历史当作State合法观测。[已完成证据](docs/JOINT_FLOW_LATENT_DYNAMICS_RESEARCH.md)。
 
-下一步先做**监督人口及选择目标匹配的 State 专项控制**，核查当前teacher覆盖与共享梯度冲突：同实际曝光标签的强树/State-only学习，与全fit标签强树分开；State权重按独立State checkpoint选，保持Queue参照冻结。用预登记的新滚动时间/走廊检查推断，不能在这些已看后段追加loss/GRU阈值网格。此次只实现学习的未来潜变量，没有CTM守恒或隐藏边界流验证，正式Physics/Total仍未知。
+该阶段提出的State专项/匹配标签树与State CP选择已由C95–C97完成；保持Queue参照冻结。后续方向以上文为准，不在已查看后段追加loss/GRU阈值网格。当前学习潜变量没有CTM守恒或隐藏边界流验证，正式Physics/Total仍未知。
 
 当前每seed独特current标签只有85k左右，强树430/488k；C94已导出精确曝光集合的构造，不能只按原点数量称数据匹配。I5S急降速/恢复的速度RMSE仍约59/68km/h，平均loss改善没有解决这些少数相关事件；后续保留该失败分层，另检查观测teacher噪声与真正动力学误差，禁止用隐藏label诊断。
 

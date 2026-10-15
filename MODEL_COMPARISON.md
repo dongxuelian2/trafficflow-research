@@ -3,6 +3,19 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+C95固定真实current标签并集和原NN批次，分开比较选择准则、辅助任务、标签覆盖、nominal权重及L1/L2。以下都是**decision期因果State子集公式**，不能与此前assessment或正式成绩混比。
+
+| 决策子集 | I5S | I10W |
+|---|---:|---:|
+| 全标签L2因果树 / 保留 | .865029 | .930189 |
+| joint，完整State CP | .824272 | .901663 |
+| State-only L1，同标签批次 | .823259 | .902676 |
+| 匹配标签L2等权树 | .858401 | .928151 |
+| 匹配标签L2 nominal树 | .852740 | .918797 |
+| 匹配标签L1 nominal树 | .831052 | .908723 |
+
+最后三行同85k左右标签；L2等权对全标签−.004333，nominal重权再−.007507，L1再−.015881。NN去辅助相对同CP joint几乎0，不能用11/32负梯度cosine解释全部差距。链条含模型/优化/特征及ensemble交互，不作因果百分比分解；所有新候选拒绝，未新读后段。TF32原数值与修正FP32均保留且选择一致。[可复现对照](docs/STATE_SPECIALIZATION_CONTROLS.md)。
+
 C91三臂同初态/同dense及event批次，direct_flow仅增加显式future/current流量监督；latent_flow再增加6步graph-GRU残差。当前masked State分析头全部共享，权重均按checkpoint Queue Brier选。
 
 | 公开后段 Queue代理 | incumbent / primary | no_flow | direct_flow | latent_flow |

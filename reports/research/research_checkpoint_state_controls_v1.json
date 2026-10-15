@@ -1,0 +1,58 @@
+{
+  "created_UTC": "2026-10-15T14:36:05.293982+00:00",
+  "git_base_before_phase_commit": "28aa20cf4c9934b1dff8a10d79fd9005762eb45e",
+  "previous_goal_turn_classification": "progress:28aa20c C91-C94 complete",
+  "current_goal_turn_classification": "progress",
+  "objective_status": "active;formal0.95000+unachieved",
+  "formal_best_Total": 0.8294,
+  "new_formal_score": null,
+  "formal_model_promoted": false,
+  "new_complete_submission": false,
+  "active_jobs": [],
+  "completed": [
+    "Matchedactualcurrentlabelsets andnominalupdateweights;4State-onlyNN and24causaltreecontrols",
+    "Selectiontarget/CPcoverage/reweighting/L1vsL2 differences measured ondecision;allcandidatefamilies rejectedbeforeadditionalheldperiods",
+    "OneNN/twotrees independentlyreoptimized;TF32singlebatchmismatch fixed in portable FP32runtime with separateimmutablelegacyprofile replay"
+  ],
+  "decision_screen": {
+    "points": {
+      "full_tree": 0.8976087250830087,
+      "joint_state_full_cp": 0.8629672890173208,
+      "state_only": 0.8629674173579513,
+      "matched_l2": 0.8932758336345072,
+      "matched_l2_weighted": 0.8857689269077107,
+      "matched_l1_weighted": 0.8698877488343508
+    },
+    "decision_best": "full_tree",
+    "challenger": "matched_l2",
+    "gain": -0.004332891448501464,
+    "case_gains": [
+      -0.006627768226801334,
+      -0.0020380146702014823
+    ],
+    "R3_case_gains": [
+      -0.007452213031526211,
+      -0.0035437425019491098
+    ],
+    "half_calendar_gains": [
+      -0.004898758161343553,
+      -0.003817849951875396
+    ],
+    "shortlisted": false,
+    "rule": "Globalgain>=.002,bothcasegains>=0,bothR3gains>=-.002,both15dayhalvesgain>0. Ties preferfull_tree. Failure stops all new later labels."
+  },
+  "new_selection_metrics": null,
+  "new_assessment_metrics": null,
+  "new_late_transfer_metrics": null,
+  "next_research": "ProspectivelycompareState-onlyL1/window versusL2/window versusL2importance-correcteduniquelabelrisk,withsameinit/schedules/exactlabelunion. Correctioncancelscontextmass/inverse-window-countwhilepreservingtotalnominalweight;retainL2weighted/unweightedtreecontrols. TestNNdirectly;treeobjectiveeffectdoesnotproveNNgain.",
+  "final_simulator_seeds": {
+    "seeds": [
+      7907,
+      8017,
+      9109
+    ],
+    "generated": false
+  },
+  "platform_policy": "Local models/Git only",
+  "limits": "Decisionperiodisalreadyviewedpublicdevelopment,posthocuncorrectedintervalsnotfinaltest. No newlater raw/arrays for rejectedcandidates;existingoldreportscontainpreviouslyseenresults. StrongcausalStatecontrolisnot formalbestwholeTask1model. Formal0.95000+unmet."
+}

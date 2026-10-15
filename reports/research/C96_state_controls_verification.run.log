@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "E:\ieee\scripts\verify_state_specialization_controls.py", line 307, in <module>
+    try:main()
+        ~~~~^^
+  File "E:\ieee\scripts\verify_state_specialization_controls.py", line 266, in main
+    actual=model.predict_current(history,net,origin);same_prediction(actual,out[role][at-12],maximum);totals['portable_role_calls']+=1
+                                                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\ieee\scripts\verify_state_specialization_controls.py", line 78, in same_prediction
+    if error>1e-5:raise ValueError('Independent State prediction differs')
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Independent State prediction differs
