@@ -1,5 +1,13 @@
 # 当前实现与评分接口审计
 
+A92首次线性反推等alpha失败来自保存neural float32乘法的量化丢失；四原selected-alpha输出和baseline重放exact。A92b直接重推全部728model/case，未放宽旧1e−8预测复现容差，原失败注册/源码保留；其已查看日历明确是次要诊断。
+
+`GapGatedState`只读取features.raw中speed/flow的有限性、五分钟timestamp网格及合法target lookup；不读teacher、regime、score-mask或人工失效metadata。36步门限与新日历/seed/8条件在A93读取新标签前冻结。两状态通道共同切换、空闲专家跳过，保存时递归清除临时网络缓存。只用于离线State，同日已发布未来观测不允许传给Queue。
+
+`outage_shift.py`仅从timestamp/link/milepost和RNG选区域，8条件对测量poison均不变；完整UTC日/连续跨午夜日与同一sensor grid有校验。A94从修改后的frame完整重建特征，cross-midnight分别按日推断、合并SSE/count后评分，避免平均非线性日分数。A95另以eligible-groupby可见性和逐列RLE重建393份gate数组，并重建全部15普通/378segment teacher，核对60普通/1512segment/1344case分数；44次直接保存模型predict差0。114 research/98 CPU测试通过，5可选Torch跳过。
+
+普通15日gate目标为0，全走廊4h合成分数明显下降，该门控不晋级。官方MASK_SPEC的20/30/50%稳定点mask与Queue90min空缺已重新核查，SHA记录于研究文档；不把严重额外断测成绩宣传为正式Task1增益。
+
 A86/A87只改变fit的可见输入，原y/mask不增补。`rebuild_after_outage`不接受teacher；移除所有测量/质量flag后重新构建完整StateFeatures。A89用独立Pandas移除实现重建368份输入与region逐值一致；首末日期8个真实视图先poison移除测量再删除也一致。旧strict12中不能仅清零measurement而保留旧base，新增测试明确检查base实际变化。
 
 训练用独立patch/augmentation RNG流，概率或view改变不影响原regime/day/core。两seed×两臂记录完整plan及实际逐格点曝光，各517171目标都被监督；两个control checkpoint与原GRU所有张量逐值一致。Cal选择完成、整体seal之后才读原assessment，11/27–12/10及新mask seeds在fit前登记。旧文档错误写seed29 GRU alpha.5，本轮依据原JSON更正为.75；原TCN .5、原模型与实测不变。103 research/87 CPU tests通过，5可选Torch跳过。

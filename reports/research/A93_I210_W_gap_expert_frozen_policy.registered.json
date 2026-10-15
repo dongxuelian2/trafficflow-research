@@ -1,0 +1,126 @@
+{
+  "protocol_sha256": "0d495606d6eb3fe82d5f61730f135d1e04da1e4edffecead4fa02962582d0305",
+  "protocol": {
+    "id": "Input_only180minute_gap_expert_fixed_before_shifted_research_evaluation",
+    "training_sha256": "d4c5591fa8ded4790566099bf1ba37f9e65815e6aad3a7b51c5d8cc1140d84a0",
+    "training_replay_sha256": "5d5bf1aed913478f01bf7c1d44c77f23003cb26cdfc7bfccceb75ec0c3df3af6",
+    "equal_blend_diagnostic_sha256": "e7de37ea3949c656dd3ce1a2f6ffeaf1c535bc2bd461fafd2f9b8d45d0325bec",
+    "panel": "D7_I210_W",
+    "threshold_steps": 36,
+    "threshold_minutes": 180,
+    "gate": "At each target,use expert iff either speed/flow missing run length>=36on full released offline grid;no teacher/score mask/regime/outage metadata",
+    "reference_and_expert": "Both original cal-selected two-seed mixtures frozen;no new weight fitting or newalpha selection",
+    "anchor_dates": [
+      "2030-12-11",
+      "2030-12-12",
+      "2030-12-13",
+      "2030-12-14",
+      "2030-12-15",
+      "2030-12-16",
+      "2030-12-17",
+      "2030-12-18",
+      "2030-12-19",
+      "2030-12-20",
+      "2030-12-21",
+      "2030-12-22",
+      "2030-12-23",
+      "2030-12-24"
+    ],
+    "ordinary_dates": [
+      "2030-12-11",
+      "2030-12-12",
+      "2030-12-13",
+      "2030-12-14",
+      "2030-12-15",
+      "2030-12-16",
+      "2030-12-17",
+      "2030-12-18",
+      "2030-12-19",
+      "2030-12-20",
+      "2030-12-21",
+      "2030-12-22",
+      "2030-12-23",
+      "2030-12-24",
+      "2030-12-25"
+    ],
+    "mask_seeds": [
+      20261121,
+      20261123,
+      20261127
+    ],
+    "cases": [
+      {
+        "name": "block_2h_15pct",
+        "steps": 24,
+        "fraction": 0.15,
+        "placement": "uniform"
+      },
+      {
+        "name": "block_4h_50pct",
+        "steps": 48,
+        "fraction": 0.5,
+        "placement": "uniform"
+      },
+      {
+        "name": "block_8h_90pct",
+        "steps": 96,
+        "fraction": 0.9,
+        "placement": "uniform"
+      },
+      {
+        "name": "day_start_90min_50pct",
+        "steps": 18,
+        "fraction": 0.5,
+        "placement": "start"
+      },
+      {
+        "name": "day_end_4h_50pct",
+        "steps": 48,
+        "fraction": 0.5,
+        "placement": "end"
+      },
+      {
+        "name": "whole_corridor_4h",
+        "steps": 48,
+        "fraction": 1.0,
+        "placement": "uniform"
+      },
+      {
+        "name": "scattered_30pct",
+        "steps": 288,
+        "fraction": 0.3,
+        "placement": "scattered"
+      },
+      {
+        "name": "cross_midnight_4h_70pct",
+        "steps": 48,
+        "fraction": 0.7,
+        "placement": "cross_midnight"
+      }
+    ],
+    "cross_midnight": "One hour before midnight plus three hours next day;same sensors;each day reconstructed separately without borrowing adjacent-day measurements",
+    "target_populations": "Ordinary released Task1 targets vs all raw-train eligible rows inside own outage;never pooled together",
+    "inference_exports": {
+      "control": {
+        "path": "artifacts/research/A87_I210_W_outage_augmentation/State_control_seed_mean.pkl",
+        "sha256": "e502948bd04f6e5e564b7fafa0e9baf37cf1b61719dd3ba38d64deaa007825f7"
+      },
+      "expert": {
+        "path": "artifacts/research/A87_I210_W_outage_augmentation/State_augmented_seed_mean.pkl",
+        "sha256": "647479bd4081aa241d0491b4b28fedc6873cfe19c5c97468bc66b1a8577f82ca"
+      },
+      "lgb": {
+        "path": "artifacts/research/A74b_recurrent_I210_W_independent_replay/State_lgb.pkl",
+        "sha256": "fc44a48fef2d75b329c95e5ae04272c9e5ecfa551db5a9114be0f7468db2d0de"
+      }
+    },
+    "selection": "Threshold,dates,cases,seeds fixed before these new outcomes;report every condition with paired anchor-date diagnostics",
+    "scope": "New public research calendar for these policies;other past studies may have viewed dates,not final/private",
+    "geometry_sha256": "dccf193ed7bced7881577204bb1385a7b8f9a97cf993fc53e64b67603cd89f35",
+    "gate_source_sha256": "ec8a2d4e95dc6f4f74197406555bd33ec467dabfd314f27cb09e8b896bf92d53",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

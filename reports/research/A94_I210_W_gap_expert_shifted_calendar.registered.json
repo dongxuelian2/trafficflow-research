@@ -1,0 +1,110 @@
+{
+  "protocol_sha256": "c3de883e716fb6025f197e62b2d2fd3361da49fbc2e9cdf348cca83443bd8f8a",
+  "protocol": {
+    "id": "Fixed_gap_expert_new_calendar_and_untrained_outage_geometries",
+    "source_policy": "reports/research/A93_I210_W_gap_expert_frozen_policy.json",
+    "source_policy_sha256": "2ef7e4932de4ad16c10bdeac933d9f3944f04dc9cebd8dfa1f3e531bebb5342e",
+    "policy_protocol_sha256": "0d495606d6eb3fe82d5f61730f135d1e04da1e4edffecead4fa02962582d0305",
+    "roles": [
+      "lgb",
+      "control",
+      "expert",
+      "gated"
+    ],
+    "inference": "Three predictor roles;gated derived from control/expert using serialized policy.gate only",
+    "ordinary_dates": [
+      "2030-12-11",
+      "2030-12-12",
+      "2030-12-13",
+      "2030-12-14",
+      "2030-12-15",
+      "2030-12-16",
+      "2030-12-17",
+      "2030-12-18",
+      "2030-12-19",
+      "2030-12-20",
+      "2030-12-21",
+      "2030-12-22",
+      "2030-12-23",
+      "2030-12-24",
+      "2030-12-25"
+    ],
+    "anchor_dates": [
+      "2030-12-11",
+      "2030-12-12",
+      "2030-12-13",
+      "2030-12-14",
+      "2030-12-15",
+      "2030-12-16",
+      "2030-12-17",
+      "2030-12-18",
+      "2030-12-19",
+      "2030-12-20",
+      "2030-12-21",
+      "2030-12-22",
+      "2030-12-23",
+      "2030-12-24"
+    ],
+    "cases": [
+      {
+        "name": "block_2h_15pct",
+        "steps": 24,
+        "fraction": 0.15,
+        "placement": "uniform"
+      },
+      {
+        "name": "block_4h_50pct",
+        "steps": 48,
+        "fraction": 0.5,
+        "placement": "uniform"
+      },
+      {
+        "name": "block_8h_90pct",
+        "steps": 96,
+        "fraction": 0.9,
+        "placement": "uniform"
+      },
+      {
+        "name": "day_start_90min_50pct",
+        "steps": 18,
+        "fraction": 0.5,
+        "placement": "start"
+      },
+      {
+        "name": "day_end_4h_50pct",
+        "steps": 48,
+        "fraction": 0.5,
+        "placement": "end"
+      },
+      {
+        "name": "whole_corridor_4h",
+        "steps": 48,
+        "fraction": 1.0,
+        "placement": "uniform"
+      },
+      {
+        "name": "scattered_30pct",
+        "steps": 288,
+        "fraction": 0.3,
+        "placement": "scattered"
+      },
+      {
+        "name": "cross_midnight_4h_70pct",
+        "steps": 48,
+        "fraction": 0.7,
+        "placement": "cross_midnight"
+      }
+    ],
+    "mask_seeds": [
+      20261121,
+      20261123,
+      20261127
+    ],
+    "cross_midnight": "Pool raw station SSE/count across two independently reconstructed day segments before computing a single case score",
+    "selection": "No new threshold/weight/date/seed selection from outcomes;all8cases retained",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}
