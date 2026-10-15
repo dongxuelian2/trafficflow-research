@@ -1,0 +1,46 @@
+{
+  "protocol_sha256": "cbab534cba20289d5deb9985564e30424d391ca340e38b834b53dccd2c4c314f",
+  "protocol": {
+    "id": "Public_train_onset_query_ranking_with_fixed_ongoing_reference",
+    "sources": [
+      "C55_I5_S_autumn_five_phase_balanced_v2",
+      "C56_I5_S_winter_five_phase_balanced_v2",
+      "C57_I10_W_autumn_five_phase_balanced_v2",
+      "C58_I10_W_winter_five_phase_balanced_v2"
+    ],
+    "source_reports_sha256": {
+      "C55_I5_S_autumn_five_phase_balanced_v2": "dcda831085d8a0af4178f6276a2b97bdc62afc87e3181f2af7508447f3346cdb",
+      "C56_I5_S_winter_five_phase_balanced_v2": "54048cdf885168808c3617aeb9a05912a893bf4839bfe054de0adc1be3607017",
+      "C57_I10_W_autumn_five_phase_balanced_v2": "8fbb6372de73f9a80af1d3b6354484dd9a70d5929ee4df576fd4d91a70ea8306",
+      "C58_I10_W_winter_five_phase_balanced_v2": "567de0de50449cd51e5090c7f0d90ec3cb6f2aa1436d60c44a854fc184129634"
+    },
+    "source_manifest_sha256": "df1e4e2715e4acd6b6b6f459ecb369f4f07ddaa4b7e25717754a3b5c2ee670ca",
+    "seeds": [
+      20261013,
+      20261029
+    ],
+    "k_grid": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "new_models_per_case": 4,
+    "matched_data": "Identical existing fit onset T+30 eligible rows,labels,feature columns and unit weights;complete-window query groups for LambdaRank. No future eligibility in prediction.",
+    "features": "Same rich/plain feature schema as the frozen decision-selected existing tree;no additional features or labels",
+    "models": "Both600maxTrees/63leaves/lr.035/min_child60/lambda8/feature_fraction.9/4threads. Classifier binary logloss;ranker lambdarank truncation20 normtrue label_gain0,1. Two-seed equal mean;ranking scores are not probabilities.",
+    "decision": "Separate decision period chooses top-k for each method;max overall proxy among incumbent/classifier/ranker,prefer incumbent then classifier on exact tie",
+    "selection": "Later15days:chosen challenger replaces incumbent only if origin-deduplicated macro gain>=.01 and paired7day-block95CI lower>0",
+    "ongoing": "Every candidate exactly copies all existing ongoing decisions. Only onset final step can change.",
+    "timing": "Fixed tree iteration cap,no weight checkpoint selection. Existing checkpoint interval unused buffer. Fit->model seal->decision->decision seal->selection->selection seal->assessment.",
+    "assessment": "Previously inspected public TRAIN development dates and observation labels;not latent truth or final/private. Source reports include historical outcomes;no new choices use assessment arrays.",
+    "algorithm_sources": [
+      "https://lightgbm.readthedocs.io/en/latest/pythonapi/lightgbm.LGBMRanker.html",
+      "https://lightgbm.readthedocs.io/en/latest/Parameters.html#lambdarank_truncation_level"
+    ],
+    "formal_Queue": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+C65的OnsetTopKQueueModel只改变onset最后T+30，ongoing直接调用冻结FullDomainQueueModel。ranker score不称概率；同分按link ID稳定选择，完整六步各link集合必须一致，禁止把future-eligible子集作为排序域。类保存CPU model strings、不序列化live Booster cache；输入时序复用已有严格queue_features接口。
+
+C66重建32源缓存的2345窗口raw历史/masked T、tree features及future evaluator teacher/eligibility，核对同fit onset行/分组/unit weights；独立解码/网格/评分/去重day-block gate一致。128Booster矩阵调用包括16fit；便携接口测试每evaluation缓存各condition首末共560次、另140乱序，8未来行poison全部拒绝。不是全部窗口都调用所有便携角色，未独立重训16模型。
+
+C67使用公开assessment标签逐窗选最优k，仅保存诊断、不导出oracle预测/模型、不改变选择，`deployment_allowed=false`。旧source报告含已看结果，新的运行仍只按decision/selection数组选择，不称盲测。131research/110CPU通过，7可选Torch skips；现有State/OD/完整submission未改。
+
 C62新增`latent_queue`的严格13slot因果58特征、训练teacher及完整域决策/scorer。模型仅收v/q/valid/static几何/公开condition/lead，sigma/latent/future quality不进features。未来eligible仅用于loss/scoring，onset早五步0，force在完整允许域选位置；新单测覆盖Gaussian解析值、缺测/置换及score mask分离。
 
 C63逐node独立构造特征、selector及erfc teacher，重新生成268scene/7090窗口和272907训练行/权重，feature最大差1.49e−8、teacher差0。六portable booster在cal/同类/stress共18预测差0，300cal配置及57680角色窗口分数差0。C64独立分组核验8个四seed区间。未独立重训树，不宣称真实latent/organizer契约验证。

@@ -4,6 +4,14 @@
 
 | 编号 | 假设 / 核验 | 实测结果 / 资源 |
 |---|---|---|
+| C65 | 同公开onset行/特征/容量，binary vs LambdaRank+固定top-k，ongoing冻结 | 4case/16fit，decision全部原模型；ranker后留gain−.024824/−.043878/+.064815/−.083333；32.33秒CPU/peak726.04MiB |
+| C66 | 全原始输入/teacher/query/网格/评分/去重CI与便携接口复核 | 2345窗口、128Booster调用；560便携+140乱序精确，8future poison拒绝；302.65秒 |
+| C67 | 公开assessment标签下逐窗最优已定k的诊断，禁止用于选择 | k有评分空间，但需未来标签/eligibility；无新模型/选择/候选，不能当可达成绩 |
+
+I10_W秋次要正值区间很宽且未被decision选中；其余排序退步保留。3新单测通过，全131research/12.68秒、CPU110/7.34秒+7Torch skips。两季训练事件重叠，model seeds共数据；不将4fold/560角色调用视作独立事件。原完整最佳保留，无正式上传。
+
+| 编号 | 假设 / 核验 | 实测结果 / 资源 |
+|---|---|---|
 | C62 | 同X/曝光/权重，hard/known-sigma-soft/known-latent各2seed | soft observed-cal−.000665拒绝；latent窗口宏同类−.000516/stress+.005618；93.78秒CPU/peak491.11MiB |
 | C63 | 全源重模拟、独立特征/teacher/selector/权重/部署/评分 | 268scene/7090窗口，18booster预测差0、300grid/57680score差0、feature差1.49e−8；79.66秒 |
 | C64 | 独立4seed区间及noise/scene摘要，无新选择 | 8区间精确重现、64摘要行；同类σ3/8及stressσ16退步均保留 |

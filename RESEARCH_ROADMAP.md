@@ -2,6 +2,10 @@
 
 目标为可复现的正式 Kaggle **0.95000+**；当前正式 **0.82940**。不将阶段性较低分数作为终点。
 
+C65–C67完成公开事件内onset排名：16个匹配classifier/ranker模型，ongoing冻结，四组decision均保留incumbent。三个ranker后留退步；I10_W秋+.064815但区间跨零且未选。停止扩大同一固定k/truncation网格。逐窗label-oracle只提示集合大小可另行研究，不可部署、不能声称可达；后续若研究cardinality，必须fit-only学习并用独立决策/新rolling验证，同时保留原可变阈值强参照。
+
+当前还需区分onset的排序信息、集合大小与观测标签不确定性；本轮并未证明ranker比匹配classifier更好。不能把未触发的selection gate当非零challenger有效验证。State/OD/Physics路线继续，最终模拟seeds、原完整提交及平台暂缓保持不变。
+
 C62–C64完成Queue已知自主latent下的teacher对照。soft observed-cal−.000665被拒，同类latent窗口宏−.000516、stress+.005618；等scene/seed同类区间跨零、stress正，但不能替代cal gate或推广真实赛事。latent标签控制也近乎持平，当前模型onset约.09、ongoing约.83，软化没有解决核心差距。停止在已看σ/场景上扩大Gaussian网格，不将已知σ当真实噪声估计。
 
 下一轮Queue优先检验公开≤T事件信息和预测不确定性，区分自身CTM事故可预测性、模型容量及真实标签契约；本轮尚未做public模型迁移。State新rolling fold/标签池、OD先验失配及真实Physics限制继续保留。原完整最佳冻结、final seeds未生成，平台仍暂缓。

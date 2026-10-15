@@ -2,6 +2,17 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**C65–C67：公开Queue onset事件内排序完成，四组都保留incumbent。** 同监督行/特征/预算对照binary classifier与LambdaRank，16模型，ongoing逐格冻结；decision只选固定top-k，不用未来eligibility选点。
+
+| 公开观测代理case | 原参照/最终保留 | classifier top-k | ranker top-k |
+|---|---:|---:|---:|
+| I5_S秋 | .781151 | .770702 | .756328 |
+| I5_S冬 | .797255 | .754866 | .753378 |
+| I10_W秋 | .557659 | .622474 | .622474 |
+| I10_W冬 | .814942 | .714942 | .731609 |
+
+I10_W秋次要gain+.064815，但CI[−.100000,.277778]且decision未选，不反选；冬I5_S ranker损失−.043878、区间全负。C67逐窗label-oracle仅作集合大小评分诊断，依赖assessment标签，禁止部署/晋级。C66重建2345窗口、128Booster调用，560便携调用+140乱序+8未来输入拒绝通过；131research/110CPU测试通过、7Torch skips。无新完整submission/正式成绩。见 [事件排序记录](docs/ONSET_RANK_QUEUE_RESEARCH.md)。
+
 **C62–C64：Queue硬/软/已知latent teacher对照完成，soft未晋级。** 六个同容量树模型使用相同的自主CTM因果输入、272907监督行/权重；没有比赛隐藏标签或public模型迁移。observed-cal soft gain−.000665，保留hard。
 
 | 自主模拟、已知latent标签的窗口condition宏IoU | 同类新seed | 未见场景stress |

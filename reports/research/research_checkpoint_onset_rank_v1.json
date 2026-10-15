@@ -1,0 +1,369 @@
+{
+  "created_UTC": "2026-10-15T10:22:52.394340+00:00",
+  "git_base_before_phase_commit": "0bb0122a832196ce167d087b31b8597c78db99bd",
+  "previous_goal_turn_classification": "progress:synthetic Queue teacher controls and independent verification completed,commit0bb0122",
+  "current_goal_turn_classification": "progress",
+  "objective_status": "active;formal0.95000+unachieved",
+  "formal_best_Total": 0.8294,
+  "new_formal_score": null,
+  "formal_model_promoted": false,
+  "completed": [
+    "Sixteen matched public-onset classifier/ranker fits with frozen ongoing predictions",
+    "Four decision/selection/assessment mechanisms and full source/portable deployment audits",
+    "Evaluator-only cardinality headroom diagnostic;no oracle decoder exported"
+  ],
+  "cases": [
+    {
+      "source_study": "C55_I5_S_autumn_five_phase_balanced_v2",
+      "decision_selected": "incumbent",
+      "selected": "incumbent",
+      "assessment_comparisons": {
+        "classifier": {
+          "baseline": "incumbent",
+          "candidate": "classifier",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.78115127707029,
+            "candidate": 0.7707015416205545
+          },
+          "paired_macro_gain": -0.010449735449735487,
+          "ci95": [
+            -0.06181361607142859,
+            0.04186119929453263
+          ],
+          "bootstrap_probability_gain_positive": 0.3765,
+          "n_sampled_events": 125,
+          "n_unique_origins": 97,
+          "unique_condition_counts": {
+            "queue_ongoing": 70,
+            "queue_onset": 27
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 27,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 4000,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        },
+        "ranker": {
+          "baseline": "incumbent",
+          "candidate": "ranker",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.78115127707029,
+            "candidate": 0.7563276439133235
+          },
+          "paired_macro_gain": -0.02482363315696645,
+          "ci95": [
+            -0.09149801587301586,
+            0.047005037287903666
+          ],
+          "bootstrap_probability_gain_positive": 0.2645,
+          "n_sampled_events": 125,
+          "n_unique_origins": 97,
+          "unique_condition_counts": {
+            "queue_ongoing": 70,
+            "queue_onset": 27
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 27,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 4000,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        },
+        "selected": {
+          "baseline": "incumbent",
+          "candidate": "selected",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.78115127707029,
+            "candidate": 0.78115127707029
+          },
+          "paired_macro_gain": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_probability_gain_positive": 0.0,
+          "n_sampled_events": 125,
+          "n_unique_origins": 97,
+          "unique_condition_counts": {
+            "queue_ongoing": 70,
+            "queue_onset": 27
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 27,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 4000,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        }
+      }
+    },
+    {
+      "source_study": "C56_I5_S_winter_five_phase_balanced_v2",
+      "decision_selected": "incumbent",
+      "selected": "incumbent",
+      "assessment_comparisons": {
+        "classifier": {
+          "baseline": "incumbent",
+          "candidate": "classifier",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.7972554818199484,
+            "candidate": 0.7548660260376356
+          },
+          "paired_macro_gain": -0.04238945578231279,
+          "ci95": [
+            -0.07341517857142858,
+            -0.013332341269841263
+          ],
+          "bootstrap_probability_gain_positive": 0.0015,
+          "n_sampled_events": 116,
+          "n_unique_origins": 90,
+          "unique_condition_counts": {
+            "queue_ongoing": 62,
+            "queue_onset": 28
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 28,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 4000,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        },
+        "ranker": {
+          "baseline": "incumbent",
+          "candidate": "ranker",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.7972554818199484,
+            "candidate": 0.7533779307995403
+          },
+          "paired_macro_gain": -0.043877551020408134,
+          "ci95": [
+            -0.07589368386243388,
+            -0.01338849548440065
+          ],
+          "bootstrap_probability_gain_positive": 0.00175,
+          "n_sampled_events": 116,
+          "n_unique_origins": 90,
+          "unique_condition_counts": {
+            "queue_ongoing": 62,
+            "queue_onset": 28
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 28,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 4000,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        },
+        "selected": {
+          "baseline": "incumbent",
+          "candidate": "selected",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.7972554818199484,
+            "candidate": 0.7972554818199484
+          },
+          "paired_macro_gain": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_probability_gain_positive": 0.0,
+          "n_sampled_events": 116,
+          "n_unique_origins": 90,
+          "unique_condition_counts": {
+            "queue_ongoing": 62,
+            "queue_onset": 28
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 28,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 4000,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        }
+      }
+    },
+    {
+      "source_study": "C57_I10_W_autumn_five_phase_balanced_v2",
+      "decision_selected": "incumbent",
+      "selected": "incumbent",
+      "assessment_comparisons": {
+        "classifier": {
+          "baseline": "incumbent",
+          "candidate": "classifier",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.5576588643979948,
+            "candidate": 0.6224736792128096
+          },
+          "paired_macro_gain": 0.06481481481481477,
+          "ci95": [
+            -0.09999999999999998,
+            0.2777777777777778
+          ],
+          "bootstrap_probability_gain_positive": 0.8064516129032258,
+          "n_sampled_events": 36,
+          "n_unique_origins": 27,
+          "unique_condition_counts": {
+            "queue_ongoing": 18,
+            "queue_onset": 9
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 12,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 3999,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        },
+        "ranker": {
+          "baseline": "incumbent",
+          "candidate": "ranker",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.5576588643979948,
+            "candidate": 0.6224736792128096
+          },
+          "paired_macro_gain": 0.06481481481481477,
+          "ci95": [
+            -0.09999999999999998,
+            0.2777777777777778
+          ],
+          "bootstrap_probability_gain_positive": 0.8064516129032258,
+          "n_sampled_events": 36,
+          "n_unique_origins": 27,
+          "unique_condition_counts": {
+            "queue_ongoing": 18,
+            "queue_onset": 9
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 12,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 3999,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        },
+        "selected": {
+          "baseline": "incumbent",
+          "candidate": "selected",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.5576588643979948,
+            "candidate": 0.5576588643979948
+          },
+          "paired_macro_gain": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_probability_gain_positive": 0.0,
+          "n_sampled_events": 36,
+          "n_unique_origins": 27,
+          "unique_condition_counts": {
+            "queue_ongoing": 18,
+            "queue_onset": 9
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 12,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 3999,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        }
+      }
+    },
+    {
+      "source_study": "C58_I10_W_winter_five_phase_balanced_v2",
+      "decision_selected": "incumbent",
+      "selected": "incumbent",
+      "assessment_comparisons": {
+        "classifier": {
+          "baseline": "incumbent",
+          "candidate": "classifier",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.8149422225184056,
+            "candidate": 0.7149422225184057
+          },
+          "paired_macro_gain": -0.09999999999999998,
+          "ci95": [
+            -0.18333333333333332,
+            0.016666666666666666
+          ],
+          "bootstrap_probability_gain_positive": 0.027,
+          "n_sampled_events": 51,
+          "n_unique_origins": 38,
+          "unique_condition_counts": {
+            "queue_ongoing": 23,
+            "queue_onset": 15
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 16,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 4000,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        },
+        "ranker": {
+          "baseline": "incumbent",
+          "candidate": "ranker",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.8149422225184056,
+            "candidate": 0.7316088891850723
+          },
+          "paired_macro_gain": -0.08333333333333337,
+          "ci95": [
+            -0.17190504807692306,
+            0.020833333333333332
+          ],
+          "bootstrap_probability_gain_positive": 0.042,
+          "n_sampled_events": 51,
+          "n_unique_origins": 38,
+          "unique_condition_counts": {
+            "queue_ongoing": 23,
+            "queue_onset": 15
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 16,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 4000,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        },
+        "selected": {
+          "baseline": "incumbent",
+          "candidate": "selected",
+          "origin_deduplicated_condition_macro_IoU": {
+            "baseline": 0.8149422225184056,
+            "candidate": 0.8149422225184056
+          },
+          "paired_macro_gain": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "bootstrap_probability_gain_positive": 0.0,
+          "n_sampled_events": 51,
+          "n_unique_origins": 38,
+          "unique_condition_counts": {
+            "queue_ongoing": 23,
+            "queue_onset": 15
+          },
+          "n_assessment_days": 30,
+          "n_days_with_events": 16,
+          "block_days": 7,
+          "resamples": 4000,
+          "valid_resamples": 4000,
+          "limitation": "Observed-proxy event sampling only. Days with zero events remain in bootstrap. Draws missing a condition are excluded; sparse event sets make this interval weak. No formal Queue score."
+        }
+      }
+    }
+  ],
+  "active_jobs": [],
+  "new_complete_submission": false,
+  "final_simulator_seeds": {
+    "seeds": [
+      7907,
+      8017,
+      9109
+    ],
+    "generated": false
+  },
+  "platform_policy": "Local models and Git only",
+  "limits": "Noisy public observation proxies and previously viewed dates,not official latent Queue or blind final evidence. Fixed-k/ranking changed onset only. Label-oracle metrics are unavailable to legal prediction. Four folds share training dates/events;no formal gain."
+}

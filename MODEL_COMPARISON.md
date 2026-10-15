@@ -3,6 +3,17 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+onset排序实验固定ongoing，16模型同case内监督行/特征/600树上限/63叶，两seed均值；分别对binary classifier与LambdaRank选择top-k。四组decision都保留原模型。
+
+| 公开观测代理 | incumbent | classifier top-k | ranker top-k |
+|---|---:|---:|---:|
+| I5_S秋 | .781151 | .770702 | .756328 |
+| I5_S冬 | .797255 | .754866 | .753378 |
+| I10_W秋 | .557659 | .622474 | .622474 |
+| I10_W冬 | .814942 | .714942 | .731609 |
+
+I10_W秋正值为未选择的次要结果、CI跨零；不能当已取得收益。不同k规模与原阈值decoder是额外变化，ranker相对同decoder classifier也无一致增益。逐窗assessment-label最优k只是不可部署诊断，详见 `docs/ONSET_RANK_QUEUE_RESEARCH.md`。
+
 自主CTM的hard/known-sigma-soft/known-latent teacher各两seed，同58特征、272907行/权重、300树/31叶。已知σ只构造fit teacher，不进推断；latent标签控制不是理论上界。
 
 | 已知latent标签、窗口condition宏IoU | 同类留出 | 未见场景stress |
