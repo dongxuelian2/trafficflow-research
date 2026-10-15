@@ -1,0 +1,13 @@
+{
+  "created_UTC": "2026-10-15T11:07:16.670071+00:00",
+  "exit_code": 1,
+  "source_study_sha256": "0affe5389974f50c60876a98142181c6d4a108c49aa997b0c1eea05e1c7a5185",
+  "error": "ValueError: Sampler spacing violated",
+  "location": "verify_rolling_onset_decoders.py:115",
+  "diagnosis": "Pandas DatetimeIndex is datetime64[us, UTC];asi8 minimum spacing1800000000 is30minutes in microseconds. Failed assertion incorrectly assumed nanoseconds. Actual Timedelta minimum is30minutes.",
+  "repair": "Compare TimedeltaIndex directly to pd.Timedelta(minutes=spacing),preserving30/360min rules. No model/cache/selection/prediction or score tolerance changed.",
+  "original_executed_source_archive": "artifacts/research/C72_rolling_onset_threshold_verification/source_snapshot.zip",
+  "retry_output": "C72b_rolling_onset_threshold_verification",
+  "formal_Queue": null,
+  "formal_Total": null
+}

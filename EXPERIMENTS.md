@@ -4,6 +4,15 @@
 
 | 编号 | 假设 / 核验 | 实测结果 / 资源 |
 |---|---|---|
+| C71 | 两走廊×Sep15/Oct31滚动fit，重训强plain/rich参照及同arm双seed onset，阈值对照fixed-k | 8baseline+16onset树全部600；CPU488.97秒/peak2520.88MiB；四组primary均incumbent，统一threshold后段四点值正、单组CI均接触/跨0 |
+| C72 | 首轮独立核验 | 终止exit1：DatetimeIndex实际us，检查器误按ns比较spacing；原始代码zip/注册/错误保留，实际最小间隔30分钟 |
+| C72b | 修正单位比较，保持30/360分钟标准、模型/预测/评分不变 | 32缓存2196raw窗口/4392特征臂；24容量/监督人口、1504校准分数、88Booster、436便携+224乱序+16poison通过；351.51秒 |
+| C73 | 冻结结果的跨走廊同步日历区间，另用逐次求和复核 | 4对照各4000有效bootstrap；threshold相对incumbent+.015846、CI[−.000587,.037369]，相对fixed-k+.029843、CI[.003025,.058984]；3.05秒 |
+
+三项新科学测试2.54秒通过，compileall通过；上一轮完整生产内核测试为继承证据，本轮不重复计数。I10_W selection仅5/3个独立onset，稀疏样本不作强结论。没有重建整个采样候选宇宙/RNG或重新训练核验模型；旧神经缓存x未进入本轮模型。无新完整submission/正式成绩。[参数、负面记录与复现](docs/ROLLING_ONSET_DECODER_RESEARCH.md)。
+
+| 编号 | 假设 / 核验 | 实测结果 / 资源 |
+|---|---|---|
 | C68 | 同冻结 classifier/ongoing，对照 fixed-k、阈值、常数计数、观测/校正条件计数 | 4 case，8 Ridge+4 标量状态，无新树；CPU 25.51 秒、peak 663.30 MiB；仅 I5_S 冬通过研究 selection，后段 gain+.004464、CI 跨零 |
 | C69 | 新因果摘要、计数拟合与解码、选择和导出独立复算 | 665 摘要差0，12状态最大差3.997e−15；56 Booster、112新历史窗口、896便携+448乱序+16poison；135.62秒；旧2345raw证明复用 |
 | C70 | 独立复算16个次要配对消融，不再选模型 | threshold比同分类器fixed-k在两冬季case区间正；相对强incumbent整体gate仍失败，条件计数未一致超过常数控制 |

@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+C71的四个滚动case在任何新assessment前统一登记；所有plain/rich参照与onset模型先fit再读decision，原checkpoint15日不读值。decision只选incumbent或threshold，fixed-k为次要控制；selection封存后才读assessment。全部24树实际600，每case两baseline/四onset；没有借用较晚训练的旧强参照。
+
+C72初次因DatetimeIndex.asi8的微秒被误当纳秒而失败，源码zip/注册/错误保留；C72b直接比较Timedelta，原30/360分钟标准不变。独立重建32缓存全部2196选中raw/masked-T窗口、两特征臂4392次、teacher/eligibility/事件历史与未来筛选约束；监督行/权重/模型schema及24模型容量均核对。1504次baseline校准分数、阈值/k网格、门控/CI复算；88次直接Booster、436便携角色+224乱序、16future拒绝通过。不是独立重训或重建完整候选宇宙/RNG，旧神经缓存x不进模型且未独立检查。
+
+C73用同日跨走廊共享日期抽样、两个不重叠日历分别抽样，4个事后对照各4000有效复算，另一逐次求和实现最大差8.07e−17。新增3项科学测试通过，原134research/113CPU及7Torch skips是继承记录，未冒充本轮运行。生产src未改；正式最佳与完整submission保持原版本。详见[滚动核验记录](docs/ROLLING_ONSET_DECODER_RESEARCH.md)。
+
 C68新增`OnsetSetDecoderModel`，复用冻结分类器/ongoing，仅改变onset T+30。24维摘要只读合法≤T历史和masked T，标准化及log1p Ridge仅fit；8 Ridge、4常数控制。future eligibility只进fit计数teacher或evaluator，不参与预测域/阈值/排名；预测接口不接受future mask。计数校正有未验证MCAR假设，不能当latent真值。
 
 C69不调用新摘要helper求参考值：665次摘要独立Pandas重建差0，12状态用增广lstsq而非原normal-equation求解，参数最大差3.997e−15；grid、fit-only标准化、计数取整、gate/CI与ongoing精确。56冻结Booster矩阵调用；112新raw历史窗口支撑896便携角色调用（含别名）、448额外乱序、16future poison拒绝。C66旧2345raw输入审核通过SHA/未变源码显式复用，本次不声称重新构造全部raw。

@@ -3,6 +3,17 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+C71–C73改用更早滚动fit并重训对应强参照，不能用未来训练过的旧模型评分较早日期。每case先拟合plain/rich强树及每arm双seed onset；decision选arm后，threshold/fixed-k共享同一classifier，ongoing逐格相同。相对incumbent还包含专用训练人口和双seed差异，不是纯解码器效应。
+
+| 公开观测代理 | 强参照 / 已选策略 | fixed-k次要 | threshold次要 |
+|---|---:|---:|---:|
+| I5_S September | .785466 | .757240 | .795681 |
+| I5_S October | .779788 | .764845 | .801545 |
+| I10_W September | .789289 | .747622 | .814289 |
+| I10_W October | .672051 | .700897 | .678461 |
+
+四组primary均incumbent；所有threshold单case增益区间均接触/跨0。事后等case宏IoU为incumbent .756648、threshold .772494、fixed-k .742651；同步日历paired CI分别为threshold−incumbent[−.000587,.037369]、threshold−fixed-k[.003025,.058984]。后者是匹配较弱解码器控制，不能代替对强参照的验证；不按后段重新选择。24树/32缓存/全2196选中窗口已核验，真实Queue/Total未知。[完整滚动对照](docs/ROLLING_ONSET_DECODER_RESEARCH.md)。
+
 C68–C70固定同一 C65 classifier 分数，只换 onset 最后一步的解码器，ongoing 与原强参照相同；不把原分类器重算成新增训练。
 
 | 公开观测代理 | incumbent | fixed-k | threshold | count_prior | count_observed | count_adjusted | 研究已选 |

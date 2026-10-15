@@ -2,6 +2,19 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**C71–C73：两个更早滚动切点、两走廊的24树重训与核验完成，四组均保留原策略。** 强参照plain/rich配方也只在对应fit日期重训，避免使用较晚训练标签；onset两seed，阈值与fixed-k共享分类器，ongoing冻结。
+
+| 公开观测代理 case | 重训强参照 / 已选策略 | threshold次要对照 | gain / 95% CI |
+|---|---:|---:|---|
+| I5_S September | .785466 | .795681 | +.010215 / [−.010753,.033341] |
+| I5_S October | .779788 | .801545 | +.021757 / [−.018702,.054445] |
+| I10_W September | .789289 | .814289 | +.025000 / [0,.093750] |
+| I10_W October | .672051 | .678461 | +.006410 / [−.057692,.066667] |
+
+I5_S在decision保留incumbent；I10_W虽选threshold，selection gain为0而退回incumbent，后者两个selection仅5/3个独立onset事件。C73等case/condition、跨走廊日期同步的事后gain为+.015846、CI[−.000587,.037369]；相对匹配fixed-k为+.029843、CI[.003025,.058984]。支持继续检验概率集合决策，但不支持替换强流水线。以上均是部分已查看公开日期的代理，不是正式Queue/Total。
+
+CPU训练488.97秒/peak2520.88MiB；2196新raw窗口、4392特征臂、1504校准分数、436便携+224乱序+16future拒绝核验通过。初次C72因时间整数微秒/纳秒假设失败，记录保留，C72b以原30/360分钟标准复核通过。3项新统计测试通过，旧生产测试明确继承；无新完整提交或正式分数。见 [滚动研究记录](docs/ROLLING_ONSET_DECODER_RESEARCH.md)。
+
 **C68–C70：固定分类器的阈值/集合大小消融完成，未晋级生产模型。** 沿用 C65 双 seed 分类器与 ongoing，只新增 8 个计数 Ridge 和 4 个常数控制；未来标签只用于 fit 计数目标或 evaluator，预测域不读 future mask。
 
 | 公开观测代理 case | 原强参照 | 同分类器 fixed-k | threshold | count_observed | count_adjusted | 已选研究策略 |
