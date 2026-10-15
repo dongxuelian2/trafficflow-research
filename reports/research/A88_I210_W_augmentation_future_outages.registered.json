@@ -1,0 +1,99 @@
+{
+  "protocol_sha256": "0f72111f14c325fbcb7aaeba1cdb508ad4919c7c624f16ccd3bb54a4448763ce",
+  "protocol": {
+    "id": "Frozen_augmentation_future_calendar_and_public_outages",
+    "source_study": "reports/research/A87_I210_W_outage_augmentation.json",
+    "source_study_sha256": "d4c5591fa8ded4790566099bf1ba37f9e65815e6aad3a7b51c5d8cc1140d84a0",
+    "selection_seal_sha256": "59341a982159996ccc560249dae5d1dacce4f8c5a9ef7f57ae993dd295d37855",
+    "dates": [
+      "2030-11-27",
+      "2030-11-28",
+      "2030-11-29",
+      "2030-11-30",
+      "2030-12-01",
+      "2030-12-02",
+      "2030-12-03",
+      "2030-12-04",
+      "2030-12-05",
+      "2030-12-06",
+      "2030-12-07",
+      "2030-12-08",
+      "2030-12-09",
+      "2030-12-10"
+    ],
+    "mask_seeds": [
+      20261111,
+      20261113,
+      20261117
+    ],
+    "cases": [
+      [
+        36,
+        0.3
+      ],
+      [
+        36,
+        0.7
+      ],
+      [
+        72,
+        0.3
+      ],
+      [
+        72,
+        0.7
+      ]
+    ],
+    "roles": [
+      "lgb",
+      "incumbent",
+      "prior_GRU",
+      "seed20261013_control",
+      "seed20261013_augmented",
+      "seed20261029_control",
+      "seed20261029_augmented",
+      "control_seed_mean",
+      "augmented_seed_mean"
+    ],
+    "primary": "prior_GRU",
+    "exports": {
+      "lgb": {
+        "path": "artifacts/research/A74b_recurrent_I210_W_independent_replay/State_lgb.pkl",
+        "sha256": "fc44a48fef2d75b329c95e5ae04272c9e5ecfa551db5a9114be0f7468db2d0de"
+      },
+      "incumbent": {
+        "path": "artifacts/research/A49_adaptive_attention_D7_I210_W/State_selected.pkl",
+        "sha256": "d850f1f7ec9409b4bb186e36424331fcdb98ad263004ca35289306662e9ddc25"
+      },
+      "prior_GRU": {
+        "path": "artifacts/research/A74b_recurrent_I210_W_independent_replay/State_tcn_gru_seed_mean.pkl",
+        "sha256": "28f5aa0c2eefc537bb3f6406dafc11f943897a6cb4848b483677a0468641a7cc"
+      },
+      "seed20261013_control": {
+        "path": "artifacts/research/A87_I210_W_outage_augmentation/State_seed20261013_control.pkl",
+        "sha256": "e5f20a2d4e0025e95bdbbeb9013fe1c73a0dc6726ebb93125f0ec598a7736105"
+      },
+      "seed20261013_augmented": {
+        "path": "artifacts/research/A87_I210_W_outage_augmentation/State_seed20261013_augmented.pkl",
+        "sha256": "cfa05ecf7c02c8b531dd495f47e0e4f9ca3c705e5c2d7a782b7df76981d56d72"
+      },
+      "seed20261029_control": {
+        "path": "artifacts/research/A87_I210_W_outage_augmentation/State_seed20261029_control.pkl",
+        "sha256": "4459e20f5cb3bc3aba4e97829c01c25d691d14150228fab7a9634992332d14c9"
+      },
+      "seed20261029_augmented": {
+        "path": "artifacts/research/A87_I210_W_outage_augmentation/State_seed20261029_augmented.pkl",
+        "sha256": "07bedff5f2fd7a8f13d9cc3eceb42112cfc5326fb9fb356af6f7a072e1210d37"
+      }
+    },
+    "calendar_origin": "Fixed in training preregistration before any new model fit",
+    "ordinary": "Official masked train/template target population,raw train evaluator only",
+    "stress": "Own removed sensor regions,all raw-public-train eligible teachers;different target population",
+    "comparisons": "Fixed augmented-v-control,augmented-v-prior,perseed pairs;all outcomes retained",
+    "selection": "No weight,alpha,mask,date or primary selection from these outcomes",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "protocol_sha256": "14c5f5269b0af94d5f50286c7b19dcf8be08280231f298874f7a3f3efc33fd9e",
+  "protocol": {
+    "id": "Matched_GRU_input_only_long_outage_augmentation",
+    "panel": "D7_I210_W",
+    "source_study": "reports/research/A72b_recurrent_I210_W_autumn_full_day.json",
+    "source_study_sha256": "8bde3ffc89105f76d31e4d96d586d558e6c21620be24cc85cea8fbba34f32c8f",
+    "augmentation_cache": "artifacts/research/A86_I210_W_fit_outage_views",
+    "augmentation_cache_report_sha256": "0b48f82668412c0f807192fcdb80bf7f4ec10daff802cdd3a9895b83a8146a0b",
+    "seeds": [
+      20261013,
+      20261029
+    ],
+    "architecture": "tcn_gru hidden48,context128/core64;both arms have97307parameters",
+    "arms": [
+      "control",
+      "augmented"
+    ],
+    "epochs": 24,
+    "steps_per_epoch": 120,
+    "batch_size": 4,
+    "optimizer": "AdamW lr.001 wd1e-4 clip1;identical initialized weights and original uniform regime/day/core plan",
+    "augmentation": "Independent RNG,probability.5;uniform among4fit-only rebuilt3/6h30/70pct input views",
+    "labels": "Only original fit y/mask;no new teacher targets;same original target exposure in both arms",
+    "checkpoint": "Max ordinary pure-neural cal State every4epochs,first tie;no synthetic outcome selects checkpoint",
+    "alpha_grid": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "alpha_policy": "Perseed/arm ordinary cal only;then equal seed means",
+    "primary": "Max ordinary cal over2arm means,frozen prior GRU,incumbent andLGB;never use assessment",
+    "original_assessment": "Previously viewed public dates used only as regression after selection seal",
+    "future_evaluation_dates": [
+      "2030-11-27",
+      "2030-11-28",
+      "2030-11-29",
+      "2030-11-30",
+      "2030-12-01",
+      "2030-12-02",
+      "2030-12-03",
+      "2030-12-04",
+      "2030-12-05",
+      "2030-12-06",
+      "2030-12-07",
+      "2030-12-08",
+      "2030-12-09",
+      "2030-12-10"
+    ],
+    "future_mask_seeds": [
+      20261111,
+      20261113,
+      20261117
+    ],
+    "future_cases": [
+      [
+        36,
+        0.3
+      ],
+      [
+        36,
+        0.7
+      ],
+      [
+        72,
+        0.3
+      ],
+      [
+        72,
+        0.7
+      ]
+    ],
+    "future_policy": "All weight/alpha/primary choices sealed before these dates are opened;no outcome-based tuning",
+    "scope": "One direction,public-train research only;not final/private;formal State/Physics/Total unknown",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

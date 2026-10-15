@@ -48,7 +48,7 @@ A78只读fit mask、不读assessment标签。原A77前向评估注册保留，A7
 
 ## 两方向实测与固定策略复核
 
-I210_W的full-LGB/原incumbent/新TCN均值/新GRU均值后留State分别 **.927102/.933577/.933279/.935491**。Cal选中的primary为GRU均值，原incumbent至primary的pooled gain **+.001914**；14日day-mean gain+.002111、CI[.000849,.003374]。每个seed的GRU相对匹配TCN为 **+.001321/+.002452**，日均区间均正。两个seed在TCN/GRU中分别都选epoch20/24，alpha均.5，checkpoint/混合政策在本方向恰好一致。
+I210_W的full-LGB/原incumbent/新TCN均值/新GRU均值后留State分别 **.927102/.933577/.933279/.935491**。Cal选中的primary为GRU均值，原incumbent至primary的pooled gain **+.001914**；14日day-mean gain+.002111、CI[.000849,.003374]。每个seed的GRU相对匹配TCN为 **+.001321/+.002452**，日均区间均正。两个seed在TCN/GRU中分别都选epoch20/24；seed13 alpha均.5，seed29 TCN .5而GRU .75。此前文档误写alpha全为.5，A87确定性复核时按原JSON更正；未改旧模型或原数值报告。该比较包含cal选择策略的结果，不能作为固定混合权重下单一递归机制的因果证明。
 
 原incumbent改用有限窗口本身只有assessment State−.000015。两个GRU的R3 gain相对匹配TCN为+.002491/+.006832；drop20共54目标、recover20共62、missing60min共758，missing180min为0。急降速速度RMSE分别改善2.17/4.00kmh，但恢复及flow收益不一致，不能当独立事件样本或全面物理改善。旧增量代理L1为incumbent .716127、TCN均值 .705201、GRU均值 .710947，正式Physics未知。
 

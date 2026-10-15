@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+A86/A87只改变fit的可见输入，原y/mask不增补。`rebuild_after_outage`不接受teacher；移除所有测量/质量flag后重新构建完整StateFeatures。A89用独立Pandas移除实现重建368份输入与region逐值一致；首末日期8个真实视图先poison移除测量再删除也一致。旧strict12中不能仅清零measurement而保留旧base，新增测试明确检查base实际变化。
+
+训练用独立patch/augmentation RNG流，概率或view改变不影响原regime/day/core。两seed×两臂记录完整plan及实际逐格点曝光，各517171目标都被监督；两个control checkpoint与原GRU所有张量逐值一致。Cal选择完成、整体seal之后才读原assessment，11/27–12/10及新mask seeds在fit前登记。旧文档错误写seed29 GRU alpha.5，本轮依据原JSON更正为.75；原TCN .5、原模型与实测不变。103 research/87 CPU tests通过，5可选Torch跳过。
+
+A90独立重建实际RNG与core监督数组，核对control alpha及旧权重，并对全28日×10roles作280次predict重放，最大lane-unit误差2.27e−13。A91核验未来日历/seed/尺寸与fit前协议相同，重建全部teacher/indices；126普通指标及1512合成分数独立重算最大差1.11e−16，另54次真实predict调用差0。1512不是独立推断次数；嵌套case、共享日历及多重比较限制保留。
+
 A72b的GRU位于原graph/attention编码后，原参数同seed逐项匹配；增加容量21313，不冒充等参数因果证明。固定窗口只接收strict12输入、图与FD；无label/score-mask参数。batch独立性、core先选边界全覆盖、每格点一次输出、zero-head/zero-gain与梯度均有测试。原A72 center-only源快照/partial权重保留，主动停止时未产生selection seal或读assessment。
 
 两fold八个完成模型仅在fit监督；所有checkpoint/alpha/seed均值/primary由cal选择并写整体seal后才读assessment。每个模型保存真实按日逐格点曝光数组，四对架构同seed数组精确一致，两组517171/3042465目标均实际覆盖；原neural标签按link×time均值，不把它和full-LGB的station行数混为完全相同更新预算。Cal/ass输入从masked帧独立重建，raw teacher只用于loss/evaluator/transition诊断。
