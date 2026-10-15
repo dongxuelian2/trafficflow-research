@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+C74新增自主Bernoulli suffix卷积IoU内核，k0为空/空=1，k>0完整域期望；link-ID打破平分，最小k容差1e−12，future eligibility不进API。非空arm只禁k0，不声称过滤后仍非空。新概率模型复用冻结._onset因果入口、ongoing和保存时Booster cache清除。单调Platt仅用独立15日checkpoint观测标签，两arm先fit/seal，固定window-equal权重/identity正则与边界；未使用分类器拟合日期上的同窗概率来校准，也未按assessment调参。
+
+C75明确复用旧2196raw审核并重hash输入/未变构造；新增62raw校准窗口/124特征臂重建，8个状态另用SLSQP与KKT验证（参数差2.68e−7，投影梯度7.38e−10）。582条曲线用独立Gauss–Legendre积分复核suffix DP，最大差1.90e−14。全部新网格/门控/评分、100冻结Booster、872便携角色+448乱序+32future拒绝通过；含策略别名/重复origin，不当独立事件数，也未重训树。
+
+C76只使用自主5节点已知联合分布及已知mask法则，不读取比赛数据；联合分布最优诊断禁止部署，按分布期望枚举而非实际未来标签选点。C77另用标量集合运算复核7场景，差6.66e−16；11个事后同步日历区间逐次求和误差6.59e−17，未作多重校正、不参与新选择。4新测试及当前全141research/120CPU通过，7可选Torch skips。新manifest旧6649artifact不变、累计6745，5完整CSV与依赖锁不变。详见[概率集合审计](docs/PROBABILISTIC_ONSET_RESEARCH.md)。
+
 C71的四个滚动case在任何新assessment前统一登记；所有plain/rich参照与onset模型先fit再读decision，原checkpoint15日不读值。decision只选incumbent或threshold，fixed-k为次要控制；selection封存后才读assessment。全部24树实际600，每case两baseline/四onset；没有借用较晚训练的旧强参照。
 
 C72初次因DatetimeIndex.asi8的微秒被误当纳秒而失败，源码zip/注册/错误保留；C72b直接比较Timedelta，原30/360分钟标准不变。独立重建32缓存全部2196选中raw/masked-T窗口、两特征臂4392次、teacher/eligibility/事件历史与未来筛选约束；监督行/权重/模型schema及24模型容量均核对。1504次baseline校准分数、阈值/k网格、门控/CI复算；88次直接Booster、436便携角色+224乱序、16future拒绝通过。不是独立重训或重建完整候选宇宙/RNG，旧神经缓存x不进模型且未独立检查。

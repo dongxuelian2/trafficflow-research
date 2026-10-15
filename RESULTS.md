@@ -2,6 +2,19 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**C74–C77：分期校准与精确期望IoU完成，primary仍保留四组incumbent。** 冻结C71全部树，用此前未用15日buffer的27个onset拟合8个双参数校准器；独立卷积选择集合大小，对照raw/calibrated阈值与非空约束，没有新树训练。
+
+| 公开观测代理 | 原强参照 / primary | calibrated IoU | calibrated非空IoU（次要） |
+|---|---:|---:|---:|
+| I5_S September | .785466 | .810466 | .810466 |
+| I5_S October | .779788 | .784098 | .792719 |
+| I10_W September | .789289 | .789289 | .789289 |
+| I10_W October | .672051 | .691281 | .739358 |
+
+事后同步日历非空策略相对强参照gain **+.026310、CI[.003884,.053022]**，但相对已有raw threshold **+.010464、CI[−.010331,.029710]**；单case仅I5_S第一组正区间，未被decision选中。11项比较未多重校正，所有策略跨case晋级gate失败。校准本身gain+.001517、区间跨零；不能把非空信号全归给精确IoU或校准。sampler保证未来观测正例，而真实future eligibility未知，可能夸大非空收益。以上非正式Queue/Total。
+
+新62raw校准窗口/124特征臂、8凸优化状态、582积分曲线、872便携+448乱序+32future拒绝核验通过；旧2196raw证明明确复用。141research/120CPU测试通过、7Torch skips。7个自主已知联合分布显示相关性/失效机制可使正确边际概率仍有regret，不当真实交通分数。累计6745artifact、原5完整CSV不变，无新完整提交/正式成绩。见[概率集合研究](docs/PROBABILISTIC_ONSET_RESEARCH.md)。
+
 **C71–C73：两个更早滚动切点、两走廊的24树重训与核验完成，四组均保留原策略。** 强参照plain/rich配方也只在对应fit日期重训，避免使用较晚训练标签；onset两seed，阈值与fixed-k共享分类器，ongoing冻结。
 
 | 公开观测代理 case | 重训强参照 / 已选策略 | threshold次要对照 | gain / 95% CI |

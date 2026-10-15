@@ -3,6 +3,17 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+C74–C77共享C71全部分类器，使用独立buffer拟合8个window-equal单调校准器；raw/calibrated期望IoU均为完整域Bernoulli假设，future mask不进决策，ongoing不变。
+
+| 公开代理 | incumbent / primary | raw threshold | cal threshold | raw IoU | cal IoU | cal非空IoU |
+|---|---:|---:|---:|---:|---:|---:|
+| I5_S September | .785466 | .795681 | .800251 | .799713 | .810466 | .810466 |
+| I5_S October | .779788 | .801545 | .801545 | .782374 | .784098 | .792719 |
+| I10_W September | .789289 | .814289 | .789289 | .789289 | .789289 | .789289 |
+| I10_W October | .672051 | .678461 | .697692 | .697692 | .691281 | .739358 |
+
+相同IoU解码的校准效应+.001517、同步CI跨零；加非空约束+.014174、CI[.002083,.031656]。非空IoU相对强参照+.026310、CI[.003884,.053022]，相对raw threshold+.010464、CI跨零。均是未多重校正次要诊断，四组primary仍incumbent，不能反选。未来观测正例被proxy sampler保证，未知正式mask可能改变非空效果；自主联合分布反例另显示独立假设风险。[完整对照与数学核验](docs/PROBABILISTIC_ONSET_RESEARCH.md)。
+
 C71–C73改用更早滚动fit并重训对应强参照，不能用未来训练过的旧模型评分较早日期。每case先拟合plain/rich强树及每arm双seed onset；decision选arm后，threshold/fixed-k共享同一classifier，ongoing逐格相同。相对incumbent还包含专用训练人口和双seed差异，不是纯解码器效应。
 
 | 公开观测代理 | 强参照 / 已选策略 | fixed-k次要 | threshold次要 |

@@ -1,0 +1,38 @@
+{
+  "protocol_sha256": "71d9ac3e9b0a65c543077c9eac9874e6a66663de88659ddebdf229e6463a9b19",
+  "protocol": {
+    "id": "Frozen_rolling_trees_calibrated_independent_expected_IoU",
+    "source_study_sha256": "0affe5389974f50c60876a98142181c6d4a108c49aa997b0c1eea05e1c7a5185",
+    "source_manifest_sha256": "5ed82f7492c85981b84a26aeb2165ef45e4805da987a81f2849b0777a32c7039",
+    "previous_goal_turn": "progress:c480022 completed four rolling refits/audits,formal0.950+unmet",
+    "reused_raw_input_proof": "reports/research/C72b_rolling_onset_threshold_verification.json",
+    "reused_raw_input_proof_sha256": "35782f3c5204e9443b5d24ffb1dee9d89b9cb2eda05dfbb6cf43dfe91ed9d40a",
+    "unchanged_source_constructors_sha256": {
+      "src/trafficflow/queue.py": "62c35a4ed8e1e882d386461aba41cf8f5f3ed809451e51008e34f23e211240c5",
+      "src/trafficflow/full_domain_queue.py": "50b0dd7245eb3146e236d16c5abc6166f8506a5304971383617147d718be3737",
+      "src/trafficflow/onset_rank_queue.py": "d7842ed336fa9ca190e089bdcddca603b8fa4825dc7505df787224e624447516",
+      "src/trafficflow/causal_queue.py": "b12f3098ce79dc465545106b6d429fce2818499edd518f1909047b3ccbcda1b2",
+      "src/trafficflow/data.py": "f29fe070b21ac692b2cf9bd6d5b5fd018e94129b9626588325dd48edbd941ccd",
+      "src/trafficflow/queue_events.py": "4fbe6e178ee1601de995572bd354cc856f4da6b743601587b299e9d9b233c97f"
+    },
+    "frozen_models": "C71 all four onset classifiers/case and strong reference;no new tree/neural fitting",
+    "calibration": "Previously unused15day checkpoint buffer,both arms before decision,same balanced30/condition spacing360 seed4129 public-observation sampler. Fit only eligible onset last-step rows,window-equal weighted logloss +.01/2*((slope-1)^2+intercept^2),slope[.05,5],intercept[-8,8],clip1e-6. Fewer3windows/missingclass ->identity. No tuning regularization/bounds.",
+    "decoders": [
+      "incumbent",
+      "threshold_raw",
+      "threshold_cal",
+      "iou_raw",
+      "iou_cal",
+      "iou_cal_nonempty"
+    ],
+    "IoU": "Own exact suffix Bernoulli convolution,all k0..N;empty/empty=1. Conditional independence and full-domain risk are modeling assumptions,not true traffic label independence or future scoring-mask knowledge. Nonempty arm forbidsk0 only,does not claim scored positives guaranteed.",
+    "algorithm_source": "https://www.jmlr.org/papers/volume24/22-0712/22-0712.pdf, Lemma13;own implementation,no source-code copying",
+    "decision": "Reuse C71 decision arrays/featurearm,raw threshold is frozen C71. Cal threshold31grid.05..8 x forceFalse/True,prefer noforce/closer.5. Choose max ORDER,incumbent first.",
+    "selection": "Same later15days and3eventseeds:challenger needs origin macro gain>=.01,7dayblock95CI lower>0;else incumbent. Seal before assessment.",
+    "limits": "Previously available/partly viewed public proxy calendars;new calibration data and fit,not blind/private/final. Old2196raw audit explicitly reused;new calibration raw will be verified separately. No future eligibility input to decoding.",
+    "formal_Queue": null,
+    "formal_Total": null,
+    "platform": "Local models/Git only",
+    "final_simulator_seeds_generated": false
+  }
+}

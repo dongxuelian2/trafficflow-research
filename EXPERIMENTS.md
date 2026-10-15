@@ -4,6 +4,15 @@
 
 | 编号 | 假设 / 核验 | 实测结果 / 资源 |
 |---|---|---|
+| C74 | 冻结rolling树，独立15日校准，精确Bernoulli期望IoU对照raw/cal阈值及非空 | 新62窗口/27onset、8校准状态，无新树；CPU33.99秒/peak438.89MiB；四组primary仍incumbent，非空次要联合信号正 |
+| C75 | 新校准raw/两feature臂、SLSQP/KKT、Gauss–Legendre积分曲线与导出核验 | 62raw/124臂/8拟合、582曲线差1.90e−14；100Booster、872便携+448乱序+32poison；109.85秒。旧2196raw审核复用 |
+| C76 | 自主已知5节点联合分布，全32预测集合精确枚举 | 3IID场景regret0；相关共同冲击/非空簇regret.4/.12，覆盖率/标签相关失效.029272/.075318。数学假设反例，非交通分数 |
+| C77 | 11事后同步日历对照+7场景独立标量复核 | 非空IoU−incumbent+.026310、CI[.003884,.053022]；相对raw threshold+.010464、CI跨零。所有primary/gate不变；5.28秒 |
+
+4新单测通过；全141research/12.64秒、120CPU/7.88秒+7Torch skips，compileall通过。多重比较未校正，概率校准窗口仅3–10；proxy强制未来观测正例，不能把非空增益当真实Queue/Total。两个不带非空约束的IoU臂没有稳定胜过调好阈值；所有失败/未晋级保留。[参数与复现](docs/PROBABILISTIC_ONSET_RESEARCH.md)。
+
+| 编号 | 假设 / 核验 | 实测结果 / 资源 |
+|---|---|---|
 | C71 | 两走廊×Sep15/Oct31滚动fit，重训强plain/rich参照及同arm双seed onset，阈值对照fixed-k | 8baseline+16onset树全部600；CPU488.97秒/peak2520.88MiB；四组primary均incumbent，统一threshold后段四点值正、单组CI均接触/跨0 |
 | C72 | 首轮独立核验 | 终止exit1：DatetimeIndex实际us，检查器误按ns比较spacing；原始代码zip/注册/错误保留，实际最小间隔30分钟 |
 | C72b | 修正单位比较，保持30/360分钟标准、模型/预测/评分不变 | 32缓存2196raw窗口/4392特征臂；24容量/监督人口、1504校准分数、88Booster、436便携+224乱序+16poison通过；351.51秒 |

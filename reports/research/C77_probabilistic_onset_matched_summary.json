@@ -1,0 +1,2540 @@
+{
+  "source_study_sha256": "103e3885ca8b56a14154af42d4f74303120e6d6eeeaced49d04ab76902c99fa5",
+  "independent_audit_sha256": "d42bddc8b27251cf44f14284df4dabbe21cdcab59418f1354b204c7581839728",
+  "stress_study_sha256": "26db606744b9f9c86b8ffc28a5f5620b1ec44c33ead25b2542fab49853529d48",
+  "source_snapshot": {
+    "archive": "artifacts/research/C77_probabilistic_onset_matched_summary/source_snapshot.zip",
+    "archive_sha256": "c9af6e073c5dc39791a13366db7b8e139dbe01bfbf33b5cef45f8f71cac7b09d",
+    "captured_files": [
+      {
+        "path": "config/research_protocol_v2.json",
+        "sha256": "dd7318f99e56b826d42eac58ab9c3213803db8f6c740ed843d95879835703121"
+      },
+      {
+        "path": "config/research_targets.json",
+        "sha256": "9a524c7c728cf6ed7ab4920592541e38fe720b36a0879c6f488a77b833e3452f"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "8cd1033d7ceeaa616319d900e5a9990445f3881665420cf4cd9715941b0e52f5"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "db90c0f17353c586ec2b51f9f42748c254e2e6563e7aebff81b7dbf9a3e82ccd"
+      },
+      {
+        "path": "requirements.lock.txt",
+        "sha256": "f4c8602ed3a0c29541e42d23547672864aa487fe2fcf24f8cf2d140f53c16fde"
+      },
+      {
+        "path": "requirements.research.lock.txt",
+        "sha256": "12f5a3bd24e186a0c71512b18eea44548159ec37088546efd7cc3c14c95fae8c"
+      },
+      {
+        "path": "scripts/adaptive_graph_experiment.py",
+        "sha256": "20f067bb639496004300446f8ba8705824cae80b2e91225e5fe6abcb609a3570"
+      },
+      {
+        "path": "scripts/adaptive_graph_transfer.py",
+        "sha256": "b50f19a6427d6c3d7e8facddb071dbc22dc5cf3641b10f889dc2b4bfb2d40ec8"
+      },
+      {
+        "path": "scripts/adaptive_seed_ensemble_experiment.py",
+        "sha256": "3cf00abec0e697a7631c9b16d259ff4c966c88dfad5d23550834edf14999a1c3"
+      },
+      {
+        "path": "scripts/assemble_campaign.py",
+        "sha256": "e5b103ba8501775e049e14c89e3854e5e2a56b93942505330b5317d8023d6a5d"
+      },
+      {
+        "path": "scripts/assess_adaptive_ablation.py",
+        "sha256": "1ae73d734afe77a227629254cb67e002045a2894f094ed6bcc3e094d9297f442"
+      },
+      {
+        "path": "scripts/assess_joint_density.py",
+        "sha256": "92258a57238facc5153cc8c98c422ed71e92f69b0ae4ecada5a4edf77f00c2e6"
+      },
+      {
+        "path": "scripts/audit_density_normalization.py",
+        "sha256": "8cf6a77a0a1d39d21b69f01e95037947a5be14177d92264bf2ce17e2c5529f3f"
+      },
+      {
+        "path": "scripts/audit_fit_transition_population.py",
+        "sha256": "570e90dbdfb71323614c428ff30eeefc49e7fd2a40041062a7d759934f5694dc"
+      },
+      {
+        "path": "scripts/audit_kaggle_baseline.py",
+        "sha256": "3a8f78d8cb154fb1d4b25ed902d81e44b9665f4628162f3342641071b679193a"
+      },
+      {
+        "path": "scripts/audit_od_identifiability.py",
+        "sha256": "bce792650d2dfc0a5268a9e012aeaa846c87715620ee3e3e3a6e0659d4885c36"
+      },
+      {
+        "path": "scripts/audit_od_path_choice.py",
+        "sha256": "a4f66b3c5f96ad5639567dbd66ca0dfe3185e355b660b5a6c43282e4ea075bdc"
+      },
+      {
+        "path": "scripts/audit_physics_topology.py",
+        "sha256": "5afabe6d2e6920fdda75988c936d44adcabbb3f57110552d4c269ea7949d308a"
+      },
+      {
+        "path": "scripts/audit_public_graph_coverage.py",
+        "sha256": "449928bb66290a7c0c3201fc6e7912e0d2039f97503765a797f174e610d1ded0"
+      },
+      {
+        "path": "scripts/audit_public_missing_runs.py",
+        "sha256": "a75e7de2f4314f42214d17c63f213a85cd943f7074bc6f0c82094df06aa825ae"
+      },
+      {
+        "path": "scripts/audit_quality_state_context.py",
+        "sha256": "eab5635ee306051b7a391dc0f205f6bbcd7be009caf7ea22842c14bba75f1cb3"
+      },
+      {
+        "path": "scripts/audit_queue_decision_domain.py",
+        "sha256": "7e7eabc8b93a42c6496ad405ef479f7db28308480973ec0e30594847c04010c8"
+      },
+      {
+        "path": "scripts/audit_queue_geometry_artifacts.py",
+        "sha256": "d59859310f9224d586637995b717ab007de2036fae357b9258ebf494f1035876"
+      },
+      {
+        "path": "scripts/audit_queue_origin.py",
+        "sha256": "dba7d16f51c6df6c6506a9e418d5aa3e3d7bdbe1693253772266bd170e36c242"
+      },
+      {
+        "path": "scripts/audit_recurrent_supervision.py",
+        "sha256": "fcb9fd882f31a2e1db3c73766c2f1b4e5eceeb4cb99d3bfcbca107b1fbe63915"
+      },
+      {
+        "path": "scripts/audit_released_onset_timing.py",
+        "sha256": "2cebf3e33c09f3a0f5e0f8e199ef58c84f0d39a93cfd303bf0f9e4b1e7647f68"
+      },
+      {
+        "path": "scripts/audit_released_train_queue_windows.py",
+        "sha256": "1f442072465be77d961c327db254578c45002d91db837bc1ec6f3351cec1ab52"
+      },
+      {
+        "path": "scripts/audit_state_increment_coverage.py",
+        "sha256": "aed74a5d49250e3c7c92bfbb203eb1c731d86387d5f5bdcceffd3015182fdd94"
+      },
+      {
+        "path": "scripts/audit_train_queue_quality_projection.py",
+        "sha256": "65c1561a038dd16c2360b54443740d7aee4102cf12a491b2e9b51dd9ae1747dc"
+      },
+      {
+        "path": "scripts/audit_wave_queue_domain.py",
+        "sha256": "ea46bbe3a494c3d39720c69ac8ad3c4217222626014cc2a1d0c46963eb392b5e"
+      },
+      {
+        "path": "scripts/build_adaptive_state_candidate.py",
+        "sha256": "c2cb1fd567c1b8fd9ae22871407610d2393ea33ac9693f9cee655e3e9a50a337"
+      },
+      {
+        "path": "scripts/build_bayesian_od_candidate.py",
+        "sha256": "5cc8d8b513e668e269510447c508facd640f97b85335da77d69f3e289bb9a8be"
+      },
+      {
+        "path": "scripts/build_full_domain_queue_candidate.py",
+        "sha256": "d7253e06534a72751df97db89b560109c69c43ade1fb6c5c5376f24cca0f5489"
+      },
+      {
+        "path": "scripts/build_log_demand_od_candidate.py",
+        "sha256": "7856416c5d4b73f940739d808a3f8785d0b82ff2b07468edec2a6702adfde074"
+      },
+      {
+        "path": "scripts/build_native_remask_cache.py",
+        "sha256": "b1bfbe632fcaff3ee45063cfb40ffdfa94477752e0d8e2a078ad7f76be5e5600"
+      },
+      {
+        "path": "scripts/build_od_expert_candidate.py",
+        "sha256": "85cd7dd8827d5375b42799091c67f6495c00ec16d68af6d425bb30db9d0dac1b"
+      },
+      {
+        "path": "scripts/build_onset_timing_candidate.py",
+        "sha256": "8a5486d7e8b7c9dba17e2c163fd76f122f2e38becae95abd769eefca7851b86d"
+      },
+      {
+        "path": "scripts/build_state_augmentation_cache.py",
+        "sha256": "15d57e8dc278a37a9c7317d120492699ed9e97b94c65cd9d86234885eacb6608"
+      },
+      {
+        "path": "scripts/campaign.py",
+        "sha256": "06cea939655896f9cef2ad404491d9418313c5cf1f0e525b20288a855a774418"
+      },
+      {
+        "path": "scripts/capture_environment.py",
+        "sha256": "5be825c14d82da31a2ca57459f8c6eead4f13ba2030f5488c465388a8e82d4f8"
+      },
+      {
+        "path": "scripts/causal_graph_queue_experiment.py",
+        "sha256": "5cb9e9a4c8d4482a53f7ebdefad43b6db4ef50a53bb1297bbfdc4598b5cdcace"
+      },
+      {
+        "path": "scripts/channel_state_experiment.py",
+        "sha256": "b9ff31ab4aa50c7e9a0aa1c2c28e0cb455eda9f09bc3e8f2e36abc72a0a7776a"
+      },
+      {
+        "path": "scripts/check_public_competition.py",
+        "sha256": "5c69ba4b041bc668b6cfad397fe2c9c584003910757e68908137e320d92c0a64"
+      },
+      {
+        "path": "scripts/check_report_bytes.py",
+        "sha256": "98701cbcb40ea3c191224bced993995c5e4b586e399a6d838d2249abff4ba2cc"
+      },
+      {
+        "path": "scripts/checkpoint_assimilation_phase.py",
+        "sha256": "b70d53c3e065da9e0ba9a48db04960afc433998686e463f9ece4f0d9dd29d778"
+      },
+      {
+        "path": "scripts/checkpoint_augmentation_phase1.py",
+        "sha256": "e7467c1d96ffe98e84e3c3e1c820c77ff04b12d5165ed6b9fe908e58098fc454"
+      },
+      {
+        "path": "scripts/checkpoint_cross_remask_phase1.py",
+        "sha256": "46eb62e2ed7f0f3ca5586dfcbdc7fd498809d98ad6d5320b19843f2bfdf3d1a3"
+      },
+      {
+        "path": "scripts/checkpoint_cross_remask_phase2.py",
+        "sha256": "6ee9ce09ed403feff69884be86967db315bf86adcd56e769d6c0f37720f9e1bb"
+      },
+      {
+        "path": "scripts/checkpoint_ctm_od_phase.py",
+        "sha256": "63295f1e9926c1a8c5e15f31ab6a3e21ead79d75be9f1201cbd763ab948bb383"
+      },
+      {
+        "path": "scripts/checkpoint_demand_residual_phase.py",
+        "sha256": "a3736029c307400efe75801d81ab0d00aaec0b06cad385436f07cdb0678e711f"
+      },
+      {
+        "path": "scripts/checkpoint_five_phase_queue.py",
+        "sha256": "bd0fbbfac40844b5976cdafc14ea95b206ed1c2f6f8c4885f042147103f9f11d"
+      },
+      {
+        "path": "scripts/checkpoint_flow_transfer.py",
+        "sha256": "554cf8f88742f9a74af968f5680363b62da1b95a633409450915ec484e719d17"
+      },
+      {
+        "path": "scripts/checkpoint_full_density_phase.py",
+        "sha256": "85b8c2e8f9b784cf98ee1c5c2f4945aeefc8e78d441c19874b74007684293883"
+      },
+      {
+        "path": "scripts/checkpoint_full_queue_phase.py",
+        "sha256": "70a0e8bb361e42725e69b117762f28ffdb29b6c44b1b3ad263ec727c89fcfe82"
+      },
+      {
+        "path": "scripts/checkpoint_gap_expert.py",
+        "sha256": "9082e43c1e0a06c137c5e1b7ae43527174a611c09b2a23ec2b5bb8618e172ecd"
+      },
+      {
+        "path": "scripts/checkpoint_latent_queue_noise.py",
+        "sha256": "10fad0c70631bac8aea3b350e29cfc27428aad1204aa0c0718758a889d8a2e20"
+      },
+      {
+        "path": "scripts/checkpoint_log_demand_phase.py",
+        "sha256": "a9b23dd27a10869058d8cada5efea7c94678e097af2075bc33f88f1f822b80d7"
+      },
+      {
+        "path": "scripts/checkpoint_native_remask.py",
+        "sha256": "f8dc3c7462c530e6405f20ef46fa94ba6a31c0d195131c2f96fd2cb3361d5f76"
+      },
+      {
+        "path": "scripts/checkpoint_onset_rank_queue.py",
+        "sha256": "25080867e95a12fe1d2328d092a9237580c0ae33b1bf060e5e699ef56187503e"
+      },
+      {
+        "path": "scripts/checkpoint_onset_set_decoders.py",
+        "sha256": "ea35b941dbfe8d82964ac70d6c20dc57eb11bd003f17990f0661cd2d5ef50c4f"
+      },
+      {
+        "path": "scripts/checkpoint_quality_density_phase.py",
+        "sha256": "de2ab9295c0519c6e189a2f0f3b65b4e02027a7bd67997df1746aa11e219bbe2"
+      },
+      {
+        "path": "scripts/checkpoint_queue_ensemble_phase.py",
+        "sha256": "234027970e3b402f1ecbeb9a4fdf0bcb24612dae8eb5ce553c2f47d8d38a19d0"
+      },
+      {
+        "path": "scripts/checkpoint_queue_overlap_phase.py",
+        "sha256": "4000b570efb2ef37bd6e62ebddcc3983bb79a31e831aea59480fde443fbde23a"
+      },
+      {
+        "path": "scripts/checkpoint_recurrent_phase1.py",
+        "sha256": "6a069d9ac161abc5ef4bd2e4201479f4656cd0f96caeda0d0b115238dc4240cf"
+      },
+      {
+        "path": "scripts/checkpoint_recurrent_phase2.py",
+        "sha256": "bcc8515a8d7ed325be6663f9537a95530a54b45bcd367a17b0e54b4e73ad7342"
+      },
+      {
+        "path": "scripts/checkpoint_relative_position.py",
+        "sha256": "817477a8b3842b963f136b193ffc8fb2246dbf9aa757bf58275cc85b794378b9"
+      },
+      {
+        "path": "scripts/checkpoint_rolling_onset_decoders.py",
+        "sha256": "85e6a036e1c93d6a09b264afb7993aecd5126b35c580117301b499d483a922d3"
+      },
+      {
+        "path": "scripts/checkpoint_third_family_relative.py",
+        "sha256": "fa52904b297411a5f26a6d90bd58c23818b2541ecb6369ba7e18ec4b71056faf"
+      },
+      {
+        "path": "scripts/checkpoint_transition_phase1.py",
+        "sha256": "37a890f0b4e8554ccedf491a6123fea2e50a44b44d99ebbcd39fcbb47f4fa6d3"
+      },
+      {
+        "path": "scripts/checkpoint_transition_phase2.py",
+        "sha256": "088e5afe2ea064a5fbbe3bc8bd1f4478f8b0837d6e7a020176ee4831c6aa67ef"
+      },
+      {
+        "path": "scripts/combine_recurrent_calendar.py",
+        "sha256": "b956a9d764d452c08c83a9fc45661a95b98f4206d3f8b9e61c15c48d2d1deb92"
+      },
+      {
+        "path": "scripts/compare_entropy_numeric_repair.py",
+        "sha256": "a38f9204e0078fc443e9a3e48ac8e772159ae645cb3ae222d0ffb049cdb5811c"
+      },
+      {
+        "path": "scripts/compare_five_phase_sampling_controls.py",
+        "sha256": "d92cb34dcc82f6919d39ee593c0fb67d2a1a9210620e2bd298081056d6b43121"
+      },
+      {
+        "path": "scripts/compare_full_density.py",
+        "sha256": "b20d48cacd5d884536478dcd7205bbb7cfa8179219f6dab21684247a629617af"
+      },
+      {
+        "path": "scripts/compare_full_queue_calibration.py",
+        "sha256": "93b98698bb5e9f3e6ea855dc03532aa04daadecbb860d69c79794d6d4636eaf5"
+      },
+      {
+        "path": "scripts/compare_log_demand_models.py",
+        "sha256": "280dd9312a4e620166ed9a68a7c7a3cd243aad79d62e7240b6ad80d668e3ac1f"
+      },
+      {
+        "path": "scripts/compare_log_demand_repair.py",
+        "sha256": "f8d6a1e39de2aafa334944f92c30b1cb6ce75e7fc350faa461bc8249332dbbb3"
+      },
+      {
+        "path": "scripts/compare_queue_events.py",
+        "sha256": "d9d2e9e47eb2f21b1738d4e2d1ba762a776fc849bbfc4bde4c1fc8785b068194"
+      },
+      {
+        "path": "scripts/compare_queue_overlap_losses.py",
+        "sha256": "28d7b51fbef994cd07f78f994335cf84206a504cc1a2f9e9e2fae6a91199d5b7"
+      },
+      {
+        "path": "scripts/compare_recurrent_state.py",
+        "sha256": "f490a126a8406c14b23420b472cefa3cedb4506fa58417252f490686476ecfb3"
+      },
+      {
+        "path": "scripts/compare_state_assimilation.py",
+        "sha256": "d89b87a83ecb5a05bae4be3cf4f137d2625d639bca4dac723d94b92d31415a1c"
+      },
+      {
+        "path": "scripts/compare_state_direction_budgets.py",
+        "sha256": "47ff0bb82e2500aace15a72ca80b76719b657dd06492b8b60b09b31fce2803e4"
+      },
+      {
+        "path": "scripts/compare_state_label_budgets.py",
+        "sha256": "b7c27482c11904cbc0aa06fc86cfd692037e057985acdb93f00ff4e38da81b40"
+      },
+      {
+        "path": "scripts/cross_corridor_transfer.py",
+        "sha256": "e3ef2d288bfc617ea7985712be7c714de9e36ed947b59bc2bd81e3e5113b7c6a"
+      },
+      {
+        "path": "scripts/ctm_adaptive_stress.py",
+        "sha256": "cb3f7631fb91007e4479b20975b25e2c17dbc6cfbba1f9c926a7002159665f2a"
+      },
+      {
+        "path": "scripts/ctm_contiguous_stress.py",
+        "sha256": "24fcb6625ee2f64e1b5267c6c3fab292dc78ddb2d3b6d02241c1ec6f815b95ae"
+      },
+      {
+        "path": "scripts/ctm_profile_ablation.py",
+        "sha256": "5a65e47430782893da7bae8792995d7b63ae9cf45fe38f895715ac011ddbb5d6"
+      },
+      {
+        "path": "scripts/ctm_queue_observation_diagnostics.py",
+        "sha256": "86db2a91e77c88634c9fc301a0e47c9a865ee19d92b616971d649edd3ce7681c"
+      },
+      {
+        "path": "scripts/demand_residual_floor_followup.py",
+        "sha256": "bb4e7db3ca547245855d74bce024da3c101dd9c13d8ce3d3e578a6a81e0c47f6"
+      },
+      {
+        "path": "scripts/demand_residual_od_experiment.py",
+        "sha256": "81c50b6fc9b663d921ea3393a2c0e0df3bd0098e9aaf29ceccf9e7e02d6334e6"
+      },
+      {
+        "path": "scripts/density_increment_experiment.py",
+        "sha256": "7c76be4eb9f893ff71a70f62ae47ac4f7b8cba8a8add1da1a9ebdbba074552fa"
+      },
+      {
+        "path": "scripts/density_interpolation_experiment.py",
+        "sha256": "98b586eed1bf49beea00db0b5b0473b6159d2e6e198bad4f7b9902a9847d6903"
+      },
+      {
+        "path": "scripts/diagnose_adaptive_scenarios.py",
+        "sha256": "fd73578210b6ab6a51984019f86d16f9c9fdd088ebc72261da20295ed692b0fe"
+      },
+      {
+        "path": "scripts/diagnose_entropy_failure.py",
+        "sha256": "1c8e0b00933b2132eedb92cd0ddc3fb1aab8125b6f3a6994913818b6ff0c3ff4"
+      },
+      {
+        "path": "scripts/diagnose_failed_od_control.py",
+        "sha256": "bed0ecbfa0b21880ad852919b0285280fa2659f95c9a6513840baf3e22ab7b58"
+      },
+      {
+        "path": "scripts/diagnose_flow_cal_covariance.py",
+        "sha256": "1ef01652a88ca85c39e0611bedea490a01ebace509ad8598ae0766c1ef5c7464"
+      },
+      {
+        "path": "scripts/diagnose_graph_density.py",
+        "sha256": "f6e48f203331ed2dddbd6917d2932fc8682cf4daa9da8d6e9a5c7ee52e75116f"
+      },
+      {
+        "path": "scripts/download_data.py",
+        "sha256": "c746052ff8192acd1679976da70faf2f54ae94d2370e2dda4e105bca08fee4b9"
+      },
+      {
+        "path": "scripts/entropy_od_experiment.py",
+        "sha256": "639c6fde371c078759d557025dd60943ac7c6d170fef046c9866d0a7efa9689b"
+      },
+      {
+        "path": "scripts/entropy_od_uncertainty.py",
+        "sha256": "dcc088faa752d137a3f73c993cf272280879185ad9e38ea6b127e82d6b1bfd9f"
+      },
+      {
+        "path": "scripts/equal_blend_augmentation_diagnostic.py",
+        "sha256": "e56f55730bb3fb5f752689484931b01eb9c7a37f67b51026e32376c014d56c10"
+      },
+      {
+        "path": "scripts/evaluate_channel_forward.py",
+        "sha256": "eba5ee321c643f957a674f29e99a2de5712fa01afdcac738341ad5becc5fa134"
+      },
+      {
+        "path": "scripts/evaluate_exported_state_forward.py",
+        "sha256": "d49b2790ad80efda4afbcd5a727fbeeb23e9f03bd44dc5ea2ef9d666af01eaf2"
+      },
+      {
+        "path": "scripts/evaluate_flow_transfer_forward.py",
+        "sha256": "09e0827d3e67f4e949dc15b58335ed2e6cf48a5c0ac8a9d36aea77ea6b30a0d6"
+      },
+      {
+        "path": "scripts/evaluate_gap_expert_shift.py",
+        "sha256": "ed0e6ae5a913a8c2d4227f9ead9255abffbef12c5a0ef2a4c585387c68fec1a6"
+      },
+      {
+        "path": "scripts/evaluate_native_remask_forward.py",
+        "sha256": "4a0b2fde0304066ece00ddcb015648639a25521cd9dbe59302456f97d00c37d7"
+      },
+      {
+        "path": "scripts/evaluate_outage_augmentation.py",
+        "sha256": "652e7c19f7f870b47f91087786c1323a5ccd686aa932443bc377e7b7806c14a5"
+      },
+      {
+        "path": "scripts/evaluate_remask_tree_forward.py",
+        "sha256": "75f4a1595477db903ae594aa8432d02e8aa0f69c6fd2e25b752e2f6554409453"
+      },
+      {
+        "path": "scripts/expected_iou_assumption_stress.py",
+        "sha256": "dce094cb9616a3dbea752606d3832303921b95e08f6bd2e676890b7e74d80e4d"
+      },
+      {
+        "path": "scripts/export_adaptive_state_model.py",
+        "sha256": "631e109610a04aa4a5b0cef3b6b0a22e3acca28ea1f08659669bf55c2e7ca089"
+      },
+      {
+        "path": "scripts/flow_transfer_common.py",
+        "sha256": "7797548238fff9abccbead64aa0da5034ff87665619d18c7968e742f12d01a0b"
+      },
+      {
+        "path": "scripts/freeze_first_submission.py",
+        "sha256": "17eb0cf856c43a0199c0bf73fcc4d100c76d818b2d1130f00b16f466bc4cc6cb"
+      },
+      {
+        "path": "scripts/freeze_gap_gated_state.py",
+        "sha256": "d41e27528397601328ef3d9eb7c9abc877b9613c566889d87b2e0cee17141629"
+      },
+      {
+        "path": "scripts/freeze_research_models.py",
+        "sha256": "fd75a0e4f22f648e7daf55c8374aa9d174d11f0659b74d12665b800d09e4202c"
+      },
+      {
+        "path": "scripts/full_density_experiment.py",
+        "sha256": "d53835b13f5ba488708b8397eb8b805a9a4dbba268dd7a1ac221e2555209cc4f"
+      },
+      {
+        "path": "scripts/full_queue_calibration_experiment.py",
+        "sha256": "aba440df1d64f133edccb951c68c7ffcff39699ef5cb9cc08330703a2aced84c"
+      },
+      {
+        "path": "scripts/inspect_official_release.py",
+        "sha256": "17bc64125a2843f2af1eefc01ef22e930c22201df997eec99bedd021d1e32c7f"
+      },
+      {
+        "path": "scripts/large_baseline_graph_comparison.py",
+        "sha256": "ab3f399a46ca8366418ccca2a748124cd706a176706a20d7b491242c810ed75b"
+      },
+      {
+        "path": "scripts/latent_queue_noise_experiment.py",
+        "sha256": "ed10d2f16ae269028faeb1cd52195788e7791d808299a541a6c95e656b66c9e7"
+      },
+      {
+        "path": "scripts/log_demand_od_experiment.py",
+        "sha256": "437c5c0c578298487d40b7bddf2fe226078e5e59e19e8778077cca5b60945968"
+      },
+      {
+        "path": "scripts/matched_queue_cache.py",
+        "sha256": "bbd42d02b645514d38faf062917e19e08ebe551096e547ca93fe92266061df19"
+      },
+      {
+        "path": "scripts/native_remask_reference.py",
+        "sha256": "6416a8a86a35f156c51e45ccd09c5325c9be45509a17d87a38f6be9dbd3795fa"
+      },
+      {
+        "path": "scripts/native_remask_roles.py",
+        "sha256": "300d0cbcdc0c673ca88ae90b224ddbb9b13388d836540bf3b21d2ec9be9cfe34"
+      },
+      {
+        "path": "scripts/native_remask_state_experiment.py",
+        "sha256": "762ae456998a2b5ed3d15b3568fdfb5525b1e112094cbadb2917275597680779"
+      },
+      {
+        "path": "scripts/od_error_subspaces.py",
+        "sha256": "0e60e334f92a70dc420d33edc216e5540ecec5159cc9262d4c5a78b89dbd220a"
+      },
+      {
+        "path": "scripts/od_expert_experiment.py",
+        "sha256": "b26a6457c0390bedbe85e9a5a29f2a4c403bff499ff539cd230f71f7cfc0fbb2"
+      },
+      {
+        "path": "scripts/od_metric_component_audit.py",
+        "sha256": "dd3cd804df6d895ccf2e5254f8b316b57febf2f1f33d9f09d9364bd0d6be8bb1"
+      },
+      {
+        "path": "scripts/od_prior_misspecification.py",
+        "sha256": "053dc64b2e9b8fb04ac1514d9991d8ddcbae9ab677e69a8dbc7fbd77045a7917"
+      },
+      {
+        "path": "scripts/od_probability_experiment.py",
+        "sha256": "fbb8ade089cec3fdd03b6f40687b4f8ef022c7766dc7c1c4011e6b7df3326c00"
+      },
+      {
+        "path": "scripts/od_shift_generators.py",
+        "sha256": "eba0a0dc9a1608fd04a8517fd5959315b3a183c851fe1931be942f7542c3cca9"
+      },
+      {
+        "path": "scripts/onset_rank_queue_experiment.py",
+        "sha256": "fff0262497bb2a5176e069ff1dbee454b19b7180084a07d7deaf3682d2f6aa93"
+      },
+      {
+        "path": "scripts/onset_set_decoder_experiment.py",
+        "sha256": "0e3331277c2e4d78d67d077d5b67e2f4fdb470cc87d0cccfc453ddf24e71a78a"
+      },
+      {
+        "path": "scripts/outage_augmented_state_experiment.py",
+        "sha256": "e8c4d0125a0356841d3016ae971dfdf9766a55a7bfd0fa6404a1ce483c458fa8"
+      },
+      {
+        "path": "scripts/physics_tradeoff.py",
+        "sha256": "b653cf6254196850113cbdb61a1afb5bf184900e6a5ad5d07a24151436e6c9f9"
+      },
+      {
+        "path": "scripts/plot_matched_research_comparisons.py",
+        "sha256": "bb2cdab5325243359d6a53f27c1814851b38d6ab85b3f0167d561c2995f19bef"
+      },
+      {
+        "path": "scripts/plot_recurrent_evidence.py",
+        "sha256": "f5f947216d96f357221add45acbbf064dbe5ba4b2e8a2b8030bbd2d26bb711d7"
+      },
+      {
+        "path": "scripts/plot_strong_baseline_comparison.py",
+        "sha256": "060b1292bc663f0ba5d1fd352afd30fb0edc5badc83c1a42b3e4b4b23435c10b"
+      },
+      {
+        "path": "scripts/predict_full_domain_queue.py",
+        "sha256": "017f9dacad7fa9cec529840c26b4ff084a2de9c79184a698e99cb567db34c55f"
+      },
+      {
+        "path": "scripts/prepare_full_density_labels.py",
+        "sha256": "aaeae325549a2f3e885c75cb584037b6669902c1ab4fedb50a1c7655de116979"
+      },
+      {
+        "path": "scripts/prepare_graph_experiment.py",
+        "sha256": "86a2d2bcc60c9cd408839d8883834aa75c089c176257bed551ff1d028ee320ac"
+      },
+      {
+        "path": "scripts/prepare_production_graph_state.py",
+        "sha256": "af640a34bf6f44a42e08fd50c06d9585acc1adadd160db867e4551ea16a71525"
+      },
+      {
+        "path": "scripts/prepare_quality_state.py",
+        "sha256": "b6e2bcde753916c9e73ced210900438ba217b35118e51044e8d22ea98638de90"
+      },
+      {
+        "path": "scripts/probabilistic_onset_experiment.py",
+        "sha256": "cfdf1f272ab89423c3962e52723c76d8780a9b858431e9acfcf0ec0845a592d3"
+      },
+      {
+        "path": "scripts/probe_global_attention.py",
+        "sha256": "39fd88acb8506a8eb64e812b64ff44d394e955dfe073efe4d7472964d065d28d"
+      },
+      {
+        "path": "scripts/promote_models.py",
+        "sha256": "b41f8af5fb9f5394595a1c1ded9b534ed89d2c41b85b7a3e3788b2d275c71339"
+      },
+      {
+        "path": "scripts/public_outage_stress.py",
+        "sha256": "b9cc72408a9b5b7a3653bfde5ff767968acb5ddb6590a6446d988e8ec70d2b07"
+      },
+      {
+        "path": "scripts/quality_state_experiment.py",
+        "sha256": "0a5bd90efe8b95427f811cee6577cdad8323f631ba5bb6d6eaa6823fa1b3fa10"
+      },
+      {
+        "path": "scripts/queue_event_experiment.py",
+        "sha256": "520d24e1f1e5fcde8166f3df16f437276b7185665a8e9394c6ac59a4823b0242"
+      },
+      {
+        "path": "scripts/queue_five_phase_experiment.py",
+        "sha256": "8831d3787b7da380992263d011f441e50caa19212a0da968c263b7d9faf97b54"
+      },
+      {
+        "path": "scripts/queue_origin_experiment.py",
+        "sha256": "7cd00e8b0134ed1282353e9162ce6af7da20d1a3d0739ab2ec12b43f79891954"
+      },
+      {
+        "path": "scripts/queue_overlap_experiment.py",
+        "sha256": "9fb7d8d32bd32cb6896ace55458629a38256ae415cbb5bf865a3876294f5a25e"
+      },
+      {
+        "path": "scripts/queue_refinement.py",
+        "sha256": "4747af3e5e09d4e23b7d28856ed66732e54ad1d3586b7df067eb49aeffcc1dd1"
+      },
+      {
+        "path": "scripts/queue_research.py",
+        "sha256": "34e3fe815c5130431a512df258cfbfd0cb39c7b64b769950d76f20a9983fff5a"
+      },
+      {
+        "path": "scripts/queue_seed_ensemble_experiment.py",
+        "sha256": "48880150d79d67e07200d3278742d6ab3460a50842a720093757082943b74b0a"
+      },
+      {
+        "path": "scripts/queue_specialist_experiment.py",
+        "sha256": "b7f8ab609aa392a1308117e827919692dbe60137185fb6ec68a2334cbddaedc4"
+      },
+      {
+        "path": "scripts/queue_wave_graph_experiment.py",
+        "sha256": "ebc0ba895a29d5887cdee52b0dab665a8cf9f2370e3a110b2b6930e746ccb245"
+      },
+      {
+        "path": "scripts/queue_weight_calibration_experiment.py",
+        "sha256": "f2545c56581b388e724327a4c623d89ae18ea07efcc80d63e3e66fc94c6ce48d"
+      },
+      {
+        "path": "scripts/read_public_pages.py",
+        "sha256": "2056d46920d3b9f73b1268b86d122ac4daf318e72c298527b4b66376ac26e165"
+      },
+      {
+        "path": "scripts/record_formal_scores.py",
+        "sha256": "ee78da8b99edc9928c781c341f05af33dd28098ae313113879e8b3e3aad5fa0f"
+      },
+      {
+        "path": "scripts/record_local_state_controls.py",
+        "sha256": "55c6c8b9218207fbd51d0c1d3238c653272c0ed319064928065125eb98dbad9b"
+      },
+      {
+        "path": "scripts/record_onset_control_bounds.py",
+        "sha256": "0f18f8290e22a3a9b15f4287416bc9cbcf071a106d46909ee1962a5f1cc7f728"
+      },
+      {
+        "path": "scripts/recurrent_forward_extension.py",
+        "sha256": "af54a1945d74566e10e1998c05923a74de72ea81a6793b64b482a1481f6b4c61"
+      },
+      {
+        "path": "scripts/recurrent_state_experiment.py",
+        "sha256": "93a37812007e4388b6327cf93dfe2f477d98cf60f77e8e5e33ae9be4935a2d0c"
+      },
+      {
+        "path": "scripts/refine_queues.py",
+        "sha256": "4af45c3a458feec60d6f7786166ef2cf0fb747fce492955ec4112312352f665d"
+      },
+      {
+        "path": "scripts/register_research_protocol.py",
+        "sha256": "2367504189c87f2103e10dfd99147ffcc9beba2f9d82409c38e92d4c5e2c3077"
+      },
+      {
+        "path": "scripts/remask_lightgbm_experiment.py",
+        "sha256": "c4bd34f3d87ee7869fccc760bd8b48386ce924667dccfaa6f37bf2166393ac49"
+      },
+      {
+        "path": "scripts/remask_tree_roles.py",
+        "sha256": "addc3daf9796ec45c120457307c10337c60a19a149a2813fbec3dc35375a352f"
+      },
+      {
+        "path": "scripts/rolling_onset_decoder_experiment.py",
+        "sha256": "893a79bc12f3afb86898b6ba277ba5ea3d225254f52cede234b731878b5f877a"
+      },
+      {
+        "path": "scripts/run_official_diagnostics.py",
+        "sha256": "73221ca5f6014f8d7a011698fe0845d9448581c3896855b7dc19e1f47873a7e8"
+      },
+      {
+        "path": "scripts/run_official_state_baselines.py",
+        "sha256": "3ddd7eea81f350d50973813c50e4c0d90a184624d271aa64859c1c74c33a9e70"
+      },
+      {
+        "path": "scripts/run_queue_five_phase_campaign.py",
+        "sha256": "5f922fe854bafa9e7aee04a1f1c0230f589152d4f4dd6b994087d3fb5da523c5"
+      },
+      {
+        "path": "scripts/scenario_audit.py",
+        "sha256": "3e2d7151d7587199aa672b78eee9dfbbfb8ac82e038afb22eb09f3488e1c7a19"
+      },
+      {
+        "path": "scripts/simulate_queue_selection_bias.py",
+        "sha256": "545413176bf9696a5e8b8bf1046dba00e98cf604035587842224d207f8aaa4b6"
+      },
+      {
+        "path": "scripts/simulate_stress.py",
+        "sha256": "d0c4697c44f1c65848d83c1e396b9562d4151ad294f560b1576bcc6c49012140"
+      },
+      {
+        "path": "scripts/stage_zip_panel.py",
+        "sha256": "4ec5b59e058c52012bda91ff140fbc9620209bbf114aa5eb5ffbc259b4c69c15"
+      },
+      {
+        "path": "scripts/state_assimilation_experiment.py",
+        "sha256": "26a1ecf243bb30a10259b100df6d4f2dd317939e4707c6f4a1b3542d9a97c2ba"
+      },
+      {
+        "path": "scripts/state_budget_suite.py",
+        "sha256": "d6fd23b3aacd79a6cdad38bbf0f3d845e0307dc4b4b7471ef279980035652477"
+      },
+      {
+        "path": "scripts/state_label_budget_control.py",
+        "sha256": "7cb05ba6e67f39106ea009468ce9215aebab9aec0c9a90295fe8641d3c7e4dbd"
+      },
+      {
+        "path": "scripts/state_research.py",
+        "sha256": "7f9043c7d753a5a6540ef81291ae7e3e00879ca330aea94f833b7017f29a759e"
+      },
+      {
+        "path": "scripts/state_temporal_extension.py",
+        "sha256": "0ef7550a56904fc953a6deaa814f7ebad67e9aa7f91817f087fe5fb58db26b9b"
+      },
+      {
+        "path": "scripts/strong_density_state_experiment.py",
+        "sha256": "faa4e2a0cb63a2e053ecf20a6a77a8c9c4f74960c3d39e145c9c0e41f138a7de"
+      },
+      {
+        "path": "scripts/submit_controlled_candidate.py",
+        "sha256": "72c67e384f488fd5e7afa454526e42aab56b43aef7d3671d91acf04a42997876"
+      },
+      {
+        "path": "scripts/summarize_adaptive_research.py",
+        "sha256": "82c2832a34ee9cd39f20ead401994c2dcf7f15d0cebe19cb67fd4476000c720a"
+      },
+      {
+        "path": "scripts/summarize_campaign.py",
+        "sha256": "e09f36b6188d6a23698f0a27873fece09ba6fd3db1e2cd5ae767e4865d7c101f"
+      },
+      {
+        "path": "scripts/summarize_ctm_adaptive.py",
+        "sha256": "fe548c56eef38fe78b378056f8def6a4213a8c526336808faa880947c68547bf"
+      },
+      {
+        "path": "scripts/summarize_ctm_queue_observation.py",
+        "sha256": "19c5ae04a9b48429faea7b96af27cb2b212bdaa4ef37e9daaee9ae11c309547c"
+      },
+      {
+        "path": "scripts/summarize_latent_queue_noise.py",
+        "sha256": "b310ced840acd5127f3f95fdb3a41861ef5656f7932a6005740e589d05a437da"
+      },
+      {
+        "path": "scripts/summarize_onset_rank_queue.py",
+        "sha256": "a9658008438bc55670fdf33d7973ef3e025095518e4a76a859abac402c3ba147"
+      },
+      {
+        "path": "scripts/summarize_onset_set_decoders.py",
+        "sha256": "827f72b12f79e67c56277c12d829bac2157dc8a8fd15f3061b5a7e3f09ae31a0"
+      },
+      {
+        "path": "scripts/summarize_probabilistic_onset.py",
+        "sha256": "666df5d8872a8befd61ba86512ea567145fa05aa46dddffabdacd79445d1e30c"
+      },
+      {
+        "path": "scripts/summarize_queue_domain_audit.py",
+        "sha256": "c07b79de6e1b3c744720d2189a14bc88b7daf3634d8d284ab5063c66c929fcf4"
+      },
+      {
+        "path": "scripts/summarize_queue_five_phase_campaign.py",
+        "sha256": "223aee023bc474134fb5dd70cf4d5918bc738249a5612161bb0a7d8ad95f7beb"
+      },
+      {
+        "path": "scripts/summarize_research_v2.py",
+        "sha256": "4f2239fb78d2d88de9117d289099874b41dc6f017b6c104e557cad168b0a8f17"
+      },
+      {
+        "path": "scripts/summarize_results.py",
+        "sha256": "3ede418e5a835ad3956b0332c335a54a4157654be9db16d4cde6411b5b12880c"
+      },
+      {
+        "path": "scripts/summarize_rolling_onset_decoders.py",
+        "sha256": "b6b9b5cc2e802eb1b3949587d0826467a93301ddefc2eace7a9887a6e90bbb8a"
+      },
+      {
+        "path": "scripts/third_family_relative_state.py",
+        "sha256": "6c27b96f79e8d8eb89b175c225dda510802a66568e9a0eed26a792d9c2244b17"
+      },
+      {
+        "path": "scripts/train_graph_experiment.py",
+        "sha256": "7036d5b3f14d5dd39de22b1aa94284285010359114deb3f38ead5461b6e5e04e"
+      },
+      {
+        "path": "scripts/train_production_adaptive_state.py",
+        "sha256": "6982e036ade77a7d8c5a950572619c5a9655d47c142fbce3cb125404955fed9d"
+      },
+      {
+        "path": "scripts/train_relative_position_ablation.py",
+        "sha256": "60c499c4d1dd10e0958ab2159f52df931ea9c8263fcb71e711affee3a08d8a02"
+      },
+      {
+        "path": "scripts/train_speed_jump_ablation.py",
+        "sha256": "2e32c02b238a0105d0023c2c95ab3da5cf5fef389ea842fddffb238288a89bce"
+      },
+      {
+        "path": "scripts/verify_augmentation_future.py",
+        "sha256": "171d18821d0e77a91778249dee8ed544db1300184fff94095304edb4b8dde97e"
+      },
+      {
+        "path": "scripts/verify_channel_state.py",
+        "sha256": "8b535209a9bb9550be2fc0ccbc06de28fc91fbc2731fe19d9a30947ad2d01ad8"
+      },
+      {
+        "path": "scripts/verify_controlled_candidate.py",
+        "sha256": "bc2c4155403cd3af602dbbed3328590b5dd86bbf446183ec394744684f752df9"
+      },
+      {
+        "path": "scripts/verify_demand_residual_study.py",
+        "sha256": "a3d389bc9bbf7c2c6033557f08aad7b20e9cab60db0586bda8d341c28060a923"
+      },
+      {
+        "path": "scripts/verify_entropy_uncertainty.py",
+        "sha256": "747adfc0ca342b6148f730935394afef929aa7a56850b8cf82291987523c728e"
+      },
+      {
+        "path": "scripts/verify_fit_transition_audit.py",
+        "sha256": "0ff64d22da192f4af586bfdfb1614f2e7c48f36e563b84ae87ecf5c53a3e7d52"
+      },
+      {
+        "path": "scripts/verify_flow_transfer.py",
+        "sha256": "c5e1b8f253c2848feb3eb50c2cc5f1b50b3aa22d863e250584dbccea2bc61670"
+      },
+      {
+        "path": "scripts/verify_full_density.py",
+        "sha256": "7886e5ceb29434a4ecc79a53d7957eaba609f181dfc73d4a7ee4c70f5bb4ac24"
+      },
+      {
+        "path": "scripts/verify_full_domain_queue.py",
+        "sha256": "a8ee0d17b8c785cc2d8f7f0ee491d40c7ca06d4712622e0ac58755fb6fe3cae5"
+      },
+      {
+        "path": "scripts/verify_gap_expert_shift.py",
+        "sha256": "547705e778443324fc13dd267511ff82569d52b43696e5612efba0150a5edd14"
+      },
+      {
+        "path": "scripts/verify_graph_repeat.py",
+        "sha256": "2ec216b7fe481f52199b92b28baa40efbe3bde74ae19a17a86904d6f7d1189e9"
+      },
+      {
+        "path": "scripts/verify_latent_queue_noise.py",
+        "sha256": "42d0f43e39116855fc6e0e6736d31addbda133efc74a34c88d1ce2ccc310baa6"
+      },
+      {
+        "path": "scripts/verify_log_demand_od.py",
+        "sha256": "be24593fb488f6872d791c9004200fe4077f2d8a7595d011cc0496aaa3399923"
+      },
+      {
+        "path": "scripts/verify_native_remask_cache.py",
+        "sha256": "fb3820d13fba2c7b3717fec6a075d37c4b836f3c49c5c04d32c0f65d2c012b13"
+      },
+      {
+        "path": "scripts/verify_native_remask_forward.py",
+        "sha256": "30b070283e4231bf932a02e261f1bd58b72073c095bde082cf24d7f459fcd84b"
+      },
+      {
+        "path": "scripts/verify_native_remask_training.py",
+        "sha256": "3f25619df274f9efd76f137292d8764da70382988e98d63c2cc52b322903577f"
+      },
+      {
+        "path": "scripts/verify_onset_rank_queue.py",
+        "sha256": "47321ab39fea34e4e6e41e5fc16027e05918a87d2f46e70e781baa6e77bbb1d0"
+      },
+      {
+        "path": "scripts/verify_onset_set_decoders.py",
+        "sha256": "73f7fc9c0e5aba09daec691bc17fddf71ce4b55dec3d36c7ec2fb459646f0062"
+      },
+      {
+        "path": "scripts/verify_outage_training.py",
+        "sha256": "274081ceb804c3368228719be792d70be267890cc47c55af2baf1d9e2ddf9336"
+      },
+      {
+        "path": "scripts/verify_probabilistic_onset.py",
+        "sha256": "355a28762ff97592dd2967b60bc1b4f82277392b9da721302e3d11cfcaaa2725"
+      },
+      {
+        "path": "scripts/verify_public_graph_audit.py",
+        "sha256": "e15cdab3fbd032f7e88061abe3076b45a8e6ce8e20e8239c486e9788aaa11636"
+      },
+      {
+        "path": "scripts/verify_public_outage.py",
+        "sha256": "c0450dc70eee71538aaabbec918aa6d7742a3b9b3e8184d38f18a3ff6ef9499e"
+      },
+      {
+        "path": "scripts/verify_quality_state.py",
+        "sha256": "6cf7c7780cf77d6f203aebb3f517d12ce11655c26fbb433a1ee2add0e710b764"
+      },
+      {
+        "path": "scripts/verify_queue_five_phase.py",
+        "sha256": "dc24481778c57763f42fb38c42a7c3db5b9c4e23b2d9d8f4cee776981b58acb4"
+      },
+      {
+        "path": "scripts/verify_queue_overlap_deployment.py",
+        "sha256": "d4830a28109737296792e625c9de890792873de9f21224354c798c33c91a2ff4"
+      },
+      {
+        "path": "scripts/verify_queue_seed_ensemble.py",
+        "sha256": "394e9b84c48445466f87909c89c2c2f359331a17541f1a738379d6420b56e8fa"
+      },
+      {
+        "path": "scripts/verify_queue_shared_repeat.py",
+        "sha256": "dd14df8d431667ffba2b6b9eb82a8e5169b6a57d4ee7e8e96dba40d2c25296d2"
+      },
+      {
+        "path": "scripts/verify_recurrent_forward.py",
+        "sha256": "c5d22524c3bab87700b684a3c4632b9f37be89e1ffe9b437676a1d3e22a0d1f5"
+      },
+      {
+        "path": "scripts/verify_recurrent_state.py",
+        "sha256": "897bd3c375e6b0916892c24147c075b25798276a2496499ae0dc0c472f0bbb37"
+      },
+      {
+        "path": "scripts/verify_relative_position_training.py",
+        "sha256": "29edc6c9a2d338b7cdb2d0322f21498d0f2dffc43d859cb98dbe779addfedf54"
+      },
+      {
+        "path": "scripts/verify_remask_tree_study.py",
+        "sha256": "428595c4967c0ad9364bfbdfc573bca120c04edab2b01117b8b3fdeb5b3b4632"
+      },
+      {
+        "path": "scripts/verify_rolling_onset_decoders.py",
+        "sha256": "48233b4fa3ad8671d451525fe1972e93c5f71f7aa552ec7bff111df0b973ff95"
+      },
+      {
+        "path": "scripts/verify_sparse_profile_phase.py",
+        "sha256": "2561cd5fef5041afe9baa71d27086d3d9bb0fd86d0901783d9079f0cabdc1261"
+      },
+      {
+        "path": "scripts/verify_speed_jump_training.py",
+        "sha256": "f240eb354f20ebab1917000275f4c562e785054f8fa9eccc4c74d47e8fbbc650"
+      },
+      {
+        "path": "scripts/verify_state_assimilation.py",
+        "sha256": "f5d98ebe50be14b01f4172ae2befadd49df3dfcbfdb95e30e3eadf3d52ab8024"
+      },
+      {
+        "path": "scripts/verify_state_augmentation_cache.py",
+        "sha256": "7aca9e765575c469a1e589529ea46b34d35bacf16ae0bd7f4aaa3d6256aac37f"
+      },
+      {
+        "path": "scripts/verify_third_family_relative.py",
+        "sha256": "865903d1286c970ff7f6b5ad778491ce0e897c7ce529d96a3e2ef7fe5605910b"
+      },
+      {
+        "path": "scripts/verify_vendor.py",
+        "sha256": "232658ffcb66d34aea7c686d64e20bad86f7c172b0f900114dd683c5fd90bb85"
+      },
+      {
+        "path": "scripts/winter_flow_transfer.py",
+        "sha256": "055fe30b62dd510830b68c664bda86c4e5c2addbd9123d177811b384c9bca49e"
+      },
+      {
+        "path": "scripts/write_results.py",
+        "sha256": "efb8a4e80afdfaca2096ea7d2f65743e863b38c18dc41bac52fcdce07a70c83d"
+      },
+      {
+        "path": "scripts/zero_aware_od_experiment.py",
+        "sha256": "1b422f735023c0b6e82038f55d1c17906871546affe642c10b60d45d214e4068"
+      },
+      {
+        "path": "src/trafficflow/__init__.py",
+        "sha256": "6432d23e18693162d87e81e22ac8f25158369302b9dc209d21154dba1351e7a8"
+      },
+      {
+        "path": "src/trafficflow/__main__.py",
+        "sha256": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3"
+      },
+      {
+        "path": "src/trafficflow/adaptive_graph_state.py",
+        "sha256": "52e7bbe95a36000f14a4a9d00e9629a0dd05eff023854b730b27c0ec6289e785"
+      },
+      {
+        "path": "src/trafficflow/bayesian_od.py",
+        "sha256": "5c5c76ab2848437af546a5fc3985f568b61c7a39dd3dbdf2a5551e266f1a1139"
+      },
+      {
+        "path": "src/trafficflow/bounded_state.py",
+        "sha256": "abb1f4d4418775801703940e34dd150b0d21debfd80f8f62a7c36decdf668e26"
+      },
+      {
+        "path": "src/trafficflow/causal_queue.py",
+        "sha256": "b12f3098ce79dc465545106b6d429fce2818499edd518f1909047b3ccbcda1b2"
+      },
+      {
+        "path": "src/trafficflow/channel_state.py",
+        "sha256": "5eeb00f96835f328cfa334f63ef0aae955f2af63185aa1d03e47b5ed38a26a1b"
+      },
+      {
+        "path": "src/trafficflow/cli.py",
+        "sha256": "8bb044f21541e3d0f639f01e20fc47a358152ec0c918ae4d644e73c96d7e73d3"
+      },
+      {
+        "path": "src/trafficflow/ctm_queue_diagnostics.py",
+        "sha256": "2215f940016022dbbbd575e40ac9a029c9307b84bc1ca5f5d01246d8cc65c940"
+      },
+      {
+        "path": "src/trafficflow/ctm_scenarios.py",
+        "sha256": "716adba052a0aab4ebf11261d2000e78dc5f908924443cd82d3cc1102b0647c4"
+      },
+      {
+        "path": "src/trafficflow/ctm_state_adapter.py",
+        "sha256": "3afe56f0c577d5d3ae05ee0583ddb180842980a874876f99e046e275b7d5194c"
+      },
+      {
+        "path": "src/trafficflow/data.py",
+        "sha256": "f29fe070b21ac692b2cf9bd6d5b5fd018e94129b9626588325dd48edbd941ccd"
+      },
+      {
+        "path": "src/trafficflow/demand_residual_od.py",
+        "sha256": "c4d92f8ba3af5f7ebd26dc516906090a7600077a396c32451600eb0adb55fa9c"
+      },
+      {
+        "path": "src/trafficflow/density_assimilation.py",
+        "sha256": "bbf771ae2d6ca93030aca029f3428fbb3f214cf4a5e39dca79925f08f7a30b46"
+      },
+      {
+        "path": "src/trafficflow/density_label_metrics.py",
+        "sha256": "5fcb4714fa7be5e1fd953da4707be274a7ff37af051cb9bc74083cd2666cf87b"
+      },
+      {
+        "path": "src/trafficflow/density_state.py",
+        "sha256": "ae91308f12b0c13d43f149d936a7c11704f712390f2fb593fbea5f053ff6a4b2"
+      },
+      {
+        "path": "src/trafficflow/digital_twin.py",
+        "sha256": "cfacb280f971faedceb2e404b35889891eef536a24a070804757ab6d92c49655"
+      },
+      {
+        "path": "src/trafficflow/ensemble_queue.py",
+        "sha256": "65c2c6d05b4444bc017c54fb875c091e01570de482cf257b6b20906b2af063e5"
+      },
+      {
+        "path": "src/trafficflow/entropy_od.py",
+        "sha256": "521a66563ff099aee9e3e50d180367ad25d7e90acdef174a1ed8d80b16337727"
+      },
+      {
+        "path": "src/trafficflow/expected_iou_queue.py",
+        "sha256": "75d27c1674d62658f709b6d0fc5ea5a43f47c3ef6ce0086fa07b73529d4199d3"
+      },
+      {
+        "path": "src/trafficflow/experiments.py",
+        "sha256": "854abf59d2c560f84c704090741d6f8fce4ce6725d8a39139412194cc362a6ec"
+      },
+      {
+        "path": "src/trafficflow/fixture.py",
+        "sha256": "0709326abd7206a7ca1c3414dbb95c2d8c08749484802e2523d49c1ee7a2ef24"
+      },
+      {
+        "path": "src/trafficflow/full_domain_queue.py",
+        "sha256": "50b0dd7245eb3146e236d16c5abc6166f8506a5304971383617147d718be3737"
+      },
+      {
+        "path": "src/trafficflow/full_queue_calibration.py",
+        "sha256": "c30ea129f196796d2a6c34bc71da18b7941eaed4ab652207f4d5144737403dd7"
+      },
+      {
+        "path": "src/trafficflow/gap_gated_state.py",
+        "sha256": "ec8a2d4e95dc6f4f74197406555bd33ec467dabfd314f27cb09e8b896bf92d53"
+      },
+      {
+        "path": "src/trafficflow/graph_queue.py",
+        "sha256": "eaf91b8825c5f3e6491fb09413d9c5b8cdee04ecfd9c05feb6be5e8b00f65c46"
+      },
+      {
+        "path": "src/trafficflow/graph_state.py",
+        "sha256": "806defac6f40c13f3ba51e74b09252a9b9d29bdd4779cb988a3d503a66364fa9"
+      },
+      {
+        "path": "src/trafficflow/increment_state.py",
+        "sha256": "52c6eb6a5cf959ac050f237a84cc8c487fae086fcec61a5aeac2fa5997185ea3"
+      },
+      {
+        "path": "src/trafficflow/latent_queue.py",
+        "sha256": "3898cf203c6f726504a184c935d8df2273ecf4043fe092bda3efd8b0cf3f6091"
+      },
+      {
+        "path": "src/trafficflow/log_demand_od.py",
+        "sha256": "e53d9edd45e7a3b041831bdca9084a4e206ea6b60454381a2c6de8ae66644139"
+      },
+      {
+        "path": "src/trafficflow/metrics.py",
+        "sha256": "5f42eaa372894edfa1363135b61818e7ec4bf56110257a03aadf07de770aa346"
+      },
+      {
+        "path": "src/trafficflow/native_remask.py",
+        "sha256": "0dfcb1a2b8da3c00b8cd29b57e2b3a636e52ea737e315e315fe0b8bdfb130c0c"
+      },
+      {
+        "path": "src/trafficflow/od_expert.py",
+        "sha256": "1dff245ae5d347e32d2b3b1473a129964cf28e5b259e93478cfad6cb4d5688bd"
+      },
+      {
+        "path": "src/trafficflow/od_uncertainty.py",
+        "sha256": "0df9a337b1b302952489a32517512a77ebc2c9420bee5d291dc92ad337bc85c3"
+      },
+      {
+        "path": "src/trafficflow/odme.py",
+        "sha256": "e61df62cbf3ff4af03069d6e028b2024ddee25578cc00558b2b04148370850ee"
+      },
+      {
+        "path": "src/trafficflow/onset_cardinality_queue.py",
+        "sha256": "5bbbfe76d5e92d3e96397b2ce833bb6cc35c258100918471737679583f41d37e"
+      },
+      {
+        "path": "src/trafficflow/onset_rank_queue.py",
+        "sha256": "d7842ed336fa9ca190e089bdcddca603b8fa4825dc7505df787224e624447516"
+      },
+      {
+        "path": "src/trafficflow/outage_shift.py",
+        "sha256": "dccf193ed7bced7881577204bb1385a7b8f9a97cf993fc53e64b67603cd89f35"
+      },
+      {
+        "path": "src/trafficflow/outage_stress.py",
+        "sha256": "eb76fb04628ea381cab5ebf725502f4bc21f1fa9555b1fa1c4c70229f98c81c7"
+      },
+      {
+        "path": "src/trafficflow/physics.py",
+        "sha256": "3f559ca30157ebee155bb17ebdd42f0dc43a169ef6b45634ad875569beb03e30"
+      },
+      {
+        "path": "src/trafficflow/probability_calibration.py",
+        "sha256": "57f7c5487983a2572851331b20591ac21db15591d1dc85745706147ce3a657c7"
+      },
+      {
+        "path": "src/trafficflow/quality_state.py",
+        "sha256": "243757e80c651dfcf32c846b54e548afdd2f04215c612f725855497bb802a7d8"
+      },
+      {
+        "path": "src/trafficflow/queue.py",
+        "sha256": "62c35a4ed8e1e882d386461aba41cf8f5f3ed809451e51008e34f23e211240c5"
+      },
+      {
+        "path": "src/trafficflow/queue_calibration.py",
+        "sha256": "3c9bf39bf1d8bf847dcf29554bcc5abd50a8c610d64b9f2d5c99629ff36b75a8"
+      },
+      {
+        "path": "src/trafficflow/queue_domain.py",
+        "sha256": "c8d03e5ba696b20c3537c0a764cb1df734496fc3a740d0642168f0eba7cc15b8"
+      },
+      {
+        "path": "src/trafficflow/queue_event_loss.py",
+        "sha256": "5b155f8255080e0ee8823ab366ce8f7dfb1f2d067c196109834e0338395b631c"
+      },
+      {
+        "path": "src/trafficflow/queue_events.py",
+        "sha256": "4fbe6e178ee1601de995572bd354cc856f4da6b743601587b299e9d9b233c97f"
+      },
+      {
+        "path": "src/trafficflow/queue_graph_geometry.py",
+        "sha256": "bc1596ed66dbf9c02960f6b5f3c759385fcdef65f7b1e83e9481c1b9800c9cad"
+      },
+      {
+        "path": "src/trafficflow/queue_overlap_loss.py",
+        "sha256": "8dd4beca0a9434ec9d3cd75751551df41bda5fe4b581b51a3bc2ae5ec3eeab27"
+      },
+      {
+        "path": "src/trafficflow/queue_phase_split.py",
+        "sha256": "9a0d96eface9c78241b23ffd1d54d7b8c598c0a628f5e3562b1a138b4d98b569"
+      },
+      {
+        "path": "src/trafficflow/queue_selection_uncertainty.py",
+        "sha256": "5996d6480c04406ec1e40c561a2ebee83438c910b0c9cb7518ea3a464885634b"
+      },
+      {
+        "path": "src/trafficflow/queue_specialist.py",
+        "sha256": "ca3c850ab271905dd294e1019f48552cc8e2e1946ebb8484b38cfd613a9d5373"
+      },
+      {
+        "path": "src/trafficflow/recurrent_state.py",
+        "sha256": "19ba9c972c9422de58683e9e5cae35c0a6dd9c1e18d6e49954c57c49c2ea79ba"
+      },
+      {
+        "path": "src/trafficflow/relative_position_state.py",
+        "sha256": "5754c090bd765f68904ef8d6735e89c9fe8d7b726a9ff0cbddeb3ffaa5a46f99"
+      },
+      {
+        "path": "src/trafficflow/research_eval.py",
+        "sha256": "197aa2c4d6091dbd551ca6d11f8a664e9feaa44c1fcaf568ec873185315ab3c9"
+      },
+      {
+        "path": "src/trafficflow/runtime.py",
+        "sha256": "c181d87a89ff8fa7ee92c00759e2674d77cd60a3ed0d407f1e52f0d2b95d197f"
+      },
+      {
+        "path": "src/trafficflow/speed_jump_loss.py",
+        "sha256": "e48820274e69fb260f10aeca981431a4f7bf0933ee308f0c734b9c054840cfc0"
+      },
+      {
+        "path": "src/trafficflow/state.py",
+        "sha256": "f7a8341d968ac55a6f87e01a439ce8dc8c014750afa61129c7175e733de23c17"
+      },
+      {
+        "path": "src/trafficflow/state_assimilation.py",
+        "sha256": "96291a9c9977924c6abff3e611ecf58125a586a9dfbdf9c70e090aa97ec4b85d"
+      },
+      {
+        "path": "src/trafficflow/state_augmentation.py",
+        "sha256": "220fccab97067dab2744cafddbedb954f85cb3deef2a88a062023217eeebb9a4"
+      },
+      {
+        "path": "src/trafficflow/state_ensemble.py",
+        "sha256": "2bbfa587a79401c90a43502faa5410e5323b11cafe36a02b9ce244e8fae8d749"
+      },
+      {
+        "path": "src/trafficflow/submission.py",
+        "sha256": "87607c555e86f020e83f1ed9ac4054e49f88dc35eedd36cd8bf8ba442f85f2dc"
+      },
+      {
+        "path": "src/trafficflow/transition_diagnostics.py",
+        "sha256": "d130264f6d6c2fd9354dbd5639d27b601d5f09f636ca92a5ba729ce8e5297b74"
+      },
+      {
+        "path": "src/trafficflow/zero_aware_od.py",
+        "sha256": "42192b9d19dcaa2fc7d7801cb4ef7782c3cb6d71a3c73736936b5a064a072f6d"
+      },
+      {
+        "path": "vendor/official/src/merge_submissions.py",
+        "sha256": "a8cd6c4c9f2cea777fde8f6b163c00835a4fb45672998b9fc71368810e792ee1"
+      },
+      {
+        "path": "vendor/official/src/release/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/release/score_overall.py",
+        "sha256": "b9b73e174eeb1ed742dd9cbd558f6b280a0bd14e7ec7001feb549f1b5fb9b4ee"
+      },
+      {
+        "path": "vendor/official/src/score_overall.py",
+        "sha256": "4a28d57a23950554a065f6254bf674f4a1b58b5d039f26bc5154dd28d28651fb"
+      },
+      {
+        "path": "vendor/official/src/task1/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_historical_mean.py",
+        "sha256": "66569dd55340d5e4509712e66172ea669893d7341a0ef2dd8c920c24f07209a1"
+      },
+      {
+        "path": "vendor/official/src/task1/baseline_task1_structural_kf.py",
+        "sha256": "f3a63ba48bf867d993dd1b3cbc0da6ca4567da7aa519ed2b2e3fd93a61c06132"
+      },
+      {
+        "path": "vendor/official/src/task1/build_task1_baseline_submission.py",
+        "sha256": "cb91e19e20a5a546430917a884197c1ad6a7068c6a47d7fbec7fb8311b7237d7"
+      },
+      {
+        "path": "vendor/official/src/task1/score_task1.py",
+        "sha256": "bcd42e88fbc42cd499e93e3b50ddf367009b26b216df5ab3f710ee1d1d863163"
+      },
+      {
+        "path": "vendor/official/src/task2/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task2/build_task2_persistence_submission.py",
+        "sha256": "d3cb4ab23206c4c20058a074b24c23ba79b43dd4219f41e158329a39f5a3edd2"
+      },
+      {
+        "path": "vendor/official/src/task2/queue_utils.py",
+        "sha256": "cea193935e7af7ab1399b9955c3f26fcb65664a099344d35b9c3b91802b3135f"
+      },
+      {
+        "path": "vendor/official/src/task2/score_task2.py",
+        "sha256": "b5605ebae9b32b3ca974881be47b5f2e796728b94763a724314580fc93be28bb"
+      },
+      {
+        "path": "vendor/official/src/task3/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task3/build_task3_baseline_submission.py",
+        "sha256": "945ce4b28f264be6be35a1b8d0f67311bf666d5e6b516a5b79bb2617075e8bcf"
+      },
+      {
+        "path": "vendor/official/src/task3/score_task3.py",
+        "sha256": "98d88b6e7f6b7bb0e2bbb4b42e486d6690b6f14a5d3625649e85ddf828550409"
+      },
+      {
+        "path": "vendor/official/src/task4/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "vendor/official/src/task4/build_task4_odme_artifacts.py",
+        "sha256": "5da75aea3004555bae080ee4d18f1baee01dbb9ed1caf7a6abadd2387e6ade58"
+      },
+      {
+        "path": "vendor/official/src/task4/score_task4.py",
+        "sha256": "be15d732438d305e3d35cb41d3105fc03e3fb9459e5c050af39fe192cede30e3"
+      }
+    ],
+    "n_files": 324,
+    "scope": "Own source, vendored official Python and dependency locks; no data, credentials or model weights"
+  },
+  "comparisons": [
+    {
+      "baseline": "incumbent",
+      "candidate": "selected",
+      "equal_case_condition_macro_IoU": {
+        "baseline": 0.7566483477171682,
+        "candidate": 0.7566483477171682
+      },
+      "paired_macro_gain": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "probability_gain_positive": 0.0,
+      "cases": [
+        {
+          "case": "I5S_September",
+          "baseline": 0.785465848418508,
+          "candidate": 0.785465848418508,
+          "unique_origins": 105
+        },
+        {
+          "case": "I5S_October",
+          "baseline": 0.7797880008758116,
+          "candidate": 0.7797880008758116,
+          "unique_origins": 105
+        },
+        {
+          "case": "I10W_September",
+          "baseline": 0.7892888417837387,
+          "candidate": 0.7892888417837387,
+          "unique_origins": 28
+        },
+        {
+          "case": "I10W_October",
+          "baseline": 0.6720506997906146,
+          "candidate": 0.6720506997906146,
+          "unique_origins": 35
+        }
+      ],
+      "n_cases": 4,
+      "calendar_groups": [
+        {
+          "first": "2030-11-15",
+          "last": "2030-12-14",
+          "n_days": 30,
+          "case_indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "first": "2030-12-31",
+          "last": "2031-01-29",
+          "n_days": 30,
+          "case_indices": [
+            1,
+            3
+          ]
+        }
+      ],
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "block_days": 7,
+      "seed": 20261015,
+      "independent_replicate_maximum_difference": 0.0,
+      "scope": "Posthoc descriptive equal-case/equal-condition proxy. Same calendar draws synchronized across panels;disjoint periods resampled separately. Zero-event days retained. Conditional on these fitted models;not training-seed uncertainty,independent case replications,formal Queue/Total or a promotion rule."
+    },
+    {
+      "baseline": "incumbent",
+      "candidate": "threshold_raw",
+      "equal_case_condition_macro_IoU": {
+        "baseline": 0.7566483477171682,
+        "candidate": 0.7724939199239751
+      },
+      "paired_macro_gain": 0.015845572206806935,
+      "ci95": [
+        -0.0005870734701379861,
+        0.03736915082565284
+      ],
+      "probability_gain_positive": 0.96875,
+      "cases": [
+        {
+          "case": "I5S_September",
+          "baseline": 0.785465848418508,
+          "candidate": 0.7956809021819488,
+          "unique_origins": 105
+        },
+        {
+          "case": "I5S_October",
+          "baseline": 0.7797880008758116,
+          "candidate": 0.8015449795293421,
+          "unique_origins": 105
+        },
+        {
+          "case": "I10W_September",
+          "baseline": 0.7892888417837387,
+          "candidate": 0.8142888417837386,
+          "unique_origins": 28
+        },
+        {
+          "case": "I10W_October",
+          "baseline": 0.6720506997906146,
+          "candidate": 0.678460956200871,
+          "unique_origins": 35
+        }
+      ],
+      "n_cases": 4,
+      "calendar_groups": [
+        {
+          "first": "2030-11-15",
+          "last": "2030-12-14",
+          "n_days": 30,
+          "case_indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "first": "2030-12-31",
+          "last": "2031-01-29",
+          "n_days": 30,
+          "case_indices": [
+            1,
+            3
+          ]
+        }
+      ],
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "block_days": 7,
+      "seed": 20261015,
+      "independent_replicate_maximum_difference": 5.898059818321144e-17,
+      "scope": "Posthoc descriptive equal-case/equal-condition proxy. Same calendar draws synchronized across panels;disjoint periods resampled separately. Zero-event days retained. Conditional on these fitted models;not training-seed uncertainty,independent case replications,formal Queue/Total or a promotion rule."
+    },
+    {
+      "baseline": "incumbent",
+      "candidate": "threshold_cal",
+      "equal_case_condition_macro_IoU": {
+        "baseline": 0.7566483477171682,
+        "candidate": 0.7721940853499469
+      },
+      "paired_macro_gain": 0.015545737632778778,
+      "ci95": [
+        -0.005895954613822558,
+        0.04274426020408164
+      ],
+      "probability_gain_positive": 0.91825,
+      "cases": [
+        {
+          "case": "I5S_September",
+          "baseline": 0.785465848418508,
+          "candidate": 0.800250794655067,
+          "unique_origins": 105
+        },
+        {
+          "case": "I5S_October",
+          "baseline": 0.7797880008758116,
+          "candidate": 0.8015449795293421,
+          "unique_origins": 105
+        },
+        {
+          "case": "I10W_September",
+          "baseline": 0.7892888417837387,
+          "candidate": 0.7892888417837387,
+          "unique_origins": 28
+        },
+        {
+          "case": "I10W_October",
+          "baseline": 0.6720506997906146,
+          "candidate": 0.6976917254316402,
+          "unique_origins": 35
+        }
+      ],
+      "n_cases": 4,
+      "calendar_groups": [
+        {
+          "first": "2030-11-15",
+          "last": "2030-12-14",
+          "n_days": 30,
+          "case_indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "first": "2030-12-31",
+          "last": "2031-01-29",
+          "n_days": 30,
+          "case_indices": [
+            1,
+            3
+          ]
+        }
+      ],
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "block_days": 7,
+      "seed": 20261015,
+      "independent_replicate_maximum_difference": 6.591949208711867e-17,
+      "scope": "Posthoc descriptive equal-case/equal-condition proxy. Same calendar draws synchronized across panels;disjoint periods resampled separately. Zero-event days retained. Conditional on these fitted models;not training-seed uncertainty,independent case replications,formal Queue/Total or a promotion rule."
+    },
+    {
+      "baseline": "incumbent",
+      "candidate": "iou_raw",
+      "equal_case_condition_macro_IoU": {
+        "baseline": 0.7566483477171682,
+        "candidate": 0.7672669838085517
+      },
+      "paired_macro_gain": 0.010618636091383582,
+      "ci95": [
+        -0.02226436717655259,
+        0.046559119783666156
+      ],
+      "probability_gain_positive": 0.7305,
+      "cases": [
+        {
+          "case": "I5S_September",
+          "baseline": 0.785465848418508,
+          "candidate": 0.7997131602464649,
+          "unique_origins": 105
+        },
+        {
+          "case": "I5S_October",
+          "baseline": 0.7797880008758116,
+          "candidate": 0.7823742077723633,
+          "unique_origins": 105
+        },
+        {
+          "case": "I10W_September",
+          "baseline": 0.7892888417837387,
+          "candidate": 0.7892888417837387,
+          "unique_origins": 28
+        },
+        {
+          "case": "I10W_October",
+          "baseline": 0.6720506997906146,
+          "candidate": 0.6976917254316402,
+          "unique_origins": 35
+        }
+      ],
+      "n_cases": 4,
+      "calendar_groups": [
+        {
+          "first": "2030-11-15",
+          "last": "2030-12-14",
+          "n_days": 30,
+          "case_indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "first": "2030-12-31",
+          "last": "2031-01-29",
+          "n_days": 30,
+          "case_indices": [
+            1,
+            3
+          ]
+        }
+      ],
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "block_days": 7,
+      "seed": 20261015,
+      "independent_replicate_maximum_difference": 5.0306980803327406e-17,
+      "scope": "Posthoc descriptive equal-case/equal-condition proxy. Same calendar draws synchronized across panels;disjoint periods resampled separately. Zero-event days retained. Conditional on these fitted models;not training-seed uncertainty,independent case replications,formal Queue/Total or a promotion rule."
+    },
+    {
+      "baseline": "incumbent",
+      "candidate": "iou_cal",
+      "equal_case_condition_macro_IoU": {
+        "baseline": 0.7566483477171682,
+        "candidate": 0.7687836262317571
+      },
+      "paired_macro_gain": 0.012135278514588954,
+      "ci95": [
+        -0.01912651370502759,
+        0.0456225454980843
+      ],
+      "probability_gain_positive": 0.77475,
+      "cases": [
+        {
+          "case": "I5S_September",
+          "baseline": 0.785465848418508,
+          "candidate": 0.8104658484185079,
+          "unique_origins": 105
+        },
+        {
+          "case": "I5S_October",
+          "baseline": 0.7797880008758116,
+          "candidate": 0.7840983457033979,
+          "unique_origins": 105
+        },
+        {
+          "case": "I10W_September",
+          "baseline": 0.7892888417837387,
+          "candidate": 0.7892888417837387,
+          "unique_origins": 28
+        },
+        {
+          "case": "I10W_October",
+          "baseline": 0.6720506997906146,
+          "candidate": 0.6912814690213838,
+          "unique_origins": 35
+        }
+      ],
+      "n_cases": 4,
+      "calendar_groups": [
+        {
+          "first": "2030-11-15",
+          "last": "2030-12-14",
+          "n_days": 30,
+          "case_indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "first": "2030-12-31",
+          "last": "2031-01-29",
+          "n_days": 30,
+          "case_indices": [
+            1,
+            3
+          ]
+        }
+      ],
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "block_days": 7,
+      "seed": 20261015,
+      "independent_replicate_maximum_difference": 6.245004513516506e-17,
+      "scope": "Posthoc descriptive equal-case/equal-condition proxy. Same calendar draws synchronized across panels;disjoint periods resampled separately. Zero-event days retained. Conditional on these fitted models;not training-seed uncertainty,independent case replications,formal Queue/Total or a promotion rule."
+    },
+    {
+      "baseline": "incumbent",
+      "candidate": "iou_cal_nonempty",
+      "equal_case_condition_macro_IoU": {
+        "baseline": 0.7566483477171682,
+        "candidate": 0.7829580294147809
+      },
+      "paired_macro_gain": 0.02630968169761272,
+      "ci95": [
+        0.003883883568548388,
+        0.053022033410138246
+      ],
+      "probability_gain_positive": 0.9905,
+      "cases": [
+        {
+          "case": "I5S_September",
+          "baseline": 0.785465848418508,
+          "candidate": 0.8104658484185079,
+          "unique_origins": 105
+        },
+        {
+          "case": "I5S_October",
+          "baseline": 0.7797880008758116,
+          "candidate": 0.7927190353585702,
+          "unique_origins": 105
+        },
+        {
+          "case": "I10W_September",
+          "baseline": 0.7892888417837387,
+          "candidate": 0.7892888417837387,
+          "unique_origins": 28
+        },
+        {
+          "case": "I10W_October",
+          "baseline": 0.6720506997906146,
+          "candidate": 0.7393583920983069,
+          "unique_origins": 35
+        }
+      ],
+      "n_cases": 4,
+      "calendar_groups": [
+        {
+          "first": "2030-11-15",
+          "last": "2030-12-14",
+          "n_days": 30,
+          "case_indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "first": "2030-12-31",
+          "last": "2031-01-29",
+          "n_days": 30,
+          "case_indices": [
+            1,
+            3
+          ]
+        }
+      ],
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "block_days": 7,
+      "seed": 20261015,
+      "independent_replicate_maximum_difference": 5.551115123125783e-17,
+      "scope": "Posthoc descriptive equal-case/equal-condition proxy. Same calendar draws synchronized across panels;disjoint periods resampled separately. Zero-event days retained. Conditional on these fitted models;not training-seed uncertainty,independent case replications,formal Queue/Total or a promotion rule."
+    },
+    {
+      "baseline": "threshold_raw",
+      "candidate": "iou_raw",
+      "equal_case_condition_macro_IoU": {
+        "baseline": 0.7724939199239751,
+        "candidate": 0.7672669838085517
+      },
+      "paired_macro_gain": -0.005226936115423353,
+      "ci95": [
+        -0.033231699079872334,
+        0.022065014762825703
+      ],
+      "probability_gain_positive": 0.37725,
+      "cases": [
+        {
+          "case": "I5S_September",
+          "baseline": 0.7956809021819488,
+          "candidate": 0.7997131602464649,
+          "unique_origins": 105
+        },
+        {
+          "case": "I5S_October",
+          "baseline": 0.8015449795293421,
+          "candidate": 0.7823742077723633,
+          "unique_origins": 105
+        },
+        {
+          "case": "I10W_September",
+          "baseline": 0.8142888417837386,
+          "candidate": 0.7892888417837387,
+          "unique_origins": 28
+        },
+        {
+          "case": "I10W_October",
+          "baseline": 0.678460956200871,
+          "candidate": 0.6976917254316402,
+          "unique_origins": 35
+        }
+      ],
+      "n_cases": 4,
+      "calendar_groups": [
+        {
+          "first": "2030-11-15",
+          "last": "2030-12-14",
+          "n_days": 30,
+          "case_indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "first": "2030-12-31",
+          "last": "2031-01-29",
+          "n_days": 30,
+          "case_indices": [
+            1,
+            3
+          ]
+        }
+      ],
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "block_days": 7,
+      "seed": 20261015,
+      "independent_replicate_maximum_difference": 5.204170427930421e-17,
+      "scope": "Posthoc descriptive equal-case/equal-condition proxy. Same calendar draws synchronized across panels;disjoint periods resampled separately. Zero-event days retained. Conditional on these fitted models;not training-seed uncertainty,independent case replications,formal Queue/Total or a promotion rule."
+    },
+    {
+      "baseline": "iou_raw",
+      "candidate": "iou_cal",
+      "equal_case_condition_macro_IoU": {
+        "baseline": 0.7672669838085517,
+        "candidate": 0.7687836262317571
+      },
+      "paired_macro_gain": 0.0015166424232053721,
+      "ci95": [
+        -0.003041187739463601,
+        0.007199364332985026
+      ],
+      "probability_gain_positive": 0.68375,
+      "cases": [
+        {
+          "case": "I5S_September",
+          "baseline": 0.7997131602464649,
+          "candidate": 0.8104658484185079,
+          "unique_origins": 105
+        },
+        {
+          "case": "I5S_October",
+          "baseline": 0.7823742077723633,
+          "candidate": 0.7840983457033979,
+          "unique_origins": 105
+        },
+        {
+          "case": "I10W_September",
+          "baseline": 0.7892888417837387,
+          "candidate": 0.7892888417837387,
+          "unique_origins": 28
+        },
+        {
+          "case": "I10W_October",
+          "baseline": 0.6976917254316402,
+          "candidate": 0.6912814690213838,
+          "unique_origins": 35
+        }
+      ],
+      "n_cases": 4,
+      "calendar_groups": [
+        {
+          "first": "2030-11-15",
+          "last": "2030-12-14",
+          "n_days": 30,
+          "case_indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "first": "2030-12-31",
+          "last": "2031-01-29",
+          "n_days": 30,
+          "case_indices": [
+            1,
+            3
+          ]
+        }
+      ],
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "block_days": 7,
+      "seed": 20261015,
+      "independent_replicate_maximum_difference": 4.2934406030425976e-17,
+      "scope": "Posthoc descriptive equal-case/equal-condition proxy. Same calendar draws synchronized across panels;disjoint periods resampled separately. Zero-event days retained. Conditional on these fitted models;not training-seed uncertainty,independent case replications,formal Queue/Total or a promotion rule."
+    },
+    {
+      "baseline": "threshold_cal",
+      "candidate": "iou_cal",
+      "equal_case_condition_macro_IoU": {
+        "baseline": 0.7721940853499469,
+        "candidate": 0.7687836262317571
+      },
+      "paired_macro_gain": -0.0034104591181898236,
+      "ci95": [
+        -0.026780901250407295,
+        0.01680984457452669
+      ],
+      "probability_gain_positive": 0.38275,
+      "cases": [
+        {
+          "case": "I5S_September",
+          "baseline": 0.800250794655067,
+          "candidate": 0.8104658484185079,
+          "unique_origins": 105
+        },
+        {
+          "case": "I5S_October",
+          "baseline": 0.8015449795293421,
+          "candidate": 0.7840983457033979,
+          "unique_origins": 105
+        },
+        {
+          "case": "I10W_September",
+          "baseline": 0.7892888417837387,
+          "candidate": 0.7892888417837387,
+          "unique_origins": 28
+        },
+        {
+          "case": "I10W_October",
+          "baseline": 0.6976917254316402,
+          "candidate": 0.6912814690213838,
+          "unique_origins": 35
+        }
+      ],
+      "n_cases": 4,
+      "calendar_groups": [
+        {
+          "first": "2030-11-15",
+          "last": "2030-12-14",
+          "n_days": 30,
+          "case_indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "first": "2030-12-31",
+          "last": "2031-01-29",
+          "n_days": 30,
+          "case_indices": [
+            1,
+            3
+          ]
+        }
+      ],
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "block_days": 7,
+      "seed": 20261015,
+      "independent_replicate_maximum_difference": 6.028164079019405e-17,
+      "scope": "Posthoc descriptive equal-case/equal-condition proxy. Same calendar draws synchronized across panels;disjoint periods resampled separately. Zero-event days retained. Conditional on these fitted models;not training-seed uncertainty,independent case replications,formal Queue/Total or a promotion rule."
+    },
+    {
+      "baseline": "iou_cal",
+      "candidate": "iou_cal_nonempty",
+      "equal_case_condition_macro_IoU": {
+        "baseline": 0.7687836262317571,
+        "candidate": 0.7829580294147809
+      },
+      "paired_macro_gain": 0.014174403183023765,
+      "ci95": [
+        0.0020833333333333333,
+        0.03165584415584416
+      ],
+      "probability_gain_positive": 0.98275,
+      "cases": [
+        {
+          "case": "I5S_September",
+          "baseline": 0.8104658484185079,
+          "candidate": 0.8104658484185079,
+          "unique_origins": 105
+        },
+        {
+          "case": "I5S_October",
+          "baseline": 0.7840983457033979,
+          "candidate": 0.7927190353585702,
+          "unique_origins": 105
+        },
+        {
+          "case": "I10W_September",
+          "baseline": 0.7892888417837387,
+          "candidate": 0.7892888417837387,
+          "unique_origins": 28
+        },
+        {
+          "case": "I10W_October",
+          "baseline": 0.6912814690213838,
+          "candidate": 0.7393583920983069,
+          "unique_origins": 35
+        }
+      ],
+      "n_cases": 4,
+      "calendar_groups": [
+        {
+          "first": "2030-11-15",
+          "last": "2030-12-14",
+          "n_days": 30,
+          "case_indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "first": "2030-12-31",
+          "last": "2031-01-29",
+          "n_days": 30,
+          "case_indices": [
+            1,
+            3
+          ]
+        }
+      ],
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "block_days": 7,
+      "seed": 20261015,
+      "independent_replicate_maximum_difference": 2.0816681711721685e-17,
+      "scope": "Posthoc descriptive equal-case/equal-condition proxy. Same calendar draws synchronized across panels;disjoint periods resampled separately. Zero-event days retained. Conditional on these fitted models;not training-seed uncertainty,independent case replications,formal Queue/Total or a promotion rule."
+    },
+    {
+      "baseline": "threshold_raw",
+      "candidate": "iou_cal_nonempty",
+      "equal_case_condition_macro_IoU": {
+        "baseline": 0.7724939199239751,
+        "candidate": 0.7829580294147809
+      },
+      "paired_macro_gain": 0.010464109490805784,
+      "ci95": [
+        -0.010330505015957385,
+        0.02970994450452964
+      ],
+      "probability_gain_positive": 0.8555,
+      "cases": [
+        {
+          "case": "I5S_September",
+          "baseline": 0.7956809021819488,
+          "candidate": 0.8104658484185079,
+          "unique_origins": 105
+        },
+        {
+          "case": "I5S_October",
+          "baseline": 0.8015449795293421,
+          "candidate": 0.7927190353585702,
+          "unique_origins": 105
+        },
+        {
+          "case": "I10W_September",
+          "baseline": 0.8142888417837386,
+          "candidate": 0.7892888417837387,
+          "unique_origins": 28
+        },
+        {
+          "case": "I10W_October",
+          "baseline": 0.678460956200871,
+          "candidate": 0.7393583920983069,
+          "unique_origins": 35
+        }
+      ],
+      "n_cases": 4,
+      "calendar_groups": [
+        {
+          "first": "2030-11-15",
+          "last": "2030-12-14",
+          "n_days": 30,
+          "case_indices": [
+            0,
+            2
+          ]
+        },
+        {
+          "first": "2030-12-31",
+          "last": "2031-01-29",
+          "n_days": 30,
+          "case_indices": [
+            1,
+            3
+          ]
+        }
+      ],
+      "resamples": 4000,
+      "valid_resamples": 4000,
+      "block_days": 7,
+      "seed": 20261015,
+      "independent_replicate_maximum_difference": 5.551115123125783e-17,
+      "scope": "Posthoc descriptive equal-case/equal-condition proxy. Same calendar draws synchronized across panels;disjoint periods resampled separately. Zero-event days retained. Conditional on these fitted models;not training-seed uncertainty,independent case replications,formal Queue/Total or a promotion rule."
+    }
+  ],
+  "evidence_gates": {
+    "selected": {
+      "cases_gain_01_positive_CI": 0,
+      "all_case_losses_bounded_01": true,
+      "descriptive_gate_passed": false
+    },
+    "threshold_cal": {
+      "cases_gain_01_positive_CI": 0,
+      "all_case_losses_bounded_01": true,
+      "descriptive_gate_passed": false
+    },
+    "iou_raw": {
+      "cases_gain_01_positive_CI": 0,
+      "all_case_losses_bounded_01": true,
+      "descriptive_gate_passed": false
+    },
+    "iou_cal": {
+      "cases_gain_01_positive_CI": 1,
+      "all_case_losses_bounded_01": true,
+      "descriptive_gate_passed": false
+    },
+    "iou_cal_nonempty": {
+      "cases_gain_01_positive_CI": 1,
+      "all_case_losses_bounded_01": true,
+      "descriptive_gate_passed": false
+    }
+  },
+  "cases": [
+    {
+      "name": "I5S_September",
+      "feature_arm": "plain",
+      "calibration_states": {
+        "plain": {
+          "slope": 0.6809103808467727,
+          "intercept": 0.05723889347564737,
+          "regularization": 0.01,
+          "slope_bounds": [
+            0.05,
+            5.0
+          ],
+          "intercept_bounds": [
+            -8.0,
+            8.0
+          ],
+          "clip": 1e-06,
+          "n_windows": 10,
+          "n_rows": 763,
+          "n_positive": 28,
+          "fitted": true,
+          "success": true,
+          "loss_before": 0.08645653279756489,
+          "loss_after": 0.07364381210766512,
+          "objective": 0.07416928448755346,
+          "iterations": 13,
+          "reason": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+        },
+        "rich": {
+          "slope": 0.6454822283074048,
+          "intercept": -0.014535506224246354,
+          "regularization": 0.01,
+          "slope_bounds": [
+            0.05,
+            5.0
+          ],
+          "intercept_bounds": [
+            -8.0,
+            8.0
+          ],
+          "clip": 1e-06,
+          "n_windows": 10,
+          "n_rows": 763,
+          "n_positive": 28,
+          "fitted": true,
+          "success": true,
+          "loss_before": 0.09549184589772486,
+          "loss_after": 0.0796333677015894,
+          "objective": 0.08026283835852478,
+          "iterations": 12,
+          "reason": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        }
+      },
+      "decision_selected": "incumbent",
+      "selected": "incumbent",
+      "n_unique_onset_origins": 31,
+      "complete_domain_set_size_histograms": {
+        "incumbent": {
+          "3": 14,
+          "4": 7,
+          "5": 3,
+          "7": 3,
+          "6": 3,
+          "0": 1
+        },
+        "threshold_raw": {
+          "3": 23,
+          "5": 4,
+          "1": 1,
+          "4": 3
+        },
+        "threshold_cal": {
+          "3": 23,
+          "6": 2,
+          "2": 1,
+          "4": 2,
+          "5": 3
+        },
+        "iou_raw": {
+          "3": 22,
+          "5": 3,
+          "2": 1,
+          "1": 1,
+          "4": 4
+        },
+        "iou_cal": {
+          "3": 22,
+          "5": 2,
+          "4": 6,
+          "6": 1
+        },
+        "iou_cal_nonempty": {
+          "3": 22,
+          "5": 2,
+          "4": 6,
+          "6": 1
+        },
+        "selected": {
+          "3": 14,
+          "4": 7,
+          "5": 3,
+          "7": 3,
+          "6": 3,
+          "0": 1
+        }
+      }
+    },
+    {
+      "name": "I5S_October",
+      "feature_arm": "plain",
+      "calibration_states": {
+        "plain": {
+          "slope": 1.3733182113537001,
+          "intercept": 0.009089739520129501,
+          "regularization": 0.01,
+          "slope_bounds": [
+            0.05,
+            5.0
+          ],
+          "intercept_bounds": [
+            -8.0,
+            8.0
+          ],
+          "clip": 1e-06,
+          "n_windows": 9,
+          "n_rows": 676,
+          "n_positive": 24,
+          "fitted": true,
+          "success": true,
+          "loss_before": 0.01218850750773214,
+          "loss_after": 0.009412002349235747,
+          "objective": 0.010109247900700096,
+          "iterations": 9,
+          "reason": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        "rich": {
+          "slope": 1.175735479440546,
+          "intercept": 0.08870913423461299,
+          "regularization": 0.01,
+          "slope_bounds": [
+            0.05,
+            5.0
+          ],
+          "intercept_bounds": [
+            -8.0,
+            8.0
+          ],
+          "clip": 1e-06,
+          "n_windows": 9,
+          "n_rows": 676,
+          "n_positive": 24,
+          "fitted": true,
+          "success": true,
+          "loss_before": 0.01633655044460267,
+          "loss_after": 0.015522812757827967,
+          "objective": 0.015716574103982233,
+          "iterations": 9,
+          "reason": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        }
+      },
+      "decision_selected": "incumbent",
+      "selected": "incumbent",
+      "n_unique_onset_origins": 29,
+      "complete_domain_set_size_histograms": {
+        "incumbent": {
+          "3": 19,
+          "1": 3,
+          "2": 1,
+          "4": 5,
+          "5": 1
+        },
+        "threshold_raw": {
+          "3": 13,
+          "10": 1,
+          "5": 7,
+          "6": 3,
+          "4": 4,
+          "7": 1
+        },
+        "threshold_cal": {
+          "3": 13,
+          "10": 1,
+          "5": 7,
+          "6": 3,
+          "4": 4,
+          "7": 1
+        },
+        "iou_raw": {
+          "3": 16,
+          "4": 6,
+          "2": 4,
+          "5": 1,
+          "0": 2
+        },
+        "iou_cal": {
+          "3": 17,
+          "2": 4,
+          "4": 5,
+          "5": 1,
+          "0": 2
+        },
+        "iou_cal_nonempty": {
+          "3": 17,
+          "2": 5,
+          "4": 5,
+          "5": 1,
+          "1": 1
+        },
+        "selected": {
+          "3": 19,
+          "1": 3,
+          "2": 1,
+          "4": 5,
+          "5": 1
+        }
+      }
+    },
+    {
+      "name": "I10W_September",
+      "feature_arm": "plain",
+      "calibration_states": {
+        "plain": {
+          "slope": 0.8844602000435141,
+          "intercept": 0.2476276160346893,
+          "regularization": 0.01,
+          "slope_bounds": [
+            0.05,
+            5.0
+          ],
+          "intercept_bounds": [
+            -8.0,
+            8.0
+          ],
+          "clip": 1e-06,
+          "n_windows": 5,
+          "n_rows": 405,
+          "n_positive": 8,
+          "fitted": true,
+          "success": true,
+          "loss_before": 0.033551480602888886,
+          "loss_after": 0.031480737550350135,
+          "objective": 0.031854081958335174,
+          "iterations": 12,
+          "reason": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        "rich": {
+          "slope": 0.8899041857852331,
+          "intercept": 0.24211011307794178,
+          "regularization": 0.01,
+          "slope_bounds": [
+            0.05,
+            5.0
+          ],
+          "intercept_bounds": [
+            -8.0,
+            8.0
+          ],
+          "clip": 1e-06,
+          "n_windows": 5,
+          "n_rows": 405,
+          "n_positive": 8,
+          "fitted": true,
+          "success": true,
+          "loss_before": 0.032411902088504266,
+          "loss_after": 0.030515446254049294,
+          "objective": 0.030869138229860423,
+          "iterations": 12,
+          "reason": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        }
+      },
+      "decision_selected": "threshold_raw",
+      "selected": "incumbent",
+      "n_unique_onset_origins": 10,
+      "complete_domain_set_size_histograms": {
+        "incumbent": {
+          "3": 1,
+          "1": 5,
+          "2": 3,
+          "0": 1
+        },
+        "threshold_raw": {
+          "3": 1,
+          "1": 7,
+          "2": 1,
+          "0": 1
+        },
+        "threshold_cal": {
+          "3": 1,
+          "1": 6,
+          "2": 2,
+          "0": 1
+        },
+        "iou_raw": {
+          "3": 1,
+          "1": 6,
+          "2": 2,
+          "0": 1
+        },
+        "iou_cal": {
+          "3": 2,
+          "1": 6,
+          "2": 1,
+          "7": 1
+        },
+        "iou_cal_nonempty": {
+          "3": 2,
+          "1": 6,
+          "2": 1,
+          "7": 1
+        },
+        "selected": {
+          "3": 1,
+          "1": 5,
+          "2": 3,
+          "0": 1
+        }
+      }
+    },
+    {
+      "name": "I10W_October",
+      "feature_arm": "rich",
+      "calibration_states": {
+        "plain": {
+          "slope": 1.2796941756186764,
+          "intercept": 0.19551746590339866,
+          "regularization": 0.01,
+          "slope_bounds": [
+            0.05,
+            5.0
+          ],
+          "intercept_bounds": [
+            -8.0,
+            8.0
+          ],
+          "clip": 1e-06,
+          "n_windows": 3,
+          "n_rows": 249,
+          "n_positive": 5,
+          "fitted": true,
+          "success": true,
+          "loss_before": 0.005891984011030144,
+          "loss_after": 0.004390127737072543,
+          "objective": 0.004972407293814032,
+          "iterations": 8,
+          "reason": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        },
+        "rich": {
+          "slope": 1.348438335775953,
+          "intercept": 0.14029021237141037,
+          "regularization": 0.01,
+          "slope_bounds": [
+            0.05,
+            5.0
+          ],
+          "intercept_bounds": [
+            -8.0,
+            8.0
+          ],
+          "clip": 1e-06,
+          "n_windows": 3,
+          "n_rows": 249,
+          "n_positive": 5,
+          "fitted": true,
+          "success": true,
+          "loss_before": 0.005960386921250981,
+          "loss_after": 0.004079736329602811,
+          "objective": 0.004785189417230467,
+          "iterations": 8,
+          "reason": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+        }
+      },
+      "decision_selected": "threshold_raw",
+      "selected": "incumbent",
+      "n_unique_onset_origins": 13,
+      "complete_domain_set_size_histograms": {
+        "incumbent": {
+          "2": 6,
+          "1": 6,
+          "0": 1
+        },
+        "threshold_raw": {
+          "1": 5,
+          "3": 1,
+          "2": 6,
+          "0": 1
+        },
+        "threshold_cal": {
+          "1": 6,
+          "3": 1,
+          "2": 5,
+          "0": 1
+        },
+        "iou_raw": {
+          "1": 9,
+          "3": 1,
+          "2": 1,
+          "0": 2
+        },
+        "iou_cal": {
+          "1": 10,
+          "2": 1,
+          "0": 2
+        },
+        "iou_cal_nonempty": {
+          "1": 12,
+          "2": 1
+        },
+        "selected": {
+          "2": 6,
+          "1": 6,
+          "0": 1
+        }
+      }
+    }
+  ],
+  "known_joint_stress_independent_checks": [
+    {
+      "case": "IID_sparse",
+      "n_candidate_sets": 32,
+      "maximum_score_difference": 2.7755575615628914e-17,
+      "regret": 0.0
+    },
+    {
+      "case": "IID_mixed",
+      "n_candidate_sets": 32,
+      "maximum_score_difference": 0.0,
+      "regret": 0.0
+    },
+    {
+      "case": "IID_dense",
+      "n_candidate_sets": 32,
+      "maximum_score_difference": 1.1102230246251565e-16,
+      "regret": 0.0
+    },
+    {
+      "case": "correlated_all_or_nothing",
+      "n_candidate_sets": 32,
+      "maximum_score_difference": 0.0,
+      "regret": 0.39999999999999997
+    },
+    {
+      "case": "correlated_nonempty_cluster_switch",
+      "n_candidate_sets": 32,
+      "maximum_score_difference": 0.0,
+      "regret": 0.12
+    },
+    {
+      "case": "IID_nonuniform_missing",
+      "n_candidate_sets": 32,
+      "maximum_score_difference": 5.551115123125783e-17,
+      "regret": 0.029272333333333456
+    },
+    {
+      "case": "IID_label_dependent_missing",
+      "n_candidate_sets": 32,
+      "maximum_score_difference": 6.661338147750939e-16,
+      "regret": 0.07531840218666686
+    }
+  ],
+  "n_joint_contrasts": 11,
+  "seconds": 5.282138499998837,
+  "formal_Queue": null,
+  "formal_Total": null,
+  "scope": "Posthoc11contrasts,uncorrected multiple comparisons,not new selection. All joint-date bootstrap replicates independently replayed;all7toy distributions replayed with scalar set enumeration. No formal promotion or hidden-label claims."
+}
