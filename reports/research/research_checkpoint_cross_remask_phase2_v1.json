@@ -1,0 +1,82 @@
+{
+  "created_UTC": "2026-10-15T07:02:20.192543+00:00",
+  "git_base_before_phase_commit": "3bc0974f9a987b06f32410dcdccc761db471a3ec",
+  "previous_goal_turn_classification": "progress:completed remask tree controls and immutable winter inputs,commit3bc0974",
+  "current_goal_turn_classification": "progress",
+  "objective_status": "active;formal0.95000+unachieved",
+  "formal_best_Total": 0.8294,
+  "new_formal_score": null,
+  "formal_model_promoted": false,
+  "all_previous_complete_submissions_preserved": true,
+  "completed": [
+    "Winter all4fit/cal models and sealed primary",
+    "Winter fixed calendar evaluation and all independent exposure/deployment audits",
+    "Cal-only fixed per-channel tree/NN ensemble and new14day evaluation",
+    "Channel raw-teacher/metrics/all50choices and serialized deployment independently checked"
+  ],
+  "remask_two_corridor_old_assessment_summary": [
+    {
+      "study": "A97_I210_W_native_remask_ablation",
+      "primary": "queue_seed_mean",
+      "reference_State": 0.9354913506553723,
+      "primary_State": 0.9389189247690005,
+      "primary_pooled_State_gain": 0.0034275741136282623,
+      "source_sha256": "1de78bac70f027d18317fa8ae1cfae29722fecc7eb4e893626242832297656c5"
+    },
+    {
+      "study": "A104_I5_N_native_remask_ablation",
+      "primary": "queue_seed_mean",
+      "reference_State": 0.9568177705798199,
+      "primary_State": 0.9575119386390784,
+      "primary_pooled_State_gain": 0.000694168059258482,
+      "source_sha256": "e34c626b1504da12e3d8efd42e8d416a03b9063df1e620586fdb3aac5729d29c"
+    }
+  ],
+  "winter_forward": {
+    "primary": "queue_seed_mean",
+    "reference_State": 0.9544995228800756,
+    "primary_State": 0.9548716323148959,
+    "pooled_State_gain": 0.00037210943482035574
+  },
+  "channel_old_assessment": {
+    "pooled_State_gain": 0.0011296194603327425,
+    "paired_day_diagnostic": {
+      "paired_day_mean_gain": 0.0009979234452778818,
+      "ci95": [
+        0.0008793341056634318,
+        0.0011165127848923317
+      ],
+      "bootstrap_probability_gain_positive": 1.0,
+      "n_days": 14,
+      "block_days": 7,
+      "resamples": 4000,
+      "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+    }
+  },
+  "channel_forward": {
+    "pooled_State_gain": 0.0010040905621422347,
+    "paired_day_diagnostic": {
+      "paired_day_mean_gain": 0.001059045345051571,
+      "ci95": [
+        0.0009482228356009045,
+        0.0011698678545022378
+      ],
+      "bootstrap_probability_gain_positive": 1.0,
+      "n_days": 14,
+      "block_days": 7,
+      "resamples": 4000,
+      "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+    }
+  },
+  "active_jobs": [],
+  "final_simulator_seeds": {
+    "seeds": [
+      7907,
+      8017,
+      9109
+    ],
+    "generated": false
+  },
+  "platform_policy": "Local models and Git only;no publication,push or upload",
+  "limits": "Public dates/reused control models,not private/final or independent control retraining. Remask adds label population. Channel policy lacks cross-direction evidence. Formal Physics/Total unknown. No new complete submission."
+}

@@ -1,0 +1,68 @@
+{
+  "protocol_sha256": "791b03d35d9efd68075a68364aaf96a44d3dd0eef8c6a0f9d3e0b6b0e8a0c323",
+  "protocol": {
+    "id": "Cal_only_fixed_channel_ensemble",
+    "tree_study_sha256": "914955883e8cc0c7b0126c40e7ea61488a3707d9f75eb207e7e2df0b6c83b62f",
+    "component_verification_sha256": "667527ec22fdfa237e3a745e427e06250cc3bac0b1708a0a6ba5c34d32a6a60c",
+    "panel": "D7_I210_W",
+    "cal_evidence_motivation": "Inspected development cal:trees lower flowRMSE but worse speedRMSE;not a blind hypothesis",
+    "grid": {
+      "tree_variant": [
+        "point",
+        "queue"
+      ],
+      "speed_tree_weight": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "flow_tree_weight": [
+        0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ]
+    },
+    "primary": "Highest cal eligible score;requires>=.0005State gain and no regime cal loss>.001,else keep NN",
+    "choice_scope": "Constant per-channel weights,never target/error-specific experts;no model refit or new labels",
+    "assessment": "Already-viewed original assessment,read only after channel choice seal;regression only",
+    "future_dates": [
+      "2031-02-06",
+      "2031-02-07",
+      "2031-02-08",
+      "2031-02-09",
+      "2031-02-10",
+      "2031-02-11",
+      "2031-02-12",
+      "2031-02-13",
+      "2031-02-14",
+      "2031-02-15",
+      "2031-02-16",
+      "2031-02-17",
+      "2031-02-18",
+      "2031-02-19"
+    ],
+    "future_scope": "Fixed before channel choice/new policy evaluation;other past public studies possible,not final/private",
+    "components": {
+      "nn_primary": {
+        "path": "artifacts/research/A100_I210_W_native_remask_training_independent_replay/State_primary.pkl",
+        "sha256": "e45787da6a8427dfea2da15700bdf7adf88b08837eb0584b032664d35e792631"
+      },
+      "point_seed_mean": {
+        "path": "artifacts/research/A103_I210_W_native_remask_LGB_control/State_point_seed_mean.pkl",
+        "sha256": "c123adf590220334c1ab8ad278dc0e71b82a0082518f646e37f54c85018ef8c8"
+      },
+      "queue_seed_mean": {
+        "path": "artifacts/research/A103_I210_W_native_remask_LGB_control/State_queue_seed_mean.pkl",
+        "sha256": "26e5bc4449497df81b970f836247efe16c9b069c0b3a8d2ecb495e016e9f6a3c"
+      }
+    },
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

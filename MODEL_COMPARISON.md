@@ -3,6 +3,18 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+最新固定通道集成仅使用cal选择常数权重；I210_W速度用NN、流量用point树，未新增模型训练。冬季重mask扩展保持独立cal选择，无按后留反选。
+
+| 方向 / 固定策略 | 原14日assessment State | 预登记新日历 State |
+|---|---:|---:|
+| I210_W A97 NN | .938919 | .940073（2/6–2/19） |
+| I210_W 通道集成 | **.940049** | **.941077** |
+| I5_N 原GRU | .956818 | .954500（1/23–2/5） |
+| I5_N point重mask | .957220 | .955275 |
+| I5_N Queue-shaped重mask（cal primary） | .957512 | .954872 |
+
+通道集成两段day-mean CI正，但只有单方向、相关公开研究日期；正式Physics仍未知。冬季primary两段CI跨零，两个方向旧后留gain均值+.002061不当完整晋级依据。冬季新日期point较好仍不改变封存选择；Queue-shaped相对point的day-mean CI转负。见 `docs/CHANNEL_STATE_RESEARCH.md` 和 `docs/REMASK_TREE_AND_WINTER_RESEARCH.md`。
+
 同一I210_W fit视图池的强树参照如下，cal仍选择冻结NN；没有按forward反选混合。
 
 | 固定策略 | 原14日assessment State | 预登记1/23–2/5 State |
@@ -14,7 +26,7 @@
 | .25point树+.75NN | .938490 | .929993 |
 | .25Queue-shaped树+.75NN | .938358 | .930050 |
 
-新日期两个.25混合的日均CI均跨零，旧后留略负；纯新树相对NN两日历均低、名义区间负。同标签池不等于同特征、损失、重加权或优化预算，不能把差距完全归因架构。冬季A104仍在训练，跨方向新策略结果未知。见 `docs/REMASK_TREE_AND_WINTER_RESEARCH.md`。
+新日期两个.25混合的日均CI均跨零，旧后留略负；纯新树相对NN两日历均低、名义区间负。同标签池不等于同特征、损失、重加权或优化预算，不能把差距完全归因架构。冬季A104跨方向结果已在本文开头列出。见 `docs/REMASK_TREE_AND_WINTER_RESEARCH.md`。
 
 最新同GRU参数、初始化及更新/采样中心预算的合法重新mask数据增强，明确改变了可用标签人口；冻结旧control不重复训练。
 

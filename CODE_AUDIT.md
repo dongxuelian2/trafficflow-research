@@ -1,10 +1,16 @@
 # 当前实现与评分接口审计
 
+ChannelStateEnsemble使用固定model×2channel非负权重，不读取teacher、regime或误差决定专家；检查profile/features一致与键顺序，输出保持总流量单位。递归清除临时网络缓存，保存后恢复当前进程缓存。A112原28日、A113新4role×14日实际部署与固定通道公式差0。
+
+A115b独立raw TRAIN重建28日teacher/lanes、112指标与全部50cal候选/eligibility，核对cal-only winner、封存顺序及序列化权重，最大score差1.11e−16；没有独立重训。A114重建新14日teacher/诊断mask、56保存指标，另8次predict差0。A115最初缺Torch导致嵌套pickle读入失败，注册/源码/错误记录保留，未修改数值断言。全套118 research/102 CPU通过，5可选Torch模块跳过；初次temp setup错误及工作区basetemp修复均记录。
+
 新native reference helper支持A73/A75冬季原控制，检查280role-day部署核验源、模型SHA、三个构造源码与原start archive一致，并重现shared初始化hash。全初始化由同seed/未变构造确定；不把冻结控制写成新训练。旧A97无新增字段时仍解析11角色，已实际smoke验证；新source明确记录reference replay路径/SHA与forward日期。
 
 A103对same-view训练表使用完整公开fit teacher与原profile，newBoundedState只作总流量/速度的公开FD上限裁剪。A110重建全部920组feature/base/teacher/row-key/weight，168纯树role-day及4选中策略直接调用，最大lane-unit差2.27e−13；392保存指标复算。A111全14日teacher/变化mask/缺失RLE独立计算，210指标误差≤1.11e−16，另18次predict差0。新forward verifier兼容纯保存模型与派生hybrid，逐项核对固定混合，不把210指标写成210次新推断。
 
-冬季A1051224view和16真实loss-target poison检查已完成，teacher精度在既有1e−6归一化容差内。A104四模型/selection seal尚未全部完成，assessment/forward未知，live handle留入checkpoint；只冻结已完成角色文件和不可变start archive，不将仍变化的progress/current best记录为固定字节。117 research/101 CPU测试通过，5可选Torch跳过。
+冬季A1051224view和16真实loss-target poison检查已完成，teacher精度在既有1e−6归一化容差内。A104四模型/selection seal现已完成，assessment/forward在封存后读取，结果见RESULTS。前阶段checkpoint仅冻结当时已完成角色和start archive，原manifest不覆盖；本阶段完成所有核验后另建后继manifest。冻结旧控制显式复用，不算新训练。
+
+A107独立RNG/core/view/实际标签曝光数组4份精确重建，原cal/assessment全部28日×12角色336次直接predict最大差4.55e−13 lane units。A108重建新14日teacher/lanes/indices和全部诊断mask，168保存指标最大差2.22e−16，另24次直接predict差0。两项均不是独立模型重训，所有完整候选及旧manifest固定。
 
 A96只用原fit日期公开raw观测生成4个seed的新Bernoulli link/time mask，rate取原当日R1/R2/R3，不复制隐藏/official stable-hash答案。Point和Queue-shaped共享点坐标；历史可见/未来90min空缺只按公开或metadata模拟origin，后者不读取condition/future coverage/拥堵标签。两区间都不作Task1 loss。拟合期公开Queue origin实际为0，模拟并非官方selector。
 

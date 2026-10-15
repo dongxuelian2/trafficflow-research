@@ -2,19 +2,33 @@
 
 所有模拟指标、观测代理与正式 Kaggle 指标分别记录。失败实验不删除，既有模型与提交不覆盖。
 
-最新阶段完成同视图树对照，冬季新训练是已核验live handle上的持续任务，不因观察超时重启。
+最新完成固定通道集成及冬季跨方向重mask训练。所有分数为本地公开TRAIN State；没有按新日历改选模型。
+
+| 编号 | 假设 / 核验 | 结果 / 资源 |
+|---|---|---|
+| A112 | NN/point树/Queue树按速度和流量分开，50组cal常数权重 | 选NN速度+point树流量；旧后留.940049 vsNN .938919；28次直接部署差0，25.92秒 |
+| A113 | 固定通道策略2/6–2/19 | .941077 vsNN .940073；day-mean CI[.000948,.001170]；4role×14日56次直接推断，29.35秒 |
+| A114 | 新日历全teacher/诊断mask/保存指标及首末部署 | 56指标，另8次predict差0；10.24秒 |
+| A115 / A115b | 旧28日raw teacher、112指标、50cal候选与封存权重独立重建 | 初次CPU环境缺Torch无法读嵌套GRU pickle，保留失败；research重跑通过，score差1.11e−16、7.25秒，无重训/新直接推断 |
+| A106 | 冬季四模型完成后固定1/23–2/5 | 原GRU .954500，point .955275，cal primary Queue-shaped .954872；primary CI跨零，140.97秒 |
+| A107 | 全部实际标签曝光/28日×12角色独立部署 | 4份exposure数组exact；336次predict最大差4.55e−13 lane units；277.12秒，不是重训 |
+| A108 | 冬季新日历全teacher/诊断/168指标及采样部署 | 14日全部重建，score差2.22e−16；另24次predict差0；33.47秒 |
+
+当前全套research118 passed/9.95秒；CPU102 passed/5 Torch skips/7.79秒。初次默认沙箱temp不可写导致各13个setup错误，指定工作区新basetemp后通过。没有更改数值断言。详细误差分层、失败和复现见 `docs/CHANNEL_STATE_RESEARCH.md`。
+
+此前同视图树对照与冬季训练的数据准备：
 
 | 编号 | 假设 / 核验 | 结果 / 资源 |
 |---|---|---|
 | A102 | I5_N153fit日同策略4view×point/Queue-shaped | 1224view，591.11秒；profile/fit/cal/assessment分离 |
 | A103 | I210_W2seed×2variant同标签池强LGB，固定400树/63叶 | 旧后留point/queue .931238/.930716 vsNN .938919；cal仍选NN，500.86秒CPU；标签重加权同时变化 |
-| A104 | 冬季2seed×2variant原GRU同初始化/预算，复用已核验控制 | 正在同一训练任务内执行，未读后留；不把partialcal当正式或assessment |
+| A104 | 冬季2seed×2variant原GRU同初始化/预算，复用已核验控制 | 四模型完成，cal选Queue-shaped；原后留.957512 vs原GRU .956818，CI跨零；2154.28秒、allocated峰值2099.12MiB |
 | A105 | 冬季全部输入/label masks与poison检查 | 1224view exact、16poison通过；归一化teacher差2.38e−7，498.93秒 |
 | A109 | 树/NN策略固定后的1/23–2/5日历 | NN .929704，point/queue树 .924704/.924905；.25混合略正但CI跨零，primary不变；32.96秒、含GPU推断 |
 | A110 | 全树训练表/权重及cal/ass角色核验 | 920组exact；168树role/day+4选中策略调用，392保存指标复算；182.26秒 |
 | A111 | forward全teacher/diagnostics/score及采样部署 | 14日/210指标差≤1.11e−16，另18predict差0；9.92秒 |
 
-当前117 research passed/13.92秒；CPU101 passed/5 Torch skips/11.42秒。表格数据策略、特征编码、损失及优化预算存在差别，不把结果归因单一组件。原0.82940及所有完整候选保持冻结，冬季结果等待同一任务完成后读取。
+该树阶段117 research passed/13.92秒、CPU101 passed/5 Torch skips/11.42秒为历史检查；最新测试见本文开头。表格数据策略、特征编码、损失及优化预算存在差别，不把结果归因单一组件。原0.82940及所有完整候选保持冻结，冬季结果已在上文更新。
 
 最新A96–A101回到官方随机mask目标，记录实际数据增强预算，不以严重断测合成分数代替State。
 
