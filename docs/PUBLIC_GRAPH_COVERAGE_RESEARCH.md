@@ -31,4 +31,4 @@ A128只读网络CSV、首个public TRAIN分区的link_id/milepost列，按当前
 .venv-research\Scripts\python.exe scripts/probe_global_attention.py --note reports/research/A128_attention_scope_note.json
 ```
 
-旧目录禁止覆盖，重跑换新名。当前attention没有显式相对里程bias；输入base/profile可能间接包含空间信息，不能说完全缺位置。一个可测试的后续假设是加**静态相对距离的统计先验**，保持普通损失和同监督预算、按cal选后再看新日历。它不应冒充真实拓扑修复或官方LWR约束，收益尚未知。
+旧目录禁止覆盖，重跑换新名。原attention没有显式相对里程bias；输入base/profile可能间接包含空间信息，不能说完全缺位置。该假设后由A130–A133完成I210小对照，取得局部State收益，见[相对里程研究](RELATIVE_POSITION_STATE_RESEARCH.md)。跨方向结果仍未知，不冒充真实拓扑修复或官方LWR约束。

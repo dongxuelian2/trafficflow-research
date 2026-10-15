@@ -1,5 +1,9 @@
 # 当前实现与评分接口审计
 
+A130的相对位置只读首fit日masked文件link_id/milepost列，以正间距中位数归一化、clip20。两attention各新增一个有符号系数初值0，保持全部非距离state tensor的初始化字节相同；非零输出head的函数等价及新系数可获梯度有测试。RelativePositionStateModel固定link顺序、保存距离buffers，复用父类同FD裁剪/总flow单位/窗口逻辑，保存时移除网络缓存。
+
+A132独立从公开metadata计算距离，逐seed共同初始化/全部cell曝光精确匹配A97，选中pt/gamma/alpha与导出一致；252次直接predict最大差2.27e−13，224指标差1.11e−16，固定新速度/原flow组合及强参照cal gate通过。A133全14日teacher/diagnostics、126指标和另18predict通过。A131比较reference明确为strong_channel，旧study无该配置仍默认nn_primary；没有将超过弱NN当超过当前强基线。新三项测试及全套125research/104CPU、7Torch skips通过。
+
 A122/A123仅使用原fit日期raw/cache/已保存实际曝光数组。诊断模块不进入推断features；未来两步/邻居标签只作fit观察统计，不作Queue可见历史。原输入base通道6/7的SSE明确区别NN/官方State。独立shift/window核验245日3185数组、3430统计记录，包含raw eligibility、日界不循环及条件分母；浮点SSE最大绝对差3.73e−9。
 
 新speed_jump_pair_loss只在core内两个连续target均为True且float32 abs(label delta)>=.8时监督速度差，flow输出梯度为0（共享网络参数仍可改变flow）；手算endpoint梯度与无pair退回原目标均通过。A126现已独立重建两seed全部cell/pair计数、初始化/patch序列，核对选中pt与导出权重/alpha、196predict及168指标；最大预测差4.55e−13、score差2.22e−16。A127新14日98指标及14次predict另行通过。原122research/104CPU测试为前阶段记录，此阶段生产src未改；kernel通过不等于模型成功，实际两个日历均退步。
