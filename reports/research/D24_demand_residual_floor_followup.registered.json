@@ -1,0 +1,48 @@
+{
+  "protocol_sha256": "75d639a67389c04ba0e606c07c7dec7542a50302a2b19b3bbc90592e437707bb",
+  "protocol": {
+    "id": "Development_only_residual_center_floor_followup",
+    "source_development_sha256": "725c8efa1261e8114987f649b0d74e67f7a48db8021c3b8845a0e7c3d65e4404",
+    "source_selection_seal_sha256": "8f2a5b525155c07313dc99e6e6b434b93172633a2ab0b461b5ec38388ce5be3b",
+    "reason": "D21 development missing-prior degradation motivates preserving strong-reference minimum center;no D21 assessment used for choice",
+    "grid": [
+      {
+        "center_blend": 0.25,
+        "regularization": 0.05,
+        "residual_floor": 2.0
+      },
+      {
+        "center_blend": 0.5,
+        "regularization": 0.05,
+        "residual_floor": 2.0
+      },
+      {
+        "center_blend": 0.25,
+        "regularization": 0.05,
+        "residual_floor": 20.0
+      },
+      {
+        "center_blend": 0.5,
+        "regularization": 0.05,
+        "residual_floor": 20.0
+      }
+    ],
+    "selection": "Max worst-law development gain vs strong entropy,then mean;gate mean>=.005,worst>=-.002,all success",
+    "development_seeds": [
+      411,
+      829,
+      1201
+    ],
+    "fresh_assessment_seeds": [
+      933003,
+      933011,
+      933023
+    ],
+    "assessment_regimes": "Same9 plus newly registered6 stress laws,reported separately",
+    "assessment_policy": "Fresh data only after development choice seal;D21 assessment never selects this model",
+    "final_simulator_seeds_generated": false,
+    "formal_ODME": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

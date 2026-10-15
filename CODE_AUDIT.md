@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+D21/D24新增两阶段OD模型：log-demand中心与KL路径修正共享同一公开计数，明确为顺序点估计，未声称joint posterior。alpha0精确调用固定entropy参考并跳过group；prior-center floor不是flow下界，独立primal finite-difference optimizer及低计数反例通过。可选floor参数默认2；D21运行结束后才加入，旧源快照与所有原流量预测保留。
+
+D24网格在D21 assessment结果查看前按development失败条件独立登记；worker只读D21 development_progress/seal和development NPZ，不读其assessment。1350原预测明确标记reuse，记录original_method_seconds，不能当新训练/测速。新两个floor20配置仍使用同一270开发问题，后续933xxx数据只在新seal之后生成。两个gate均失败，primary固定entropy，次要hypothesis或六seed汇总不覆盖选择。
+
+D22/D25从公开train算子与自主生成器重建每份输入、核对NPZ/预测SHA，用独立评分公式重算；另外直接调用无缓存完整model API，覆盖两个方向的旧/新法律和floor20开发候选。D23/D26使用公开A的标准SVD rowspace，不从nullity宣称具体路径识别；逐预测检查平方L2正交和A*null≈0。组件加权分解不是L1几何分解，六seed汇总是次要诊断。两轮1440case记录中270开发重复，实际1170唯一问题，不扩大独立样本数。最终93 research/81CPU测试通过，4可选Torch跳过；未访问reference/隐藏标签，无平台操作或正式新成绩。
+
 新增 `log_demand_od.py` 仅接受公开incidence/counts/weakprior和origin/destination元数据，输出非负流量与局部数值诊断；不读reference或组织方隐藏path truth。四配置development选择封存后才首次生成三个research seed。D17修复后仍保留D14原选择，recomputed_dev_choice只是回归字段；其assessment明确属于已查看seed的数值回放，不是final。270个唯一评估问题与deployment alias分开，失败不删除。D19验证全覆盖、7条失败恢复及1080参考预测/分数逐值不变。
 
 Polish解析Hessian包括count Jacobian项、指数模型二阶项和Gaussian prior；使用Cholesky阻尼/步长回溯，在浮点预算内允许gradient减半，最终projected-gradient仍2e−4。两起点至少一份证书有效才返回，证书只说明局部stationarity。独立trust-region使用3-point数值Jacobian；选中6/6通过，全grid16/18，两不一致病例及NPZ保留。固定prior乘性模型不能表示真零、没有path-level residual或校准posterior，不声称global/identifiable。五项kernel测试及全部88 research/76 CPU测试通过，4个Torch模块在CPU环境跳过。

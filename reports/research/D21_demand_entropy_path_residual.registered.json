@@ -1,0 +1,81 @@
+{
+  "protocol_sha256": "6fb1fabc9bb676a5ab3064d882212945765383ba114daefc2de3a827578f485c",
+  "protocol": {
+    "id": "Shared_demand_center_then_entropy_path_residual",
+    "grid": [
+      {
+        "center_blend": 0.25,
+        "regularization": 0.05
+      },
+      {
+        "center_blend": 0.5,
+        "regularization": 0.05
+      },
+      {
+        "center_blend": 1.0,
+        "regularization": 0.05
+      },
+      {
+        "center_blend": 0.5,
+        "regularization": 0.5
+      }
+    ],
+    "fixed_group_settings": {
+      "group_sd": 0.2,
+      "noise_cv": 0.02,
+      "prior_floor": 2.0,
+      "huber_delta": null
+    },
+    "fixed_group_study_sha256": "2945ccc2a301e6fcd8ad26b0b56cdd5d1d8e8dc974332488b5e2e5c62bb7edf9",
+    "development_seeds": [
+      411,
+      829,
+      1201
+    ],
+    "development_regimes": [
+      "independent_paths",
+      "hierarchical_demand",
+      "prior_total_bias",
+      "absolute_additive_prior_noise",
+      "lognormal_prior_noise",
+      "missing_prior_paths",
+      "group_biased_prior",
+      "sparse_active_paths",
+      "count_outliers"
+    ],
+    "fresh_assessment_seeds": [
+      932003,
+      932011,
+      932023
+    ],
+    "same_law_assessment_regimes": [
+      "independent_paths",
+      "hierarchical_demand",
+      "prior_total_bias",
+      "absolute_additive_prior_noise",
+      "lognormal_prior_noise",
+      "missing_prior_paths",
+      "group_biased_prior",
+      "sparse_active_paths",
+      "count_outliers"
+    ],
+    "new_shift_assessment_regimes": [
+      "distance_gravity",
+      "gamma_poisson_counts",
+      "correlated_count_bias",
+      "sparse_zone_shutdown",
+      "heavy_tail_combined",
+      "dense_weak_prior_independent_truth"
+    ],
+    "new_generator_source_sha256": "eba0a0dc9a1608fd04a8517fd5959315b3a183c851fe1931be942f7542c3cca9",
+    "selection": "Max worst-law development gain vs fixed entropy,then mean;gate mean>=.005,worst>=-.002,all cases succeed",
+    "assessment": "After choice seal only;separately report same-laws and six newly registered stress laws,three fresh seeds",
+    "truth": "Own generators,public train incidence/weakprior/metadata only;no reference or hidden answers",
+    "uncertainty": "Paired five fixed families x three seeds,4000 resamples;not posterior/Kaggle/private coverage",
+    "limits": "Counts reused in prior-center and correction stages,not a joint posterior. Positive model has no exact zero support.",
+    "final_simulator_seeds_generated": false,
+    "formal_ODME": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

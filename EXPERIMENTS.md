@@ -2,6 +2,20 @@
 
 所有模拟指标、观测代理与正式 Kaggle 指标分别记录。失败实验不删除，既有模型与提交不覆盖。
 
+最新D21–D27研究共享需求中心+路径残差；两个development gate均失败，primary保留强entropy。
+
+| 编号 | 假设 / 对照 | 实测结果 | 资源 / 决策 |
+|---|---|---|---|
+| D21 | 四个几何中心/计数权重配置，270开发问题后封存，再450新seed问题 | alpha.25开发mean+.018222、missing-prior−.005876；同类gain+.019200/CI正，新六类+.008855/CI跨零 | 634.65秒CPU；零solver failure，未晋级 |
+| D22 | 全数据生成/score/直接API独立重跑 | 720份输入exact，4140分数差0，54次API预测exact | 83.64秒CPU；方法重复不算独立样本 |
+| D23 | 计数rowspace/nullspace平方误差 | 3690份分解；null count残差6.36e−14；hypothesis的平均L1改善但平方L2更差 | 13.37秒CPU；不是正式L1分解 |
+| D24 | development预注册保留floor20，alpha.25/.5；1350控制预测显式复用 | floor20整体mean−.000844/−.002507；仍选floor2且gate失败；另组三seed同类/新类gain+.018551/+.009706 | 438.02秒CPU；300.27MiB；不按D21assessment选择 |
+| D25 | 后续全数据/分数/API独立重放 | 720输入exact，4140分数差0，54次API exact（包含floor20开发模型） | 73.54秒CPU；无覆盖失败或更改选择 |
+| D26 | 第二批计数子空间误差 | 3690分解，null count相对残差7.92e−14；平方误差代价仍在 | 13.04秒CPU；公开十个算子复用，不当新网络 |
+| D27 | weighted组件及相同hypothesis六seed次要汇总 | 同类gain+.018876/CI[.007580,.031924]；新类+.009280/CI[.000110,.020543] | 组件加和核验通过；未校正多重比较，不晋级 |
+
+第一轮leave-one-family-out始终选grid0，但仅1/5个开发子集过gate；上游共享参数已见过全部族，不能称完整unseen-corridor结果。两轮模型均是count-informed center再作path correction，未校准posterior，不能恢复真零support。新增floor测试证明prior中心下限不等于预测下界；最终93 research passed、CPU81 passed/4 optional-Torch skips。正式最佳、完整候选与final seeds保持冻结。
+
 最新D14–D20完成独立正值需求因子模型与数值修复；正式Total仍.82940，无新正式最佳。
 
 | 编号 | 假设 / 对照 | 实测结果 | 资源 / 决策 |

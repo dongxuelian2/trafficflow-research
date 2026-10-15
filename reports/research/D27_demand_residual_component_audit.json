@@ -1,0 +1,416 @@
+{
+  "studies": [
+    {
+      "study": "reports/research/D21_demand_entropy_path_residual.json",
+      "study_sha256": "5f4af60aa90e32818841b3fd089d80c6deae4f3724d63861ec01c25658d7d0ba",
+      "populations": {
+        "same_laws": {
+          "macro_simulated_components": {
+            "deployment_winner": {
+              "complete": true,
+              "simulated_S_od": 0.4485218445793939,
+              "simulated_S_link": 0.9882758788366411,
+              "simulated_S_dev": 0.8218391401479798,
+              "simulated_S_attr": 0.9194098608765188,
+              "simulated_S_ODME": 0.7100911499235624,
+              "relative_path_L1": 0.551727023262597
+            },
+            "development_hypothesis": {
+              "complete": true,
+              "simulated_S_od": 0.4985841481689891,
+              "simulated_S_link": 0.9885112180658273,
+              "simulated_S_dev": 0.7997014355535808,
+              "simulated_S_attr": 0.918971010035435,
+              "simulated_S_ODME": 0.7292915380308542,
+              "relative_path_L1": 0.5014158518310108
+            },
+            "fixed_entropy_D08": {
+              "complete": true,
+              "simulated_S_od": 0.4485218445793939,
+              "simulated_S_link": 0.9882758788366411,
+              "simulated_S_dev": 0.8218391401479798,
+              "simulated_S_attr": 0.9194098608765188,
+              "simulated_S_ODME": 0.7100911499235624,
+              "relative_path_L1": 0.551727023262597
+            },
+            "fixed_log_demand_D17": {
+              "complete": true,
+              "simulated_S_od": 0.5521063370290575,
+              "simulated_S_link": 0.9852665314783268,
+              "simulated_S_dev": 0.620566868759353,
+              "simulated_S_attr": 0.9225109122526215,
+              "simulated_S_ODME": 0.7262261516844537,
+              "relative_path_L1": 0.4478936629709425
+            },
+            "ridge_0.05": {
+              "complete": true,
+              "simulated_S_od": 0.3751896192106302,
+              "simulated_S_link": 0.9940281259457111,
+              "simulated_S_dev": 0.7746290870508041,
+              "simulated_S_attr": 0.8653092627309805,
+              "simulated_S_ODME": 0.663333112598479,
+              "relative_path_L1": 0.6601229914530834
+            }
+          },
+          "gain_decompositions_vs_entropy": {
+            "deployment_winner": {
+              "gain": 0.0,
+              "weighted_component_gains": {
+                "simulated_S_od": 0.0,
+                "simulated_S_link": 0.0,
+                "simulated_S_dev": 0.0,
+                "simulated_S_attr": 0.0
+              },
+              "mean_relative_path_L1_reduction": 0.0
+            },
+            "development_hypothesis": {
+              "gain": 0.019200388107291855,
+              "weighted_component_gains": {
+                "simulated_S_od": 0.022528036615317833,
+                "simulated_S_link": 5.883480729654278e-05,
+                "simulated_S_dev": -0.0033206556891598516,
+                "simulated_S_attr": -6.582762616256232e-05
+              },
+              "mean_relative_path_L1_reduction": 0.050311171431586255
+            },
+            "fixed_log_demand_D17": {
+              "gain": 0.016135001760891332,
+              "weighted_component_gains": {
+                "simulated_S_od": 0.04661302160234863,
+                "simulated_S_link": -0.0007523368395785934,
+                "simulated_S_dev": -0.030190840708294017,
+                "simulated_S_attr": 0.00046515770641540887
+              },
+              "mean_relative_path_L1_reduction": 0.10383336029165452
+            },
+            "ridge_0.05": {
+              "gain": -0.046758037325083324,
+              "weighted_component_gains": {
+                "simulated_S_od": -0.032999501415943676,
+                "simulated_S_link": 0.0014380617772674908,
+                "simulated_S_dev": -0.007081507964576344,
+                "simulated_S_attr": -0.008115089721830736
+              },
+              "mean_relative_path_L1_reduction": -0.10839596819048636
+            }
+          }
+        },
+        "new_shift_laws": {
+          "macro_simulated_components": {
+            "deployment_winner": {
+              "complete": true,
+              "simulated_S_od": 0.41432144208493515,
+              "simulated_S_link": 0.9813046837580599,
+              "simulated_S_dev": 0.7013954140892398,
+              "simulated_S_attr": 0.8983981218965005,
+              "simulated_S_ODME": 0.6717398502755968,
+              "relative_path_L1": 0.5867313201326562
+            },
+            "development_hypothesis": {
+              "complete": true,
+              "simulated_S_od": 0.43453642744238136,
+              "simulated_S_link": 0.9815352038626477,
+              "simulated_S_dev": 0.6993007550366324,
+              "simulated_S_attr": 0.8984972445947254,
+              "simulated_S_ODME": 0.6805948932594371,
+              "relative_path_L1": 0.5666338343783103
+            },
+            "fixed_entropy_D08": {
+              "complete": true,
+              "simulated_S_od": 0.41432144208493515,
+              "simulated_S_link": 0.9813046837580599,
+              "simulated_S_dev": 0.7013954140892398,
+              "simulated_S_attr": 0.8983981218965005,
+              "simulated_S_ODME": 0.6717398502755968,
+              "relative_path_L1": 0.5867313201326562
+            },
+            "fixed_log_demand_D17": {
+              "complete": true,
+              "simulated_S_od": 0.4836537440506655,
+              "simulated_S_link": 0.9761129751525429,
+              "simulated_S_dev": 0.5442322902919988,
+              "simulated_S_attr": 0.9301840002501323,
+              "simulated_S_ODME": 0.6828348721922548,
+              "relative_path_L1": 0.5163462559493345
+            },
+            "ridge_0.05": {
+              "complete": true,
+              "simulated_S_od": 0.30760071047478194,
+              "simulated_S_link": 0.9907242993761672,
+              "simulated_S_dev": 0.5473664701528873,
+              "simulated_S_attr": 0.8233641789005013,
+              "simulated_S_ODME": 0.591710991915702,
+              "relative_path_L1": 0.9147844047948366
+            }
+          },
+          "gain_decompositions_vs_entropy": {
+            "deployment_winner": {
+              "gain": 0.0,
+              "weighted_component_gains": {
+                "simulated_S_od": 0.0,
+                "simulated_S_link": 0.0,
+                "simulated_S_dev": 0.0,
+                "simulated_S_attr": 0.0
+              },
+              "mean_relative_path_L1_reduction": 0.0
+            },
+            "development_hypothesis": {
+              "gain": 0.008855042983840322,
+              "weighted_component_gains": {
+                "simulated_S_od": 0.009096743410850792,
+                "simulated_S_link": 5.7630026146948676e-05,
+                "simulated_S_dev": -0.00031419885789111255,
+                "simulated_S_attr": 1.4868404733731077e-05
+              },
+              "mean_relative_path_L1_reduction": 0.02009748575434589
+            },
+            "fixed_log_demand_D17": {
+              "gain": 0.01109502191665801,
+              "weighted_component_gains": {
+                "simulated_S_od": 0.031199535884578668,
+                "simulated_S_link": -0.0012979271513792467,
+                "simulated_S_dev": -0.023574468569586143,
+                "simulated_S_attr": 0.004767881753044767
+              },
+              "mean_relative_path_L1_reduction": 0.07038506418332169
+            },
+            "ridge_0.05": {
+              "gain": -0.08002885835989482,
+              "weighted_component_gains": {
+                "simulated_S_od": -0.04802432922456895,
+                "simulated_S_link": 0.002354903904526834,
+                "simulated_S_dev": -0.02310434159045287,
+                "simulated_S_attr": -0.011255091449399878
+              },
+              "mean_relative_path_L1_reduction": -0.3280530846621804
+            }
+          }
+        }
+      }
+    },
+    {
+      "study": "reports/research/D24_demand_residual_floor_followup.json",
+      "study_sha256": "f0b732446168987ed1e5a687267602a6f253bfe813ec1a6ac713118f492e2c65",
+      "populations": {
+        "same_laws": {
+          "macro_simulated_components": {
+            "deployment_winner": {
+              "complete": true,
+              "simulated_S_od": 0.4452253132575611,
+              "simulated_S_link": 0.9881519734013657,
+              "simulated_S_dev": 0.8123759358387131,
+              "simulated_S_attr": 0.9179355691862792,
+              "simulated_S_ODME": 0.7069361100699927,
+              "relative_path_L1": 0.5567863257225507
+            },
+            "development_hypothesis": {
+              "complete": true,
+              "simulated_S_od": 0.4936008613618726,
+              "simulated_S_link": 0.9883855297520497,
+              "simulated_S_dev": 0.7915043905990381,
+              "simulated_S_attr": 0.9169644817438567,
+              "simulated_S_ODME": 0.7254871009022892,
+              "relative_path_L1": 0.5080992028551213
+            },
+            "fixed_entropy_D08": {
+              "complete": true,
+              "simulated_S_od": 0.4452253132575611,
+              "simulated_S_link": 0.9881519734013657,
+              "simulated_S_dev": 0.8123759358387131,
+              "simulated_S_attr": 0.9179355691862792,
+              "simulated_S_ODME": 0.7069361100699927,
+              "relative_path_L1": 0.5567863257225507
+            },
+            "fixed_log_demand_D17": {
+              "complete": true,
+              "simulated_S_od": 0.5471055881143815,
+              "simulated_S_link": 0.9849709423575874,
+              "simulated_S_dev": 0.6230071787702418,
+              "simulated_S_attr": 0.9204211385528417,
+              "simulated_S_ODME": 0.723954497839331,
+              "relative_path_L1": 0.4528944118856185
+            },
+            "ridge_0.05": {
+              "complete": true,
+              "simulated_S_od": 0.3729751524214856,
+              "simulated_S_link": 0.9940421103120158,
+              "simulated_S_dev": 0.7551048600177195,
+              "simulated_S_attr": 0.8638037229498643,
+              "simulated_S_ODME": 0.6591856336128101,
+              "relative_path_L1": 0.6787848110712982
+            }
+          },
+          "gain_decompositions_vs_entropy": {
+            "deployment_winner": {
+              "gain": 0.0,
+              "weighted_component_gains": {
+                "simulated_S_od": 0.0,
+                "simulated_S_link": 0.0,
+                "simulated_S_dev": 0.0,
+                "simulated_S_attr": 0.0
+              },
+              "mean_relative_path_L1_reduction": 0.0
+            },
+            "development_hypothesis": {
+              "gain": 0.0185509908322965,
+              "weighted_component_gains": {
+                "simulated_S_od": 0.021768996646940174,
+                "simulated_S_link": 5.838908767100137e-05,
+                "simulated_S_dev": -0.003130731785951257,
+                "simulated_S_attr": -0.00014566311636337036
+              },
+              "mean_relative_path_L1_reduction": 0.04868712286742938
+            },
+            "fixed_log_demand_D17": {
+              "gain": 0.017018387769338283,
+              "weighted_component_gains": {
+                "simulated_S_od": 0.04584612368556917,
+                "simulated_S_link": -0.0007952577609445788,
+                "simulated_S_dev": -0.0284053135602707,
+                "simulated_S_attr": 0.0003728354049843785
+              },
+              "mean_relative_path_L1_reduction": 0.10389191383693219
+            },
+            "ridge_0.05": {
+              "gain": -0.047750476457182556,
+              "weighted_component_gains": {
+                "simulated_S_od": -0.03251257237623397,
+                "simulated_S_link": 0.0014725342276625253,
+                "simulated_S_dev": -0.00859066137314905,
+                "simulated_S_attr": -0.00811977693546223
+              },
+              "mean_relative_path_L1_reduction": -0.12199848534874747
+            }
+          }
+        },
+        "new_shift_laws": {
+          "macro_simulated_components": {
+            "deployment_winner": {
+              "complete": true,
+              "simulated_S_od": 0.4400833428567954,
+              "simulated_S_link": 0.9840431523160342,
+              "simulated_S_dev": 0.72450631145566,
+              "simulated_S_attr": 0.9062512827803715,
+              "simulated_S_ODME": 0.6886619314999711,
+              "relative_path_L1": 0.5612750540212317
+            },
+            "development_hypothesis": {
+              "complete": true,
+              "simulated_S_od": 0.4606293270668112,
+              "simulated_S_link": 0.9842083327096642,
+              "simulated_S_dev": 0.7267477527126387,
+              "simulated_S_attr": 0.9068005170646256,
+              "simulated_S_ODME": 0.6983675208240707,
+              "relative_path_L1": 0.5410496741243024
+            },
+            "fixed_entropy_D08": {
+              "complete": true,
+              "simulated_S_od": 0.4400833428567954,
+              "simulated_S_link": 0.9840431523160342,
+              "simulated_S_dev": 0.72450631145566,
+              "simulated_S_attr": 0.9062512827803715,
+              "simulated_S_ODME": 0.6886619314999711,
+              "relative_path_L1": 0.5612750540212317
+            },
+            "fixed_log_demand_D17": {
+              "complete": true,
+              "simulated_S_od": 0.48664219120504965,
+              "simulated_S_link": 0.978841081187286,
+              "simulated_S_dev": 0.5343272974769828,
+              "simulated_S_attr": 0.9328769313211913,
+              "simulated_S_ODME": 0.6837798906588198,
+              "relative_path_L1": 0.5133578087949504
+            },
+            "ridge_0.05": {
+              "complete": true,
+              "simulated_S_od": 0.31850131229275025,
+              "simulated_S_link": 0.9922804053250973,
+              "simulated_S_dev": 0.5666385160943944,
+              "simulated_S_attr": 0.831835197478355,
+              "simulated_S_ODME": 0.6011667488989243,
+              "relative_path_L1": 0.8303778747487707
+            }
+          },
+          "gain_decompositions_vs_entropy": {
+            "deployment_winner": {
+              "gain": 0.0,
+              "weighted_component_gains": {
+                "simulated_S_od": 0.0,
+                "simulated_S_link": 0.0,
+                "simulated_S_dev": 0.0,
+                "simulated_S_attr": 0.0
+              },
+              "mean_relative_path_L1_reduction": 0.0
+            },
+            "development_hypothesis": {
+              "gain": 0.009705589324099595,
+              "weighted_component_gains": {
+                "simulated_S_od": 0.00924569289450711,
+                "simulated_S_link": 4.129509840750112e-05,
+                "simulated_S_dev": 0.0003362161885468007,
+                "simulated_S_attr": 8.238514263811946e-05
+              },
+              "mean_relative_path_L1_reduction": 0.020225379896929296
+            },
+            "fixed_log_demand_D17": {
+              "gain": -0.004882040841151292,
+              "weighted_component_gains": {
+                "simulated_S_od": 0.02095148175671441,
+                "simulated_S_link": -0.0013005177821870662,
+                "simulated_S_dev": -0.02852685209680158,
+                "simulated_S_attr": 0.003993847281122975
+              },
+              "mean_relative_path_L1_reduction": 0.04791724522628127
+            },
+            "ridge_0.05": {
+              "gain": -0.08749518260104683,
+              "weighted_component_gains": {
+                "simulated_S_od": -0.05471191375382032,
+                "simulated_S_link": 0.002059313252265771,
+                "simulated_S_dev": -0.02368016930418984,
+                "simulated_S_attr": -0.011162412795302473
+              },
+              "mean_relative_path_L1_reduction": -0.269102820727539
+            }
+          }
+        }
+      }
+    }
+  ],
+  "pooled_identical_hypothesis": {
+    "same_hypothesis_settings": {
+      "residual_floor": 2.0,
+      "center_blend": 0.25,
+      "regularization": 0.05
+    },
+    "n_fresh_research_seeds": 6,
+    "comparisons": {
+      "same_laws": {
+        "paired_family_seed_macro_gain": 0.01887568946979427,
+        "ci95": [
+          0.007580369819394615,
+          0.03192351260266196
+        ],
+        "n_families": 5,
+        "n_independent_assessment_seeds": 6,
+        "resamples": 4000,
+        "scope": "Synthetic generating distributions and a small number of seeds; no Kaggle confidence interval"
+      },
+      "new_shift_laws": {
+        "paired_family_seed_macro_gain": 0.009280316153969924,
+        "ci95": [
+          0.00011014671639302499,
+          0.0205429354671398
+        ],
+        "n_families": 5,
+        "n_independent_assessment_seeds": 6,
+        "resamples": 4000,
+        "scope": "Synthetic generating distributions and a small number of seeds; no Kaggle confidence interval"
+      }
+    },
+    "scope": "Secondary pooled six-seed diagnostic of identical development-selected hypotheses;no change to either failed development gate."
+  },
+  "formal_ODME": null,
+  "formal_Total": null,
+  "scope": "Same frozen research predictions;independent diagnostic,not model choice or new performance evidence. L1 path recovery and squared L2 error need not rank models equally;SVD diagnostic is reported separately."
+}
