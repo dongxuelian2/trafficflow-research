@@ -1,5 +1,9 @@
 # 当前实现与评分接口审计
 
+A134以`--winter`复用同一位置结构，动态reference=`nn_primary`、固定候选=`geo_seed_mean`/`geo_speed_reference_flow`；没有树流量或额外通道网格。A136独立重建258节点几何、两共同初始化与完整实际格点曝光45,754,069/45,844,015次，选中pt/alpha/gamma/导出一致；224次predict最大lane-unit差4.55e−13，196指标score差2.22e−16。cal重新评分仍拒绝两候选，primary为原NN。
+
+A135全部8角色×14日直接调用112次；A137重建14日raw teacher/lanes/diagnostic masks和112保存指标，另首末16predict差0，score差1.11e−16。纯新NN二月分数较高不改变cal-only选择。生产src未变，前阶段125research/104CPU+7Torch skips为历史内核证据；本轮脚本compileall及上述实测复核完成。跨方向汇总仅按共同14日同步bootstrap的等方向日均诊断，不算正式权重或28独立日期。
+
 A130的相对位置只读首fit日masked文件link_id/milepost列，以正间距中位数归一化、clip20。两attention各新增一个有符号系数初值0，保持全部非距离state tensor的初始化字节相同；非零输出head的函数等价及新系数可获梯度有测试。RelativePositionStateModel固定link顺序、保存距离buffers，复用父类同FD裁剪/总flow单位/窗口逻辑，保存时移除网络缓存。
 
 A132独立从公开metadata计算距离，逐seed共同初始化/全部cell曝光精确匹配A97，选中pt/gamma/alpha与导出一致；252次直接predict最大差2.27e−13，224指标差1.11e−16，固定新速度/原flow组合及强参照cal gate通过。A133全14日teacher/diagnostics、126指标和另18predict通过。A131比较reference明确为strong_channel，旧study无该配置仍默认nn_primary；没有将超过弱NN当超过当前强基线。新三项测试及全套125research/104CPU、7Torch skips通过。

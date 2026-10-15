@@ -1,0 +1,93 @@
+{
+  "created_UTC": "2026-10-15T09:12:45.395848+00:00",
+  "git_base_before_phase_commit": "77fa23e42f064859f10ba57774aae485f3c26267",
+  "previous_goal_turn_classification": "progress:completed I210 relative-position study,commit77fa23e",
+  "current_goal_turn_classification": "progress",
+  "objective_status": "active;formal0.95000+unachieved",
+  "formal_best_Total": 0.8294,
+  "new_formal_score": null,
+  "formal_model_promoted": false,
+  "completed": [
+    "Two static relative-position ordinary-loss models with identical shared initialization/cell exposure",
+    "Cal selection includes frozen strongest reference and fixed new-speed/reference-flow combination",
+    "Frozen future calendar and full exposure/geometry/deployment verification"
+  ],
+  "primary": "nn_primary",
+  "old_assessment_candidates": {
+    "geo_seed_mean": {
+      "pooled_State_gain": -1.424606416444707e-05,
+      "paired_day_diagnostic": {
+        "paired_day_mean_gain": -5.7475832080298795e-05,
+        "ci95": [
+          -0.00036241228724082086,
+          0.0002474606230802233
+        ],
+        "bootstrap_probability_gain_positive": 0.3825,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    "geo_speed_reference_flow": {
+      "pooled_State_gain": -7.424439818648487e-05,
+      "paired_day_diagnostic": {
+        "paired_day_mean_gain": -0.00011799068619853883,
+        "ci95": [
+          -0.00038435660714158145,
+          0.0001483752347445038
+        ],
+        "bootstrap_probability_gain_positive": 0.21,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    }
+  },
+  "future_candidates": {
+    "geo_seed_mean": {
+      "pooled_State_gain": 0.0005369680774209851,
+      "paired_day_diagnostic": {
+        "paired_day_mean_gain": 0.0006525530441651479,
+        "ci95": [
+          0.00025163326411965184,
+          0.001053472824210644
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    "geo_speed_reference_flow": {
+      "pooled_State_gain": 0.0004248001978464089,
+      "paired_day_diagnostic": {
+        "paired_day_mean_gain": 0.0005201080617010681,
+        "ci95": [
+          0.00014940987489796078,
+          0.0008908062485041755
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    }
+  },
+  "reference_role": "nn_primary",
+  "active_jobs": [],
+  "final_simulator_seeds": {
+    "seeds": [
+      7907,
+      8017,
+      9109
+    ],
+    "generated": false
+  },
+  "platform_policy": "Local models and Git only",
+  "all_previous_complete_submissions_preserved": true,
+  "limits": "One additional direction/fit per phase,public research dates and two seeds sharing labels. Cross-direction summary is descriptive and dates are resampled jointly. Signed distance is a statistical relation,not road connectivity or hidden boundary flux. Formal Physics/Total unknown. No new whole-network fit or complete submission."
+}

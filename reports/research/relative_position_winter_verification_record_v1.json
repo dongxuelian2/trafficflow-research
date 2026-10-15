@@ -1,0 +1,158 @@
+{
+  "created_UTC": "2026-10-15T09:12:45.395848+00:00",
+  "research_pytest": {
+    "passed": 125,
+    "seconds": 10.41,
+    "session_id": 52741,
+    "basetemp": "E:/ieee/.cache/pytest_relative_research_v1"
+  },
+  "CPU_pytest": {
+    "passed": 104,
+    "optional_Torch_modules_skipped": 7,
+    "seconds": 8.04,
+    "basetemp": "E:/ieee/.cache/pytest_relative_cpu_v1"
+  },
+  "new_kernel_tests": {
+    "passed": 3,
+    "seconds": 3.51,
+    "scope": "Analytic distance units/permutation;shared weights/nonzero-head equality at zero bias/learnable gradient;roundtrip cache/keys/flow units"
+  },
+  "kernel_test_evidence_scope": "Historical unchanged production-kernel tests from I210 phase;not rerun in winter script-only phase",
+  "compileall_passed": true,
+  "cell_exposure_archives_verified": 2,
+  "n_direct_cal_ass_predictor_calls": 224,
+  "n_cal_ass_metrics_recalculated": 196,
+  "n_direct_forward_calls": 112,
+  "n_forward_metrics_recalculated": 112,
+  "n_additional_forward_audit_calls": 16,
+  "maximum_cal_ass_prediction_error_lane_units": 4.547473508864641e-13,
+  "maximum_forward_score_error": 1.1102230246251565e-16,
+  "paired_seed_policy_diagnostics": [
+    {
+      "phase": "old_assessment",
+      "seed": 20261013,
+      "pooled_State_gain_vs_same_seed": 0.000616910345143773,
+      "day_mean_diagnostic": {
+        "paired_day_mean_gain": 0.0006125527190113231,
+        "ci95": [
+          6.0812044841350244e-05,
+          0.0011733980618683756
+        ],
+        "bootstrap_probability_gain_positive": 0.99625,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    {
+      "phase": "old_assessment",
+      "seed": 20261029,
+      "pooled_State_gain_vs_same_seed": -0.000723851392497199,
+      "day_mean_diagnostic": {
+        "paired_day_mean_gain": -0.0007897386050848712,
+        "ci95": [
+          -0.001122753494696522,
+          -0.0004567237154732205
+        ],
+        "bootstrap_probability_gain_positive": 0.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    {
+      "phase": "new_calendar",
+      "seed": 20261013,
+      "pooled_State_gain_vs_same_seed": 0.0009149101535396165,
+      "day_mean_diagnostic": {
+        "paired_day_mean_gain": 0.0010623748882944786,
+        "ci95": [
+          0.0004826750152940397,
+          0.0016420747612949174
+        ],
+        "bootstrap_probability_gain_positive": 1.0,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    },
+    {
+      "phase": "new_calendar",
+      "seed": 20261029,
+      "pooled_State_gain_vs_same_seed": 0.00016407109469329662,
+      "day_mean_diagnostic": {
+        "paired_day_mean_gain": 0.00020882008896806945,
+        "ci95": [
+          -0.00014527752383169945,
+          0.0005629177017678384
+        ],
+        "bootstrap_probability_gain_positive": 0.8725,
+        "n_days": 14,
+        "block_days": 7,
+        "resamples": 4000,
+        "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+      }
+    }
+  ],
+  "scope": "Two new trained models only;other roles are frozen controls or fixed combinations. Paired seed comparisons may use different cal alpha/checkpoints.",
+  "cross_direction_future_diagnostics": {
+    "earlier_source_sha256": {
+      "reports/research/A130_I210_W_relative_position_attention.json": "35383939b242b68e6972c6afa45c1a79c5731f45a79f4ed3f42de5831058c146",
+      "reports/research/A131_I210_W_relative_position_forward_calendar.json": "f6673a4069d19f86c300242cb8f8e992d748345200ef54fb7491ae4be291d814"
+    },
+    "diagnostics": {
+      "pure_geometry_vs_NN": {
+        "date_aligned_equal_corridor_day_mean": {
+          "paired_day_mean_gain": 0.001046100120740626,
+          "ci95": [
+            0.0007722615640562821,
+            0.00131993867742497
+          ],
+          "bootstrap_probability_gain_positive": 1.0,
+          "n_days": 14,
+          "block_days": 7,
+          "resamples": 4000,
+          "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+        },
+        "roles": [
+          {
+            "reference": "nn_primary",
+            "candidate": "geo_seed_mean"
+          },
+          {
+            "reference": "nn_primary",
+            "candidate": "geo_seed_mean"
+          }
+        ]
+      },
+      "cal_selected_policy_vs_own_reference": {
+        "date_aligned_equal_corridor_day_mean": {
+          "paired_day_mean_gain": 0.0006300455485963348,
+          "ci95": [
+            0.00037173041452791066,
+            0.000911030728782022
+          ],
+          "bootstrap_probability_gain_positive": 1.0,
+          "n_days": 14,
+          "block_days": 7,
+          "resamples": 4000,
+          "note": "Day-mean diagnostic, not a confidence interval for Kaggle score."
+        },
+        "roles": [
+          {
+            "reference": "strong_channel",
+            "candidate": "geo_speed_tree_flow"
+          },
+          {
+            "reference": "nn_primary",
+            "candidate": "nn_primary"
+          }
+        ]
+      }
+    },
+    "scope": "Descriptive two fitted directions sharing 14 research dates,not 28 independent days. Equal-corridor daily diagnostic,not official corridor weighting or pooled State. No new selection;no multiplicity correction."
+  }
+}

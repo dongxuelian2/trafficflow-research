@@ -20,12 +20,13 @@ def main():
     folder=Path('artifacts/research')/args.output.stem
     if folder.exists() or args.output.exists():raise FileExistsError('Never overwrite relative verification')
     study=json.loads(args.study.read_text());cfg=study['registered']['protocol'];source=Path('artifacts/research')/args.study.stem
+    reference_role=cfg.get('reference_role','strong_channel');hybrid_role=cfg.get('hybrid_role','geo_speed_tree_flow')
     control=json.loads(Path(cfg['control_study']).read_text());control_folder=Path('artifacts/research')/Path(cfg['control_study']).stem
     views=json.loads((Path(cfg['views'])/'cache.json').read_text());old=json.loads(Path(cfg['source_study']).read_text())['registered']['protocol'];cache=Path(old['cache'])
     if sha256_file(source/'selection_sealed.json')!=study['selection_seal_sha256'] or json.loads((source/'selection_sealed.json').read_text())!=study['selection']:raise ValueError('Seal changed')
     if study['phase_read_order']!=[{'part':'selection','prior_selection_seal_sha256':None},{'part':'assessment','prior_selection_seal_sha256':study['selection_seal_sha256']}]:raise ValueError('Assessment order changed')
     registered=register_protocol(args.output.with_suffix('.registered.json'),{'id':'Independent_relative_geometry_and_matched_training_verification',
-        'source_study_sha256':sha256_file(args.study),'scope':'Static metadata/distance matrix,both common initializations and full actual cell exposures,selected checkpoints/alpha,all28dates x9export calls and saved scores. No refit controls/unselected grid replay.',
+        'source_study_sha256':sha256_file(args.study),'scope':f"Static metadata/distance matrix,both common initializations and full actual cell exposures,selected checkpoints/alpha,all28dates x{len(study['exports'])}export calls and saved scores. No refit controls/unselected grid replay.",
         'formal_State':None,'formal_Physics':None,'formal_Total':None})
     folder.mkdir(parents=True);snapshot=capture_source_snapshot(folder/'source_snapshot.zip');start=time.perf_counter()
     torch.set_num_threads(4);torch.use_deterministic_algorithms(True);torch.backends.cudnn.benchmark=False
@@ -79,7 +80,7 @@ def main():
         if sha256_file(path)!=study['cache_sha256'][path.as_posix()] or sha256_file(record['path'])!=record['sha256']:raise ValueError('Evaluator bytes changed')
         day=evaluator.load(date,path);metrics=study['selection']['cal_metrics'] if part=='selection' else study['assessment']
         with np.load(record['path']) as a:
-            if not np.array_equal(a['geo_speed_tree_flow'][:,0],a['geo_seed_mean'][:,0]) or not np.array_equal(a['geo_speed_tree_flow'][:,1],a['strong_channel'][:,1]):raise ValueError('Hybrid changed fixed channel weights')
+            if not np.array_equal(a[hybrid_role][:,0],a['geo_seed_mean'][:,0]) or not np.array_equal(a[hybrid_role][:,1],a[reference_role][:,1]):raise ValueError('Hybrid changed fixed channel weights')
             for role,model in models.items():
                 key=study['selection']['primary'] if role=='primary_export' else role
                 p=model.predict(day['features'],day['template'])[VALUES].to_numpy(float);p[:,1]/=day['target_link_lanes'];error=float(np.abs(p-a[key]).max());maximum=max(maximum,error)
@@ -94,11 +95,11 @@ def main():
     for (part,role),values in rows.items():
         wanted=(study['selection']['cal_metrics'] if part=='selection' else study['assessment'])[role]['S_state']
         if abs(state_from_sufficient_stats(values)['S_state']-wanted)>1e-12:raise ValueError('Pooled metrics differ')
-    reference=state_from_sufficient_stats(rows[('selection','strong_channel')]);eligible=[]
-    for role in ['geo_seed_mean','geo_speed_tree_flow']:
+    reference=state_from_sufficient_stats(rows[('selection',reference_role)]);eligible=[]
+    for role in cfg['candidates']:
         metrics=state_from_sufficient_stats(rows[('selection',role)]);minimum=min(a['S_state']-b['S_state'] for a,b in zip(metrics['details'],reference['details']))
         if metrics['S_state']-reference['S_state']>=.0005 and minimum>=-.001:eligible.append(role)
-    primary=max(eligible,key=lambda r:state_from_sufficient_stats(rows[('selection',r)])['S_state']) if eligible else 'strong_channel'
+    primary=max(eligible,key=lambda r:state_from_sufficient_stats(rows[('selection',r)])['S_state']) if eligible else reference_role
     if eligible!=study['selection']['eligible_candidates'] or primary!=study['selection']['primary']:raise ValueError('Strong-reference cal gate differs')
     result={'registered':registered,'source_snapshot':snapshot,'exposure_checks':checks,'public_geometry_exact':True,'n_direct_predictor_calls':len(calls),
         'maximum_prediction_error_lane_units':maximum,'maximum_score_error':maximum_score,'n_saved_role_day_metrics_recalculated':sum(map(len,rows.values())),

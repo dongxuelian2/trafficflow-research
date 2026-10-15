@@ -1,4 +1,4 @@
-# 相对里程注意力：A130–A133
+# 相对里程注意力：A130–A137
 
 正式最佳仍Kaggle **0.82940**，0.95000+未达到。以下全部为公开TRAIN的本地State；没有正式Physics或Total测量，也没有替换原完整提交。
 
@@ -52,4 +52,44 @@ A132独立重建公开位置/归一化距离/两个共同初始化和完整逐�
 .venv-research\Scripts\python.exe scripts/verify_native_remask_forward.py --study reports/research/A131_I210_W_relative_position_forward_calendar.json --output reports/research/A133_I210_W_relative_position_forward_independent_verification.json
 ```
 
-已有目录禁止覆盖，重跑用新输出名。下一步保持此结构/普通损失，在其他方向独立训练并与各自最强cal参照比较；I5_N原树流量迁移失败，不可直接复用I210的流量选择。
+已有目录禁止覆盖，重跑用新输出名。I5_N原树流量迁移失败，不可直接复用I210的流量选择。下面记录同一结构的跨方向检验。
+
+## 冬季 I5_N：固定协议
+
+A134沿用A104两seed Queue-shaped控制、A107已核验导出和全部存储采样计划。258测量节点，profile45日，fit153日（7/16–12/15），cal12/16–12/29，原后留12/30–1/12；预登记新日历仍为2/15–2/28。只新增两个位置参数，训练预算、共同初始化、普通损失及监督格点全部匹配原控制。
+
+性能参照为冻结NN，固定候选为纯位置NN均值和“新NN速度＋原NN流量”。不拟合或导入冬季流量树；仍按cal gain≥.0005、各regime损失不超过.001选择。原后留只在两seed/checkpoint/alpha/primary整体封存后读取。
+
+两方向非对角距离达到cap20的比例为I210_W 63.06%、I5_N 89.80%。同一距离规则在不同节点密度下不表示相同的物理作用范围；本轮保持规则不变，不按评估结果调整cap。跨方向日均诊断把共同14日同步重采样，不能算成28独立日或正式走廊权重。
+
+```powershell
+.venv-research\Scripts\python.exe scripts/train_relative_position_ablation.py --winter --output artifacts/research/A134_I5_N_relative_position_attention
+.venv-research\Scripts\python.exe scripts/evaluate_exported_state_forward.py --study reports/research/A134_I5_N_relative_position_attention.json --output reports/research/A135_I5_N_relative_position_forward_calendar.json
+.venv-research\Scripts\python.exe scripts/verify_relative_position_training.py --study reports/research/A134_I5_N_relative_position_attention.json --output reports/research/A136_I5_N_relative_position_training_verification.json
+.venv-research\Scripts\python.exe scripts/verify_native_remask_forward.py --study reports/research/A135_I5_N_relative_position_forward_calendar.json --output reports/research/A137_I5_N_relative_position_forward_independent_verification.json
+.venv-research\Scripts\python.exe scripts/checkpoint_relative_position.py --winter
+```
+
+本阶段仅修改研究runner/verifier/checkpoint脚本，生产src不变。上一阶段125 research、104 CPU通过及7 Torch模块跳过为历史内核证据，不重复记作本轮新测试。
+
+## 冬季结果与限制
+
+| 策略 | cal | 原14日后留 | 2/15–2/28 |
+|---|---:|---:|---:|
+| 原NN均值（封存primary） | .955885 | .957512 | .959782 |
+| 新位置NN均值 | .956055 | .957498 | .960319 |
+| 新速度＋原NN流量 | .955930 | .957438 | .960207 |
+
+纯位置cal仅+.000169850，R1损失.000833375，未过总gain+.0005门槛。固定组合cal仅+.000045589，R1损失.001047952，还触发regime保护。旧后留纯模型gain−.000014246、日均CI[−.000362412,.000247461]；新日历+.000536968、日均CI[.000251633,.001053473]。固定组合旧/新gain−.000074244/+.000424800，区间分别跨零/为正。不得在看到二月后把新NN改为primary。
+
+两个新模型均epoch24/alpha.75，原配对控制也相同。gamma为[.343653,.091409]和[.345850,.095314]；正的近邻偏好并不保证State晋级。原后留R1/R2/R3为5/5/4日，新日历7/1/6日；名义日均区间不作pooled State/Kaggle区间，无多重比较校正。
+
+纯新NN误差分层：旧降速速度9.983→8.186、恢复10.016→11.144、60min缺失1.301→1.353、拥堵2.012→1.686。新日历降速15.084→12.653、恢复11.531→11.858、60min缺失1.368→1.216、拥堵3.384→2.686。急降速flow新日历95.743→101.651更差；不能只报速度收益。180min缺失两时段均无目标。
+
+旧增量L1旧后留.650629→.633118、新日历.662477→.652704；原后留State几乎持平，因此代理改善不作为正式Physics晋级证据。两fit/cal角色517.67/513.91秒，A134整体1084.44秒，GPU allocated峰值2099.63MiB。实际监督曝光45,754,069/45,844,015次与控制一致。没有新全网生产训练或完整submission。
+
+相对各自配对控制，seed20261013/20261029旧后留gain+.000616910/−.000723851，日均CI分别[.000060812,.001173398]/[−.001122753,−.000456724]。新日历+.000914910/+.000164071，区间[.000482675,.001642075]/[−.000145278,.000562918]。不能只保留第一seed或把第二seed的未来小正值当稳定证据。
+
+A136完整独立几何/共同初始化/逐格曝光、选中pt/gamma/alpha、固定组合及cal gate核验通过。28日×8角色224次实际predict最大lane-unit差4.55e−13，196保存指标score差2.22e−16，283.78秒。A135全部8角色×14日112次predict、156.89秒；A137全部14日teacher/diagnostics和112指标另算，首末16次predict差0、score差1.11e−16、35.63秒。评估曾并行，不能当隔离速度基准。
+
+跨方向共同二月的纯新NN相对各自NN，等方向day-mean gain+.001046100、同步7日block区间[.000772262,.001319939]；cal-selected策略相对各自强参照+.000630046、区间[.000371730,.000911031]，其中冬季策略完全没变。它们只有共同14日期、两个拟合方向，未按正式走廊权重，不能取代冬季失败的cal gate或解释成全网State/Total收益。
