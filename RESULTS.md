@@ -2,6 +2,14 @@
 
 **当前已核验的正式 Kaggle Total：0.82940。目标 0.95000+ 尚未达到。**
 
+**A102–A111阶段记录：同视图强LGB提升自身，但未替代A97神经模型；冬季扩展仍在运行。** I210_W原后留的旧树/point新树均值/Queue-shaped新树均值/冻结NN为 **.927102/.931238/.930716/.938919**；预登记1/23–2/5为 **.921600/.924704/.924905/.929704**。两seed、每通道400树/63叶、原profile和60维v2特征，使用相同重新mask标签池，但平方损失/重加权/完整数据遍历与NN不同，不当纯架构或纯数据单因素结论。
+
+Cal在旧树、NN、两新树均值及六种预设混合中仍选NN。新日期.25树混合pooled gain **+.000289/+.000346**，day-mean区间 **[−.000598,.000607] / [−.000513,.000646]**；旧后留还略负，未根据这个次要结果改选。树模型主训练500.86秒CPU；后续含NN的forward32.96秒实际使用GPU，不能当CPU测速。
+
+A110独立重建920个date/view训练表组、teacher/base/row keys/weight，168次纯树角色部署及4次选中策略调用通过，392保存指标复算；A111重建14日teacher/诊断mask并复算210指标，另18次直接predict差0。117 research tests通过；CPU101通过/5 Torch skips。
+
+I5_N的153fit日期、1224视图已完成，A105全部重建及16次真实目标poison检查通过。A104按冻结同协议训练2seed×point/Queue-shaped四模型，首模型fit/cal完成，其余继续；原assessment与1/23–2/5 forward成绩仍未知。旧控制引用A73/A75、构造源码及shared初始化hash核对，不重新拟合对照。详见 [树对照与冬季扩展](docs/REMASK_TREE_AND_WINTER_RESEARCH.md)。无新正式分数或完整submission替换。
+
 **A96–A101：面向官方随机缺失的State数据增强在两个时间段均取得本地增益。** 同一97307参数GRU、同初始化/原patch中心/24×120预算，四份合法raw-fit重新mask视图增加不同监督位置；对照复用经独立核验的原GRU，未把它算作本轮重新训练。Cal预先选point+模拟Queue90min空缺的双seed均值，所有选择封存后才读原assessment及预登记一月日历。
 
 | 公开train评估 | 原GRU均值 | 纯随机重新mask | 随机mask+模拟Queue空缺（cal primary） | primary pooled增益 |

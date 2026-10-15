@@ -1,0 +1,57 @@
+{
+  "protocol_sha256": "eb5470799063570645690df711c98c0f48776dc05d62d34903c64f7f9864f25b",
+  "protocol": {
+    "id": "Native_rate_point_remask_and_mock_Queue_buffer_GRU_ablation",
+    "panel": "D12_I5_N",
+    "source_study": "reports/research/A73_recurrent_I5_N_winter.json",
+    "source_study_sha256": "aabad344e932aaf8b5785ff8a0504c0b8cbb14f53632870f94f8c5fe320bd97e",
+    "views_report_sha256": "f2bf9ccbc8e53bd684cf59f573fed784e292ea19d68c34e5ba3415feebf8bd2b",
+    "views": "artifacts/research/A102_I5_N_native_remask_fit_views",
+    "frozen_control_study_sha256": "aabad344e932aaf8b5785ff8a0504c0b8cbb14f53632870f94f8c5fe320bd97e",
+    "control_verification_sha256": "6789f786d31441ead21f151be0c5784b4959b894beaeb1f35c4f89de37d399bf",
+    "reference_replay": "reports/research/A75_recurrent_I5_N_independent_replay.json",
+    "reference_replay_sha256": "6789f786d31441ead21f151be0c5784b4959b894beaeb1f35c4f89de37d399bf",
+    "variants": [
+      "point",
+      "queue"
+    ],
+    "seeds": [
+      20261013,
+      20261029
+    ],
+    "epochs": 24,
+    "steps_per_epoch": 120,
+    "batch_size": 4,
+    "parameters": 97307,
+    "context": 128,
+    "core": 64,
+    "optimizer": "AdamW lr.001 wd1e-4 clip1",
+    "sampling": "Same original uniform regime/day/core centers and shared augmentation plan perseed;probability.5 selects one of4views",
+    "control_reuse": "Original perseed GRU checkpoints/cal choices independently deployed on280role-days;constructor sources and shared initial RNG hash exact;reuse explicitly,no new control fitting",
+    "labels": "Original target labels on nonaug samples;new public raw-fit target positions on augmented samples. Same update budget,NOT same label population/count",
+    "checkpoint": "Pure ordinary cal State every4epochs,first max;perseed blend0/.25/.5/.75/1 ordinary cal only",
+    "primary": "Max cal of incumbent,LGB,prior_GRU,point_seed_mean,queue_seed_mean;equal seed weights fixed",
+    "assessment": "Old public assessment is regression,read only after all choices sealed;no threshold tuning",
+    "future_dates": [
+      "2031-01-23",
+      "2031-01-24",
+      "2031-01-25",
+      "2031-01-26",
+      "2031-01-27",
+      "2031-01-28",
+      "2031-01-29",
+      "2031-01-30",
+      "2031-01-31",
+      "2031-02-01",
+      "2031-02-02",
+      "2031-02-03",
+      "2031-02-04",
+      "2031-02-05"
+    ],
+    "future_scope": "New calendar for these trained policies,other public historical studies possible;not final/private",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

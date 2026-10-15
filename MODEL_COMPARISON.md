@@ -3,6 +3,19 @@
 正式基准为 Kaggle ref **57138874 / 0.82940**，SHA-256 `43f25e68ce91c975c2a926479a2b592ef29663dc9d8dfa34c5492948fd45bae1`。
 完整文件与原模型保存在 `artifacts/frozen_baselines/57138874`。下面指标来源不同，不相加为正式 Total。
 
+同一I210_W fit视图池的强树参照如下，cal仍选择冻结NN；没有按forward反选混合。
+
+| 固定策略 | 原14日assessment State | 预登记1/23–2/5 State |
+|---|---:|---:|
+| 旧强LGB | .927102 | .921600 |
+| point LGB双seed均值 | .931238 | .924704 |
+| Queue-shaped LGB双seed均值 | .930716 | .924905 |
+| 冻结A97 NN primary | **.938919** | **.929704** |
+| .25point树+.75NN | .938490 | .929993 |
+| .25Queue-shaped树+.75NN | .938358 | .930050 |
+
+新日期两个.25混合的日均CI均跨零，旧后留略负；纯新树相对NN两日历均低、名义区间负。同标签池不等于同特征、损失、重加权或优化预算，不能把差距完全归因架构。冬季A104仍在训练，跨方向新策略结果未知。见 `docs/REMASK_TREE_AND_WINTER_RESEARCH.md`。
+
 最新同GRU参数、初始化及更新/采样中心预算的合法重新mask数据增强，明确改变了可用标签人口；冻结旧control不重复训练。
 
 | 固定双seed策略 | 原14日公开assessment State | 一月14日forward State |

@@ -9,8 +9,10 @@ def role_paths(study_path):
     study=json.loads(study_path.read_text());config=study['registered']['protocol'];folder=Path('artifacts/research')/study_path.stem
     original=json.loads(Path(config['source_study']).read_text());old=original['registered']['protocol']
     if sha256_file(config['source_study'])!=config['source_study_sha256']:raise ValueError('Original study changed')
-    replay=json.loads(Path('reports/research/A74b_recurrent_I210_W_independent_replay.json').read_text())
-    if config['panel']!='D7_I210_W' or replay['registered']['protocol']['source_study_sha256']!=sha256_file(config['source_study']):
+    replay_path=Path(config.get('reference_replay','reports/research/A74b_recurrent_I210_W_independent_replay.json'))
+    replay=json.loads(replay_path.read_text())
+    if config.get('reference_replay_sha256',sha256_file(replay_path))!=sha256_file(replay_path):raise ValueError('Original role replay changed')
+    if config['panel']!=old['panel'] or replay['registered']['protocol']['source_study_sha256']!=sha256_file(config['source_study']):
         raise ValueError('Wrong original role export for this corridor')
     paths={'lgb':Path(replay['exports']['lgb']['path']),'incumbent':Path(old['incumbent_file']),
         'prior_GRU':Path(replay['exports']['tcn_gru_seed_mean']['path'])}

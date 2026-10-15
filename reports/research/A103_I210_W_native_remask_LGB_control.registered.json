@@ -1,0 +1,73 @@
+{
+  "protocol_sha256": "d23be9c65ad5a023acdffe48b0c0d04f328a21d880259f914dc145746d466416",
+  "protocol": {
+    "id": "Strong_LightGBM_on_matched_native_remask_views",
+    "source_study_sha256": "8bde3ffc89105f76d31e4d96d586d558e6c21620be24cc85cea8fbba34f32c8f",
+    "view_report_sha256": "17592bf01d2db98338fa4aa130cd605db97b283cb81e8729ef0df3718ca3896e",
+    "native_NN_study_sha256": "1de78bac70f027d18317fa8ae1cfae29722fecc7eb4e893626242832297656c5",
+    "NN_primary_export": {
+      "path": "artifacts/research/A100_I210_W_native_remask_training_independent_replay/State_primary.pkl",
+      "sha256": "e45787da6a8427dfea2da15700bdf7adf88b08837eb0584b032664d35e792631"
+    },
+    "panel": "D7_I210_W",
+    "seeds": [
+      20261013,
+      20261029
+    ],
+    "variants": [
+      "point",
+      "queue"
+    ],
+    "tree_parameters_from_original": {
+      "boosting_type": "gbdt",
+      "class_weight": null,
+      "colsample_bytree": 0.9,
+      "importance_type": "split",
+      "learning_rate": 0.035,
+      "max_depth": -1,
+      "min_child_samples": 80,
+      "min_child_weight": 0.001,
+      "min_split_gain": 0.0,
+      "n_estimators": 400,
+      "n_jobs": 4,
+      "num_leaves": 63,
+      "objective": null,
+      "random_state": 20261013,
+      "reg_alpha": 0.0,
+      "reg_lambda": 5.0,
+      "subsample": 1.0,
+      "subsample_for_bin": 200000,
+      "subsample_freq": 0,
+      "verbosity": -1,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "feature_version": 2,
+    "data": "All original fit grid targets plus all4remask target sets pervariant,same float32 link/time teacher pool as NN",
+    "sample_weight": "Half original,half four new views;uniform regime/date/target inside each group;total effective mass original target count",
+    "budget": "Original400trees/63leaves and4CPUthreads;more rows and different loss/weighting than NN,not equal optimization budget",
+    "primary": "Cal-only max oldLGB,previousNNprimary and each2seed tree mean blended with NN at tree weight0/.25/.5/.75/1",
+    "assessment": "Original viewed assessment only after selection seal;all negative results retained",
+    "future_dates": [
+      "2031-01-23",
+      "2031-01-24",
+      "2031-01-25",
+      "2031-01-26",
+      "2031-01-27",
+      "2031-01-28",
+      "2031-01-29",
+      "2031-01-30",
+      "2031-01-31",
+      "2031-02-01",
+      "2031-02-02",
+      "2031-02-03",
+      "2031-02-04",
+      "2031-02-05"
+    ],
+    "future_status": "Fixed before tree fit;public research calendar,other historical studies may have viewed dates",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null,
+    "uploaded": false
+  }
+}

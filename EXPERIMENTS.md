@@ -2,6 +2,20 @@
 
 所有模拟指标、观测代理与正式 Kaggle 指标分别记录。失败实验不删除，既有模型与提交不覆盖。
 
+最新阶段完成同视图树对照，冬季新训练是已核验live handle上的持续任务，不因观察超时重启。
+
+| 编号 | 假设 / 核验 | 结果 / 资源 |
+|---|---|---|
+| A102 | I5_N153fit日同策略4view×point/Queue-shaped | 1224view，591.11秒；profile/fit/cal/assessment分离 |
+| A103 | I210_W2seed×2variant同标签池强LGB，固定400树/63叶 | 旧后留point/queue .931238/.930716 vsNN .938919；cal仍选NN，500.86秒CPU；标签重加权同时变化 |
+| A104 | 冬季2seed×2variant原GRU同初始化/预算，复用已核验控制 | 正在同一训练任务内执行，未读后留；不把partialcal当正式或assessment |
+| A105 | 冬季全部输入/label masks与poison检查 | 1224view exact、16poison通过；归一化teacher差2.38e−7，498.93秒 |
+| A109 | 树/NN策略固定后的1/23–2/5日历 | NN .929704，point/queue树 .924704/.924905；.25混合略正但CI跨零，primary不变；32.96秒、含GPU推断 |
+| A110 | 全树训练表/权重及cal/ass角色核验 | 920组exact；168树role/day+4选中策略调用，392保存指标复算；182.26秒 |
+| A111 | forward全teacher/diagnostics/score及采样部署 | 14日/210指标差≤1.11e−16，另18predict差0；9.92秒 |
+
+当前117 research passed/13.92秒；CPU101 passed/5 Torch skips/11.42秒。表格数据策略、特征编码、损失及优化预算存在差别，不把结果归因单一组件。原0.82940及所有完整候选保持冻结，冬季结果等待同一任务完成后读取。
+
 最新A96–A101回到官方随机mask目标，记录实际数据增强预算，不以严重断测合成分数代替State。
 
 | 编号 | 假设 / 验证 | 实测 / 资源 |

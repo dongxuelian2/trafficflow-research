@@ -19,28 +19,31 @@ from trafficflow.experiments import partition_date,day_template,raw_for,target_t
 from trafficflow.research_eval import register_protocol,paired_block_interval
 from trafficflow.runtime import capture_source_snapshot,sha256_file,evidence
 from recurrent_state_experiment import neural_predictions,mix,summarize,transition_masks
+from native_remask_reference import reference_controls
 
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--views',type=Path,required=True)
+    parser.add_argument('--reference-replay',type=Path);parser.add_argument('--forward-start',default='2031-01-09')
+    parser.add_argument('--forward-end',default='2031-01-22')
     parser.add_argument('--output',type=Path,required=True);args=parser.parse_args()
     report=Path('reports/research')/(args.output.name+'.json')
     if args.output.exists() or report.exists():raise FileExistsError('Never overwrite remask training')
     view_report=args.views/'cache.json';views=json.loads(view_report.read_text());source_path=Path(views['registered']['protocol']['source_study'])
     original=json.loads(source_path.read_text());config=original['registered']['protocol'];cache=Path(config['cache'])
-    control_path=Path('reports/research/A87_I210_W_outage_augmentation.json');controls=json.loads(control_path.read_text())
-    verified_path=Path('reports/research/A90_I210_W_augmentation_training_independent_replay.json');verified=json.loads(verified_path.read_text())
-    if verified['registered']['protocol']['source_study_sha256']!=sha256_file(control_path):raise ValueError('Wrong frozen controls')
-    future_dates=pd.date_range('2031-01-09','2031-01-22').strftime('%Y-%m-%d').tolist()
+    verified_path,verified,reused_controls,control_initials=reference_controls(source_path,args.reference_replay)
+    future_dates=pd.date_range(args.forward_start,args.forward_end).strftime('%Y-%m-%d').tolist()
+    if len(future_dates)!=14:raise ValueError('Registered14day forward calendar required')
     if set(future_dates)&{d for group in original['prepared']['dates'].values() for d in group}:raise ValueError('Forward calendar overlaps fit/cal')
     registered=register_protocol(report.with_suffix('.registered.json'),{
         'id':'Native_rate_point_remask_and_mock_Queue_buffer_GRU_ablation','panel':config['panel'],
         'source_study':source_path.as_posix(),'source_study_sha256':sha256_file(source_path),'views_report_sha256':sha256_file(view_report),
-        'views':args.views.as_posix(),'frozen_control_study_sha256':sha256_file(control_path),'control_verification_sha256':sha256_file(verified_path),
+        'views':args.views.as_posix(),'frozen_control_study_sha256':sha256_file(source_path),'control_verification_sha256':sha256_file(verified_path),
+        'reference_replay':verified_path.as_posix(),'reference_replay_sha256':sha256_file(verified_path),
         'variants':['point','queue'],'seeds':config['seeds'],'epochs':24,'steps_per_epoch':120,'batch_size':4,'parameters':97307,
         'context':128,'core':64,'optimizer':'AdamW lr.001 wd1e-4 clip1',
         'sampling':'Same original uniform regime/day/core centers and shared augmentation plan perseed;probability.5 selects one of4views',
-        'control_reuse':'A87control checkpoints/cal choices/exposure already tensor-exact with A72b and independently deployed;reuse explicitly,no new control fitting',
+        'control_reuse':'Original perseed GRU checkpoints/cal choices independently deployed on280role-days;constructor sources and shared initial RNG hash exact;reuse explicitly,no new control fitting',
         'labels':'Original target labels on nonaug samples;new public raw-fit target positions on augmented samples. Same update budget,NOT same label population/count',
         'checkpoint':'Pure ordinary cal State every4epochs,first max;perseed blend0/.25/.5/.75/1 ordinary cal only',
         'primary':'Max cal of incumbent,LGB,prior_GRU,point_seed_mean,queue_seed_mean;equal seed weights fixed',
@@ -91,7 +94,7 @@ def main():
     source_folder=Path('artifacts/research')/source_path.stem;incumbent._network=None
     reused={}
     for seed in config['seeds']:
-        role=f'seed{seed}_control';row=verified['exports'][role]
+        role=f'seed{seed}_control';row=reused_controls[role]
         if sha256_file(row['path'])!=row['sha256']:raise ValueError('Frozen perseed control changed')
         reused[role]=row
     def references(part,days):
@@ -112,7 +115,7 @@ def main():
             if device.type=='cuda':torch.cuda.manual_seed_all(seed)
             model=make_network('tcn_gru',48).to(device)
             initial=hashlib.sha256(b''.join(k.encode()+v.detach().cpu().numpy().tobytes() for k,v in model.state_dict().items())).hexdigest()
-            if initial!=controls['training'][f'seed{seed}_control']['initial_sha256']:raise ValueError('Initial weights differ from control')
+            if initial!=control_initials[seed]:raise ValueError('Initial weights differ from reproducible original constructor')
             optimizer=torch.optim.AdamW(model.parameters(),lr=.001,weight_decay=1e-4);history=[];best=-np.inf;tic=time.perf_counter()
             exposure={d['date']:np.zeros(d['mask'].shape,np.int32) for d in fit};patch_hash=hashlib.sha256();augmented_samples=0;augmented_label_exposures=0
             for epoch in range(24):

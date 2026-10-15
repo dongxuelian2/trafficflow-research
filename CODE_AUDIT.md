@@ -1,5 +1,11 @@
 # 当前实现与评分接口审计
 
+新native reference helper支持A73/A75冬季原控制，检查280role-day部署核验源、模型SHA、三个构造源码与原start archive一致，并重现shared初始化hash。全初始化由同seed/未变构造确定；不把冻结控制写成新训练。旧A97无新增字段时仍解析11角色，已实际smoke验证；新source明确记录reference replay路径/SHA与forward日期。
+
+A103对same-view训练表使用完整公开fit teacher与原profile，newBoundedState只作总流量/速度的公开FD上限裁剪。A110重建全部920组feature/base/teacher/row-key/weight，168纯树role-day及4选中策略直接调用，最大lane-unit差2.27e−13；392保存指标复算。A111全14日teacher/变化mask/缺失RLE独立计算，210指标误差≤1.11e−16，另18次predict差0。新forward verifier兼容纯保存模型与派生hybrid，逐项核对固定混合，不把210指标写成210次新推断。
+
+冬季A1051224view和16真实loss-target poison检查已完成，teacher精度在既有1e−6归一化容差内。A104四模型/selection seal尚未全部完成，assessment/forward未知，live handle留入checkpoint；只冻结已完成角色文件和不可变start archive，不将仍变化的progress/current best记录为固定字节。117 research/101 CPU测试通过，5可选Torch跳过。
+
 A96只用原fit日期公开raw观测生成4个seed的新Bernoulli link/time mask，rate取原当日R1/R2/R3，不复制隐藏/official stable-hash答案。Point和Queue-shaped共享点坐标；历史可见/未来90min空缺只按公开或metadata模拟origin，后者不读取condition/future coverage/拥堵标签。两区间都不作Task1 loss。拟合期公开Queue origin实际为0，模拟并非官方selector。
 
 所有teacher目标的speed/flow/occupancy/derived density/pct-observed先移除、flags更新，再从头重建StateFeatures。Profile固定于原45日。A99不调用remask helper，独立重建736输入/loss/hidden arrays；16个实际loss-target poison输入exact，独立float64 raw求和与float32训练label差2.38e−7归一化单位，固定容差1e−6。Builder补齐相邻日history/guard窗口后，逐日确认92fit原origin列表均不变；原cache源快照/数组未改。
