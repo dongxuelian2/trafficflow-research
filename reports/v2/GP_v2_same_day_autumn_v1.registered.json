@@ -1,0 +1,67 @@
+{
+  "protocol_sha256": "270cd5e8682c8510d09d493c419f970e7df2641fed701815a5f5ccbfeb7e974f",
+  "protocol": {
+    "id": "V2_GP_same_day_counterfactual_directional_residual_Nystrom",
+    "code_base_commit": "9f65c96857eb0be8373eb30cf0b18d1ecf39130d",
+    "cases": [
+      [
+        "I5_N_autumn",
+        "D12_I5_N",
+        "artifacts/research/A33_adaptive_attention_strong_autumn/State_selected.pkl",
+        "2030-10-30",
+        "2030-11-12",
+        "2030-11-26",
+        "2030-12-10"
+      ],
+      [
+        "I210_W_autumn",
+        "D7_I210_W",
+        "artifacts/research/A49_adaptive_attention_D7_I210_W/State_selected.pkl",
+        "2030-10-30",
+        "2030-11-12",
+        "2030-11-26",
+        "2030-12-10"
+      ]
+    ],
+    "seed": 20261016,
+    "kernels": [
+      "ordinary",
+      "gated_ordinary",
+      "directional"
+    ],
+    "kernel": {
+      "length_x_km": 2.0,
+      "length_t_hours": 0.5,
+      "downstream_kmh": 80.0,
+      "upstream_kmh": -15.0,
+      "state_length": 1.0,
+      "gate": "logistic((.6-predicted_speed/free_speed)/.08), sqrt branch weights"
+    },
+    "budget": {
+      "fit_labels_per_date": 512,
+      "same_day_anchors": 512,
+      "anchor_counterfactual_folds": 2,
+      "inducing": 192,
+      "batch": 512,
+      "noise_variance": 0.1,
+      "dense_full_GP": false,
+      "gpu_used": "frozen attention inference only",
+      "RSS_budget_MiB": 8192,
+      "BLAS_threads": 1,
+      "frozen_torch_CPU_threads_max": 2
+    },
+    "residual_roles": "Single chronological forward cross-fit: base fit/checkpoint <=Oct29 or Dec29; next14 dates correction fit, next14 calibration, next14 assessment; I210 winter transfers frozen autumn prior. No in-sample base labels.",
+    "temporal_model": "Same-day local posterior from <=512 lawful visible anchors. Each anchor frozen prediction obtained while all four own measurement channels are withheld in one of2 seeded folds; target predictions remain the original frozen cache. Hours since current day start; no cross-date anchor pooling.",
+    "residual_amplitude": "Per-channel RMS fitted only on <=512 held-out correction_fit target residuals per date, clipped [.05,1]. Fixed before calibration. Same amplitudes for every kernel.",
+    "graph_control": "Existing state_assimilation.assimilate_residuals with the exact same sampled counterfactual anchor residuals and trusted edges; fixed precisions (1,1,1). Not a claim to reproduce historical A58 exact settings.",
+    "selection": "Highest calibration official State among strengths [0,.25,.5,1] separately per preregistered kernel/control; ties prefer 0. Save seal then open assessment.",
+    "assessment": "Report baseline, all matched cal-selected strengths and fixed full-strength variants. No selection on assessment.",
+    "primary_comparison": "directional vs ordinary and gated_ordinary selected on calibration; graph control and frozen strong model also reported",
+    "bootstrap": "2000 paired circular date-block samples of length7; nonlinear State macro recomputed; omit missing-regime draws",
+    "promotion": "Requires State gain>=.002, pooled lower95>0, each direction gain>=-.001, both seasons and independent gain over ordinary kernel. Otherwise do not expand.",
+    "metric_scope": "Official eligibility/regime/family formula on selected two directions, not all ten-direction competition State. Trusted-component-only State and coverage are secondary diagnostics. Public observed inventory-increment proxy only; no hidden b* equality.",
+    "formal_State": null,
+    "formal_Physics": null,
+    "formal_Total": null
+  }
+}

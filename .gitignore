@@ -11,3 +11,13 @@ kaggle.json
 *.zip
 docs/PUBLIC_CODE_ANNOUNCEMENT.ipynb
 !reports/**
+# V2 report JSON/Markdown stay versioned; local source snapshots, model weights
+# and prediction arrays remain reproducible artifacts on this workstation.
+reports/v2/**/*.zip
+reports/v2/**/*.pkl
+reports/v2/**/*.npz
+reports/v2/**/*.npy
+reports/v2/**/*.pt
+reports/v2/**/*.pth
+reports/v2/**/__pycache__/
+reports/v2/**/*.pyc

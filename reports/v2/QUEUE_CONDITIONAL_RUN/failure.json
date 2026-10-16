@@ -1,0 +1,26 @@
+{
+  "exception": "ValueError('Full Queue probability/metadata arrays disagree')",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\ieee\\scripts\\v2\\run_queue_experiments.py\", line 303, in main\n    cases = [run_case(case, args.output/case) for case in CASES]\n             ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\ieee\\scripts\\v2\\run_queue_experiments.py\", line 251, in run_case\n    setting = tune_full_probabilities(dp.ravel(), decision['window'], decision['condition'], decision['lead_minutes'],\n              ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                                      decision['labels'].ravel(), decision['available'].ravel())['selected']\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\ieee\\src\\trafficflow\\full_queue_calibration.py\", line 63, in tune_full_probabilities\n    values=[(local.score(full_queue_decisions(p[use],window[use],condition[use],lead[use],{'global':float(t)},force,timing)),float(t)) for t in grid]\n                         ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\ieee\\src\\trafficflow\\full_queue_calibration.py\", line 10, in full_queue_decisions\n    raise ValueError('Full Queue probability/metadata arrays disagree')\nValueError: Full Queue probability/metadata arrays disagree\n",
+  "seconds": 5.56504219999988,
+  "runtime": {
+    "python": "3.13.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus": 16,
+    "process_peak_working_set_MiB": 565.4375,
+    "peak_scope": "current process lifetime, not isolated per model",
+    "source_sha256": "24ba0f2a9674929b8fd4e3507453918e91a8a574c0ca005f47a1790b96e41d62",
+    "model_threads": 4,
+    "gpu_used": false,
+    "source_fingerprint_scope": "On-disk source at evidence() call; a captured start archive is primary when present",
+    "versions": {
+      "numpy": "2.2.5",
+      "pandas": "3.0.5",
+      "scipy": "1.16.1",
+      "pyarrow": "25.0.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10",
+      "scikit-learn": "1.7.2"
+    }
+  },
+  "source_snapshot_sha256": "0c8b2016c9f40d8dd7acf1008a3d76ab900fbdd44dad39534667c66e1654165b"
+}

@@ -1,0 +1,47 @@
+{
+  "experiment": "artifacts/research/GP_v2_same_day_autumn_v2",
+  "status": "interrupted during calibration for second equivalent date-filter acceleration",
+  "assessment_read": false,
+  "assessment_directory_created": false,
+  "calibration_anchor_days_started": 6,
+  "hyperparameters_changed": false,
+  "first_calibration_all_13_candidates_original_scorer_check": "passed; process advanced to later calibration dates",
+  "reason": "Vector candidate scoring worked, but per-date strftime on all 4,469,379 train ramp rows remained about 25 seconds per date. Replace exactly with UTC begin/end comparisons, as already used by the phase-one State runner. Same model/scoring protocol restarted in a fresh v3 output; all partial files retained.",
+  "new_test_failure_retained": {
+    "initial": "2 new vector/midnight tests failed on read-only Pandas to_numpy view in test construction",
+    "repair": "to_numpy(float, copy=True) in test-only synthetic predicted array",
+    "after_repair": "11 passed in 5.17s"
+  },
+  "observed_seconds_registration_to_last_log_write": 162.00235104560852,
+  "timing_scope": "Approximate lower bound from registration-file creation to last flushed log record, excluding any unlogged tail before interruption",
+  "process_peak_working_set_MiB": null,
+  "GPU_peak_allocated_MiB": null,
+  "resource_evidence_limitation": "Interrupted before final runtime evidence collection; unavailable, not zero",
+  "registered_protocol_file_sha256": "91f98f5aaf5cb0cc82c24cf6ec9f811080b0f7ad12a3110e074223a7f73d3f9e",
+  "source_snapshot_sha256": "e84b7aac8fd97c2b1d4f0f4ee88f83e52c73ba32832d13a84842aa40fc6b6bde",
+  "partial_model_hashes": {
+    "I5_N_autumn/calibration/2030-11-13/directional.pkl": "6ba072da001e1ddaa75d8953ff6bce551b954802a539e781f61047077e1b3f79",
+    "I5_N_autumn/calibration/2030-11-13/gated_ordinary.pkl": "4b762035bb0ccfc1a2ba93f687b4b08b4842063275f3f1b32e31fc95868f6b65",
+    "I5_N_autumn/calibration/2030-11-13/ordinary.pkl": "2d517ccb7ec889ba8c7dbfa4366bb5abdb7a94de6d911940f22878e6f884ef4a",
+    "I5_N_autumn/calibration/2030-11-14/directional.pkl": "5e958cf7ccc622babb1dfc9ef72bb2e504e91d0f48e1360df1f5e421f796bcec",
+    "I5_N_autumn/calibration/2030-11-14/gated_ordinary.pkl": "d818584e7aaa74c72d388decbad2fe3d6653948ced7c1aa5e8c314f8b431f4ed",
+    "I5_N_autumn/calibration/2030-11-14/ordinary.pkl": "d060f4cf19a4da6e81d4e3762b844fb3418609c19ddb3b6bcd83085a5ce50a7b",
+    "I5_N_autumn/calibration/2030-11-15/directional.pkl": "79798848477538a4fc3ee56ff4d0f14163ef2c109b685886083c1bdb295a5ad1",
+    "I5_N_autumn/calibration/2030-11-15/gated_ordinary.pkl": "4a62bb495189b105d4953a4658907f4faeaa77bae8d3032ffd2813c44b32dee1",
+    "I5_N_autumn/calibration/2030-11-15/ordinary.pkl": "8ff7101a9ea8db8b979383e6198c17e5ef3b7ed153ed25609093f9c632c69519",
+    "I5_N_autumn/calibration/2030-11-16/directional.pkl": "9caca466f5b059dc9dcd196997643b0bc927c947c02ef4295a80699441814a86",
+    "I5_N_autumn/calibration/2030-11-16/gated_ordinary.pkl": "66fe332c7ea536639df2e16e43127d9a54eaa367ac0470edb1163f1ba5654024",
+    "I5_N_autumn/calibration/2030-11-16/ordinary.pkl": "1bf11266f22b700ecf00fb5b8c7db4cfd1386b3100df0c52a885515d8d6a1c7a",
+    "I5_N_autumn/calibration/2030-11-17/directional.pkl": "1f14a3d0703fdaa3161c2a0008fce43e242a65d63bf60dcd54e793338c7456e2",
+    "I5_N_autumn/calibration/2030-11-17/gated_ordinary.pkl": "96daf005d4174f1417672d5515d1d6c9790483db27afb3c5274ee85284c09dfa",
+    "I5_N_autumn/calibration/2030-11-17/ordinary.pkl": "10dc3e2b4575205edb19fc3ed884696e60b2b7a03a0525714cf3ada35861b0d3",
+    "I5_N_autumn/calibration/2030-11-18/directional.pkl": "a3bb181b506d0ad94010e667cd1ac67a7715a8cecb839c5379f34236a8c70261",
+    "I5_N_autumn/calibration/2030-11-18/gated_ordinary.pkl": "266185d31d8cf32455fef03980401b2d046ad1c115a8aa2b4196d2711730045c",
+    "I5_N_autumn/calibration/2030-11-18/ordinary.pkl": "0aba0b3171c32fb1af0de4c237fb49a47321cc273a4ed61afc80b5deac25806e"
+  },
+  "first_date_models_identical_to_completed_v3": {
+    "ordinary": true,
+    "gated_ordinary": true,
+    "directional": true
+  }
+}

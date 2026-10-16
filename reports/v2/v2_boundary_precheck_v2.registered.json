@@ -1,0 +1,17 @@
+{
+  "protocol_sha256": "311e6cd1f43eac17d244de281ba419e4e3a4acf134f656814fc1fafa90327832",
+  "protocol": {
+    "id": "V2_transport_observation_boundary_launch_gate",
+    "base_commit": "9f65c96857eb0be8373eb30cf0b18d1ecf39130d",
+    "data": "artifacts/research/v2_score_audit_v2/release",
+    "panels": [
+      "D12_I5_N",
+      "D7_I210_W"
+    ],
+    "gate": "Do not launch full transport reconstruction if observed-flux increment relative error>=1 or >half links have unresolved internal boundaries",
+    "windows": "First24 nonoverlapping12-pair link windows in date/link order; no assessment-based selection",
+    "Gaussian_controls": "Q positive diagonal, boundary knots linear trend+intercept; prior SD .1/1/10; fixed, joint profile, analytic marginal",
+    "restriction": "Algebraic boundary attenuation diagnostic on public observations, not a transport predictive score",
+    "formal_Total": null
+  }
+}

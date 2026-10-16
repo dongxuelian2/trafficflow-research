@@ -1,0 +1,160 @@
+{
+  "verified": true,
+  "source_experiment_sha256": "d769f15c384f1e58ba363b9ea1e2cb4914bd6c03c42fb82a762fa8dcf6694a06",
+  "counts": {
+    "hashed_phase_caches": 36,
+    "scalar_window_arm_checks": 4160,
+    "full_tree_probability_recomputations": 48,
+    "reordered_window_arm_reproductions": 544,
+    "prediction_archives": 48,
+    "original_strong_baseline_exact_matches": 24
+  },
+  "maximum_scalar_score_error": 2.220446049250313e-16,
+  "maximum_reordered_probability_error": 1.1102230246251565e-16,
+  "independent_case_condition_macro_IoU": {
+    "20261016": {
+      "C55_I5_S_autumn_five_phase_balanced_v2": {
+        "old_probability_old_decoder": 0.78115127707029,
+        "old_probability_new_decoder": 0.7938477549683165,
+        "event_probability_old_decoder": 0.7354455933683643,
+        "event_probability_new_decoder": 0.7149783538638719
+      },
+      "C56_I5_S_winter_five_phase_balanced_v2": {
+        "old_probability_old_decoder": 0.7972554818199484,
+        "old_probability_new_decoder": 0.7959440720243707,
+        "event_probability_old_decoder": 0.6405075397525098,
+        "event_probability_new_decoder": 0.64931839909781
+      },
+      "C57_I10_W_autumn_five_phase_balanced_v2": {
+        "old_probability_old_decoder": 0.5576588643979948,
+        "old_probability_new_decoder": 0.6052779120170424,
+        "event_probability_old_decoder": 0.6016781309540609,
+        "event_probability_new_decoder": 0.5692062271805414
+      },
+      "C58_I10_W_winter_five_phase_balanced_v2": {
+        "old_probability_old_decoder": 0.8149422225184058,
+        "old_probability_new_decoder": 0.8271304020897001,
+        "event_probability_old_decoder": 0.5502781824419474,
+        "event_probability_new_decoder": 0.674007049629376
+      }
+    },
+    "20261029": {
+      "C55_I5_S_autumn_five_phase_balanced_v2": {
+        "old_probability_old_decoder": 0.78115127707029,
+        "old_probability_new_decoder": 0.7879364108171567,
+        "event_probability_old_decoder": 0.7354455933683643,
+        "event_probability_new_decoder": 0.7097408355228461
+      },
+      "C56_I5_S_winter_five_phase_balanced_v2": {
+        "old_probability_old_decoder": 0.7972554818199484,
+        "old_probability_new_decoder": 0.8036133245771662,
+        "event_probability_old_decoder": 0.6405075397525098,
+        "event_probability_new_decoder": 0.6193753612805311
+      },
+      "C57_I10_W_autumn_five_phase_balanced_v2": {
+        "old_probability_old_decoder": 0.5576588643979948,
+        "old_probability_new_decoder": 0.5493014810406115,
+        "event_probability_old_decoder": 0.6016781309540609,
+        "event_probability_new_decoder": 0.564888968487647
+      },
+      "C58_I10_W_winter_five_phase_balanced_v2": {
+        "old_probability_old_decoder": 0.8149422225184058,
+        "old_probability_new_decoder": 0.8261321250044664,
+        "event_probability_old_decoder": 0.5502781824419474,
+        "event_probability_new_decoder": 0.6750827214669846
+      }
+    }
+  },
+  "independent_comparisons": {
+    "20261016": {
+      "old_probability_old_decoder": {
+        "gain": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_resamples": 3999
+      },
+      "old_probability_new_decoder": {
+        "gain": 0.017798073823197674,
+        "ci95": [
+          -0.001935102744970558,
+          0.03467995697597405
+        ],
+        "valid_resamples": 3999
+      },
+      "event_probability_old_decoder": {
+        "gain": -0.10577459982243914,
+        "ci95": [
+          -0.16532737524300664,
+          -0.03872643576140179
+        ],
+        "valid_resamples": 3999
+      },
+      "event_probability_new_decoder": {
+        "gain": -0.08587445400875995,
+        "ci95": [
+          -0.1346123429383475,
+          -0.029558164721684422
+        ],
+        "valid_resamples": 3999
+      }
+    },
+    "20261029": {
+      "old_probability_old_decoder": {
+        "gain": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "valid_resamples": 3999
+      },
+      "old_probability_new_decoder": {
+        "gain": 0.003993873908190448,
+        "ci95": [
+          -0.004550029060998327,
+          0.013975514903678541
+        ],
+        "valid_resamples": 3999
+      },
+      "event_probability_old_decoder": {
+        "gain": -0.10577459982243914,
+        "ci95": [
+          -0.16532737524300664,
+          -0.03872643576140179
+        ],
+        "valid_resamples": 3999
+      },
+      "event_probability_new_decoder": {
+        "gain": -0.09547998976215757,
+        "ci95": [
+          -0.14380327685339925,
+          -0.039243856347534765
+        ],
+        "valid_resamples": 3999
+      }
+    }
+  },
+  "seconds": 19.058067400001164,
+  "runtime": {
+    "python": "3.13.1",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "logical_cpus": 16,
+    "process_peak_working_set_MiB": 233.296875,
+    "peak_scope": "current process lifetime, not isolated per model",
+    "source_sha256": "24ba0f2a9674929b8fd4e3507453918e91a8a574c0ca005f47a1790b96e41d62",
+    "model_threads": 4,
+    "gpu_used": false,
+    "source_fingerprint_scope": "On-disk source at evidence() call; a captured start archive is primary when present",
+    "versions": {
+      "numpy": "2.2.5",
+      "pandas": "3.0.5",
+      "scipy": "1.16.1",
+      "pyarrow": "25.0.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10",
+      "scikit-learn": "1.7.2"
+    }
+  },
+  "limitations": "Reuses preserved raw history audit and source caches; does not reconstruct all raw observations. Scalar set scores and synchronized date intervals independently recomputed. No latent or formal Queue measurement."
+}

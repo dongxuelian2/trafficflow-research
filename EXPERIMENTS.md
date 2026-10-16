@@ -1,5 +1,7 @@
 # 实验台账 — 0.950+ 攻关
 
+2026-10-16 V2执行台账见 [reports/v2/EXPERIMENTS.md](reports/v2/EXPERIMENTS.md)，[实测结果](reports/v2/RESULTS.md)。包含60日独立官方评分对照、16个低维修正器/4个方向季节case、普通/门控/双向同日CF-anchor GP与图求解器、Queue严格五角色四路控制、未知边界Woodbury/秩/先验敏感性和完整6,980,503行回退候选核查。所有失败、预注册、源码/模型SHA、wall/RSS及GPU证据保留；没有新正式成绩或Kaggle上传。
+
 所有模拟指标、观测代理与正式 Kaggle 指标分别记录。失败实验不删除，既有模型与提交不覆盖。
 
 | 编号 | 假设 / 核验 | 实测结果 / 资源 |

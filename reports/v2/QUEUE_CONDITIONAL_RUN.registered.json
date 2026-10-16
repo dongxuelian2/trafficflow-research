@@ -1,0 +1,34 @@
+{
+  "id": "V2_conditional_observed_event_mixture_v1",
+  "cases": [
+    "C55_I5_S_autumn_five_phase_balanced_v2",
+    "C56_I5_S_winter_five_phase_balanced_v2",
+    "C57_I10_W_autumn_five_phase_balanced_v2",
+    "C58_I10_W_winter_five_phase_balanced_v2"
+  ],
+  "scenario_seeds": [
+    20261016,
+    20261029
+  ],
+  "draws": 256,
+  "source_cache": "Preserved C55-C58 balanced_v2 five-phase histories, targets and frozen strong trees.",
+  "direction_deviation": "I5_N has C30/C33 three-phase caches only; use I5_S and I10_W two seasons to preserve truly separate five roles.",
+  "fit": "Fit-only condition-separated empirical joint trajectories, Gaussian threshold/observation smoothing; legal thirteen-slot history has fixed 8-bin summaries.",
+  "checkpoint": "Choose nearest-neighbor count from [8,24] by equal-condition/equal-window Brier, ties prefer24. No other event hyperparameter search.",
+  "decision": "Freeze old incumbent/tree/thresholds from original decision seal; calibrate event old-decoder with exactly the original 31-threshold/condition/force grid. New decoder has zero tuned parameters.",
+  "selection": "Primary event+new-decoder versus strong old+old, gain>=.02 and day-block CI lower>0. No retuning; seal before assessment.",
+  "assessment": "Report every fixed four-way arm and both MC seeds, even failed arms. Main research gate requires overall gain>=.02, lower95CI>0, positive sign in all four direction-season cases and >=30 unique onset origins.",
+  "decoder": "Same finite candidate rule/scenario budget for both information arms: empty, 5 thresholds,7 count prefixes,16 sampled trajectories; joint six-step average scenario IoU. Old p uses IID scenarios, event p uses shared fit template and temporally correlated observation noise.",
+  "information_control": "Old p+new decoder retains exact old marginal p; event p+old decoder uses same old decision algorithm/calibration grid. Four-way experiment separates new conditional marginals and scenario decision effects, but does not separately identify every dependence assumption.",
+  "relationship_to_C79": "Both use empirical joint scenarios. C79 fixed tree marginals and fit-only unconditional empirical dependence; this model predicts new marginals and trajectory weights from H,E. No claim of novel generic kNN or MC-IoU algorithm.",
+  "noise_assumption": "sigma=clip(robust five-minute speed difference scale/sqrt(2),1.5,8)km/h; traffic innovations confound actual sensor noise. Shared Gaussian threshold noise correlation .5 fixed.",
+  "prediction_domain": "Full public node x6 domain; onset first5 empty from announced condition. Future availability,quality,observations are training targets or evaluator-only, never prediction-set inputs.",
+  "sample_bias": "Preserved proxy sampler selected future observed positives. Its population is not the unknown official latent selector; this bias is not solved.",
+  "date_provenance": "All public calendars previously used for development; these are not blind tests.",
+  "uncertainty": "4000 paired calendar-day circular moving-block draws,7-day blocks; origins deduplicated across event sampler seeds. Same calendar draws shared across corridors; separate seasons sampled separately. MC seeds are not independent traffic events.",
+  "interpretation": "Observed noisy Queue proxy only. Bottleneck denotes an observed trajectory location tag, not identified causal capacity drop; graph-incomplete direction/front summaries stay qualified. No latent true Queue labels available.",
+  "stop": "Do not expand architecture or threshold/search grid if initial gate fails.",
+  "formal_Queue": null,
+  "formal_Total": null,
+  "uploaded": false
+}

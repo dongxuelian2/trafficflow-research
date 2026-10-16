@@ -2,6 +2,8 @@
 
 检索与阅读日期：2026-10-16。本文与 [数学推导](V2_MATHEMATICAL_DERIVATION.md)、[架构](V2_ARCHITECTURE_PROPOSAL.md)、[决策](V2_RESEARCH_DECISION.md) 配套。没有执行第三方论文代码，也没有把论文指标转换成比赛预期分数。
 
+**执行版修正（2026-10-16）**：后续实现以 [数学契约](../reports/v2/MATHEMATICS.md) 及 [实际结果](../reports/v2/RESULTS.md) 为准。本文原文献阅读等级保持原样，不把新推导冒称论文结论。特别补正：混合模式转移不得与连续高斯重复计数；PDE匝道源须为veh/(h·km)；边界高斯消元要求固定仿射分支、独立先验和正定协方差。固定协方差下联合剖面与边缘二次型相同，不能据算法名称宣称独立优势。检测器平均流量、输运流和库存、State条件均值/宏RMSE/Physics L1各有不同含义。
+
 ## 检索和证据边界
 
 检索覆盖 CTM traffic state estimation、sparse traffic data assimilation、moving horizon estimation、physics-informed reconstruction、graph estimation、incident particle filter、probabilistic queue、OD uncertainty/identifiability、differentiable traffic simulation。使用 arXiv 全文、出版社页面、作者机构记录与作者 GitHub；检索命中 Transportation Research B/C、IEEE TITS/CDC、AMRX、AAAI、ACM TOG、Annals of Applied Statistics 等。没有为凑齐期刊名而纳入不相关 Transportation Science 论文。

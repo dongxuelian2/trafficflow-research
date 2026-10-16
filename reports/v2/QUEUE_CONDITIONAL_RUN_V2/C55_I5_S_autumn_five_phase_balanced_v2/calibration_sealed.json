@@ -1,0 +1,27 @@
+{
+  "event_old_decoder": {
+    "mode": "condition",
+    "thresholds": {
+      "global": 0.5,
+      "queue_ongoing": 0.6000000000000001,
+      "queue_onset": 0.25
+    },
+    "require_nonempty": false,
+    "timing": "before",
+    "calibration_proxy_IoU": 0.6520988334099407
+  },
+  "old_decoder": {
+    "mode": "condition",
+    "thresholds": {
+      "global": 0.5,
+      "queue_ongoing": 0.55,
+      "queue_onset": 0.425
+    },
+    "require_nonempty": false,
+    "timing": "before",
+    "calibration_proxy_IoU": 0.812220225231755
+  },
+  "fixed_primary": "event_probability_new_decoder",
+  "new_decoder_tuned_parameters": 0,
+  "model_sha256": "2faa1fe74ee0c0067baeb0c172389ba3215daab518fc98f842341550873b5217"
+}

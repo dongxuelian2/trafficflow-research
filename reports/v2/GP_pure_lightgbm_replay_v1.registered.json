@@ -1,0 +1,33 @@
+{
+  "protocol_sha256": "fb9e9e2206a8d9466fff6d02804b107ed9d089a588c479704ccd1c79e7f6fd82",
+  "protocol": {
+    "id": "V2_GP_fixed_pure_LightGBM_diagnostic_and_joint_pair_replay",
+    "primary_GP_report_sha256": "f5d0b45df9679903ee28501cae1b4c3f42cbb8edcd9fd75df73b30fc673cb9ca",
+    "cases": [
+      [
+        "I5_N_autumn",
+        "D12_I5_N",
+        "artifacts/research/A33_adaptive_attention_strong_autumn/State_selected.pkl",
+        "2030-10-30",
+        "2030-11-12",
+        "2030-11-26",
+        "2030-12-10"
+      ],
+      [
+        "I210_W_autumn",
+        "D7_I210_W",
+        "artifacts/research/A49_adaptive_attention_D7_I210_W/State_selected.pkl",
+        "2030-10-30",
+        "2030-11-12",
+        "2030-11-26",
+        "2030-12-10"
+      ]
+    ],
+    "selection": "None. Original nested model.baseline is a fixed pure LGB diagnostic; all GP seals remain unchanged.",
+    "dates": "All original14 calibration +14 assessment dates per case",
+    "bounds": "Same [0,1.05*free_speed] and [0,1.05*capacity] as frozen primary",
+    "additional_verification": "For every role/regime jointly call original increment_proxy on all selected timestamps; compare with stitched counts/L1 for pureLGB and original frozen baseline",
+    "CPU_threads": 2,
+    "gpu_used": false
+  }
+}

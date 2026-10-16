@@ -1,0 +1,12 @@
+{
+  "command": ".venv-repro/Scripts/python.exe -m pytest tests/test_v2_event.py tests/test_expected_iou_queue.py tests/test_queue_phase_split.py tests/test_queue_domain.py -q",
+  "passed": 17,
+  "seconds": 2.15,
+  "tests": ["tests/test_v2_event.py", "tests/test_expected_iou_queue.py", "tests/test_queue_phase_split.py", "tests/test_queue_domain.py"],
+  "numeric_repair": "Clip convex-combination output to[0,1] to remove one floating-point ulp overflow; protocol unchanged; initial failed run preserved.",
+  "experiment": "reports/v2/QUEUE_CONDITIONAL_RUN_V2/experiment.json",
+  "independent_verification": "reports/v2/QUEUE_VERIFICATION.json",
+  "formal_Queue": null,
+  "formal_Total": null,
+  "uploaded": false
+}

@@ -1,0 +1,93 @@
+{
+  "protocol_sha256": "c97bac1416bbcdba4f2107d41299590dcc2f035279ce550309179933e1f7f134",
+  "protocol": {
+    "id": "V2_frozen_score_low_rank",
+    "code_base_commit": "9f65c96857eb0be8373eb30cf0b18d1ecf39130d",
+    "cases": [
+      [
+        "I5_N_autumn",
+        "D12_I5_N",
+        "artifacts/research/A33_adaptive_attention_strong_autumn/State_selected.pkl",
+        "2030-10-30",
+        "2030-11-12",
+        "2030-11-26",
+        "2030-12-10"
+      ],
+      [
+        "I210_W_autumn",
+        "D7_I210_W",
+        "artifacts/research/A49_adaptive_attention_D7_I210_W/State_selected.pkl",
+        "2030-10-30",
+        "2030-11-12",
+        "2030-11-26",
+        "2030-12-10"
+      ],
+      [
+        "I5_N_winter",
+        "D12_I5_N",
+        "artifacts/research/A34_adaptive_attention_strong_winter/State_selected.pkl",
+        "2030-12-30",
+        "2031-01-12",
+        "2031-01-26",
+        "2031-02-09"
+      ],
+      [
+        "I210_W_winter",
+        "D7_I210_W",
+        "artifacts/research/A49_adaptive_attention_D7_I210_W/State_selected.pkl",
+        "2030-12-30",
+        "2031-01-12",
+        "2031-01-26",
+        "2031-02-09"
+      ]
+    ],
+    "base_model_sha256": {
+      "I5_N_autumn": "d5067934dec3facdf66ca1f4d22089aa69e646c9329a63ddbaeabfabc0d83cef",
+      "I210_W_autumn": "d850f1f7ec9409b4bb186e36424331fcdb98ad263004ca35289306662e9ddc25",
+      "I5_N_winter": "bb052c476ba09717363e4d29efba4fb2fd16a1e4446a475a0cf64535d009534a",
+      "I210_W_winter": "d850f1f7ec9409b4bb186e36424331fcdb98ad263004ca35289306662e9ddc25"
+    },
+    "seed": 20261016,
+    "roles": "Base fit/checkpoint <=Oct29 or Dec29; next14 dates correction_fit, next14 calibration, next14 assessment. I210 winter transfers frozen autumn base.",
+    "residuals": "Single chronological forward cross-fit; correction-fit labels were excluded from base fitting AND checkpoint selection. Not in-sample base residuals or a multi-fold CV claim.",
+    "basis": "12 clipped lawful features shared across all cells; 24 coefficients; frozen base; no truth residual as inference input",
+    "options": [
+      [
+        "linear_state",
+        0.0,
+        0.0
+      ],
+      [
+        "sparse_state",
+        0.0,
+        0.0001
+      ],
+      [
+        "sparse_increment_002",
+        0.02,
+        0.0001
+      ],
+      [
+        "sparse_increment_010",
+        0.1,
+        0.0001
+      ]
+    ],
+    "ridge": 0.001,
+    "coefficient_bound": 0.25,
+    "strengths": [
+      0.0,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "primary": "Highest calibration official State, tie baseline then smaller strength",
+    "joint": "Smallest cal observed full-coverage inventory-increment L1; State>=base AND >=primary-.001",
+    "scope": "Complete targets on all selected dates. State official RMSE/regime/family hierarchy on 2/10 directions; not a ten-direction competition score.",
+    "assessment": "Previously used public development calendar; no hidden labels, no assessment parameter tuning",
+    "bootstrap": "2000 circular paired calendar-date blocks of7, recompute nonlinear pooled regime macro; exclude draws missing regime",
+    "gate": "State gain>=.002, pooled 95%lower>0, every direction gain>=-.001, both seasons; proxy alone cannot promote",
+    "formal_Total": null,
+    "formal_Physics": null
+  }
+}
